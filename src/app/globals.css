@@ -1,27 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: 0 0% 99%;
+    --foreground: 210 20% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+    --primary: 155 75% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 155 20% 96%;
+    --secondary-foreground: 210 20% 15%;
+    --muted: 155 15% 96%;
+    --muted-foreground: 210 10% 45%;
+    --accent: 155 50% 95%;
+    --accent-foreground: 155 75% 32%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 155 15% 90%;
+    --input: 155 15% 92%;
+    --ring: 155 75% 40%;
+    --radius: 0.5rem;
+    --green: 155 75% 40%;
+    --green-light: 155 65% 50%;
+    --green-dark: 155 80% 30%;
+    --mint: 155 40% 85%;
+    --ivory: 0 0% 98%;
+    --charcoal: 210 20% 15%;
+    --charcoal-light: 210 15% 30%;
+    --gradient-green: linear-gradient(135deg, hsl(155 75% 40%), hsl(155 65% 50%));
+    --gradient-light: linear-gradient(180deg, hsl(0 0% 99%), hsl(155 20% 96%));
+    --gradient-radial: radial-gradient(ellipse at center, hsl(155 15% 97%), hsl(0 0% 99%));
+    --shadow-green: 0 4px 30px -5px hsl(155 75% 40% / 0.25);
+    --shadow-elevated: 0 25px 50px -12px hsl(210 20% 15% / 0.1);
+    --shadow-card: 0 4px 20px -2px hsl(210 20% 15% / 0.08);
+    --sidebar-background: 155 15% 98%;
+    --sidebar-foreground: 210 20% 15%;
+    --sidebar-primary: 155 75% 40%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 155 20% 96%;
+    --sidebar-accent-foreground: 210 20% 15%;
+    --sidebar-border: 155 15% 90%;
+    --sidebar-ring: 155 75% 40%;
+  }
+
+  .dark {
+    --background: 210 20% 5%;
+    --foreground: 155 15% 95%;
+    --card: 210 18% 8%;
+    --card-foreground: 155 15% 95%;
+    --popover: 210 18% 8%;
+    --popover-foreground: 155 15% 95%;
+    --primary: 155 65% 45%;
+    --primary-foreground: 210 20% 5%;
+    --secondary: 210 18% 15%;
+    --secondary-foreground: 155 15% 90%;
+    --muted: 210 18% 12%;
+    --muted-foreground: 155 10% 55%;
+    --accent: 155 50% 38%;
+    --accent-foreground: 155 15% 95%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 155 15% 95%;
+    --border: 210 18% 18%;
+    --input: 210 18% 15%;
+    --ring: 155 65% 45%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', Georgia, serif;
+    @apply tracking-tight;
+  }
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .font-display {
+    font-family: 'Playfair Display', Georgia, serif;
   }
+  .font-body {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  .text-gradient-green,
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(155 75% 40%), hsl(155 80% 30%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gradient-green,
+  .bg-gradient-gold {
+    background: linear-gradient(135deg, hsl(155 75% 40%), hsl(155 65% 50%));
+  }
+  .shadow-gold {
+    box-shadow: 0 4px 30px -5px hsl(155 75% 40% / 0.3);
+  }
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at 50% 0%, hsl(155 15% 97%) 0%, hsl(0 0% 99%) 70%);
+  }
+  .border-gradient-green {
+    border-image: linear-gradient(135deg, hsl(155 75% 40%), hsl(155 65% 50%)) 1;
+  }
+  .shadow-green {
+    box-shadow: 0 4px 30px -5px hsl(155 75% 40% / 0.3);
+  }
+  .shadow-elevated {
+    box-shadow: 0 25px 50px -12px hsl(210 20% 15% / 0.1);
+  }
+  .line-accent {
+    @apply h-px w-16 bg-gradient-to-r from-primary to-primary/0;
+  }
+  .glass {
+    @apply bg-card/80 backdrop-blur-xl border border-border shadow-card;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(155 15% 97%);
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(155 15% 85%);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(155 75% 40%);
+}
+::selection {
+  background: hsl(155 75% 40% / 0.2);
+  color: hsl(210 20% 15%);
 }
