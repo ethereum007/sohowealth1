@@ -14,7 +14,11 @@ export const metadata: Metadata = {
       "Get a free 30-minute portfolio review with Kiran Dutta. Honest analysis. No sales pitch. For portfolios \u20B925L+",
     url: "https://sohowealth.in/portfolio-review",
     type: "website",
-    images: ["https://sohowealth.in/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Free Portfolio Review | SoHo Wealth Hyderabad",
+    description: "Free 30-minute portfolio review. Honest analysis. No sales pitch.",
   },
 };
 

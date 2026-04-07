@@ -14,7 +14,11 @@ export const metadata: Metadata = {
       "Invest in India's newest SEBI-regulated SIFs. Min \u20B910L. Expert SIF advisory from SoHo Wealth, Hyderabad.",
     url: "https://sohowealth.in/sif",
     type: "website",
-    images: ["https://sohowealth.in/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SIF Advisory | SoHo Wealth Hyderabad",
+    description: "India's newest SEBI-regulated SIFs. Min \u20B910L. Expert advisory from SoHo Wealth.",
   },
 };
 

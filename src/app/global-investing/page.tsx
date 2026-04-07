@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description:
       "Diversify beyond India. US stocks, global ETFs, GIFT City funds, international MF. Full RBI compliance.",
     url: "https://sohowealth.in/global-investing",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Global Investing from India | SoHo Wealth",
+    description: "US stocks, global ETFs, GIFT City funds. Full RBI/FEMA compliance.",
   },
 };
 

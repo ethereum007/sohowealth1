@@ -14,7 +14,11 @@ export const metadata: Metadata = {
       "FEMA-compliant NRI investment advisory for US, UK, UAE & Singapore NRIs. PMS, SIF, Mutual Funds.",
     url: "https://sohowealth.in/services/nri",
     type: "website",
-    images: ["https://sohowealth.in/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NRI Investment Advisory India | SoHo Wealth",
+    description: "FEMA-compliant NRI investment advisory. PMS, SIF, Mutual Funds for US, UK, UAE & Singapore NRIs.",
   },
 };
 

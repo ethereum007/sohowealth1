@@ -2,6 +2,7 @@
 
 import { Phone, Mail } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const servicesLinks = [
   { name: "SIF (SIFPrime)", href: "/sif" },
@@ -28,7 +29,7 @@ export function Footer() {
         <div className="py-14 grid grid-cols-2 md:grid-cols-4 gap-10 lg:gap-14">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="inline-block mb-4">
-              <img src="/soho-logo.jpeg" alt="SoHo Wealth" className="h-12 w-auto rounded" />
+              <Image src="/soho-logo.jpeg" alt="SoHo Wealth" width={120} height={48} className="h-12 w-auto rounded" />
             </Link>
             <p className="font-display text-sm italic leading-relaxed text-white/50">
               Boutique Wealth.<br />Institutional Thinking.

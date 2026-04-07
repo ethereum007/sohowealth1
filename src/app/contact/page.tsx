@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     title: "Contact SoHo Wealth — Book Your Free Consultation",
     description: "Free wealth consultation. Call +91 90329 99466 or fill our form.",
     url: "https://sohowealth.in/contact",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact SoHo Wealth — Book Your Free Consultation",
+    description: "Free wealth consultation. Call +91 90329 99466 or fill our form.",
   },
 };
 

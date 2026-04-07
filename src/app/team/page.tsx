@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description:
       "Columbia MBA-led team. 10+ years of market expertise serving HNIs, families & NRIs.",
     url: "https://sohowealth.in/team",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Team — SoHo Wealth Advisory",
+    description: "Columbia MBA-led team. 10+ years of market expertise serving HNIs, families & NRIs.",
   },
 };
 

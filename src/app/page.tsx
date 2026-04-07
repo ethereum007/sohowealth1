@@ -14,7 +14,11 @@ export const metadata: Metadata = {
       "Hyderabad's premier boutique wealth advisor for HNIs, family offices & NRIs. Expert guidance on SIF, PMS, AIF, mutual funds & pre-IPO investments.",
     url: "https://sohowealth.in/",
     type: "website",
-    images: ["https://sohowealth.in/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SoHo Wealth | Boutique Wealth Management Hyderabad",
+    description: "Premier boutique wealth advisor for HNIs, family offices & NRIs. PMS, SIF, AIF & more.",
   },
 };
 

@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     title: "Best PMS Advisory in Hyderabad — SoHo Wealth",
     description: "Access 50+ PMS strategies. Compare performance. Invest from \u20B950 lakhs.",
     url: "https://sohowealth.in/pms-advisory",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Best PMS in Hyderabad | SoHo Wealth",
+    description: "Access 50+ PMS strategies. Compare performance. Invest from \u20B950 lakhs.",
   },
 };
 

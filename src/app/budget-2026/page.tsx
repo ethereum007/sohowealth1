@@ -11,6 +11,12 @@ export const metadata: Metadata = {
     description:
       "Comprehensive analysis of India's Union Budget 2026-27. Key highlights, tax changes, and sectoral allocations.",
     url: "https://sohowealth.in/budget-2026",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Union Budget 2026-27 Analysis | SOHO Wealth",
+    description: "Key highlights, tax changes, and sectoral allocations from Union Budget 2026-27.",
   },
 };
 

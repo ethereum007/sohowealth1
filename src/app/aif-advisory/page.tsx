@@ -13,7 +13,11 @@ export const metadata: Metadata = {
     description: "Expert AIF evaluation. Private equity, venture capital, structured credit. Min \u20B91 Cr.",
     url: "https://sohowealth.in/aif-advisory",
     type: "website",
-    images: ["https://sohowealth.in/og-image.png"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AIF Advisory — Alternative Investment Funds | SoHo Wealth",
+    description: "Expert AIF evaluation. Private equity, venture capital, structured credit.",
   },
 };
 

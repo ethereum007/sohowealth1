@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import Image from "next/image";
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -69,9 +70,11 @@ const AboutClient = () => {
           <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start max-w-6xl mx-auto">
             <AnimatedSection>
               <div className="rounded-2xl aspect-[3/4] overflow-hidden">
-                <img
+                <Image
                   src="/kiran-dutta.jpeg"
                   alt="Kiran Dutta — Founder & Chief Investment Strategist, SoHo Wealth"
+                  width={600}
+                  height={800}
                   className="w-full h-full object-cover object-top"
                 />
               </div>

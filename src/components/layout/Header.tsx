@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -49,10 +50,13 @@ export function Header() {
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center shrink-0">
-            <img
+            <Image
               src="/soho-logo.jpeg"
               alt="SoHo Wealth — Premier Wealth Management Firm Hyderabad"
+              width={120}
+              height={48}
               className="h-12 w-auto"
+              priority
             />
           </Link>
 

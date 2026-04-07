@@ -20,14 +20,12 @@ export const metadata: Metadata = {
     description: "Trusted wealth advisory for HNIs, NRIs & families. PMS, SIF, MF, Global Investing. SEBI-aligned.",
     url: "https://sohowealth.in/",
     siteName: "SoHo Wealth",
-    images: [{ url: "/og-image.png" }],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
     title: "SoHo Wealth — Hyderabad's Premier Wealth Management Firm",
     description: "Trusted wealth advisory for HNIs, NRIs & families. PMS, SIF, MF, Global Investing. SEBI-aligned.",
-    images: ["/og-image.png"],
   },
   alternates: {
     canonical: "https://sohowealth.in/",
@@ -40,7 +38,7 @@ const structuredData = [
     "@type": "Organization",
     "name": "SoHo Wealth",
     "url": "https://sohowealth.in/",
-    "logo": "https://sohowealth.in/og-image.png",
+    "logo": "https://sohowealth.in/soho-logo.jpeg",
     "description": "Hyderabad's trusted wealth management firm offering PMS, SIF, Mutual Funds, Global Investing & NRI investment advisory.",
     "contactPoint": {
       "@type": "ContactPoint",
@@ -50,7 +48,7 @@ const structuredData = [
       "areaServed": "IN",
       "availableLanguage": ["English", "Hindi", "Telugu"]
     },
-    "sameAs": [],
+    "sameAs": ["https://www.linkedin.com/company/sohowealth"],
     "knowsAbout": ["Wealth Management", "PMS", "SIF", "Mutual Funds", "NRI Investing", "Global Investing", "HNI Advisory", "Tax Planning", "Estate Planning"]
   },
   {

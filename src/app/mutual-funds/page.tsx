@@ -12,6 +12,12 @@ export const metadata: Metadata = {
     title: "Best Mutual Fund Advisory in Hyderabad — SoHo Wealth",
     description: "Expert mutual fund selection. Equity, debt, hybrid & ELSS. SIP from Rs. 500.",
     url: "https://sohowealth.in/mutual-funds",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mutual Fund Advisory Hyderabad | SoHo Wealth",
+    description: "Expert mutual fund selection. Equity, debt, hybrid & ELSS. SIP from Rs. 500.",
   },
 };
 

@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description:
       "Expert RSU & ESOP advisory for tech professionals. Tax-efficient diversification, FEMA compliance, and GIFT City investment strategies.",
     url: "https://sohowealth.in/rsu-esops",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RSU & ESOP Advisory | SoHo Wealth",
+    description: "Tax-efficient stock option strategies. FEMA compliance & GIFT City investments.",
   },
 };
 

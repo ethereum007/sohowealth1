@@ -13,6 +13,12 @@ export const metadata: Metadata = {
     description:
       "Independent, unbiased, full-stack wealth management. Columbia pedigree, Hyderabad roots.",
     url: "https://sohowealth.in/why-us",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Why SoHo Wealth — The SoHo Difference",
+    description: "Independent, unbiased, full-stack wealth management. Columbia pedigree, Hyderabad roots.",
   },
 };
 
