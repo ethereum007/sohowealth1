@@ -14,6 +14,25 @@ import {
 } from "@/components/ui/select";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+import { JsonLd } from "@/components/seo/JsonLd";
+
+const contactBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://sohowealth.in/contact" },
+  ],
+};
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  url: "https://sohowealth.in/contact",
+  name: "Contact SoHo Wealth — Wealth Advisor in Hyderabad",
+  about: { "@id": "https://sohowealth.in/#organization" },
+  mainEntity: { "@id": "https://sohowealth.in/#localbusiness" },
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -26,7 +45,12 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 const contactInfo = [
-  { icon: MapPin, title: "Visit Us", content: "Hyderabad, Telangana, India" },
+  {
+    icon: MapPin,
+    title: "Visit Us",
+    content: "110, Green Grace, Khajaguda, Hyderabad — 500032",
+    href: "https://www.google.com/maps/search/?api=1&query=110+Green+Grace+Khajaguda+Hyderabad+500032",
+  },
   { icon: Phone, title: "Call Us", content: "+91 90329 99466", href: "tel:+919032999466" },
   { icon: Mail, title: "Email Us", content: "invest@sohowealth.in", href: "mailto:invest@sohowealth.in" },
   { icon: Clock, title: "Working Hours", content: "Mon - Sat: 9:00 AM - 6:00 PM" },
@@ -135,8 +159,21 @@ const ContactClient = () => {
     }
   };
 
+  const contactFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main className="pt-20">
+      <JsonLd data={contactBreadcrumbs} />
+      <JsonLd data={contactPageSchema} />
+      <JsonLd data={contactFaqSchema} />
       {/* HERO */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />

@@ -12,6 +12,32 @@ import Link from "next/link";
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow
 } from "@/components/ui/table";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const giServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Global Investing Advisory from India",
+  description: "Invest globally from India via LRS, GIFT City funds, US stocks and international ETFs. Full RBI/FEMA compliance with end-to-end LRS, Schedule FA and Form 67 support.",
+  serviceType: "Global Investing Advisory",
+  url: "https://sohowealth.in/global-investing",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "HNIs, NRIs and tech professionals" },
+};
+
+const giBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Global Investing", item: "https://sohowealth.in/global-investing" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return (
@@ -118,8 +144,21 @@ const services = [
 ];
 
 const GlobalInvestingClient = () => {
+  const giFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main className="min-h-screen bg-background">
+      <JsonLd data={giServiceSchema} />
+      <JsonLd data={giBreadcrumbs} />
+      <JsonLd data={giFaqSchema} />
       {/* Hero */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-primary/5 via-transparent to-accent/5">
         <div className="container mx-auto px-6 lg:px-8">
@@ -372,6 +411,15 @@ const GlobalInvestingClient = () => {
           </div>
         </div>
       </section>
+
+      <RelatedServices
+        items={[
+          { title: "NRI Advisory", href: "/services/nri", description: "FEMA-compliant India + global advisory for US, UK, UAE and Singapore NRIs." },
+          { title: "RSU & ESOPs", href: "/rsu-esops", description: "Tax-efficient diversification of US-listed RSUs into GIFT City and global funds." },
+          { title: "Mutual Funds Advisory", href: "/mutual-funds", description: "India-domiciled funds with international exposure — no LRS, no Schedule FA." },
+        ]}
+        heading="Related Services"
+      />
     </main>
   );
 };

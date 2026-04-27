@@ -4,6 +4,43 @@ import { motion, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
 import { useRef, useState } from "react";
+import { FAQSection } from "@/components/seo/FAQSection";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const pmsFaqs = [
+  { q: "What is a Portfolio Management Service (PMS)?", a: "PMS is a SEBI-regulated, professionally-managed investment service where a fund manager runs a concentrated portfolio of 15-25 stocks on your behalf, with direct ownership of the underlying securities held in your demat account." },
+  { q: "What is the minimum investment for PMS in India?", a: "The SEBI-mandated minimum investment for any PMS in India is ₹50 lakh per investor. This applies across all PMS providers and strategies." },
+  { q: "How is PMS different from a mutual fund?", a: "Mutual funds pool money from many investors and hold 40-80 stocks; you own units of the scheme. PMS runs a concentrated 15-25 stock portfolio with direct stock ownership in your name, allowing personalisation, transparency at the security level, and individual capital-gains tax treatment." },
+  { q: "How do I choose the best PMS in Hyderabad?", a: "Look beyond past returns: evaluate portfolio concentration, drawdown history, fund manager tenure, fee structure (fixed vs profit-share), exit loads, and how the strategy fits your risk profile and horizon. SoHo Wealth is empanelled with 50+ PMS providers and helps you compare these factors objectively." },
+  { q: "What returns can I expect from a PMS?", a: "Returns vary widely by strategy and market cycle. Past performance does not guarantee future results. We help set realistic expectations based on the manager's strategy, market conditions and your time horizon." },
+  { q: "How is PMS taxed in India?", a: "Because you own the underlying stocks directly, every trade by the manager triggers a capital gain or loss in your name — short-term (held under 12 months) at 20% and long-term at 12.5%. We help you plan around this tax treatment." },
+  { q: "Can NRIs invest in PMS?", a: "Yes. NRIs can invest in PMS subject to FEMA regulations, with a PIS account linked to NRE or NRO. We handle the documentation end-to-end." },
+];
+
+const pmsServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Portfolio Management Services (PMS) Advisory",
+  description: "Independent PMS advisory in Hyderabad. Compare 50+ PMS strategies. Minimum ₹50 lakh. Manager due diligence, portfolio fit assessment and ongoing monitoring.",
+  serviceType: "Portfolio Management Services",
+  url: "https://sohowealth.in/pms-advisory",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "HNIs and family offices" },
+  offers: { "@type": "Offer", priceCurrency: "INR", price: "5000000", description: "Minimum PMS investment ₹50 lakh" },
+};
+
+const pmsBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "PMS Advisory", item: "https://sohowealth.in/pms-advisory" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -35,6 +72,8 @@ const categories = [
 const PMSAdvisoryClient = () => {
   return (
     <main className="pt-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pmsServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pmsBreadcrumbs) }} />
       {/* HERO */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
@@ -122,6 +161,17 @@ const PMSAdvisoryClient = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <FAQSection faqs={pmsFaqs} heading="PMS — Frequently Asked Questions" background="#FFFFFF" />
+
+      <RelatedServices
+        items={[
+          { title: "SIF Advisory", href: "/sif", description: "Step down to ₹10 lakh entry with PMS-style strategies in a SEBI-regulated framework." },
+          { title: "AIF Advisory", href: "/aif-advisory", description: "Diversify beyond listed equity into PE, VC and structured credit from ₹1 Cr." },
+          { title: "Mutual Funds Advisory", href: "/mutual-funds", description: "Goal-based MF portfolios that complement your PMS allocation." },
+        ]}
+        heading="Explore Adjacent Services"
+      />
     </main>
   );
 };

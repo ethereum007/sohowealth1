@@ -4,6 +4,38 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { ChevronDown } from "lucide-react";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const nriServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "NRI Investment Advisory India",
+  description: "FEMA-compliant NRI investment advisory for US, UK, UAE, Singapore, Australia and Canada NRIs. PMS, SIF, AIF, Mutual Funds and Pre-IPO with NRE/NRO/PIS account guidance.",
+  serviceType: "NRI Wealth Management",
+  url: "https://sohowealth.in/services/nri",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "Country", name: "United States" },
+    { "@type": "Country", name: "United Kingdom" },
+    { "@type": "Country", name: "United Arab Emirates" },
+    { "@type": "Country", name: "Singapore" },
+    { "@type": "Country", name: "Australia" },
+    { "@type": "Country", name: "Canada" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "NRIs investing in India" },
+};
+
+const nriBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://sohowealth.in/services/nri" },
+    { "@type": "ListItem", position: 3, name: "NRI Advisory", item: "https://sohowealth.in/services/nri" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -57,8 +89,21 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 const NRIClient = () => {
   const scrollToForm = () => { document.getElementById("nri-consultation")?.scrollIntoView({ behavior: "smooth" }); };
 
+  const nriFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main className="pt-20">
+      <JsonLd data={nriServiceSchema} />
+      <JsonLd data={nriBreadcrumbs} />
+      <JsonLd data={nriFaqSchema} />
       {/* HERO */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
@@ -143,6 +188,15 @@ const NRIClient = () => {
           <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>No obligation. Video consultations available worldwide.</p>
         </>
       } />
+
+      <RelatedServices
+        items={[
+          { title: "Global Investing", href: "/global-investing", description: "Invest globally from India via LRS, GIFT City and US stocks — relevant if you're returning to India." },
+          { title: "PMS Advisory", href: "/pms-advisory", description: "Concentrated equity portfolios from ₹50 lakh — fully NRI compliant via PIS account." },
+          { title: "RSU & ESOPs", href: "/rsu-esops", description: "RSU/ESOP advisory for NRIs and tech professionals — taxation, FEMA and diversification." },
+        ]}
+        heading="Other Services for NRIs"
+      />
     </main>
   );
 };

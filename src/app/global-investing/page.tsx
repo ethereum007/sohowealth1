@@ -4,7 +4,7 @@ import GlobalInvestingClient from "./GlobalInvestingClient";
 export const metadata: Metadata = {
   title: "Global Investing from India — US Stocks, International ETFs & MFs | SoHo Wealth Hyderabad",
   description:
-    "Invest globally from India with SoHo Wealth. US stocks, international ETFs, GIFT City funds, and global mutual funds. Full RBI/FEMA compliance. Expert guidance on LRS, forex, tax.",
+    "Invest globally from India. US stocks, international ETFs, GIFT City funds & global MFs. Full RBI/FEMA compliance. Expert LRS, forex & tax guidance.",
   keywords:
     "global investing India, US stocks from India, international mutual funds, LRS investment, GIFT City funds, global ETFs, forex compliance India, offshore investing",
   alternates: { canonical: "https://sohowealth.in/global-investing" },

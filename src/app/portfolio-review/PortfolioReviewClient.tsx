@@ -5,6 +5,29 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/gtag";
 import { z } from "zod";
+import { JsonLd } from "@/components/seo/JsonLd";
+
+const portfolioReviewBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Portfolio Review", item: "https://sohowealth.in/portfolio-review" },
+  ],
+};
+
+const portfolioReviewServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Free Portfolio Review",
+  description: "Complimentary 30-minute portfolio review for investors with ₹25 lakh+ portfolios. Asset allocation analysis, fee-leakage check, return benchmarking and a personalized roadmap.",
+  serviceType: "Portfolio Review",
+  url: "https://sohowealth.in/portfolio-review",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [{ "@type": "City", name: "Hyderabad" }, { "@type": "Country", name: "India" }],
+  audience: { "@type": "Audience", audienceType: "Investors with ₹25 lakh+ portfolios" },
+  offers: { "@type": "Offer", price: "0", priceCurrency: "INR", description: "Free 30-minute portfolio review with Kiran Dutta" },
+};
 
 const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -72,6 +95,8 @@ const PortfolioReviewClient = () => {
 
   return (
     <main className="min-h-screen grid lg:grid-cols-2">
+      <JsonLd data={portfolioReviewBreadcrumbs} />
+      <JsonLd data={portfolioReviewServiceSchema} />
       {/* Left Column */}
       <div className="flex flex-col justify-center px-8 md:px-14 lg:px-16 py-16 lg:py-20" style={{ backgroundColor: "#0B1F3A" }}>
         <h1 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-bold leading-tight text-white mb-2">Get a Free Portfolio Review</h1>

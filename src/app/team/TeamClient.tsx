@@ -4,6 +4,17 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { GraduationCap, Users, Globe, Award } from "lucide-react";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { kiranPersonSchema } from "@/lib/seo";
+
+const teamBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Team", item: "https://sohowealth.in/team" },
+  ],
+};
 
 const teamMembers = [
   {
@@ -37,6 +48,8 @@ const TeamClient = () => {
 
   return (
     <main className="pt-20" ref={ref}>
+      <JsonLd data={kiranPersonSchema} />
+      <JsonLd data={teamBreadcrumbs} />
       {/* Hero */}
       <section className="py-24 lg:py-32 relative">
         <div className="container mx-auto px-6 lg:px-8">

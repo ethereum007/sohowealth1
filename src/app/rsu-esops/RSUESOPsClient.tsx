@@ -7,6 +7,34 @@ import { useRef, useState } from "react";
 import { ArrowRight, CheckCircle2, ChevronDown, AlertTriangle, DollarSign, FileText, Shield, TrendingUp, Globe, BarChart3 } from "lucide-react";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const rsuServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "RSU & ESOP Advisory for Tech Professionals",
+  description: "End-to-end RSU and ESOP advisory — Indian taxation, FEMA compliance, Schedule FA reporting, and tax-efficient diversification via GIFT City funds and global ETFs.",
+  serviceType: "RSU & ESOP Advisory",
+  url: "https://sohowealth.in/rsu-esops",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "City", name: "Bengaluru" },
+    { "@type": "City", name: "Pune" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "Tech professionals, executives and NRIs holding employer equity" },
+};
+
+const rsuBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "RSU & ESOPs", item: "https://sohowealth.in/rsu-esops" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -76,8 +104,21 @@ const RSUESOPsClient = () => {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const scrollToForm = () => { document.getElementById("rsu-consultation")?.scrollIntoView({ behavior: "smooth" }); };
 
+  const rsuFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main className="pt-20">
+      <JsonLd data={rsuServiceSchema} />
+      <JsonLd data={rsuBreadcrumbs} />
+      <JsonLd data={rsuFaqSchema} />
       {/* Hero */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0B1F3A 0%, #132D50 100%)" }}>
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -254,6 +295,15 @@ const RSUESOPsClient = () => {
           </ul>
         </div>
       } />
+
+      <RelatedServices
+        items={[
+          { title: "Global Investing", href: "/global-investing", description: "Diversify RSU proceeds via LRS, GIFT City funds and US-stock platforms with full FEMA support." },
+          { title: "NRI Advisory", href: "/services/nri", description: "Holding RSUs while working abroad? FEMA-compliant India + global guidance." },
+          { title: "Mutual Funds Advisory", href: "/mutual-funds", description: "Build the Indian leg of a diversified portfolio alongside your employer equity." },
+        ]}
+        heading="Where to Diversify Your RSUs"
+      />
     </main>
   );
 };

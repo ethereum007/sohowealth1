@@ -10,6 +10,32 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
+import { JsonLd } from "@/components/seo/JsonLd";
+
+const budgetArticleSchema = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: "Union Budget 2026-27: Comprehensive Analysis",
+  description: "Comprehensive analysis of India's Union Budget 2026-27 presented by Finance Minister Nirmala Sitharaman — key tax changes, sectoral allocations and the new income-tax slabs.",
+  datePublished: "2026-02-01",
+  dateModified: "2026-02-01",
+  author: { "@id": "https://sohowealth.in/#kiran-dutta" },
+  publisher: { "@id": "https://sohowealth.in/#organization" },
+  image: "https://sohowealth.in/soho-logo.jpeg",
+  mainEntityOfPage: "https://sohowealth.in/budget-2026",
+  keywords: "Union Budget 2026, Budget 2026-27, India tax slabs 2026, Nirmala Sitharaman budget, Viksit Bharat",
+  articleSection: "Budget Analysis",
+};
+
+const budgetBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Insights", item: "https://sohowealth.in/budget-2026" },
+    { "@type": "ListItem", position: 3, name: "Budget 2026-27", item: "https://sohowealth.in/budget-2026" },
+  ],
+};
 
 const Budget2026Client = () => {
   const keyHighlights = [
@@ -46,6 +72,8 @@ const Budget2026Client = () => {
 
   return (
     <main className="pt-20">
+      <JsonLd data={budgetArticleSchema} />
+      <JsonLd data={budgetBreadcrumbs} />
       {/* Hero Section */}
       <section className="relative py-20 lg:py-28 bg-gradient-to-br from-primary/5 via-background to-accent/10 overflow-hidden">
         <div className="absolute inset-0 opacity-30">

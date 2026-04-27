@@ -4,6 +4,33 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
 import { AlertTriangle, ChevronDown } from "lucide-react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+import { JsonLd } from "@/components/seo/JsonLd";
+
+const aifServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Alternative Investment Fund (AIF) Advisory",
+  description: "Independent AIF advisory in Hyderabad. Evaluate Cat I, II and III AIFs across private equity, venture capital, structured credit and long-short equity. Min ₹1 crore.",
+  serviceType: "Alternative Investment Fund Advisory",
+  url: "https://sohowealth.in/aif-advisory",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "HNIs, family offices and qualified investors" },
+  offers: { "@type": "Offer", priceCurrency: "INR", price: "10000000", description: "Minimum AIF investment ₹1 crore" },
+};
+
+const aifBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "AIF Advisory", item: "https://sohowealth.in/aif-advisory" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -66,8 +93,21 @@ const AIFAdvisoryClient = () => {
     document.getElementById("aif-consultation")?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const aifFaqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+
   return (
     <main className="pt-20">
+      <JsonLd data={aifServiceSchema} />
+      <JsonLd data={aifBreadcrumbs} />
+      <JsonLd data={aifFaqSchema} />
       {/* HERO */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
@@ -206,6 +246,15 @@ const AIFAdvisoryClient = () => {
             <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>No obligation. Suitable for investors with \u20B91Cr+ allocation capacity.</p>
           </>
         }
+      />
+
+      <RelatedServices
+        items={[
+          { title: "PMS Advisory", href: "/pms-advisory", description: "Listed-equity exposure with concentrated 15-25 stock portfolios from ₹50 lakh." },
+          { title: "SIF Advisory", href: "/sif", description: "SEBI-regulated SIFs with long-short and derivatives strategies from ₹10 lakh." },
+          { title: "Pre-IPO Investments", href: "/pre-ipo", description: "Curated late-stage private deals with rigorous due diligence." },
+        ]}
+        heading="Other Alternative Allocations"
       />
     </main>
   );

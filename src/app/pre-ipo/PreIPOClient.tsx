@@ -6,6 +6,41 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { TrendingUp, ShieldCheck, Search, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
+import { FAQSection } from "@/components/seo/FAQSection";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const preIpoFaqs = [
+  { q: "What is Pre-IPO investing?", a: "Pre-IPO investing means buying shares of a private company before it files for an Initial Public Offering. These companies are typically late-stage with strong revenue, expanding market share and a clear path to listing." },
+  { q: "Who can invest in Pre-IPO deals in India?", a: "Pre-IPO is best suited for HNIs, business owners, NRIs and family offices with the patience, risk appetite and capital to participate in private markets. Minimum tickets vary by deal." },
+  { q: "What is the minimum investment for a Pre-IPO deal?", a: "Minimum investment thresholds vary deal-by-deal — typically ranging from ₹10 lakh to ₹1 crore depending on the company, stage and structure of the round." },
+  { q: "How risky are Pre-IPO investments?", a: "Pre-IPO shares are illiquid until the company lists, the listing timeline and valuation are not guaranteed, and past performance of similar deals is not indicative of future results. Allocations should always be sized prudently within your overall portfolio." },
+  { q: "How does SoHo Wealth source Pre-IPO deals?", a: "We curate late-stage opportunities through our network of investment bankers, secondary-market platforms and existing investors. Every deal is vetted on financials, governance, sector tailwinds and exit visibility before being shared with clients." },
+  { q: "Can NRIs invest in Pre-IPO deals?", a: "Yes, subject to FEMA regulations and the specific deal structure. We guide NRI clients through compliance and documentation end-to-end." },
+];
+
+const preIpoServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Pre-IPO Investment Advisory",
+  description: "Curated Pre-IPO investment opportunities in high-growth Indian companies. Late-stage deals with rigorous due diligence for HNIs and family offices.",
+  serviceType: "Pre-IPO Advisory",
+  url: "https://sohowealth.in/pre-ipo",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "HNIs, family offices and qualified investors" },
+};
+
+const preIpoBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Pre-IPO Investments", item: "https://sohowealth.in/pre-ipo" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -35,6 +70,8 @@ const PreIPOClient = () => {
 
   return (
     <main className="pt-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(preIpoServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(preIpoBreadcrumbs) }} />
       {/* Hero */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0B1F3A 0%, #132D50 100%)" }}>
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
@@ -121,6 +158,17 @@ const PreIPOClient = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <FAQSection faqs={preIpoFaqs} heading="Pre-IPO — Frequently Asked Questions" />
+
+      <RelatedServices
+        items={[
+          { title: "AIF Advisory", href: "/aif-advisory", description: "Pooled exposure to PE/VC and structured credit alongside direct Pre-IPO deals." },
+          { title: "PMS Advisory", href: "/pms-advisory", description: "Listed-equity allocation to balance illiquid Pre-IPO holdings." },
+          { title: "RSU & ESOPs", href: "/rsu-esops", description: "Tax-efficient diversification for tech professionals holding employer equity." },
+        ]}
+        heading="Related Alternative Allocations"
+      />
     </main>
   );
 };

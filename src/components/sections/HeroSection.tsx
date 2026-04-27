@@ -39,11 +39,22 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-8"
+            className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
           >
-            Your Wealth.{" "}
-            <span style={{ color: "#C9A84C" }}>Managed With Institutional Thinking.</span>
+            Hyderabad&apos;s Boutique Wealth Management for{" "}
+            <span style={{ color: "#C9A84C" }}>HNIs, Families &amp; NRIs.</span>
           </motion.h1>
+
+          {/* Eyebrow / brand line */}
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.1 }}
+            className="font-display italic text-lg md:text-xl mb-6"
+            style={{ color: "#C9A84C" }}
+          >
+            Boutique Wealth. Institutional Thinking.
+          </motion.p>
 
           {/* Subheadline */}
           <motion.p
@@ -52,8 +63,9 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-12 font-body leading-relaxed"
           >
-            SoHo Wealth is Hyderabad's boutique wealth advisory for HNIs, Family Offices,
-            Entrepreneurs &amp; NRIs who demand high quality professional advice.
+            Independent advisory across PMS, SIF, AIF, Mutual Funds &amp; Global
+            Investing — for HNIs, Family Offices, Entrepreneurs and NRIs who
+            demand high quality professional advice.
           </motion.p>
 
           {/* CTAs */}

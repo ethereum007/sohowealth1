@@ -49,13 +49,13 @@ export function Header() {
     >
       <div className="container mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center shrink-0" aria-label="SoHo Wealth — Home">
             <Image
-              src="/soho-logo.jpeg"
-              alt="SoHo Wealth — Premier Wealth Management Firm Hyderabad"
-              width={120}
-              height={48}
-              className="h-12 w-auto"
+              src="/soho-logo.png"
+              alt="SoHo Wealth — Wealth Advisor in Hyderabad"
+              width={56}
+              height={56}
+              className="h-14 w-14 rounded-md"
               priority
             />
           </Link>

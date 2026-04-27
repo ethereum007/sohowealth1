@@ -4,7 +4,7 @@ import TeamClient from "./TeamClient";
 export const metadata: Metadata = {
   title: "Our Team — SoHo Wealth | Columbia MBA-Led Wealth Advisory Team",
   description:
-    "Meet the SoHo Wealth team — Columbia MBA-led wealth advisory with 10+ years of US & Indian market expertise. Advisory board from banking, PE, and family office management.",
+    "Meet the SoHo Wealth team — Columbia-led wealth advisory with 10+ years across US & Indian markets. Advisory board from banking, PE and family offices.",
   keywords:
     "SoHo Wealth team, wealth advisor Hyderabad, Columbia MBA financial advisor, investment advisory team India",
   alternates: { canonical: "https://sohowealth.in/team" },

@@ -5,6 +5,31 @@ import { ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import Script from "next/script";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const mfServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Mutual Fund Advisory Hyderabad",
+  description: "AMFI-registered mutual fund advisory in Hyderabad. Goal-based portfolio construction, SIPs from ₹500, equity, debt, hybrid and ELSS funds. Free portfolio review.",
+  serviceType: "Mutual Fund Advisory",
+  url: "https://sohowealth.in/mutual-funds",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "Retail and HNI investors" },
+};
+
+const mfBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Mutual Funds", item: "https://sohowealth.in/mutual-funds" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -80,6 +105,8 @@ const MutualFundsClient = () => {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
+      <Script id="mf-service-schema" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(mfServiceSchema) }} />
+      <Script id="mf-breadcrumbs" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(mfBreadcrumbs) }} />
       <main className="pt-20">
         {/* HERO */}
         <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
@@ -200,6 +227,15 @@ const MutualFundsClient = () => {
             </AnimatedSection>
           </div>
         </section>
+
+        <RelatedServices
+          items={[
+            { title: "SIF Advisory", href: "/sif", description: "Graduate from MFs to Specialized Investment Funds (₹10L+) with PMS-style strategies." },
+            { title: "PMS Advisory", href: "/pms-advisory", description: "Concentrated equity portfolios from ₹50 lakh — direct stock ownership." },
+            { title: "Global Investing", href: "/global-investing", description: "Diversify your MF portfolio internationally via LRS, GIFT City and US ETFs." },
+          ]}
+          heading="Where to Go Beyond Mutual Funds"
+        />
 
         <p className="text-center text-xs py-6 px-6 bg-white" style={{ color: "#4A5568" }}>
           *Mutual Funds are subject to market risks. Read all scheme-related documents carefully before investing. Past performance is not indicative of future results.

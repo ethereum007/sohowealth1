@@ -4,7 +4,7 @@ import AIFAdvisoryClient from "./AIFAdvisoryClient";
 export const metadata: Metadata = {
   title: "Alternative Investment Fund (AIF) Advisory India | SoHo Wealth Hyderabad",
   description:
-    "Expert AIF advisory from SoHo Wealth, Hyderabad. Evaluate private equity, venture capital, structured credit, and real asset opportunities. Minimum \u20B91 crore. Unbiased fund selection.",
+    "Expert AIF advisory in Hyderabad. Evaluate private equity, venture capital, structured credit & real asset funds. Minimum \u20B91 crore. Unbiased selection.",
   keywords:
     "AIF advisory India, alternative investment funds Hyderabad, AIF minimum investment, private equity India, venture capital funds India",
   alternates: { canonical: "https://sohowealth.in/aif-advisory" },

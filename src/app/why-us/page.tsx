@@ -4,7 +4,7 @@ import WhyUsClient from "./WhyUsClient";
 export const metadata: Metadata = {
   title: "Why SoHo Wealth — Independent, Unbiased Wealth Management | Hyderabad",
   description:
-    "Discover why SoHo Wealth is different. Independent & unbiased advisory, Columbia University pedigree, full-stack wealth management, and Hyderabad-first approach.",
+    "Why SoHo Wealth is different: independent unbiased advisory, Columbia pedigree, full-stack wealth management, and a Hyderabad-first approach.",
   keywords:
     "why SoHo Wealth, independent wealth advisor Hyderabad, unbiased financial advisor India, fee-transparent wealth management",
   alternates: { canonical: "https://sohowealth.in/why-us" },

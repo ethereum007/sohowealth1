@@ -3,6 +3,48 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
+import { FAQSection } from "@/components/seo/FAQSection";
+import { RelatedServices } from "@/components/seo/RelatedServices";
+
+const sifFaqs = [
+  { q: "What is a Specialized Investment Fund (SIF)?", a: "A Specialized Investment Fund (SIF) is a SEBI-regulated investment vehicle introduced in 2025 that bridges the gap between Mutual Funds and PMS. It allows investors to access institutional-grade strategies — including long-short equity, derivatives and hybrid approaches — at a much lower entry point than PMS." },
+  { q: "What is the minimum investment for a SIF?", a: "The SEBI-mandated minimum investment in a Specialized Investment Fund is ₹10 lakh per investor — significantly lower than the ₹50 lakh minimum required for Portfolio Management Services (PMS)." },
+  { q: "How is a SIF different from a Mutual Fund and PMS?", a: "A SIF sits between MFs and PMS. Mutual funds start at ₹500 with limited strategies; PMS requires ₹50L for fully customised portfolios. SIFs require ₹10L and offer advanced strategies like long-short equity and derivatives within an MF-style transparent structure." },
+  { q: "Who regulates SIFs?", a: "SIFs are regulated by SEBI (Securities and Exchange Board of India) under the Mutual Fund framework. They are managed by SEBI-registered Asset Management Companies (AMCs)." },
+  { q: "Who should invest in a SIF?", a: "SIFs suit HNIs with ₹10L–₹50L looking for PMS-like strategies, investors graduating beyond mutual funds, those wanting long-short or market-neutral exposure, NRIs seeking regulated India exposure, and existing PMS investors seeking complementary allocation." },
+  { q: "Can NRIs invest in SIFs?", a: "Yes, NRIs can invest in SIFs through NRE/NRO accounts subject to AMC-level FATCA compliance. Minimum investment remains ₹10 lakh." },
+  { q: "How can I invest in a SIF in Hyderabad?", a: "SoHo Wealth is among Hyderabad's earliest SIF distributors. We compare every available SIF scheme, handle end-to-end onboarding, and provide ongoing portfolio monitoring. Book a free SIF consultation to get started." },
+];
+
+const sifServiceSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: "Specialized Investment Fund (SIF) Advisory",
+  description: "SEBI-regulated SIF advisory in Hyderabad. Compare every available SIF scheme. Minimum ₹10 lakh. End-to-end onboarding and monitoring.",
+  serviceType: "Specialized Investment Fund Advisory",
+  url: "https://sohowealth.in/sif",
+  provider: { "@id": "https://sohowealth.in/#organization" },
+  areaServed: [
+    { "@type": "City", name: "Hyderabad" },
+    { "@type": "Country", name: "India" },
+  ],
+  audience: { "@type": "Audience", audienceType: "HNIs and family offices" },
+  offers: {
+    "@type": "Offer",
+    priceCurrency: "INR",
+    price: "1000000",
+    description: "Minimum SIF investment ₹10 lakh",
+  },
+};
+
+const sifBreadcrumbs = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "SIF Advisory", item: "https://sohowealth.in/sif" },
+  ],
+};
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   const ref = useRef(null);
@@ -52,6 +94,8 @@ const SIFClient = () => {
 
   return (
     <main className="pt-20">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sifServiceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(sifBreadcrumbs) }} />
       {/* HERO */}
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
@@ -59,8 +103,8 @@ const SIFClient = () => {
           <AnimatedSection>
             <span className="inline-block text-xs font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full mb-6" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>SEBI INTRODUCED IN 2025</span>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
-              India's Newest Investment Category.{" "}
-              <span style={{ color: "#C9A84C" }}>Get In Early.</span>
+              Specialized Investment Funds (SIF):{" "}
+              <span style={{ color: "#C9A84C" }}>India&apos;s Newest SEBI-Regulated Category.</span>
             </h1>
             <p className="font-body text-lg lg:text-xl leading-relaxed mb-10 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
               SEBI introduced Specialized Investment Funds in 2025. SoHo Wealth is among Hyderabad's earliest SIF distributors \u2014 and we also run SIFPrime.com, India's first SIF comparison platform.
@@ -184,6 +228,17 @@ const SIFClient = () => {
           <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>Min \u20B910 lakh investment. No obligation.</p>
         </>
       } />
+
+      <FAQSection faqs={sifFaqs} heading="SIF — Frequently Asked Questions" />
+
+      <RelatedServices
+        items={[
+          { title: "PMS Advisory", href: "/pms-advisory", description: "Step up to portfolios from 50 lakh with concentrated, professionally-managed strategies." },
+          { title: "AIF Advisory", href: "/aif-advisory", description: "Access private equity, venture capital and structured credit from 1 crore." },
+          { title: "Mutual Funds Advisory", href: "/mutual-funds", description: "Goal-based portfolios with SIPs from 500 rupees. AMFI registered." },
+        ]}
+        heading="Compare SIF With Other Options"
+      />
     </main>
   );
 };

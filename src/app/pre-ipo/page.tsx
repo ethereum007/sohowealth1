@@ -4,7 +4,7 @@ import PreIPOClient from "./PreIPOClient";
 export const metadata: Metadata = {
   title: "Pre-IPO Investments | SoHo Wealth — Access High-Growth Unlisted Companies",
   description:
-    "Invest in high-growth companies before they go public. SoHo Wealth provides curated Pre-IPO opportunities with rigorous due diligence for HNIs and family offices.",
+    "Invest in high-growth companies before they go public. Curated Pre-IPO opportunities with rigorous due diligence for HNIs & family offices.",
   keywords:
     "Pre-IPO investments India, unlisted shares, pre-IPO deals Hyderabad, invest before IPO, SoHo Wealth Pre-IPO",
   alternates: { canonical: "https://sohowealth.in/pre-ipo" },
