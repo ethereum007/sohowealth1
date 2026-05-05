@@ -26,11 +26,11 @@ export async function middleware(req: NextRequest) {
     process.env.NEXT_PUBLIC_SUPABASE_REVIEW_ANON_KEY!,
     {
       cookies: {
-        get: (name) => req.cookies.get(name)?.value,
-        set: (name, value, options: CookieOptions) => {
+        get: (name: string) => req.cookies.get(name)?.value,
+        set: (name: string, value: string, options: CookieOptions) => {
           res.cookies.set({ name, value, ...options });
         },
-        remove: (name, options: CookieOptions) => {
+        remove: (name: string, options: CookieOptions) => {
           res.cookies.set({ name, value: "", ...options, maxAge: 0 });
         },
       },

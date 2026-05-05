@@ -1,9 +1,9 @@
 "use client";
 import { createBrowserClient } from "@supabase/ssr";
-import type { Database } from "./types";
 
+// Untyped — see note in server.ts.
 export const browserSupabase = () =>
-  createBrowserClient<Database>(
+  createBrowserClient(
     process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL!,
     process.env.NEXT_PUBLIC_SUPABASE_REVIEW_ANON_KEY!
   );
