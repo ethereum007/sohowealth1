@@ -20,10 +20,20 @@ export async function middleware(req: NextRequest) {
 
   if (!needsAuth) return NextResponse.next();
 
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL;
+  const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_REVIEW_ANON_KEY;
+
+  // If env vars are missing, don't crash — let the page render so we can show
+  // a clean error rather than a Vercel 500 / MIDDLEWARE_INVOCATION_FAILED.
+  if (!supabaseUrl || !supabaseAnonKey) {
+    console.warn("[middleware] Missing NEXT_PUBLIC_SUPABASE_REVIEW_* env vars");
+    return NextResponse.next();
+  }
+
   const res = NextResponse.next();
   const supabase = createServerClient(
-    process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL!,
-    process.env.NEXT_PUBLIC_SUPABASE_REVIEW_ANON_KEY!,
+    supabaseUrl,
+    supabaseAnonKey,
     {
       cookies: {
         get: (name: string) => req.cookies.get(name)?.value,
