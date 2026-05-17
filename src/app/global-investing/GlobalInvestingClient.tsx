@@ -406,7 +406,7 @@ const GlobalInvestingClient = () => {
             <p className="text-lg text-muted-foreground mb-8">Build a diversified international portfolio with full compliance support \u2014 LRS, FEMA, tax filing, and beyond.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14" asChild><Link href="/contact">Schedule Consultation</Link></Button>
-              <Button variant="outline" className="text-base px-8 h-14" asChild><a href="https://wa.me/919160057790?text=Hi%2C%20I%27m%20interested%20in%20global%20investing" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></Button>
+              <Button variant="outline" className="text-base px-8 h-14" asChild><a href="https://wa.me/919032999466?text=Hi%2C%20I%27m%20interested%20in%20global%20investing" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></Button>
             </div>
           </div>
         </div>

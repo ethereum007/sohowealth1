@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
  * Returns top matches by trigram similarity on scheme_name.
  */
 export async function GET(req: NextRequest) {
-  const supabase = createServerSupabase();
+  const supabase = await createServerSupabase();
   const { searchParams } = req.nextUrl;
   const q = (searchParams.get("q") || "").trim();
   const limit = Math.min(Number(searchParams.get("limit") || 12), 30);

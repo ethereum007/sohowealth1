@@ -5,7 +5,7 @@ import type { PlanInput } from "../actions";
 export const dynamic = "force-dynamic";
 
 export default async function OnboardingPage() {
-  const supabase = createServerSupabase();
+  const supabase = await createServerSupabase();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return null; // layout already redirects
 

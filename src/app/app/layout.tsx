@@ -6,10 +6,15 @@ import AppNav from "./AppNav";
 export const metadata = {
   title: "Your Wealth Review",
   description: "Your personalised SoHo Wealth review.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: { canonical: "https://sohowealth.in/app" },
 };
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
-  const supabase = createServerSupabase();
+  const supabase = await createServerSupabase();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/sign-in");
 

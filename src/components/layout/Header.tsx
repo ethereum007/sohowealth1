@@ -15,7 +15,9 @@ const navLinks = [
     href: "#",
     submenu: [
       { name: "SIF (SIFPrime)", href: "/sif" },
+      { name: "SIF vs PMS", href: "/sif-vs-pms" },
       { name: "PMS Advisory", href: "/pms-advisory" },
+      { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
       { name: "AIF Advisory", href: "/aif-advisory" },
       { name: "NRI Advisory", href: "/services/nri" },
       { name: "Pre-IPO", href: "/pre-ipo" },
@@ -25,6 +27,7 @@ const navLinks = [
     ],
   },
   { name: "Insights", href: "/budget-2026" },
+  { name: "Hyderabad Wealth", href: "/wealth-management-hyderabad" },
   { name: "Contact", href: "/contact" },
 ];
 

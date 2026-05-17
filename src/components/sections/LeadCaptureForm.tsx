@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { trackEvent } from "@/lib/gtag";
+import { captureLeadAttribution } from "@/lib/lead-attribution";
 
 const leadSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -69,6 +70,7 @@ export function LeadCaptureForm({
     }
 
     setLoading(true);
+    const attribution = captureLeadAttribution();
     const { error } = await supabase.from("portfolio_leads").insert([{
       name: result.data.name,
       phone: result.data.phone,
@@ -77,6 +79,7 @@ export function LeadCaptureForm({
       is_nri: result.data.is_nri,
       call_time: result.data.call_time || null,
       source: source || null,
+      ...attribution,
     }]);
     setLoading(false);
 

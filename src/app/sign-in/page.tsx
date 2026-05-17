@@ -4,6 +4,11 @@ import SignInForm from "./SignInForm";
 export const metadata = {
   title: "Sign in to your Wealth Review",
   description: "Sign in to access your personalised SoHo Wealth review.",
+  robots: {
+    index: false,
+    follow: false,
+  },
+  alternates: { canonical: "https://sohowealth.in/sign-in" },
 };
 
 export default function SignInPage() {

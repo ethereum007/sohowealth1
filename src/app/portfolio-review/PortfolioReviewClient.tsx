@@ -4,6 +4,7 @@ import { useState } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/gtag";
+import { captureLeadAttribution } from "@/lib/lead-attribution";
 import { z } from "zod";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -69,10 +70,12 @@ const PortfolioReviewClient = () => {
       return;
     }
     setLoading(true);
+    const attribution = captureLeadAttribution();
     const { error } = await supabase.from("portfolio_leads").insert([{
       name: result.data.name, phone: result.data.phone, email: result.data.email,
       portfolio_size: result.data.portfolio_size, is_nri: result.data.is_nri,
       call_time: result.data.call_time || null, referral_source: result.data.referral_source || null, source: "direct-landing",
+      ...attribution,
     }]);
     setLoading(false);
     if (error) { toast({ title: "Something went wrong", description: "Please try again or WhatsApp us.", variant: "destructive" }); return; }

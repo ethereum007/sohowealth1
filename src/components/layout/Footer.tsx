@@ -5,8 +5,11 @@ import Link from "next/link";
 import Image from "next/image";
 
 const servicesLinks = [
+  { name: "Wealth Management Hyderabad", href: "/wealth-management-hyderabad" },
   { name: "SIF (SIFPrime)", href: "/sif" },
+  { name: "SIF vs PMS", href: "/sif-vs-pms" },
   { name: "PMS Advisory", href: "/pms-advisory" },
+  { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
   { name: "AIF Advisory", href: "/aif-advisory" },
   { name: "NRI Advisory", href: "/services/nri" },
   { name: "Pre-IPO", href: "/pre-ipo" },

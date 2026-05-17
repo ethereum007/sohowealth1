@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard";
 export const dynamic = "force-dynamic";
 
 export default async function AppHome() {
-  const supabase = createServerSupabase();
+  const supabase = await createServerSupabase();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) redirect("/sign-in");
 

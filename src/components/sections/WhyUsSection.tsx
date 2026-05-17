@@ -54,10 +54,10 @@ export function WhyUsSection() {
             transition={{ duration: 0.6 }}
           >
             <div className="line-accent mb-6" />
-            <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
+            <h1 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
               We Don't Sell Products.{" "}
               <span className="text-gradient-gold">We Build Wealth Ecosystems.</span>
-            </h2>
+            </h1>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
               SoHo Wealth was founded with a singular belief: wealth management in India
               needs a fundamental reset. Too many firms push commissions over client outcomes.

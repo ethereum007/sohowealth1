@@ -15,6 +15,8 @@ import {
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { trackEvent } from "@/lib/gtag";
+import { captureLeadAttribution } from "@/lib/lead-attribution";
 
 const contactBreadcrumbs = {
   "@context": "https://schema.org",
@@ -145,10 +147,20 @@ const ContactClient = () => {
     }
     setIsSubmitting(true);
     try {
-      const { error } = await supabase.functions.invoke("send-contact-email", {
-        body: formData,
-      });
+      const attribution = captureLeadAttribution();
+      const { error } = await supabase.from("portfolio_leads").insert([{
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        portfolio_size: formData.investmentRange || "Not provided",
+        is_nri: formData.investorType === "nri",
+        referral_source: formData.investorType || null,
+        source: "contact-page",
+        notes: formData.message || null,
+        ...attribution,
+      }]);
       if (error) throw error;
+      trackEvent("form_submit", { form_source: "contact-page", investor_type: formData.investorType || "unknown" });
       toast.success("Thank you! We'll get back to you shortly.");
       setFormData({ name: "", email: "", phone: "", investorType: "", investmentRange: "", message: "" });
     } catch (err) {

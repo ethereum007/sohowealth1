@@ -21,11 +21,20 @@ export type Database = {
           email: string
           id: string
           is_nri: boolean
+          landing_page: string | null
           name: string
+          notes: string | null
+          page_path: string | null
           phone: string
           portfolio_size: string
           referral_source: string | null
+          referrer: string | null
           source: string | null
+          utm_campaign: string | null
+          utm_content: string | null
+          utm_medium: string | null
+          utm_source: string | null
+          utm_term: string | null
         }
         Insert: {
           call_time?: string | null
@@ -33,11 +42,20 @@ export type Database = {
           email: string
           id?: string
           is_nri?: boolean
+          landing_page?: string | null
           name: string
+          notes?: string | null
+          page_path?: string | null
           phone: string
           portfolio_size: string
           referral_source?: string | null
+          referrer?: string | null
           source?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
         }
         Update: {
           call_time?: string | null
@@ -45,11 +63,20 @@ export type Database = {
           email?: string
           id?: string
           is_nri?: boolean
+          landing_page?: string | null
           name?: string
+          notes?: string | null
+          page_path?: string | null
           phone?: string
           portfolio_size?: string
           referral_source?: string | null
+          referrer?: string | null
           source?: string | null
+          utm_campaign?: string | null
+          utm_content?: string | null
+          utm_medium?: string | null
+          utm_source?: string | null
+          utm_term?: string | null
         }
         Relationships: []
       }

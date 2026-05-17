@@ -88,7 +88,7 @@ export async function savePlan(raw: unknown) {
   }
   const data = parsed.data;
 
-  const supabase = createServerSupabase();
+  const supabase = await createServerSupabase();
   const { data: { user } } = await supabase.auth.getUser();
   if (!user) return { ok: false as const, error: "Not authenticated" };
 
