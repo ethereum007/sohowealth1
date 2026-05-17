@@ -91,18 +91,27 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid lead data" }, { status: 400 });
   }
 
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL;
-  const supabaseKey =
+  const supabaseUrl =
+    process.env.SUPABASE_URL ||
+    process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL;
+  const serviceRoleKey =
     process.env.SUPABASE_REVIEW_SERVICE_ROLE_KEY ||
     process.env.SUPABASE_SERVICE_ROLE_KEY ||
-    process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
-    process.env.NEXT_PUBLIC_SUPABASE_REVIEW_ANON_KEY;
-  if (!supabaseUrl || !supabaseKey) {
-    return NextResponse.json({ error: "Supabase server env vars missing" }, { status: 500 });
+    process.env.SUPABASE_SERVICE_KEY ||
+    process.env.SERVICE_ROLE_KEY;
+  if (!supabaseUrl) {
+    return NextResponse.json({ error: "Supabase URL env var missing" }, { status: 500 });
+  }
+  if (!serviceRoleKey) {
+    return NextResponse.json(
+      { error: "SUPABASE_SERVICE_ROLE_KEY is missing in this Vercel deployment" },
+      { status: 500 }
+    );
   }
 
   const lead = parsed.data;
-  const supabase = createClient(supabaseUrl, supabaseKey, { auth: { persistSession: false } });
+  const supabase = createClient(supabaseUrl, serviceRoleKey, { auth: { persistSession: false } });
   let insert = await supabase.from("portfolio_leads").insert([lead]).select("id").single();
 
   if (insert.error && isSchemaCacheColumnError(insert.error)) {
