@@ -78,7 +78,11 @@ const PortfolioReviewClient = () => {
       ...attribution,
     }]);
     setLoading(false);
-    if (error) { toast({ title: "Something went wrong", description: "Please try again or WhatsApp us.", variant: "destructive" }); return; }
+    if (error) {
+      console.error("[PortfolioReviewClient] portfolio_leads insert failed", error);
+      toast({ title: "Something went wrong", description: error.message || "Please try again or WhatsApp us.", variant: "destructive" });
+      return;
+    }
     trackEvent("form_submit", { form_source: "direct-landing", portfolio_size: result.data.portfolio_size });
     setSubmitted(true);
   };
