@@ -35,7 +35,7 @@ async function sendLeadEmail(lead: z.infer<typeof leadSchema>) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     console.warn("[api/leads] RESEND_API_KEY not configured; lead saved without email notification");
-    return;
+    return { sent: false, error: "RESEND_API_KEY is not configured in Vercel" };
   }
 
   const resend = new Resend(apiKey);
@@ -63,7 +63,10 @@ async function sendLeadEmail(lead: z.infer<typeof leadSchema>) {
 
   if (error) {
     console.error("[api/leads] Resend email failed", error);
+    return { sent: false, error: error.message };
   }
+
+  return { sent: true, error: null };
 }
 
 export async function POST(req: NextRequest) {
@@ -73,6 +76,6 @@ export async function POST(req: NextRequest) {
   }
 
   const lead = parsed.data;
-  await sendLeadEmail(lead);
-  return NextResponse.json({ ok: true });
+  const email = await sendLeadEmail(lead);
+  return NextResponse.json({ ok: true, email });
 }
