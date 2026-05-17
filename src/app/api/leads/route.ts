@@ -1,5 +1,4 @@
 import { NextResponse, type NextRequest } from "next/server";
-import { createClient } from "@supabase/supabase-js";
 import { Resend } from "resend";
 import { z } from "zod";
 
@@ -24,24 +23,6 @@ const leadSchema = z.object({
   utm_term: z.string().nullable().optional(),
   utm_content: z.string().nullable().optional(),
 });
-
-function stripAttribution<T extends Record<string, unknown>>(payload: T) {
-  const basePayload = { ...payload };
-  delete basePayload.landing_page;
-  delete basePayload.page_path;
-  delete basePayload.referrer;
-  delete basePayload.utm_source;
-  delete basePayload.utm_medium;
-  delete basePayload.utm_campaign;
-  delete basePayload.utm_term;
-  delete basePayload.utm_content;
-  delete basePayload.notes;
-  return basePayload;
-}
-
-function isSchemaCacheColumnError(error: { message?: string } | null) {
-  return Boolean(error?.message?.includes("schema cache") && error.message.includes("portfolio_leads"));
-}
 
 function rows(data: Record<string, unknown>) {
   return Object.entries(data)
@@ -91,38 +72,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid lead data" }, { status: 400 });
   }
 
-  const supabaseUrl =
-    process.env.SUPABASE_URL ||
-    process.env.NEXT_PUBLIC_SUPABASE_URL ||
-    process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL;
-  const serviceRoleKey =
-    process.env.SUPABASE_REVIEW_SERVICE_ROLE_KEY ||
-    process.env.SUPABASE_SERVICE_ROLE_KEY ||
-    process.env.SUPABASE_SERVICE_KEY ||
-    process.env.SERVICE_ROLE_KEY;
-  if (!supabaseUrl) {
-    return NextResponse.json({ error: "Supabase URL env var missing" }, { status: 500 });
-  }
-  if (!serviceRoleKey) {
-    return NextResponse.json(
-      { error: "SUPABASE_SERVICE_ROLE_KEY is missing in this Vercel deployment" },
-      { status: 500 }
-    );
-  }
-
   const lead = parsed.data;
-  const supabase = createClient(supabaseUrl, serviceRoleKey, { auth: { persistSession: false } });
-  let insert = await supabase.from("portfolio_leads").insert([lead]).select("id").single();
-
-  if (insert.error && isSchemaCacheColumnError(insert.error)) {
-    insert = await supabase.from("portfolio_leads").insert([stripAttribution(lead)]).select("id").single();
-  }
-
-  if (insert.error) {
-    console.error("[api/leads] portfolio_leads insert failed", insert.error);
-    return NextResponse.json({ error: insert.error.message }, { status: 500 });
-  }
-
   await sendLeadEmail(lead);
-  return NextResponse.json({ ok: true, id: insert.data?.id });
+  return NextResponse.json({ ok: true });
 }
