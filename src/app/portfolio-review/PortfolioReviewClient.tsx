@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
 import { trackEvent } from "@/lib/gtag";
 import { captureLeadAttribution } from "@/lib/lead-attribution";
+import { submitPortfolioLead } from "@/lib/lead-submit";
 import { z } from "zod";
 import { JsonLd } from "@/components/seo/JsonLd";
 
@@ -71,12 +71,12 @@ const PortfolioReviewClient = () => {
     }
     setLoading(true);
     const attribution = captureLeadAttribution();
-    const { error } = await supabase.from("portfolio_leads").insert([{
+    const { error } = await submitPortfolioLead({
       name: result.data.name, phone: result.data.phone, email: result.data.email,
       portfolio_size: result.data.portfolio_size, is_nri: result.data.is_nri,
       call_time: result.data.call_time || null, referral_source: result.data.referral_source || null, source: "direct-landing",
       ...attribution,
-    }]);
+    });
     setLoading(false);
     if (error) {
       console.error("[PortfolioReviewClient] portfolio_leads insert failed", error);

@@ -12,11 +12,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { trackEvent } from "@/lib/gtag";
 import { captureLeadAttribution } from "@/lib/lead-attribution";
+import { submitPortfolioLead } from "@/lib/lead-submit";
 
 const contactBreadcrumbs = {
   "@context": "https://schema.org",
@@ -148,7 +148,7 @@ const ContactClient = () => {
     setIsSubmitting(true);
     try {
       const attribution = captureLeadAttribution();
-      const { error } = await supabase.from("portfolio_leads").insert([{
+      const { error } = await submitPortfolioLead({
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
@@ -158,7 +158,7 @@ const ContactClient = () => {
         source: "contact-page",
         notes: formData.message || null,
         ...attribution,
-      }]);
+      });
       if (error) throw error;
       trackEvent("form_submit", { form_source: "contact-page", investor_type: formData.investorType || "unknown" });
       toast.success("Thank you! We'll get back to you shortly.");
