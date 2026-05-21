@@ -30,6 +30,42 @@ export function presentValueGrowingAnnuity(payment: number, ratePct: number, gro
   return (payment / (r - g)) * (1 - Math.pow((1 + g) / (1 + r), years));
 }
 
+/** Lump sum needed today to reach a future value at a given annual return. */
+export function lumpsumRequired(targetFV: number, annualReturnPct: number, years: number) {
+  if (targetFV <= 0) return 0;
+  return targetFV / Math.pow(1 + annualReturnPct / 100, years);
+}
+
+/** EMI for a loan: P·i·(1+i)^n / ((1+i)^n − 1).  rate is annual %, tenure in years. */
+export function loanEMI(principal: number, annualRatePct: number, tenureYears: number) {
+  if (principal <= 0 || tenureYears <= 0) return 0;
+  const i = annualRatePct / 100 / MONTHS;
+  const n = tenureYears * MONTHS;
+  if (i === 0) return principal / n;
+  return (principal * i * Math.pow(1 + i, n)) / (Math.pow(1 + i, n) - 1);
+}
+
+/**
+ * Expected blended return for a goal, based on its time horizon — the
+ * asset-allocation-by-horizon model advisors use (short money in debt,
+ * long money in equity). Blends the profile's own equity/debt assumptions
+ * so it stays internally consistent with the rest of the plan.
+ */
+export function horizonReturn(years: number, equityReturns: number, debtReturns: number): number {
+  let wEquity: number;
+  if (years < 3)       wEquity = 0;     // capital protection — debt/liquid
+  else if (years < 6)  wEquity = 0.4;   // medium term
+  else if (years < 10) wEquity = 0.8;   // long term
+  else                 wEquity = 0.9;   // very long term
+  return wEquity * equityReturns + (1 - wEquity) * debtReturns;
+}
+
+/** Down-payment / loan split assumptions per goal type (loan-funded goals). */
+const LOAN_DEFAULTS: Partial<Record<string, { downPct: number; tenureYears: number }>> = {
+  house: { downPct: 0.20, tenureYears: 20 },
+  car:   { downPct: 0.20, tenureYears: 5 },
+};
+
 /** Age in whole years from a date string (YYYY-MM-DD). */
 export function ageFromDOB(dob: string | null, asOf = new Date()): number {
   if (!dob) return 0;
@@ -121,15 +157,31 @@ export function computePlan(data: UserData, asOfDate = new Date()): ComputedPlan
   // ---------- goals ----------
   const computedGoals: ComputedGoal[] = goals.map(g => {
     const years = Math.max(0, g.target_year - currentYear);
+    const expectedReturn = horizonReturn(years, profile.equity_returns, profile.debt_returns);
     const fv = futureValue(Number(g.present_value), Number(g.inflation_rate), years);
-    const earmarkedFV = futureValue(Number(g.earmarked_assets), profile.equity_returns, years);
+    const earmarkedFV = futureValue(Number(g.earmarked_assets), expectedReturn, years);
     const fundingPct = fv > 0 ? Math.min(150, (earmarkedFV / fv) * 100) : 100;
     const gap = Math.max(0, fv - earmarkedFV);
-    const sip = requiredMonthlySIP(gap, profile.equity_returns, years);
+    const sip = requiredMonthlySIP(gap, expectedReturn, years);
+    const lumpsum = lumpsumRequired(gap, expectedReturn, years);
+
+    // Loan-funded goals (house/car): split future value into down-payment vs. loan,
+    // so the fundable target is the down-payment and the loan is serviced via EMI.
+    const loanCfg = LOAN_DEFAULTS[g.goal_type];
+    const loan = loanCfg
+      ? {
+          down_payment: fv * loanCfg.downPct,
+          loan_amount: fv * (1 - loanCfg.downPct),
+          tenure_years: loanCfg.tenureYears,
+          emi_monthly: loanEMI(fv * (1 - loanCfg.downPct), profile.home_loan_rate, loanCfg.tenureYears),
+        }
+      : null;
+
     return {
       id: g.id,
       goal_name: g.goal_name,
       goal_type: g.goal_type,
+      priority: g.priority,
       target_year: g.target_year,
       years_to_goal: years,
       present_value: Number(g.present_value),
@@ -137,10 +189,26 @@ export function computePlan(data: UserData, asOfDate = new Date()): ComputedPlan
       earmarked_assets: Number(g.earmarked_assets),
       earmarked_future_value: earmarkedFV,
       funding_pct: fundingPct,
+      gap,
+      expected_return: expectedReturn,
+      lumpsum_required: lumpsum,
       sip_required_monthly: sip,
+      loan,
       status: statusFor(fundingPct),
     };
   });
+
+  // ---------- goal funding aggregate (the "funding map" totals) ----------
+  const goalFunding = {
+    totalFutureValue:   sum(computedGoals, g => g.future_value),
+    totalEarmarkedFV:   sum(computedGoals, g => g.earmarked_future_value),
+    totalGap:           sum(computedGoals, g => g.gap),
+    totalMonthlySip:    sum(computedGoals, g => g.sip_required_monthly),
+    totalLumpsum:       sum(computedGoals, g => g.lumpsum_required),
+    onTrackCount:       computedGoals.filter(g => g.status === "on_track").length,
+    reviewCount:        computedGoals.filter(g => g.status === "review").length,
+    criticalCount:      computedGoals.filter(g => g.status === "critical").length,
+  };
 
   // ---------- contingency ----------
   const emergencyFundTarget = monthlyExpenses * 6;
@@ -157,6 +225,7 @@ export function computePlan(data: UserData, asOfDate = new Date()): ComputedPlan
     yearsToRetirement, postRetirementYears, annualExpensesAtRetirement,
     retirementCorpusRequired, retirementAssetsFV, retirementOnTrackPct, retirementMonthlySipRequired,
     goals: computedGoals,
+    goalFunding,
     emergencyFundTarget, emergencyFundExisting, emergencyFundDeficit,
   };
 }

@@ -4,10 +4,19 @@ import Link from "next/link";
 import {
   PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend,
 } from "recharts";
-import { ArrowRight, AlertTriangle, MessageCircle, Pencil } from "lucide-react";
+import {
+  ArrowRight, AlertTriangle, MessageCircle, Pencil, ShieldCheck,
+  TrendingUp, PiggyBank, Wallet, FileDown,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
-import type { ComputedPlan, UserData, GoalStatus, AssetClass } from "@/lib/wealth/types";
+import type { ComputedPlan, UserData, AssetClass } from "@/lib/wealth/types";
 import { inrCompact, inrFull, pct } from "@/lib/wealth/calculations";
+import { buildImplementation } from "@/lib/wealth/implementation";
+import { projectCashflows, buildActionPlan } from "@/lib/wealth/projections";
+import GoalFundingMap from "./GoalFundingMap";
+import ImplementationPlan from "./ImplementationPlan";
+import CashflowProjection from "./CashflowProjection";
+import ActionPlan from "./ActionPlan";
 
 const ASSET_COLORS: Record<AssetClass, string> = {
   liquid:      "#3b82f6",
@@ -23,15 +32,7 @@ const ASSET_LABELS: Record<AssetClass, string> = {
   gold: "Gold", real_estate: "Real Estate", personal: "Personal",
 };
 
-const STATUS_BADGE: Record<GoalStatus, string> = {
-  on_track: "bg-emerald-100 text-emerald-700",
-  review:   "bg-amber-100 text-amber-700",
-  critical: "bg-red-100 text-red-700",
-};
-
-const STATUS_LABEL: Record<GoalStatus, string> = {
-  on_track: "ON TRACK", review: "REVIEW", critical: "CRITICAL",
-};
+const WA_LINK = "https://wa.me/919032999466?text=Hi%20Kiran%2C%20I'd%20like%20to%20discuss%20my%20Wealth%20Review.";
 
 export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: UserData }) {
   const allocChartData = plan.assetAllocation
@@ -40,41 +41,63 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
 
   const insuranceGap = plan.additionalCoverRequired > 0;
   const emergencyGap = plan.emergencyFundDeficit > 0;
+  const firstName = data.profile.full_name?.split(" ")[0] || "there";
+
+  const impl = buildImplementation(plan, data.profile);
+  const cashflows = projectCashflows(data, plan, data.profile, 10);
+  const actions = buildActionPlan(plan, data, impl);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-10">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8 space-y-8">
 
-      {/* ---------- header ---------- */}
-      <header className="flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="text-xs uppercase tracking-[0.18em] text-amber-700 font-bold">Your Wealth Review</p>
-          <h1 className="font-serif text-3xl text-slate-900 mt-1">
-            Hi {data.profile.full_name?.split(" ")[0] || "there"} 👋
-          </h1>
-          <p className="text-sm text-slate-500 mt-1">
-            Age {plan.age} · Retiring at {plan.retirementAge} · {plan.yearsToRetirement} years to go
-          </p>
+      {/* ---------- HERO ---------- */}
+      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900 to-slate-800 text-white p-6 sm:p-8">
+        <div className="absolute -right-10 -top-16 h-56 w-56 rounded-full bg-amber-500/10 blur-3xl" />
+        <div className="absolute right-24 bottom-0 h-40 w-40 rounded-full bg-emerald-500/10 blur-3xl" />
+        <div className="relative flex flex-wrap items-start justify-between gap-6">
+          <div>
+            <p className="text-xs uppercase tracking-[0.22em] text-amber-400 font-bold">Your Wealth Review</p>
+            <h1 className="font-serif text-3xl sm:text-4xl mt-2">Hi {firstName} 👋</h1>
+            <p className="text-sm text-slate-300 mt-2">
+              Age {plan.age} · Retiring at {plan.retirementAge} · {plan.yearsToRetirement} years to go
+            </p>
+            <div className="flex flex-wrap gap-2 mt-5">
+              <Link href="/app/onboarding">
+                <Button variant="outline" size="sm" className="border-white/25 text-white bg-transparent hover:bg-white/10">
+                  <Pencil className="w-4 h-4 mr-1.5" /> Edit plan
+                </Button>
+              </Link>
+              <Link href="/app/report">
+                <Button variant="outline" size="sm" className="border-white/25 text-white bg-transparent hover:bg-white/10">
+                  <FileDown className="w-4 h-4 mr-1.5" /> Download plan
+                </Button>
+              </Link>
+              <a href={WA_LINK} target="_blank" rel="noopener">
+                <Button size="sm" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
+                  <MessageCircle className="w-4 h-4 mr-1.5" /> Talk to Kiran
+                </Button>
+              </a>
+            </div>
+          </div>
+
+          {/* net-worth headline */}
+          <div className="rounded-2xl bg-white/5 border border-white/10 px-6 py-5 backdrop-blur-sm">
+            <p className="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Net worth</p>
+            <p className="font-serif text-4xl sm:text-5xl tabular-nums mt-1">{inrCompact(plan.netWorth)}</p>
+            <div className="flex items-center gap-4 mt-3 text-xs text-slate-300">
+              <span>Assets <span className="font-semibold text-white">{inrCompact(plan.totalAssets)}</span></span>
+              <span>Liabilities <span className="font-semibold text-white">{inrCompact(plan.totalLiabilities)}</span></span>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link href="/app/onboarding"><Button variant="outline" size="sm"><Pencil className="w-4 h-4 mr-1.5" /> Edit plan</Button></Link>
-          <a href="https://wa.me/919032999466?text=Hi%20Kiran%2C%20I'd%20like%20to%20discuss%20my%20Wealth%20Review." target="_blank" rel="noopener">
-            <Button size="sm" className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
-              <MessageCircle className="w-4 h-4 mr-1.5" /> Talk to Kiran
-            </Button>
-          </a>
-        </div>
-      </header>
+      </section>
 
       {/* ---------- KPI grid ---------- */}
-      <section className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <Kpi label="Monthly Income"    value={inrCompact(plan.monthlyIncome)} />
-        <Kpi label="Monthly Expenses"  value={inrCompact(plan.monthlyExpenses)} />
-        <Kpi label="Monthly Surplus"   value={inrCompact(plan.monthlySurplus)} tone={plan.monthlySurplus < 0 ? "bad" : "good"} />
-        <Kpi label="Savings Rate"      value={pct(plan.savingsRate)} tone={plan.savingsRate < 15 ? "warn" : "good"} />
-        <Kpi label="Net Worth"         value={inrCompact(plan.netWorth)} />
-        <Kpi label="Retirement Target" value={inrCompact(plan.retirementCorpusRequired)} />
-        <Kpi label="Retirement On-Track" value={pct(plan.retirementOnTrackPct, 0)} tone={plan.retirementOnTrackPct < 70 ? "warn" : "good"} />
-        <Kpi label="Term Cover Needed" value={inrCompact(plan.recommendedTermCover)} tone={insuranceGap ? "warn" : "good"} />
+      <section className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+        <Kpi icon={<Wallet className="w-4 h-4" />} label="Monthly Income"    value={inrCompact(plan.monthlyIncome)} />
+        <Kpi icon={<TrendingUp className="w-4 h-4" />} label="Monthly Surplus"   value={inrCompact(plan.monthlySurplus)} tone={plan.monthlySurplus < 0 ? "bad" : "good"} />
+        <Kpi icon={<PiggyBank className="w-4 h-4" />} label="Savings Rate"      value={pct(plan.savingsRate)} tone={plan.savingsRate < 15 ? "warn" : "good"} />
+        <Kpi icon={<ShieldCheck className="w-4 h-4" />} label="Retirement On-Track" value={pct(plan.retirementOnTrackPct, 0)} tone={plan.retirementOnTrackPct < 70 ? "warn" : "good"} />
       </section>
 
       {/* ---------- Critical alerts ---------- */}
@@ -94,7 +117,7 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
         </section>
       )}
 
-      {/* ---------- Net worth + chart ---------- */}
+      {/* ---------- Net worth + allocation chart ---------- */}
       <section className="grid lg:grid-cols-5 gap-6">
         <Card className="lg:col-span-3">
           <CardTitle>Net Worth Breakdown — {inrCompact(plan.totalAssets)}</CardTitle>
@@ -150,43 +173,24 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
         </Card>
       </section>
 
-      {/* ---------- Goals ---------- */}
+      {/* ---------- Goal Funding Map ---------- */}
       <section>
-        <Card>
-          <CardTitle>Financial Goals — Funding Status</CardTitle>
-          {plan.goals.length === 0 ? (
-            <Empty>You haven't added any goals yet. <Link href="/app/onboarding" className="text-amber-700 hover:underline">Add some →</Link></Empty>
-          ) : (
-            <Table>
-              <thead>
-                <tr>
-                  <Th>Goal</Th>
-                  <Th right>Target Year</Th>
-                  <Th right>Future Value</Th>
-                  <Th right>Funded</Th>
-                  <Th right>SIP Required/mo</Th>
-                  <Th>Status</Th>
-                </tr>
-              </thead>
-              <tbody>
-                {plan.goals.map(g => (
-                  <tr key={g.id}>
-                    <Td>{g.goal_name}</Td>
-                    <Td right num>{g.target_year}</Td>
-                    <Td right num>{inrFull(g.future_value)}</Td>
-                    <Td right num>{pct(g.funding_pct, 0)}</Td>
-                    <Td right num>{g.sip_required_monthly > 0 ? inrFull(g.sip_required_monthly) : "—"}</Td>
-                    <Td>
-                      <span className={`inline-block px-2 py-0.5 rounded-full text-xs font-semibold ${STATUS_BADGE[g.status]}`}>
-                        {STATUS_LABEL[g.status]}
-                      </span>
-                    </Td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
-          )}
-        </Card>
+        <GoalFundingMap plan={plan} />
+      </section>
+
+      {/* ---------- Implementation ---------- */}
+      <section>
+        <ImplementationPlan impl={impl} />
+      </section>
+
+      {/* ---------- Cashflow projection ---------- */}
+      <section>
+        <CashflowProjection rows={cashflows} />
+      </section>
+
+      {/* ---------- Action plan ---------- */}
+      <section>
+        <ActionPlan items={actions} />
       </section>
 
       {/* ---------- Retirement ---------- */}
@@ -231,8 +235,8 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
         </Card>
       </section>
 
-      {/* ---------- Insurance ---------- */}
-      <section>
+      {/* ---------- Insurance + Emergency ---------- */}
+      <section className="grid lg:grid-cols-2 gap-6">
         <Card>
           <CardTitle>Life Insurance — Needs Analysis (HLV)</CardTitle>
           <div className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
@@ -243,6 +247,20 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
             <Row label="Recommended term cover" value={inrCompact(plan.recommendedTermCover)} bold />
           </div>
         </Card>
+
+        <Card>
+          <CardTitle>Emergency Fund</CardTitle>
+          <div className="grid sm:grid-cols-2 gap-x-8 gap-y-2 text-sm">
+            <Row label="Target (6 months expenses)" value={inrCompact(plan.emergencyFundTarget)} bold />
+            <Row label="Currently in liquid assets" value={inrCompact(plan.emergencyFundExisting)} />
+            <Row label="Shortfall" value={inrCompact(plan.emergencyFundDeficit)} tone={emergencyGap ? "warn" : "good"} bold />
+            <Row label="Status" value={emergencyGap ? "Build it up" : "Fully funded"} tone={emergencyGap ? "warn" : "good"} />
+          </div>
+          <div className="mt-4 h-2 rounded-full bg-slate-100 overflow-hidden">
+            <div className="h-full rounded-full bg-emerald-500"
+              style={{ width: `${plan.emergencyFundTarget > 0 ? Math.min(100, (plan.emergencyFundExisting / plan.emergencyFundTarget) * 100) : 0}%` }} />
+          </div>
+        </Card>
       </section>
 
       {/* ---------- CTA ---------- */}
@@ -250,13 +268,14 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
         <div className="grid lg:grid-cols-3 gap-6 items-center">
           <div className="lg:col-span-2">
             <p className="text-xs uppercase tracking-[0.18em] text-amber-400 font-bold">Next step</p>
-            <h2 className="font-serif text-2xl mt-2">Want a deeper look?</h2>
+            <h2 className="font-serif text-2xl mt-2">Turn this into an implementation plan</h2>
             <p className="text-sm text-slate-300 mt-2 max-w-xl">
-              These numbers are computed from what you've entered. A 45-min call with Kiran turns this into an actual implementation plan — fund picks, term-plan shortlist, tax positioning.
+              These numbers are computed from what you&apos;ve entered. A 45-min call with Kiran turns this into actual
+              fund picks, a term-plan shortlist, and tax positioning — mapped to each goal above.
             </p>
           </div>
           <div className="flex flex-wrap gap-2 lg:justify-end">
-            <a href="https://wa.me/919032999466?text=Hi%20Kiran%2C%20I'd%20like%20to%20discuss%20my%20Wealth%20Review." target="_blank" rel="noopener">
+            <a href={WA_LINK} target="_blank" rel="noopener">
               <Button className="bg-amber-500 hover:bg-amber-600 text-slate-900 font-semibold">
                 Book a call <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
@@ -274,12 +293,15 @@ export default function Dashboard({ plan, data }: { plan: ComputedPlan; data: Us
 }
 
 // ---------- presentational ----------
-function Kpi({ label, value, tone }: { label: string; value: string; tone?: "good" | "warn" | "bad" }) {
-  const toneClass = tone === "warn" ? "text-amber-700" : tone === "bad" ? "text-red-700" : "text-slate-900";
+function Kpi({ icon, label, value, tone }: { icon?: React.ReactNode; label: string; value: string; tone?: "good" | "warn" | "bad" }) {
+  const toneClass = tone === "warn" ? "text-amber-700" : tone === "bad" ? "text-red-700" : tone === "good" ? "text-emerald-700" : "text-slate-900";
   return (
     <div className="bg-white border border-slate-200 rounded-xl p-4 shadow-sm">
-      <p className="text-[11px] uppercase tracking-wider text-slate-500 font-semibold">{label}</p>
-      <p className={`font-serif text-2xl mt-1 tabular-nums ${toneClass}`}>{value}</p>
+      <div className="flex items-center gap-1.5 text-slate-400">
+        {icon}
+        <p className="text-[11px] uppercase tracking-wider font-semibold">{label}</p>
+      </div>
+      <p className={`font-serif text-2xl mt-1.5 tabular-nums ${toneClass}`}>{value}</p>
     </div>
   );
 }
