@@ -55,10 +55,18 @@ export interface UserData {
 // ---------- computed plan ----------
 export type GoalStatus = "on_track" | "review" | "critical";
 
+export interface GoalLoanPlan {
+  down_payment: number;
+  loan_amount: number;
+  tenure_years: number;
+  emi_monthly: number;
+}
+
 export interface ComputedGoal {
   id: string;
   goal_name: string;
   goal_type: GoalType;
+  priority: Priority;
   target_year: number;
   years_to_goal: number;
   present_value: number;
@@ -66,8 +74,23 @@ export interface ComputedGoal {
   earmarked_assets: number;
   earmarked_future_value: number;
   funding_pct: number;
+  gap: number;
+  expected_return: number;
+  lumpsum_required: number;
   sip_required_monthly: number;
+  loan: GoalLoanPlan | null;
   status: GoalStatus;
+}
+
+export interface GoalFundingSummary {
+  totalFutureValue: number;
+  totalEarmarkedFV: number;
+  totalGap: number;
+  totalMonthlySip: number;
+  totalLumpsum: number;
+  onTrackCount: number;
+  reviewCount: number;
+  criticalCount: number;
 }
 
 export interface ComputedPlan {
@@ -98,6 +121,7 @@ export interface ComputedPlan {
   retirementMonthlySipRequired: number;
   // goals
   goals: ComputedGoal[];
+  goalFunding: GoalFundingSummary;
   // contingency
   emergencyFundTarget: number;
   emergencyFundExisting: number;
