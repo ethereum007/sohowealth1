@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
+import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { RelatedServices, type RelatedService } from "@/components/seo/RelatedServices";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -124,6 +125,8 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
           </AnimatedSection>
         </div>
       </section>
+
+      {config.slug === "best-pms-in-hyderabad" && <PmsPerformanceLeadersSection />}
 
       {config.sections.map((section, index) => (
         <section key={section.heading} className="py-24 lg:py-32" style={{ backgroundColor: index % 2 === 0 ? "#FFFFFF" : "#F7F8FA" }}>

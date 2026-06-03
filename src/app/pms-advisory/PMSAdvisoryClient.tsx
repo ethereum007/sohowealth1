@@ -1,11 +1,11 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
+import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 
 const pmsFaqs = [
   { q: "What is a Portfolio Management Service (PMS)?", a: "PMS is a SEBI-regulated, professionally-managed investment service where a fund manager runs a concentrated portfolio of 15-25 stocks on your behalf, with direct ownership of the underlying securities held in your demat account." },
@@ -97,6 +97,8 @@ const PMSAdvisoryClient = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <PmsPerformanceLeadersSection />
 
       {/* WHY SOHO */}
       <section className="py-24 lg:py-32 bg-white">
