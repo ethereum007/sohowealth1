@@ -9,6 +9,7 @@ import {
   type PmsPerformancePeriod,
   type PmsPerformanceSourceRow,
 } from "@/lib/pms/performance-data";
+import { pmsUniverseApproaches } from "@/lib/pms/universe-data";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -61,6 +62,7 @@ function formatAum(value: number) {
 
 export function PmsPerformanceLeadersSection() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [universeSearchQuery, setUniverseSearchQuery] = useState("");
 
   const rankedRowsByPeriod = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
@@ -81,6 +83,16 @@ export function PmsPerformanceLeadersSection() {
     }, {} as Record<PmsPerformancePeriod, Array<PmsPerformanceSourceRow & { rank: number; returnPct: number }>>);
   }, [searchQuery]);
 
+  const filteredUniverseApproaches = useMemo(() => {
+    const query = universeSearchQuery.trim().toLowerCase();
+
+    if (!query) {
+      return pmsUniverseApproaches;
+    }
+
+    return pmsUniverseApproaches.filter((approach) => approach.name.toLowerCase().includes(query));
+  }, [universeSearchQuery]);
+
   return (
     <section className="py-24 lg:py-32" style={{ backgroundColor: "#F7F8FA" }}>
       <div className="container mx-auto px-6 lg:px-8">
@@ -100,12 +112,12 @@ export function PmsPerformanceLeadersSection() {
                 Recent PMS performance leaders
               </h2>
               <p className="font-body mt-5 text-base leading-relaxed" style={{ color: "#4A5568" }}>
-                A source-backed ranking of PMS strategies from the latest available APMI reported return tables
-                across recent 1, 3 and 6 month periods.
+                A source-backed PMS universe from APMI, with a separate performance ranking for strategies where
+                recent return rows are available.
               </p>
             </div>
 
-            <div className="grid gap-4 sm:grid-cols-3">
+            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
                 <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">As on</p>
                 <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
@@ -113,12 +125,21 @@ export function PmsPerformanceLeadersSection() {
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">APMI snapshot</p>
+                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">Full universe</p>
+                <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
+                  {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")}
+                </p>
+                <p className="font-body mt-1 text-xs text-muted-foreground">
+                  investment approaches
+                </p>
+              </div>
+              <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
+                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">Return rows</p>
                 <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
                   {pmsPerformanceMeta.rankedStrategyCount.toLocaleString("en-IN")}
                 </p>
                 <p className="font-body mt-1 text-xs text-muted-foreground">
-                  ranked strategies from latest return tables
+                  latest APMI performance rows
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
@@ -168,7 +189,8 @@ export function PmsPerformanceLeadersSection() {
                   Complete PMS ranking list
                 </h3>
                 <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
-                  Ranked from highest to lowest return for each period, using the latest APMI performance snapshot.
+                  Ranked from highest to lowest return for each period. These are only the APMI rows where recent
+                  return data was available.
                 </p>
               </div>
               <div className="relative w-full lg:max-w-sm">
@@ -269,14 +291,72 @@ export function PmsPerformanceLeadersSection() {
             ))}
           </Tabs>
 
+          <div className="mt-12">
+            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <h3 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>
+                  Full APMI PMS universe
+                </h3>
+                <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
+                  All {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")} investment approaches
+                  scraped from the APMI PMS menu. The performance table above is a subset where APMI returned
+                  latest period returns.
+                </p>
+              </div>
+              <div className="relative w-full lg:max-w-sm">
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  value={universeSearchQuery}
+                  onChange={(event) => setUniverseSearchQuery(event.target.value)}
+                  placeholder="Search all PMS approaches"
+                  className="h-11 rounded-lg border-[#CBD5E1] bg-white pl-10 font-body"
+                />
+              </div>
+            </div>
+
+            <p className="font-body mb-3 mt-5 text-sm text-muted-foreground">
+              Showing {filteredUniverseApproaches.length.toLocaleString("en-IN")} of{" "}
+              {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")} scraped approaches.
+            </p>
+            <div className="max-h-[520px] overflow-auto rounded-xl bg-white shadow-[0_10px_34px_-18px_rgba(11,31,58,0.35)]">
+              <Table>
+                <TableHeader>
+                  <TableRow className="sticky top-0 z-10 hover:bg-transparent" style={{ backgroundColor: "#0B1F3A" }}>
+                    <TableHead className="w-20 text-white/75">No.</TableHead>
+                    <TableHead className="min-w-[320px] text-white/75">Investment approach</TableHead>
+                    <TableHead className="min-w-[170px] text-white/75">Latest returns</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {filteredUniverseApproaches.map((approach, index) => (
+                    <TableRow key={approach.id} className="hover:bg-[#FDF8EC]">
+                      <TableCell className="font-body text-sm text-muted-foreground">
+                        {index + 1}
+                      </TableCell>
+                      <TableCell>
+                        <p className="font-body font-semibold" style={{ color: "#0B1F3A" }}>
+                          {approach.name}
+                        </p>
+                        <p className="font-body mt-1 text-xs text-muted-foreground">APMI approach ID: {approach.id}</p>
+                      </TableCell>
+                      <TableCell className="font-body text-sm" style={{ color: "#4A5568" }}>
+                        {approach.hasLatestReturnRow ? "Available in ranking table" : "Not in latest return rows"}
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
+          </div>
+
           <div className="mt-6 flex flex-col gap-4 rounded-xl border border-[#E2E8F0] bg-white p-5 md:flex-row md:items-start">
             <ShieldCheck className="h-6 w-6 shrink-0" style={{ color: "#C9A84C" }} />
             <div className="font-body text-sm leading-relaxed" style={{ color: "#4A5568" }}>
               <p>
-                There are many PMS strategies beyond this short-period leaderboard. This table is based on the
-                available {pmsPerformanceMeta.sourceName} snapshot, downloaded on {pmsPerformanceMeta.downloadedOn},
-                and is not an investment recommendation. PMS selection should also review drawdowns, fees, churn,
-                concentration, taxation, manager continuity and portfolio fit.
+                The full universe list comes from the APMI PMS menu. The ranking table uses only the latest return
+                rows available in the {pmsPerformanceMeta.sourceName} snapshot, downloaded on{" "}
+                {pmsPerformanceMeta.downloadedOn}. This is not an investment recommendation. PMS selection should
+                also review drawdowns, fees, churn, concentration, taxation, manager continuity and portfolio fit.
               </p>
               <Link href="/portfolio-review" className="mt-3 inline-flex font-semibold" style={{ color: "#0B1F3A" }}>
                 Review PMS suitability with SoHo Wealth
