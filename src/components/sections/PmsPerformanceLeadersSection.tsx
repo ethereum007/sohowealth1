@@ -15,10 +15,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import {
-  pmsPerformanceMeta,
-  type PmsPerformancePeriod,
-} from "@/lib/pms/performance-data";
+import { pmsPerformanceMeta } from "@/lib/pms/performance-data";
 import {
   pmsInsightReturnMeta,
   pmsInsightReturnRows,
@@ -37,18 +34,24 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const periods: PmsPerformancePeriod[] = ["1 Month", "3 Months", "6 Months"];
+type PmsRankingPeriod = "1 Month" | "3 Months" | "6 Months" | "1 Year" | "3 Years";
+
+const periods: PmsRankingPeriod[] = ["1 Month", "3 Months", "6 Months", "1 Year", "3 Years"];
 const rankingPageSize = 25;
-const initialRankingPages: Record<PmsPerformancePeriod, number> = {
+const initialRankingPages: Record<PmsRankingPeriod, number> = {
   "1 Month": 1,
   "3 Months": 1,
   "6 Months": 1,
+  "1 Year": 1,
+  "3 Years": 1,
 };
 
-const periodReturnKeys: Record<PmsPerformancePeriod, keyof PmsInsightReturnRow> = {
+const periodReturnKeys: Record<PmsRankingPeriod, keyof PmsInsightReturnRow> = {
   "1 Month": "oneMonthPct",
   "3 Months": "threeMonthsPct",
   "6 Months": "sixMonthsPct",
+  "1 Year": "oneYearPct",
+  "3 Years": "threeYearsPct",
 };
 
 const analysisCards = [
@@ -60,7 +63,7 @@ const analysisCards = [
   {
     icon: Repeat2,
     title: "Repeat leaders deserve attention",
-    copy: "KINETIC appears across 1M, 3M and 6M leaderboards, which makes it worth reviewing more deeply. Repeated presence is a signal to investigate process, not proof of suitability.",
+    copy: "Strategies that keep appearing across short and longer periods are worth reviewing more deeply. Repeated presence is a signal to investigate process, not proof of suitability.",
   },
   {
     icon: BarChart3,
@@ -109,7 +112,7 @@ export function PmsPerformanceLeadersSection() {
         : rankedRows;
 
       return acc;
-    }, {} as Record<PmsPerformancePeriod, Array<PmsInsightReturnRow & { rank: number; returnPct: number }>>);
+    }, {} as Record<PmsRankingPeriod, Array<PmsInsightReturnRow & { rank: number; returnPct: number }>>);
   }, [searchQuery]);
 
   const filteredUniverseApproaches = useMemo(() => {
@@ -218,7 +221,7 @@ export function PmsPerformanceLeadersSection() {
                   Complete PMS ranking list
                 </h3>
                 <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
-                  Ranked from highest to lowest return for each period using{" "}
+                  Ranked from highest to lowest return across monthly and yearly periods using{" "}
                   {pmsInsightReturnMeta.broadAsOnCount.toLocaleString("en-IN")} IA Insight rows with the same{" "}
                   {pmsInsightReturnMeta.broadAsOnLabel} as-on month.
                 </p>
