@@ -88,7 +88,7 @@ const PMSAdvisoryClient = () => {
               PMS strategies run concentrated portfolios of 15-25 high-conviction picks.
             </p>
             <p className="font-body text-base leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.6)" }}>
-              With a minimum investment of \u20B950 lakhs (SEBI-mandated), PMS is designed for investors who want direct stock ownership,
+              With a minimum investment of Rs. 50 lakhs (SEBI-mandated), PMS is designed for investors who want direct stock ownership,
               personalized portfolio construction, and higher alpha generation potential.
             </p>
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
