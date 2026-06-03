@@ -5,10 +5,13 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import {
   pmsPerformanceMeta,
-  pmsPerformanceRows,
   type PmsPerformancePeriod,
-  type PmsPerformanceSourceRow,
 } from "@/lib/pms/performance-data";
+import {
+  pmsInsightReturnMeta,
+  pmsInsightReturnRows,
+  type PmsInsightReturnRow,
+} from "@/lib/pms/insight-returns-data";
 import { pmsUniverseApproaches } from "@/lib/pms/universe-data";
 import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -23,7 +26,7 @@ import {
 
 const periods: PmsPerformancePeriod[] = ["1 Month", "3 Months", "6 Months"];
 
-const periodReturnKeys: Record<PmsPerformancePeriod, keyof PmsPerformanceSourceRow> = {
+const periodReturnKeys: Record<PmsPerformancePeriod, keyof PmsInsightReturnRow> = {
   "1 Month": "oneMonthPct",
   "3 Months": "threeMonthsPct",
   "6 Months": "sixMonthsPct",
@@ -42,8 +45,8 @@ const analysisCards = [
   },
   {
     icon: BarChart3,
-    title: "AUM changes the interpretation",
-    copy: "A smaller strategy can top a short-period table, but capacity, liquidity and investor fit matter. Compare returns alongside AUM, churn and portfolio concentration.",
+    title: "As-on dates matter",
+    copy: "The broadest comparable IA Insight set is Apr-2026. Some PMS pages have older latest dates, so the ranking keeps the shared month visible instead of blending stale rows into the top table.",
   },
   {
     icon: Scale,
@@ -56,31 +59,31 @@ function formatPct(value: number | null) {
   return typeof value === "number" ? `${value.toFixed(2)}%` : "NA";
 }
 
-function formatAum(value: number) {
-  return `INR ${value.toFixed(2)} Cr`;
-}
-
 export function PmsPerformanceLeadersSection() {
   const [searchQuery, setSearchQuery] = useState("");
   const [universeSearchQuery, setUniverseSearchQuery] = useState("");
+  const insightReturnIds = useMemo(() => new Set(pmsInsightReturnRows.map((row) => row.iaId)), []);
 
   const rankedRowsByPeriod = useMemo(() => {
     const query = searchQuery.trim().toLowerCase();
 
     return periods.reduce((acc, period) => {
       const returnKey = periodReturnKeys[period];
-      const rankedRows = [...pmsPerformanceRows]
+      const comparableRows = pmsInsightReturnRows.filter(
+        (row) => row.asOnLabel === pmsInsightReturnMeta.broadAsOnLabel && typeof row[returnKey] === "number",
+      );
+      const rankedRows = [...comparableRows]
         .sort((first, second) => Number(second[returnKey]) - Number(first[returnKey]))
         .map((row, index) => ({ ...row, rank: index + 1, returnPct: Number(row[returnKey]) }));
 
       acc[period] = query
         ? rankedRows.filter((row) =>
-            `${row.strategyName} ${row.provider} ${row.strategy} ${row.serviceType}`.toLowerCase().includes(query),
+            `${row.name} ${row.asOnLabel ?? ""}`.toLowerCase().includes(query),
           )
         : rankedRows;
 
       return acc;
-    }, {} as Record<PmsPerformancePeriod, Array<PmsPerformanceSourceRow & { rank: number; returnPct: number }>>);
+    }, {} as Record<PmsPerformancePeriod, Array<PmsInsightReturnRow & { rank: number; returnPct: number }>>);
   }, [searchQuery]);
 
   const filteredUniverseApproaches = useMemo(() => {
@@ -112,8 +115,8 @@ export function PmsPerformanceLeadersSection() {
                 Recent PMS performance leaders
               </h2>
               <p className="font-body mt-5 text-base leading-relaxed" style={{ color: "#4A5568" }}>
-                A source-backed PMS universe from APMI, with a separate performance ranking for strategies where
-                recent return rows are available.
+                A source-backed PMS universe from APMI, now enriched with IA Insight page returns for most strategies.
+                Comparable rankings use the broadest shared as-on month.
               </p>
             </div>
 
@@ -121,7 +124,7 @@ export function PmsPerformanceLeadersSection() {
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
                 <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">As on</p>
                 <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  {pmsPerformanceMeta.asOnDate}
+                  {pmsInsightReturnMeta.broadAsOnLabel}
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
@@ -134,12 +137,12 @@ export function PmsPerformanceLeadersSection() {
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">Return rows</p>
+                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">IA Insight returns</p>
                 <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  {pmsPerformanceMeta.rankedStrategyCount.toLocaleString("en-IN")}
+                  {pmsInsightReturnMeta.withReturns.toLocaleString("en-IN")}
                 </p>
                 <p className="font-body mt-1 text-xs text-muted-foreground">
-                  latest APMI performance rows
+                  strategies with detail-page returns
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
@@ -189,8 +192,9 @@ export function PmsPerformanceLeadersSection() {
                   Complete PMS ranking list
                 </h3>
                 <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
-                  Ranked from highest to lowest return for each period. These are only the APMI rows where recent
-                  return data was available.
+                  Ranked from highest to lowest return for each period using{" "}
+                  {pmsInsightReturnMeta.broadAsOnCount.toLocaleString("en-IN")} IA Insight rows with the same{" "}
+                  {pmsInsightReturnMeta.broadAsOnLabel} as-on month.
                 </p>
               </div>
               <div className="relative w-full lg:max-w-sm">
@@ -221,18 +225,19 @@ export function PmsPerformanceLeadersSection() {
               <TabsContent key={period} value={period} className="mt-6">
                 <p className="font-body mb-3 text-sm text-muted-foreground">
                   Showing {rankedRowsByPeriod[period].length.toLocaleString("en-IN")} of{" "}
-                  {pmsPerformanceMeta.rankedStrategyCount.toLocaleString("en-IN")} APMI-ranked strategies.
+                  {pmsInsightReturnMeta.broadAsOnCount.toLocaleString("en-IN")} comparable APMI IA Insight strategies.
                 </p>
                 <div className="overflow-hidden rounded-xl bg-white shadow-[0_10px_34px_-18px_rgba(11,31,58,0.35)]">
                   <Table>
                     <TableHeader>
                       <TableRow className="hover:bg-transparent" style={{ backgroundColor: "#0B1F3A" }}>
                         <TableHead className="w-16 text-white/75">Rank</TableHead>
-                        <TableHead className="min-w-[220px] text-white/75">PMS strategy</TableHead>
-                        <TableHead className="min-w-[240px] text-white/75">Provider</TableHead>
+                        <TableHead className="min-w-[260px] text-white/75">PMS strategy</TableHead>
+                        <TableHead className="text-white/75">As on</TableHead>
                         <TableHead className="text-right text-white/75">Return</TableHead>
-                        <TableHead className="text-right text-white/75">AUM</TableHead>
-                        <TableHead className="text-white/75">Type</TableHead>
+                        <TableHead className="text-right text-white/75">1Y</TableHead>
+                        <TableHead className="text-right text-white/75">3Y</TableHead>
+                        <TableHead className="text-right text-white/75">5Y</TableHead>
                         <TableHead className="text-right text-white/75">APMI</TableHead>
                       </TableRow>
                     </TableHeader>
@@ -249,15 +254,14 @@ export function PmsPerformanceLeadersSection() {
                           </TableCell>
                           <TableCell>
                             <p className="font-body font-semibold" style={{ color: "#0B1F3A" }}>
-                              {leader.strategyName}
+                              {leader.name}
                             </p>
                             <p className="font-body mt-1 text-xs text-muted-foreground">
-                              {leader.strategy} strategy
-                              {leader.oneYearPct !== null ? ` . 1Y: ${formatPct(leader.oneYearPct)}` : ""}
+                              APMI IA ID: {leader.iaId}
                             </p>
                           </TableCell>
                           <TableCell className="font-body text-sm" style={{ color: "#4A5568" }}>
-                            {leader.provider}
+                            {leader.asOnLabel ?? "NA"}
                           </TableCell>
                           <TableCell className="text-right">
                             <span className="inline-flex items-center gap-1 font-display text-lg font-semibold" style={{ color: "#0B7A53" }}>
@@ -266,10 +270,13 @@ export function PmsPerformanceLeadersSection() {
                             </span>
                           </TableCell>
                           <TableCell className="text-right font-body text-sm" style={{ color: "#4A5568" }}>
-                            {formatAum(leader.aumCr)}
+                            {formatPct(leader.oneYearPct)}
                           </TableCell>
-                          <TableCell className="font-body text-sm" style={{ color: "#4A5568" }}>
-                            {leader.serviceType}
+                          <TableCell className="text-right font-body text-sm" style={{ color: "#4A5568" }}>
+                            {formatPct(leader.threeYearsPct)}
+                          </TableCell>
+                          <TableCell className="text-right font-body text-sm" style={{ color: "#4A5568" }}>
+                            {formatPct(leader.fiveYearsPct)}
                           </TableCell>
                           <TableCell className="text-right">
                             <a
@@ -340,7 +347,7 @@ export function PmsPerformanceLeadersSection() {
                         <p className="font-body mt-1 text-xs text-muted-foreground">APMI approach ID: {approach.id}</p>
                       </TableCell>
                       <TableCell className="font-body text-sm" style={{ color: "#4A5568" }}>
-                        {approach.hasLatestReturnRow ? "Available in ranking table" : "Not in latest return rows"}
+                        {insightReturnIds.has(approach.id) ? "IA Insight returns available" : "No IA Insight returns found"}
                       </TableCell>
                     </TableRow>
                   ))}
@@ -353,10 +360,11 @@ export function PmsPerformanceLeadersSection() {
             <ShieldCheck className="h-6 w-6 shrink-0" style={{ color: "#C9A84C" }} />
             <div className="font-body text-sm leading-relaxed" style={{ color: "#4A5568" }}>
               <p>
-                The full universe list comes from the APMI PMS menu. The ranking table uses only the latest return
-                rows available in the {pmsPerformanceMeta.sourceName} snapshot, downloaded on{" "}
-                {pmsPerformanceMeta.downloadedOn}. This is not an investment recommendation. PMS selection should
-                also review drawdowns, fees, churn, concentration, taxation, manager continuity and portfolio fit.
+                The full universe list comes from the APMI PMS menu. The ranking table uses IA Insight detail-page
+                returns scraped across {pmsInsightReturnMeta.scrapedCount.toLocaleString("en-IN")} approaches, with{" "}
+                {pmsInsightReturnMeta.withReturns.toLocaleString("en-IN")} return records found. This is not an
+                investment recommendation. PMS selection should also review drawdowns, fees, churn, concentration,
+                taxation, manager continuity and portfolio fit.
               </p>
               <Link href="/portfolio-review" className="mt-3 inline-flex font-semibold" style={{ color: "#0B1F3A" }}>
                 Review PMS suitability with SoHo Wealth
