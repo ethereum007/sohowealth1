@@ -7,6 +7,7 @@ import { captureLeadAttribution } from "@/lib/lead-attribution";
 import { submitPortfolioLead } from "@/lib/lead-submit";
 import { z } from "zod";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { CheckCircle2 } from "lucide-react";
 
 const portfolioReviewBreadcrumbs = {
   "@context": "https://schema.org",
@@ -111,7 +112,7 @@ const PortfolioReviewClient = () => {
         <p className="font-body text-base text-white/80 mb-6">In 30 minutes we'll show you:</p>
         <ul className="space-y-4 mb-10">
           {checklistItems.map((item) => (
-            <li key={item} className="flex items-start gap-3"><span className="text-lg mt-0.5" style={{ color: "#C9A84C" }}>\u2705</span><span className="font-body text-base text-white/90">{item}</span></li>
+            <li key={item} className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} /><span className="font-body text-base text-white/90">{item}</span></li>
           ))}
         </ul>
         <p className="font-body text-sm text-white/50 mb-12">This is for you if your investable portfolio is <strong className="text-white/80">\u20B925 lakh or more.</strong></p>
@@ -125,7 +126,7 @@ const PortfolioReviewClient = () => {
       <div className="flex flex-col justify-center px-8 md:px-14 lg:px-16 py-16 lg:py-20 bg-white">
         {submitted ? (
           <div className="text-center py-8">
-            <div className="text-5xl mb-5">\u2705</div>
+            <CheckCircle2 className="mx-auto mb-5 h-14 w-14" style={{ color: "#C9A84C" }} />
             <h2 className="font-display text-2xl font-semibold text-gray-900 mb-3">Booked!</h2>
             <p className="font-body text-base text-gray-600 leading-relaxed">
               Kiran will reach out within 24 hours.<br />

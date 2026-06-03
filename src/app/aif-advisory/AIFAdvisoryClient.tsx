@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { AlertTriangle, ChevronDown } from "lucide-react";
+import { AlertTriangle, CheckCircle2, ChevronDown } from "lucide-react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { RelatedServices } from "@/components/seo/RelatedServices";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -238,7 +238,7 @@ const AIFAdvisoryClient = () => {
             <ul className="space-y-4 mb-10">
               {["AIF category & strategy briefing", "Fund manager due diligence report", "Portfolio fit & allocation sizing", "Risk-return expectation setting", "Direct access to Kiran Dutta"].map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <span className="text-lg mt-0.5" style={{ color: "#C9A84C" }}>\u2705</span>
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} />
                   <span className="font-body text-base text-white/90">{item}</span>
                 </li>
               ))}

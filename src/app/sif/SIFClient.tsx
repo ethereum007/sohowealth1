@@ -2,6 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
+import { CheckCircle2 } from "lucide-react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
@@ -181,7 +182,7 @@ const SIFClient = () => {
             <ul className="space-y-5">
               {whoShouldInvest.map((item) => (
                 <li key={item} className="flex items-start gap-4 font-body text-base lg:text-lg" style={{ color: "#1a2d4a" }}>
-                  <span className="text-lg mt-0.5" style={{ color: "#C9A84C" }}>\u2705</span>
+                  <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} />
                   <span>{item}</span>
                 </li>
               ))}
@@ -222,7 +223,7 @@ const SIFClient = () => {
           <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>What you'll get</p>
           <ul className="space-y-4 mb-10">
             {["SIF scheme comparison & shortlist", "Risk-return analysis", "Onboarding support", "Ongoing portfolio monitoring", "Direct access to Kiran Dutta"].map((item) => (
-              <li key={item} className="flex items-start gap-3"><span className="text-lg mt-0.5" style={{ color: "#C9A84C" }}>\u2705</span><span className="font-body text-base text-white/90">{item}</span></li>
+              <li key={item} className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} /><span className="font-body text-base text-white/90">{item}</span></li>
             ))}
           </ul>
           <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>Min \u20B910 lakh investment. No obligation.</p>

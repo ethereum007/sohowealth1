@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send, MessageCircle, ChevronDown, ArrowRight } from "lucide-react";
+import { MapPin, Phone, Mail, Clock, Send, MessageCircle, ChevronDown, ArrowRight, CheckCircle2 } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import {
@@ -319,7 +319,7 @@ const ContactClient = () => {
               <ul className="space-y-4 mb-10">
                 {["Free portfolio health check", "Personalized investment roadmap", "Tax-efficient strategies", "Direct access to Kiran Dutta", "No obligations \u2014 ever"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
-                    <span className="text-lg mt-0.5" style={{ color: "#C9A84C" }}>\u2705</span>
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} />
                     <span className="font-body text-base text-white/90">{item}</span>
                   </li>
                 ))}
