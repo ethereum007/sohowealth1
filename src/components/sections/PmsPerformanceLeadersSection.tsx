@@ -2,11 +2,14 @@
 
 import { BarChart3, ExternalLink, Repeat2, Scale, Search, ShieldCheck, TrendingUp } from "lucide-react";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 import {
-  pmsPerformanceLeaders,
   pmsPerformanceMeta,
+  pmsPerformanceRows,
   type PmsPerformancePeriod,
+  type PmsPerformanceSourceRow,
 } from "@/lib/pms/performance-data";
+import { Input } from "@/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
   Table,
@@ -18,6 +21,12 @@ import {
 } from "@/components/ui/table";
 
 const periods: PmsPerformancePeriod[] = ["1 Month", "3 Months", "6 Months"];
+
+const periodReturnKeys: Record<PmsPerformancePeriod, keyof PmsPerformanceSourceRow> = {
+  "1 Month": "oneMonthPct",
+  "3 Months": "threeMonthsPct",
+  "6 Months": "sixMonthsPct",
+};
 
 const analysisCards = [
   {
@@ -51,6 +60,27 @@ function formatAum(value: number) {
 }
 
 export function PmsPerformanceLeadersSection() {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const rankedRowsByPeriod = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+
+    return periods.reduce((acc, period) => {
+      const returnKey = periodReturnKeys[period];
+      const rankedRows = [...pmsPerformanceRows]
+        .sort((first, second) => Number(second[returnKey]) - Number(first[returnKey]))
+        .map((row, index) => ({ ...row, rank: index + 1, returnPct: Number(row[returnKey]) }));
+
+      acc[period] = query
+        ? rankedRows.filter((row) =>
+            `${row.strategyName} ${row.provider} ${row.strategy} ${row.serviceType}`.toLowerCase().includes(query),
+          )
+        : rankedRows;
+
+      return acc;
+    }, {} as Record<PmsPerformancePeriod, Array<PmsPerformanceSourceRow & { rank: number; returnPct: number }>>);
+  }, [searchQuery]);
+
   return (
     <section className="py-24 lg:py-32" style={{ backgroundColor: "#F7F8FA" }}>
       <div className="container mx-auto px-6 lg:px-8">
@@ -70,8 +100,8 @@ export function PmsPerformanceLeadersSection() {
                 Recent PMS performance leaders
               </h2>
               <p className="font-body mt-5 text-base leading-relaxed" style={{ color: "#4A5568" }}>
-                A source-backed snapshot of PMS strategies that led the available APMI reported return tables
-                across recent 1, 3 and 6 month periods. This is not the full PMS universe.
+                A source-backed ranking of PMS strategies from the latest available APMI reported return tables
+                across recent 1, 3 and 6 month periods.
               </p>
             </div>
 
@@ -83,12 +113,12 @@ export function PmsPerformanceLeadersSection() {
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">APMI universe</p>
+                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">APMI snapshot</p>
                 <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")}
+                  {pmsPerformanceMeta.rankedStrategyCount.toLocaleString("en-IN")}
                 </p>
                 <p className="font-body mt-1 text-xs text-muted-foreground">
-                  approaches across {pmsPerformanceMeta.providerCount.toLocaleString("en-IN")} providers
+                  ranked strategies from latest return tables
                 </p>
               </div>
               <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
@@ -132,6 +162,26 @@ export function PmsPerformanceLeadersSection() {
           </div>
 
           <Tabs defaultValue="1 Month" className="mt-12">
+            <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+              <div>
+                <h3 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>
+                  Complete PMS ranking list
+                </h3>
+                <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
+                  Ranked from highest to lowest return for each period, using the latest APMI performance snapshot.
+                </p>
+              </div>
+              <div className="relative w-full lg:max-w-sm">
+                <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                <Input
+                  value={searchQuery}
+                  onChange={(event) => setSearchQuery(event.target.value)}
+                  placeholder="Search PMS or provider"
+                  className="h-11 rounded-lg border-[#CBD5E1] bg-white pl-10 font-body"
+                />
+              </div>
+            </div>
+
             <TabsList className="h-auto w-full justify-start gap-2 overflow-x-auto rounded-lg bg-white p-2 shadow-sm md:w-auto">
               {periods.map((period) => (
                 <TabsTrigger
@@ -147,6 +197,10 @@ export function PmsPerformanceLeadersSection() {
 
             {periods.map((period) => (
               <TabsContent key={period} value={period} className="mt-6">
+                <p className="font-body mb-3 text-sm text-muted-foreground">
+                  Showing {rankedRowsByPeriod[period].length.toLocaleString("en-IN")} of{" "}
+                  {pmsPerformanceMeta.rankedStrategyCount.toLocaleString("en-IN")} APMI-ranked strategies.
+                </p>
                 <div className="overflow-hidden rounded-xl bg-white shadow-[0_10px_34px_-18px_rgba(11,31,58,0.35)]">
                   <Table>
                     <TableHeader>
@@ -161,7 +215,7 @@ export function PmsPerformanceLeadersSection() {
                       </TableRow>
                     </TableHeader>
                     <TableBody>
-                      {pmsPerformanceLeaders[period].map((leader) => (
+                      {rankedRowsByPeriod[period].map((leader) => (
                         <TableRow key={`${period}-${leader.rank}`} className="hover:bg-[#FDF8EC]">
                           <TableCell>
                             <span
