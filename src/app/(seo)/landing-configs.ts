@@ -2,15 +2,15 @@ import type { LandingPageConfig } from "./LandingPageClient";
 
 export const wealthManagementHyderabad: LandingPageConfig = {
   slug: "wealth-management-hyderabad",
-  title: "Wealth Management Hyderabad",
+  title: "Wealth Advisor Hyderabad",
   eyebrow: "Wealth Advisor in Hyderabad",
-  h1: "Wealth Management in Hyderabad for",
+  h1: "Wealth Advisor in Hyderabad for",
   highlightedH1: "HNIs, Founders, Families & NRIs.",
-  intro: "SoHo Wealth is a Hyderabad-based boutique wealth advisory firm for investors who need more than product sales: portfolio review, PMS, SIF, AIF, mutual funds, NRI advisory, global investing and pre-IPO access under one relationship.",
+  intro: "SoHo Wealth is a Hyderabad-based boutique wealth advisor for investors who need more than product sales: portfolio review, PMS, SIF, AIF, mutual funds, NRI advisory, global investing and pre-IPO access under one relationship.",
   primaryCta: "Book a Hyderabad Consultation",
   secondaryCta: "WhatsApp a Wealth Advisor",
-  serviceName: "Wealth Management in Hyderabad",
-  serviceDescription: "Boutique wealth management in Hyderabad for HNIs, NRIs, family offices, founders and professionals across PMS, SIF, AIF, mutual funds, global investing and pre-IPO opportunities.",
+  serviceName: "Wealth Advisor in Hyderabad",
+  serviceDescription: "Boutique wealth advisor in Hyderabad for HNIs, NRIs, family offices, founders and professionals across PMS, SIF, AIF, mutual funds, global investing and pre-IPO opportunities.",
   serviceType: "Wealth Management",
   leadSource: "wealth-management-hyderabad page",
   formHeading: "Book a Wealth Management Consultation",
@@ -27,7 +27,7 @@ export const wealthManagementHyderabad: LandingPageConfig = {
     {
       eyebrow: "Why SoHo Wealth",
       heading: "A Boutique Alternative to Bank-Led Wealth Management",
-      copy: "Many investors in Hyderabad are served by banks or product-led distributors. SoHo Wealth is built for a different conversation: understanding your whole financial picture and choosing products only when they fit.",
+      copy: "Many investors in Hyderabad are served by banks or product-led distributors. SoHo Wealth is built for a different conversation: understanding your whole financial picture and choosing products only when they fit your goals, risk profile and liquidity needs.",
       cards: [
         { title: "Independent Product Selection", description: "We are not tied to one AMC, PMS or AIF provider. The goal is to match your allocation to your risk profile, horizon and liquidity needs." },
         { title: "Hyderabad-First, India-Wide", description: "Meet in person in Hyderabad or work with us remotely across India and overseas as an NRI." },
@@ -41,7 +41,8 @@ export const wealthManagementHyderabad: LandingPageConfig = {
       heading: "Who We Help",
       bullets: [
         "HNIs and families with investable portfolios above Rs. 25 lakh",
-        "Founders, business owners and senior professionals in Hyderabad",
+        "Founders, business owners, doctors and senior professionals in Hyderabad",
+        "Tech professionals in Gachibowli, HITEC City and Madhapur with RSUs or concentrated equity",
         "Doctors, CXOs and tech professionals with concentrated wealth or RSUs",
         "NRIs who want India investments managed with FEMA and tax awareness",
         "Investors comparing PMS, SIF, AIF and mutual funds before committing capital",
@@ -63,7 +64,7 @@ export const wealthManagementHyderabad: LandingPageConfig = {
     ],
   },
   faqs: [
-    { q: "Who is a good fit for SoHo Wealth in Hyderabad?", a: "SoHo Wealth is best suited for HNIs, families, founders, senior professionals and NRIs who want a structured portfolio review and guidance across mutual funds, PMS, SIF, AIF, pre-IPO and global investing." },
+    { q: "Who is a good fit for SoHo Wealth in Hyderabad?", a: "SoHo Wealth is best suited for HNIs, families, founders, senior professionals, tech employees and NRIs who want a structured portfolio review and guidance across mutual funds, PMS, SIF, AIF, pre-IPO and global investing." },
     { q: "Is the first consultation free?", a: "Yes. The first portfolio review or consultation is complimentary and no-obligation. It is meant to help you understand your current portfolio and possible next steps." },
     { q: "Do you work only with Hyderabad clients?", a: "No. SoHo Wealth is based in Hyderabad but works with clients across India and NRIs globally through video consultations." },
     { q: "What is the minimum portfolio size?", a: "The complimentary review is most useful for investors with Rs. 25 lakh or more in investable assets. Product minimums differ: SIF starts at Rs. 10 lakh, PMS at Rs. 50 lakh and AIF at Rs. 1 crore." },

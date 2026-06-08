@@ -24,11 +24,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://sohowealth.in"),
   title: {
-    default: "Wealth Management Hyderabad | PMS, SIF, Mutual Funds & NRI Advisory | SoHo Wealth",
+    default: "Wealth Advisor Hyderabad | PMS, SIF, Mutual Funds & NRI Advisory | SoHo Wealth",
     template: "%s",
   },
-  description: "Hyderabad's boutique wealth advisory for HNIs, families & NRIs. PMS, SIF, Mutual Funds, Global Investing, NRI advisory. Book a free portfolio review.",
-  keywords: ["wealth management Hyderabad", "PMS Hyderabad", "SIF investment India", "mutual fund advisor Hyderabad", "NRI investing India", "portfolio management services", "financial advisor Hyderabad", "HNI wealth management", "UHNI advisory India"],
+  description: "Hyderabad's boutique wealth advisor for HNIs, founders, families and NRIs. PMS, SIF, mutual funds, global investing and NRI advisory. Book a free portfolio review.",
+  keywords: ["wealth advisor Hyderabad", "wealth management Hyderabad", "investment advisor Hyderabad", "financial advisor Hyderabad", "PMS advisor Hyderabad", "best PMS in Hyderabad", "NRI investment advisor Hyderabad", "SIF investment India", "mutual fund advisor Hyderabad", "HNI wealth management"],
   authors: [{ name: "SoHo Wealth" }],
   twitter: {
     card: "summary_large_image",
@@ -75,7 +75,7 @@ const structuredData = [
       "height": 1024
     },
     "image": "https://sohowealth.in/soho-logo.png",
-    "description": "Hyderabad's boutique wealth management firm offering PMS, SIF, AIF, Mutual Funds, Global Investing, Pre-IPO and NRI investment advisory for HNIs and family offices.",
+    "description": "Hyderabad's boutique wealth advisor offering PMS, SIF, AIF, Mutual Funds, Global Investing, Pre-IPO and NRI investment advisory for HNIs, founders and family offices.",
     "founder": { "@id": "https://sohowealth.in/#kiran-dutta" },
     "foundingLocation": { "@type": "Place", "name": "Hyderabad, India" },
     "contactPoint": [
@@ -117,7 +117,7 @@ const structuredData = [
     "logo": "https://sohowealth.in/soho-logo.png",
     "telephone": "+91-90329-99466",
     "email": "invest@sohowealth.in",
-    "description": "Boutique wealth advisor in Hyderabad (Khajaguda) serving HNIs, family offices and NRIs with PMS, SIF, AIF, Mutual Funds and Global Investing.",
+    "description": "Boutique wealth advisor in Hyderabad (Khajaguda) serving HNIs, founders, family offices and NRIs with PMS, SIF, AIF, Mutual Funds and Global Investing.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "110, Green Grace, Khajaguda",
@@ -154,6 +154,13 @@ const structuredData = [
     "areaServed": [
       { "@type": "City", "name": "Hyderabad" },
       { "@type": "City", "name": "Secunderabad" },
+      { "@type": "Place", "name": "Gachibowli" },
+      { "@type": "Place", "name": "HITEC City" },
+      { "@type": "Place", "name": "Jubilee Hills" },
+      { "@type": "Place", "name": "Banjara Hills" },
+      { "@type": "Place", "name": "Khajaguda" },
+      { "@type": "Place", "name": "Kondapur" },
+      { "@type": "Place", "name": "Madhapur" },
       { "@type": "AdministrativeArea", "name": "Telangana" },
       { "@type": "Country", "name": "India" }
     ]

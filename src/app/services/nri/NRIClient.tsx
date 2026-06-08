@@ -109,9 +109,9 @@ const NRIClient = () => {
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 max-w-4xl text-center">
           <AnimatedSection>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">You Built Your Wealth Abroad.{" "}<span style={{ color: "#C9A84C" }}>Let's Make It Work in India.</span></h1>
-            <p className="font-body text-lg lg:text-xl leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>SoHo Wealth specializes in India investment advisory for NRIs \u2014 FEMA compliant, tax-efficient, repatriation-friendly. Video consultations available.</p>
-            <button onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>Book Your NRI Consultation (Video Call) \u2192</button>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">NRI Investment Advisor in Hyderabad for{" "}<span style={{ color: "#C9A84C" }}>India-Linked Wealth.</span></h1>
+            <p className="font-body text-lg lg:text-xl leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>SoHo Wealth helps NRIs from Hyderabad and India invest through FEMA-aware PMS, SIF, mutual funds, NRE/NRO structures and repatriation-friendly planning. Video consultations available worldwide.</p>
+            <button onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>Book Your NRI Investment Consultation</button>
             <div className="flex items-center justify-center gap-6 mt-12">
               {flags.map((f) => (<div key={f.label} className="flex flex-col items-center gap-1"><span className="text-3xl">{f.emoji}</span><span className="font-body text-xs text-white/60">{f.label}</span></div>))}
             </div>

@@ -80,19 +80,19 @@ const PMSAdvisoryClient = () => {
         <div className="container mx-auto px-6 lg:px-8 relative z-10 max-w-4xl text-center">
           <AnimatedSection>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
-              Beyond Mutual Funds.{" "}
-              <span style={{ color: "#C9A84C" }}>Welcome to Concentrated Alpha.</span>
+              PMS Advisor in Hyderabad for{" "}
+              <span style={{ color: "#C9A84C" }}>Serious HNI Portfolios.</span>
             </h1>
             <p className="font-body text-lg lg:text-xl leading-relaxed mb-6 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
-              Portfolio Management Services represent the next evolution for serious investors. Unlike mutual funds that hold 40-80 stocks,
-              PMS strategies run concentrated portfolios of 15-25 high-conviction picks.
+              Compare Portfolio Management Services before investing Rs. 50 lakh or more. SoHo Wealth helps Hyderabad investors evaluate
+              PMS strategies by manager quality, drawdowns, fees, taxation and fit with the existing portfolio.
             </p>
             <p className="font-body text-base leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.6)" }}>
-              With a minimum investment of Rs. 50 lakhs (SEBI-mandated), PMS is designed for investors who want direct stock ownership,
-              personalized portfolio construction, and higher alpha generation potential.
+              With a minimum investment of Rs. 50 lakh, PMS is designed for investors who want direct stock ownership,
+              personalized portfolio construction and access to concentrated active equity strategies beyond traditional mutual funds.
             </p>
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-              Book PMS Consultation →
+              Book PMS Comparison Call
             </Link>
           </AnimatedSection>
         </div>
@@ -155,10 +155,10 @@ const PMSAdvisoryClient = () => {
               Start Your PMS <span style={{ color: "#C9A84C" }}>Journey</span>
             </h2>
             <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Compare 50+ PMS strategies. Find the one that fits your risk profile and return expectations.
+              Compare 50+ PMS strategies before you commit capital. Find the route that fits your risk profile, time horizon and tax situation.
             </p>
             <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-              Schedule a Consultation →
+              Schedule PMS Review
             </Link>
           </AnimatedSection>
         </div>

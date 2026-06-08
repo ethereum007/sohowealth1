@@ -6,18 +6,18 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 const trustItems = [
-  "🏛 AMFI Registered Mutual Fund Distributor",
-  "✅ APMI PMS Distributor",
-  "📊 AMFI Registered SIF Distributor (ARN: 306593)",
-  "🎓 Columbia Alum",
+  "AMFI Registered Mutual Fund Distributor",
+  "APMI PMS Distributor",
+  "AMFI Registered SIF Distributor (ARN: 306593)",
+  "Columbia Alum",
 ];
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden"
+    <section
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ background: "#0B1F3A" }}
     >
-      {/* Subtle diagonal line texture */}
       <div
         className="absolute inset-0 opacity-[0.04]"
         style={{
@@ -26,7 +26,6 @@ export function HeroSection() {
         }}
       />
 
-      {/* Soft gold radial glow */}
       <div
         className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] rounded-full opacity-10 blur-3xl pointer-events-none"
         style={{ background: "radial-gradient(circle, #C9A84C 0%, transparent 70%)" }}
@@ -34,18 +33,16 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* H1 */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
           >
-            Hyderabad&apos;s Boutique Wealth Management for{" "}
-            <span style={{ color: "#C9A84C" }}>HNIs, Families &amp; NRIs.</span>
+            Wealth Advisor in Hyderabad for{" "}
+            <span style={{ color: "#C9A84C" }}>HNIs, Founders &amp; NRIs.</span>
           </motion.h1>
 
-          {/* Eyebrow / brand line */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,19 +53,17 @@ export function HeroSection() {
             Boutique Wealth. Institutional Thinking.
           </motion.p>
 
-          {/* Subheadline */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-12 font-body leading-relaxed"
           >
-            Independent advisory across PMS, SIF, AIF, Mutual Funds &amp; Global
-            Investing — for HNIs, Family Offices, Entrepreneurs and NRIs who
-            demand high quality professional advice.
+            Independent wealth management across PMS, SIF, AIF, Mutual Funds,
+            Pre-IPO and Global Investing for Hyderabad HNIs, family offices,
+            entrepreneurs, tech professionals and NRIs.
           </motion.p>
 
-          {/* CTAs */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -81,7 +76,7 @@ export function HeroSection() {
               style={{ background: "#C9A84C", color: "#0B1F3A" }}
               asChild
             >
-              <Link href="/contact">
+              <Link href="/portfolio-review">
                 Book Your Free Portfolio Review
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
@@ -99,7 +94,6 @@ export function HeroSection() {
             </a>
           </motion.div>
 
-          {/* Trust Strip */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}

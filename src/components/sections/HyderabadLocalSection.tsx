@@ -2,25 +2,34 @@
 
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { MapPin, Phone, Calendar, Globe } from "lucide-react";
+import { Calendar, Globe, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
 
 const cards = [
   {
     icon: MapPin,
     title: "Based in Hyderabad",
-    text: "Local presence in Hyderabad serving Banjara Hills, Jubilee Hills, Gachibowli, HITEC City and the wider city — plus Secunderabad and across Telangana.",
+    text: "Local wealth advisor in Khajaguda serving Banjara Hills, Jubilee Hills, Gachibowli, HITEC City, Kondapur, Madhapur and Secunderabad.",
   },
   {
     icon: Calendar,
-    title: "Mon–Sat, 9 AM – 6 PM",
+    title: "Mon-Sat, 9 AM - 6 PM",
     text: "In-person meetings at your office or home in Hyderabad, video consultations across India, and WhatsApp on +91 90329 99466.",
   },
   {
     icon: Globe,
     title: "Hyderabadis Abroad",
-    text: "Built specifically for NRIs from Hyderabad living in the US, UK, UAE, Singapore and Australia who want their India money managed by someone they can actually reach.",
+    text: "Built for NRIs from Hyderabad living in the US, UK, UAE, Singapore and Australia who want their India money managed by someone they can reach.",
   },
+];
+
+const localSearches = [
+  "wealth advisor in Gachibowli",
+  "wealth management in Jubilee Hills",
+  "PMS advisor in Hyderabad",
+  "NRI investment advisor Hyderabad",
+  "financial advisor for HNIs in HITEC City",
+  "portfolio review in Banjara Hills",
 ];
 
 export function HyderabadLocalSection() {
@@ -56,8 +65,9 @@ export function HyderabadLocalSection() {
             <span style={{ color: "#C9A84C" }}>Hyderabad?</span>
           </h2>
           <p className="font-body text-base lg:text-lg leading-relaxed" style={{ color: "#4A5568" }}>
-            SoHo Wealth is Hyderabad&apos;s independent boutique wealth advisor — Columbia-trained,
-            SEBI-aligned, and built around your goals instead of any single product&apos;s commission.
+            SoHo Wealth is Hyderabad&apos;s independent boutique wealth advisor for
+            PMS, SIF, AIF, mutual funds, NRI investing and portfolio reviews.
+            We are built around your goals instead of any single product&apos;s commission.
           </p>
         </motion.div>
 
@@ -86,13 +96,35 @@ export function HyderabadLocalSection() {
           ))}
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.45 }}
+          className="max-w-5xl mx-auto mb-10 rounded-xl bg-white p-6 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]"
+        >
+          <h3 className="font-display text-xl font-semibold mb-4 text-center" style={{ color: "#0B1F3A" }}>
+            Hyderabad Investors Commonly Search For
+          </h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {localSearches.map((term) => (
+              <span
+                key={term}
+                className="rounded-md border px-4 py-3 text-sm font-medium text-center"
+                style={{ borderColor: "#E2E8F0", color: "#1a2d4a", backgroundColor: "#F7F8FA" }}
+              >
+                {term}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link
             href="/portfolio-review"
             className="inline-flex items-center justify-center px-8 py-3.5 rounded-lg font-semibold text-sm tracking-wide transition-all duration-200 hover:opacity-90"
             style={{ backgroundColor: "#0B1F3A", color: "#C9A84C" }}
           >
-            Book a Free Consultation in Hyderabad →
+            Book a Free Consultation in Hyderabad
           </Link>
           <a
             href="tel:+919032999466"

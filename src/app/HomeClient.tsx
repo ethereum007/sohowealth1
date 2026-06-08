@@ -15,15 +15,15 @@ const homeFaqs = [
   },
   {
     q: "What services does SoHo Wealth offer in Hyderabad?",
-    a: "We offer end-to-end wealth advisory in Hyderabad: PMS (₹50L+), SIF (₹10L+), AIF (₹1Cr+), Mutual Funds (SIPs from ₹500), Pre-IPO deals, RSU & ESOP advisory for tech professionals, NRI investing, and Global Investing via LRS, GIFT City and US stocks.",
+    a: "We offer end-to-end wealth advisory in Hyderabad: PMS (Rs. 50L+), SIF (Rs. 10L+), AIF (Rs. 1Cr+), Mutual Funds, Pre-IPO deals, RSU and ESOP advisory for tech professionals, NRI investing, and Global Investing via LRS, GIFT City and US stocks.",
   },
   {
     q: "How is SoHo Wealth different from a bank's wealth manager?",
-    a: "Banks typically have product quotas — relationship managers must push their employer's funds and structured products. SoHo Wealth is independent: we are not tied to any AMC, PMS or AIF, so the only goal is matching you with the right strategy for your goals and risk profile.",
+    a: "Banks typically have product quotas. SoHo Wealth is independent: we are not tied to any AMC, PMS or AIF, so the only goal is matching you with the right strategy for your goals and risk profile.",
   },
   {
     q: "What is the minimum portfolio size to work with SoHo Wealth?",
-    a: "Our complimentary portfolio review is available for investors with ₹25 lakh or more in investable assets. Below that, we recommend starting with mutual fund SIPs and growing into PMS, SIF or AIF as your portfolio scales.",
+    a: "Our complimentary portfolio review is available for investors with Rs. 25 lakh or more in investable assets. Below that, we recommend starting with mutual fund SIPs and growing into PMS, SIF or AIF as your portfolio scales.",
   },
   {
     q: "Do you work with NRIs from outside India?",
@@ -44,7 +44,7 @@ const HomeClient = () => {
         <ServicesGridSection />
         <SIFBannerSection />
         <HyderabadLocalSection />
-        <FAQSection faqs={homeFaqs} heading="Wealth Advisor Hyderabad — FAQs" background="#FFFFFF" />
+        <FAQSection faqs={homeFaqs} heading="Wealth Advisor Hyderabad FAQs" background="#FFFFFF" />
         <PortfolioReviewSection />
       </main>
     </div>

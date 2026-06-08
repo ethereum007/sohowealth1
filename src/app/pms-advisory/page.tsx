@@ -2,22 +2,23 @@ import type { Metadata } from "next";
 import PMSAdvisoryClient from "./PMSAdvisoryClient";
 
 export const metadata: Metadata = {
-  title: "Best PMS in Hyderabad — Portfolio Management Services | SoHo Wealth",
+  title: "PMS Advisor in Hyderabad | Compare Portfolio Management Services | SoHo Wealth",
   description:
-    "Access India's top Portfolio Management Services (PMS) through SoHo Wealth, Hyderabad. Compare 50+ PMS strategies, invest with minimum Rs. 50 lakhs.",
+    "PMS advisor in Hyderabad for HNIs investing Rs. 50 lakh or more. Compare 50+ PMS strategies, fees, drawdowns, taxation and portfolio fit.",
   keywords:
-    "PMS Hyderabad, portfolio management services India, best PMS strategies 2026, PMS advisor Hyderabad, top PMS managers India",
+    "PMS advisor Hyderabad, PMS in Hyderabad, portfolio management services Hyderabad, best PMS in Hyderabad, PMS comparison India, HNI investment Hyderabad",
   alternates: { canonical: "https://sohowealth.in/pms-advisory" },
   openGraph: {
-    title: "Best PMS Advisory in Hyderabad — SoHo Wealth",
-    description: "Access 50+ PMS strategies. Compare performance. Invest from Rs. 50 lakhs.",
+    title: "PMS Advisor in Hyderabad | SoHo Wealth",
+    description:
+      "Compare PMS strategies before investing Rs. 50 lakh or more. Manager due diligence, fees, drawdowns and tax review.",
     url: "https://sohowealth.in/pms-advisory",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best PMS in Hyderabad | SoHo Wealth",
-    description: "Access 50+ PMS strategies. Compare performance. Invest from Rs. 50 lakhs.",
+    title: "PMS Advisor in Hyderabad | SoHo Wealth",
+    description: "Compare PMS strategies before investing Rs. 50 lakh or more.",
   },
 };
 

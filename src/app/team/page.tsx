@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import TeamClient from "./TeamClient";
 
 export const metadata: Metadata = {
-  title: "Our Team — SoHo Wealth | Columbia MBA-Led Wealth Advisory Team",
+  title: "Kiran Dutta Profile | SoHo Wealth Founder & SIFPrime Founder",
   description:
-    "Meet the SoHo Wealth team — Columbia-led wealth advisory with 10+ years across US & Indian markets. Advisory board from banking, PE and family offices.",
+    "Meet Kiran Dutta, founder of SoHo Wealth and SIFPrime. Columbia alum with Wall Street, family office, VC/PE and SIF platform experience.",
   keywords:
-    "SoHo Wealth team, wealth advisor Hyderabad, Columbia MBA financial advisor, investment advisory team India",
+    "Kiran Dutta, SoHo Wealth founder, SIFPrime founder, wealth advisor Hyderabad, Columbia wealth advisor, family office India, SIF advisor India",
   alternates: { canonical: "https://sohowealth.in/team" },
   openGraph: {
-    title: "Our Team — SoHo Wealth Advisory",
+    title: "Kiran Dutta Profile | SoHo Wealth",
     description:
-      "Columbia MBA-led team. 10+ years of market expertise serving HNIs, families & NRIs.",
+      "Founder of SoHo Wealth and SIFPrime. Columbia alum with Wall Street, family office, VC/PE and SIF platform experience.",
     url: "https://sohowealth.in/team",
-    type: "website",
+    type: "profile",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Team — SoHo Wealth Advisory",
-    description: "Columbia MBA-led team. 10+ years of market expertise serving HNIs, families & NRIs.",
+    title: "Kiran Dutta Profile | SoHo Wealth",
+    description: "Founder of SoHo Wealth and SIFPrime. Columbia alum, Wall Street and family office experience.",
   },
 };
 

@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "SoHo Wealth | Boutique Wealth Management Hyderabad | PMS, SIF, NRI Advisory",
+  title: "Wealth Advisor in Hyderabad for HNIs, Founders & NRIs | SoHo Wealth",
   description:
-    "Hyderabad's boutique wealth advisor for HNIs, family offices & NRIs. SIF, PMS, AIF, Mutual Funds & Pre-IPO. Book a free portfolio review.",
+    "Hyderabad wealth advisor for HNIs, founders, families and NRIs. PMS, SIF, AIF, mutual funds, pre-IPO and NRI investment advisory. Book a free portfolio review.",
   keywords:
-    "wealth management Hyderabad, PMS distributor Hyderabad, SIF investment India, NRI investment advisory, HNI wealth advisor",
+    "wealth advisor Hyderabad, wealth management Hyderabad, investment advisor Hyderabad, PMS advisor Hyderabad, NRI investment advisor Hyderabad, financial advisor Hyderabad, SIF investment India",
   alternates: { canonical: "https://sohowealth.in/" },
   openGraph: {
-    title: "SoHo Wealth | Boutique Wealth Management Hyderabad",
+    title: "Wealth Advisor in Hyderabad | SoHo Wealth",
     description:
-      "Hyderabad's premier boutique wealth advisor for HNIs, family offices & NRIs. Expert guidance on SIF, PMS, AIF, mutual funds & pre-IPO investments.",
+      "Hyderabad boutique wealth advisor for HNIs, founders, families and NRIs. PMS, SIF, AIF, mutual funds, pre-IPO and NRI investing.",
     url: "https://sohowealth.in/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SoHo Wealth | Boutique Wealth Management Hyderabad",
-    description: "Premier boutique wealth advisor for HNIs, family offices & NRIs. PMS, SIF, AIF & more.",
+    title: "Wealth Advisor in Hyderabad | SoHo Wealth",
+    description: "Boutique wealth advisor for HNIs, founders, families and NRIs. PMS, SIF, AIF and more.",
   },
 };
 
