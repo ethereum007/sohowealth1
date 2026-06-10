@@ -105,9 +105,6 @@ export default function OnboardingForm({ initial }: { initial: PlanInput }) {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
 
-      {/* ---------- CAS auto-fill ---------- */}
-      <CasUploadCard onParsed={(parsed) => addCasAssets(parsed)} />
-
       {/* ---------- Starter pack banner (only when form is mostly empty) ---------- */}
       {isMostlyEmpty && (
         <section className="bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-5">
@@ -237,10 +234,11 @@ export default function OnboardingForm({ initial }: { initial: PlanInput }) {
       {/* ---------- Assets ---------- */}
       <CollectionCard
         title="Assets"
-        subtitle="Everything you own — across asset classes."
+        subtitle="Everything you own — across asset classes. Add rows manually, or auto-fill your mutual funds from a CAS statement."
         addLabel="Add asset"
         onAdd={() => assets.append({ asset_class: "equity", description: "", current_value: 0, notes: "" })}
       >
+        <CasUploadCard onParsed={(parsed) => addCasAssets(parsed)} />
         {assets.fields.length === 0 && <Empty hint="Cash, FDs, mutual funds, stocks, gold, property, etc." />}
         {assets.fields.map((f, i) => (
           <AssetRow

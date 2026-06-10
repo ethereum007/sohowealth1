@@ -63,14 +63,13 @@ export default function CasUploadCard({ onParsed }: Props) {
   }
 
   return (
-    <section className="bg-gradient-to-br from-emerald-50 to-emerald-100/60 border border-emerald-200 rounded-xl p-5">
+    <section className="bg-emerald-50/70 border border-emerald-200 rounded-lg p-4">
       <div className="flex items-start gap-3">
-        <FileUp className="w-5 h-5 text-emerald-700 mt-0.5 shrink-0" />
+        <FileUp className="w-4 h-4 text-emerald-700 mt-0.5 shrink-0" />
         <div className="flex-1">
-          <h2 className="font-serif text-lg text-emerald-900">Auto-fill from your CAS statement</h2>
-          <p className="text-sm text-emerald-800 mt-1">
-            Upload your CAMS / KFintech Consolidated Account Statement (PDF) and we&apos;ll fill in your
-            mutual fund holdings automatically. Parsed in memory — the file is never stored.
+          <p className="text-sm font-semibold text-emerald-900">Optional: auto-fill your mutual funds from a CAS statement</p>
+          <p className="text-xs text-emerald-800 mt-0.5">
+            Upload your CAMS / KFintech CAS (PDF) and your holdings appear below — no typing. Parsed in memory, never stored.
           </p>
 
           <div className="flex flex-wrap items-center gap-2 mt-3">
