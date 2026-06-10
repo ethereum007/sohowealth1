@@ -6,7 +6,12 @@ export const dynamic = "force-dynamic";
 
 export default async function OnboardingPage() {
   const supabase = await createServerSupabase();
-  const { data: { user } } = await supabase.auth.getUser();
+  let user = null;
+  try {
+    ({ data: { user } } = await supabase.auth.getUser());
+  } catch (err) {
+    console.error("[app/onboarding] auth backend unreachable:", err);
+  }
   if (!user) return null; // layout already redirects
 
   const [profileR, familyR, incomeR, expenseR, assetR, liabR, goalR, insR] = await Promise.all([

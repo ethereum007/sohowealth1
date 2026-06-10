@@ -15,7 +15,14 @@ export const metadata = {
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {
   const supabase = await createServerSupabase();
-  const { data: { user } } = await supabase.auth.getUser();
+  // Segment error.tsx can't catch errors thrown in this layout, so an
+  // unreachable auth backend must not throw here — treat it as signed out.
+  let user = null;
+  try {
+    ({ data: { user } } = await supabase.auth.getUser());
+  } catch (err) {
+    console.error("[app/layout] auth backend unreachable:", err);
+  }
   if (!user) redirect("/sign-in");
 
   const { data: profile } = await supabase

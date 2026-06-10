@@ -11,7 +11,12 @@ export const metadata = { title: "Your Financial Plan — SoHo Wealth" };
 
 export default async function ReportPage() {
   const supabase = await createServerSupabase();
-  const { data: { user } } = await supabase.auth.getUser();
+  let user = null;
+  try {
+    ({ data: { user } } = await supabase.auth.getUser());
+  } catch (err) {
+    console.error("[app/report] auth backend unreachable:", err);
+  }
   if (!user) redirect("/sign-in");
 
   const [profileR, familyR, incomeR, expenseR, assetR, liabR, goalR, insR, holdingR] = await Promise.all([
