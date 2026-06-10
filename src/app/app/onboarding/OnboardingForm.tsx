@@ -16,6 +16,7 @@ import { insurerOptions } from "@/lib/wealth/data/insurers";
 import { cityOptions } from "@/lib/wealth/data/cities";
 import { GOAL_TEMPLATES, templateToGoal } from "@/lib/wealth/data/goal-templates";
 import { STARTER_PACKS } from "@/lib/wealth/data/quick-templates";
+import CasUploadCard, { type ParsedCasAsset } from "./CasUploadCard";
 
 const card = "bg-white rounded-xl border border-slate-200 shadow-sm p-6";
 const sectionTitle = "font-serif text-xl text-slate-900";
@@ -80,6 +81,21 @@ export default function OnboardingForm({ initial }: { initial: PlanInput }) {
     }
   }
 
+  function addCasAssets(parsed: ParsedCasAsset[]) {
+    // Skip rows already present (same description + value) so re-uploads don't duplicate.
+    const existing = new Set(
+      getValues().assets.map((a: any) => `${(a.description || "").toLowerCase()}|${Number(a.current_value)}`),
+    );
+    let added = 0;
+    for (const a of parsed) {
+      const key = `${a.description.toLowerCase()}|${a.current_value}`;
+      if (existing.has(key)) continue;
+      assets.append({ asset_class: a.asset_class, description: a.description, current_value: a.current_value, notes: a.notes ?? "" });
+      added++;
+    }
+    toast.success(`Added ${added} holdings from your CAS. Review values below.`);
+  }
+
   const isMostlyEmpty =
     family.fields.length === 0 &&
     income.fields.length === 0 &&
@@ -88,6 +104,9 @@ export default function OnboardingForm({ initial }: { initial: PlanInput }) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+
+      {/* ---------- CAS auto-fill ---------- */}
+      <CasUploadCard onParsed={(parsed) => addCasAssets(parsed)} />
 
       {/* ---------- Starter pack banner (only when form is mostly empty) ---------- */}
       {isMostlyEmpty && (

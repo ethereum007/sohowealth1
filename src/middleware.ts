@@ -47,7 +47,16 @@ export async function middleware(req: NextRequest) {
     }
   );
 
-  const { data: { user } } = await supabase.auth.getUser();
+  // Fail open if Supabase is unreachable (project paused/deleted, network):
+  // a dead auth backend must not take down marketing pages or hard-crash /app —
+  // the /app pages re-check auth and their error boundary shows a clean message.
+  let user = null;
+  try {
+    ({ data: { user } } = await supabase.auth.getUser());
+  } catch (err) {
+    console.error("[middleware] Supabase unreachable:", err);
+    return NextResponse.next();
+  }
 
   // /app/* requires sign-in
   if (pathname.startsWith("/app") && !user) {
