@@ -1,7 +1,6 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -68,6 +67,9 @@ const whoShouldInvest = [
 const PreIPOClient = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
+  const scrollToConsultation = () => {
+    document.getElementById("pre-ipo-consultation")?.scrollIntoView({ behavior: "smooth" });
+  };
 
   return (
     <main className="pt-20">
@@ -81,8 +83,8 @@ const PreIPOClient = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Invest Before the{" "}<span style={{ color: "#C9A84C" }}>Market Does</span></h1>
             <p className="text-lg text-white/70 leading-relaxed mb-8 max-w-2xl">Pre-IPO investing lets you participate in India's most promising companies before they list on exchanges. We bring you vetted, late-stage opportunities with institutional-grade due diligence.</p>
             <div className="flex flex-wrap gap-4">
-              <Button asChild size="lg" className="h-14 px-8 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-                <Link href="#pre-ipo-consultation">Explore Opportunities<ArrowRight className="ml-2 w-5 h-5" /></Link>
+              <Button type="button" onClick={scrollToConsultation} size="lg" className="h-14 px-8 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+                Explore Opportunities<ArrowRight className="ml-2 w-5 h-5" />
               </Button>
             </div>
           </AnimatedSection>
@@ -153,8 +155,8 @@ const PreIPOClient = () => {
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mb-6">Ready to Explore Pre-IPO{" "}<span style={{ color: "#C9A84C" }}>Opportunities?</span></h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">Schedule a confidential consultation with our advisory team. We'll walk you through currently available deals, the due diligence process, and how Pre-IPO fits into your overall wealth strategy.</p>
-            <Button asChild size="lg" className="h-14 px-10 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-              <Link href="#pre-ipo-consultation">Schedule a Consultation<ArrowRight className="ml-2 w-5 h-5" /></Link>
+            <Button type="button" onClick={scrollToConsultation} size="lg" className="h-14 px-10 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              Schedule a Consultation<ArrowRight className="ml-2 w-5 h-5" />
             </Button>
           </AnimatedSection>
         </div>

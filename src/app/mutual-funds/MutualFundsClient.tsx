@@ -98,6 +98,10 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 const MutualFundsClient = () => {
+  const scrollToReviewForm = () => {
+    document.getElementById("mutual-funds-review-form")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <>
       <Script
@@ -124,9 +128,9 @@ const MutualFundsClient = () => {
                 At SoHo Wealth, we don't sell mutual funds — we construct portfolios.
                 Every fund recommendation comes with a clear rationale: why this fund, why this allocation, and when to rebalance.
               </p>
-              <a href="#mutual-funds-review-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <button type="button" onClick={scrollToReviewForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Get Free Portfolio Review →
-              </a>
+              </button>
             </AnimatedSection>
           </div>
         </section>
@@ -221,9 +225,9 @@ const MutualFundsClient = () => {
               <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
                 Let our experts build a portfolio tailored to your goals. Free portfolio review for new investors.
               </p>
-              <a href="#mutual-funds-review-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <button type="button" onClick={scrollToReviewForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Schedule Consultation →
-              </a>
+              </button>
             </AnimatedSection>
           </div>
         </section>

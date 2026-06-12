@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { useRef } from "react";
@@ -71,6 +70,10 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 export function LandingPageClient({ config }: { config: LandingPageConfig }) {
+  const scrollToConsultation = () => {
+    document.getElementById(`${config.slug}-consultation`)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const url = `https://www.sohowealth.in/${config.slug}`;
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -114,9 +117,9 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
               {config.intro}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href={`#${config.slug}-consultation`} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <button type="button" onClick={scrollToConsultation} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 {config.primaryCta} <ArrowRight className="ml-2 w-4 h-4" />
-              </Link>
+              </button>
               <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-semibold text-base border border-white/20 text-white hover:bg-white/10 transition-colors">
                 <MessageCircle className="w-4 h-4" />
                 {config.secondaryCta || "WhatsApp SoHo Wealth"}
@@ -222,9 +225,9 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
               Talk to Kiran Dutta and get a clear view of which route fits your portfolio, risk profile, and goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link href={`#${config.slug}-consultation`} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <button type="button" onClick={scrollToConsultation} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Book Free Consultation
-              </Link>
+              </button>
               <a href="tel:+919032999466" className="inline-flex items-center gap-2 font-semibold text-white">
                 <Phone className="w-4 h-4" />
                 +91 90329 99466

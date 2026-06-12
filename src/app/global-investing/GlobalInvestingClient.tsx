@@ -7,7 +7,6 @@ import {
   Globe, TrendingUp, Shield, BarChart3, ArrowRight, Coins,
   Building2, CheckCircle2, AlertTriangle, Scale, PieChart, Banknote
 } from "lucide-react";
-import Link from "next/link";
 import {
   Table, TableBody, TableCell, TableHead, TableHeader, TableRow
 } from "@/components/ui/table";
@@ -144,6 +143,10 @@ const services = [
 ];
 
 const GlobalInvestingClient = () => {
+  const scrollToConsultation = () => {
+    document.getElementById("global-investing-consultation")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   const giFaqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -175,8 +178,8 @@ const GlobalInvestingClient = () => {
               SoHo Wealth helps you build a truly global portfolio \u2014 US stocks, international ETFs, GIFT City funds \u2014 while
               navigating LRS, RBI regulations, FEMA compliance, and cross-border tax implications.
             </p>
-            <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14 group" asChild>
-              <Link href="#global-investing-consultation">Start Your Global Portfolio <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+            <Button type="button" onClick={scrollToConsultation} className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14 group">
+              Start Your Global Portfolio <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </motion.div>
         </div>
@@ -405,7 +408,7 @@ const GlobalInvestingClient = () => {
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">Go Global with <span className="text-gradient-gold">Confidence</span></h2>
             <p className="text-lg text-muted-foreground mb-8">Build a diversified international portfolio with full compliance support \u2014 LRS, FEMA, tax filing, and beyond.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14" asChild><Link href="#global-investing-consultation">Schedule Consultation</Link></Button>
+              <Button type="button" onClick={scrollToConsultation} className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14">Schedule Consultation</Button>
               <Button variant="outline" className="text-base px-8 h-14" asChild><a href="https://wa.me/919032999466?text=Hi%2C%20I%27m%20interested%20in%20global%20investing" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></Button>
             </div>
           </div>

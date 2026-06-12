@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import Link from "next/link";
 import { useRef } from "react";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
@@ -72,6 +71,10 @@ const categories = [
 ];
 
 const PMSAdvisoryClient = () => {
+  const scrollToForm = () => {
+    document.getElementById("pms-comparison-form")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
     <main className="pt-20">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pmsServiceSchema) }} />
@@ -93,9 +96,9 @@ const PMSAdvisoryClient = () => {
               With a minimum investment of Rs. 50 lakh, PMS is designed for investors who want direct stock ownership,
               personalized portfolio construction and access to concentrated active equity strategies beyond traditional mutual funds.
             </p>
-            <Link href="#pms-comparison-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+            <button type="button" onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Book PMS Comparison Call
-            </Link>
+            </button>
           </AnimatedSection>
         </div>
       </section>
@@ -159,9 +162,9 @@ const PMSAdvisoryClient = () => {
             <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
               Compare 50+ PMS strategies before you commit capital. Find the route that fits your risk profile, time horizon and tax situation.
             </p>
-            <Link href="#pms-comparison-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+            <button type="button" onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Schedule PMS Review
-            </Link>
+            </button>
           </AnimatedSection>
         </div>
       </section>
