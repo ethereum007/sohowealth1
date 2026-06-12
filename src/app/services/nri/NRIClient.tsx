@@ -128,7 +128,14 @@ const NRIClient = () => {
               <AnimatedSection key={card.title}>
                 <div className="rounded-xl bg-white p-8 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)] border-t-4 h-full" style={{ borderTopColor: "#0B1F3A" }}>
                   <h3 className="font-display text-xl font-semibold mb-5" style={{ color: "#0B1F3A" }}>{card.title}</h3>
-                  <ul className="space-y-3">{card.items.map((item) => (<li key={item} className="flex items-start gap-3"><span style={{ color: "#C9A84C" }}>\u2192</span><span className="font-body text-base" style={{ color: "#4A5568" }}>{item}</span></li>))}</ul>
+                  <ul className="space-y-3">
+                    {card.items.map((item) => (
+                      <li key={item} className="flex items-start gap-3">
+                        <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} aria-hidden="true" />
+                        <span className="font-body text-base" style={{ color: "#4A5568" }}>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </AnimatedSection>
             ))}
@@ -167,8 +174,8 @@ const NRIClient = () => {
           <AnimatedSection>
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mb-8">Ready to invest in India <span style={{ color: "#C9A84C" }}>from abroad</span>?</h2>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>WhatsApp Kiran Now \u2192</a>
-              <a href="https://calendly.com/sohowealth" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90 border-2" style={{ borderColor: "#C9A84C", color: "#C9A84C" }}>Book a Video Call \u2192</a>
+              <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>WhatsApp Kiran Now →</a>
+              <a href="https://calendly.com/sohowealth" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90 border-2" style={{ borderColor: "#C9A84C", color: "#C9A84C" }}>Book a Video Call →</a>
             </div>
           </AnimatedSection>
         </div>
