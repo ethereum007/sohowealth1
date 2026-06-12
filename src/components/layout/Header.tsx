@@ -26,7 +26,7 @@ const navLinks = [
       { name: "Global Investing", href: "/global-investing" },
     ],
   },
-  { name: "Insights", href: "/budget-2026" },
+  { name: "Insights", href: "/insights" },
   { name: "Hyderabad Wealth", href: "/wealth-management-hyderabad" },
   { name: "Contact", href: "/contact" },
 ];

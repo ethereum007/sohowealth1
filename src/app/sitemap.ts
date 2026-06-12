@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { insightPosts } from "@/lib/insights/posts";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.sohowealth.in";
@@ -31,12 +32,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },
+    { path: "/insights",          lastModified: "2026-06-12", changeFrequency: "weekly",  priority: 0.85 },
   ];
 
-  return routes.map((r) => ({
+  const staticRoutes = routes.map((r) => ({
     url: `${baseUrl}${r.path}`,
     lastModified: new Date(r.lastModified),
     changeFrequency: r.changeFrequency,
     priority: r.priority,
   }));
+
+  const insightRoutes = insightPosts.map((post) => ({
+    url: `${baseUrl}/insights/${post.slug}`,
+    lastModified: new Date(post.updatedAt),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...staticRoutes, ...insightRoutes];
 }

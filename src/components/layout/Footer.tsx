@@ -20,7 +20,7 @@ const servicesLinks = [
 
 const companyLinks = [
   { name: "About", href: "/about" },
-  { name: "Insights", href: "/budget-2026" },
+  { name: "Insights", href: "/insights" },
   { name: "Portfolio Review", href: "/portfolio-review" },
   { name: "Contact", href: "/contact" },
   { name: "Privacy Policy", href: "/privacy-policy" },
