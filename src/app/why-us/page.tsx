@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     "Why SoHo Wealth is different: independent unbiased advisory, Columbia pedigree, full-stack wealth management, and a Hyderabad-first approach.",
   keywords:
     "why SoHo Wealth, independent wealth advisor Hyderabad, unbiased financial advisor India, fee-transparent wealth management",
-  alternates: { canonical: "https://sohowealth.in/why-us" },
+  alternates: { canonical: "https://www.sohowealth.in/why-us" },
   openGraph: {
     title: "Why SoHo Wealth — The SoHo Difference",
     description:
       "Independent, unbiased, full-stack wealth management. Columbia pedigree, Hyderabad roots.",
-    url: "https://sohowealth.in/why-us",
+    url: "https://www.sohowealth.in/why-us",
     type: "website",
   },
   twitter: {

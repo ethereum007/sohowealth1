@@ -6,9 +6,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/app", "/app/", "/auth/"],
+        disallow: ["/app", "/app/", "/auth/", "/sign-in"],
       },
     ],
-    sitemap: "https://sohowealth.in/sitemap.xml",
+    sitemap: "https://www.sohowealth.in/sitemap.xml",
   };
 }

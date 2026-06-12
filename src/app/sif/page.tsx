@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     "SIF investment advisor in Hyderabad. Compare Specialized Investment Funds in India, Rs. 10L minimum, SIF vs PMS fitment and portfolio suitability.",
   keywords:
     "SIF investment India, SIF investment Hyderabad, specialized investment fund, SEBI SIF, SIF advisor Hyderabad, SIF vs PMS, SIFPrime",
-  alternates: { canonical: "https://sohowealth.in/sif" },
+  alternates: { canonical: "https://www.sohowealth.in/sif" },
   openGraph: {
     title: "SIF Investment Advisor Hyderabad | SoHo Wealth",
     description:
       "Compare Specialized Investment Funds in India with SoHo Wealth, Hyderabad. Rs. 10L minimum and SIF vs PMS fitment.",
-    url: "https://sohowealth.in/sif",
+    url: "https://www.sohowealth.in/sif",
     type: "website",
   },
   twitter: {

@@ -71,12 +71,12 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 export function LandingPageClient({ config }: { config: LandingPageConfig }) {
-  const url = `https://sohowealth.in/${config.slug}`;
+  const url = `https://www.sohowealth.in/${config.slug}`;
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
       { "@type": "ListItem", position: 2, name: config.title, item: url },
     ],
   };
@@ -87,7 +87,7 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
     description: config.serviceDescription,
     serviceType: config.serviceType,
     url,
-    provider: { "@id": "https://sohowealth.in/#organization" },
+    provider: { "@id": "https://www.sohowealth.in/#organization" },
     areaServed: [
       { "@type": "City", name: "Hyderabad" },
       { "@type": "AdministrativeArea", name: "Telangana" },

@@ -8,6 +8,7 @@ import { useRef } from "react";
 import { TrendingUp, ShieldCheck, Search, Clock, ArrowRight, CheckCircle2 } from "lucide-react";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
+import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 
 const preIpoFaqs = [
   { q: "What is Pre-IPO investing?", a: "Pre-IPO investing means buying shares of a private company before it files for an Initial Public Offering. These companies are typically late-stage with strong revenue, expanding market share and a clear path to listing." },
@@ -24,8 +25,8 @@ const preIpoServiceSchema = {
   name: "Pre-IPO Investment Advisory",
   description: "Curated Pre-IPO investment opportunities in high-growth Indian companies. Late-stage deals with rigorous due diligence for HNIs and family offices.",
   serviceType: "Pre-IPO Advisory",
-  url: "https://sohowealth.in/pre-ipo",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/pre-ipo",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "Country", name: "India" },
@@ -37,8 +38,8 @@ const preIpoBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Pre-IPO Investments", item: "https://sohowealth.in/pre-ipo" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Pre-IPO Investments", item: "https://www.sohowealth.in/pre-ipo" },
   ],
 };
 
@@ -81,7 +82,7 @@ const PreIPOClient = () => {
             <p className="text-lg text-white/70 leading-relaxed mb-8 max-w-2xl">Pre-IPO investing lets you participate in India's most promising companies before they list on exchanges. We bring you vetted, late-stage opportunities with institutional-grade due diligence.</p>
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="h-14 px-8 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-                <Link href="/contact">Explore Opportunities<ArrowRight className="ml-2 w-5 h-5" /></Link>
+                <Link href="#pre-ipo-consultation">Explore Opportunities<ArrowRight className="ml-2 w-5 h-5" /></Link>
               </Button>
             </div>
           </AnimatedSection>
@@ -153,11 +154,47 @@ const PreIPOClient = () => {
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-white mb-6">Ready to Explore Pre-IPO{" "}<span style={{ color: "#C9A84C" }}>Opportunities?</span></h2>
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">Schedule a confidential consultation with our advisory team. We'll walk you through currently available deals, the due diligence process, and how Pre-IPO fits into your overall wealth strategy.</p>
             <Button asChild size="lg" className="h-14 px-10 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-              <Link href="/contact">Schedule a Consultation<ArrowRight className="ml-2 w-5 h-5" /></Link>
+              <Link href="#pre-ipo-consultation">Schedule a Consultation<ArrowRight className="ml-2 w-5 h-5" /></Link>
             </Button>
           </AnimatedSection>
         </div>
       </section>
+
+      <LeadCaptureForm
+        source="pre-ipo page"
+        heading="Request Pre-IPO Opportunities"
+        sectionId="pre-ipo-consultation"
+        leftContent={
+          <>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-5 text-white">
+              Review Private-Market Fit Before You Allocate.
+            </h2>
+            <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>
+              Pre-IPO deals need careful due diligence, liquidity planning and allocation sizing. Share your portfolio context and we will discuss what may be suitable.
+            </p>
+            <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>
+              What you will get
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "Suitability check for Pre-IPO exposure",
+                "Discussion of available deal types and ticket sizes",
+                "Liquidity, lock-in and listing-timeline risk review",
+                "Portfolio allocation sizing guidance",
+                "Confidential consultation with SoHo Wealth",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: "#C9A84C" }} />
+                  <span className="font-body text-base text-white/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>
+              Pre-IPO investing is illiquid and suitable only for investors who can tolerate private-market risk.
+            </p>
+          </>
+        }
+      />
 
       <FAQSection faqs={preIpoFaqs} heading="Pre-IPO — Frequently Asked Questions" />
 

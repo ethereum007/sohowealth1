@@ -13,8 +13,8 @@ const aifServiceSchema = {
   name: "Alternative Investment Fund (AIF) Advisory",
   description: "Independent AIF advisory in Hyderabad. Evaluate Cat I, II and III AIFs across private equity, venture capital, structured credit and long-short equity. Min ₹1 crore.",
   serviceType: "Alternative Investment Fund Advisory",
-  url: "https://sohowealth.in/aif-advisory",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/aif-advisory",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "Country", name: "India" },
@@ -27,8 +27,8 @@ const aifBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "AIF Advisory", item: "https://sohowealth.in/aif-advisory" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "AIF Advisory", item: "https://www.sohowealth.in/aif-advisory" },
   ],
 };
 

@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import {
-  Globe, TrendingUp, Shield, BarChart3, ArrowRight, Coins, FileText,
-  DollarSign, Building2, Landmark, CheckCircle2, AlertTriangle, Scale,
-  PieChart, Banknote, ArrowUpRight
+  Globe, TrendingUp, Shield, BarChart3, ArrowRight, Coins,
+  Building2, CheckCircle2, AlertTriangle, Scale, PieChart, Banknote
 } from "lucide-react";
 import Link from "next/link";
 import {
@@ -14,6 +13,7 @@ import {
 } from "@/components/ui/table";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RelatedServices } from "@/components/seo/RelatedServices";
+import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 
 const giServiceSchema = {
   "@context": "https://schema.org",
@@ -21,8 +21,8 @@ const giServiceSchema = {
   name: "Global Investing Advisory from India",
   description: "Invest globally from India via LRS, GIFT City funds, US stocks and international ETFs. Full RBI/FEMA compliance with end-to-end LRS, Schedule FA and Form 67 support.",
   serviceType: "Global Investing Advisory",
-  url: "https://sohowealth.in/global-investing",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/global-investing",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "Country", name: "India" },
@@ -34,8 +34,8 @@ const giBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Global Investing", item: "https://sohowealth.in/global-investing" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Global Investing", item: "https://www.sohowealth.in/global-investing" },
   ],
 };
 
@@ -176,7 +176,7 @@ const GlobalInvestingClient = () => {
               navigating LRS, RBI regulations, FEMA compliance, and cross-border tax implications.
             </p>
             <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14 group" asChild>
-              <Link href="/contact">Start Your Global Portfolio <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
+              <Link href="#global-investing-consultation">Start Your Global Portfolio <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" /></Link>
             </Button>
           </motion.div>
         </div>
@@ -405,12 +405,48 @@ const GlobalInvestingClient = () => {
             <h2 className="font-display text-3xl md:text-4xl font-semibold text-foreground mb-6">Go Global with <span className="text-gradient-gold">Confidence</span></h2>
             <p className="text-lg text-muted-foreground mb-8">Build a diversified international portfolio with full compliance support \u2014 LRS, FEMA, tax filing, and beyond.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14" asChild><Link href="/contact">Schedule Consultation</Link></Button>
+              <Button className="bg-gradient-gold text-primary-foreground hover:opacity-90 shadow-gold text-base px-8 h-14" asChild><Link href="#global-investing-consultation">Schedule Consultation</Link></Button>
               <Button variant="outline" className="text-base px-8 h-14" asChild><a href="https://wa.me/919032999466?text=Hi%2C%20I%27m%20interested%20in%20global%20investing" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></Button>
             </div>
           </div>
         </div>
       </section>
+
+      <LeadCaptureForm
+        source="global-investing page"
+        heading="Book a Global Investing Consultation"
+        sectionId="global-investing-consultation"
+        leftContent={
+          <>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-5 text-white">
+              Build Global Exposure Without Compliance Guesswork.
+            </h2>
+            <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>
+              We will help you decide whether Indian global funds, GIFT City, direct US ETFs or a blended route fits your tax status and portfolio.
+            </p>
+            <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>
+              What you will get
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "Route selection across LRS, GIFT City and India-domiciled funds",
+                "Tax, TCS, Schedule FA and estate-tax risk overview",
+                "Currency and country allocation discussion",
+                "Broker/platform cost comparison",
+                "Portfolio fit review against your India holdings",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: "#C9A84C" }} />
+                  <span className="font-body text-base text-white/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>
+              Suitable for Indian residents, NRIs and tech professionals with concentrated global equity exposure.
+            </p>
+          </>
+        }
+      />
 
       <RelatedServices
         items={[

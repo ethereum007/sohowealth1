@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { CheckCircle2, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import Script from "next/script";
@@ -13,8 +13,8 @@ const mfServiceSchema = {
   name: "Mutual Fund Advisory Hyderabad",
   description: "AMFI-registered mutual fund advisory in Hyderabad. Goal-based portfolio construction, SIPs from ₹500, equity, debt, hybrid and ELSS funds. Free portfolio review.",
   serviceType: "Mutual Fund Advisory",
-  url: "https://sohowealth.in/mutual-funds",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/mutual-funds",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "Country", name: "India" },
@@ -26,8 +26,8 @@ const mfBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Mutual Funds", item: "https://sohowealth.in/mutual-funds" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Mutual Funds", item: "https://www.sohowealth.in/mutual-funds" },
   ],
 };
 
@@ -124,7 +124,7 @@ const MutualFundsClient = () => {
                 At SoHo Wealth, we don't sell mutual funds — we construct portfolios.
                 Every fund recommendation comes with a clear rationale: why this fund, why this allocation, and when to rebalance.
               </p>
-              <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <a href="#mutual-funds-review-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Get Free Portfolio Review →
               </a>
             </AnimatedSection>
@@ -221,12 +221,48 @@ const MutualFundsClient = () => {
               <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
                 Let our experts build a portfolio tailored to your goals. Free portfolio review for new investors.
               </p>
-              <a href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <a href="#mutual-funds-review-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Schedule Consultation →
               </a>
             </AnimatedSection>
           </div>
         </section>
+
+        <LeadCaptureForm
+          source="mutual-funds page"
+          heading="Review My Mutual Fund Portfolio"
+          sectionId="mutual-funds-review-form"
+          leftContent={
+            <>
+              <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-5 text-white">
+                Clean Up Your Mutual Funds Before Adding More.
+              </h2>
+              <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>
+                We will review overlap, underperformers, asset allocation, tax impact and whether your current funds still fit your goals.
+              </p>
+              <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>
+                What you will get
+              </p>
+              <ul className="space-y-4 mb-10">
+                {[
+                  "Fund overlap and duplication check",
+                  "Equity, debt and hybrid allocation review",
+                  "SIP and lumpsum deployment plan",
+                  "Tax-loss harvesting and exit-cost discussion",
+                  "Clear next-step portfolio roadmap",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: "#C9A84C" }} />
+                    <span className="font-body text-base text-white/90">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>
+                Best suited for investors who want a structured review before switching, redeeming or adding new funds.
+              </p>
+            </>
+          }
+        />
 
         <RelatedServices
           items={[

@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     "NRI investment advisor in Hyderabad for US, UK, UAE, Singapore and Australia NRIs. FEMA-aware PMS, SIF, mutual funds, NRE/NRO and repatriation guidance.",
   keywords:
     "NRI investment advisor Hyderabad, NRI wealth management Hyderabad, NRI investment in India, NRE NRO investment advisor, NRI PMS India, FEMA compliant investing",
-  alternates: { canonical: "https://sohowealth.in/services/nri" },
+  alternates: { canonical: "https://www.sohowealth.in/services/nri" },
   openGraph: {
     title: "NRI Investment Advisor Hyderabad | SoHo Wealth",
     description:
       "NRI investment advisory from Hyderabad for US, UK, UAE and Singapore NRIs. PMS, SIF, mutual funds, NRE/NRO and repatriation guidance.",
-    url: "https://sohowealth.in/services/nri",
+    url: "https://www.sohowealth.in/services/nri",
     type: "website",
   },
   twitter: {

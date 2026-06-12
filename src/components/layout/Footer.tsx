@@ -23,6 +23,8 @@ const companyLinks = [
   { name: "Insights", href: "/budget-2026" },
   { name: "Portfolio Review", href: "/portfolio-review" },
   { name: "Contact", href: "/contact" },
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Disclosures", href: "/disclosures" },
 ];
 
 export function Footer() {

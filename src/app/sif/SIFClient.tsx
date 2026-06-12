@@ -23,8 +23,8 @@ const sifServiceSchema = {
   name: "Specialized Investment Fund (SIF) Advisory",
   description: "SEBI-regulated SIF advisory in Hyderabad. Compare every available SIF scheme. Minimum ₹10 lakh. End-to-end onboarding and monitoring.",
   serviceType: "Specialized Investment Fund Advisory",
-  url: "https://sohowealth.in/sif",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/sif",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "Country", name: "India" },
@@ -42,8 +42,8 @@ const sifBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "SIF Advisory", item: "https://sohowealth.in/sif" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "SIF Advisory", item: "https://www.sohowealth.in/sif" },
   ],
 };
 

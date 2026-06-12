@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     "Book a free, no-obligation wealth consultation with SoHo Wealth, Hyderabad. Call +91 90329 99466 or fill out our form. PMS, SIF, Mutual Funds & NRI advisory.",
   keywords:
     "contact SoHo Wealth, wealth consultation Hyderabad, financial advisor appointment, book wealth advisor, free portfolio review Hyderabad",
-  alternates: { canonical: "https://sohowealth.in/contact" },
+  alternates: { canonical: "https://www.sohowealth.in/contact" },
   openGraph: {
     title: "Contact SoHo Wealth — Book Your Free Consultation",
     description: "Free wealth consultation. Call +91 90329 99466 or fill our form.",
-    url: "https://sohowealth.in/contact",
+    url: "https://www.sohowealth.in/contact",
     type: "website",
   },
   twitter: {

@@ -22,18 +22,18 @@ const contactBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Contact", item: "https://sohowealth.in/contact" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Contact", item: "https://www.sohowealth.in/contact" },
   ],
 };
 
 const contactPageSchema = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  url: "https://sohowealth.in/contact",
+  url: "https://www.sohowealth.in/contact",
   name: "Contact SoHo Wealth — Wealth Advisor in Hyderabad",
-  about: { "@id": "https://sohowealth.in/#organization" },
-  mainEntity: { "@id": "https://sohowealth.in/#localbusiness" },
+  about: { "@id": "https://www.sohowealth.in/#organization" },
+  mainEntity: { "@id": "https://www.sohowealth.in/#localbusiness" },
 };
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -375,7 +375,11 @@ const ContactClient = () => {
                   </button>
                 </form>
                 <p className="font-body text-xs text-center mt-4" style={{ color: "#4A5568" }}>
-                  By submitting, you agree to our privacy policy. We never share your data.
+                  By submitting, you agree to our{" "}
+                  <a href="/privacy-policy" className="font-semibold underline underline-offset-2" style={{ color: "#0B1F3A" }}>
+                    privacy policy
+                  </a>
+                  . We never share your data.
                 </p>
               </div>
             </AnimatedSection>

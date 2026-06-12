@@ -1,4 +1,4 @@
-export const SITE_URL = "https://sohowealth.in";
+export const SITE_URL = "https://www.sohowealth.in";
 export const ORG_ID = `${SITE_URL}/#organization`;
 export const PERSON_KIRAN_ID = `${SITE_URL}/#kiran-dutta`;
 

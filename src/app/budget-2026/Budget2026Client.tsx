@@ -19,10 +19,10 @@ const budgetArticleSchema = {
   description: "Comprehensive analysis of India's Union Budget 2026-27 presented by Finance Minister Nirmala Sitharaman — key tax changes, sectoral allocations and the new income-tax slabs.",
   datePublished: "2026-02-01",
   dateModified: "2026-02-01",
-  author: { "@id": "https://sohowealth.in/#kiran-dutta" },
-  publisher: { "@id": "https://sohowealth.in/#organization" },
-  image: "https://sohowealth.in/soho-logo.jpeg",
-  mainEntityOfPage: "https://sohowealth.in/budget-2026",
+  author: { "@id": "https://www.sohowealth.in/#kiran-dutta" },
+  publisher: { "@id": "https://www.sohowealth.in/#organization" },
+  image: "https://www.sohowealth.in/soho-logo.jpeg",
+  mainEntityOfPage: "https://www.sohowealth.in/budget-2026",
   keywords: "Union Budget 2026, Budget 2026-27, India tax slabs 2026, Nirmala Sitharaman budget, Viksit Bharat",
   articleSection: "Budget Analysis",
 };
@@ -31,9 +31,9 @@ const budgetBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Insights", item: "https://sohowealth.in/budget-2026" },
-    { "@type": "ListItem", position: 3, name: "Budget 2026-27", item: "https://sohowealth.in/budget-2026" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.sohowealth.in/budget-2026" },
+    { "@type": "ListItem", position: 3, name: "Budget 2026-27", item: "https://www.sohowealth.in/budget-2026" },
   ],
 };
 

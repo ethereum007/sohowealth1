@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     "Meet Kiran Dutta, founder of SoHo Wealth and SIFPrime. Columbia alum with Wall Street, family office, VC/PE and SIF platform experience.",
   keywords:
     "Kiran Dutta, SoHo Wealth founder, SIFPrime founder, wealth advisor Hyderabad, Columbia wealth advisor, family office India, SIF advisor India",
-  alternates: { canonical: "https://sohowealth.in/team" },
+  alternates: { canonical: "https://www.sohowealth.in/team" },
   openGraph: {
     title: "Kiran Dutta Profile | SoHo Wealth",
     description:
       "Founder of SoHo Wealth and SIFPrime. Columbia alum with Wall Street, family office, VC/PE and SIF platform experience.",
-    url: "https://sohowealth.in/team",
+    url: "https://www.sohowealth.in/team",
     type: "profile",
   },
   twitter: {

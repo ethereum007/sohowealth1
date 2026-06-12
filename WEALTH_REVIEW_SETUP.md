@@ -65,9 +65,9 @@ supabase/migrations/20260503_wealth_review_schema.sql
 ### 3. Configure auth (magic link)
 
 Supabase dashboard → **Authentication → URL Configuration**:
-- **Site URL**: `https://sohowealth.in` (or `http://localhost:3000` for local dev)
+- **Site URL**: `https://www.sohowealth.in` (or `http://localhost:3000` for local dev)
 - **Redirect URLs** (add both):
-  - `https://sohowealth.in/auth/callback`
+  - `https://www.sohowealth.in/auth/callback`
   - `http://localhost:3000/auth/callback`
 
 Optional: Authentication → Email Templates → **Magic Link** → customise the from-name to "SoHo Wealth" and reword the body.
@@ -189,7 +189,7 @@ Add the **same two vars** to Vercel → Settings → Environment Variables (Prod
 curl "http://localhost:3000/api/admin/refresh-funds?secret=YOUR_CRON_SECRET"
 
 # Production (after Vercel deploy)
-curl "https://sohowealth.in/api/admin/refresh-funds?secret=YOUR_CRON_SECRET"
+curl "https://www.sohowealth.in/api/admin/refresh-funds?secret=YOUR_CRON_SECRET"
 ```
 
 Takes 30-60 seconds. Returns JSON like `{ ok: true, parsed: 9847, upserted: 9847, elapsed_ms: 42000 }`.

@@ -10,7 +10,7 @@ export const metadata = {
     index: false,
     follow: false,
   },
-  alternates: { canonical: "https://sohowealth.in/app" },
+  alternates: { canonical: "https://www.sohowealth.in/app" },
 };
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {

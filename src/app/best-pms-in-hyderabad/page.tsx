@@ -8,11 +8,11 @@ export const metadata: Metadata = {
     "Looking for the best PMS in Hyderabad? Compare PMS strategies, fees, drawdowns, taxation and portfolio fit before investing Rs. 50 lakh or more.",
   keywords:
     "best PMS in Hyderabad, PMS advisor Hyderabad, PMS comparison Hyderabad, portfolio management services Hyderabad, HNI PMS India",
-  alternates: { canonical: "https://sohowealth.in/best-pms-in-hyderabad" },
+  alternates: { canonical: "https://www.sohowealth.in/best-pms-in-hyderabad" },
   openGraph: {
     title: "Best PMS in Hyderabad | SoHo Wealth",
     description: "Independent PMS comparison and advisory for Hyderabad HNIs.",
-    url: "https://sohowealth.in/best-pms-in-hyderabad",
+    url: "https://www.sohowealth.in/best-pms-in-hyderabad",
     type: "website",
   },
   twitter: {

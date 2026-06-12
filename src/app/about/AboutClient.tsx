@@ -10,18 +10,18 @@ const aboutBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "About", item: "https://sohowealth.in/about" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "About", item: "https://www.sohowealth.in/about" },
   ],
 };
 
 const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  url: "https://sohowealth.in/about",
+  url: "https://www.sohowealth.in/about",
   name: "About SoHo Wealth — Hyderabad's Independent Boutique Wealth Advisory",
-  about: { "@id": "https://sohowealth.in/#organization" },
-  mainEntity: { "@id": "https://sohowealth.in/#organization" },
+  about: { "@id": "https://www.sohowealth.in/#organization" },
+  mainEntity: { "@id": "https://www.sohowealth.in/#organization" },
 };
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {

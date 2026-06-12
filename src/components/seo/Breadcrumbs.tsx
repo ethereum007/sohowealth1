@@ -10,7 +10,7 @@ interface BreadcrumbsProps {
   items: Crumb[];
 }
 
-const BASE = "https://sohowealth.in";
+const BASE = "https://www.sohowealth.in";
 
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   const trail: Crumb[] = [{ name: "Home", href: "/" }, ...items];

@@ -6,6 +6,8 @@ import { useRef } from "react";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
 import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
+import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
+import { CheckCircle2 } from "lucide-react";
 
 const pmsFaqs = [
   { q: "What is a Portfolio Management Service (PMS)?", a: "PMS is a SEBI-regulated, professionally-managed investment service where a fund manager runs a concentrated portfolio of 15-25 stocks on your behalf, with direct ownership of the underlying securities held in your demat account." },
@@ -23,8 +25,8 @@ const pmsServiceSchema = {
   name: "Portfolio Management Services (PMS) Advisory",
   description: "Independent PMS advisory in Hyderabad. Compare 50+ PMS strategies. Minimum ₹50 lakh. Manager due diligence, portfolio fit assessment and ongoing monitoring.",
   serviceType: "Portfolio Management Services",
-  url: "https://sohowealth.in/pms-advisory",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/pms-advisory",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "Country", name: "India" },
@@ -37,8 +39,8 @@ const pmsBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "PMS Advisory", item: "https://sohowealth.in/pms-advisory" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "PMS Advisory", item: "https://www.sohowealth.in/pms-advisory" },
   ],
 };
 
@@ -91,7 +93,7 @@ const PMSAdvisoryClient = () => {
               With a minimum investment of Rs. 50 lakh, PMS is designed for investors who want direct stock ownership,
               personalized portfolio construction and access to concentrated active equity strategies beyond traditional mutual funds.
             </p>
-            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+            <Link href="#pms-comparison-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Book PMS Comparison Call
             </Link>
           </AnimatedSection>
@@ -157,12 +159,48 @@ const PMSAdvisoryClient = () => {
             <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
               Compare 50+ PMS strategies before you commit capital. Find the route that fits your risk profile, time horizon and tax situation.
             </p>
-            <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+            <Link href="#pms-comparison-form" className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Schedule PMS Review
             </Link>
           </AnimatedSection>
         </div>
       </section>
+
+      <LeadCaptureForm
+        source="pms-advisory page"
+        heading="Book Your PMS Comparison Call"
+        sectionId="pms-comparison-form"
+        leftContent={
+          <>
+            <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-5 text-white">
+              Compare PMS Strategies Before You Commit Rs. 50 Lakh.
+            </h2>
+            <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>
+              Get a practical review of strategy fit, manager quality, fees, drawdowns, taxation and how PMS should sit inside your wider portfolio.
+            </p>
+            <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>
+              What you will get
+            </p>
+            <ul className="space-y-4 mb-10">
+              {[
+                "PMS suitability check for your portfolio size and goals",
+                "Shortlist of strategy styles that match your risk profile",
+                "Fee, exit load and tax impact discussion",
+                "Comparison of PMS, SIF and mutual fund alternatives",
+                "30-minute consultation with SoHo Wealth",
+              ].map((item) => (
+                <li key={item} className="flex items-start gap-3">
+                  <CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: "#C9A84C" }} />
+                  <span className="font-body text-base text-white/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>
+              No obligation. No product pitch before the portfolio context is clear.
+            </p>
+          </>
+        }
+      />
 
       <FAQSection faqs={pmsFaqs} heading="PMS — Frequently Asked Questions" background="#FFFFFF" />
 

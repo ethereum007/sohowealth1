@@ -8,7 +8,7 @@ export const metadata = {
     index: false,
     follow: false,
   },
-  alternates: { canonical: "https://sohowealth.in/sign-in" },
+  alternates: { canonical: "https://www.sohowealth.in/sign-in" },
 };
 
 export default function SignInPage() {

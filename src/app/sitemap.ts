@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://sohowealth.in";
+  const baseUrl = "https://www.sohowealth.in";
 
   // Last meaningful content update per route — bump these when the page is edited.
   // Honest dates beat `new Date()` because crawlers use them as freshness signals.
@@ -28,6 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/why-us",            lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/team",              lastModified: "2026-06-08", changeFrequency: "monthly", priority: 0.75 },
     { path: "/contact",           lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
+    { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },
   ];
 

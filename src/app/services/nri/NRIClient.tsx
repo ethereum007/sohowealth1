@@ -13,8 +13,8 @@ const nriServiceSchema = {
   name: "NRI Investment Advisory India",
   description: "FEMA-compliant NRI investment advisory for US, UK, UAE, Singapore, Australia and Canada NRIs. PMS, SIF, AIF, Mutual Funds and Pre-IPO with NRE/NRO/PIS account guidance.",
   serviceType: "NRI Wealth Management",
-  url: "https://sohowealth.in/services/nri",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/services/nri",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "Country", name: "United States" },
     { "@type": "Country", name: "United Kingdom" },
@@ -31,9 +31,9 @@ const nriBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Services", item: "https://sohowealth.in/services/nri" },
-    { "@type": "ListItem", position: 3, name: "NRI Advisory", item: "https://sohowealth.in/services/nri" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Services", item: "https://www.sohowealth.in/services/nri" },
+    { "@type": "ListItem", position: 3, name: "NRI Advisory", item: "https://www.sohowealth.in/services/nri" },
   ],
 };
 

@@ -217,6 +217,13 @@ export function LeadCaptureForm({
                   >
                     {loading ? "Submitting..." : "Get My Free Review →"}
                   </button>
+                  <p className="text-center text-xs leading-relaxed font-body" style={{ color: "rgba(255,255,255,0.5)" }}>
+                    By submitting, you agree to our{" "}
+                    <a href="/privacy-policy" className="underline underline-offset-2 hover:text-white">
+                      privacy policy
+                    </a>
+                    . We never share your data.
+                  </p>
                 </form>
               </>
             )}

@@ -124,7 +124,11 @@ export function ContactSection() {
               </form>
 
               <p className="text-xs text-muted-foreground text-center mt-4">
-                By submitting, you agree to our privacy policy. We never share your data.
+                By submitting, you agree to our{" "}
+                <a href="/privacy-policy" className="font-semibold underline underline-offset-2">
+                  privacy policy
+                </a>
+                . We never share your data.
               </p>
             </div>
           </motion.div>

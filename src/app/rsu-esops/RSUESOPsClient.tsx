@@ -16,8 +16,8 @@ const rsuServiceSchema = {
   name: "RSU & ESOP Advisory for Tech Professionals",
   description: "End-to-end RSU and ESOP advisory — Indian taxation, FEMA compliance, Schedule FA reporting, and tax-efficient diversification via GIFT City funds and global ETFs.",
   serviceType: "RSU & ESOP Advisory",
-  url: "https://sohowealth.in/rsu-esops",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/rsu-esops",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "City", name: "Bengaluru" },
@@ -31,8 +31,8 @@ const rsuBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "RSU & ESOPs", item: "https://sohowealth.in/rsu-esops" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "RSU & ESOPs", item: "https://www.sohowealth.in/rsu-esops" },
   ],
 };
 

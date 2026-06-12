@@ -7,11 +7,11 @@ export const metadata: Metadata = {
     "Expert AIF advisory in Hyderabad. Evaluate private equity, venture capital, structured credit & real asset funds. Minimum \u20B91 crore. Unbiased selection.",
   keywords:
     "AIF advisory India, alternative investment funds Hyderabad, AIF minimum investment, private equity India, venture capital funds India",
-  alternates: { canonical: "https://sohowealth.in/aif-advisory" },
+  alternates: { canonical: "https://www.sohowealth.in/aif-advisory" },
   openGraph: {
     title: "AIF Advisory — Alternative Investment Funds | SoHo Wealth",
     description: "Expert AIF evaluation. Private equity, venture capital, structured credit. Min \u20B91 Cr.",
-    url: "https://sohowealth.in/aif-advisory",
+    url: "https://www.sohowealth.in/aif-advisory",
     type: "website",
   },
   twitter: {

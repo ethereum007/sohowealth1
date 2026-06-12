@@ -13,8 +13,8 @@ const portfolioReviewBreadcrumbs = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: [
-    { "@type": "ListItem", position: 1, name: "Home", item: "https://sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Portfolio Review", item: "https://sohowealth.in/portfolio-review" },
+    { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+    { "@type": "ListItem", position: 2, name: "Portfolio Review", item: "https://www.sohowealth.in/portfolio-review" },
   ],
 };
 
@@ -24,8 +24,8 @@ const portfolioReviewServiceSchema = {
   name: "Free Portfolio Review",
   description: "Complimentary 30-minute portfolio review for investors with ₹25 lakh+ portfolios. Asset allocation analysis, fee-leakage check, return benchmarking and a personalized roadmap.",
   serviceType: "Portfolio Review",
-  url: "https://sohowealth.in/portfolio-review",
-  provider: { "@id": "https://sohowealth.in/#organization" },
+  url: "https://www.sohowealth.in/portfolio-review",
+  provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [{ "@type": "City", name: "Hyderabad" }, { "@type": "Country", name: "India" }],
   audience: { "@type": "Audience", audienceType: "Investors with ₹25 lakh+ portfolios" },
   offers: { "@type": "Offer", price: "0", priceCurrency: "INR", description: "Free 30-minute portfolio review with Kiran Dutta" },

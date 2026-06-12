@@ -7,12 +7,12 @@ export const metadata: Metadata = {
     "Invest in high-growth companies before they go public. Curated Pre-IPO opportunities with rigorous due diligence for HNIs & family offices.",
   keywords:
     "Pre-IPO investments India, unlisted shares, pre-IPO deals Hyderabad, invest before IPO, SoHo Wealth Pre-IPO",
-  alternates: { canonical: "https://sohowealth.in/pre-ipo" },
+  alternates: { canonical: "https://www.sohowealth.in/pre-ipo" },
   openGraph: {
     title: "Pre-IPO Investments | SoHo Wealth — Access High-Growth Unlisted Companies",
     description:
       "Invest in high-growth companies before they go public. Curated Pre-IPO opportunities with rigorous due diligence.",
-    url: "https://sohowealth.in/pre-ipo",
+    url: "https://www.sohowealth.in/pre-ipo",
     type: "website",
   },
   twitter: {
