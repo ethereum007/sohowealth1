@@ -51,6 +51,11 @@ const incomeTaxActSource = {
   url: "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/objective-and-scope-new-act",
 };
 
+const incomeTax194LBBSource = {
+  title: "Income Tax Department: Section 194LBB - Income in Respect of Units of Investment Fund",
+  url: "https://www.incometaxindia.gov.in/w/section-194lbb-10",
+};
+
 const ifscaNriSource = {
   title: "IFSCA: NRIs and OCIs in GIFT IFSC",
   url: "https://ifsca.gov.in/Pages/Contents/NRIs%20section",
@@ -72,6 +77,120 @@ const mfuUsCanadaSource = {
 };
 
 export const insightPosts: InsightPost[] = [
+  {
+    slug: "nre-vs-nro-for-nri-aif-investments",
+    title: "NRE vs NRO for NRI AIF Investments: The Routing Decision Before You Subscribe",
+    description:
+      "Why NRIs considering Indian private credit, PE or Category II AIFs should decide the NRE/NRO funding route before signing the subscription documents.",
+    category: "NRI AIF Planning",
+    audience: "NRIs considering AIFs and private credit",
+    publishedAt: "2026-06-13",
+    updatedAt: "2026-06-13",
+    readingTime: "7 min read",
+    keywords: [
+      "NRE vs NRO AIF",
+      "NRI AIF investment India",
+      "NRI private credit AIF",
+      "NRO repatriation AIF",
+      "NRE account AIF investment",
+      "Category II AIF NRI",
+    ],
+    heroKicker: "NRI AIF Planning",
+    keyTakeaways: [
+      "The account used for an AIF subscription can affect repatriation, paperwork, withholding mechanics and post-tax cash flow.",
+      "NRE generally suits foreign-earned money that needs cleaner overseas repatriation; NRO generally suits India-sourced income or assets.",
+      "AIF tax treatment is not solved by account type alone; Category I and II AIF distributions can involve fund-level reporting and TDS under investment-fund rules.",
+      "NRIs should finalize the account route before the first capital call, because changing course after subscription can be difficult or impossible.",
+    ],
+    sections: [
+      {
+        heading: "The Quiet Decision Inside Every NRI AIF Subscription",
+        body: [
+          "A private credit AIF can look attractive on the surface: defined yield target, quarterly payouts, SEBI-regulated structure, experienced manager and a clean investment memo. For an NRI, that is still only half the decision.",
+          "The other half sits inside the subscription form: which bank account funds the commitment? NRE and NRO money can lead to very different operational outcomes over a multi-year lock-in. The account route affects repatriation planning, documentation, withholding experience and how easily distributions move back overseas.",
+          "This decision is often made casually because the fund pitch focuses on yield and portfolio quality. But for NRIs, routing is not clerical. It is part of the investment structure.",
+        ],
+      },
+      {
+        heading: "NRE and NRO Are Built for Different Money",
+        table: {
+          columns: ["Account", "Typically Holds", "Why It Matters for AIFs"],
+          rows: [
+            ["NRE", "Foreign income remitted to India", "Generally cleaner for repatriable foreign-earned capital"],
+            ["NRO", "India-sourced income, rent, sale proceeds or legacy resident assets", "Useful for India money, but repatriation needs documentation and limits can apply"],
+            ["FCNR(B)", "Foreign currency deposits", "Relevant for deposits, not usually the primary route for rupee AIF subscriptions"],
+          ],
+        },
+      },
+      {
+        heading: "Do Not Oversimplify the Tax Point",
+        body: [
+          "It is tempting to say that NRE means tax-free and NRO means taxable. That is too blunt for AIFs. NRE account interest has favourable Indian tax treatment, and NRE balances are generally repatriable. But an AIF distribution is not bank-account interest.",
+          "For Category I and Category II investment funds, Indian tax rules can require withholding on specified income distributed to unit holders. The rate and final outcome can depend on investor status, income character, PAN, treaty documents, fund reporting and the investor's own tax facts.",
+          "So the real question is not, 'Which account avoids all tax?' The better question is, 'Which route matches my source of funds, repatriation need and documentation plan?'",
+        ],
+      },
+      {
+        heading: "Why the Mistake Becomes Expensive",
+        body: [
+          "Private credit and PE-style AIFs are not like a liquid mutual fund that can be corrected quickly. Once subscription documents are signed and capital calls begin, the investor may be locked into the chosen route for years.",
+          "If India-sourced NRO money is used when the investor actually wanted overseas-earned, repatriable capital to stay flexible, quarterly distributions can become a recurring paperwork and withholding event. If foreign-earned NRE money is sitting idle at the same time, the household may have created avoidable friction before the fund even deployed capital.",
+        ],
+      },
+      {
+        heading: "The Pre-Subscription Questions",
+        bullets: [
+          "Is the commitment being funded from foreign earnings or India-sourced money?",
+          "Will distributions need to be used in India or sent overseas?",
+          "Does the AIF accept NRE, NRO or both routes for this investor category?",
+          "Will units be treated as repatriable or non-repatriable in the fund and RTA records?",
+          "What TDS will apply to distributions for a non-resident investor?",
+          "Will the investor provide PAN, tax residency certificate, Form 10F or treaty paperwork?",
+          "What documents will the bank require for any outward remittance?",
+          "Who owns this decision: the fund manager, CA, overseas advisor or wealth relationship?",
+        ],
+      },
+      {
+        heading: "Who Should Be Especially Careful",
+        body: [
+          "This matters most for NRIs writing large cheques into Category II AIFs, private credit funds, real estate credit vehicles, venture debt, PE funds or structured income products. The larger the commitment and the longer the lock-in, the more important the route becomes.",
+          "It also matters for Singapore, UAE, UK, US and Canada-based professionals who have both overseas salary savings and India-sourced assets. In those cases, the choice is not simply 'Can I invest?' It is 'Which pool of money should invest?'",
+        ],
+      },
+      {
+        heading: "SoHo Wealth View",
+        body: [
+          "The funding route should be decided before the first drawdown notice, not after the first distribution. AIF selection, tax review and banking route should be one conversation.",
+          "At SoHo Wealth, we help NRIs review the account route, repatriation intent, product suitability and documentation checklist before they commit to PMS, SIF, AIF or private credit allocations.",
+          "If you are evaluating an Indian AIF from overseas, set up a call before signing the subscription documents. A 30-minute routing review can be far cheaper than fixing the wrong structure later.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Can an NRI invest in an Indian AIF through NRE or NRO?",
+        a: "Many AIFs may accept NRI investors through eligible account routes, but the fund, custodian, RTA and documentation rules should be checked before subscribing.",
+      },
+      {
+        q: "Does using NRE make AIF distributions tax-free in India?",
+        a: "Not automatically. NRE account interest has favourable treatment, but AIF distributions are separate investment income and may be subject to fund-level reporting and TDS depending on facts.",
+      },
+      {
+        q: "Why does NRO funding create more friction?",
+        a: "NRO is generally used for India-sourced money. Repatriation can require tax documentation and may be subject to annual limits under RBI rules.",
+      },
+      {
+        q: "When should NRIs decide the funding route?",
+        a: "Before subscription and before the first capital call. Once the fund records the investment route, changing it later may be difficult.",
+      },
+    ],
+    relatedSlugs: [
+      "nre-vs-nro-repatriation",
+      "nri-portfolio-review-products",
+      "nri-investing-india-2026-checklist",
+    ],
+    sources: [rbiAccountsSource, rbiRemittanceSource, incomeTax194LBBSource],
+  },
   {
     slug: "nri-investing-india-2026-checklist",
     title: "NRI Investing in India in 2026: A Practical Checklist Before You Move Money",
@@ -439,9 +558,9 @@ export const insightPosts: InsightPost[] = [
       },
     ],
     relatedSlugs: [
+      "nre-vs-nro-for-nri-aif-investments",
       "nri-investing-india-2026-checklist",
       "nri-property-sale-tds-budget-2026",
-      "returning-to-india-wealth-checklist",
     ],
     sources: [rbiAccountsSource, rbiRemittanceSource],
   },
@@ -892,9 +1011,9 @@ export const insightPosts: InsightPost[] = [
       },
     ],
     relatedSlugs: [
+      "nre-vs-nro-for-nri-aif-investments",
       "sif-for-nris-vs-pms-mutual-funds",
       "gift-city-for-nris-guide",
-      "rsu-esop-diversification-nri",
     ],
     sources: [sebiSifSource, ifscaNriSource, rbiAccountsSource],
   },
