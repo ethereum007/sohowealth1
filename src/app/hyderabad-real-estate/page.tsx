@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     "residential property Hyderabad",
     "RERA property Hyderabad",
     "HMDA approved plots Hyderabad",
+    "TS RERA registered consultant",
   ],
   authors: [{ name: "SoHo Wealth" }],
   alternates: { canonical: pageUrl },
@@ -231,6 +232,29 @@ const nriChecklist = [
   "For rental assets, decide who handles tenant verification, rent collection, repairs, tax withholding and periodic inspection.",
 ];
 
+const diligenceDocuments = [
+  "TG-RERA project registration certificate and current project status",
+  "HMDA, GHMC, DTCP or relevant authority approval references",
+  "Title deed chain, mother deed and ownership flow",
+  "Encumbrance certificate and litigation search",
+  "Sanctioned building plan, occupancy certificate or completion status",
+  "Sale agreement, payment schedule, cancellation terms and delay clauses",
+  "UDS, carpet area, built-up area and maintenance obligation clarity",
+  "Loan approval, valuation, rental estimate and resale comparables",
+  "NRI POA, PAN, OCI/passport, NRE/NRO funding and tax documents where relevant",
+];
+
+const redFlags = [
+  "Unregistered project marketed as a pre-launch opportunity",
+  "Large cash component or payment outside normal banking channels",
+  "Mismatch between brochure area, agreement area and sanctioned plan",
+  "Builder pushing urgency before sharing title and approval documents",
+  "Plots without clear layout approval, road access or land-use confirmation",
+  "Commercial yield quoted without lease copy, lock-in, escalation and tenant review",
+  "NRI buyer asked to sign broad POA without transaction-specific limits",
+  "No clear plan for rental management, tax withholding, insurance or resale exit",
+];
+
 const faqs = [
   {
     q: "Is Hyderabad real estate still attractive in 2026?",
@@ -263,6 +287,14 @@ const faqs = [
   {
     q: "Can property sale proceeds be repatriated abroad?",
     a: "Yes, subject to FEMA/RBI rules, source of acquisition, tax compliance, bank documentation and applicable annual limits. NRIs should plan repatriation before selling.",
+  },
+  {
+    q: "Why should I use a TS-RERA registered consultant or agent?",
+    a: "A RERA-registered consultant or agent gives buyers a verifiable regulatory trail. Before paying fees or signing a facilitation mandate, verify the consultant or agent registration on the TG-RERA portal.",
+  },
+  {
+    q: "Does SoHo Wealth replace a lawyer, valuer or tax advisor?",
+    a: "No. SoHo Wealth helps with portfolio fitment, diligence framing and coordination. Legal title, valuation and tax opinions should be confirmed by qualified professionals.",
   },
 ];
 
@@ -498,6 +530,52 @@ export default function HyderabadRealEstatePage() {
         </div>
       </section>
 
+      <section className="py-20 lg:py-24" style={{ backgroundColor: "#F7F8FA" }}>
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#C9A84C" }}>Buyer Protection</p>
+            <h2 className="font-display mt-3 text-3xl font-semibold md:text-4xl" style={{ color: "#0B1F3A" }}>
+              Documents we want to see before a property becomes an investment
+            </h2>
+            <p className="mt-4 font-body text-base leading-relaxed text-slate-600">
+              A good Hyderabad property decision is not built on a brochure. It is built on approvals, title, cash-flow math, exit visibility and NRI execution clarity.
+            </p>
+          </div>
+
+          <div className="grid gap-6 lg:grid-cols-2">
+            <div className="rounded-lg border border-slate-200 bg-white p-7 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
+              <div className="mb-5 flex items-center gap-3">
+                <FileSearch className="h-6 w-6" style={{ color: "#C9A84C" }} />
+                <h3 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Document checklist</h3>
+              </div>
+              <ul className="space-y-3">
+                {diligenceDocuments.map((item) => (
+                  <li key={item} className="flex gap-3 font-body text-sm leading-relaxed text-slate-700">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" style={{ color: "#C9A84C" }} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="rounded-lg border border-slate-200 bg-white p-7 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
+              <div className="mb-5 flex items-center gap-3">
+                <ShieldCheck className="h-6 w-6" style={{ color: "#C9A84C" }} />
+                <h3 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Red flags</h3>
+              </div>
+              <ul className="space-y-3">
+                {redFlags.map((item) => (
+                  <li key={item} className="flex gap-3 font-body text-sm leading-relaxed text-slate-700">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full" style={{ backgroundColor: "#C9A84C" }} />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <LeadCaptureForm
         source="hyderabad-real-estate page"
         heading="Book Your Hyderabad Real Estate Review"
@@ -527,6 +605,29 @@ export default function HyderabadRealEstatePage() {
           </>
         }
       />
+
+      <section className="bg-white py-14">
+        <div className="container mx-auto max-w-4xl px-6 lg:px-8">
+          <div className="rounded-lg border border-slate-200 p-6 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
+            <div className="mb-4 flex items-center gap-3">
+              <ShieldCheck className="h-6 w-6" style={{ color: "#C9A84C" }} />
+              <h2 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>
+                TS-RERA Registered Consultant Disclosure
+              </h2>
+            </div>
+            <p className="font-body text-sm leading-relaxed text-slate-700">
+              Real estate transaction facilitation should be undertaken only through appropriately registered TS-RERA consultants or agents where registration is required. Before any paid property facilitation, clients should verify the consultant or agent name and registration number on the TG-RERA portal.
+            </p>
+            <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">
+              SoHo Wealth provides portfolio-fitment, diligence framing and coordination support. Legal title, valuation, tax treatment, stamp duty, registration and RERA status must be independently verified by qualified professionals and official portals before a purchase decision.
+            </p>
+            <a href="https://rerait.telangana.gov.in/SearchList/Search" target="_blank" rel="noopener noreferrer" className="mt-5 inline-flex items-center gap-2 font-body text-sm font-semibold" style={{ color: "#0B1F3A" }}>
+              Verify on TG-RERA
+              <ExternalLink className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="py-16" style={{ backgroundColor: "#F7F8FA" }}>
         <div className="container mx-auto max-w-4xl px-6 lg:px-8">
