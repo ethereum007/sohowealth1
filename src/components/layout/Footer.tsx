@@ -12,6 +12,7 @@ const servicesLinks = [
   { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
   { name: "AIF Advisory", href: "/aif-advisory" },
   { name: "NRI Advisory", href: "/services/nri" },
+  { name: "Hyderabad Real Estate", href: "/hyderabad-real-estate" },
   { name: "Pre-IPO", href: "/pre-ipo" },
   { name: "RSU & ESOPs", href: "/rsu-esops" },
   { name: "Mutual Funds", href: "/mutual-funds" },
