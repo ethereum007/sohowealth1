@@ -1,6 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  async redirects() {
+    return [
+      {
+        source: "/nri-real-estate-hyderabad",
+        destination: "/nri-real-estate-in-hyderabad",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
