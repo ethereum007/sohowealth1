@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { insightPosts } from "@/lib/insights/posts";
+import { allRealEstateGuides } from "@/lib/real-estate/seo-pages";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.sohowealth.in";
@@ -19,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/best-pms-in-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/sif-vs-pms",        lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/services/nri",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
-    { path: "/hyderabad-real-estate", lastModified: "2026-06-14", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/hyderabad-real-estate", lastModified: "2026-06-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/portfolio-review",  lastModified: "2026-04-27", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/aif-advisory",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/mutual-funds",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
@@ -50,5 +51,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticRoutes, ...insightRoutes];
+  const realEstateRoutes = allRealEstateGuides.map((page) => ({
+    url: `${baseUrl}${page.path}`,
+    lastModified: new Date(page.updatedAt),
+    changeFrequency: "weekly" as const,
+    priority: page.sitemapPriority,
+  }));
+
+  return [...staticRoutes, ...realEstateRoutes, ...insightRoutes];
 }

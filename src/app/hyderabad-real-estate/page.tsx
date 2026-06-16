@@ -16,6 +16,7 @@ import { FAQSection } from "@/components/seo/FAQSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { RelatedServices } from "@/components/seo/RelatedServices";
+import { ScrollToSectionButton } from "@/components/ScrollToSectionButton";
 
 const pageUrl = "https://www.sohowealth.in/hyderabad-real-estate";
 
@@ -289,7 +290,7 @@ const faqs = [
     a: "Yes, subject to FEMA/RBI rules, source of acquisition, tax compliance, bank documentation and applicable annual limits. NRIs should plan repatriation before selling.",
   },
   {
-    q: "Why should I use a TS-RERA registered consultant or agent?",
+    q: "Why should I use a TG-RERA registered consultant or agent?",
     a: "A RERA-registered consultant or agent gives buyers a verifiable regulatory trail. Before paying fees or signing a facilitation mandate, verify the consultant or agent registration on the TG-RERA portal.",
   },
   {
@@ -307,6 +308,54 @@ const sourceLinks = [
   { title: "JLL Hyderabad office market dynamics Q1 2026", href: "https://www.jll.com/en-in/insights/market-dynamics/hyderabad-office" },
   { title: "JLL Hyderabad residential market dynamics Q1 2026", href: "https://www.jll.com/en-in/insights/market-dynamics/hyderabad-residential" },
   { title: "Cushman & Wakefield Hyderabad MarketBeat", href: "https://www.cushmanwakefield.com/en/india/insights/hyderabad-marketbeat" },
+];
+
+const seoClusterLinks = [
+  {
+    title: "US NRI Hyderabad Real Estate",
+    href: "/us-nri-hyderabad-real-estate",
+    description: "Buying from the USA, NRE/NRO routing, POA, US tax coordination and remote ownership planning.",
+  },
+  {
+    title: "NRI Real Estate in Hyderabad",
+    href: "/nri-real-estate-in-hyderabad",
+    description: "A global NRI guide for residential, commercial, rental, repatriation and property-management decisions in Hyderabad.",
+  },
+  {
+    title: "NRI Property Checklist",
+    href: "/nri-property-checklist-hyderabad",
+    description: "Documents, TG-RERA checks, POA, banking, tax and exit checklist before token payment.",
+  },
+  {
+    title: "Kokapet Real Estate",
+    href: "/hyderabad-real-estate/kokapet",
+    description: "Premium West Hyderabad and Neopolis corridor review for NRI and HNI buyers.",
+  },
+  {
+    title: "Gachibowli Real Estate",
+    href: "/hyderabad-real-estate/gachibowli",
+    description: "Mature IT and office-led residential market with rental-demand and resale-depth review.",
+  },
+  {
+    title: "Financial District Real Estate",
+    href: "/hyderabad-real-estate/financial-district",
+    description: "Premium office-led corridor for rental demand, senior professionals and high-ticket residential projects.",
+  },
+  {
+    title: "Tellapur Real Estate",
+    href: "/hyderabad-real-estate/tellapur",
+    description: "Family-led growth corridor for larger homes, villas and return-to-India planning.",
+  },
+  {
+    title: "Narsingi Real Estate",
+    href: "/hyderabad-real-estate/narsingi",
+    description: "ORR-access corridor near Kokapet, Nanakramguda and Financial District demand.",
+  },
+  {
+    title: "Shamshabad Real Estate",
+    href: "/hyderabad-real-estate/shamshabad",
+    description: "Airport and logistics corridor where title, land-use and exit liquidity need extra diligence.",
+  },
 ];
 
 export default function HyderabadRealEstatePage() {
@@ -354,10 +403,10 @@ export default function HyderabadRealEstatePage() {
               SoHo Wealth helps HNIs, NRIs and families evaluate Hyderabad residential and commercial real estate with a portfolio-first lens: location, title, RERA, yield, liquidity, tax and repatriation.
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="#real-estate-consultation" className="inline-flex items-center justify-center gap-2 rounded-lg px-7 py-4 font-body text-sm font-semibold transition hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <ScrollToSectionButton targetId="real-estate-consultation" className="inline-flex items-center justify-center gap-2 rounded-lg px-7 py-4 font-body text-sm font-semibold transition hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Book Real Estate Review
                 <ArrowRight className="h-4 w-4" />
-              </Link>
+              </ScrollToSectionButton>
               <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg border border-white/20 px-7 py-4 font-body text-sm font-semibold text-white transition hover:bg-white/10">
                 WhatsApp SoHo Wealth
               </a>
@@ -441,6 +490,32 @@ export default function HyderabadRealEstatePage() {
                 <p className="font-body text-sm leading-relaxed text-slate-700">{market.fit}</p>
                 <p className="font-body text-sm leading-relaxed text-slate-500">{market.watch}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 lg:py-24">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#C9A84C" }}>NRI Property Guides</p>
+            <h2 className="font-display mt-3 text-3xl font-semibold md:text-4xl" style={{ color: "#0B1F3A" }}>
+              Deeper Hyderabad property guides for NRIs and overseas clients
+            </h2>
+            <p className="mt-4 font-body text-base leading-relaxed text-slate-600">
+              Use these guides to compare country-specific execution, document readiness and the main Hyderabad corridors before shortlisting a property.
+            </p>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {seoClusterLinks.map((item) => (
+              <Link key={item.href} href={item.href} className="group rounded-lg border border-slate-200 bg-white p-6 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)] transition hover:-translate-y-1 hover:border-[#C9A84C]">
+                <h3 className="font-display text-lg font-semibold transition group-hover:text-[#C9A84C]" style={{ color: "#0B1F3A" }}>{item.title}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">{item.description}</p>
+                <span className="mt-5 inline-flex items-center gap-2 font-body text-sm font-semibold" style={{ color: "#0B1F3A" }}>
+                  Read guide
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -612,11 +687,11 @@ export default function HyderabadRealEstatePage() {
             <div className="mb-4 flex items-center gap-3">
               <ShieldCheck className="h-6 w-6" style={{ color: "#C9A84C" }} />
               <h2 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>
-                TS-RERA Registered Consultant Disclosure
+                TG-RERA Registered Consultant Disclosure
               </h2>
             </div>
             <p className="font-body text-sm leading-relaxed text-slate-700">
-              Real estate transaction facilitation should be undertaken only through appropriately registered TS-RERA consultants or agents where registration is required. Before any paid property facilitation, clients should verify the consultant or agent name and registration number on the TG-RERA portal.
+              Real estate transaction facilitation should be undertaken only through appropriately registered TG-RERA consultants or agents where registration is required. Before any paid property facilitation, clients should verify the consultant or agent name and registration number on the TG-RERA portal.
             </p>
             <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">
               SoHo Wealth provides portfolio-fitment, diligence framing and coordination support. Legal title, valuation, tax treatment, stamp duty, registration and RERA status must be independently verified by qualified professionals and official portals before a purchase decision.
@@ -651,9 +726,10 @@ export default function HyderabadRealEstatePage() {
       <RelatedServices
         heading="Continue Comparing Options"
         items={[
+          { title: "US NRI Hyderabad Real Estate", href: "/us-nri-hyderabad-real-estate", description: "Buying from the USA with NRE/NRO, POA and US tax coordination points." },
+          { title: "NRI Property Checklist", href: "/nri-property-checklist-hyderabad", description: "Documents, RERA, banking and exit checks before token payment." },
+          { title: "NRI Real Estate in Hyderabad", href: "/nri-real-estate-in-hyderabad", description: "Buying, holding, renting or exiting Hyderabad property from overseas." },
           { title: "NRI Advisory", href: "/services/nri", description: "Coordinate India investments, NRE/NRO, repatriation and family wealth from overseas." },
-          { title: "AIF Advisory", href: "/aif-advisory", description: "Compare private market and alternative structures before locking capital." },
-          { title: "Portfolio Review", href: "/portfolio-review", description: "Review whether property belongs in your overall asset allocation." },
         ]}
       />
     </main>

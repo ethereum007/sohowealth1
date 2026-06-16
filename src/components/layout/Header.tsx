@@ -21,6 +21,8 @@ const navLinks = [
       { name: "AIF Advisory", href: "/aif-advisory" },
       { name: "NRI Advisory", href: "/services/nri" },
       { name: "Hyderabad Real Estate", href: "/hyderabad-real-estate" },
+      { name: "NRI Real Estate", href: "/nri-real-estate-in-hyderabad" },
+      { name: "US NRI Property", href: "/us-nri-hyderabad-real-estate" },
       { name: "Pre-IPO", href: "/pre-ipo" },
       { name: "RSU & ESOPs", href: "/rsu-esops" },
       { name: "Mutual Funds", href: "/mutual-funds" },
