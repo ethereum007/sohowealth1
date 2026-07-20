@@ -6,6 +6,7 @@ import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { CheckCircle2, ChevronDown } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RelatedServices } from "@/components/seo/RelatedServices";
+import Link from "next/link";
 
 const nriServiceSchema = {
   "@context": "https://schema.org",
@@ -165,6 +166,24 @@ const NRIClient = () => {
         <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
           <AnimatedSection className="text-center mb-14"><h2 className="font-display text-3xl md:text-4xl font-semibold" style={{ color: "#0B1F3A" }}>Frequently Asked <span style={{ color: "#C9A84C" }}>Questions</span></h2></AnimatedSection>
           <div>{faqs.map((faq) => (<FAQItem key={faq.q} q={faq.q} a={faq.a} />))}</div>
+        </div>
+      </section>
+
+      {/* NRI TAX GUIDE */}
+      <section className="py-20 lg:py-24" style={{ backgroundColor: "#F7F8FA" }}>
+        <div className="container mx-auto max-w-5xl px-6 lg:px-8">
+          <AnimatedSection>
+            <div className="grid items-center gap-8 rounded-2xl border border-slate-200 bg-white p-8 shadow-[0_12px_40px_-24px_rgba(11,31,58,0.35)] md:p-12 lg:grid-cols-[1fr_auto]">
+              <div>
+                <p className="font-body text-xs font-bold uppercase tracking-[0.16em]" style={{ color: "#C9A84C" }}>Essential NRI resource</p>
+                <h2 className="mt-3 font-display text-3xl font-semibold leading-tight md:text-4xl" style={{ color: "#0B1F3A" }}>NRI Tax Filing and Investing Guide</h2>
+                <p className="mt-4 max-w-3xl font-body text-base leading-relaxed text-slate-600 md:text-lg">Understand NR, RNOR and ROR status, DTAA documents, NRE/NRO accounts, property, repatriation, PFIC, FBAR and the financial decisions to make before returning to India.</p>
+              </div>
+              <Link href="/insights/nri-tax-filing-investing-guide" className="inline-flex items-center justify-center rounded-lg px-7 py-4 font-body text-sm font-semibold transition hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+                Read the Complete Guide →
+              </Link>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
