@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle2, Globe2, Landmark, ShieldCheck } from "lucide-react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
+import Link from "next/link";
 
 type Service = { slug: string; name: string; description: string };
 type Category = { id: string; title: string; eyebrow: string; services: Service[] };
@@ -168,6 +169,21 @@ export default function NRITeluguClient() {
       </section>
 
       <section className="bg-[#0B1F3A] py-20 text-center"><div className="container mx-auto max-w-4xl px-6"><h2 className="font-display text-3xl font-semibold text-white md:text-5xl">Your wealth doesn’t have to live in two disconnected worlds.</h2><button onClick={() => openForm("NRI private wealth review")} className="mt-8 rounded-lg bg-[#C9A84C] px-8 py-4 font-semibold text-[#0B1F3A]">Book a Free Portfolio Review</button></div></section>
+
+      <section className="bg-[#F5F3ED] py-16 lg:py-20">
+        <div className="container mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="grid items-center gap-8 rounded-2xl border border-[#0B1F3A]/10 bg-white p-8 shadow-sm md:p-12 lg:grid-cols-[1fr_auto]">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9A7A25]">Essential NRI guide</p>
+              <h2 className="mt-3 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">NRI tax filing and investing—one cross-border checklist</h2>
+              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">Understand residential status, RNOR, DTAA, NRE/NRO accounts, repatriation, US reporting and the decisions to make before returning to India.</p>
+            </div>
+            <Link href="/insights/nri-tax-filing-investing-guide" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#C9A84C] px-6 py-3.5 font-semibold text-[#0B1F3A]">
+              Read the guide <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
 
       <LeadCaptureForm source="nri-telugu" service={service} heading="Book Your Telugu NRI Wealth Review" sectionId="nri-telugu-consultation" leftContent={<><h2 className="font-display text-3xl font-semibold text-white md:text-5xl">Bring your India-linked wealth into one clear plan.</h2><p className="mt-5 text-lg leading-relaxed text-white/70">Share the broad picture. Kiran and the team will help identify the accounts, investments and transition questions that deserve attention first.</p><ul className="mt-8 space-y-3 text-white/80">{["Founder-led initial review", "Telugu or English conversation", "Video consultations across time zones", "No-obligation first discussion"].map((item) => <li key={item} className="flex gap-3"><CheckCircle2 className="h-5 w-5 text-[#C9A84C]" />{item}</li>)}</ul></>} />
     </main>

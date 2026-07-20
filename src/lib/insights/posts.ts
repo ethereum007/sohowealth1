@@ -76,7 +76,147 @@ const mfuUsCanadaSource = {
   url: "https://www.mfuindia.com/for-investors/usa-canada-residents",
 };
 
+const incomeTaxNonResidentSource = {
+  title: "Income Tax Department: Non-Resident FAQs and Residential Status",
+  url: "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/non-resident",
+};
+
+const incomeTaxForeignAssetsSource = {
+  title: "Income Tax Department: Guide to Schedules FSI, TR and FA",
+  url: "https://www.incometax.gov.in/iec/foportal/sites/default/files/2026-02/Step%20by%20Step%20Guide%20FA%20FSI.pdf",
+};
+
+const irsFbarSource = {
+  title: "IRS: Report of Foreign Bank and Financial Accounts (FBAR)",
+  url: "https://www.irs.gov/businesses/small-businesses-self-employed/report-of-foreign-bank-and-financial-accounts-fbar",
+};
+
+const irsForm8938Source = {
+  title: "IRS: About Form 8938",
+  url: "https://www.irs.gov/forms-pubs/about-form-8938",
+};
+
+const irsPficSource = {
+  title: "IRS: Instructions for Form 8621 (PFIC)",
+  url: "https://www.irs.gov/instructions/i8621",
+};
+
 export const insightPosts: InsightPost[] = [
+  {
+    slug: "nri-tax-filing-investing-guide",
+    title: "NRI Tax Filing and Investing: The Cross-Border Checklist Most Global Indians Need",
+    description: "A practical guide to NRI tax residency, RNOR, DTAA, NRE/NRO accounts, property, repatriation, PFIC reporting and returning to India.",
+    category: "NRI Tax & Compliance",
+    audience: "NRIs, returning NRIs and global Indian families",
+    publishedAt: "2026-07-20",
+    updatedAt: "2026-07-20",
+    readingTime: "12 min read",
+    keywords: ["NRI tax filing India", "RNOR tax planning", "NRI residential status", "NRE NRO tax", "NRI repatriation USD 1 million", "Indian mutual funds PFIC", "FBAR Indian accounts"],
+    heroKicker: "Essential NRI Guide",
+    keyTakeaways: [
+      "NRI status must be tested separately for every Indian tax year; 182 days is not the only possible test.",
+      "TDS is withholding, not necessarily the final tax. A return may still be needed to report gains, pay a shortfall or claim a refund.",
+      "Income-tax residence and FEMA residence are different, so account redesignation and tax status can change on different dates.",
+      "US persons should review Indian mutual funds for PFIC and Form 8621 exposure before investing.",
+      "A return to India should be planned across RNOR, foreign assets, RSUs, retirement accounts and banking as one transition.",
+    ],
+    sections: [
+      {
+        heading: "Residential Status Comes Before the Tax Return",
+        body: [
+          "The first question is whether the individual is non-resident, resident but not ordinarily resident (RNOR), or resident and ordinarily resident (ROR) for that specific Indian tax year. The answer determines how far India can look beyond Indian-source income.",
+          "The 182-day test remains important, but the Income Tax Department also identifies the 60-day plus 365-day test, special rules for visiting Indian citizens and persons of Indian origin with more than ₹15 lakh of specified Indian income, and a deemed-residence rule for certain Indian citizens not liable to tax elsewhere. Travel records and prior-year history therefore matter.",
+          "Broadly, non-residents are taxed on Indian-source or India-received income. RNOR can provide a transition period for much foreign passive income, while foreign business or professional income controlled from India requires closer review. Once ROR applies, worldwide income and foreign-asset reporting become central.",
+        ],
+      },
+      {
+        heading: "NR, RNOR and ROR at a Glance",
+        table: {
+          columns: ["Status", "Typical Indian Tax Scope", "Planning Focus"],
+          rows: [
+            ["Non-resident", "Primarily Indian-source or India-received income", "Indian income, TDS, accounts and treaty documents"],
+            ["RNOR", "Indian income plus certain foreign business income connected to control from India", "Use the transition window carefully"],
+            ["ROR", "Worldwide income, subject to treaty relief", "Schedule FA, overseas income, RSUs, pensions and foreign accounts"],
+          ],
+        },
+      },
+      {
+        heading: "Why TDS and DTAA Still Require a Return",
+        body: [
+          "TDS is a payment on account, not a final tax calculation. It can be too low, as with an incorrectly maintained resident savings account, or too high, as can happen when a buyer withholds on an NRI property seller's gross consideration. Filing may be needed to calculate the final tax, claim treaty relief, reconcile AIS and Form 26AS, or recover excess TDS.",
+          "A Double Taxation Avoidance Agreement allocates taxing rights or provides relief; it does not make every cross-border receipt tax-free. Interest, dividends, gains and employment income can sit under different treaty articles. A valid Tax Residency Certificate, Form 10F and supporting declarations may be required.",
+          "Treaty outcomes are country-specific, and anti-abuse rules can defeat artificial residence changes. A position under the India–UAE treaty should not be assumed to apply in the US, UK, Canada, Singapore or another jurisdiction.",
+        ],
+      },
+      {
+        heading: "NRE, NRO, FCNR and the Money Trail",
+        table: {
+          columns: ["Account", "Common Use", "Watch Point"],
+          rows: [
+            ["NRE", "Eligible foreign earnings remitted to India", "Generally repatriable; Indian exemption does not create an overseas exemption"],
+            ["NRO", "Indian rent, income and legacy balances", "Interest is taxable; remittance needs tax and bank documents"],
+            ["FCNR(B)", "Eligible foreign-currency term deposits", "Tax treatment can change when residence changes"],
+            ["RFC", "Eligible foreign currency after returning", "Confirm FEMA eligibility and plan conversion with the bank"],
+          ],
+        },
+        body: [
+          "Income-tax residence and FEMA residence use different frameworks. Resident accounts should be redesignated on becoming non-resident, and NRE/NRO arrangements should be reviewed promptly on return. Keep a clean banking trail for investments, property and future repatriation.",
+        ],
+      },
+      {
+        heading: "Property, Repatriation and the USD 1 Million Facility",
+        body: [
+          "NRIs may generally acquire residential and commercial property, while agricultural land, plantation property and farmhouses are restricted. Rent is taxable in India. On sale, buyer withholding on gross consideration can create a large refund claim, so tax computation, current capital-gains rules and any lower-deduction application should be considered before signing.",
+          "RBI guidance generally permits eligible NRIs and PIOs to remit up to USD 1 million per Indian financial year from NRO balances and eligible sale proceeds, subject to taxes, documents and the authorised dealer bank's satisfaction. NRE funds are generally freely repatriable. This is not blanket permission for every person, asset or transaction.",
+        ],
+      },
+      {
+        heading: "US Persons: PFIC, FBAR and Form 8938",
+        body: [
+          "Indian mutual funds can fall within the US Passive Foreign Investment Company framework, creating Form 8621 reporting and potentially complex tax treatment. India and the US may recognize income in different years or under different character rules, reducing the usefulness of foreign tax credits. Obtain US international-tax advice before purchasing or continuing Indian pooled funds.",
+          "The IRS says a US person generally files an FBAR when the aggregate value of reportable foreign financial accounts exceeds USD 10,000 at any time during the calendar year. It is an aggregate threshold, not per account. Form 8938 is a separate disclosure with thresholds based on filing status and where the taxpayer lives. Filing one does not automatically replace the other.",
+        ],
+      },
+      {
+        heading: "Before Returning to India",
+        bullets: [
+          "Model the likely NR to RNOR to ROR timeline using actual travel days and prior-year history.",
+          "Review ESOP and RSU vesting, exercise and sale dates alongside the move date.",
+          "Map 401(k), IRA, pension and other retirement arrangements before worldwide taxation applies.",
+          "Inventory foreign accounts, companies, trusts and assets before Schedule FA becomes relevant.",
+          "Review NRE, NRO, FCNR and RFC conversion with the bank under FEMA rules.",
+          "Coordinate Indian and overseas foreign-tax-credit timing rather than preparing each return in isolation.",
+        ],
+      },
+      {
+        heading: "The Annual NRI Compliance File",
+        bullets: [
+          "Maintain an India arrival and departure log for every tax year.",
+          "Determine Income-tax and FEMA status separately.",
+          "Keep the foreign Tax Residency Certificate, Form 10F and treaty declarations where relevant.",
+          "Download AIS, Form 26AS, interest certificates and capital-gains reports.",
+          "Reconcile income, TDS, advance tax, refunds and foreign tax credits.",
+          "Preserve property funding, rental, sale and remittance documentation.",
+        ],
+      },
+      {
+        heading: "SoHo Wealth View",
+        body: [
+          "Cross-border wealth problems arise when tax residence, FEMA status, accounts, products and property are handled by different people without a shared timeline.",
+          "SoHo Wealth can organize the India-side wealth picture and coordinate questions for a qualified CA, CPA, lawyer or authorised dealer bank. We do not provide tax or legal advice. The investment decision should not be made before the structure is understood.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Does an NRI need to file in India if TDS was deducted?", a: "Possibly. Filing may be required to report income or gains, pay a shortfall, claim treaty relief or recover excess TDS." },
+      { q: "Is 182 days the only Indian tax-residency test?", a: "No. Other day-count tests, the ₹15 lakh visiting-citizen rule and deemed-residence provisions can apply." },
+      { q: "Can an NRI remit NRO money overseas?", a: "Eligible NRIs and PIOs can generally use the USD 1 million annual facility, subject to taxes, documents and bank review." },
+      { q: "Do US taxpayers report Indian accounts?", a: "Potentially. FBAR, Form 8938 and PFIC/Form 8621 rules are separate and depend on values, asset types and facts." },
+      { q: "Does Schedule FA apply during RNOR?", a: "Official guidance distinguishes non-resident and not-ordinarily-resident taxpayers from ROR reporting. Confirm the applicable return and status for the year." },
+    ],
+    relatedSlugs: ["returning-to-india-wealth-checklist", "nre-vs-nro-repatriation", "us-canada-nris-mutual-funds-fatca"],
+    sources: [incomeTaxNonResidentSource, incomeTaxForeignAssetsSource, rbiAccountsSource, rbiRemittanceSource, irsFbarSource, irsForm8938Source, irsPficSource],
+  },
   {
     slug: "nre-vs-nro-for-nri-aif-investments",
     title: "NRE vs NRO for NRI AIF Investments: The Routing Decision Before You Subscribe",

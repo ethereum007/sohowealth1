@@ -30,6 +30,12 @@ const categories = Array.from(new Set(insightPosts.map((post) => post.category))
 const featuredPosts = insightPosts.slice(0, 3);
 
 export default function InsightsPage() {
+  const formatDate = (date: string) => new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${date}T00:00:00Z`));
   const collectionSchema = {
     "@context": "https://schema.org",
     "@type": ["Blog", "CollectionPage"],
@@ -139,7 +145,7 @@ export default function InsightsPage() {
                 <div>
                   <div className="mb-3 flex flex-wrap items-center gap-3 font-body text-xs text-slate-500">
                     <span className="font-bold uppercase tracking-[0.12em]" style={{ color: "#C9A84C" }}>{post.category}</span>
-                    <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3.5 w-3.5" />June 12, 2026</span>
+                    <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3.5 w-3.5" />{formatDate(post.publishedAt)}</span>
                     <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5" />{post.readingTime}</span>
                   </div>
                   <h3 className="font-display text-2xl font-semibold leading-snug" style={{ color: "#0B1F3A" }}>{post.title}</h3>
