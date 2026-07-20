@@ -12,6 +12,7 @@ const servicesLinks = [
   { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
   { name: "AIF Advisory", href: "/aif-advisory" },
   { name: "NRI Advisory", href: "/services/nri" },
+  { name: "Telugu NRI Wealth", href: "/nri-telugu" },
   { name: "Hyderabad Real Estate", href: "/hyderabad-real-estate" },
   { name: "NRI Real Estate in Hyderabad", href: "/nri-real-estate-in-hyderabad" },
   { name: "US NRI Property Hyderabad", href: "/us-nri-hyderabad-real-estate" },

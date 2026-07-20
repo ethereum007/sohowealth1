@@ -30,6 +30,7 @@ export type Database = {
           referral_source: string | null
           referrer: string | null
           source: string | null
+          service: string | null
           utm_campaign: string | null
           utm_content: string | null
           utm_medium: string | null
@@ -51,6 +52,7 @@ export type Database = {
           referral_source?: string | null
           referrer?: string | null
           source?: string | null
+          service?: string | null
           utm_campaign?: string | null
           utm_content?: string | null
           utm_medium?: string | null
@@ -72,6 +74,7 @@ export type Database = {
           referral_source?: string | null
           referrer?: string | null
           source?: string | null
+          service?: string | null
           utm_campaign?: string | null
           utm_content?: string | null
           utm_medium?: string | null

@@ -25,6 +25,7 @@ interface LeadCaptureFormProps {
   heading?: string;
   leftContent?: React.ReactNode;
   sectionId?: string;
+  service?: string;
 }
 
 export function LeadCaptureForm({
@@ -32,6 +33,7 @@ export function LeadCaptureForm({
   heading = "Book Your Free Portfolio Review",
   leftContent,
   sectionId = "portfolio-review",
+  service,
 }: LeadCaptureFormProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -79,6 +81,7 @@ export function LeadCaptureForm({
       is_nri: result.data.is_nri,
       call_time: result.data.call_time || null,
       source: source || null,
+      service: service || null,
       ...attribution,
     });
     setLoading(false);
@@ -168,6 +171,12 @@ export function LeadCaptureForm({
               <>
                 <h3 className="font-display text-xl md:text-2xl font-semibold text-white mb-8">{heading}</h3>
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {service && (
+                    <div className="rounded-lg border border-white/15 bg-white/5 px-4 py-3">
+                      <span className="text-xs uppercase tracking-widest text-white/50">Interested in</span>
+                      <p className="mt-1 text-sm font-semibold text-white">{service}</p>
+                    </div>
+                  )}
                   <div>
                     <label className={labelClass}>Full Name</label>
                     <input name="name" type="text" placeholder="Your full name" value={form.name} onChange={handleChange} className={inputClass} />

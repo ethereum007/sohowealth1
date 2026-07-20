@@ -13,6 +13,7 @@ const leadSchema = z.object({
   call_time: z.string().nullable().optional(),
   referral_source: z.string().nullable().optional(),
   source: z.string().nullable().optional(),
+  service: z.string().trim().max(100).nullable().optional(),
   notes: z.string().nullable().optional(),
   landing_page: z.string().nullable().optional(),
   page_path: z.string().nullable().optional(),

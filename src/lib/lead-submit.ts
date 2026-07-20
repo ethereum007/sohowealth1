@@ -10,6 +10,7 @@ type LeadPayload = {
   call_time?: string | null;
   referral_source?: string | null;
   source?: string | null;
+  service?: string | null;
   notes?: string | null;
 } & Partial<LeadAttribution>;
 
@@ -28,6 +29,7 @@ function stripAttribution(payload: LeadPayload) {
   delete basePayload.utm_term;
   delete basePayload.utm_content;
   delete basePayload.notes;
+  delete basePayload.service;
   return basePayload;
 }
 
