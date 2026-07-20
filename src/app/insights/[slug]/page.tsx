@@ -62,6 +62,12 @@ export default async function InsightPostPage({ params }: PageProps) {
   }
 
   const relatedPosts = getRelatedInsightPosts(post);
+  const publishedLabel = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${post.publishedAt}T00:00:00Z`));
   const url = `https://www.sohowealth.in/insights/${post.slug}`;
   const articleSchema = {
     "@context": "https://schema.org",
@@ -110,7 +116,7 @@ export default async function InsightPostPage({ params }: PageProps) {
               {post.heroKicker}
             </span>
             <span>{post.category}</span>
-            <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-4 w-4" />June 12, 2026</span>
+            <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-4 w-4" />{publishedLabel}</span>
             <span className="inline-flex items-center gap-1.5"><Clock className="h-4 w-4" />{post.readingTime}</span>
           </div>
           <h1 className="font-display mb-6 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
