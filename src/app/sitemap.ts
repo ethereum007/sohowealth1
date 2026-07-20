@@ -20,6 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/best-pms-in-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/sif-vs-pms",        lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/services/nri",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
+    { path: "/nri-telugu",       lastModified: "2026-07-20", changeFrequency: "weekly",  priority: 0.95 },
     { path: "/hyderabad-real-estate", lastModified: "2026-06-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/portfolio-review",  lastModified: "2026-04-27", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/aif-advisory",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
