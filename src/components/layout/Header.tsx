@@ -19,6 +19,7 @@ const navLinks = [
       { name: "PMS Advisory", href: "/pms-advisory" },
       { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
       { name: "AIF Advisory", href: "/aif-advisory" },
+      { name: "For Doctors", href: "/financial-planning-for-doctors" },
       { name: "NRI Advisory", href: "/services/nri" },
       { name: "Telugu NRI Wealth", href: "/nri-telugu" },
       { name: "Hyderabad Real Estate", href: "/hyderabad-real-estate" },
@@ -87,13 +88,13 @@ export function Header() {
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 8 }}
                           transition={{ duration: 0.15 }}
-                          className="absolute top-full left-0 mt-3 w-52 bg-background border border-border/50 rounded-xl shadow-xl overflow-hidden"
+                          className="absolute top-full left-0 mt-3 grid w-[28rem] grid-cols-2 gap-1 rounded-xl border border-border/50 bg-background p-2 shadow-xl"
                         >
                           {link.submenu.map((sub) => (
                             <Link
                               key={sub.name}
                               href={sub.href}
-                              className="block px-5 py-3 text-sm font-medium font-body text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                              className="block rounded-lg px-3 py-2.5 text-sm font-medium font-body text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
                             >
                               {sub.name}
                             </Link>
