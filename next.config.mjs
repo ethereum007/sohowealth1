@@ -8,6 +8,16 @@ const nextConfig = {
         destination: "/nri-real-estate-in-hyderabad",
         permanent: true,
       },
+      {
+        source: "/wealth-management-for-doctors",
+        destination: "/financial-planning-for-doctors",
+        permanent: true,
+      },
+      {
+        source: "/wealth-management-for-doctors-hyderabad",
+        destination: "/financial-planning-for-doctors",
+        permanent: true,
+      },
     ];
   },
   async headers() {

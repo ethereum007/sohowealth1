@@ -11,6 +11,7 @@ const servicesLinks = [
   { name: "PMS Advisory", href: "/pms-advisory" },
   { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
   { name: "AIF Advisory", href: "/aif-advisory" },
+  { name: "Financial Planning for Doctors", href: "/financial-planning-for-doctors" },
   { name: "NRI Advisory", href: "/services/nri" },
   { name: "Telugu NRI Wealth", href: "/nri-telugu" },
   { name: "Hyderabad Real Estate", href: "/hyderabad-real-estate" },

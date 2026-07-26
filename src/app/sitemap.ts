@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/pms-advisory",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/wealth-management-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/financial-planning-for-doctors", lastModified: "2026-07-26", changeFrequency: "weekly", priority: 0.95 },
     { path: "/best-pms-in-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/sif-vs-pms",        lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/services/nri",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },

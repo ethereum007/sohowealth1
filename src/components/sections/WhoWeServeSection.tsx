@@ -22,6 +22,7 @@ const audiences = [
     icon: Stethoscope,
     title: "Doctors & Healthcare Professionals",
     description: "Medical practitioners requiring specialized financial planning that accounts for irregular income patterns and practice growth.",
+    href: "/financial-planning-for-doctors",
   },
   {
     icon: Building2,
@@ -81,6 +82,15 @@ export function WhoWeServeSection() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {audience.description}
               </p>
+              {audience.href && (
+                <Link
+                  href={audience.href}
+                  className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
+                >
+                  Explore doctor planning
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              )}
 
               {/* Hover gradient */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
