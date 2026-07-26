@@ -40,7 +40,7 @@ export default function OpenGraphImage() {
             Financial Planning for Doctors in India
           </div>
           <div style={{ color: "rgba(255,255,255,.7)", fontSize: 28, lineHeight: 1.35 }}>
-            Personal wealth. Practice capital. Family legacy. One connected plan.
+            2026 guide + free Doctor Wealth Check-up
           </div>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 22 }}>
