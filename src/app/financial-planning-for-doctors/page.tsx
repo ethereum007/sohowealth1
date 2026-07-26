@@ -13,6 +13,7 @@ import {
   GraduationCap,
   HeartPulse,
   Landmark,
+  MapPin,
   MessageCircle,
   RefreshCw,
   ShieldCheck,
@@ -28,14 +29,16 @@ import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 const canonicalUrl = "https://www.sohowealth.in/financial-planning-for-doctors";
 
 export const metadata: Metadata = {
-  title: "Financial Planning for Doctors in India: 2026 Guide | SoHo",
+  title: "Wealth Planning for Doctors in AP & Telangana | SoHo",
   description:
-    "2026 financial planning guide for doctors in India. Plan variable income, investments, clinic capital, protection, tax coordination and retirement.",
+    "Wealth planning for doctors across Andhra Pradesh and Telangana. Organise variable income, clinic capital, investments, tax coordination and retirement.",
   keywords: [
     "financial planning for doctors",
-    "financial planning for doctors in India",
-    "wealth management for doctors",
-    "financial advisor for doctors",
+    "wealth planning for doctors in AP and Telangana",
+    "financial planning for doctors in Telangana",
+    "financial planning for doctors in Andhra Pradesh",
+    "wealth management for doctors Hyderabad",
+    "financial advisor for doctors Hyderabad",
     "investment planning for doctors",
     "doctor wealth management Hyderabad",
     "financial planning for medical professionals",
@@ -43,16 +46,16 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: canonicalUrl },
   openGraph: {
-    title: "Financial Planning for Doctors in India: 2026 Guide",
+    title: "Wealth Planning for Doctors in AP & Telangana",
     description:
-      "A practical doctor wealth guide and free financial check-up for consultants, clinic owners and medical families.",
+      "A practical wealth guide and free financial check-up for doctors, clinic owners and medical families across Andhra Pradesh and Telangana.",
     url: canonicalUrl,
     siteName: "SoHo Wealth",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Financial Planning for Doctors in India: 2026 Guide",
+    title: "Wealth Planning for Doctors in AP & Telangana",
     description:
       "Connect personal wealth, practice capital and family goals—and take the free Doctor Wealth Check-up.",
   },
@@ -245,7 +248,7 @@ const faqs: FAQ[] = [
   },
   {
     q: "Can a doctor consult SoHo Wealth online?",
-    a: "Yes. SoHo Wealth is based in Hyderabad and works with doctors across India through video consultations, with digital documentation and ongoing remote reviews where available.",
+    a: "Yes. SoHo Wealth is based in Hyderabad and works with doctors across Andhra Pradesh and Telangana through video consultations, digital documentation and ongoing remote reviews where available.",
   },
 ];
 
@@ -253,15 +256,16 @@ const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "@id": `${canonicalUrl}#service`,
-  name: "Financial Planning for Doctors in India",
+  name: "Wealth Planning for Doctors in Andhra Pradesh and Telangana",
   description:
-    "Doctor-focused portfolio review and wealth management for consultants, clinic owners and medical families in India.",
+    "Doctor-focused portfolio review and wealth planning for consultants, clinic owners and medical families across Andhra Pradesh and Telangana.",
   serviceType: "Wealth Management for Doctors",
   url: canonicalUrl,
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
     { "@type": "City", name: "Hyderabad" },
     { "@type": "AdministrativeArea", name: "Telangana" },
+    { "@type": "AdministrativeArea", name: "Andhra Pradesh" },
     { "@type": "Country", name: "India" },
   ],
   audience: {
@@ -284,9 +288,9 @@ const guideSchema = {
   "@type": "WebPage",
   "@id": `${canonicalUrl}#webpage`,
   url: canonicalUrl,
-  name: "Financial Planning for Doctors in India: 2026 Guide",
+  name: "Wealth Planning for Doctors in Andhra Pradesh and Telangana",
   description:
-    "A practical guide for Indian doctors covering variable income, personal and practice finances, portfolio construction, protection coordination, tax organisation and retirement.",
+    "A practical guide for doctors in Andhra Pradesh and Telangana covering variable income, personal and practice finances, portfolio construction, protection coordination, tax organisation and retirement.",
   datePublished: "2026-07-26",
   dateModified: "2026-07-26",
   inLanguage: "en-IN",
@@ -298,9 +302,13 @@ const guideSchema = {
   },
   accountablePerson: { "@id": "https://www.sohowealth.in/#kiran-dutta" },
   about: [
-    { "@type": "Thing", name: "Financial planning for doctors" },
+    { "@type": "Thing", name: "Wealth planning for doctors in Andhra Pradesh and Telangana" },
     { "@type": "Thing", name: "Doctor wealth management" },
     { "@type": "Thing", name: "Clinic financial planning" },
+  ],
+  spatialCoverage: [
+    { "@type": "AdministrativeArea", name: "Andhra Pradesh" },
+    { "@type": "AdministrativeArea", name: "Telangana" },
   ],
   mainEntity: { "@id": `${canonicalUrl}#service` },
 };
@@ -310,7 +318,7 @@ const breadcrumbSchema = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "Financial Planning for Doctors", item: canonicalUrl },
+    { "@type": "ListItem", position: 2, name: "Wealth Planning for Doctors in AP & Telangana", item: canonicalUrl },
   ],
 };
 
@@ -341,10 +349,10 @@ export default function FinancialPlanningForDoctorsPage() {
             <div>
               <span className="inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/30 bg-[#C9A84C]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.16em] text-[#e2c46f]">
                 <Stethoscope className="h-4 w-4" aria-hidden="true" />
-                SoHo Wealth for Doctors
+                SoHo Wealth for Doctors in AP & Telangana
               </span>
               <h1 className="mt-7 max-w-4xl font-display text-4xl font-semibold leading-[1.08] text-white md:text-5xl lg:text-6xl">
-                Financial planning for doctors in India, built around{" "}
+                Wealth planning for doctors in Andhra Pradesh and Telangana, built around{" "}
                 <span className="text-[#C9A84C]">your real financial life.</span>
               </h1>
               <p className="mt-7 max-w-2xl font-body text-lg leading-relaxed text-white/70 lg:text-xl">
@@ -370,7 +378,7 @@ export default function FinancialPlanningForDoctorsPage() {
                 </a>
               </div>
               <p className="mt-5 font-body text-xs leading-relaxed text-white/45">
-                Hyderabad-based. Online consultations available across India. For investable portfolios of ₹25 lakh and above.
+                Hyderabad-based. Online consultations across Andhra Pradesh and Telangana. For investable portfolios of ₹25 lakh and above.
               </p>
             </div>
 
@@ -418,6 +426,7 @@ export default function FinancialPlanningForDoctorsPage() {
             <nav className="flex flex-wrap gap-x-6 gap-y-3" aria-label="On this page">
               {[
                 { label: "Wealth check-up", href: "#doctor-wealth-checkup" },
+                { label: "AP & Telangana", href: "#regional-coverage" },
                 { label: "Career stages", href: "#career-stages" },
                 { label: "Income models", href: "#income-models" },
                 { label: "Planning checklist", href: "#doctor-planning-checklist" },
@@ -438,6 +447,54 @@ export default function FinancialPlanningForDoctorsPage() {
       </section>
 
       <DoctorWealthCheckup />
+
+      <section id="regional-coverage" className="scroll-mt-24 border-y border-slate-200 bg-[#F7F8FA] py-16 lg:py-20">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+            <div>
+              <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">
+                Regional doctor wealth desk
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">
+                Wealth planning for medical professionals across AP and Telangana.
+              </h2>
+              <p className="mt-5 font-body text-base leading-relaxed text-slate-600">
+                From a hospital consultant in Hyderabad to a clinic owner in Vijayawada or Visakhapatnam, the plan
+                begins with your income model, practice commitments and family balance sheet—not a generic product list.
+              </p>
+            </div>
+            <div className="rounded-3xl border border-slate-200 bg-white p-7 shadow-[0_14px_40px_-32px_rgba(11,31,58,.45)] md:p-9">
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#C9A84C]">
+                  <MapPin className="h-5 w-5" aria-hidden="true" />
+                </div>
+                <div>
+                  <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">
+                    Hyderabad-led, available across both states
+                  </h3>
+                  <p className="mt-2 font-body text-sm leading-relaxed text-slate-600">
+                    Online reviews are available for doctors in Hyderabad, Secunderabad, Warangal, Karimnagar,
+                    Vijayawada, Guntur, Visakhapatnam, Tirupati, Rajamahendravaram and surrounding cities.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-7 grid gap-3 sm:grid-cols-2">
+                {[
+                  "Salaried and visiting consultants",
+                  "Clinic and practice owners",
+                  "Doctors with multiple income sources",
+                  "Medical families planning together",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-3 rounded-xl bg-[#F7F8FA] px-4 py-3">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-[#B18C2D]" aria-hidden="true" />
+                    <span className="font-body text-sm font-semibold text-[#0B1F3A]">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section id="career-stages" className="scroll-mt-24 bg-white py-20 lg:py-28">
         <div className="container mx-auto px-6 lg:px-8">
@@ -537,7 +594,7 @@ export default function FinancialPlanningForDoctorsPage() {
             <div className="lg:sticky lg:top-28 lg:self-start">
               <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">Actionable 2026 guide</p>
               <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">
-                Financial planning checklist for doctors in India
+                Wealth planning checklist for doctors in AP and Telangana
               </h2>
               <p className="mt-5 font-body text-base leading-relaxed text-slate-600">
                 Use this order to build the foundation before comparing returns or buying another product. The exact
@@ -578,7 +635,7 @@ export default function FinancialPlanningForDoctorsPage() {
               </h2>
               <p className="mt-5 font-body text-base leading-relaxed text-white/65 md:text-lg">
                 Follow our doctor-first education initiative for practical ideas on investing, practice wealth,
-                protection, taxes and financial independence—created for Indian medical professionals.
+                protection, taxes and financial independence—created for doctors across Andhra Pradesh and Telangana.
               </p>
               <a
                 href="https://www.instagram.com/thedoctorsportfolio/"
@@ -810,7 +867,7 @@ export default function FinancialPlanningForDoctorsPage() {
 
       <LeadCaptureForm
         source="financial-planning-for-doctors page"
-        service="Financial Planning for Doctors"
+        service="Wealth Planning for Doctors in AP & Telangana"
         heading="Book Your Doctor Portfolio Review"
         sectionId="doctor-consultation"
         leftContent={
@@ -852,7 +909,7 @@ export default function FinancialPlanningForDoctorsPage() {
       />
 
       <div id="doctor-faqs" className="scroll-mt-24">
-        <FAQSection faqs={faqs} heading="Financial Planning for Doctors: FAQs" background="#FFFFFF" />
+        <FAQSection faqs={faqs} heading="Wealth Planning for Doctors in AP & Telangana: FAQs" background="#FFFFFF" />
       </div>
 
       <RelatedServices
