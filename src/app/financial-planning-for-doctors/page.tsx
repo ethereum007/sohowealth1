@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -18,6 +19,7 @@ import {
   Stethoscope,
   Users,
 } from "lucide-react";
+import { DoctorWealthCheckup } from "./DoctorWealthCheckup";
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RelatedServices } from "@/components/seo/RelatedServices";
@@ -26,9 +28,9 @@ import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 const canonicalUrl = "https://www.sohowealth.in/financial-planning-for-doctors";
 
 export const metadata: Metadata = {
-  title: "Financial Planning for Doctors in India | SoHo Wealth",
+  title: "Financial Planning for Doctors in India: 2026 Guide | SoHo",
   description:
-    "Doctor-focused financial planning in Hyderabad for consultants, clinic owners and medical families. Align investments, practice capital, protection, tax coordination and retirement.",
+    "2026 financial planning guide for doctors in India. Plan variable income, investments, clinic capital, protection, tax coordination and retirement.",
   keywords: [
     "financial planning for doctors",
     "financial planning for doctors in India",
@@ -41,18 +43,18 @@ export const metadata: Metadata = {
   ],
   alternates: { canonical: canonicalUrl },
   openGraph: {
-    title: "Financial Planning for Doctors in India | SoHo Wealth",
+    title: "Financial Planning for Doctors in India: 2026 Guide",
     description:
-      "A doctor-focused wealth framework for consultants, clinic owners and medical families in India.",
+      "A practical doctor wealth guide and free financial check-up for consultants, clinic owners and medical families.",
     url: canonicalUrl,
     siteName: "SoHo Wealth",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Financial Planning for Doctors in India | SoHo Wealth",
+    title: "Financial Planning for Doctors in India: 2026 Guide",
     description:
-      "Connect personal wealth, practice capital and family goals in one doctor-focused plan.",
+      "Connect personal wealth, practice capital and family goals—and take the free Doctor Wealth Check-up.",
   },
 };
 
@@ -125,6 +127,70 @@ const portfolioGaps = [
   "Tax, investment, insurance and estate decisions happen in separate conversations.",
 ];
 
+const incomeModels = [
+  {
+    profile: "Salaried doctor",
+    incomePattern: "Predictable salary; incentives or occasional consultation income",
+    firstPriority: "Automate investing and prevent lifestyle growth from absorbing every increment",
+    liquidityFocus: "Household emergency reserve and protection independent of the employer",
+  },
+  {
+    profile: "Consultant across hospitals",
+    incomePattern: "Multiple payers, variable receipts, TDS and uneven monthly cash flow",
+    firstPriority: "Create a base-income budget and a rule for allocating higher-income months",
+    liquidityFocus: "Larger personal reserve plus organised income and investment records for the CA",
+  },
+  {
+    profile: "Clinic or practice owner",
+    incomePattern: "Professional income combined with payroll, rent, equipment and working-capital needs",
+    firstPriority: "Separate the practice operating plan from personal wealth and long-term investing",
+    liquidityFocus: "Distinct household, clinic-operating and planned-capex reserves",
+  },
+];
+
+const doctorChecklist = [
+  {
+    number: "01",
+    title: "Separate the three money systems",
+    copy: "Track household cash, practice cash and long-term wealth independently. Transfers between them should be intentional and visible.",
+  },
+  {
+    number: "02",
+    title: "Set two liquidity targets",
+    copy: "Define one reserve for the household and another for clinic overhead or professional-income volatility. Do not use long-term equity for a near-term shortfall.",
+  },
+  {
+    number: "03",
+    title: "Map every goal by date",
+    copy: "Clinic equipment, a home, education and retirement have different timelines. The investment route should follow the goal—not the other way around.",
+  },
+  {
+    number: "04",
+    title: "Create one portfolio inventory",
+    copy: "List mutual funds, stocks, PMS, SIF, AIF, deposits, insurance-linked products, property and liabilities in one reviewable balance sheet.",
+  },
+  {
+    number: "05",
+    title: "Choose allocation before products",
+    copy: "Decide the role of growth, stability and liquidity first. Only then compare products for cost, risk, access, tax treatment and portfolio fit.",
+  },
+  {
+    number: "06",
+    title: "Coordinate professional and family protection",
+    copy: "Ask licensed specialists to review health, life, disability and professional indemnity needs. Keep investment and protection decisions distinct.",
+  },
+  {
+    number: "07",
+    title: "Give your CA an organised financial picture",
+    copy: "Bring salary, consultation, practice and investment information together. Section 44ADA and advance-tax treatment depend on current facts and eligibility.",
+  },
+  {
+    number: "08",
+    title: "Review after meaningful changes",
+    copy: "Revisit the plan when income, family responsibilities, clinic ownership, debt or retirement expectations change—not only when markets move.",
+  },
+];
+
 const process = [
   {
     icon: ClipboardCheck,
@@ -186,6 +252,7 @@ const faqs: FAQ[] = [
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": `${canonicalUrl}#service`,
   name: "Financial Planning for Doctors in India",
   description:
     "Doctor-focused portfolio review and wealth management for consultants, clinic owners and medical families in India.",
@@ -212,6 +279,32 @@ const serviceSchema = {
   },
 };
 
+const guideSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: "Financial Planning for Doctors in India: 2026 Guide",
+  description:
+    "A practical guide for Indian doctors covering variable income, personal and practice finances, portfolio construction, protection coordination, tax organisation and retirement.",
+  datePublished: "2026-07-26",
+  dateModified: "2026-07-26",
+  inLanguage: "en-IN",
+  isPartOf: { "@id": "https://www.sohowealth.in/#website" },
+  author: {
+    "@type": "Organization",
+    "@id": "https://www.sohowealth.in/#organization",
+    name: "SoHo Wealth",
+  },
+  accountablePerson: { "@id": "https://www.sohowealth.in/#kiran-dutta" },
+  about: [
+    { "@type": "Thing", name: "Financial planning for doctors" },
+    { "@type": "Thing", name: "Doctor wealth management" },
+    { "@type": "Thing", name: "Clinic financial planning" },
+  ],
+  mainEntity: { "@id": `${canonicalUrl}#service` },
+};
+
 const breadcrumbSchema = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
@@ -224,7 +317,7 @@ const breadcrumbSchema = {
 export default function FinancialPlanningForDoctorsPage() {
   return (
     <main className="pt-20">
-      <JsonLd data={[serviceSchema, breadcrumbSchema]} />
+      <JsonLd data={[guideSchema, serviceSchema, breadcrumbSchema]} />
 
       <section className="relative overflow-hidden bg-[#07192f]">
         <div
@@ -316,7 +409,37 @@ export default function FinancialPlanningForDoctorsPage() {
         </div>
       </section>
 
-      <section className="bg-white py-20 lg:py-28">
+      <section aria-label="Guide navigation" className="border-b border-slate-200 bg-white">
+        <div className="container mx-auto px-6 py-6 lg:px-8">
+          <div className="mx-auto flex max-w-6xl flex-col gap-4 lg:flex-row lg:items-center">
+            <p className="shrink-0 font-body text-xs font-bold uppercase tracking-[0.14em] text-[#8B6815]">
+              Explore this guide
+            </p>
+            <nav className="flex flex-wrap gap-x-6 gap-y-3" aria-label="On this page">
+              {[
+                { label: "Wealth check-up", href: "#doctor-wealth-checkup" },
+                { label: "Career stages", href: "#career-stages" },
+                { label: "Income models", href: "#income-models" },
+                { label: "Planning checklist", href: "#doctor-planning-checklist" },
+                { label: "Review process", href: "#review-process" },
+                { label: "FAQs", href: "#doctor-faqs" },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="font-body text-sm font-semibold text-slate-600 transition hover:text-[#0B1F3A]"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
+      </section>
+
+      <DoctorWealthCheckup />
+
+      <section id="career-stages" className="scroll-mt-24 bg-white py-20 lg:py-28">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">A different career curve</p>
@@ -343,7 +466,47 @@ export default function FinancialPlanningForDoctorsPage() {
         </div>
       </section>
 
-      <section className="bg-[#F7F8FA] py-20 lg:py-28">
+      <section id="income-models" className="scroll-mt-24 bg-[#F7F8FA] py-20 lg:py-28">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">Start with how you earn</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl lg:text-5xl">
+              Financial planning differs for salaried doctors, consultants and clinic owners.
+            </h2>
+            <p className="mt-5 font-body text-base leading-relaxed text-slate-600 md:text-lg">
+              The same investment portfolio can be appropriate for one doctor and fragile for another because income
+              stability, business commitments and liquidity needs are different.
+            </p>
+          </div>
+
+          <div className="mx-auto mt-14 max-w-6xl overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-[0_12px_40px_-30px_rgba(11,31,58,.45)]">
+            <table className="w-full min-w-[880px] border-collapse text-left">
+              <thead>
+                <tr className="bg-[#0B1F3A]">
+                  <th className="px-6 py-5 font-body text-sm font-bold text-white">Doctor profile</th>
+                  <th className="px-6 py-5 font-body text-sm font-bold text-white">Typical income pattern</th>
+                  <th className="px-6 py-5 font-body text-sm font-bold text-white">First planning priority</th>
+                  <th className="px-6 py-5 font-body text-sm font-bold text-white">Liquidity focus</th>
+                </tr>
+              </thead>
+              <tbody>
+                {incomeModels.map((model) => (
+                  <tr key={model.profile} className="border-b border-slate-200 last:border-b-0">
+                    <th scope="row" className="px-6 py-6 align-top font-display text-lg font-semibold text-[#0B1F3A]">
+                      {model.profile}
+                    </th>
+                    <td className="px-6 py-6 align-top font-body text-sm leading-relaxed text-slate-600">{model.incomePattern}</td>
+                    <td className="px-6 py-6 align-top font-body text-sm leading-relaxed text-slate-600">{model.firstPriority}</td>
+                    <td className="px-6 py-6 align-top font-body text-sm leading-relaxed text-slate-600">{model.liquidityFocus}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section id="planning-pillars" className="scroll-mt-24 bg-white py-20 lg:py-28">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">The complete picture</p>
@@ -364,6 +527,40 @@ export default function FinancialPlanningForDoctorsPage() {
                 <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">{item.copy}</p>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="doctor-planning-checklist" className="scroll-mt-24 bg-[#F7F8FA] py-20 lg:py-28">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[.75fr_1.25fr] lg:gap-20">
+            <div className="lg:sticky lg:top-28 lg:self-start">
+              <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">Actionable 2026 guide</p>
+              <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">
+                Financial planning checklist for doctors in India
+              </h2>
+              <p className="mt-5 font-body text-base leading-relaxed text-slate-600">
+                Use this order to build the foundation before comparing returns or buying another product. The exact
+                allocation and specialist advice will still depend on your circumstances.
+              </p>
+              <a
+                href="#doctor-wealth-checkup"
+                className="mt-7 inline-flex items-center font-body text-sm font-bold text-[#8B6815] transition hover:text-[#0B1F3A]"
+              >
+                Take the Doctor Wealth Check-up
+                <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+              </a>
+            </div>
+
+            <ol className="grid gap-4 md:grid-cols-2">
+              {doctorChecklist.map((item) => (
+                <li key={item.number} className="rounded-2xl border border-slate-200 bg-white p-6">
+                  <span className="font-body text-xs font-bold tracking-[0.14em] text-[#B18C2D]">{item.number}</span>
+                  <h3 className="mt-3 font-display text-xl font-semibold text-[#0B1F3A]">{item.title}</h3>
+                  <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">{item.copy}</p>
+                </li>
+              ))}
+            </ol>
           </div>
         </div>
       </section>
@@ -447,7 +644,58 @@ export default function FinancialPlanningForDoctorsPage() {
         </div>
       </section>
 
-      <section className="bg-[#F7F8FA] py-20 lg:py-28">
+      <section className="bg-[#FDF9EF] py-20 lg:py-28">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
+            <div>
+              <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#8B6815]">Illustrative roadmap</p>
+              <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">
+                How one doctor’s competing goals can become one plan
+              </h2>
+              <p className="mt-5 font-body text-sm leading-relaxed text-slate-600">
+                This fictional example explains the planning sequence. It is not a return projection, tax opinion or
+                personal recommendation.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-[#C9A84C]/30 bg-white p-7 md:p-9">
+              <p className="font-body text-base leading-relaxed text-slate-700">
+                A 42-year-old consultant earns from two hospitals and a growing clinic. The family wants to fund
+                education in eight years, replace clinic equipment in three years and make full-time work optional by
+                58. Existing wealth is spread across property, deposits, insurance-linked products and equity funds.
+              </p>
+              <ol className="mt-7 grid gap-4 sm:grid-cols-2">
+                {[
+                  {
+                    title: "Ring-fence near-term money",
+                    copy: "Separate household liquidity, clinic operating cash and the three-year equipment requirement from long-term growth assets.",
+                  },
+                  {
+                    title: "Build one allocation view",
+                    copy: "Measure property, deposits, insurance-linked products and market investments together before adding anything new.",
+                  },
+                  {
+                    title: "Match goals to time",
+                    copy: "Give the education and financial-independence goals distinct targets, horizons and contribution plans.",
+                  },
+                  {
+                    title: "Coordinate and monitor",
+                    copy: "Share organised records with the CA and other specialists, then review the portfolio as clinic income and family goals change.",
+                  },
+                ].map((step, index) => (
+                  <li key={step.title} className="rounded-2xl bg-[#F7F8FA] p-5">
+                    <span className="font-body text-xs font-bold text-[#B18C2D]">0{index + 1}</span>
+                    <h3 className="mt-2 font-display text-lg font-semibold text-[#0B1F3A]">{step.title}</h3>
+                    <p className="mt-2 font-body text-sm leading-relaxed text-slate-600">{step.copy}</p>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="review-process" className="scroll-mt-24 bg-[#F7F8FA] py-20 lg:py-28">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#B18C2D]">How it works</p>
@@ -484,6 +732,76 @@ export default function FinancialPlanningForDoctorsPage() {
                 SoHo Wealth provides investment distribution, portfolio review and wealth coordination. We do not
                 replace your chartered accountant, lawyer or licensed insurance professional. Where a decision falls
                 outside our scope, we help you identify the question and coordinate with the appropriate specialist.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-y border-slate-200 bg-[#F7F8FA] py-16">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.1fr_.9fr]">
+            <div className="flex flex-col gap-6 rounded-3xl bg-white p-7 md:flex-row md:items-center md:p-9">
+              <Image
+                src="/kiran-dutta.jpeg"
+                alt="Kiran Dutta, founder of SoHo Wealth"
+                width={112}
+                height={112}
+                className="h-24 w-24 shrink-0 rounded-2xl object-cover object-top"
+              />
+              <div>
+                <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-[#B18C2D]">About this guide</p>
+                <h2 className="mt-2 font-display text-2xl font-semibold text-[#0B1F3A]">Prepared by SoHo Wealth</h2>
+                <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">
+                  Editorial responsibility sits with{" "}
+                  <Link href="/team" className="font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] underline-offset-4">
+                    Kiran Dutta
+                  </Link>
+                  , founder of SoHo Wealth and SIFPrime, Columbia University alumnus, AMFI Registered Mutual Fund and
+                  SIF Distributor, and APMI Registered PMS Distributor.
+                </p>
+                <p className="mt-3 font-body text-xs font-semibold text-slate-400">
+                  Published and last substantially updated: July 26, 2026
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-3xl bg-white p-7 md:p-9">
+              <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-[#B18C2D]">Primary references</p>
+              <ul className="mt-5 space-y-3">
+                {[
+                  {
+                    label: "SEBI Investor: factors to consider before investing",
+                    href: "https://investor.sebi.gov.in/investment-thingsbeforeinv.html",
+                  },
+                  {
+                    label: "Income Tax Department: ITR-4 and Section 44ADA guidance",
+                    href: "https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/file-itr-4-sugam-online",
+                  },
+                  {
+                    label: "IRDAI: health insurance consumer guidance",
+                    href: "https://irdai.gov.in/health-dept",
+                  },
+                ].map((source) => (
+                  <li key={source.href}>
+                    <a
+                      href={source.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="font-body text-sm font-semibold leading-relaxed text-[#0B1F3A] underline decoration-slate-300 underline-offset-4 transition hover:decoration-[#C9A84C]"
+                    >
+                      {source.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+              <p className="mt-5 font-body text-xs leading-relaxed text-slate-500">
+                Tax, legal and insurance treatment can change and depends on individual facts. Confirm those decisions
+                with the appropriate qualified specialist. Review SoHo Wealth&apos;s{" "}
+                <Link href="/disclosures" className="font-semibold text-[#0B1F3A] underline underline-offset-4">
+                  regulatory disclosures
+                </Link>
+                .
               </p>
             </div>
           </div>
@@ -533,7 +851,9 @@ export default function FinancialPlanningForDoctorsPage() {
         }
       />
 
-      <FAQSection faqs={faqs} heading="Financial Planning for Doctors: FAQs" background="#FFFFFF" />
+      <div id="doctor-faqs" className="scroll-mt-24">
+        <FAQSection faqs={faqs} heading="Financial Planning for Doctors: FAQs" background="#FFFFFF" />
+      </div>
 
       <RelatedServices
         heading="Explore the Right Investment Route"

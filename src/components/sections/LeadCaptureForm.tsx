@@ -134,7 +134,7 @@ export function LeadCaptureForm({
   );
 
   return (
-    <section id={sectionId} ref={ref} className="py-20 lg:py-28" style={{ backgroundColor: "#0B1F3A" }}>
+    <section id={sectionId} ref={ref} className="overflow-x-hidden py-20 lg:py-28" style={{ backgroundColor: "#0B1F3A" }}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
           {/* Left Column */}
