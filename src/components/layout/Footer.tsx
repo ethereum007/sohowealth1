@@ -20,7 +20,8 @@ const audienceLinks = [
 ];
 
 const companyLinks = [
-  { name: "About", href: "/about" },
+  { name: "About Us", href: "/about" },
+  { name: "Team", href: "/team" },
   { name: "Why SoHo", href: "/why-us" },
   { name: "Insights", href: "/insights" },
   { name: "Hyderabad Wealth", href: "/wealth-management-hyderabad" },
