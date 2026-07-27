@@ -75,7 +75,6 @@ const audienceLinks: MenuLink[] = [
 ];
 
 const navigationItems: NavigationItem[] = [
-  { name: "About", href: "/about" },
   {
     name: "Investment Products",
     href: "/investment-products",
@@ -90,8 +89,9 @@ const navigationItems: NavigationItem[] = [
     submenu: audienceLinks,
     overviewLabel: "Explore who we serve",
   },
+  { name: "About Us", href: "/about" },
+  { name: "Team", href: "/team" },
   { name: "Insights", href: "/insights" },
-  { name: "Hyderabad Wealth", href: "/wealth-management-hyderabad" },
   { name: "Contact", href: "/contact" },
 ];
 
