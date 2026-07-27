@@ -13,7 +13,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority: number;
   }> = [
-    { path: "/",                  lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 1.0 },
+    { path: "/",                  lastModified: "2026-07-27", changeFrequency: "weekly",  priority: 1.0 },
+    { path: "/investment-products", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/pms-advisory",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/wealth-management-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.95 },

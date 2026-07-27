@@ -3,6 +3,7 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { WhySohoSection } from "@/components/sections/WhySohoSection";
 import { ServicesGridSection } from "@/components/sections/ServicesGridSection";
+import { WhoWeServeSection } from "@/components/sections/WhoWeServeSection";
 import { SIFBannerSection } from "@/components/sections/SIFBannerSection";
 import { PortfolioReviewSection } from "@/components/sections/PortfolioReviewSection";
 import { HyderabadLocalSection } from "@/components/sections/HyderabadLocalSection";
@@ -42,6 +43,7 @@ const HomeClient = () => {
         <HeroSection />
         <WhySohoSection />
         <ServicesGridSection />
+        <WhoWeServeSection />
         <SIFBannerSection />
         <HyderabadLocalSection />
         <FAQSection faqs={homeFaqs} heading="Wealth Advisor Hyderabad FAQs" background="#FFFFFF" />

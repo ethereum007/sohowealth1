@@ -1,45 +1,108 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, ChevronDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronDown, Menu, X } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
-const navLinks = [
-  { name: "Home", href: "/" },
+type MenuLink = {
+  name: string;
+  href: string;
+  description: string;
+};
+
+type NavigationItem =
+  | { name: string; href: string }
+  | {
+      name: string;
+      href: string;
+      menuId: string;
+      submenu: MenuLink[];
+      overviewLabel: string;
+    };
+
+const investmentProducts: MenuLink[] = [
+  {
+    name: "Mutual Funds",
+    href: "/mutual-funds",
+    description: "Goal-based core portfolios and disciplined investing.",
+  },
+  {
+    name: "PMS",
+    href: "/pms-advisory",
+    description: "Compare concentrated, professionally managed portfolios.",
+  },
+  {
+    name: "SIF",
+    href: "/sif",
+    description: "Explore flexible strategies with a ₹10 lakh minimum.",
+  },
+  {
+    name: "AIF",
+    href: "/aif-advisory",
+    description: "Private-market and alternative strategies for eligible investors.",
+  },
+  {
+    name: "Pre-IPO",
+    href: "/pre-ipo",
+    description: "Curated private opportunities with deal-specific eligibility.",
+  },
+  {
+    name: "Global Investing",
+    href: "/global-investing",
+    description: "Build measured exposure beyond Indian markets.",
+  },
+];
+
+const audienceLinks: MenuLink[] = [
+  {
+    name: "For Doctors",
+    href: "/financial-planning-for-doctors",
+    description: "Connect practice finances, investments and family wealth.",
+  },
+  {
+    name: "For IT Professionals",
+    href: "/wealth-planning-for-it-professionals",
+    description: "Plan salary, bonuses, RSUs, ESOPs and financial independence.",
+  },
+  {
+    name: "For Telugu NRIs",
+    href: "/nri-telugu",
+    description: "Coordinate India-linked wealth in Telugu or English.",
+  },
+];
+
+const navigationItems: NavigationItem[] = [
   { name: "About", href: "/about" },
   {
-    name: "Services",
-    href: "#",
-    submenu: [
-      { name: "SIF (SIFPrime)", href: "/sif" },
-      { name: "SIF vs PMS", href: "/sif-vs-pms" },
-      { name: "PMS Advisory", href: "/pms-advisory" },
-      { name: "Best PMS Hyderabad", href: "/best-pms-in-hyderabad" },
-      { name: "AIF Advisory", href: "/aif-advisory" },
-      { name: "For Doctors", href: "/financial-planning-for-doctors" },
-      { name: "NRI Advisory", href: "/services/nri" },
-      { name: "Telugu NRI Wealth", href: "/nri-telugu" },
-      { name: "Hyderabad Real Estate", href: "/hyderabad-real-estate" },
-      { name: "NRI Real Estate", href: "/nri-real-estate-in-hyderabad" },
-      { name: "US NRI Property", href: "/us-nri-hyderabad-real-estate" },
-      { name: "Pre-IPO", href: "/pre-ipo" },
-      { name: "RSU & ESOPs", href: "/rsu-esops" },
-      { name: "Mutual Funds", href: "/mutual-funds" },
-      { name: "Global Investing", href: "/global-investing" },
-    ],
+    name: "Investment Products",
+    href: "/investment-products",
+    menuId: "investment-products-menu",
+    submenu: investmentProducts,
+    overviewLabel: "View all investment products",
+  },
+  {
+    name: "Who We Serve",
+    href: "/who-we-serve",
+    menuId: "who-we-serve-menu",
+    submenu: audienceLinks,
+    overviewLabel: "Explore who we serve",
   },
   { name: "Insights", href: "/insights" },
   { name: "Hyderabad Wealth", href: "/wealth-management-hyderabad" },
   { name: "Contact", href: "/contact" },
 ];
 
+function hasSubmenu(item: NavigationItem): item is Extract<NavigationItem, { submenu: MenuLink[] }> {
+  return "submenu" in item;
+}
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+  const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -47,17 +110,22 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const closeNavigation = () => {
+    setOpenMenu(null);
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-background/95 backdrop-blur-xl shadow-md border-b border-border/30"
+          ? "border-b border-border/30 bg-background/95 shadow-md backdrop-blur-xl"
           : "bg-background/80 backdrop-blur-sm"
       }`}
     >
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center shrink-0" aria-label="SoHo Wealth — Home">
+        <div className="flex h-20 items-center justify-between">
+          <Link href="/" className="flex shrink-0 items-center" aria-label="SoHo Wealth — Home">
             <Image
               src="/soho-logo.png"
               alt="SoHo Wealth — Wealth Advisor in Hyderabad"
@@ -68,55 +136,98 @@ export function Header() {
             />
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-9">
-            {navLinks.map((link) => (
-              <div key={link.name} className="relative group">
-                {link.submenu ? (
-                  <div
-                    className="flex items-center gap-1.5 text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors cursor-pointer tracking-wide font-body"
-                    onMouseEnter={() => setOpenSubmenu(link.name)}
-                    onMouseLeave={() => setOpenSubmenu(null)}
-                  >
-                    <span>{link.name}</span>
-                    <ChevronDown className="w-3.5 h-3.5 transition-transform duration-300 group-hover:rotate-180" />
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary rounded-full transition-all duration-300 group-hover:w-full" />
+          <nav className="hidden items-center gap-5 xl:flex 2xl:gap-7" aria-label="Primary navigation">
+            {navigationItems.map((item) => (
+              <div
+                key={item.name}
+                className="group relative"
+                onMouseEnter={() => hasSubmenu(item) && setOpenMenu(item.name)}
+                onMouseLeave={() => hasSubmenu(item) && setOpenMenu(null)}
+                onBlur={(event) => {
+                  if (!event.currentTarget.contains(event.relatedTarget as Node)) {
+                    setOpenMenu(null);
+                  }
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === "Escape") {
+                    setOpenMenu(null);
+                  }
+                }}
+              >
+                {hasSubmenu(item) ? (
+                  <>
+                    <button
+                      type="button"
+                      aria-expanded={openMenu === item.name}
+                      aria-controls={item.menuId}
+                      aria-haspopup="true"
+                      onClick={() => setOpenMenu(openMenu === item.name ? null : item.name)}
+                      className="relative flex items-center gap-1.5 py-2 font-body text-sm font-semibold tracking-wide text-foreground/80 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
+                    >
+                      <span>{item.name}</span>
+                      <ChevronDown
+                        className={`h-3.5 w-3.5 transition-transform duration-200 ${
+                          openMenu === item.name ? "rotate-180" : ""
+                        }`}
+                        aria-hidden="true"
+                      />
+                      <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-primary transition-all duration-300 group-hover:w-full" />
+                    </button>
 
                     <AnimatePresence>
-                      {openSubmenu === link.name && (
+                      {openMenu === item.name && (
                         <motion.div
+                          id={item.menuId}
                           initial={{ opacity: 0, y: 8 }}
                           animate={{ opacity: 1, y: 0 }}
                           exit={{ opacity: 0, y: 8 }}
                           transition={{ duration: 0.15 }}
-                          className="absolute top-full left-0 mt-3 grid w-[28rem] grid-cols-2 gap-1 rounded-xl border border-border/50 bg-background p-2 shadow-xl"
+                          className={`absolute left-1/2 top-full -translate-x-1/2 rounded-2xl border border-border/60 bg-background p-3 shadow-2xl ${
+                            item.name === "Investment Products" ? "w-[38rem]" : "w-[32rem]"
+                          }`}
                         >
-                          {link.submenu.map((sub) => (
+                          <div className={item.name === "Investment Products" ? "grid grid-cols-2 gap-1" : "grid gap-1"}>
+                            {item.submenu.map((subitem) => (
+                              <Link
+                                key={subitem.name}
+                                href={subitem.href}
+                                onClick={closeNavigation}
+                                className="rounded-xl px-4 py-3 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                              >
+                                <span className="block font-body text-sm font-bold text-foreground">{subitem.name}</span>
+                                <span className="mt-1 block font-body text-xs leading-relaxed text-muted-foreground">
+                                  {subitem.description}
+                                </span>
+                              </Link>
+                            ))}
+                          </div>
+                          <div className="mt-2 border-t border-border/60 px-2 pt-2">
                             <Link
-                              key={sub.name}
-                              href={sub.href}
-                              className="block rounded-lg px-3 py-2.5 text-sm font-medium font-body text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
+                              href={item.href}
+                              onClick={closeNavigation}
+                              className="inline-flex rounded-lg px-2 py-2 font-body text-xs font-bold uppercase tracking-[0.12em] text-primary transition hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                             >
-                              {sub.name}
+                              {item.overviewLabel} →
                             </Link>
-                          ))}
+                          </div>
                         </motion.div>
                       )}
                     </AnimatePresence>
-                  </div>
+                  </>
                 ) : (
                   <Link
-                    href={link.href}
-                    className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors relative tracking-wide font-body"
+                    href={item.href}
+                    className="relative py-2 font-body text-sm font-semibold tracking-wide text-foreground/80 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4"
                   >
-                    {link.name}
-                    <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary rounded-full transition-all duration-300 group-hover:w-full" />
+                    {item.name}
+                    <span className="absolute -bottom-1 left-0 h-0.5 w-0 rounded-full bg-primary transition-all duration-300 group-hover:w-full" />
                   </Link>
                 )}
               </div>
             ))}
           </nav>
 
-          <div className="hidden lg:block">
+          <div className="hidden xl:block">
             <Button
               asChild
               className="font-body font-semibold tracking-wide"
@@ -127,11 +238,17 @@ export function Header() {
           </div>
 
           <button
-            className="lg:hidden p-2 text-foreground"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            aria-label="Toggle menu"
+            type="button"
+            className="rounded-md p-2 text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary xl:hidden"
+            onClick={() => {
+              setIsMobileMenuOpen(!isMobileMenuOpen);
+              setOpenMenu(null);
+            }}
+            aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-primary-navigation"
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
       </div>
@@ -139,52 +256,72 @@ export function Header() {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
+            id="mobile-primary-navigation"
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-background border-b border-border"
+            className="max-h-[calc(100vh-5rem)] overflow-y-auto border-b border-border bg-background xl:hidden"
           >
-            <nav className="container mx-auto px-6 py-6 flex flex-col gap-3">
-              {navLinks.map((link) => (
-                <div key={link.name}>
-                  {link.submenu ? (
-                    <div>
+            <nav className="container mx-auto flex flex-col gap-2 px-6 py-6" aria-label="Mobile navigation">
+              {navigationItems.map((item) => (
+                <div key={item.name}>
+                  {hasSubmenu(item) ? (
+                    <>
                       <button
-                        onClick={() => setOpenSubmenu(openSubmenu === link.name ? null : link.name)}
-                        className="w-full flex items-center justify-between text-base font-semibold font-body text-foreground py-2.5 border-b border-border/40"
+                        type="button"
+                        aria-expanded={openMenu === item.name}
+                        aria-controls={`mobile-${item.menuId}`}
+                        onClick={() => setOpenMenu(openMenu === item.name ? null : item.name)}
+                        className="flex w-full items-center justify-between border-b border-border/40 py-3 font-body text-base font-semibold text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                       >
-                        {link.name}
-                        <ChevronDown className={`w-4 h-4 transition-transform ${openSubmenu === link.name ? "rotate-180" : ""}`} />
+                        {item.name}
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform ${
+                            openMenu === item.name ? "rotate-180" : ""
+                          }`}
+                          aria-hidden="true"
+                        />
                       </button>
                       <AnimatePresence>
-                        {openSubmenu === link.name && (
+                        {openMenu === item.name && (
                           <motion.div
+                            id={`mobile-${item.menuId}`}
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
-                            className="pl-4 mt-1 space-y-1"
+                            className="overflow-hidden border-b border-border/40"
                           >
-                            {link.submenu.map((sub) => (
+                            <div className="space-y-1 py-2 pl-4">
                               <Link
-                                key={sub.name}
-                                href={sub.href}
-                                className="block py-2.5 text-sm font-body text-muted-foreground hover:text-foreground transition-colors"
-                                onClick={() => setIsMobileMenuOpen(false)}
+                                href={item.href}
+                                onClick={closeNavigation}
+                                className="block rounded-lg py-2.5 font-body text-sm font-bold text-primary"
                               >
-                                {sub.name}
+                                {item.overviewLabel} →
                               </Link>
-                            ))}
+                              {item.submenu.map((subitem) => (
+                                <Link
+                                  key={subitem.name}
+                                  href={subitem.href}
+                                  onClick={closeNavigation}
+                                  className="block rounded-lg py-2.5 font-body text-sm text-muted-foreground transition-colors hover:text-foreground"
+                                >
+                                  <span className="block font-semibold text-foreground">{subitem.name}</span>
+                                  <span className="mt-0.5 block text-xs leading-relaxed">{subitem.description}</span>
+                                </Link>
+                              ))}
+                            </div>
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    </div>
+                    </>
                   ) : (
                     <Link
-                      href={link.href}
-                      className="block text-base font-semibold font-body text-foreground py-2.5 border-b border-border/40"
-                      onClick={() => setIsMobileMenuOpen(false)}
+                      href={item.href}
+                      className="block border-b border-border/40 py-3 font-body text-base font-semibold text-foreground"
+                      onClick={closeNavigation}
                     >
-                      {link.name}
+                      {item.name}
                     </Link>
                   )}
                 </div>
@@ -194,7 +331,7 @@ export function Header() {
                 className="mt-4 w-full font-body font-semibold"
                 style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}
               >
-                <Link href="/portfolio-review" onClick={() => setIsMobileMenuOpen(false)}>
+                <Link href="/portfolio-review" onClick={closeNavigation}>
                   Book Free Review
                 </Link>
               </Button>

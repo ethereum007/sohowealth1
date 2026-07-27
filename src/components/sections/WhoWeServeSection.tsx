@@ -4,35 +4,34 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import {
-  Briefcase,
+  Laptop2,
   Stethoscope,
-  Building2,
-  Globe,
+  Languages,
   ArrowRight
 } from "lucide-react";
 import Link from "next/link";
 
 const audiences = [
   {
-    icon: Briefcase,
-    title: "Professionals & CXOs",
-    description: "Senior executives seeking sophisticated wealth strategies aligned with their career trajectory and retirement goals.",
-  },
-  {
     icon: Stethoscope,
-    title: "Doctors & Healthcare Professionals",
-    description: "Medical practitioners requiring specialized financial planning that accounts for irregular income patterns and practice growth.",
+    title: "For Doctors",
+    description: "Connect personal wealth, variable professional income, clinic capital and the freedom to practise by choice.",
+    linkLabel: "Explore doctor wealth planning",
     href: "/financial-planning-for-doctors",
   },
   {
-    icon: Building2,
-    title: "Business Owners",
-    description: "Entrepreneurs looking to separate personal wealth from business assets while building generational legacy.",
+    icon: Laptop2,
+    title: "For IT Professionals",
+    description: "Turn salary, bonuses, RSUs and ESOPs into a system for diversification, career optionality and financial independence.",
+    linkLabel: "Explore tech wealth planning",
+    href: "/wealth-planning-for-it-professionals",
   },
   {
-    icon: Globe,
-    title: "NRIs",
-    description: "Non-resident Indians seeking expert guidance on India-focused investments, tax optimization, and repatriation strategies.",
+    icon: Languages,
+    title: "For Telugu NRIs",
+    description: "Coordinate India investments, NRI accounts, tax-filing questions and return-to-India goals in English or Telugu.",
+    linkLabel: "Explore Telugu NRI wealth",
+    href: "/nri-telugu",
   },
 ];
 
@@ -55,13 +54,13 @@ export function WhoWeServeSection() {
             Who We <span className="text-gradient-gold">Work With</span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            We specialize in serving discerning investors who value personalized attention,
-            transparent advice, and long-term wealth building strategies.
+            Different careers create different financial pressure points. Choose
+            the journey that starts with the decisions you actually face.
           </p>
         </motion.div>
 
         {/* Audience Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="mx-auto grid max-w-6xl md:grid-cols-3 gap-6 lg:gap-8">
           {audiences.map((audience, index) => (
             <motion.div
               key={audience.title}
@@ -82,15 +81,13 @@ export function WhoWeServeSection() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {audience.description}
               </p>
-              {audience.href && (
-                <Link
-                  href={audience.href}
-                  className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
-                >
-                  Explore doctor planning
-                  <ArrowRight className="h-4 w-4" />
-                </Link>
-              )}
+              <Link
+                href={audience.href}
+                className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
+              >
+                {audience.linkLabel}
+                <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              </Link>
 
               {/* Hover gradient */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
@@ -106,11 +103,11 @@ export function WhoWeServeSection() {
           className="text-center mt-12"
         >
           <Link
-            href="/contact"
+            href="/who-we-serve"
             className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
           >
-            See if we're a good fit
-            <ArrowRight className="w-5 h-5" />
+            Compare all three client journeys
+            <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </Link>
         </motion.div>
       </div>
