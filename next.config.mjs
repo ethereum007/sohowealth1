@@ -18,6 +18,21 @@ const nextConfig = {
         destination: "/financial-planning-for-doctors",
         permanent: true,
       },
+      {
+        source: "/offshore-investing",
+        destination: "/global-investing",
+        permanent: true,
+      },
+      {
+        source: "/fire-calculator",
+        destination: "/insights/fire-planning-for-it-professionals-hyderabad",
+        permanent: true,
+      },
+      {
+        source: "/rsu-esops",
+        destination: "/wealth-planning-for-it-professionals/rsu-guide",
+        permanent: true,
+      },
     ];
   },
   async headers() {

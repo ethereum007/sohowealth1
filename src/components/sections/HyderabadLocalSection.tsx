@@ -9,7 +9,7 @@ const cards = [
   {
     icon: MapPin,
     title: "Based in Hyderabad",
-    text: "Local wealth advisor in Khajaguda serving Banjara Hills, Jubilee Hills, Gachibowli, HITEC City, Kondapur, Madhapur and Secunderabad.",
+    text: "Local wealth-planning and investment-distribution practice in Khajaguda serving Banjara Hills, Jubilee Hills, Gachibowli, HITEC City, Kondapur, Madhapur and Secunderabad.",
   },
   {
     icon: Calendar,
@@ -65,9 +65,10 @@ export function HyderabadLocalSection() {
             <span style={{ color: "#C9A84C" }}>Hyderabad?</span>
           </h2>
           <p className="font-body text-base lg:text-lg leading-relaxed" style={{ color: "#4A5568" }}>
-            SoHo Wealth is Hyderabad&apos;s independent boutique wealth advisor for
-            PMS, SIF, AIF, mutual funds, NRI investing and portfolio reviews.
-            We are built around your goals instead of any single product&apos;s commission.
+            SoHo Wealth provides portfolio review, wealth planning and investment
+            distribution across mutual funds, PMS and SIF, with evaluation support
+            for other eligible products. Our disclosed role and registrations are
+            available on the disclosures page.
           </p>
         </motion.div>
 

@@ -69,6 +69,28 @@ export default async function InsightPostPage({ params }: PageProps) {
     timeZone: "UTC",
   }).format(new Date(`${post.publishedAt}T00:00:00Z`));
   const url = `https://www.sohowealth.in/insights/${post.slug}`;
+  const isDoctorPost = post.category === "Doctors";
+  const isItProfessionalPost = post.category === "IT Professionals";
+  const cta = isDoctorPost
+    ? {
+        title: "Review the Doctor Family Balance Sheet",
+        copy: "Bring the clinic, household, debt, property and investment view into one structured conversation before the next major capital decision.",
+        href: "/financial-planning-for-doctors",
+        label: "Explore Wealth Planning for Doctors",
+      }
+    : isItProfessionalPost
+      ? {
+          title: "Review Salary, RSUs and Goals Together",
+          copy: "Map employer equity, liquid investments and major goals in one portfolio view before the next vest, exercise or career move.",
+          href: "/wealth-planning-for-it-professionals",
+          label: "Explore Wealth Planning for IT Professionals",
+        }
+      : {
+          title: "Book a Portfolio Review",
+          copy: "If your India portfolio includes old resident folios, NRE/NRO confusion, PMS, SIF, AIF, property or RSUs, a structured review can make the next decision much clearer.",
+          href: "/portfolio-review",
+          label: "Book Free Review",
+        };
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -125,6 +147,13 @@ export default async function InsightPostPage({ params }: PageProps) {
           <p className="font-body text-lg leading-relaxed lg:text-xl" style={{ color: "rgba(255,255,255,0.75)" }}>
             {post.description}
           </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-sm text-white/60">
+            <span>By <Link href="/team" className="font-semibold text-white underline-offset-4 hover:underline">Kiran Dutta</Link></span>
+            <span aria-hidden="true">•</span>
+            <span>Founder, SoHo Wealth</span>
+            <span aria-hidden="true">•</span>
+            <span>Reviewed {publishedLabel}</span>
+          </div>
         </div>
       </section>
 
@@ -205,13 +234,13 @@ export default async function InsightPostPage({ params }: PageProps) {
           </div>
 
           <div className="mt-16 rounded-lg p-8" style={{ backgroundColor: "#FDF8EC" }}>
-            <h2 className="font-display mb-3 text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Book a Portfolio Review</h2>
+            <h2 className="font-display mb-3 text-2xl font-semibold" style={{ color: "#0B1F3A" }}>{cta.title}</h2>
             <p className="font-body mb-6 max-w-2xl text-base leading-relaxed text-slate-700">
-              If your India portfolio includes old resident folios, NRE/NRO confusion, PMS, SIF, AIF, property or RSUs, a structured review can make the next decision much clearer.
+              {cta.copy}
             </p>
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Link href="/portfolio-review" className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-body text-sm font-semibold transition hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
-                Book Free Review
+              <Link href={cta.href} className="inline-flex items-center justify-center gap-2 rounded-lg px-6 py-3 font-body text-sm font-semibold transition hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+                {cta.label}
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-6 py-3 font-body text-sm font-semibold transition hover:bg-white" style={{ color: "#0B1F3A" }}>
@@ -250,7 +279,11 @@ export default async function InsightPostPage({ params }: PageProps) {
             <div className="mb-10 text-center">
               <p className="font-body text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#C9A84C" }}>Next Reads</p>
               <h2 className="font-display mt-3 text-3xl font-semibold md:text-4xl" style={{ color: "#0B1F3A" }}>
-                Continue the NRI Wealth Thread
+                {isDoctorPost
+                  ? "Continue the Doctor Wealth Thread"
+                  : isItProfessionalPost
+                    ? "Continue the Tech Wealth Thread"
+                    : "Continue the NRI Wealth Thread"}
               </h2>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">

@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import MutualFundsClient from "./MutualFundsClient";
 
 export const metadata: Metadata = {
-  title: "Mutual Fund Advisory Hyderabad — SIP, Equity, Debt & ELSS | SoHo Wealth",
+  title: "Mutual Fund Distributor Hyderabad — SIP, Equity, Debt | SoHo Wealth",
   description:
-    "Get expert mutual fund advisory from SoHo Wealth, Hyderabad. Best equity, debt, hybrid & ELSS funds. Start SIP from Rs. 500. Free portfolio review.",
+    "AMFI-registered mutual fund distributor in Hyderabad. Compare equity, debt, hybrid and ELSS structures, start SIPs and review existing holdings.",
   keywords:
     "mutual fund advisor Hyderabad, best SIP plans India, equity mutual funds, debt funds, ELSS tax saving funds, mutual fund distributor Hyderabad",
   alternates: { canonical: "https://www.sohowealth.in/mutual-funds" },
   openGraph: {
-    title: "Best Mutual Fund Advisory in Hyderabad — SoHo Wealth",
-    description: "Expert mutual fund selection. Equity, debt, hybrid & ELSS. SIP from Rs. 500.",
+    title: "Mutual Fund Distribution in Hyderabad — SoHo Wealth",
+    description: "Goal mapping, fund comparison, SIP implementation and ongoing service. Equity, debt, hybrid and ELSS.",
     url: "https://www.sohowealth.in/mutual-funds",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mutual Fund Advisory Hyderabad | SoHo Wealth",
-    description: "Expert mutual fund selection. Equity, debt, hybrid & ELSS. SIP from Rs. 500.",
+    title: "Mutual Fund Distributor Hyderabad | SoHo Wealth",
+    description: "Goal mapping, fund comparison, SIP implementation and ongoing service.",
   },
 };
 

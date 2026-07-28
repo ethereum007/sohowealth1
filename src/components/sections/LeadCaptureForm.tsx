@@ -118,7 +118,7 @@ export function LeadCaptureForm({
           "Asset allocation analysis vs your goals",
           "Return benchmarking vs inflation",
           "Fee leakage identification",
-          "Personalized investment roadmap",
+          "Portfolio observations and next-step roadmap",
           "30-minute 1-on-1 with Kiran Dutta",
         ].map((item) => (
           <li key={item} className="flex items-start gap-3">
@@ -232,6 +232,12 @@ export function LeadCaptureForm({
                       privacy policy
                     </a>
                     . We never share your data.
+                  </p>
+                  <p className="text-center text-[11px] leading-relaxed font-body" style={{ color: "rgba(255,255,255,0.42)" }}>
+                    SoHo Wealth is an AMFI mutual fund and SIF distributor (ARN
+                    306593) and an APMI PMS distributor (APRN01233), not a SEBI
+                    Registered Investment Adviser. A consultation is not a tax,
+                    legal or security-specific recommendation.
                   </p>
                 </form>
               </>

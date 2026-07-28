@@ -46,15 +46,15 @@ const services: ServiceCard[] = [
     ctaText: "Explore Pre-IPO →",
   },
   {
-    title: "Mutual Funds Advisory",
-    text: "AMFI registered. Goal-based portfolios. SIP, rebalancing, tax-loss harvesting. No conflict of interest.",
+    title: "Mutual Fund Distribution",
+    text: "AMFI-registered distribution with goal mapping, portfolio review, SIP implementation and ongoing service.",
     ctaLink: "/mutual-funds",
     ctaText: "Get Started →",
   },
   {
     badge: { text: "GLOBAL", variant: "navy" },
     title: "Global Investing",
-    text: "Diversify beyond India via LRS, GIFT City funds & US equities. Tax-efficient offshore strategies for HNIs & NRIs.",
+    text: "Explore diversification beyond India via permitted LRS routes, GIFT City funds and global market access, subject to eligibility and specialist tax review.",
     ctaLink: "/global-investing",
     ctaText: "Explore Global →",
   },

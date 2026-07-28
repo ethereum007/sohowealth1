@@ -4,6 +4,7 @@ import { useState } from "react";
 import { ArrowRight, CheckCircle2, Globe2, Landmark, ShieldCheck } from "lucide-react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { FAQSection } from "@/components/seo/FAQSection";
 import Link from "next/link";
 
 type Service = { slug: string; name: string; description: string };
@@ -62,12 +63,31 @@ const pageSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "NRI Wealth Management for Telugu Families",
-  serviceType: "NRI Wealth Management",
+  serviceType: "NRI Portfolio Review and Investment Distribution",
   url: "https://www.sohowealth.in/nri-telugu",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: ["United States", "United Arab Emirates", "Canada", "United Kingdom", "Australia", "India"],
   audience: { "@type": "Audience", audienceType: "Telugu-speaking NRIs and returning NRIs" },
 };
+
+const faqs = [
+  {
+    q: "Can I speak with SoHo Wealth in Telugu?",
+    a: "Yes. Telugu and English video or in-person conversations are available for NRI families with roots in Telangana and Andhra Pradesh.",
+  },
+  {
+    q: "Does SoHo Wealth provide NRI tax or FEMA advice?",
+    a: "No. SoHo Wealth provides portfolio review, investment distribution and coordination within its disclosed scope. Tax returns, legal opinions, FEMA positions and country-specific advice should be confirmed with qualified professionals.",
+  },
+  {
+    q: "Can Telugu NRIs invest in mutual funds, SIFs or PMS without visiting India?",
+    a: "Many providers support digital onboarding, subject to country, bank, KYC, FATCA and product requirements. SoHo Wealth can coordinate the provider workflow and document checklist.",
+  },
+  {
+    q: "What should a returning NRI review first?",
+    a: "Start with the travel and residency timeline, bank-account status, foreign assets, RSUs, India income, property and expected remittances before changing products or moving money.",
+  },
+];
 
 export default function NRITeluguClient() {
   const [service, setService] = useState("NRI private wealth review");
@@ -104,7 +124,7 @@ export default function NRITeluguClient() {
           <div className="max-w-4xl">
             <p className="mb-5 font-body text-sm font-semibold uppercase tracking-[0.22em] text-[#C9A84C]">SoHo Wealth for the Telugu diaspora</p>
             <h1 className="font-display text-4xl font-semibold leading-[1.08] text-white md:text-6xl lg:text-7xl">Wealth Management for Telugu NRIs—Built by Someone From Hyderabad Who Knows Both Sides</h1>
-            <p className="mt-7 max-w-3xl font-body text-lg leading-relaxed text-white/75 lg:text-xl">Institutional-grade investing, GIFT City access and real estate coordination for the Telugu diaspora—from a Telugu-speaking team that understands home.</p>
+            <p className="mt-7 max-w-3xl font-body text-lg leading-relaxed text-white/75 lg:text-xl">Portfolio review, registered investment distribution and specialist coordination for the Telugu diaspora—from a Telugu-speaking team that understands home.</p>
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <button onClick={() => openForm("NRI private wealth review")} className="rounded-lg bg-[#C9A84C] px-7 py-4 font-body font-semibold text-[#0B1F3A] transition hover:bg-[#d8bb68]">Book a Free Portfolio Review</button>
               <a href="https://wa.me/919032999466?text=Hi%20SoHo%20Wealth%2C%20I%27m%20a%20Telugu%20NRI%20and%20would%20like%20to%20discuss%20my%20India-linked%20wealth." target="_blank" rel="noopener noreferrer" className="rounded-lg border border-white/30 px-7 py-4 text-center font-body font-semibold text-white transition hover:bg-white/10">WhatsApp the team</a>
@@ -184,6 +204,8 @@ export default function NRITeluguClient() {
           </div>
         </div>
       </section>
+
+      <FAQSection faqs={faqs} heading="Telugu NRI Wealth Planning: FAQs" background="#FFFFFF" />
 
       <LeadCaptureForm source="nri-telugu" service={service} heading="Book Your Telugu NRI Wealth Review" sectionId="nri-telugu-consultation" leftContent={<><h2 className="font-display text-3xl font-semibold text-white md:text-5xl">Bring your India-linked wealth into one clear plan.</h2><p className="mt-5 text-lg leading-relaxed text-white/70">Share the broad picture. Kiran and the team will help identify the accounts, investments and transition questions that deserve attention first.</p><ul className="mt-8 space-y-3 text-white/80">{["Founder-led initial review", "Telugu or English conversation", "Video consultations across time zones", "No-obligation first discussion"].map((item) => <li key={item} className="flex gap-3"><CheckCircle2 className="h-5 w-5 text-[#C9A84C]" />{item}</li>)}</ul></>} />
     </main>

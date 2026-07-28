@@ -10,9 +10,9 @@ import { RelatedServices } from "@/components/seo/RelatedServices";
 const mfServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Mutual Fund Advisory Hyderabad",
-  description: "AMFI-registered mutual fund advisory in Hyderabad. Goal-based portfolio construction, SIPs from ₹500, equity, debt, hybrid and ELSS funds. Free portfolio review.",
-  serviceType: "Mutual Fund Advisory",
+  name: "Mutual Fund Distribution Hyderabad",
+  description: "AMFI-registered mutual fund distribution in Hyderabad with goal mapping, portfolio review, SIP implementation and ongoing service.",
+  serviceType: "Mutual Fund Distribution",
   url: "https://www.sohowealth.in/mutual-funds",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
@@ -42,25 +42,25 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 }
 
 const services = [
-  { title: "Goal-Based Portfolio Construction", description: "Whether it's retirement in 20 years, a child's education in 10, or a home purchase in 3 — we map your goals to specific fund allocations with precise SIP amounts." },
-  { title: "SIP Optimization", description: "We don't just start SIPs — we optimize them. Step-up SIPs, tactical pauses during market extremes, and systematic switching between equity and debt based on valuations." },
-  { title: "Lumpsum Deployment Strategy", description: "Large sums need careful deployment. We use Systematic Transfer Plans (STPs), value averaging, and market-timing frameworks to deploy lumpsum investments efficiently." },
-  { title: "Annual Portfolio Review & Rebalancing", description: "Markets change. Your portfolio should adapt. We conduct comprehensive annual reviews with rebalancing recommendations." },
-  { title: "Tax-Loss Harvesting", description: "Strategically booking losses to offset gains, optimizing your post-tax returns — a service most advisors ignore." },
-  { title: "Consolidation & Clean-Up", description: "Have funds scattered across multiple platforms and distributors? We consolidate everything into a single, optimized portfolio." },
+  { title: "Goal Mapping", description: "Connect retirement, education, home and other goals to time horizon, liquidity and risk before implementation." },
+  { title: "SIP Implementation", description: "Set up sustainable SIPs and documented step-up rules that fit the household's cash flow." },
+  { title: "Lumpsum Deployment Discussion", description: "Compare immediate and phased deployment routes such as STPs without presenting market timing as predictable." },
+  { title: "Annual Portfolio Review", description: "Review allocation drift, overlapping holdings, costs, goal fit and material fund changes." },
+  { title: "Tax Coordination", description: "Organise transaction and capital-gain records for discussion with a qualified tax professional before switching or redeeming." },
+  { title: "Consolidation & Clean-Up", description: "Create one view of funds held across platforms and distributors before deciding what needs attention." },
 ];
 
 const fundCategories = [
   { title: "Equity Funds", description: "Large cap, mid cap, small cap, flexi cap, multi cap, focused funds, sectoral and thematic funds, value funds, and contra funds." },
   { title: "Debt Funds", description: "Liquid funds, ultra-short duration, short duration, medium duration, corporate bond, banking & PSU, gilt, and dynamic bond funds." },
   { title: "Hybrid Funds", description: "Balanced advantage, aggressive hybrid, conservative hybrid, multi-asset allocation, and equity savings funds." },
-  { title: "Tax Saving (ELSS)", description: "ELSS offers tax deduction under Section 80C with just 3 years lock-in. We select ELSS funds for superior risk-adjusted returns." },
+  { title: "Tax Saving (ELSS)", description: "ELSS has a statutory lock-in and may be eligible under Section 80C where the old tax regime applies. Confirm tax fit before investing." },
 ];
 
 const faqs = [
-  { q: "What is the minimum investment to start?", a: "You can start a SIP with as little as Rs. 500 per month. For lumpsum investments, we recommend a minimum of Rs. 1 lakh for meaningful portfolio construction." },
-  { q: "Do you charge for mutual fund advisory?", a: "We earn distributor commission from AMCs. There is no separate advisory fee charged to clients for mutual fund investments." },
-  { q: "Can you help me switch from direct to regular plans?", a: "Yes, we can facilitate seamless switching and consolidate your portfolio with ongoing advisory support." },
+  { q: "What is the minimum investment to start?", a: "Scheme minimums vary and some SIPs may start from low monthly amounts. Choose an amount from goal, horizon and cash-flow context rather than a generic minimum." },
+  { q: "How is SoHo Wealth compensated for mutual funds?", a: "SoHo Wealth distributes regular-plan mutual funds and may receive trail commission from AMCs. There is no separate fee-based investment-advisory service. Read the disclosures and scheme documents before investing." },
+  { q: "Can you help me switch from direct to regular plans?", a: "SoHo Wealth can facilitate eligible transactions and ongoing service. A switch can create tax and exit-load consequences, so review costs and confirm tax treatment before acting." },
   { q: "How often do you review my portfolio?", a: "We conduct formal reviews annually, with interim alerts for any significant market events or fund-specific changes." },
 ];
 
@@ -121,12 +121,10 @@ const MutualFundsClient = () => {
                 Mutual Funds, <span style={{ color: "#C9A84C" }}>Done Right.</span>
               </h1>
               <p className="font-body text-lg lg:text-xl leading-relaxed mb-6 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
-                India has 1500+ mutual fund schemes. You don't need all of them. You need the right 5-8 funds,
-                allocated precisely to your goals, risk tolerance, and tax situation.
+                India has a large mutual-fund universe. The starting point is not a fixed number of schemes, but a clear view of goals, horizon, liquidity, risk and existing overlap.
               </p>
               <p className="font-body text-base leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.6)" }}>
-                At SoHo Wealth, we don't sell mutual funds — we construct portfolios.
-                Every fund recommendation comes with a clear rationale: why this fund, why this allocation, and when to rebalance.
+                SoHo Wealth is an AMFI-registered mutual fund distributor (ARN 306593). We support portfolio review, scheme comparison, regular-plan implementation and ongoing service; we are not a SEBI Registered Investment Adviser.
               </p>
               <button type="button" onClick={scrollToReviewForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Get Free Portfolio Review →

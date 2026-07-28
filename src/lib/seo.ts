@@ -7,10 +7,10 @@ export const kiranPersonSchema = {
   "@type": "Person",
   "@id": PERSON_KIRAN_ID,
   name: "Kiran Dutta",
-  jobTitle: "Founder & Chief Investment Strategist",
+  jobTitle: "Founder, SoHo Wealth",
   worksFor: { "@id": ORG_ID },
   alumniOf: { "@type": "CollegeOrUniversity", name: "Columbia University" },
-  url: `${SITE_URL}/about`,
+  url: `${SITE_URL}/team`,
   image: `${SITE_URL}/kiran-dutta.jpeg`,
   sameAs: ["https://linkedin.com/in/kirandutta"],
   knowsAbout: [
@@ -21,7 +21,7 @@ export const kiranPersonSchema = {
     "NRI Investing",
     "Global Investing",
     "Pre-IPO Investments",
-    "RSU & ESOP Tax Planning",
+    "RSU & ESOP Portfolio Planning",
   ],
 };
 

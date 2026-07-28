@@ -39,7 +39,7 @@ export function HeroSection() {
             transition={{ duration: 0.7 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
           >
-            Wealth Advisor in Hyderabad for{" "}
+            Wealth Planning in Hyderabad for{" "}
             <span style={{ color: "#C9A84C" }}>HNIs, Founders &amp; NRIs.</span>
           </motion.h1>
 
@@ -59,9 +59,9 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-12 font-body leading-relaxed"
           >
-            Independent wealth management across PMS, SIF, AIF, Mutual Funds,
-            Pre-IPO and Global Investing for Hyderabad HNIs, family offices,
-            entrepreneurs, tech professionals and NRIs.
+            Portfolio review, goal mapping and investment distribution across
+            Mutual Funds, PMS and SIF, with access support for AIF, Pre-IPO and
+            global investing for eligible investors.
           </motion.p>
 
           <motion.div
@@ -111,6 +111,16 @@ export function HeroSection() {
               ))}
             </div>
           </motion.div>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
+            className="mt-5 text-xs leading-relaxed text-white/45"
+          >
+            SoHo Wealth is an AMFI mutual fund and SIF distributor (ARN 306593)
+            and an APMI PMS distributor (APRN01233), not a SEBI Registered
+            Investment Adviser.
+          </motion.p>
         </div>
       </div>
     </section>

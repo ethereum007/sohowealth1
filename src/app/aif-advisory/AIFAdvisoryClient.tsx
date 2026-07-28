@@ -10,9 +10,9 @@ import { JsonLd } from "@/components/seo/JsonLd";
 const aifServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Alternative Investment Fund (AIF) Advisory",
-  description: "Independent AIF advisory in Hyderabad. Evaluate Cat I, II and III AIFs across private equity, venture capital, structured credit and long-short equity. Min ₹1 crore.",
-  serviceType: "Alternative Investment Fund Advisory",
+  name: "Alternative Investment Fund (AIF) Evaluation and Access Support",
+  description: "AIF structure and portfolio-fit evaluation in Hyderabad across private equity, venture capital, structured credit and long-short equity. Minimum ₹1 crore.",
+  serviceType: "Alternative Investment Fund Evaluation and Access Support",
   url: "https://www.sohowealth.in/aif-advisory",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
@@ -28,7 +28,7 @@ const aifBreadcrumbs = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "AIF Advisory", item: "https://www.sohowealth.in/aif-advisory" },
+    { "@type": "ListItem", position: 2, name: "AIF Evaluation", item: "https://www.sohowealth.in/aif-advisory" },
   ],
 };
 
@@ -46,7 +46,7 @@ const serviceCards = [
   { title: "Category I AIFs", items: ["Venture Capital Funds", "SME Funds", "Social Venture Funds", "Infrastructure Funds"] },
   { title: "Category II AIFs", items: ["Private Equity Funds", "Debt Funds", "Fund of Funds", "Distressed Asset Funds"] },
   { title: "Category III AIFs", items: ["Long-Short Equity", "Hedge Funds", "Complex Trading Strategies", "Derivatives-based Funds"] },
-  { title: "Our Advisory Edge", items: ["Unbiased fund selection", "Manager due diligence", "Portfolio fit assessment", "Ongoing monitoring & reporting"] },
+  { title: "Our Evaluation Process", items: ["Multi-provider comparison", "Manager-document review", "Portfolio fit discussion", "Ongoing reporting support"] },
 ];
 
 const steps = [
@@ -115,10 +115,10 @@ const AIFAdvisoryClient = () => {
           <AnimatedSection>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
               Alternative Investment Fund{" "}
-              <span style={{ color: "#C9A84C" }}>Advisory</span>
+              <span style={{ color: "#C9A84C" }}>Evaluation & Access Support</span>
             </h1>
             <p className="font-body text-lg lg:text-xl leading-relaxed mb-4 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
-              Access institutional-grade opportunities in private equity, venture capital, and structured credit. SoHo Wealth helps you evaluate, allocate, and monitor AIF investments with unbiased advisory.
+              Understand private equity, venture capital, structured credit and long-short AIF structures before committing capital. SoHo Wealth supports product comparison, documentation and ongoing reporting within its disclosed role.
             </p>
             <p className="font-body text-sm italic mb-8" style={{ color: "rgba(255,255,255,0.5)" }}>
               Min \u20B91 Crore. AIFs require careful assessment of risk, liquidity, and time horizon.
@@ -160,7 +160,7 @@ const AIFAdvisoryClient = () => {
       <section className="py-24 lg:py-32" style={{ backgroundColor: "#F7F8FA" }}>
         <div className="container mx-auto px-6 lg:px-8 max-w-4xl">
           <AnimatedSection className="text-center mb-14">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold" style={{ color: "#0B1F3A" }}>Our Advisory <span style={{ color: "#C9A84C" }}>Process</span></h2>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold" style={{ color: "#0B1F3A" }}>Our Evaluation <span style={{ color: "#C9A84C" }}>Process</span></h2>
           </AnimatedSection>
           <div className="space-y-0">
             {steps.map((step) => (
