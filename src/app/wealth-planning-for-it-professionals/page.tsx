@@ -216,7 +216,7 @@ const structuredData = [
       "Financial independence",
     ],
     datePublished: "2026-07-27",
-    dateModified: "2026-07-27",
+    dateModified: "2026-07-28",
   },
   {
     "@context": "https://schema.org",
@@ -378,6 +378,10 @@ export default function WealthPlanningForITProfessionalsPage() {
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-3">
             {[
+              [
+                "New: RSU guide",
+                "/wealth-planning-for-it-professionals/rsu-guide",
+              ],
               ["Compensation stack", "#compensation-stack"],
               ["Career events", "#career-events"],
               ["8-step system", "#it-wealth-checklist"],
@@ -392,6 +396,36 @@ export default function WealthPlanningForITProfessionalsPage() {
                 {label}
               </a>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#FDF9EF] py-10">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto grid max-w-6xl items-center gap-6 rounded-3xl border border-[#C9A84C]/35 bg-white p-7 shadow-[0_18px_55px_-40px_rgba(11,31,58,.5)] md:grid-cols-[auto_1fr_auto] md:p-9">
+            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#C9A84C]">
+              <FileSpreadsheet className="h-6 w-6" aria-hidden="true" />
+            </div>
+            <div>
+              <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-[#8B6815]">
+                New resource for IT professionals
+              </p>
+              <h2 className="mt-2 font-display text-2xl font-semibold text-[#0B1F3A]">
+                RSU tax &amp; diversification guide
+              </h2>
+              <p className="mt-2 max-w-3xl font-body text-sm leading-relaxed text-slate-600">
+                Use the interactive concentration worksheet, understand the
+                three tax and reporting moments, compare four diversification
+                routes and download the printable decision checklist.
+              </p>
+            </div>
+            <Link
+              href="/wealth-planning-for-it-professionals/rsu-guide"
+              className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#0B1F3A] px-5 font-body text-sm font-bold text-white transition hover:bg-[#163A5D]"
+            >
+              Open the RSU guide
+              <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>
@@ -847,10 +881,10 @@ export default function WealthPlanningForITProfessionalsPage() {
         heading="Explore the Right Next Route"
         items={[
           {
-            title: "RSU & ESOP Guide",
-            href: "/rsu-esops",
+            title: "RSU Tax & Diversification Guide",
+            href: "/wealth-planning-for-it-professionals/rsu-guide",
             description:
-              "Understand equity-compensation records, concentration and the questions to take to qualified specialists.",
+              "Use the concentration worksheet, tax-moment map, route comparison and downloadable decision checklist.",
           },
           {
             title: "Investment Products",
