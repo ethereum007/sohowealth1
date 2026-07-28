@@ -352,7 +352,7 @@ def build_pdf():
             ),
             Spacer(1, 15 * mm),
             paragraph(
-                "Built from the supplied 59-minute webinar and research deck, rewritten as an original SoHo Wealth guide and checked against primary sources current on 28 July 2026.",
+                "A practical decision guide for Indian IT professionals with employer stock, foreign assets and cross-border portfolio questions.",
                 BODY_WHITE,
             ),
             Spacer(1, 6 * mm),
@@ -726,68 +726,6 @@ def build_pdf():
     story.append(PageBreak())
 
     # Page 7
-    story.extend(
-        page_heading(
-            "Webinar distilled",
-            "A 59-minute session in eight chapters",
-            "These timestamps describe the supplied recording. This guide reframes its ideas for education and adds current-source checks; it does not reproduce the webinar or promise that every route discussed remains available.",
-        )
-    )
-    chapters = [
-        ("00:00", "Why concentration is different", "Pay, career and shares can depend on the same company."),
-        ("05:00", "Why diversify globally", "Do not move every dollar by default into an already India-heavy balance sheet."),
-        ("10:00", "US and UCITS structures", "Domicile, access, tax and estate treatment need separate evaluation."),
-        ("15:00", "Indian feeder and broker routes", "Availability, premiums, overseas limits and operations can change."),
-        ("20:00", "GIFT City and IFSC", "A route to evaluate, not an automatic tax or reporting shortcut."),
-        ("30:00", "Audience Q&A begins", "Estate process, broker access, transfers and documentation."),
-        ("40:00", "Transfer and timing", "Direct transfers, sell-at-vest questions and personal concentration limits."),
-        ("50:00", "Tax, process and estate", "Sale events, cash movement, Schedule FA and specialist roles."),
-    ]
-    chapter_rows = []
-    for timestamp, title, copy in chapters:
-        chapter_rows.append(
-            [
-                paragraph(timestamp, pstyle("Timestamp", fontName=FONT_BOLD, fontSize=11, leading=13, textColor=DARK_GOLD)),
-                [
-                    paragraph(title, H3),
-                    paragraph(copy, BODY_SMALL),
-                ],
-            ]
-        )
-    chapter_table = Table(chapter_rows, colWidths=[26 * mm, content_width - 26 * mm])
-    chapter_table.setStyle(
-        TableStyle(
-            [
-                ("BACKGROUND", (0, 0), (-1, -1), PALE),
-                ("BOX", (0, 0), (-1, -1), 0.6, BORDER),
-                ("INNERGRID", (0, 0), (-1, -1), 0.5, BORDER),
-                ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 5 * mm),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 5 * mm),
-                ("TOPPADDING", (0, 0), (-1, -1), 3.2 * mm),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 3.2 * mm),
-            ]
-        )
-    )
-    story.append(chapter_table)
-    story.append(Spacer(1, 7 * mm))
-    story.append(
-        card(
-            [
-                paragraph("THREE QUESTIONS TO CARRY FORWARD", EYEBROW),
-                paragraph(
-                    "1. What decision must be made now, and what can wait? &nbsp;&nbsp; 2. Which specialist owns the answer? &nbsp;&nbsp; 3. What evidence will let that specialist answer correctly?",
-                    BODY,
-                ),
-            ],
-            content_width,
-            background=CREAM,
-            border=colors.HexColor("#D8C281"),
-        )
-    )
-    story.append(PageBreak())
-
-    # Page 8
     story.extend(
         page_heading(
             "Primary-source check",
