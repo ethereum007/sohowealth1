@@ -38,26 +38,44 @@ WHITE = colors.white
 
 
 def register_fonts():
-    # ReportLab does not read WOFF. Prefer bundled system fonts when present.
-    candidates = [
-        (
-            Path("C:/Windows/Fonts/arial.ttf"),
-            Path("C:/Windows/Fonts/arialbd.ttf"),
-        ),
-        (
-            Path("C:/Windows/Fonts/calibri.ttf"),
-            Path("C:/Windows/Fonts/calibrib.ttf"),
-        ),
-    ]
-    for normal_path, bold_path in candidates:
-        if normal_path.exists() and bold_path.exists():
-            pdfmetrics.registerFont(TTFont("SoHoSans", str(normal_path)))
-            pdfmetrics.registerFont(TTFont("SoHoSans-Bold", str(bold_path)))
-            return "SoHoSans", "SoHoSans-Bold"
-    return "Helvetica", "Helvetica-Bold"
+    font_dir = ROOT / "scripts" / "assets" / "fonts"
+    paths = {
+        "body": font_dir / "Inter-Regular.ttf",
+        "body_bold": font_dir / "Inter-SemiBold.ttf",
+        "display": font_dir / "PlayfairDisplay-Regular.ttf",
+        "display_bold": font_dir / "PlayfairDisplay-SemiBold.ttf",
+    }
+    if all(path.exists() for path in paths.values()):
+        pdfmetrics.registerFont(TTFont("SoHoInter", str(paths["body"])))
+        pdfmetrics.registerFont(TTFont("SoHoInter-SemiBold", str(paths["body_bold"])))
+        pdfmetrics.registerFont(TTFont("SoHoPlayfair", str(paths["display"])))
+        pdfmetrics.registerFont(
+            TTFont("SoHoPlayfair-SemiBold", str(paths["display_bold"]))
+        )
+        pdfmetrics.registerFontFamily(
+            "SoHoInter",
+            normal="SoHoInter",
+            bold="SoHoInter-SemiBold",
+            italic="SoHoInter",
+            boldItalic="SoHoInter-SemiBold",
+        )
+        pdfmetrics.registerFontFamily(
+            "SoHoPlayfair",
+            normal="SoHoPlayfair",
+            bold="SoHoPlayfair-SemiBold",
+            italic="SoHoPlayfair",
+            boldItalic="SoHoPlayfair-SemiBold",
+        )
+        return (
+            "SoHoInter",
+            "SoHoInter-SemiBold",
+            "SoHoPlayfair",
+            "SoHoPlayfair-SemiBold",
+        )
+    return "Helvetica", "Helvetica-Bold", "Times-Roman", "Times-Bold"
 
 
-FONT, FONT_BOLD = register_fonts()
+FONT, FONT_BOLD, DISPLAY_FONT, DISPLAY_FONT_BOLD = register_fonts()
 
 
 def pstyle(name, **kwargs):
@@ -78,7 +96,7 @@ BODY_TINY = pstyle("BodyTiny", fontSize=7.2, leading=10.2, textColor=LIGHT_SLATE
 BODY_WHITE = pstyle("BodyWhite", fontSize=10.5, leading=15.5, textColor=colors.HexColor("#D9E2EB"))
 TITLE = pstyle(
     "Title",
-    fontName=FONT_BOLD,
+    fontName=DISPLAY_FONT_BOLD,
     fontSize=27,
     leading=31,
     textColor=NAVY,
@@ -86,7 +104,7 @@ TITLE = pstyle(
 )
 TITLE_WHITE = pstyle(
     "TitleWhite",
-    fontName=FONT_BOLD,
+    fontName=DISPLAY_FONT_BOLD,
     fontSize=31,
     leading=35,
     textColor=WHITE,
@@ -114,7 +132,7 @@ EYEBROW_WHITE = pstyle(
 )
 H2 = pstyle(
     "H2",
-    fontName=FONT_BOLD,
+    fontName=DISPLAY_FONT_BOLD,
     fontSize=13,
     leading=16,
     textColor=NAVY,
@@ -122,7 +140,7 @@ H2 = pstyle(
 )
 H3 = pstyle(
     "H3",
-    fontName=FONT_BOLD,
+    fontName=DISPLAY_FONT_BOLD,
     fontSize=10,
     leading=13,
     textColor=NAVY,
@@ -130,7 +148,7 @@ H3 = pstyle(
 )
 NUMBER = pstyle(
     "Number",
-    fontName=FONT_BOLD,
+    fontName=DISPLAY_FONT_BOLD,
     fontSize=18,
     leading=20,
     textColor=DARK_GOLD,
@@ -166,7 +184,7 @@ def draw_later_page(canvas, doc):
     canvas.saveState()
     canvas.setFillColor(NAVY)
     canvas.rect(0, PAGE_HEIGHT - 18 * mm, PAGE_WIDTH, 18 * mm, fill=1, stroke=0)
-    canvas.setFont(FONT_BOLD, 10)
+    canvas.setFont(DISPLAY_FONT_BOLD, 10)
     canvas.setFillColor(WHITE)
     canvas.drawString(18 * mm, PAGE_HEIGHT - 11.5 * mm, "SoHo Wealth")
     canvas.setFont(FONT, 7.5)
@@ -199,7 +217,7 @@ def draw_cover(canvas, doc):
     canvas.setLineWidth(0.8)
     canvas.circle(PAGE_WIDTH - 15 * mm, PAGE_HEIGHT - 48 * mm, 48 * mm, fill=0, stroke=1)
     canvas.circle(PAGE_WIDTH - 15 * mm, PAGE_HEIGHT - 48 * mm, 35 * mm, fill=0, stroke=1)
-    canvas.setFont(FONT_BOLD, 12)
+    canvas.setFont(DISPLAY_FONT_BOLD, 12)
     canvas.setFillColor(WHITE)
     canvas.drawString(18 * mm, PAGE_HEIGHT - 20 * mm, "SoHo Wealth")
     canvas.setFont(FONT, 7)
@@ -422,7 +440,7 @@ def build_pdf():
                     "If your employer gave you the same value in cash today, would you use all of it to buy this company again?",
                     pstyle(
                         "ControlQuestion",
-                        fontName=FONT_BOLD,
+                        fontName=DISPLAY_FONT_BOLD,
                         fontSize=14,
                         leading=18,
                         textColor=NAVY,
