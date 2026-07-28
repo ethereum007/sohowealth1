@@ -3,13 +3,11 @@ import Link from "next/link";
 import {
   ArrowRight,
   BadgeCheck,
-  BookOpenCheck,
   BriefcaseBusiness,
   Building2,
   CalendarDays,
   CheckCircle2,
   CircleDollarSign,
-  Clock3,
   Download,
   ExternalLink,
   FileCheck2,
@@ -158,49 +156,6 @@ const routes = [
       "Investors comparing locally accessible global strategies, including appropriately authorised offerings in GIFT-IFSC.",
     verify:
       "Entity authorisation, product documents, domicile, liquidity, minimums, total costs, taxation, reporting and whether the route actually matches the goal.",
-  },
-];
-
-const webinarChapters = [
-  {
-    time: "00:00",
-    title: "Why employer-stock concentration is different",
-    copy: "Your pay, career and shares can all depend on the same company.",
-  },
-  {
-    time: "05:00",
-    title: "The case for global diversification",
-    copy: "Think beyond moving every dollar back into an already India-heavy balance sheet.",
-  },
-  {
-    time: "10:00",
-    title: "US and UCITS structures",
-    copy: "Domicile, access, taxation and estate treatment need separate evaluation.",
-  },
-  {
-    time: "15:00",
-    title: "Indian feeder funds and broker routes",
-    copy: "Availability, premiums, overseas limits and operational steps can change.",
-  },
-  {
-    time: "20:00",
-    title: "GIFT City and IFSC structures",
-    copy: "A useful route to evaluate, not an automatic tax or reporting shortcut.",
-  },
-  {
-    time: "30:00",
-    title: "Audience Q&A begins",
-    copy: "Estate process, broker access, transfers and documentation questions.",
-  },
-  {
-    time: "40:00",
-    title: "Transfer and timing decisions",
-    copy: "ACATS or FOP availability, sell-at-vest questions and personal concentration limits.",
-  },
-  {
-    time: "50:00",
-    title: "Tax, process and estate questions",
-    copy: "Sale events, cash movement, Schedule FA and when specialists are essential.",
   },
 ];
 
@@ -363,8 +318,8 @@ export default function RSUGuidePage() {
           }}
         />
         <div className="container relative mx-auto px-6 lg:px-8">
-          <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-[1.15fr_.85fr]">
-            <div>
+          <div className="mx-auto max-w-6xl">
+            <div className="max-w-5xl">
               <div className="flex flex-wrap gap-2">
                 <span className="rounded-full border border-[#C9A84C]/50 bg-[#C9A84C]/10 px-3 py-1 font-body text-xs font-bold uppercase tracking-[0.12em] text-[#E5CB83]">
                   IT professionals
@@ -404,44 +359,6 @@ export default function RSUGuidePage() {
               </p>
             </div>
 
-            <aside className="rounded-3xl border border-white/15 bg-white/[.07] p-7 backdrop-blur md:p-8">
-              <div className="flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-[#C9A84C] text-[#07192F]">
-                  <BookOpenCheck className="h-5 w-5" aria-hidden="true" />
-                </span>
-                <div>
-                  <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-[#C9A84C]">
-                    Built from two sources
-                  </p>
-                  <p className="mt-1 font-display text-xl font-semibold">
-                    A 59-minute RSU webinar + research deck
-                  </p>
-                </div>
-              </div>
-              <p className="mt-5 font-body text-sm leading-relaxed text-white/68">
-                SoHo Wealth reviewed the supplied recording and document,
-                rebuilt the material as an original guide, and checked
-                time-sensitive statements against current primary sources.
-              </p>
-              <dl className="mt-6 grid grid-cols-2 gap-4 border-t border-white/15 pt-6">
-                <div>
-                  <dt className="font-body text-xs text-white/45">
-                    Webinar chapters
-                  </dt>
-                  <dd className="mt-1 font-display text-3xl font-semibold text-[#E5CB83]">
-                    8
-                  </dd>
-                </div>
-                <div>
-                  <dt className="font-body text-xs text-white/45">
-                    Action checklist
-                  </dt>
-                  <dd className="mt-1 font-display text-3xl font-semibold text-[#E5CB83]">
-                    10
-                  </dd>
-                </div>
-              </dl>
-            </aside>
           </div>
         </div>
       </section>
@@ -457,7 +374,6 @@ export default function RSUGuidePage() {
               ["Tax moments", "#rsu-tax-moments"],
               ["Routes", "#rsu-diversification-routes"],
               ["Worksheet", "#rsu-concentration-worksheet"],
-              ["Webinar", "#rsu-webinar-chapters"],
               ["Checklist", "#rsu-records-checklist"],
               ["Sources", "#rsu-official-sources"],
               ["FAQs", "#rsu-guide-faqs"],
@@ -686,53 +602,6 @@ export default function RSUGuidePage() {
       </section>
 
       <RSUConcentrationWorksheet />
-
-      <section
-        id="rsu-webinar-chapters"
-        className="scroll-mt-24 bg-white py-20 lg:py-28"
-      >
-        <div className="container mx-auto px-6 lg:px-8">
-          <div className="mx-auto grid max-w-6xl gap-12 lg:grid-cols-[.7fr_1.3fr] lg:gap-20">
-            <div className="lg:sticky lg:top-28 lg:self-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#0B1F3A] text-[#C9A84C]">
-                <Clock3 className="h-6 w-6" aria-hidden="true" />
-              </div>
-              <p className="mt-6 font-body text-xs font-bold uppercase tracking-[0.16em] text-[#8B6815]">
-                Webinar distilled
-              </p>
-              <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">
-                A 59-minute session, mapped into eight useful chapters.
-              </h2>
-              <p className="mt-5 font-body text-base leading-relaxed text-slate-600">
-                These timestamps describe the supplied recording. The guide
-                reframes its ideas for education and adds current-source checks;
-                it does not reproduce the webinar or promise that every route
-                discussed remains available.
-              </p>
-            </div>
-            <ol className="grid gap-3">
-              {webinarChapters.map((chapter) => (
-                <li
-                  key={chapter.time}
-                  className="grid gap-4 rounded-2xl border border-slate-200 bg-[#F8FAFC] p-5 sm:grid-cols-[90px_1fr]"
-                >
-                  <span className="font-display text-2xl font-semibold text-[#B18C2D]">
-                    {chapter.time}
-                  </span>
-                  <div>
-                    <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">
-                      {chapter.title}
-                    </h3>
-                    <p className="mt-1 font-body text-sm leading-relaxed text-slate-600">
-                      {chapter.copy}
-                    </p>
-                  </div>
-                </li>
-              ))}
-            </ol>
-          </div>
-        </div>
-      </section>
 
       <section
         id="rsu-records-checklist"
