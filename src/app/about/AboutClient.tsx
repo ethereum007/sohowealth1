@@ -19,7 +19,7 @@ const aboutPageSchema = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
   url: "https://www.sohowealth.in/about",
-  name: "About SoHo Wealth — Hyderabad's Independent Boutique Wealth Advisory",
+  name: "About SoHo Wealth — Hyderabad Wealth Planning and Investment Distribution",
   about: { "@id": "https://www.sohowealth.in/#organization" },
   mainEntity: { "@id": "https://www.sohowealth.in/#organization" },
 };
@@ -72,16 +72,16 @@ const AboutClient = () => {
         <div className="container mx-auto px-6 lg:px-8 relative z-10 text-center">
           <AnimatedSection>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
-              We're Not a Bank.{" "}
-              <span style={{ color: "#C9A84C" }}>We're On Your Side.</span>
+              Hyderabad-Based. Portfolio-First.{" "}
+              <span style={{ color: "#C9A84C" }}>Clear About Our Role.</span>
             </h1>
             <p
               className="font-body text-lg lg:text-xl leading-relaxed max-w-2xl mx-auto"
               style={{ color: "rgba(255,255,255,0.75)" }}
             >
-              SoHo Wealth is a Hyderabad-based independent boutique wealth advisory.
+              SoHo Wealth provides portfolio review, wealth planning and registered investment distribution.
               <br />
-              No product quotas. Just your goals.
+              AMFI ARN 306593 · APMI APRN01233 · Not a SEBI RIA.
             </p>
           </AnimatedSection>
         </div>
@@ -95,7 +95,7 @@ const AboutClient = () => {
               <div className="rounded-2xl aspect-[3/4] overflow-hidden">
                 <Image
                   src="/kiran-dutta.jpeg"
-                  alt="Kiran Dutta — Founder & Chief Investment Strategist, SoHo Wealth"
+                  alt="Kiran Dutta — Founder, SoHo Wealth"
                   width={600}
                   height={800}
                   className="w-full h-full object-cover object-top"
@@ -113,8 +113,8 @@ const AboutClient = () => {
 
               <div className="space-y-4 mb-8">
                 <p className="font-body text-base leading-relaxed" style={{ color: "#4A5568" }}>
-                  Kiran Dutta is one of Hyderabad's most recognized fintech voices and a serial
-                  entrepreneur across financial services.
+                  Kiran Dutta is a Hyderabad-based financial-services entrepreneur and the founder
+                  of SoHo Wealth and SIFPrime.
                 </p>
                 <p className="font-body text-base leading-relaxed" style={{ color: "#4A5568" }}>
                   Before founding SoHo Wealth, Kiran served as Managing Partner at SoHo Ventures,

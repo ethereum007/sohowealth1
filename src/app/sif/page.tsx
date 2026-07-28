@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import SIFClient from "./SIFClient";
 
 export const metadata: Metadata = {
-  title: "SIF Investment Advisor Hyderabad | Specialized Investment Funds India | SoHo Wealth",
+  title: "SIF Distributor Hyderabad | Specialized Investment Funds | SoHo Wealth",
   description:
-    "SIF investment advisor in Hyderabad. Compare Specialized Investment Funds in India, Rs. 10L minimum, SIF vs PMS fitment and portfolio suitability.",
+    "AMFI-registered SIF distributor in Hyderabad. Compare Specialized Investment Fund structures, Rs. 10L minimum, SIF vs PMS and product fit.",
   keywords:
     "SIF investment India, SIF investment Hyderabad, specialized investment fund, SEBI SIF, SIF advisor Hyderabad, SIF vs PMS, SIFPrime",
   alternates: { canonical: "https://www.sohowealth.in/sif" },
   openGraph: {
-    title: "SIF Investment Advisor Hyderabad | SoHo Wealth",
+    title: "SIF Distributor Hyderabad | SoHo Wealth",
     description:
       "Compare Specialized Investment Funds in India with SoHo Wealth, Hyderabad. Rs. 10L minimum and SIF vs PMS fitment.",
     url: "https://www.sohowealth.in/sif",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SIF Investment Advisor Hyderabad | SoHo Wealth",
+    title: "SIF Distributor Hyderabad | SoHo Wealth",
     description: "Compare Specialized Investment Funds in India. Rs. 10L minimum and SIF vs PMS fitment.",
   },
 };

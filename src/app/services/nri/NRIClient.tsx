@@ -11,9 +11,9 @@ import Link from "next/link";
 const nriServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "NRI Investment Advisory India",
-  description: "FEMA-compliant NRI investment advisory for US, UK, UAE, Singapore, Australia and Canada NRIs. PMS, SIF, AIF, Mutual Funds and Pre-IPO with NRE/NRO/PIS account guidance.",
-  serviceType: "NRI Wealth Management",
+  name: "NRI Portfolio Review and Investment Distribution",
+  description: "NRI portfolio review, investment distribution and documentation coordination for NRIs in the US, UK, UAE, Singapore, Australia and Canada.",
+  serviceType: "NRI Investment Distribution and Portfolio Coordination",
   url: "https://www.sohowealth.in/services/nri",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
@@ -34,7 +34,7 @@ const nriBreadcrumbs = {
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
     { "@type": "ListItem", position: 2, name: "Services", item: "https://www.sohowealth.in/services/nri" },
-    { "@type": "ListItem", position: 3, name: "NRI Advisory", item: "https://www.sohowealth.in/services/nri" },
+    { "@type": "ListItem", position: 3, name: "NRI Wealth Planning", item: "https://www.sohowealth.in/services/nri" },
   ],
 };
 
@@ -53,25 +53,26 @@ const flags = [
 ];
 
 const serviceCards = [
-  { title: "Investment Advisory", items: ["MF (NRE/NRO)", "SIF (\u20B910L+)", "PMS (\u20B950L+)", "AIF (\u20B91Cr+)", "Pre-IPO deals"] },
-  { title: "Account & Compliance Guidance", items: ["NRE vs NRO explanation", "PIS account setup for equity/PMS", "FEMA compliance", "FATCA/CRS for US/Canada NRIs"] },
-  { title: "Tax & Repatriation", items: ["TDS on MF/PMS income", "NRE full repatriation", "NRO up to $1M/year", "DTAA benefits"] },
-  { title: "Family Wealth Coordination", items: ["NRI + resident family portfolio sync", "India return planning", "Children's education corpus", "Estate planning"] },
+  { title: "Investment Distribution", items: ["Mutual funds through NRE/NRO", "SIF (₹10L+)", "PMS (₹50L+)", "Eligible AIF routes (₹1Cr+)", "Product-document support"] },
+  { title: "Account & Documentation Coordination", items: ["NRE vs NRO explanation", "Provider onboarding documents", "FATCA/CRS declarations", "Bank, provider and specialist question list"] },
+  { title: "Tax & Repatriation Preparation", items: ["Organise TDS and transaction records", "Map source and destination of funds", "Prepare questions for a CA or bank", "Track required certificates and forms"] },
+  { title: "Family Wealth Coordination", items: ["NRI and resident family portfolio view", "Return-to-India checklist", "Education and retirement goal mapping", "Estate-planning specialist coordination"] },
 ];
 
 const steps = [
   { num: "01", title: "30-min video consultation", detail: "Free, no obligation" },
   { num: "02", title: "Portfolio review & goal mapping", detail: "Understand your full picture" },
-  { num: "03", title: "Investment allocation recommendation", detail: "Tailored to your NRI status" },
-  { num: "04", title: "Account setup & KYC support", detail: "End-to-end digital process" },
+  { num: "03", title: "Product structure comparison", detail: "Risk, liquidity, costs and eligibility" },
+  { num: "04", title: "Account setup & KYC support", detail: "Digital coordination with providers" },
   { num: "05", title: "Quarterly reviews & rebalancing", detail: "Ongoing monitoring" },
 ];
 
 const faqs = [
-  { q: "Can NRIs invest in SIFs?", a: "Yes, through NRE/NRO accounts subject to AMC-level FATCA compliance. Min \u20B910L." },
-  { q: "Can NRIs invest in PMS?", a: "Yes. Min \u20B950L. Requires PIS account + NRE or NRO." },
-  { q: "I'm in the US \u2014 can I invest in Indian mutual funds?", a: "US/Canada NRIs face restrictions with some AMCs due to FATCA. We guide you to compliant options." },
-  { q: "Can I invest without coming to India?", a: "Yes. Full video-based onboarding available. We handle all documentation digitally." },
+  { q: "Can NRIs invest in SIFs?", a: "NRIs may be eligible for SIFs through permitted account routes, subject to the AMC's acceptance, documentation and country restrictions. The regulatory minimum is ₹10 lakh across SIF strategies at an AMC." },
+  { q: "Can NRIs invest in PMS?", a: "NRIs may invest in PMS subject to provider acceptance, FEMA rules, banking route and documentation. The regulatory minimum is ₹50 lakh. Confirm the exact account and tax workflow before funding." },
+  { q: "I'm in the US — can I invest in Indian mutual funds?", a: "Some AMCs accept US and Canada residents with additional FATCA procedures, while others do not. US tax treatment can also be complex, so confirm provider eligibility and obtain qualified US tax advice before investing." },
+  { q: "Can I invest without coming to India?", a: "Many providers support video and digital onboarding, but document, notarisation or in-person requirements can vary by product, bank and country. SoHo Wealth coordinates the applicable provider workflow." },
+  { q: "Does SoHo Wealth file NRI tax returns or give legal opinions?", a: "No. SoHo Wealth provides portfolio review, investment distribution and coordination within its disclosed scope. Tax returns, legal opinions, FEMA positions and country-specific advice belong with appropriately qualified professionals." },
 ];
 
 function FAQItem({ q, a }: { q: string; a: string }) {
@@ -110,8 +111,9 @@ const NRIClient = () => {
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 max-w-4xl text-center">
           <AnimatedSection>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">NRI Investment Advisor in Hyderabad for{" "}<span style={{ color: "#C9A84C" }}>India-Linked Wealth.</span></h1>
-            <p className="font-body text-lg lg:text-xl leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>SoHo Wealth helps NRIs from Hyderabad and India invest through FEMA-aware PMS, SIF, mutual funds, NRE/NRO structures and repatriation-friendly planning. Video consultations available worldwide.</p>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">NRI Wealth Planning from Hyderabad for{" "}<span style={{ color: "#C9A84C" }}>India-Linked Wealth.</span></h1>
+            <p className="font-body text-lg lg:text-xl leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>SoHo Wealth helps NRIs organise India-linked portfolios, compare eligible mutual fund, SIF and PMS routes, and coordinate provider documentation. Video consultations are available worldwide.</p>
+            <p className="mx-auto mb-8 max-w-3xl font-body text-xs leading-relaxed text-white/45">AMFI mutual fund and SIF distributor ARN 306593; APMI PMS distributor APRN01233. Not a SEBI Registered Investment Adviser or tax/legal practice.</p>
             <button onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>Book Your NRI Investment Consultation</button>
             <div className="flex items-center justify-center gap-6 mt-12">
               {flags.map((f) => (<div key={f.label} className="flex flex-col items-center gap-1"><span className="text-3xl">{f.emoji}</span><span className="font-body text-xs text-white/60">{f.label}</span></div>))}
@@ -161,6 +163,30 @@ const NRIClient = () => {
         </div>
       </section>
 
+      {/* DECISION GUIDES */}
+      <section className="py-24 lg:py-28" style={{ backgroundColor: "#FDF8EC" }}>
+        <div className="container mx-auto max-w-6xl px-6 lg:px-8">
+          <AnimatedSection className="mx-auto mb-12 max-w-3xl text-center">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.16em]" style={{ color: "#9A6B00" }}>NRI decision library</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold md:text-4xl" style={{ color: "#0B1F3A" }}>Start With the Account, Tax and Return-to-India Questions</h2>
+            <p className="mt-4 font-body text-base leading-relaxed text-slate-600">These original guides separate banking, tax-residency, product and repatriation questions so you can involve the right specialist at the right time.</p>
+          </AnimatedSection>
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              { href: "/insights/nre-vs-nro-repatriation", title: "NRE vs NRO and Repatriation", text: "Choose the account route from source of money, income type and future remittance needs." },
+              { href: "/insights/us-canada-nris-mutual-funds-fatca", title: "US & Canada NRI Fund Checklist", text: "Understand AMC acceptance, FATCA documentation and why overseas tax review matters." },
+              { href: "/insights/returning-to-india-wealth-checklist", title: "Returning to India Checklist", text: "Sequence residency, accounts, foreign assets, RSUs and portfolio decisions before the move." },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="group rounded-xl border border-[#E8D8A8] bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
+                <h3 className="font-display text-xl font-semibold" style={{ color: "#0B1F3A" }}>{guide.title}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-slate-600">{guide.text}</p>
+                <span className="mt-5 inline-flex font-body text-sm font-semibold text-[#7C5700]">Read the guide →</span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8 max-w-3xl">
@@ -204,10 +230,10 @@ const NRIClient = () => {
       <LeadCaptureForm source="NRI page" heading="Book Your NRI Consultation" sectionId="nri-consultation" leftContent={
         <>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-5 text-white">Invest in India \u2014 The Right Way</h2>
-          <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>Get FEMA-compliant, tax-efficient investment guidance tailored to your NRI status and country of residence.</p>
+          <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>Organise your India portfolio, compare eligible product structures and prepare the right questions for your bank, CA and overseas tax professional.</p>
           <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>What you'll get</p>
           <ul className="space-y-4 mb-10">
-            {["NRE/NRO account guidance", "FEMA & FATCA compliance check", "Personalized allocation plan", "Video-based onboarding", "Direct access to Kiran Dutta"].map((item) => (
+            {["NRE/NRO account-route discussion", "FATCA and provider-document checklist", "Portfolio observations and product comparison", "Video-based coordination", "Direct access to Kiran Dutta"].map((item) => (
               <li key={item} className="flex items-start gap-3"><CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} /><span className="font-body text-base text-white/90">{item}</span></li>
             ))}
           </ul>
@@ -219,7 +245,7 @@ const NRIClient = () => {
         items={[
           { title: "Global Investing", href: "/global-investing", description: "Invest globally from India via LRS, GIFT City and US stocks — relevant if you're returning to India." },
           { title: "PMS Advisory", href: "/pms-advisory", description: "Concentrated equity portfolios from ₹50 lakh — fully NRI compliant via PIS account." },
-          { title: "RSU & ESOPs", href: "/rsu-esops", description: "RSU/ESOP advisory for NRIs and tech professionals — taxation, FEMA and diversification." },
+          { title: "RSU & ESOP Guide", href: "/wealth-planning-for-it-professionals/rsu-guide", description: "A records, concentration and specialist-question guide for NRIs and tech professionals." },
         ]}
         heading="Other Services for NRIs"
       />

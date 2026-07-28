@@ -12,23 +12,23 @@ import { FAQSection } from "@/components/seo/FAQSection";
 const homeFaqs = [
   {
     q: "Who is the best wealth advisor in Hyderabad?",
-    a: "SoHo Wealth is a Hyderabad-based independent boutique wealth advisor founded by Columbia alum Kiran Dutta. We are AMFI-registered (ARN: 306593) and APMI-registered (APRN01233), and serve HNIs, family offices, entrepreneurs and NRIs across Portfolio Management Services (PMS), Specialized Investment Funds (SIF), Alternative Investment Funds (AIF), Mutual Funds, Pre-IPO and Global Investing.",
+    a: "There is no objective single best firm for every investor. Compare registration, disclosed role, product range, process, fees and service model. SoHo Wealth is a Hyderabad-based wealth-planning and investment-distribution firm founded by Columbia alum Kiran Dutta. It is AMFI-registered for mutual funds and SIFs (ARN 306593) and APMI-registered for PMS distribution (APRN01233); it is not a SEBI Registered Investment Adviser.",
   },
   {
     q: "What services does SoHo Wealth offer in Hyderabad?",
-    a: "We offer end-to-end wealth advisory in Hyderabad: PMS (Rs. 50L+), SIF (Rs. 10L+), AIF (Rs. 1Cr+), Mutual Funds, Pre-IPO deals, RSU and ESOP advisory for tech professionals, NRI investing, and Global Investing via LRS, GIFT City and US stocks.",
+    a: "We provide portfolio review, goal mapping and investment distribution in Hyderabad across mutual funds, PMS and SIF, plus evaluation and access support for eligible AIF, Pre-IPO, NRI and global-investing routes.",
   },
   {
     q: "How is SoHo Wealth different from a bank's wealth manager?",
-    a: "Banks typically have product quotas. SoHo Wealth is independent: we are not tied to any AMC, PMS or AIF, so the only goal is matching you with the right strategy for your goals and risk profile.",
+    a: "Service models vary across banks and firms. SoHo Wealth is not tied to a single AMC or PMS provider and begins with portfolio context, goals, risk, liquidity and product documents. Its distributor role and registrations are disclosed clearly before implementation.",
   },
   {
     q: "What is the minimum portfolio size to work with SoHo Wealth?",
-    a: "Our complimentary portfolio review is available for investors with Rs. 25 lakh or more in investable assets. Below that, we recommend starting with mutual fund SIPs and growing into PMS, SIF or AIF as your portfolio scales.",
+    a: "Our complimentary portfolio review is available for investors with Rs. 25 lakh or more in investable assets. Investors below that level can still explore the mutual fund distribution page and decide whether a simple SIP route fits their goals and risk context.",
   },
   {
     q: "Do you work with NRIs from outside India?",
-    a: "Yes. We have a dedicated NRI advisory practice covering NRIs in the US, UK, UAE, Singapore, Australia and Canada. Onboarding is fully video-based, and we handle FEMA, FATCA and PIS account compliance end-to-end.",
+    a: "Yes. We support NRIs in the US, UK, UAE, Singapore, Australia and Canada with portfolio coordination, product distribution and documentation support. Tax returns, legal opinions and country-specific advice remain with appropriately qualified professionals.",
   },
   {
     q: "How do I book a wealth consultation in Hyderabad?",
@@ -46,7 +46,7 @@ const HomeClient = () => {
         <WhoWeServeSection />
         <SIFBannerSection />
         <HyderabadLocalSection />
-        <FAQSection faqs={homeFaqs} heading="Wealth Advisor Hyderabad FAQs" background="#FFFFFF" />
+        <FAQSection faqs={homeFaqs} heading="Wealth Planning in Hyderabad FAQs" background="#FFFFFF" />
         <PortfolioReviewSection />
       </main>
     </div>

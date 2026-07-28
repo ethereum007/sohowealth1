@@ -14,15 +14,15 @@ const sifFaqs = [
   { q: "Who regulates SIFs?", a: "SIFs are regulated by SEBI (Securities and Exchange Board of India) under the Mutual Fund framework. They are managed by SEBI-registered Asset Management Companies (AMCs)." },
   { q: "Who should invest in a SIF?", a: "SIFs suit HNIs with ₹10L–₹50L looking for PMS-like strategies, investors graduating beyond mutual funds, those wanting long-short or market-neutral exposure, NRIs seeking regulated India exposure, and existing PMS investors seeking complementary allocation." },
   { q: "Can NRIs invest in SIFs?", a: "Yes, NRIs can invest in SIFs through NRE/NRO accounts subject to AMC-level FATCA compliance. Minimum investment remains ₹10 lakh." },
-  { q: "How can I invest in a SIF in Hyderabad?", a: "SoHo Wealth is among Hyderabad's earliest SIF distributors. We compare every available SIF scheme, handle end-to-end onboarding, and provide ongoing portfolio monitoring. Book a free SIF consultation to get started." },
+  { q: "How can I invest in a SIF in Hyderabad?", a: "SoHo Wealth is an AMFI-registered SIF distributor (ARN 306593). We help investors compare available scheme documents, understand structure and complete provider onboarding. Eligibility and availability should be confirmed at the time of investment." },
 ];
 
 const sifServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Specialized Investment Fund (SIF) Advisory",
-  description: "SEBI-regulated SIF advisory in Hyderabad. Compare every available SIF scheme. Minimum ₹10 lakh. End-to-end onboarding and monitoring.",
-  serviceType: "Specialized Investment Fund Advisory",
+  name: "Specialized Investment Fund (SIF) Distribution",
+  description: "AMFI-registered SIF distribution in Hyderabad with scheme-document comparison, onboarding and ongoing service. Minimum ₹10 lakh.",
+  serviceType: "Specialized Investment Fund Distribution",
   url: "https://www.sohowealth.in/sif",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
@@ -43,7 +43,7 @@ const sifBreadcrumbs = {
   "@type": "BreadcrumbList",
   itemListElement: [
     { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
-    { "@type": "ListItem", position: 2, name: "SIF Advisory", item: "https://www.sohowealth.in/sif" },
+    { "@type": "ListItem", position: 2, name: "SIF Distribution", item: "https://www.sohowealth.in/sif" },
   ],
 };
 
@@ -83,7 +83,7 @@ const whoShouldInvest = [
 
 const whySohoBenefits = [
   "Compare all available SIF schemes objectively",
-  "Independent guidance \u2014 no AMC affiliation",
+  "Multi-provider comparison \u2014 not tied to one AMC",
   "End-to-end onboarding support",
   "Ongoing portfolio monitoring",
 ];
@@ -219,7 +219,7 @@ const SIFClient = () => {
       <LeadCaptureForm source="SIF page" heading="Book Your SIF Consultation" sectionId="sif-consultation" leftContent={
         <>
           <h2 className="font-display text-3xl md:text-4xl lg:text-[2.75rem] font-semibold leading-tight mb-5 text-white">Ready to Explore SIFs?</h2>
-          <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>Get a personalized SIF recommendation based on your risk profile, investment horizon, and goals.</p>
+          <p className="font-body text-base lg:text-lg leading-relaxed mb-10" style={{ color: "rgba(255,255,255,0.7)" }}>Compare SIF structures, risks, liquidity, costs and scheme documents in the context of your portfolio and goals.</p>
           <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>What you'll get</p>
           <ul className="space-y-4 mb-10">
             {["SIF scheme comparison & shortlist", "Risk-return analysis", "Onboarding support", "Ongoing portfolio monitoring", "Direct access to Kiran Dutta"].map((item) => (

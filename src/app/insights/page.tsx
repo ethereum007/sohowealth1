@@ -5,15 +5,15 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { insightPosts } from "@/lib/insights/posts";
 
 export const metadata: Metadata = {
-  title: "Insights | NRI Wealth, SIF, PMS, GIFT City & India Investing | SoHo Wealth",
+  title: "Insights | NRI, Doctors, IT Professionals, SIF & PMS | SoHo Wealth",
   description:
-    "Read SoHo Wealth insights on NRI investing in India, GIFT City, SIFs, PMS, AIFs, NRE/NRO planning, Budget 2026 and cross-border wealth.",
+    "Original SoHo Wealth guides for NRIs, doctors and IT professionals, plus SIF, PMS, GIFT City, NRE/NRO, RSU and India-investing research.",
   authors: [{ name: "SoHo Wealth" }],
   alternates: { canonical: "https://www.sohowealth.in/insights" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Insights | SoHo Wealth",
-    description: "NRI wealth and India investing insights from SoHo Wealth.",
+    description: "NRI, doctor and IT-professional wealth-planning insights from SoHo Wealth.",
     url: "https://www.sohowealth.in/insights",
     type: "website",
     images: [{ url: "https://www.sohowealth.in/soho-logo.png", width: 1024, height: 1024, alt: "SoHo Wealth" }],
@@ -79,10 +79,10 @@ export default function InsightsPage() {
             SoHo Wealth Insights
           </span>
           <h1 className="font-display mb-6 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
-            NRI Wealth and India Investing <span style={{ color: "#C9A84C" }}>Without the Noise.</span>
+            Wealth Planning for NRIs, Doctors and Tech Professionals <span style={{ color: "#C9A84C" }}>Without the Noise.</span>
           </h1>
           <p className="mx-auto max-w-3xl font-body text-lg leading-relaxed lg:text-xl" style={{ color: "rgba(255,255,255,0.75)" }}>
-            Current, practical notes on NRI investing, GIFT City, SIFs, PMS, AIFs, NRE/NRO, property, RSUs and Indian market themes.
+            Current, practical notes on NRI investing, doctors&apos; capital decisions, RSUs, FIRE, GIFT City, SIFs, PMS, NRE/NRO and Indian market themes.
           </p>
         </div>
       </section>
@@ -103,7 +103,7 @@ export default function InsightsPage() {
             <div>
               <p className="font-body text-xs font-bold uppercase tracking-[0.15em]" style={{ color: "#C9A84C" }}>Featured</p>
               <h2 className="font-display mt-3 text-3xl font-semibold md:text-4xl" style={{ color: "#0B1F3A" }}>
-                Hot NRI Topics
+                Latest Decision Guides
               </h2>
             </div>
             <div className="flex items-center gap-4 font-body text-sm text-slate-600">

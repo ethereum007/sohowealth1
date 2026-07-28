@@ -69,11 +69,11 @@ const whyReachOut = [
   },
   {
     title: "NRI Advisory",
-    items: ["FEMA-compliant investing", "NRE/NRO account guidance", "Repatriation planning"],
+    items: ["NRE/NRO account-route discussion", "Provider documentation support", "Repatriation question preparation"],
   },
   {
     title: "Wealth Planning",
-    items: ["Retirement corpus building", "Children's education fund", "Tax-efficient strategies"],
+    items: ["Retirement corpus mapping", "Children's education funding", "Portfolio structure review"],
   },
 ];
 
@@ -95,7 +95,7 @@ const faqs = [
   },
   {
     q: "Can NRIs consult with you?",
-    a: "Yes! We specialize in NRI advisory with FEMA-compliant solutions. Video consultations available worldwide.",
+    a: "Yes. We support NRI portfolio review, investment distribution and provider documentation by video. Tax, legal and FEMA positions should be confirmed with appropriately qualified professionals.",
   },
   {
     q: "How quickly will I hear back?",
@@ -317,7 +317,7 @@ const ContactClient = () => {
               </p>
               <p className="font-body text-sm font-semibold uppercase tracking-widest mb-5" style={{ color: "#C9A84C" }}>What you'll get</p>
               <ul className="space-y-4 mb-10">
-                {["Free portfolio health check", "Personalized investment roadmap", "Tax-efficient strategies", "Direct access to Kiran Dutta", "No obligations \u2014 ever"].map((item) => (
+                {["Free portfolio health check", "Portfolio observations and next steps", "Product-structure comparison", "Direct access to Kiran Dutta", "No obligations \u2014 ever"].map((item) => (
                   <li key={item} className="flex items-start gap-3">
                     <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0" style={{ color: "#C9A84C" }} />
                     <span className="font-body text-base text-white/90">{item}</span>

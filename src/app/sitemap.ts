@@ -13,18 +13,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority: number;
   }> = [
-    { path: "/",                  lastModified: "2026-07-27", changeFrequency: "weekly",  priority: 1.0 },
+    { path: "/",                  lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 1.0 },
     { path: "/investment-products", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals/rsu-guide", lastModified: "2026-07-28", changeFrequency: "monthly", priority: 0.9 },
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
-    { path: "/pms-advisory",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
-    { path: "/wealth-management-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.95 },
-    { path: "/financial-planning-for-doctors", lastModified: "2026-07-26", changeFrequency: "weekly", priority: 0.95 },
-    { path: "/best-pms-in-hyderabad", lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/pms-advisory",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
+    { path: "/wealth-management-hyderabad", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/financial-planning-for-doctors", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/best-pms-in-hyderabad", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.9 },
     { path: "/sif-vs-pms",        lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
-    { path: "/services/nri",      lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
+    { path: "/services/nri",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/nri-telugu",       lastModified: "2026-07-20", changeFrequency: "weekly",  priority: 0.95 },
     { path: "/hyderabad-real-estate", lastModified: "2026-06-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/portfolio-review",  lastModified: "2026-04-27", changeFrequency: "weekly",  priority: 0.9 },
@@ -32,7 +32,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/mutual-funds",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/global-investing",  lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/pre-ipo",           lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
-    { path: "/rsu-esops",         lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/about",             lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/why-us",            lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/team",              lastModified: "2026-06-08", changeFrequency: "monthly", priority: 0.75 },
@@ -40,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },
-    { path: "/insights",          lastModified: "2026-06-12", changeFrequency: "weekly",  priority: 0.85 },
+    { path: "/insights",          lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.85 },
   ];
 
   const staticRoutes = routes.map((r) => ({

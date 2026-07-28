@@ -128,7 +128,7 @@ export function Header() {
           <Link href="/" className="flex shrink-0 items-center" aria-label="SoHo Wealth — Home">
             <Image
               src="/soho-logo.png"
-              alt="SoHo Wealth — Wealth Advisor in Hyderabad"
+              alt="SoHo Wealth — Wealth Planning and Investment Distribution in Hyderabad"
               width={56}
               height={56}
               className="h-14 w-14 rounded-md"

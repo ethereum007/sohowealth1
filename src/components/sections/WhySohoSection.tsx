@@ -12,12 +12,12 @@ const columns = [
   {
     emoji: "🎯",
     title: "Institutional Thinking. Personal Attention.",
-    text: "Every client gets a custom allocation strategy — not a template. We work with family offices, C-suite executives, and entrepreneurs building serious wealth.",
+    text: "Every review starts with the investor's existing allocation, goals, liquidity and risk context. We work with families, C-suite executives and entrepreneurs building serious wealth.",
   },
   {
     emoji: "🚀",
-    title: "First-Mover Access.",
-    text: "From India's newest Specialized Investment Funds (SIFs) to Pre-IPO deals and offshore investing — we bring you high quality proprietary access.",
+    title: "New Products, Carefully Explained.",
+    text: "From Specialized Investment Funds to eligible Pre-IPO and global routes, we explain structure, risk, liquidity and product documents before implementation.",
   },
 ];
 

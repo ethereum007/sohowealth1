@@ -488,7 +488,7 @@ export default function WealthPlanningForITProfessionalsPage() {
                 business or sector.
               </p>
               <Link
-                href="/rsu-esops"
+                href="/wealth-planning-for-it-professionals/rsu-guide"
                 className="mt-7 inline-flex items-center font-body text-sm font-bold text-[#8B6815] transition hover:text-[#0B1F3A]"
               >
                 Explore the RSU &amp; ESOP guide
@@ -725,6 +725,54 @@ export default function WealthPlanningForITProfessionalsPage() {
         </div>
       </section>
 
+      <section className="bg-[#0B1F3A] py-20 lg:py-24" aria-labelledby="it-guides-heading">
+        <div className="container mx-auto px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#C9A84C]">
+              Tech wealth library
+            </p>
+            <h2 id="it-guides-heading" className="mt-3 font-display text-3xl font-semibold text-white md:text-4xl">
+              RSU, ESOP and Financial-Independence Guides
+            </h2>
+            <p className="mt-4 font-body text-base leading-relaxed text-white/65">
+              Use these original decision frameworks before a vest, exercise, sale, career move or FIRE milestone.
+            </p>
+          </div>
+          <div className="mx-auto mt-12 grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                href: "/insights/rsu-tax-india-vesting-sale-schedule-fa",
+                title: "RSU Tax & Schedule FA",
+                copy: "Build the vest, sale, foreign-asset and specialist hand-off workflow.",
+              },
+              {
+                href: "/insights/sell-rsus-at-vest-indian-it-professionals",
+                title: "Sell RSUs at Vest?",
+                copy: "Separate concentration and goals from tax and execution constraints.",
+              },
+              {
+                href: "/insights/esop-rsu-espp-differences-india",
+                title: "ESOP vs RSU vs ESPP",
+                copy: "Understand cash needs, records, liquidity and goal-planning differences.",
+              },
+              {
+                href: "/insights/fire-planning-it-professionals-hyderabad",
+                title: "FIRE Planning in Hyderabad",
+                copy: "Model spending, variable compensation and a work-optional transition.",
+              },
+            ].map((guide) => (
+              <Link key={guide.href} href={guide.href} className="group rounded-2xl border border-white/10 bg-white/5 p-6 transition hover:-translate-y-1 hover:border-[#C9A84C]/60 hover:bg-white/10">
+                <h3 className="font-display text-lg font-semibold text-white">{guide.title}</h3>
+                <p className="mt-3 font-body text-sm leading-relaxed text-white/60">{guide.copy}</p>
+                <span className="mt-5 inline-flex items-center gap-2 font-body text-sm font-semibold text-[#C9A84C]">
+                  Read guide <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" aria-hidden="true" />
+                </span>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="border-y border-slate-200 bg-[#F7F8FA] py-16">
         <div className="container mx-auto px-6 lg:px-8">
           <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.05fr_.95fr]">
@@ -755,7 +803,7 @@ export default function WealthPlanningForITProfessionalsPage() {
                 APMI Registered PMS Distributor.
               </p>
               <p className="mt-4 font-body text-xs font-semibold text-slate-400">
-                Published and last substantially updated: July 27, 2026
+                Published July 27, 2026 · Last substantially updated July 28, 2026
               </p>
             </div>
 

@@ -101,6 +101,31 @@ const irsPficSource = {
   url: "https://www.irs.gov/instructions/i8621",
 };
 
+const sebiRiskSource = {
+  title: "SEBI Investor: How to Manage Investment Risks",
+  url: "https://investor.sebi.gov.in/investment_risk_managment.html",
+};
+
+const sebiBeforeInvestingSource = {
+  title: "SEBI Investor: Factors to Consider Before Investing",
+  url: "https://investor.sebi.gov.in/investment-thingsbeforeinv.html",
+};
+
+const sebiAssetAllocationSource = {
+  title: "SEBI Investor: Asset Allocation Calculator",
+  url: "https://investor.sebi.gov.in/calculators/Assets_Allocations.html",
+};
+
+const incomeTaxScheduleFASource = {
+  title: "Income Tax Department: Schedule FA, FSI and TR Guidance",
+  url: "https://www.incometax.gov.in/iec/foportal/nudge/nudge-schedule-fa",
+};
+
+const rbiLrsSource = {
+  title: "RBI: Liberalised Remittance Scheme FAQ",
+  url: "https://www.rbi.org.in/scripts/FAQDisplay.aspx?Id=115",
+};
+
 export const insightPosts: InsightPost[] = [
   {
     slug: "nri-tax-filing-investing-guide",
@@ -1238,6 +1263,645 @@ export const insightPosts: InsightPost[] = [
       "gift-city-for-nris-guide",
     ],
     sources: [budgetSpeechSource, incomeTaxActSource, rbiAccountsSource],
+  },
+  {
+    slug: "financial-planning-checklist-doctors-ap-telangana",
+    title: "Financial Planning Checklist for Doctors in AP and Telangana",
+    description:
+      "A practical checklist for consultants, clinic owners and medical families to organise cash flow, protection, debt, goals, investing and succession.",
+    category: "Doctors",
+    audience: "Doctors and medical families in Andhra Pradesh and Telangana",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "8 min read",
+    keywords: [
+      "financial planning for doctors AP Telangana",
+      "wealth planning doctors Hyderabad",
+      "doctor investment checklist",
+      "financial planning for clinic owners",
+      "retirement planning for doctors India",
+    ],
+    heroKicker: "Doctor Wealth Checklist",
+    keyTakeaways: [
+      "Separate household, consultation and clinic cash flows before selecting investments.",
+      "Protect the medical family's earning engine and emergency liquidity before taking long lock-ins.",
+      "Assign a time horizon to each goal instead of running one undifferentiated portfolio.",
+      "Review clinic debt, property and market investments together because they compete for the same capital.",
+      "Keep nominees, ownership records and professional contacts in one annual continuity file.",
+    ],
+    sections: [
+      {
+        heading: "1. Build Three Cash-Flow Views",
+        body: [
+          "A doctor may receive hospital salary, consultation fees, procedure income, clinic receipts and family-business income on different dates. Combining all of it into one bank balance makes surplus look more predictable than it is. Start with three views: household cash flow, professional income and clinic operating cash flow.",
+          "For each view, mark fixed commitments, variable costs, tax reserves and irregular annual expenses. The useful number is not gross income; it is the amount that can stay invested through a weak quarter without being withdrawn.",
+        ],
+      },
+      {
+        heading: "2. Protect the Earning Engine",
+        body: [
+          "Emergency reserves should reflect the doctor's actual income pattern and the clinic's payroll or rental obligations, not a generic number of months. Personal health, term-life, disability and professional-indemnity needs should be reviewed with licensed insurance specialists using current policy wording.",
+          "Keep household reserves separate from clinic working capital. A single reserve can be depleted by equipment repair or a delayed hospital payment precisely when the family also needs it.",
+        ],
+      },
+      {
+        heading: "3. Give Every Goal a Time Horizon",
+        table: {
+          columns: ["Goal bucket", "Typical decision", "Question to answer"],
+          rows: [
+            ["Near term", "Emergency, tax, known purchase", "Can capital fall or become illiquid before use?"],
+            ["Medium term", "Education, clinic upgrade, property equity", "How much timing flexibility exists?"],
+            ["Long term", "Retirement, legacy, financial independence", "What diversified growth mix is sustainable?"],
+          ],
+        },
+        body: [
+          "SEBI's investor education material emphasises matching investments to goals, risk tolerance and time horizon. The key is to avoid funding a near-term clinic or education goal with an asset that may be volatile or difficult to exit when the money is needed.",
+        ],
+      },
+      {
+        heading: "4. Treat Clinic and Property Capital as Portfolio Exposures",
+        body: [
+          "A clinic can be a valuable operating asset, but it is also concentrated exposure to one location, specialty, team and promoter. Property adds another illiquid local exposure. List both beside mutual funds, PMS, SIFs, deposits and insurance rather than treating them as separate worlds.",
+          "This view can reveal why a doctor with strong net worth still has weak liquidity or why adding another concentrated investment increases risk more than expected.",
+        ],
+      },
+      {
+        heading: "5. Run an Annual Doctor Wealth Review",
+        bullets: [
+          "Reconcile assets, liabilities, nominees and insurance policies.",
+          "Check whether clinic and household reserves are still adequate.",
+          "Map each investment to a named goal and horizon.",
+          "Review product costs, liquidity, concentration and duplicate holdings.",
+          "Update the family continuity file, including CA, lawyer, banker and insurer contacts.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How much should a doctor keep as an emergency fund?",
+        a: "There is no universal number. Model household needs and clinic fixed costs separately, then test the reserve against delayed receivables, illness and a weak operating quarter.",
+      },
+      {
+        q: "Should clinic expansion be counted in the investment portfolio?",
+        a: "Yes. It is an operating investment with concentration, liquidity and execution risk, so it should be reviewed alongside property, debt and market investments.",
+      },
+      {
+        q: "Can SoHo Wealth give medical, insurance, tax or legal advice?",
+        a: "No. SoHo Wealth provides portfolio review, wealth planning and investment distribution within its disclosed scope, and coordinates questions for appropriately qualified specialists.",
+      },
+    ],
+    relatedSlugs: [
+      "clinic-expansion-vs-investing-doctors",
+      "retirement-planning-doctors-irregular-income",
+    ],
+    sources: [sebiBeforeInvestingSource, sebiRiskSource],
+  },
+  {
+    slug: "clinic-expansion-vs-investing-doctors",
+    title: "Clinic Expansion vs Investing: A Capital-Allocation Framework for Doctors",
+    description:
+      "How doctors can compare a clinic upgrade, new branch, equipment purchase, property and financial investments without relying on return headlines.",
+    category: "Doctors",
+    audience: "Clinic owners, consultants and medical entrepreneurs",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "8 min read",
+    keywords: [
+      "clinic expansion vs investment",
+      "financial planning clinic owners India",
+      "doctor clinic equipment investment",
+      "wealth planning medical professionals Hyderabad",
+    ],
+    heroKicker: "Clinic Capital Decisions",
+    keyTakeaways: [
+      "Compare clinic projects on cash flow, downside, time demand, concentration and exit—not only expected return.",
+      "Reserve mandatory tax, household and working-capital needs before funding expansion.",
+      "Use conservative scenarios for utilisation, collections, staffing and maintenance.",
+      "Avoid allowing one project to absorb every liquid asset and future monthly surplus.",
+      "Write the decision rules before committing so optimism cannot change them later.",
+    ],
+    sections: [
+      {
+        heading: "The Real Choice Is Not Clinic or Mutual Fund",
+        body: [
+          "Doctors often frame the decision as a binary: reinvest in the practice or move money into financial assets. In reality, each rupee can serve liquidity, debt reduction, clinic resilience, growth, family goals or long-term investing. The decision is about sequencing and concentration.",
+          "A clinic project may offer strategic value that a market investment cannot, while a diversified financial portfolio offers liquidity and separation from professional income. The right mix depends on what the rest of the balance sheet already contains.",
+        ],
+      },
+      {
+        heading: "Build a Comparable Project Case",
+        table: {
+          columns: ["Dimension", "Clinic project", "Financial portfolio"],
+          rows: [
+            ["Cash flow", "Utilisation, collections and operating margin", "Income, redemptions and market value"],
+            ["Concentration", "Specialty, locality, team and promoter", "Issuer, asset-class and manager exposure"],
+            ["Liquidity", "Often slow and negotiated", "Varies by product and market"],
+            ["Time demand", "Hiring, compliance and operations", "Review and administration"],
+            ["Exit", "Sale, partner buyout or closure", "Redemption or market sale, subject to terms"],
+          ],
+        },
+      },
+      {
+        heading: "Stress-Test the Clinic Case",
+        body: [
+          "Run at least three cases: expected, delayed ramp-up and weak utilisation. Include equipment downtime, staff turnover, rent escalation, collection delays, financing cost and the doctor's own time. Do not count gross billings as distributable cash.",
+          "If the project requires repeated capital injections, define a stop-loss in rupees and time. A pre-written limit protects household goals from an open-ended operating commitment.",
+        ],
+      },
+      {
+        heading: "Protect the Non-Clinic Balance Sheet",
+        body: [
+          "Before expansion, ring-fence household emergency money, clinic working capital, near-term goals and committed taxes. Review how much of net worth is already tied to the medical practice, clinic property and the same local economy.",
+          "SEBI's investor material highlights liquidity, risk, horizon and diversification as core investment considerations. Those principles apply equally when the investment is an operating business rather than a listed security.",
+        ],
+      },
+      {
+        heading: "Use a Written Decision Memo",
+        bullets: [
+          "What patient or operating problem does the project solve?",
+          "How much capital is committed, including contingency?",
+          "What utilisation and margin assumptions drive the case?",
+          "Which household or retirement goals become vulnerable?",
+          "What milestone triggers pause, additional funding or exit?",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is clinic expansion always better because the doctor controls it?",
+        a: "No. Control can improve execution, but it does not remove demand, staffing, regulatory, concentration or liquidity risk.",
+      },
+      {
+        q: "Should a clinic project use all available liquid investments?",
+        a: "That can leave the family and practice exposed to the same project. Ring-fence reserves, taxes and near-term goals before deciding the project budget.",
+      },
+      {
+        q: "How can SoHo Wealth help?",
+        a: "SoHo Wealth can organise the personal balance sheet, map goals and review how much liquidity and concentration the project creates. Business valuation, tax, legal and insurance work should be handled by qualified specialists.",
+      },
+    ],
+    relatedSlugs: [
+      "financial-planning-checklist-doctors-ap-telangana",
+      "retirement-planning-doctors-irregular-income",
+    ],
+    sources: [sebiBeforeInvestingSource, sebiRiskSource],
+  },
+  {
+    slug: "retirement-planning-doctors-irregular-income",
+    title: "Retirement Planning for Doctors With Irregular Income",
+    description:
+      "A retirement system for doctors whose cash flow varies across salary, consultations, procedures and clinic ownership.",
+    category: "Doctors",
+    audience: "Consultants, surgeons, clinic owners and medical families",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "8 min read",
+    keywords: [
+      "retirement planning for doctors India",
+      "doctor irregular income investing",
+      "retirement corpus doctors Hyderabad",
+      "wealth planning doctors Telangana",
+    ],
+    heroKicker: "Doctor Retirement System",
+    keyTakeaways: [
+      "Use a base contribution plus surplus sweeps instead of relying on a perfect monthly SIP.",
+      "Define retirement as a change in work intensity, not only a date.",
+      "Separate the clinic's sale value from the minimum retirement plan until an exit is credible.",
+      "Build income buckets for early retirement years before maximising long-term growth assets.",
+      "Review the plan after income, family, health or clinic-ownership changes.",
+    ],
+    sections: [
+      {
+        heading: "Retirement for a Doctor Is Usually a Transition",
+        body: [
+          "Many doctors do not stop work on one date. Hospital duties may reduce first, then procedures, then consultations, while teaching or clinic income continues. Model at least three phases: full practice, reduced practice and work-optional life.",
+          "For each phase, estimate household spending, professional costs that remain, medical costs, travel and family support. This produces a more useful target than multiplying today's expenses by an arbitrary number.",
+        ],
+      },
+      {
+        heading: "Use a Two-Part Contribution Rule",
+        body: [
+          "A fixed monthly contribution creates continuity, but it may be too aggressive in weak months and too small after a strong quarter. Pair a sustainable base contribution with a rule that sweeps a percentage of surplus above a defined operating buffer.",
+          "The sweep can be monthly or quarterly. Automating the decision reduces the temptation to treat every surplus as available for lifestyle or clinic expansion.",
+        ],
+      },
+      {
+        heading: "Do Not Double-Count the Clinic",
+        body: [
+          "A clinic may eventually be sold, leased or handed to a partner, but its value depends on transferability, property ownership, brand, contracts and the founder's personal patient relationships. Until there is an evidence-backed exit path, treat sale value as upside rather than the foundation of retirement.",
+          "The same applies to expected inheritance or property appreciation. A robust plan can work without optimistic exit values.",
+        ],
+      },
+      {
+        heading: "Match Assets to Retirement Phases",
+        table: {
+          columns: ["Bucket", "Purpose", "Main risk to control"],
+          rows: [
+            ["Transition reserve", "Reduced-practice years and known costs", "Market fall or illiquidity near withdrawal"],
+            ["Income layer", "Recurring spending support", "Inflation, credit and reinvestment risk"],
+            ["Long-term growth", "Later-life spending and legacy", "Volatility and concentration"],
+          ],
+        },
+        body: [
+          "SEBI investor guidance stresses matching asset mix to time horizon and risk tolerance. A long retirement can justify growth exposure, but money needed early in the transition should not depend on a favourable market at the exact withdrawal date.",
+        ],
+      },
+      {
+        heading: "Annual Retirement Review for Medical Families",
+        bullets: [
+          "Update expected work intensity and income by phase.",
+          "Recalculate recurring household and professional expenses.",
+          "Review insurance, nominees and family continuity arrangements.",
+          "Check whether property and clinic value dominate net worth.",
+          "Rebalance contributions after a strong or weak professional year.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "How can a doctor invest regularly with variable income?",
+        a: "Use a conservative base contribution that survives weak months, then add a documented quarterly surplus-sweep rule.",
+      },
+      {
+        q: "Should clinic sale value be included in retirement?",
+        a: "It can be shown as a separate scenario, but avoid depending on it until transferability, valuation and an actual exit route are credible.",
+      },
+      {
+        q: "When should the retirement plan be reviewed?",
+        a: "At least annually and after major changes in income, clinic ownership, health, family obligations or intended work intensity.",
+      },
+    ],
+    relatedSlugs: [
+      "financial-planning-checklist-doctors-ap-telangana",
+      "clinic-expansion-vs-investing-doctors",
+    ],
+    sources: [sebiAssetAllocationSource, sebiRiskSource],
+  },
+  {
+    slug: "rsu-tax-india-vesting-sale-schedule-fa",
+    title: "RSU Tax in India: Vesting, Sale and Schedule FA Workflow",
+    description:
+      "A record-keeping guide for India-resident employees with foreign-company RSUs, covering vesting, sale, foreign assets and specialist hand-offs.",
+    category: "IT Professionals",
+    audience: "India-resident technology professionals with foreign-company RSUs",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "9 min read",
+    keywords: [
+      "RSU tax India vesting sale",
+      "RSU Schedule FA India",
+      "foreign company RSU tax India",
+      "RSU capital gains records",
+      "RSU financial planning Hyderabad",
+    ],
+    heroKicker: "RSU Tax Workflow",
+    keyTakeaways: [
+      "Treat vesting and sale as separate record-keeping events.",
+      "Keep vest statements, payroll records, broker confirmations, exchange rates and tax documents together.",
+      "Foreign holdings may create Schedule FA and foreign-income reporting questions for applicable residents.",
+      "A diversification decision should follow concentration and goal analysis, not a tax shortcut.",
+      "Use a qualified tax professional for the return and country-specific interpretation.",
+    ],
+    sections: [
+      {
+        heading: "One Award Creates Several Financial Events",
+        body: [
+          "An RSU grant, vest, tax withholding, broker credit, dividend and sale are different events. A broker's gain figure may not match the Indian tax computation because cost basis, payroll treatment, currency conversion and reporting periods can differ.",
+          "Create an award-level ledger with grant ID, vest date, units vested, units withheld or sold for tax, payroll value, broker credit and eventual sale details. This is the bridge between payroll, broker and tax-return records.",
+        ],
+      },
+      {
+        heading: "Vesting and Sale Need Separate Files",
+        table: {
+          columns: ["Event", "Documents to retain", "Question for the CA"],
+          rows: [
+            ["Vest", "Award statement, payslip, employer tax working", "What value and exchange rate entered salary income?"],
+            ["Sale", "Trade confirmation, fees, bank receipt", "What cost basis and holding period apply?"],
+            ["Year end", "Broker statement, holdings, dividends", "Which foreign-income and asset schedules apply?"],
+          ],
+        },
+      },
+      {
+        heading: "Schedule FA Is a Separate Compliance Question",
+        body: [
+          "The Income Tax Department's Schedule FA guidance explains that taxpayers with applicable foreign assets should not use ITR-1 or ITR-4 and provides material on Schedules FA, FSI and TR. Whether a particular award, vested holding, cash balance or brokerage account is reportable depends on residential status and facts.",
+          "Do not assume that employer withholding, a foreign broker statement or zero shares at year-end automatically resolves Indian reporting. Give the full ledger and account details to the return preparer.",
+        ],
+      },
+      {
+        heading: "Tax Should Inform, Not Dictate, Diversification",
+        body: [
+          "Salary, career prospects and unvested awards may already depend on the same employer. Vested shares add balance-sheet exposure. Decide an acceptable concentration range by considering goals, liquidity, volatility and employment dependency, then ask the tax professional to model execution choices.",
+          "A tax bill can be visible while concentration risk is not. Deferring every sale solely to avoid tax can leave a critical goal dependent on one company.",
+        ],
+      },
+      {
+        heading: "Annual RSU File Checklist",
+        bullets: [
+          "Grant and vest statements for every award.",
+          "Payslips and employer perquisite or tax workings.",
+          "Broker holdings, sales, dividends and cash statements.",
+          "Bank inward-remittance records and fees.",
+          "Prior-year return schedules and foreign tax documents.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is RSU tax finished when shares vest?",
+        a: "Not necessarily. Vesting and a later sale are separate events, and foreign-asset or income reporting may also apply. Confirm the complete workflow with a qualified tax professional.",
+      },
+      {
+        q: "Do foreign RSUs always go in Schedule FA?",
+        a: "The answer depends on residential status, the award and account facts, and the applicable reporting period. Share the full documents with the return preparer rather than relying on a generic answer.",
+      },
+      {
+        q: "Does SoHo Wealth prepare the tax return?",
+        a: "No. SoHo Wealth can organise the portfolio and record checklist, but tax computation and filing belong with a qualified tax professional.",
+      },
+    ],
+    relatedSlugs: [
+      "sell-rsus-at-vest-indian-it-professionals",
+      "esop-rsu-espp-differences-india",
+      "fire-planning-it-professionals-hyderabad",
+    ],
+    sources: [incomeTaxScheduleFASource, sebiRiskSource],
+  },
+  {
+    slug: "sell-rsus-at-vest-indian-it-professionals",
+    title: "Should Indian IT Professionals Sell RSUs at Vest?",
+    description:
+      "A decision framework for vested employer stock that separates concentration, goals, trading restrictions, taxes and execution.",
+    category: "IT Professionals",
+    audience: "Indian technology professionals with vested employer stock",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "8 min read",
+    keywords: [
+      "sell RSUs at vest India",
+      "RSU diversification India",
+      "employer stock concentration",
+      "RSU wealth planning Hyderabad",
+    ],
+    heroKicker: "Employer Stock Decision",
+    keyTakeaways: [
+      "There is no universal sell-at-vest rule.",
+      "Ask whether you would buy the same amount of employer stock with cash today.",
+      "Include salary, unvested awards and career exposure when measuring concentration.",
+      "Pre-define goal funding and diversification rules before a vest occurs.",
+      "Confirm tax, insider-trading, plan and remittance constraints before execution.",
+    ],
+    sections: [
+      {
+        heading: "The Cleanest Question Is a Fresh-Cash Test",
+        body: [
+          "After vesting, the shares are part of the employee's investable balance sheet. Ask: if the same after-tax value arrived as cash today, how much would you choose to invest in this company? The gap between that answer and the current holding identifies an intentional or accidental concentration.",
+          "This is not automatically a sell signal. It is a way to separate loyalty, familiarity and anchoring from a forward-looking portfolio choice.",
+        ],
+      },
+      {
+        heading: "Measure Total Employer Dependency",
+        body: [
+          "The listed holding is only one layer. Salary, bonus, healthcare, future promotions, unvested awards and sometimes spouse employment may depend on the same company or sector. A percentage measured only against liquid investments can understate the family's exposure.",
+          "Map vested shares, expected future vests and the income dependency beside each major goal. A home purchase or education goal due soon should not unknowingly rely on the same share price as the next compensation cycle.",
+        ],
+      },
+      {
+        heading: "Choose a Rule Before the Vest",
+        table: {
+          columns: ["Possible rule", "What it solves", "What to check"],
+          rows: [
+            ["Goal-first sale", "Funds a named near-term goal", "Amount, timing and tax"],
+            ["Concentration band", "Caps employer exposure", "How total exposure is measured"],
+            ["Staged diversification", "Reduces timing dependence", "Trading windows and costs"],
+            ["Hold intentionally", "Retains desired upside", "Downside tolerance and goal protection"],
+          ],
+        },
+      },
+      {
+        heading: "Execution Constraints Come Last—but Matter",
+        body: [
+          "Trading windows, insider status, blackout periods, broker mechanics, remittance and tax can change the feasible action. Confirm them after defining the portfolio objective, because an operational restriction should not become the investment thesis.",
+          "Document the decision, including what would trigger a review. This makes future vests easier to handle consistently.",
+        ],
+      },
+      {
+        heading: "Questions to Bring to the Review",
+        bullets: [
+          "What percentage of liquid net worth is vested employer stock?",
+          "Which goals depend on this holding over the next five years?",
+          "How much unvested value and salary already depend on the employer?",
+          "Which plan, trading-window and tax constraints apply?",
+          "What written rule will govern the next three vests?",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Is selling RSUs at vest always tax-efficient?",
+        a: "No universal answer applies. Tax treatment depends on facts, and portfolio concentration may matter more than a single tax outcome. Obtain qualified tax advice.",
+      },
+      {
+        q: "What is a safe employer-stock percentage?",
+        a: "There is no universal safe percentage. Consider liquid net worth, future awards, salary dependency, goals and downside tolerance.",
+      },
+      {
+        q: "Can SoHo Wealth tell me to sell my company stock?",
+        a: "No. SoHo Wealth does not provide security-specific sell recommendations. It can help map concentration, goals and product options within its disclosed scope.",
+      },
+    ],
+    relatedSlugs: [
+      "rsu-tax-india-vesting-sale-schedule-fa",
+      "esop-rsu-espp-differences-india",
+      "fire-planning-it-professionals-hyderabad",
+    ],
+    sources: [sebiRiskSource, sebiBeforeInvestingSource],
+  },
+  {
+    slug: "esop-rsu-espp-differences-india",
+    title: "ESOP vs RSU vs ESPP in India: What Employees Should Track",
+    description:
+      "A plain-language comparison of employee equity structures, cash requirements, concentration, records and planning questions for Indian professionals.",
+    category: "IT Professionals",
+    audience: "Indian employees with company equity compensation",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "8 min read",
+    keywords: [
+      "ESOP vs RSU vs ESPP India",
+      "employee stock options India planning",
+      "RSU ESPP difference India",
+      "ESOP financial planning Hyderabad",
+    ],
+    heroKicker: "Equity Compensation Guide",
+    keyTakeaways: [
+      "An option, a restricted unit and a discounted purchase plan create different cash and timing decisions.",
+      "Track each award in its own ledger rather than relying on one broker dashboard.",
+      "Value unvested or unexercised awards conservatively when funding goals.",
+      "Include employer equity in total concentration even before every award becomes liquid.",
+      "Separate plan administration, tax interpretation and portfolio decisions.",
+    ],
+    sections: [
+      {
+        heading: "Three Labels, Three Different Decisions",
+        table: {
+          columns: ["Structure", "Core mechanism", "Typical employee decision"],
+          rows: [
+            ["RSU", "Units vest into shares or cash under plan terms", "Hold, sell or diversify after vest"],
+            ["ESOP / option", "Right to buy shares at an exercise price", "Whether and when to exercise, fund and sell"],
+            ["ESPP", "Payroll contributions buy shares under plan terms", "Contribution level and treatment after purchase"],
+          ],
+        },
+        body: [
+          "Plan documents control the actual outcome. The same label can operate differently across employers, countries and broker platforms, so use the table only as an orientation.",
+        ],
+      },
+      {
+        heading: "Cash Requirement Changes the Risk",
+        body: [
+          "RSUs often do not require an exercise payment, while options may require cash for exercise and tax before liquidity is available. An ESPP diverts salary into a purchase period. These cash mechanics can compete with emergency reserves, home equity or other goals.",
+          "Before exercising or maximising contributions, model the household's cash position if the share price falls or a sale is delayed.",
+        ],
+      },
+      {
+        heading: "Build One Ledger Per Award Type",
+        bullets: [
+          "Grant, vest, exercise, purchase and expiry dates.",
+          "Units, strike price, purchase price and shares withheld.",
+          "Payroll value, tax withheld and employer statements.",
+          "Broker account, trading restrictions and sale records.",
+          "Currency conversion and bank-remittance records.",
+        ],
+      },
+      {
+        heading: "Do Not Fund Goals With Headline Equity Value",
+        body: [
+          "Unvested RSUs can be forfeited, options can expire or remain underwater, and private-company shares may lack a practical exit. Show gross award value, estimated after-tax liquid value and the value used for goal funding as three separate numbers.",
+          "A conservative plan can still recognise upside, but essential goals should not depend on an award becoming liquid on a particular date and price.",
+        ],
+      },
+      {
+        heading: "Assign the Right Specialist",
+        body: [
+          "The plan administrator explains mechanics, the employer explains payroll, a qualified tax professional handles tax and reporting, and a lawyer handles legal interpretation where needed. Portfolio review addresses how the exposure sits beside goals and other investments.",
+          "Keeping these roles separate reduces the chance that a broker display or HR explanation is mistaken for a complete tax or investment answer.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "Are ESOPs and RSUs the same?",
+        a: "No. An option generally gives a right to purchase shares under plan terms, while an RSU generally vests into shares or cash. Read the actual plan documents.",
+      },
+      {
+        q: "Should unvested awards count toward retirement?",
+        a: "Show them separately and use a conservative value for essential-goal planning because vesting, employment, tax and market outcomes can change.",
+      },
+      {
+        q: "Who should confirm tax treatment?",
+        a: "A qualified tax professional with the plan, payroll, broker and residency facts should confirm computation and reporting.",
+      },
+    ],
+    relatedSlugs: [
+      "rsu-tax-india-vesting-sale-schedule-fa",
+      "sell-rsus-at-vest-indian-it-professionals",
+      "fire-planning-it-professionals-hyderabad",
+    ],
+    sources: [incomeTaxScheduleFASource, sebiBeforeInvestingSource],
+  },
+  {
+    slug: "fire-planning-it-professionals-hyderabad",
+    title: "FIRE Planning for IT Professionals in Hyderabad",
+    description:
+      "A practical financial-independence framework for Hyderabad tech professionals with salary, bonuses, RSUs, home goals and changing career risk.",
+    category: "IT Professionals",
+    audience: "Technology professionals in Hyderabad pursuing financial independence",
+    publishedAt: "2026-07-28",
+    updatedAt: "2026-07-28",
+    readingTime: "9 min read",
+    keywords: [
+      "FIRE planning IT professionals Hyderabad",
+      "financial independence calculator Hyderabad",
+      "retire early India tech professionals",
+      "RSU FIRE planning India",
+      "HITEC City wealth planning",
+    ],
+    heroKicker: "Financial Independence",
+    keyTakeaways: [
+      "Define the life you want to fund before choosing a FIRE multiple.",
+      "Separate recurring spending, one-time goals and healthcare contingencies.",
+      "Treat RSUs and bonuses as variable capital, not guaranteed salary.",
+      "Use multiple return, inflation and retirement-length scenarios.",
+      "Build a transition plan for work optionality, not only a target corpus.",
+    ],
+    sections: [
+      {
+        heading: "FIRE Is a Cash-Flow Problem Before It Is a Corpus",
+        body: [
+          "The useful starting point is an annual spending map for the life you want after full-time work changes. Separate essential household spending, discretionary lifestyle, rent or housing maintenance, insurance, taxes, travel, family support and professional projects.",
+          "Keep one-time goals such as education, a home purchase or parental support outside the recurring-spend number. Otherwise a single multiple hides very different timing and risk requirements.",
+        ],
+      },
+      {
+        heading: "Use Scenarios, Not One Magic Number",
+        table: {
+          columns: ["Scenario input", "Conservative question", "Why it matters"],
+          rows: [
+            ["Inflation", "What if essentials rise faster?", "Future spending can be understated"],
+            ["Portfolio return", "What if returns arrive unevenly?", "Early losses can damage withdrawals"],
+            ["Retirement length", "What if work stops earlier or life is longer?", "The funding period expands"],
+            ["Healthcare", "What is not covered by insurance?", "Large costs may cluster later"],
+          ],
+        },
+        body: [
+          "A calculator is an illustration, not a forecast. SEBI's own asset-allocation calculator warns that market returns are not fixed or predictable. Run a range and focus on the plan's weak points rather than the most attractive output.",
+        ],
+      },
+      {
+        heading: "Handle RSUs and Bonuses With a Rule",
+        body: [
+          "Tech compensation can make savings look strong while leaving the portfolio dependent on one employer. Define how each vest or bonus will be split among tax reserve, near-term goals, diversified long-term assets and discretionary spending.",
+          "Unvested awards should be shown separately from liquid FIRE assets. A promotion, layoff, blackout window or share-price move can change the value and timing.",
+        ],
+      },
+      {
+        heading: "Build a Work-Optional Transition",
+        body: [
+          "Financial independence may begin with a sabbatical, lower-intensity role, consulting or entrepreneurship rather than permanent retirement. Model how even modest earned income changes withdrawal pressure during the first decade.",
+          "Before leaving full-time work, test health cover, emergency liquidity, housing obligations, dependants, tax administration and the psychological structure of the next phase.",
+        ],
+      },
+      {
+        heading: "Annual FIRE Review",
+        bullets: [
+          "Update recurring spending from actual bank and card data.",
+          "Separate liquid, illiquid, vested and unvested assets.",
+          "Stress-test inflation, return sequence and retirement length.",
+          "Review employer-stock concentration and future vest assumptions.",
+          "Define the next work-optional milestone and liquidity needed for it.",
+        ],
+      },
+    ],
+    faqs: [
+      {
+        q: "What FIRE multiple should an Indian IT professional use?",
+        a: "No single multiple is reliable for every household. Spending mix, taxes, inflation, retirement length, healthcare and portfolio risk all matter, so use several scenarios.",
+      },
+      {
+        q: "Can I count unvested RSUs in my FIRE corpus?",
+        a: "Track them separately and avoid relying on them for essential spending until they vest and become liquid after taxes and plan constraints.",
+      },
+      {
+        q: "Is this page a FIRE calculator or recommendation?",
+        a: "No. It is an educational planning framework. Any calculator output is only an illustration; SoHo Wealth does not provide personalised fee-based investment advice or security-level recommendations.",
+      },
+    ],
+    relatedSlugs: [
+      "sell-rsus-at-vest-indian-it-professionals",
+      "rsu-tax-india-vesting-sale-schedule-fa",
+      "esop-rsu-espp-differences-india",
+    ],
+    sources: [sebiAssetAllocationSource, sebiRiskSource, rbiLrsSource],
   },
 ];
 

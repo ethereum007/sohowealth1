@@ -85,18 +85,28 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
   };
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": "Service",
+    "@type": config.slug === "best-pms-in-hyderabad" ? "CollectionPage" : "Service",
+    "@id": `${url}#${config.slug === "best-pms-in-hyderabad" ? "research" : "service"}`,
     name: config.serviceName,
     description: config.serviceDescription,
-    serviceType: config.serviceType,
     url,
-    provider: { "@id": "https://www.sohowealth.in/#organization" },
-    areaServed: [
-      { "@type": "City", name: "Hyderabad" },
-      { "@type": "AdministrativeArea", name: "Telangana" },
-      { "@type": "Country", name: "India" },
-    ],
-    audience: { "@type": "Audience", audienceType: "HNIs, NRIs, family offices, founders and professionals" },
+    ...(config.slug === "best-pms-in-hyderabad"
+      ? {
+          isPartOf: { "@id": "https://www.sohowealth.in/#website" },
+          about: { "@type": "Thing", name: "Portfolio Management Services in India" },
+          author: { "@id": "https://www.sohowealth.in/#kiran-dutta" },
+          dateModified: "2026-07-28",
+        }
+      : {
+          serviceType: config.serviceType,
+          provider: { "@id": "https://www.sohowealth.in/#organization" },
+          areaServed: [
+            { "@type": "City", name: "Hyderabad" },
+            { "@type": "AdministrativeArea", name: "Telangana" },
+            { "@type": "Country", name: "India" },
+          ],
+          audience: { "@type": "Audience", audienceType: "HNIs, NRIs, families, founders and professionals" },
+        }),
   };
 
   return (

@@ -24,16 +24,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sohowealth.in"),
   title: {
-    default: "Wealth Advisor Hyderabad | PMS, SIF, Mutual Funds & NRI Advisory | SoHo Wealth",
+    default: "Wealth Planning & Investment Distribution Hyderabad | SoHo Wealth",
     template: "%s",
   },
-  description: "Hyderabad's boutique wealth advisor for HNIs, founders, families and NRIs. PMS, SIF, mutual funds, global investing and NRI advisory. Book a free portfolio review.",
+  description: "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs across mutual funds, SIF and PMS.",
   keywords: ["wealth advisor Hyderabad", "wealth management Hyderabad", "investment advisor Hyderabad", "financial advisor Hyderabad", "PMS advisor Hyderabad", "best PMS in Hyderabad", "NRI investment advisor Hyderabad", "SIF investment India", "mutual fund advisor Hyderabad", "HNI wealth management"],
   authors: [{ name: "SoHo Wealth" }],
   twitter: {
     card: "summary_large_image",
-    title: "SoHo Wealth — Hyderabad's Premier Wealth Management Firm",
-    description: "Trusted wealth advisory for HNIs, NRIs & families. PMS, SIF, MF, Global Investing. SEBI-aligned.",
+    title: "SoHo Wealth — Wealth Planning in Hyderabad",
+    description: "Portfolio review and investment distribution for HNIs, NRIs and families across mutual funds, SIF, PMS and more.",
   },
   alternates: {
     canonical: "https://www.sohowealth.in/",
@@ -50,9 +50,9 @@ export const metadata: Metadata = {
     shortcut: ["/icon-192.png"],
   },
   openGraph: {
-    title: "SoHo Wealth — Hyderabad's Boutique Wealth Advisor",
+    title: "SoHo Wealth — Wealth Planning & Investment Distribution",
     description:
-      "Boutique wealth advisor in Hyderabad. PMS, SIF, AIF, Mutual Funds, Pre-IPO and NRI advisory.",
+      "Hyderabad-based portfolio review and investment distribution across mutual funds, SIF, PMS, AIF and NRI investing.",
     url: "https://www.sohowealth.in/",
     siteName: "SoHo Wealth",
     type: "website",
@@ -66,7 +66,7 @@ const structuredData = [
     "@type": ["Organization", "FinancialService"],
     "@id": "https://www.sohowealth.in/#organization",
     "name": "SoHo Wealth",
-    "alternateName": "SoHo Wealth Advisory",
+    "alternateName": ["SoHo Wealth India", "SoHo Wealth Hyderabad"],
     "url": "https://www.sohowealth.in/",
     "logo": {
       "@type": "ImageObject",
@@ -75,7 +75,7 @@ const structuredData = [
       "height": 1024
     },
     "image": "https://www.sohowealth.in/soho-logo.png",
-    "description": "Hyderabad's boutique wealth advisor offering PMS, SIF, AIF, Mutual Funds, Global Investing, Pre-IPO and NRI investment advisory for HNIs, founders and family offices.",
+    "description": "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs.",
     "founder": { "@id": "https://www.sohowealth.in/#kiran-dutta" },
     "foundingLocation": { "@type": "Place", "name": "Hyderabad, India" },
     "contactPoint": [
@@ -89,8 +89,7 @@ const structuredData = [
       }
     ],
     "sameAs": [
-      "https://www.linkedin.com/company/sohowealth",
-      "https://sifprime.com"
+      "https://www.linkedin.com/company/sohowealth"
     ],
     "knowsAbout": [
       "Wealth Management",
@@ -101,23 +100,46 @@ const structuredData = [
       "NRI Investing",
       "Global Investing",
       "Pre-IPO Investments",
-      "RSU & ESOP Tax Planning",
+      "RSU & ESOP Portfolio Planning",
       "GIFT City Funds",
-      "HNI Advisory",
-      "Family Office Advisory"
+      "HNI Wealth Planning",
+      "Family Wealth Planning"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": "https://www.sohowealth.in/#kiran-dutta",
+    "name": "Kiran Dutta",
+    "url": "https://www.sohowealth.in/team",
+    "image": "https://www.sohowealth.in/kiran-dutta.jpeg",
+    "jobTitle": "Founder, SoHo Wealth",
+    "worksFor": { "@id": "https://www.sohowealth.in/#organization" },
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Columbia University",
+      "sameAs": "https://www.columbia.edu/"
+    },
+    "sameAs": ["https://www.linkedin.com/in/kirandutta"],
+    "knowsAbout": [
+      "Wealth planning",
+      "Portfolio review",
+      "Portfolio Management Services",
+      "Specialized Investment Funds",
+      "NRI investing"
     ]
   },
   {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "FinancialService"],
     "@id": "https://www.sohowealth.in/#localbusiness",
-    "name": "SoHo Wealth — Wealth Advisor in Hyderabad",
+    "name": "SoHo Wealth — Wealth Planning in Hyderabad",
     "url": "https://www.sohowealth.in/",
     "image": "https://www.sohowealth.in/soho-logo.png",
     "logo": "https://www.sohowealth.in/soho-logo.png",
     "telephone": "+91-90329-99466",
     "email": "invest@sohowealth.in",
-    "description": "Boutique wealth advisor in Hyderabad (Khajaguda) serving HNIs, founders, family offices and NRIs with PMS, SIF, AIF, Mutual Funds and Global Investing.",
+    "description": "Hyderabad-based portfolio review and investment distribution business in Khajaguda serving HNIs, founders, families and NRIs.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "110, Green Grace, Khajaguda",
@@ -145,11 +167,11 @@ const structuredData = [
       "Portfolio Management Services",
       "Specialized Investment Funds",
       "Alternative Investment Funds",
-      "Mutual Fund Advisory",
+      "Mutual Fund Distribution",
       "Global Investing",
-      "NRI Wealth Management",
+      "NRI Portfolio Coordination",
       "Pre-IPO Investments",
-      "RSU & ESOP Advisory"
+      "RSU & ESOP Portfolio Review"
     ],
     "areaServed": [
       { "@type": "City", "name": "Hyderabad" },
@@ -172,7 +194,7 @@ const structuredData = [
     "name": "SoHo Wealth",
     "url": "https://www.sohowealth.in/",
     "publisher": { "@id": "https://www.sohowealth.in/#organization" },
-    "description": "Boutique wealth advisor in Hyderabad — PMS, SIF, AIF, Mutual Funds, Global Investing & NRI advisory."
+    "description": "Hyderabad-based wealth planning, portfolio review and investment distribution across mutual funds, SIF, PMS, AIF and NRI investing."
   }
 ];
 

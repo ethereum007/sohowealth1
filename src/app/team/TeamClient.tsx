@@ -192,6 +192,28 @@ const TeamClient = () => {
                 </div>
               ))}
             </div>
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 rounded-xl border border-slate-200 bg-white p-6 text-center sm:flex-row sm:gap-6">
+              <span className="font-body text-sm font-semibold text-slate-600">Verify the public record:</span>
+              <a
+                href="https://www.amfiindia.com/locate-distributor"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-sm font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] underline-offset-4"
+              >
+                AMFI distributor lookup
+              </a>
+              <a
+                href="https://www.linkedin.com/in/kirandutta"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-body text-sm font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] underline-offset-4"
+              >
+                Kiran&apos;s public credentials
+              </a>
+            </div>
+            <p className="mx-auto mt-5 max-w-3xl text-center font-body text-xs leading-relaxed text-slate-500">
+              SoHo Wealth is a distributor and not a SEBI Registered Investment Adviser. Registration details and scope are also set out on the disclosures page.
+            </p>
           </motion.div>
         </div>
       </section>

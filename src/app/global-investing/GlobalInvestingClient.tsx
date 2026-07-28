@@ -453,8 +453,8 @@ const GlobalInvestingClient = () => {
 
       <RelatedServices
         items={[
-          { title: "NRI Advisory", href: "/services/nri", description: "FEMA-compliant India + global advisory for US, UK, UAE and Singapore NRIs." },
-          { title: "RSU & ESOPs", href: "/rsu-esops", description: "Tax-efficient diversification of US-listed RSUs into GIFT City and global funds." },
+          { title: "NRI Wealth Planning", href: "/services/nri", description: "India-linked portfolio coordination and investment distribution for US, UK, UAE and Singapore NRIs." },
+          { title: "RSU & ESOP Guide", href: "/wealth-planning-for-it-professionals/rsu-guide", description: "Map employer-stock concentration, records and global-product questions before execution." },
           { title: "Mutual Funds Advisory", href: "/mutual-funds", description: "India-domiciled funds with international exposure — no LRS, no Schedule FA." },
         ]}
         heading="Related Services"

@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
-import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { CheckCircle2 } from "lucide-react";
 
@@ -21,8 +20,8 @@ const pmsFaqs = [
 const pmsServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Portfolio Management Services (PMS) Advisory",
-  description: "Independent PMS advisory in Hyderabad. Compare 50+ PMS strategies. Minimum ₹50 lakh. Manager due diligence, portfolio fit assessment and ongoing monitoring.",
+  name: "Portfolio Management Services (PMS) Distribution",
+  description: "APMI-registered PMS distribution in Hyderabad. Compare PMS structures, fees, drawdowns, documentation and portfolio fit. Minimum ₹50 lakh.",
   serviceType: "Portfolio Management Services",
   url: "https://www.sohowealth.in/pms-advisory",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
@@ -55,10 +54,10 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
 
 const whyUs = [
   { title: "Multi-Manager Access", description: "We are empanelled with 50+ PMS providers across India — from large-cap stalwarts to niche small-cap specialists." },
-  { title: "Unbiased Comparison", description: "We have no proprietary PMS. Our only job is to match you with the strategy that fits your risk profile, return expectations, and investment horizon." },
-  { title: "Deep Due Diligence", description: "We go beyond published returns. We analyze portfolio concentration, drawdown history, fund manager tenure, fee structures, and redemption terms." },
+  { title: "Multi-Provider Comparison", description: "We do not operate a proprietary PMS. We compare empanelled providers within our disclosed distribution role." },
+  { title: "Document-Led Evaluation", description: "We review published performance, concentration, drawdown history, manager tenure, fee structures and redemption terms with you." },
   { title: "Performance Monitoring", description: "Monthly NAV updates, quarterly performance reviews, and annual strategy reassessment." },
-  { title: "Tax Optimization", description: "PMS triggers individual stock-level capital gains. We help you understand and optimize the tax implications of each transaction." },
+  { title: "Tax Coordination", description: "PMS trades can create investor-level capital gains. We organise the transaction view and questions for your qualified tax professional." },
 ];
 
 const categories = [
@@ -85,7 +84,7 @@ const PMSAdvisoryClient = () => {
         <div className="container mx-auto px-6 lg:px-8 relative z-10 max-w-4xl text-center">
           <AnimatedSection>
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">
-              PMS Advisor in Hyderabad for{" "}
+              PMS Distribution in Hyderabad for{" "}
               <span style={{ color: "#C9A84C" }}>Serious HNI Portfolios.</span>
             </h1>
             <p className="font-body text-lg lg:text-xl leading-relaxed mb-6 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
@@ -93,8 +92,8 @@ const PMSAdvisoryClient = () => {
               PMS strategies by manager quality, drawdowns, fees, taxation and fit with the existing portfolio.
             </p>
             <p className="font-body text-base leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.6)" }}>
-              With a minimum investment of Rs. 50 lakh, PMS is designed for investors who want direct stock ownership,
-              personalized portfolio construction and access to concentrated active equity strategies beyond traditional mutual funds.
+              With a minimum investment of Rs. 50 lakh, PMS can suit eligible investors who understand direct stock ownership,
+              concentrated mandates, manager discretion, fees and investor-level tax consequences.
             </p>
             <button type="button" onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Book PMS Comparison Call
@@ -103,14 +102,12 @@ const PMSAdvisoryClient = () => {
         </div>
       </section>
 
-      <PmsPerformanceLeadersSection />
-
       {/* WHY SOHO */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <AnimatedSection className="text-center mb-14">
             <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold" style={{ color: "#0B1F3A" }}>
-              Why Invest in PMS Through <span style={{ color: "#C9A84C" }}>SoHo Wealth?</span>
+              PMS Selection and Onboarding Through <span style={{ color: "#C9A84C" }}>SoHo Wealth</span>
             </h2>
           </AnimatedSection>
           <div className="max-w-4xl mx-auto space-y-0">
@@ -160,7 +157,7 @@ const PMSAdvisoryClient = () => {
               Start Your PMS <span style={{ color: "#C9A84C" }}>Journey</span>
             </h2>
             <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Compare 50+ PMS strategies before you commit capital. Find the route that fits your risk profile, time horizon and tax situation.
+              Compare structure, published performance, fees, drawdowns and fit before you commit capital. Past performance is not a selection rule.
             </p>
             <button type="button" onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Schedule PMS Review
@@ -199,7 +196,7 @@ const PMSAdvisoryClient = () => {
               ))}
             </ul>
             <p className="font-body text-sm leading-relaxed italic" style={{ color: "rgba(255,255,255,0.5)" }}>
-              No obligation. No product pitch before the portfolio context is clear.
+              SoHo Wealth is an APMI-registered PMS distributor (APRN01233), not a SEBI Registered Investment Adviser.
             </p>
           </>
         }

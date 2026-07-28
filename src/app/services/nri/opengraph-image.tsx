@@ -52,7 +52,7 @@ export default async function Image() {
             maxWidth: 900,
           }}
         >
-          FEMA-compliant. Tax-efficient. US · UK · UAE · Singapore.
+          Portfolio review · Investment distribution · Global coordination
         </div>
         <div style={{ fontSize: 20, color: "#C9A84C", letterSpacing: "1px" }}>
           sohowealth.in/services/nri

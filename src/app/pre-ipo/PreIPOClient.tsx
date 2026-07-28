@@ -141,7 +141,7 @@ const PreIPOClient = () => {
                   <li>\u2022 There is no guarantee of listing timeline or valuation.</li>
                   <li>\u2022 Past performance of similar deals is not indicative of future results.</li>
                   <li>\u2022 Minimum investment thresholds may apply based on the deal.</li>
-                  <li>\u2022 SoHo Wealth acts as an advisor \u2014 all investments are subject to your own due diligence and risk assessment.</li>
+                  <li>\u2022 SoHo Wealth provides access and evaluation support within its disclosed role; investors must review issuer documents, risks, eligibility and their own specialist advice.</li>
                 </ul>
               </div>
             </AnimatedSection>
@@ -204,7 +204,7 @@ const PreIPOClient = () => {
         items={[
           { title: "AIF Advisory", href: "/aif-advisory", description: "Pooled exposure to PE/VC and structured credit alongside direct Pre-IPO deals." },
           { title: "PMS Advisory", href: "/pms-advisory", description: "Listed-equity allocation to balance illiquid Pre-IPO holdings." },
-          { title: "RSU & ESOPs", href: "/rsu-esops", description: "Tax-efficient diversification for tech professionals holding employer equity." },
+          { title: "RSU & ESOP Guide", href: "/wealth-planning-for-it-professionals/rsu-guide", description: "A record-led concentration and decision guide for tech professionals holding employer equity." },
         ]}
         heading="Related Alternative Allocations"
       />
