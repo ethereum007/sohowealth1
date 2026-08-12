@@ -3,7 +3,7 @@
 import { BarChart3, ChevronLeft, ChevronRight, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import pmsBazaarData from "../../../data/pmsbazaar/pms_comparison_2026-06-30_scraped_2026-08-12.json";
+import pmsBazaarData from "../../../data/pmsbazaar/pms_profiles_enriched_2026-07-31_scraped_2026-08-13.json";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
@@ -31,6 +31,10 @@ function strategyName(row: PmsRecord) {
   return row.strategy_display_name.startsWith(prefix)
     ? row.strategy_display_name.slice(prefix.length)
     : row.strategy_display_name;
+}
+
+function disclosed(items: { name: string; weight: string }[]) {
+  return items.filter((item) => item.name.toLowerCase() !== "undisclosed" && item.weight.toLowerCase() !== "undisclosed");
 }
 
 export function PmsPerformanceLeadersSection() {
@@ -80,7 +84,7 @@ export function PmsPerformanceLeadersSection() {
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {[
                 ["Strategies", "556"],
-                ["As on", "30 Jun 2026"],
+                ["Profiles as on", "31 Jul 2026"],
                 ["Periods", "9"],
               ].map(([label, value]) => (
                 <div key={label} className="rounded-xl bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
@@ -199,8 +203,12 @@ export function PmsPerformanceLeadersSection() {
                       {[
                         ["Category", selectedStrategy.category],
                         ["Benchmark", selectedStrategy.benchmark],
-                        ["AUM", `₹${selectedStrategy.aum_crore} Cr`],
-                        ["Inception", selectedStrategy.inception_date],
+                        ["AUM", `₹${selectedStrategy.aum_crore_detail || selectedStrategy.aum_crore} Cr`],
+                        ["Inception", selectedStrategy.inception_date_detail || selectedStrategy.inception_date],
+                        ["Minimum", `₹${selectedStrategy.minimum_investment}`],
+                        ["Portfolio age", selectedStrategy.portfolio_characteristics["Portfolio Age"]],
+                        ["Stocks", selectedStrategy.portfolio_characteristics["Total Number of Stocks"]],
+                        ["SIP / STP", `${selectedStrategy.portfolio_characteristics.SIP} / ${selectedStrategy.portfolio_characteristics.STP}`],
                       ].map(([label, value]) => (
                         <div key={label} className="rounded-lg bg-[#F7F8FA] p-4">
                           <p className="text-xs uppercase tracking-wider text-muted-foreground">{label}</p>
@@ -222,8 +230,56 @@ export function PmsPerformanceLeadersSection() {
                         })}
                       </div>
                     </div>
+                    {(selectedStrategy.investment_approach || selectedStrategy.investment_objective) && (
+                      <div className="grid gap-4 md:grid-cols-2">
+                        {[["Investment approach", selectedStrategy.investment_approach], ["Investment objective", selectedStrategy.investment_objective]].map(([title, copy]) => copy && (
+                          <div key={title} className="rounded-xl border border-[#E2E8F0] p-5">
+                            <h3 className="font-display text-lg font-semibold text-[#0B1F3A]">{title}</h3>
+                            <p className="mt-3 text-sm leading-relaxed text-[#4A5568]">{copy}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {(disclosed(selectedStrategy.top_holdings).length > 0 || disclosed(selectedStrategy.top_sectors).length > 0) && (
+                      <div className="grid gap-5 md:grid-cols-2">
+                        {[["Top holdings", disclosed(selectedStrategy.top_holdings)], ["Top sectors", disclosed(selectedStrategy.top_sectors)]].map(([title, items]) => (items as { name: string; weight: string }[]).length > 0 && (
+                          <div key={title as string}>
+                            <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">{title as string}</h3>
+                            <div className="mt-3 divide-y divide-[#E2E8F0] rounded-xl border border-[#E2E8F0] px-4">
+                              {(items as { name: string; weight: string }[]).map((item) => (
+                                <div key={item.name} className="flex items-center justify-between gap-4 py-3 text-sm"><span className="text-[#4A5568]">{item.name}</span><span className="font-semibold text-[#0B1F3A]">{item.weight}</span></div>
+                              ))}
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                    {selectedStrategy.fee_plans.length > 0 && (
+                      <div>
+                        <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">Published fee structure</h3>
+                        <div className="mt-4 grid gap-3 md:grid-cols-2">
+                          {selectedStrategy.fee_plans.map((plan, index) => (
+                            <div key={`fee-plan-${index}`} className="rounded-xl bg-[#F7F8FA] p-4 text-sm">
+                              <p className="font-semibold text-[#0B1F3A]">{"Class" in plan ? plan.Class : "Fee plan"}</p>
+                              <dl className="mt-3 space-y-2 text-[#4A5568]">{Object.entries(plan).filter(([key]) => key !== "Class").map(([key, value]) => <div key={key} className="flex justify-between gap-3"><dt>{key}</dt><dd className="text-right font-semibold text-[#0B1F3A]">{value}</dd></div>)}</dl>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                    {selectedStrategy.fund_managers.length > 0 && (
+                      <div>
+                        <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">Fund managers</h3>
+                        <div className="mt-4 space-y-3">{selectedStrategy.fund_managers.map((manager) => (
+                          <div key={`${manager.name}-${manager.role}`} className="rounded-xl border border-[#E2E8F0] p-5">
+                            <p className="font-semibold text-[#0B1F3A]">{manager.name}</p><p className="mt-1 text-sm font-medium text-[#C9A84C]">{manager.role}</p>
+                            {manager.bio && <p className="mt-3 text-sm leading-relaxed text-[#4A5568]">{manager.bio}</p>}
+                          </div>
+                        ))}</div>
+                      </div>
+                    )}
                     <div className="rounded-lg bg-[#FDF8EC] p-4 text-sm leading-relaxed text-[#4A5568]">
-                      Data as of 30 June 2026. Inclusion is for research and does not indicate availability or a SoHo Wealth recommendation. Verify current provider documents, fees and risk disclosures before investing.
+                      Performance data as of 30 June 2026; strategy profiles as of 31 July 2026. Inclusion is for research and does not indicate availability or a SoHo Wealth recommendation. Verify current provider documents, fees and risk disclosures before investing.
                     </div>
                     <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
                       <Link href="/portfolio-review" className="inline-flex justify-center rounded-lg bg-[#C9A84C] px-5 py-3 font-semibold text-[#0B1F3A]">
