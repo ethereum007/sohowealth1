@@ -48,7 +48,6 @@ export default function BestPmsIndiaPage() {
       temporalCoverage: "2026-06-30",
       spatialCoverage: { "@type": "Place", name: "India" },
       creator: { "@id": "https://www.sohowealth.in/#organization" },
-      isBasedOn: "https://pmsbazaar.com/Explore/PMS",
       variableMeasured: ["PMS returns", "Assets under management", "Benchmark", "Category", "Inception date"],
     },
     {

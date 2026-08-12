@@ -1,10 +1,11 @@
 "use client";
 
-import { BarChart3, ChevronLeft, ChevronRight, ExternalLink, Search, ShieldCheck } from "lucide-react";
+import { BarChart3, ChevronLeft, ChevronRight, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import pmsBazaarData from "../../../data/pmsbazaar/pms_comparison_2026-06-30_scraped_2026-08-12.json";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -37,6 +38,7 @@ export function PmsPerformanceLeadersSection() {
   const [category, setCategory] = useState("all");
   const [period, setPeriod] = useState<Period>("1Y");
   const [page, setPage] = useState(1);
+  const [selectedStrategy, setSelectedStrategy] = useState<PmsRecord | null>(null);
 
   const categories = useMemo(
     () => [...new Set(pmsBazaarData.records.map((row) => row.category))].sort(),
@@ -153,9 +155,15 @@ export function PmsPerformanceLeadersSection() {
                         {value?.toFixed(2)}%
                       </TableCell>
                       <TableCell className="text-right">
-                        <a href={row.strategy_url} target="_blank" rel="noopener noreferrer" aria-label={`View source details for ${strategyName(row)}`} className="inline-flex items-center gap-1 font-semibold text-[#0B1F3A] hover:opacity-70">
-                          View <ExternalLink className="h-3.5 w-3.5" />
-                        </a>
+                        <Button
+                          type="button"
+                          variant="ghost"
+                          className="h-auto px-2 py-1 font-semibold text-[#0B1F3A]"
+                          onClick={() => setSelectedStrategy(row)}
+                          aria-label={`View details for ${strategyName(row)}`}
+                        >
+                          View
+                        </Button>
                       </TableCell>
                     </TableRow>
                   ))}
@@ -176,11 +184,63 @@ export function PmsPerformanceLeadersSection() {
             </div>
           </div>
 
+          <Dialog open={Boolean(selectedStrategy)} onOpenChange={(open) => { if (!open) setSelectedStrategy(null); }}>
+            <DialogContent className="max-h-[90vh] max-w-3xl overflow-y-auto border-0 p-0">
+              {selectedStrategy && (
+                <>
+                  <DialogHeader className="bg-[#0B1F3A] p-6 pr-12 text-left text-white">
+                    <DialogTitle className="font-display text-2xl leading-tight text-white">
+                      {strategyName(selectedStrategy)}
+                    </DialogTitle>
+                    <DialogDescription className="text-white/70">{selectedStrategy.amc_name}</DialogDescription>
+                  </DialogHeader>
+                  <div className="space-y-6 p-6">
+                    <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                      {[
+                        ["Category", selectedStrategy.category],
+                        ["Benchmark", selectedStrategy.benchmark],
+                        ["AUM", `₹${selectedStrategy.aum_crore} Cr`],
+                        ["Inception", selectedStrategy.inception_date],
+                      ].map(([label, value]) => (
+                        <div key={label} className="rounded-lg bg-[#F7F8FA] p-4">
+                          <p className="text-xs uppercase tracking-wider text-muted-foreground">{label}</p>
+                          <p className="mt-2 font-semibold text-[#0B1F3A]">{value}</p>
+                        </div>
+                      ))}
+                    </div>
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">Published returns</h3>
+                      <div className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-5">
+                        {periods.map((item) => {
+                          const displayedValue = String(selectedStrategy[periodKeys[item]]);
+                          return (
+                            <div key={item} className="rounded-lg border border-[#E2E8F0] p-3 text-center">
+                              <p className="text-xs text-muted-foreground">{item}</p>
+                              <p className="mt-1 font-display font-semibold text-[#0B1F3A]">{displayedValue}</p>
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                    <div className="rounded-lg bg-[#FDF8EC] p-4 text-sm leading-relaxed text-[#4A5568]">
+                      Data as of 30 June 2026. Inclusion is for research and does not indicate availability or a SoHo Wealth recommendation. Verify current provider documents, fees and risk disclosures before investing.
+                    </div>
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+                      <Link href="/portfolio-review" className="inline-flex justify-center rounded-lg bg-[#C9A84C] px-5 py-3 font-semibold text-[#0B1F3A]">
+                        Discuss this PMS with SoHo Wealth
+                      </Link>
+                    </div>
+                  </div>
+                </>
+              )}
+            </DialogContent>
+          </Dialog>
+
           <div className="mt-6 grid gap-4 md:grid-cols-[auto_1fr] rounded-xl border border-[#E2E8F0] bg-white p-5">
             <ShieldCheck className="h-6 w-6 text-[#C9A84C]" />
             <div className="font-body text-sm leading-relaxed text-[#4A5568]">
               <p>
-                Source: PMS Bazaar comparison data, as reported by the respective portfolio managers. Returns above one year are annualised and past performance does not guarantee future results. Rankings are period-specific discovery tools—not recommendations. Verify current returns, fees, drawdowns, portfolio concentration, manager continuity and availability before investing.
+                Performance information is compiled from published portfolio-manager data. Returns above one year are annualised and past performance does not guarantee future results. Rankings are period-specific discovery tools—not recommendations. Verify current returns, fees, drawdowns, portfolio concentration, manager continuity and availability before investing.
               </p>
               <Link href="/portfolio-review" className="mt-3 inline-flex items-center gap-2 font-semibold text-[#0B1F3A]">
                 <BarChart3 className="h-4 w-4" /> Review PMS suitability with SoHo Wealth

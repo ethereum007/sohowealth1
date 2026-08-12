@@ -121,11 +121,6 @@ const sebiPmsPerformanceSource = {
   url: "https://www.sebi.gov.in/legal/circulars/dec-2022/performance-benchmarking-and-reporting-of-performance-by-portfolio-managers_66256.html",
 };
 
-const pmsBazaarComparisonSource = {
-  title: "PMS Bazaar: PMS Comparison Universe",
-  url: "https://pmsbazaar.com/Explore/PMS",
-};
-
 const sebiAssetAllocationSource = {
   title: "SEBI Investor: Asset Allocation Calculator",
   url: "https://investor.sebi.gov.in/calculators/Assets_Allocations.html",
@@ -1984,7 +1979,7 @@ export const insightPosts: InsightPost[] = [
       { q: "Are PMS rankings recommendations?", a: "No. Rankings are period-specific research inputs. They do not establish suitability, availability or future performance." },
     ],
     relatedSlugs: ["how-to-read-pms-returns", "pms-vs-mutual-funds-india"],
-    sources: [sebiPmsInvestorSource, sebiPmsPerformanceSource, pmsBazaarComparisonSource],
+    sources: [sebiPmsInvestorSource, sebiPmsPerformanceSource],
   },
   {
     slug: "how-to-read-pms-returns",
@@ -2008,7 +2003,7 @@ export const insightPosts: InsightPost[] = [
         heading: "Start With the Date and the Label",
         body: [
           "Performance tables are snapshots. Check the as-on date before comparing two sources, because one month of difference can materially change rankings in volatile markets. Then check whether the value is an absolute return or an annualised return.",
-          "On the SoHo Wealth table, every strategy is drawn from the same PMS Bazaar comparison snapshot dated 30 June 2026. Missing values remain unavailable rather than being estimated, which prevents an incomplete history from being presented as a zero return.",
+          "On the SoHo Wealth table, every strategy uses the same comparison snapshot dated 30 June 2026. Missing values remain unavailable rather than being estimated, which prevents an incomplete history from being presented as a zero return.",
         ],
       },
       {
@@ -2055,7 +2050,7 @@ export const insightPosts: InsightPost[] = [
       { q: "Should I select the top one-year PMS?", a: "Not on that fact alone. One-year leadership may reflect a temporary style cycle and does not show drawdown, concentration, costs or portfolio fit." },
     ],
     relatedSlugs: ["best-pms-in-india-how-to-compare", "pms-vs-mutual-funds-india"],
-    sources: [sebiPmsPerformanceSource, sebiPmsInvestorSource, pmsBazaarComparisonSource],
+    sources: [sebiPmsPerformanceSource, sebiPmsInvestorSource],
   },
   {
     slug: "pms-vs-mutual-funds-india",
