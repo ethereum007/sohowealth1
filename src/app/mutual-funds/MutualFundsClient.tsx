@@ -10,15 +10,12 @@ import { RelatedServices } from "@/components/seo/RelatedServices";
 const mfServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Mutual Fund Distribution Hyderabad",
-  description: "AMFI-registered mutual fund distribution in Hyderabad with goal mapping, portfolio review, SIP implementation and ongoing service.",
+  name: "Mutual Fund Distribution India",
+  description: "AMFI-registered mutual fund distribution across India with goal mapping, portfolio review, SIP implementation and ongoing service.",
   serviceType: "Mutual Fund Distribution",
   url: "https://www.sohowealth.in/mutual-funds",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
-  areaServed: [
-    { "@type": "City", name: "Hyderabad" },
-    { "@type": "Country", name: "India" },
-  ],
+  areaServed: { "@type": "Country", name: "India" },
   audience: { "@type": "Audience", audienceType: "Retail and HNI investors" },
 };
 

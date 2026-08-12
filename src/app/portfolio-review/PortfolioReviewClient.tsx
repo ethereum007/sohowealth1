@@ -26,7 +26,7 @@ const portfolioReviewServiceSchema = {
   serviceType: "Portfolio Review",
   url: "https://www.sohowealth.in/portfolio-review",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
-  areaServed: [{ "@type": "City", name: "Hyderabad" }, { "@type": "Country", name: "India" }],
+  areaServed: { "@type": "Country", name: "India" },
   audience: { "@type": "Audience", audienceType: "Investors with ₹25 lakh+ portfolios" },
   offers: { "@type": "Offer", price: "0", priceCurrency: "INR", description: "Free 30-minute portfolio review with Kiran Dutta" },
 };

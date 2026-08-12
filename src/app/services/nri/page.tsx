@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import NRIClient from "./NRIClient";
 
 export const metadata: Metadata = {
-  title: "NRI Wealth Planning & Investment Distribution Hyderabad | SoHo Wealth",
+  title: "NRI Wealth Planning India | Investment Distribution | SoHo Wealth",
   description:
-    "NRI portfolio review and investment distribution from Hyderabad for US, UK, UAE, Singapore and Australia NRIs. NRE/NRO, PMS, SIF and mutual funds.",
+    "India-focused portfolio review and investment distribution for NRIs in the US, UK, UAE, Singapore and Australia. NRE/NRO, PMS, SIF and mutual funds.",
   keywords:
-    "NRI investment advisor Hyderabad, NRI wealth management Hyderabad, NRI investment in India, NRE NRO investment advisor, NRI PMS India, FEMA compliant investing",
+    "NRI wealth planning India, NRI investment in India, NRE NRO investment planning, NRI PMS India, FEMA compliant investing, NRI portfolio review",
   alternates: { canonical: "https://www.sohowealth.in/services/nri" },
   openGraph: {
-    title: "NRI Wealth Planning from Hyderabad | SoHo Wealth",
+    title: "NRI Wealth Planning for India-Linked Wealth | SoHo Wealth",
     description:
-      "NRI portfolio review, investment distribution and specialist coordination from Hyderabad.",
+      "NRI portfolio review, investment distribution and specialist coordination for India-linked wealth.",
     url: "https://www.sohowealth.in/services/nri",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "NRI Wealth Planning from Hyderabad | SoHo Wealth",
-    description: "NRI portfolio review and investment distribution from Hyderabad.",
+    title: "NRI Wealth Planning India | SoHo Wealth",
+    description: "NRI portfolio review and investment distribution for India-linked wealth.",
   },
 };
 

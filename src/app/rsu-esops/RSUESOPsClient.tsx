@@ -1,11 +1,9 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { ArrowRight, CheckCircle2, ChevronDown, AlertTriangle, DollarSign, FileText, Shield, TrendingUp, Globe, BarChart3 } from "lucide-react";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import { ArrowRight, CheckCircle2, ChevronDown, AlertTriangle, DollarSign, FileText, Shield, TrendingUp } from "lucide-react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RelatedServices } from "@/components/seo/RelatedServices";
@@ -13,9 +11,9 @@ import { RelatedServices } from "@/components/seo/RelatedServices";
 const rsuServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "RSU & ESOP Advisory for Tech Professionals",
-  description: "End-to-end RSU and ESOP advisory — Indian taxation, FEMA compliance, Schedule FA reporting, and tax-efficient diversification via GIFT City funds and global ETFs.",
-  serviceType: "RSU & ESOP Advisory",
+  name: "RSU & ESOP Portfolio Review for Indian Residents and NRIs",
+  description: "Portfolio review and wealth coordination for Indian residents and NRIs managing RSUs, ESOPs, employer-stock concentration and related specialist questions.",
+  serviceType: "RSU & ESOP Portfolio Review",
   url: "https://www.sohowealth.in/rsu-esops",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   areaServed: [
@@ -24,7 +22,7 @@ const rsuServiceSchema = {
     { "@type": "City", name: "Pune" },
     { "@type": "Country", name: "India" },
   ],
-  audience: { "@type": "Audience", audienceType: "Tech professionals, executives and NRIs holding employer equity" },
+  audience: { "@type": "Audience", audienceType: "Indian residents, NRIs, returning Indians and technology professionals holding employer equity" },
 };
 
 const rsuBreadcrumbs = {
@@ -58,45 +56,30 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 }
 
 const whyDiversify = [
-  { icon: AlertTriangle, title: "Concentration Risk", description: "Too much employer stock means both salary and wealth depend on the same company." },
-  { icon: Shield, title: "US Estate Tax", description: "US imposes up to 40% estate tax on assets above USD 60,000 held by non-US persons." },
-  { icon: FileText, title: "Schedule FA Compliance", description: "Foreign shares, RSUs, and overseas brokerage accounts must be reported annually. Non-reporting is a major compliance risk." },
+  { icon: AlertTriangle, title: "One-company dependency", description: "Salary, bonus, future grants and vested shares can all depend on the same employer." },
+  { icon: Shield, title: "Cross-border questions", description: "Foreign shares can create tax, reporting, estate-planning and foreign-exchange questions that need specialist review." },
+  { icon: FileText, title: "Fragmented records", description: "Payroll, vesting, broker, dividend and sale records need to be reconciled before decisions or filings are made." },
 ];
 
 const diversificationWays = [
-  { title: "Manage in Existing Broker", pros: "No selling required; no immediate tax; keeps funds in USD; access to wider platforms like IBKR", cons: "Limited investment choices; Schedule FA reporting continues; no estate tax mitigation." },
-  { title: "Sell & Reinvest via New Broker", pros: "Wider options to diversify; enables immediate global diversification through foreign ETFs/UCITs", cons: "Triggers immediate tax on capital gains; works only if both brokers support ACATS/DTC." },
-  { title: "Sell & Invest in GIFT City Funds", pros: "Tax-efficient structure; fund-level taxation; no Schedule FA hassle on GIFT City units", cons: "Tax applies on sale of RSUs; requires GIFT City onboarding process." },
+  { title: "Sell at or near vest", pros: "Can prevent new grants from continually increasing an already concentrated position.", cons: "May give up future upside; confirm tax, trading-window and settlement details first." },
+  { title: "Sell a fixed percentage", pros: "Creates a repeatable rule and can fund goals without making an all-or-nothing forecast.", cons: "Concentration may fall slowly when new grants or stock appreciation remain large." },
+  { title: "Reduce toward a written range", pros: "Connects employer stock to the rest of the portfolio, future awards and family goals.", cons: "The range is personal, not universal; implementation may span several vesting or sale dates." },
 ];
 
 const taxationSteps = [
-  { stage: "At Vesting", icon: DollarSign, details: ["RSU value is treated as a taxable salary perquisite", "Some companies auto-sell ~30% of vested shares to cover TDS", "FMV on vesting date becomes your cost of acquisition"] },
-  { stage: "At Sale", icon: TrendingUp, details: ["LTCG at 12.5% (if held > 12 months from vesting)", "STCG at slab rate (if sold within 12 months)", "Capital gains must be reported in ITR"] },
-  { stage: "Annual Reporting", icon: FileText, details: ["Foreign shares must be declared in Schedule FA every year until sold", "Dividends reported under 'Income from Other Sources'", "Foreign tax withheld can be claimed as credit (DTAA)"] },
-];
-
-const giftCityFunds = [
-  { fund: "Ionic", strategy: "Focus on mid-tier IT companies", allocation: "Invests across all markets", ticketSize: "HNI" },
-  { fund: "Mirae", strategy: "Invests in ETFs across global markets", allocation: "50-70% developed, 30-50% emerging", ticketSize: "HNI" },
-  { fund: "Baroda BNP", strategy: "US Small Cap Fund, bottom-up approach", allocation: "100% US Small-Cap", ticketSize: "HNI" },
-  { fund: "DSP", strategy: "Value stocks, market-cap & country agnostic", allocation: "40% US, 32% EU, rest Asia", ticketSize: "$5,000" },
-  { fund: "PPFAS Nasdaq", strategy: "Nasdaq 100 linked UCITS & ETFs", allocation: "90% index, 10% cash/debt", ticketSize: "$5,000" },
-  { fund: "PPFAS S&P", strategy: "S&P 500 linked UCITS & ETFs", allocation: "90% index, 10% cash/debt", ticketSize: "$5,000" },
-];
-
-const giftCityPMS = [
-  { fund: "Phillip Capital", strategy: "Invests in US-listed ETFs, sector agnostic", allocation: "67% US, rest Japan/Taiwan", ticketSize: "$75,000" },
-  { fund: "Marcellus", strategy: "Bottom-up, 25-30 stocks across market caps", allocation: "62% US, rest EU & Canada", ticketSize: "$75,000" },
-  { fund: "PPFAS", strategy: "Value investing, sector 25% cap, single stock 10% cap", allocation: "Global diversified revenues", ticketSize: "$75,000" },
+  { stage: "At Vesting", icon: DollarSign, details: ["Vesting or allotment can create salary or perquisite taxation under the plan and applicable law", "Payroll withholding may reduce the shares delivered", "Keep the vest statement, payslip, share count and value used by the employer"] },
+  { stage: "At Sale", icon: TrendingUp, details: ["A later sale is a separate capital-gains event", "The holding period, rate and foreign-tax treatment depend on the security, residential status and current law", "Reconcile trade records and report the transaction in the applicable ITR schedules"] },
+  { stage: "Annual Reporting", icon: FileText, details: ["Foreign shares, accounts, income and tax credits can require different ITR schedules", "Residential status and the relevant reporting period matter", "A CA should determine the applicable schedules, values and foreign-tax-credit claim"] },
 ];
 
 const faqs = [
-  { q: "What is the difference between RSUs and ESOPs?", a: "RSUs (Restricted Stock Units) are company shares granted to employees that vest over time \u2014 you don't pay anything to acquire them. ESOPs (Employee Stock Option Plans) give you the option to buy shares at a pre-determined price. RSUs have value from day one; ESOPs have value only if the stock price exceeds the exercise price." },
-  { q: "When are RSUs taxed in India?", a: "RSUs are taxed at two points: first as a salary perquisite when they vest (based on FMV on vesting date), and again as capital gains when you sell. LTCG applies if held over 12 months from vesting; otherwise STCG at your slab rate." },
-  { q: "What is the FEMA 180-day rule for RSU proceeds?", a: "As per FEMA guidelines, if a resident Indian sells RSUs and keeps the USD proceeds with a foreign broker, the funds must be repatriated to India within 180 days \u2014 unless they are reinvested abroad (e.g., moved to another foreign broker or routed through a GIFT City account)." },
-  { q: "Do I need to report unsold RSUs in my tax return?", a: "Yes. Foreign shares, including unsold RSUs, must be declared in Schedule FA of your ITR every year until they are sold. Non-reporting is a significant compliance risk." },
-  { q: "How can GIFT City funds help with RSU diversification?", a: "GIFT City funds are taxed at the fund level, not the investor level. When you redeem, there is no additional capital gains tax. This makes them a tax-efficient way to diversify RSU proceeds into global markets while staying compliant with Indian regulations." },
-  { q: "Can SoHo Wealth help me with RSU tax planning?", a: "Yes. We provide end-to-end RSU advisory \u2014 from understanding your vesting schedule and tax implications to building a diversified portfolio through GIFT City funds, global ETFs, and domestic alternatives. We work alongside your CA for complete compliance." },
+  { q: "What is the difference between RSUs and ESOPs?", a: "An RSU is generally a conditional promise that may settle into shares or cash under the plan after vesting. An employee stock option generally gives you a right to buy shares at a stated exercise price after its conditions are met. The cash requirement, downside, expiry terms and tax events differ, so read the actual grant documents." },
+  { q: "When are RSUs taxed in India?", a: "RSUs or similar employer shares can involve salary or perquisite taxation when shares vest or are allotted, followed by a separate capital-gains calculation when shares are sold. The valuation, holding period, rate and foreign-tax treatment depend on the plan, security, residential status and current law. Reconcile the vest statement and payslip with a CA." },
+  { q: "What is the FEMA 180-day rule for RSU proceeds?", a: "Do not assume every foreign cash balance can remain abroad indefinitely. RBI guidance distinguishes retained or reinvested income, realised or unused foreign exchange and the underlying investment route. Its LRS FAQ includes a 180-day rule in specified circumstances and notes that additional overseas-investment requirements can apply. Confirm the facts with an authorised dealer bank or FEMA specialist." },
+  { q: "Do I need to report unsold RSUs in my tax return?", a: "Foreign shares or accounts may create Schedule FA and foreign-income reporting requirements depending on residential status, ownership, account structure and the relevant reporting period. Unvested units should not automatically be treated as owned shares. A CA familiar with foreign equity compensation should determine the correct schedules and values." },
+  { q: "How can GIFT City funds help with RSU diversification?", a: "An appropriately authorised GIFT-IFSC offering may be one route to compare, but there is no blanket tax or reporting conclusion. Products differ by legal structure, domicile, eligibility, assets, liquidity, costs and current tax treatment. Review the offer documents and obtain advice for your circumstances." },
+  { q: "Can SoHo Wealth help me with RSU tax planning?", a: "SoHo Wealth can organise your employer-stock exposure, vesting records, family goals and diversification choices into a coordinated portfolio review. Tax returns, legal opinions, FEMA conclusions and security-level recommendations should be handled by appropriately qualified professionals; we help frame and coordinate those specialist questions." },
 ];
 
 const RSUESOPsClient = () => {
@@ -123,9 +106,9 @@ const RSUESOPsClient = () => {
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ background: "linear-gradient(135deg, #0B1F3A 0%, #132D50 100%)" }}>
         <div className="container mx-auto px-6 lg:px-8 relative z-10">
           <AnimatedSection className="max-w-3xl">
-            <div className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6" style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C" }}>Corporate Stock Advisory</div>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Fix Your <span style={{ color: "#C9A84C" }}>RSUs & ESOPs</span></h1>
-            <p className="text-lg text-white/70 leading-relaxed mb-8 max-w-2xl">Your employer stock is a wealth-building asset \u2014 but without a plan, it's a concentration risk. We help tech professionals navigate taxation, FEMA compliance, and smart diversification strategies.</p>
+            <div className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase mb-6" style={{ backgroundColor: "rgba(201,168,76,0.15)", color: "#C9A84C" }}>RSU wealth planning</div>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Your RSUs are compensation today—and a <span style={{ color: "#C9A84C" }}>portfolio decision tomorrow.</span></h1>
+            <p className="text-lg text-white/70 leading-relaxed mb-8 max-w-2xl">When salary, future grants and investments depend on the same employer, a successful career can quietly create a concentrated financial life. Bring the records, risks and goals into one coordinated plan.</p>
             <div className="flex flex-wrap gap-4">
               <Button size="lg" className="h-14 px-8 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }} onClick={scrollToForm}>Book Free Consultation<ArrowRight className="ml-2 w-5 h-5" /></Button>
               <Button asChild size="lg" variant="outline" className="h-14 px-8 font-semibold border-white/30 text-white hover:bg-white/10">
@@ -140,10 +123,11 @@ const RSUESOPsClient = () => {
       <section className="py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <AnimatedSection className="max-w-3xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6" style={{ color: "#0B1F3A" }}>The RSU Dilemma Most Professionals Face</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6" style={{ color: "#0B1F3A" }}>Your true employer exposure is larger than one brokerage balance</h2>
             <div className="p-8 rounded-2xl border" style={{ backgroundColor: "rgba(201,168,76,0.04)", borderColor: "rgba(201,168,76,0.2)" }}>
-              <p className="text-lg leading-relaxed mb-4" style={{ color: "#4A5568" }}><strong style={{ color: "#0B1F3A" }}>Consider Arjun</strong>, a software engineer with a CTC of \u20B950 lakh. \u20B95 lakh comes as RSUs. Over five years, due to stock price growth, his RSU holdings have grown to <strong>\u20B92.5 crore</strong>.</p>
-              <p className="text-lg leading-relaxed" style={{ color: "#4A5568" }}>About <strong>50% of Arjun's entire net worth</strong> sits in one stock. While he's bullish on the company, the concentration risk is real. This is the exact situation many senior tech professionals in India face today.</p>
+              <p className="text-lg leading-relaxed mb-4" style={{ color: "#4A5568" }}><strong style={{ color: "#0B1F3A" }}>Measure more than vested shares.</strong> Add salary, bonus, unvested awards, career prospects and investments in the same sector to understand how much of your financial life depends on one company.</p>
+              <p className="text-lg leading-relaxed" style={{ color: "#4A5568" }}>Fidelity says a single position of 5% or more may be considered concentrated; Schwab identifies more than 10% as a point of concern. These are review triggers—not automatic sell rules.</p>
+              <div className="mt-5 flex flex-wrap gap-4 text-sm font-semibold"><a className="text-[#8B6815] underline underline-offset-4" href="https://www.fidelity.com/learning-center/wealth-management-insights/concentrated-stock-positions" target="_blank" rel="noopener noreferrer">Fidelity research</a><a className="text-[#8B6815] underline underline-offset-4" href="https://www.schwab.com/learn/story/risk-holding-too-much-company-stock" target="_blank" rel="noopener noreferrer">Schwab research</a></div>
             </div>
           </AnimatedSection>
         </div>
@@ -152,7 +136,7 @@ const RSUESOPsClient = () => {
       {/* Why Diversify */}
       <section className="py-24 lg:py-32 bg-muted/30" ref={ref}>
         <div className="container mx-auto px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16"><h2 className="font-display text-3xl md:text-4xl font-semibold mb-4" style={{ color: "#0B1F3A" }}>Why You <span style={{ color: "#C9A84C" }}>Must Diversify</span></h2></AnimatedSection>
+          <AnimatedSection className="text-center mb-16"><h2 className="font-display text-3xl md:text-4xl font-semibold mb-4" style={{ color: "#0B1F3A" }}>Why your RSUs need a <span style={{ color: "#C9A84C" }}>written review</span></h2></AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {whyDiversify.map((item, i) => (
               <motion.div key={item.title} initial={{ opacity: 0, y: 30 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.5, delay: i * 0.1 }} className="p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all">
@@ -168,7 +152,7 @@ const RSUESOPsClient = () => {
       {/* How RSUs Are Taxed */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-16"><h2 className="font-display text-3xl md:text-4xl font-semibold mb-4" style={{ color: "#0B1F3A" }}>How RSUs Are <span style={{ color: "#C9A84C" }}>Taxed in India</span></h2><p className="text-lg max-w-2xl mx-auto" style={{ color: "#4A5568" }}>Understanding the two-stage taxation is critical for optimal planning.</p></AnimatedSection>
+          <AnimatedSection className="text-center mb-16"><h2 className="font-display text-3xl md:text-4xl font-semibold mb-4" style={{ color: "#0B1F3A" }}>RSU tax and reporting <span style={{ color: "#C9A84C" }}>touchpoints in India</span></h2><p className="text-lg max-w-2xl mx-auto" style={{ color: "#4A5568" }}>Separate the vesting, sale and annual-reporting records, then confirm the treatment for your plan and residential status.</p></AnimatedSection>
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {taxationSteps.map((step, i) => (
               <AnimatedSection key={step.stage}>
@@ -203,73 +187,53 @@ const RSUESOPsClient = () => {
         </div>
       </section>
 
-      {/* FEMA 180-Day Rule */}
+      {/* FEMA and overseas proceeds */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <AnimatedSection className="max-w-3xl mx-auto">
             <div className="p-10 rounded-2xl border" style={{ backgroundColor: "rgba(11,31,58,0.03)", borderColor: "rgba(11,31,58,0.1)" }}>
-              <div className="flex items-center gap-3 mb-5"><Shield className="w-8 h-8" style={{ color: "#C9A84C" }} /><h2 className="font-display text-2xl md:text-3xl font-semibold" style={{ color: "#0B1F3A" }}>FEMA: The 180-Day Rule</h2></div>
-              <p className="text-lg leading-relaxed mb-6" style={{ color: "#4A5568" }}>As per FEMA guidelines, if a resident Indian sells RSUs and keeps the USD proceeds with a foreign broker, the funds must be <strong>repatriated back to India within 180 days</strong>, unless they are reinvested abroad.</p>
-              <p className="text-sm leading-relaxed" style={{ color: "#4A5568" }}>The same 180-day rule applies when USD proceeds are moved to another foreign broker or routed through a GIFT City account. Investors must ensure timely reinvestment or repatriation to stay compliant.</p>
+              <div className="flex items-center gap-3 mb-5"><Shield className="w-8 h-8" style={{ color: "#C9A84C" }} /><h2 className="font-display text-2xl md:text-3xl font-semibold" style={{ color: "#0B1F3A" }}>FEMA: verify the route before moving proceeds</h2></div>
+              <p className="text-lg leading-relaxed mb-6" style={{ color: "#4A5568" }}>Do not assume every foreign cash balance can remain abroad indefinitely—or that every balance must automatically be remitted. RBI guidance distinguishes retained or reinvested income, realised or unused foreign exchange and the investment route.</p>
+              <p className="text-sm leading-relaxed" style={{ color: "#4A5568" }}>The RBI LRS FAQ includes a 180-day requirement in specified circumstances and says additional overseas-investment rules may apply. Confirm your plan and broker flow with an authorised dealer bank or FEMA specialist before acting. <a className="font-semibold text-[#8B6815] underline underline-offset-4" href="https://www.rbi.org.in/scripts/FAQDisplay.aspx?Id=115" target="_blank" rel="noopener noreferrer">Read the RBI guidance</a>.</p>
             </div>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* GIFT City Funds */}
       <section className="py-24 lg:py-32 bg-muted/30">
         <div className="container mx-auto px-6 lg:px-8">
-          <AnimatedSection className="text-center mb-6">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4" style={{ color: "#0B1F3A" }}>GIFT City <span style={{ color: "#C9A84C" }}>Outbound Funds</span></h2>
-            <p className="text-lg max-w-2xl mx-auto mb-2" style={{ color: "#4A5568" }}>GIFT City funds are taxed at the fund level, not the investor level. When you redeem, there is no additional capital gains tax \u2014 making them highly tax-efficient for RSU diversification.</p>
-          </AnimatedSection>
-          <AnimatedSection className="mb-12">
-            <h3 className="font-display text-xl font-semibold mb-4" style={{ color: "#0B1F3A" }}><Globe className="w-5 h-5 inline mr-2" style={{ color: "#C9A84C" }} />Outbound Funds & Retail Funds</h3>
-            <div className="rounded-xl border border-border overflow-hidden bg-card">
-              <Table>
-                <TableHeader><TableRow style={{ backgroundColor: "#0B1F3A" }}><TableHead className="text-white font-semibold">Fund</TableHead><TableHead className="text-white font-semibold">Strategy</TableHead><TableHead className="text-white font-semibold hidden md:table-cell">Allocation</TableHead><TableHead className="text-white font-semibold">Min. Ticket</TableHead></TableRow></TableHeader>
-                <TableBody>{giftCityFunds.map((f) => (<TableRow key={f.fund + f.strategy}><TableCell className="font-semibold" style={{ color: "#0B1F3A" }}>{f.fund}</TableCell><TableCell style={{ color: "#4A5568" }}>{f.strategy}</TableCell><TableCell className="hidden md:table-cell" style={{ color: "#4A5568" }}>{f.allocation}</TableCell><TableCell><span className="inline-block px-2 py-1 rounded text-xs font-semibold" style={{ backgroundColor: "rgba(201,168,76,0.12)", color: "#C9A84C" }}>{f.ticketSize}</span></TableCell></TableRow>))}</TableBody>
-              </Table>
+          <AnimatedSection className="max-w-5xl mx-auto">
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-4 text-center" style={{ color: "#0B1F3A" }}>Dividends, Estate Tax & <span style={{ color: "#C9A84C" }}>Reinvestment</span></h2>
+            <p className="text-center text-lg mb-10 max-w-3xl mx-auto" style={{ color: "#4A5568" }}>The details matter as much as the stock-sale decision. Keep a record of every dividend, withholding entry, sale and transfer.</p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[
+                ["Dividend records", "Keep broker dividend statements and Form 1042-S where issued. U.S. withholding and Indian foreign-tax-credit claims require records; discuss Form 67 and ITR reporting with your CA."],
+                ["U.S. estate-tax review", "U.S.-corporation stock can be U.S.-situated property for a non-U.S. citizen/non-U.S. domiciliary. Above USD 60,000, an executor may face a U.S. estate-tax filing question. Estate planning needs specialist advice."],
+                ["Diversifying abroad", "After a sale, compare repatriation and permitted reinvestment routes, including foreign-bank or broker arrangements where available. UCITS ETFs can be considered for diversified exposure, but assess domicile, costs, tax and suitability first."],
+              ].map(([title, copy]) => (
+                <div key={title} className="rounded-2xl border border-border bg-card p-7">
+                  <h3 className="font-display text-xl font-semibold mb-3" style={{ color: "#0B1F3A" }}>{title}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "#4A5568" }}>{copy}</p>
+                </div>
+              ))}
             </div>
-          </AnimatedSection>
-          <AnimatedSection>
-            <h3 className="font-display text-xl font-semibold mb-4" style={{ color: "#0B1F3A" }}><BarChart3 className="w-5 h-5 inline mr-2" style={{ color: "#C9A84C" }} />GIFT City PMS Strategies (Min. $75,000)</h3>
-            <div className="rounded-xl border border-border overflow-hidden bg-card">
-              <Table>
-                <TableHeader><TableRow style={{ backgroundColor: "#0B1F3A" }}><TableHead className="text-white font-semibold">Fund</TableHead><TableHead className="text-white font-semibold">Strategy</TableHead><TableHead className="text-white font-semibold hidden md:table-cell">Allocation</TableHead></TableRow></TableHeader>
-                <TableBody>{giftCityPMS.map((f) => (<TableRow key={f.fund}><TableCell className="font-semibold" style={{ color: "#0B1F3A" }}>{f.fund}</TableCell><TableCell style={{ color: "#4A5568" }}>{f.strategy}</TableCell><TableCell className="hidden md:table-cell" style={{ color: "#4A5568" }}>{f.allocation}</TableCell></TableRow>))}</TableBody>
-              </Table>
-            </div>
+            <p className="mt-8 text-xs leading-relaxed text-center" style={{ color: "#64748B" }}>Educational information, current as reviewed in August 2026. Laws, treaty status, broker capabilities and RBI/Income-tax interpretations can change. Get advice for your own facts before acting.</p>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Schedule FA Reporting */}
+      {/* Specialist-ready records */}
       <section className="py-24 lg:py-32 bg-white">
         <div className="container mx-auto px-6 lg:px-8">
           <AnimatedSection className="max-w-4xl mx-auto">
-            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6 text-center" style={{ color: "#0B1F3A" }}>Schedule FA <span style={{ color: "#C9A84C" }}>Reporting Guide</span></h2>
-            <p className="text-center text-lg mb-10" style={{ color: "#4A5568" }}>Using Arjun's example: 500 shares allotted on 15 Jan 2025, FMV $85/share, 100 sold during CY 2025.</p>
-            <div className="rounded-xl border border-border overflow-hidden bg-card mb-8">
-              <Table>
-                <TableHeader><TableRow style={{ backgroundColor: "#0B1F3A" }}><TableHead className="text-white font-semibold">Item</TableHead><TableHead className="text-white font-semibold">Held Shares (400)</TableHead><TableHead className="text-white font-semibold">Sold Shares (100)</TableHead></TableRow></TableHeader>
-                <TableBody>
-                  <TableRow><TableCell className="font-semibold" style={{ color: "#0B1F3A" }}>Initial Value</TableCell><TableCell style={{ color: "#4A5568" }}>400 \u00d7 $85 \u00d7 \u20B990 = \u20B930,60,000</TableCell><TableCell style={{ color: "#4A5568" }}>100 \u00d7 $85 \u00d7 \u20B990 = \u20B97,65,000</TableCell></TableRow>
-                  <TableRow><TableCell className="font-semibold" style={{ color: "#0B1F3A" }}>Peak Value (CY 2025)</TableCell><TableCell style={{ color: "#4A5568" }}>\u20B930,60,000</TableCell><TableCell style={{ color: "#4A5568" }}>Nil (sold)</TableCell></TableRow>
-                  <TableRow><TableCell className="font-semibold" style={{ color: "#0B1F3A" }}>Closing Value</TableCell><TableCell style={{ color: "#4A5568" }}>400 shares</TableCell><TableCell style={{ color: "#4A5568" }}>Nil</TableCell></TableRow>
-                  <TableRow><TableCell className="font-semibold" style={{ color: "#0B1F3A" }}>Sale Proceeds</TableCell><TableCell style={{ color: "#4A5568" }}>\u2014</TableCell><TableCell style={{ color: "#4A5568" }}>\u20B97,65,000</TableCell></TableRow>
-                </TableBody>
-              </Table>
+            <h2 className="font-display text-3xl md:text-4xl font-semibold mb-6 text-center" style={{ color: "#0B1F3A" }}>Build one <span style={{ color: "#C9A84C" }}>specialist-ready RSU file</span></h2>
+            <p className="text-center text-lg mb-10" style={{ color: "#4A5568" }}>An RSU grant, vest, withholding sale, broker credit, dividend and later sale are different events. Keep the source records instead of relying only on a broker gain figure.</p>
+            <div className="grid gap-4 md:grid-cols-2">
+              {["Grant and vesting statements", "Payslips and employer tax records for vest months", "Broker transaction history and year-end statements", "Share counts, vest dates, sale dates and reported values", "Dividend and foreign-tax documents", "Bank, remittance and currency-conversion records", "Current value of vested employer shares", "Schedule and approximate value of unvested awards"].map((item) => (
+                <div key={item} className="flex items-start gap-3 rounded-xl border border-border bg-card p-5"><CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#C9A84C]" /><span className="text-sm leading-relaxed text-[#4A5568]">{item}</span></div>
+              ))}
             </div>
-            <div className="p-6 rounded-xl" style={{ backgroundColor: "rgba(201,168,76,0.06)", border: "1px solid rgba(201,168,76,0.15)" }}>
-              <p className="text-sm font-semibold mb-2" style={{ color: "#0B1F3A" }}>Key Notes:</p>
-              <ul className="space-y-1.5 text-sm" style={{ color: "#4A5568" }}>
-                <li>\u2022 Date of acquiring interest = Date of allotment (vesting date)</li>
-                <li>\u2022 Initial value = FMV on allotment date \u00d7 number of shares</li>
-                <li>\u2022 Peak value differs for held vs. sold shares (entire CY vs. allotment-to-sale period)</li>
-                <li>\u2022 Dividends must also be reported in Schedule FA and under "Income from Other Sources"</li>
-              </ul>
-            </div>
+            <div className="mt-8 rounded-xl border border-[#C9A84C]/20 bg-[#FDF9EF] p-6 text-sm leading-relaxed text-[#4A5568]">Schedule FA, foreign-income and foreign-tax-credit requirements depend on residential status, ownership, account structure and the reporting period. Use the <a className="font-semibold text-[#8B6815] underline underline-offset-4" href="https://www.incometax.gov.in/iec/foportal/nudge/nudge-schedule-fa" target="_blank" rel="noopener noreferrer">Income Tax Department guidance</a> and have a qualified CA determine the schedules and values applicable to you.</div>
           </AnimatedSection>
         </div>
       </section>
@@ -287,9 +251,9 @@ const RSUESOPsClient = () => {
       {/* Lead Capture */}
       <LeadCaptureForm source="RSU/ESOP page" heading="Book Your RSU & ESOP Consultation" sectionId="rsu-consultation" leftContent={
         <div>
-          <h3 className="font-display text-2xl font-semibold text-white mb-4">Get Expert RSU Guidance</h3>
+          <h3 className="font-display text-2xl font-semibold text-white mb-4">Book an RSU & ESOP Consultation</h3>
           <ul className="space-y-3">
-            {["Personalized RSU tax optimization strategy", "FEMA & Schedule FA compliance review", "GIFT City fund recommendations", "Portfolio diversification roadmap"].map((item) => (
+            {["Employer-stock concentration and portfolio review", "RSU, dividend and foreign-asset record checklist", "Questions to take to your CA, bank and broker", "Diversification-route comparison based on your goals"].map((item) => (
               <li key={item} className="flex items-start gap-2.5"><CheckCircle2 className="w-5 h-5 mt-0.5 shrink-0" style={{ color: "#C9A84C" }} /><span className="text-white/80 text-sm">{item}</span></li>
             ))}
           </ul>
@@ -298,8 +262,8 @@ const RSUESOPsClient = () => {
 
       <RelatedServices
         items={[
-          { title: "Global Investing", href: "/global-investing", description: "Diversify RSU proceeds via LRS, GIFT City funds and US-stock platforms with full FEMA support." },
-          { title: "NRI Advisory", href: "/services/nri", description: "Holding RSUs while working abroad? FEMA-compliant India + global guidance." },
+          { title: "Global Investing", href: "/global-investing", description: "Compare eligible India, IFSC and overseas diversification routes, including their costs, liquidity and specialist questions." },
+          { title: "NRI Advisory", href: "/services/nri", description: "Coordinate foreign employer shares with residency, India goals and cross-border specialist advice." },
           { title: "Mutual Funds Advisory", href: "/mutual-funds", description: "Build the Indian leg of a diversified portfolio alongside your employer equity." },
         ]}
         heading="Where to Diversify Your RSUs"

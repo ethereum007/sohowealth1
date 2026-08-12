@@ -1,471 +1,208 @@
 "use client";
 
-import {
-  BarChart3,
-  ChevronDown,
-  ChevronLeft,
-  ChevronRight,
-  ChevronUp,
-  ExternalLink,
-  Repeat2,
-  Scale,
-  Search,
-  ShieldCheck,
-  TrendingUp,
-} from "lucide-react";
+import { BarChart3, ChevronLeft, ChevronRight, ExternalLink, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import { useMemo, useState } from "react";
-import { pmsPerformanceMeta } from "@/lib/pms/performance-data";
-import {
-  pmsInsightReturnMeta,
-  pmsInsightReturnRows,
-  type PmsInsightReturnRow,
-} from "@/lib/pms/insight-returns-data";
-import { pmsUniverseApproaches } from "@/lib/pms/universe-data";
+import pmsBazaarData from "../../../data/pmsbazaar/pms_comparison_2026-06-30_scraped_2026-08-12.json";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
-type PmsRankingPeriod = "1 Month" | "3 Months" | "6 Months" | "1 Year" | "3 Years";
+type Period = "1M" | "3M" | "6M" | "1Y" | "2Y" | "3Y" | "5Y" | "10Y" | "SI";
+type PmsRecord = (typeof pmsBazaarData.records)[number];
 
-const periods: PmsRankingPeriod[] = ["1 Month", "3 Months", "6 Months", "1 Year", "3 Years"];
-const rankingPageSize = 25;
-const initialRankingPages: Record<PmsRankingPeriod, number> = {
-  "1 Month": 1,
-  "3 Months": 1,
-  "6 Months": 1,
-  "1 Year": 1,
-  "3 Years": 1,
+const periods: Period[] = ["1M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "10Y", "SI"];
+const periodKeys: Record<Period, keyof PmsRecord> = {
+  "1M": "return_1m", "3M": "return_3m", "6M": "return_6m", "1Y": "return_1y",
+  "2Y": "return_2y", "3Y": "return_3y", "5Y": "return_5y", "10Y": "return_10y", SI: "return_since_inception",
 };
+const pageSize = 25;
 
-const periodReturnKeys: Record<PmsRankingPeriod, keyof PmsInsightReturnRow> = {
-  "1 Month": "oneMonthPct",
-  "3 Months": "threeMonthsPct",
-  "6 Months": "sixMonthsPct",
-  "1 Year": "oneYearPct",
-  "3 Years": "threeYearsPct",
-};
+function numericReturn(value: string) {
+  const parsed = Number.parseFloat(value.replace("%", ""));
+  return Number.isFinite(parsed) ? parsed : null;
+}
 
-const analysisCards = [
-  {
-    icon: Search,
-    title: "Universe first, leaderboard second",
-    copy: `APMI lists ${pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")} investment approaches across ${pmsPerformanceMeta.providerCount.toLocaleString("en-IN")} providers. The table below is only a recent performance slice, useful for discovery and not final selection.`,
-  },
-  {
-    icon: Repeat2,
-    title: "Repeat leaders deserve attention",
-    copy: "Strategies that keep appearing across short and longer periods are worth reviewing more deeply. Repeated presence is a signal to investigate process, not proof of suitability.",
-  },
-  {
-    icon: BarChart3,
-    title: "As-on dates matter",
-    copy: "The broadest comparable IA Insight set is Apr-2026. Some PMS pages have older latest dates, so the ranking keeps the shared month visible instead of blending stale rows into the top table.",
-  },
-  {
-    icon: Scale,
-    title: "Selection needs a full framework",
-    copy: "Before investing, review drawdowns, tax impact, fee structure, manager continuity, mandate style and how the PMS complements your mutual funds, SIFs or AIFs.",
-  },
-];
-
-function formatPct(value: number | null) {
-  return typeof value === "number" ? `${value.toFixed(2)}%` : "NA";
+function strategyName(row: PmsRecord) {
+  const prefix = `${row.amc_name} - `;
+  return row.strategy_display_name.startsWith(prefix)
+    ? row.strategy_display_name.slice(prefix.length)
+    : row.strategy_display_name;
 }
 
 export function PmsPerformanceLeadersSection() {
-  const [searchQuery, setSearchQuery] = useState("");
-  const [universeSearchQuery, setUniverseSearchQuery] = useState("");
-  const [rankingPageByPeriod, setRankingPageByPeriod] = useState(initialRankingPages);
-  const [showUniverse, setShowUniverse] = useState(false);
-  const insightReturnIds = useMemo(() => new Set(pmsInsightReturnRows.map((row) => row.iaId)), []);
+  const [query, setQuery] = useState("");
+  const [category, setCategory] = useState("all");
+  const [period, setPeriod] = useState<Period>("1Y");
+  const [page, setPage] = useState(1);
 
-  const updateSearchQuery = (value: string) => {
-    setSearchQuery(value);
-    setRankingPageByPeriod(initialRankingPages);
-  };
+  const categories = useMemo(
+    () => [...new Set(pmsBazaarData.records.map((row) => row.category))].sort(),
+    [],
+  );
 
-  const rankedRowsByPeriod = useMemo(() => {
-    const query = searchQuery.trim().toLowerCase();
+  const rows = useMemo(() => {
+    const normalizedQuery = query.trim().toLowerCase();
+    const key = periodKeys[period];
+    return pmsBazaarData.records
+      .map((row) => ({ row, value: numericReturn(String(row[key])) }))
+      .filter(({ row, value }) => value !== null
+        && (category === "all" || row.category === category)
+        && (!normalizedQuery || `${row.strategy_display_name} ${row.amc_name} ${row.benchmark}`.toLowerCase().includes(normalizedQuery)))
+      .sort((a, b) => (b.value ?? -Infinity) - (a.value ?? -Infinity));
+  }, [category, period, query]);
 
-    return periods.reduce((acc, period) => {
-      const returnKey = periodReturnKeys[period];
-      const comparableRows = pmsInsightReturnRows.filter(
-        (row) => row.asOnLabel === pmsInsightReturnMeta.broadAsOnLabel && typeof row[returnKey] === "number",
-      );
-      const rankedRows = [...comparableRows]
-        .sort((first, second) => Number(second[returnKey]) - Number(first[returnKey]))
-        .map((row, index) => ({ ...row, rank: index + 1, returnPct: Number(row[returnKey]) }));
-
-      acc[period] = query
-        ? rankedRows.filter((row) =>
-            `${row.name} ${row.asOnLabel ?? ""}`.toLowerCase().includes(query),
-          )
-        : rankedRows;
-
-      return acc;
-    }, {} as Record<PmsRankingPeriod, Array<PmsInsightReturnRow & { rank: number; returnPct: number }>>);
-  }, [searchQuery]);
-
-  const filteredUniverseApproaches = useMemo(() => {
-    const query = universeSearchQuery.trim().toLowerCase();
-
-    if (!query) {
-      return pmsUniverseApproaches;
-    }
-
-    return pmsUniverseApproaches.filter((approach) => approach.name.toLowerCase().includes(query));
-  }, [universeSearchQuery]);
+  const pageCount = Math.max(1, Math.ceil(rows.length / pageSize));
+  const currentPage = Math.min(page, pageCount);
+  const visibleRows = rows.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const resetPage = () => setPage(1);
 
   return (
-    <section className="py-24 lg:py-32" style={{ backgroundColor: "#F7F8FA" }}>
+    <section className="bg-[#F7F8FA] py-24 lg:py-32">
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="mx-auto max-w-6xl">
-          <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-end">
-            <div>
-              <p
-                className="font-body mb-4 text-xs font-bold uppercase tracking-[0.15em]"
-                style={{ color: "#C9A84C" }}
-              >
-                APMI performance scan
+        <div className="mx-auto max-w-7xl">
+          <div className="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div className="max-w-3xl">
+              <p className="font-body mb-4 text-xs font-bold uppercase tracking-[0.15em] text-[#C9A84C]">
+                Independent PMS research universe
               </p>
-              <h2
-                className="font-display text-3xl font-semibold leading-tight md:text-4xl lg:text-5xl"
-                style={{ color: "#0B1F3A" }}
-              >
-                Recent PMS performance leaders
+              <h2 className="font-display text-3xl font-semibold leading-tight text-[#0B1F3A] md:text-4xl lg:text-5xl">
+                Compare 556 PMS strategies across India
               </h2>
-              <p className="font-body mt-5 text-base leading-relaxed" style={{ color: "#4A5568" }}>
-                A source-backed PMS universe from APMI, now enriched with IA Insight page returns for most strategies.
-                Comparable rankings use the broadest shared as-on month.
+              <p className="font-body mt-5 text-base leading-relaxed text-[#4A5568]">
+                Explore published performance, category, benchmark, AUM and inception data. Inclusion here does not mean a strategy is available through or recommended by SoHo Wealth.
               </p>
             </div>
-
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">As on</p>
-                <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  {pmsInsightReturnMeta.broadAsOnLabel}
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">Full universe</p>
-                <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")}
-                </p>
-                <p className="font-body mt-1 text-xs text-muted-foreground">
-                  investment approaches
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">IA Insight returns</p>
-                <p className="font-display mt-2 text-xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  {pmsInsightReturnMeta.withReturns.toLocaleString("en-IN")}
-                </p>
-                <p className="font-body mt-1 text-xs text-muted-foreground">
-                  strategies with detail-page returns
-                </p>
-              </div>
-              <div className="rounded-lg bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
-                <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">Source</p>
-                <a
-                  href={pmsPerformanceMeta.sourceUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-display mt-2 inline-flex items-center gap-1.5 text-lg font-semibold hover:opacity-75"
-                  style={{ color: "#0B1F3A" }}
-                >
-                  APMI <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+              {[
+                ["Strategies", "556"],
+                ["As on", "30 Jun 2026"],
+                ["Periods", "9"],
+              ].map(([label, value]) => (
+                <div key={label} className="rounded-xl bg-white p-5 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
+                  <p className="font-body text-xs uppercase tracking-widest text-muted-foreground">{label}</p>
+                  <p className="font-display mt-2 whitespace-nowrap text-xl font-semibold text-[#0B1F3A]">{value}</p>
+                </div>
+              ))}
             </div>
           </div>
 
-          <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-            {analysisCards.map((item) => {
-              const Icon = item.icon;
-              return (
-                <div
-                  key={item.title}
-                  className="rounded-xl bg-white p-6 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]"
-                >
-                  <div
-                    className="mb-5 inline-flex h-11 w-11 items-center justify-center rounded-lg"
-                    style={{ backgroundColor: "#FDF8EC", color: "#0B1F3A" }}
-                  >
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <h3 className="font-display text-lg font-semibold" style={{ color: "#0B1F3A" }}>
-                    {item.title}
-                  </h3>
-                  <p className="font-body mt-3 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
-                    {item.copy}
-                  </p>
-                </div>
-              );
-            })}
-          </div>
-
-          <Tabs defaultValue="1 Month" className="mt-12">
-            <div className="mb-5 flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-              <div>
-                <h3 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  Complete PMS ranking list
-                </h3>
-                <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
-                  Ranked from highest to lowest return across monthly and yearly periods using{" "}
-                  {pmsInsightReturnMeta.broadAsOnCount.toLocaleString("en-IN")} IA Insight rows with the same{" "}
-                  {pmsInsightReturnMeta.broadAsOnLabel} as-on month.
-                </p>
-              </div>
-              <div className="relative w-full lg:max-w-sm">
+          <div className="mt-12 rounded-2xl bg-white p-5 shadow-[0_12px_40px_-22px_rgba(11,31,58,0.35)] md:p-7">
+            <div className="grid gap-4 lg:grid-cols-[1fr_280px]">
+              <div className="relative">
                 <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
-                  value={searchQuery}
-                  onChange={(event) => updateSearchQuery(event.target.value)}
-                  placeholder="Search PMS or provider"
-                  className="h-11 rounded-lg border-[#CBD5E1] bg-white pl-10 font-body"
+                  value={query}
+                  onChange={(event) => { setQuery(event.target.value); resetPage(); }}
+                  placeholder="Search strategy, AMC or benchmark"
+                  aria-label="Search PMS strategies"
+                  className="h-11 border-[#CBD5E1] pl-10"
                 />
               </div>
+              <Select value={category} onValueChange={(value) => { setCategory(value); resetPage(); }}>
+                <SelectTrigger className="h-11 border-[#CBD5E1]" aria-label="Filter by PMS category">
+                  <SelectValue placeholder="All categories" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="all">All categories</SelectItem>
+                  {categories.map((item) => <SelectItem key={item} value={item}>{item}</SelectItem>)}
+                </SelectContent>
+              </Select>
             </div>
 
-            <TabsList className="h-auto w-full justify-start gap-2 overflow-x-auto rounded-lg bg-white p-2 shadow-sm md:w-auto">
-              {periods.map((period) => (
-                <TabsTrigger
-                  key={period}
-                  value={period}
-                  className="rounded-md px-5 py-3 font-body text-sm font-semibold data-[state=active]:shadow-none"
-                  style={{ color: "#0B1F3A" }}
-                >
-                  {period}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-
-            {periods.map((period) => {
-              const totalRows = rankedRowsByPeriod[period].length;
-              const pageCount = Math.max(1, Math.ceil(totalRows / rankingPageSize));
-              const currentPage = Math.min(rankingPageByPeriod[period], pageCount);
-              const firstVisibleRow = totalRows === 0 ? 0 : (currentPage - 1) * rankingPageSize + 1;
-              const lastVisibleRow = Math.min(currentPage * rankingPageSize, totalRows);
-              const visibleRows = rankedRowsByPeriod[period].slice(firstVisibleRow - 1, lastVisibleRow);
-
-              return (
-              <TabsContent key={period} value={period} className="mt-6">
-                <p className="font-body mb-3 text-sm text-muted-foreground">
-                  Showing {firstVisibleRow.toLocaleString("en-IN")}-{lastVisibleRow.toLocaleString("en-IN")} of{" "}
-                  {totalRows.toLocaleString("en-IN")} matching strategies from{" "}
-                  {pmsInsightReturnMeta.broadAsOnCount.toLocaleString("en-IN")} comparable APMI IA Insight strategies.
-                </p>
-                <div className="overflow-hidden rounded-xl bg-white shadow-[0_10px_34px_-18px_rgba(11,31,58,0.35)]">
-                  <Table>
-                    <TableHeader>
-                      <TableRow className="hover:bg-transparent" style={{ backgroundColor: "#0B1F3A" }}>
-                        <TableHead className="w-16 text-white/75">Rank</TableHead>
-                        <TableHead className="min-w-[260px] text-white/75">PMS strategy</TableHead>
-                        <TableHead className="text-white/75">As on</TableHead>
-                        <TableHead className="text-right text-white/75">Return</TableHead>
-                        <TableHead className="text-right text-white/75">1Y</TableHead>
-                        <TableHead className="text-right text-white/75">3Y</TableHead>
-                        <TableHead className="text-right text-white/75">5Y</TableHead>
-                        <TableHead className="text-right text-white/75">APMI</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {visibleRows.map((leader) => (
-                        <TableRow key={`${period}-${leader.rank}`} className="hover:bg-[#FDF8EC]">
-                          <TableCell>
-                            <span
-                              className="inline-flex h-8 w-8 items-center justify-center rounded-full text-sm font-bold"
-                              style={{ backgroundColor: leader.rank === 1 ? "#C9A84C" : "#F1F5F9", color: "#0B1F3A" }}
-                            >
-                              {leader.rank}
-                            </span>
-                          </TableCell>
-                          <TableCell>
-                            <p className="font-body font-semibold" style={{ color: "#0B1F3A" }}>
-                              {leader.name}
-                            </p>
-                            <p className="font-body mt-1 text-xs text-muted-foreground">
-                              APMI IA ID: {leader.iaId}
-                            </p>
-                          </TableCell>
-                          <TableCell className="font-body text-sm" style={{ color: "#4A5568" }}>
-                            {leader.asOnLabel ?? "NA"}
-                          </TableCell>
-                          <TableCell className="text-right">
-                            <span className="inline-flex items-center gap-1 font-display text-lg font-semibold" style={{ color: "#0B7A53" }}>
-                              <TrendingUp className="h-4 w-4" />
-                              {formatPct(leader.returnPct)}
-                            </span>
-                          </TableCell>
-                          <TableCell className="text-right font-body text-sm" style={{ color: "#4A5568" }}>
-                            {formatPct(leader.oneYearPct)}
-                          </TableCell>
-                          <TableCell className="text-right font-body text-sm" style={{ color: "#4A5568" }}>
-                            {formatPct(leader.threeYearsPct)}
-                          </TableCell>
-                          <TableCell className="text-right font-body text-sm" style={{ color: "#4A5568" }}>
-                            {formatPct(leader.fiveYearsPct)}
-                          </TableCell>
-                          <TableCell className="text-right">
-                            <a
-                              href={leader.iaInsightUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center justify-end gap-1.5 text-sm font-semibold hover:opacity-75"
-                              style={{ color: "#0B1F3A" }}
-                            >
-                              View <ExternalLink className="h-3.5 w-3.5" />
-                            </a>
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
-                <div className="mt-4 flex flex-col gap-3 rounded-lg bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
-                  <p className="font-body text-sm text-muted-foreground">
-                    Page {currentPage.toLocaleString("en-IN")} of {pageCount.toLocaleString("en-IN")}
-                  </p>
-                  <div className="flex gap-2">
-                    <Button
-                      type="button"
-                      variant="outline"
-                      disabled={currentPage === 1}
-                      onClick={() =>
-                        setRankingPageByPeriod((pages) => ({
-                          ...pages,
-                          [period]: Math.max(1, currentPage - 1),
-                        }))
-                      }
-                      className="border-[#CBD5E1] bg-white"
-                    >
-                      <ChevronLeft className="h-4 w-4" />
-                      Previous
-                    </Button>
-                    <Button
-                      type="button"
-                      variant="outline"
-                      disabled={currentPage === pageCount}
-                      onClick={() =>
-                        setRankingPageByPeriod((pages) => ({
-                          ...pages,
-                          [period]: Math.min(pageCount, currentPage + 1),
-                        }))
-                      }
-                      className="border-[#CBD5E1] bg-white"
-                    >
-                      Next
-                      <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
-                </div>
-              </TabsContent>
-              );
-            })}
-          </Tabs>
-
-          <div className="mt-12">
-            <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-              <div>
-                <h3 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>
-                  Full APMI PMS universe
-                </h3>
-                <p className="font-body mt-2 text-sm leading-relaxed" style={{ color: "#4A5568" }}>
-                  All {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")} investment approaches
-                  scraped from the APMI PMS menu. The performance table above is a subset where APMI returned
-                  latest period returns.
-                </p>
-              </div>
-              <Button
-                type="button"
-                variant="outline"
-                onClick={() => setShowUniverse((value) => !value)}
-                className="h-11 border-[#CBD5E1] bg-white font-body font-semibold"
-              >
-                {showUniverse ? (
-                  <>
-                    Hide universe <ChevronUp className="h-4 w-4" />
-                  </>
-                ) : (
-                  <>
-                    Show full universe <ChevronDown className="h-4 w-4" />
-                  </>
-                )}
-              </Button>
+            <div className="mt-5 flex flex-col gap-3 xl:flex-row xl:items-center xl:justify-between">
+              <Tabs value={period} onValueChange={(value) => { setPeriod(value as Period); resetPage(); }}>
+                <TabsList className="h-auto max-w-full justify-start gap-1 overflow-x-auto bg-[#F1F5F9] p-1.5">
+                  {periods.map((item) => (
+                    <TabsTrigger key={item} value={item} className="min-w-12 px-3 py-2">{item}</TabsTrigger>
+                  ))}
+                </TabsList>
+              </Tabs>
+              <p className="font-body text-sm text-muted-foreground">
+                {rows.length.toLocaleString("en-IN")} strategies with {period} data · ranked highest to lowest
+              </p>
             </div>
 
-            {showUniverse && (
-              <div className="mt-5">
-                <div className="relative w-full lg:max-w-sm">
-                  <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                  <Input
-                    value={universeSearchQuery}
-                    onChange={(event) => setUniverseSearchQuery(event.target.value)}
-                    placeholder="Search all PMS approaches"
-                    className="h-11 rounded-lg border-[#CBD5E1] bg-white pl-10 font-body"
-                  />
-                </div>
+            <div className="mt-5 overflow-x-auto rounded-xl border border-[#E2E8F0]">
+              <Table>
+                <TableHeader>
+                  <TableRow className="bg-[#0B1F3A] hover:bg-[#0B1F3A]">
+                    <TableHead className="w-16 text-white/75">Rank</TableHead>
+                    <TableHead className="min-w-[300px] text-white/75">PMS strategy</TableHead>
+                    <TableHead className="min-w-[150px] text-white/75">Category</TableHead>
+                    <TableHead className="min-w-[150px] text-white/75">Benchmark</TableHead>
+                    <TableHead className="text-right text-white/75">AUM (₹ Cr)</TableHead>
+                    <TableHead className="text-right text-white/75">{period}</TableHead>
+                    <TableHead className="text-right text-white/75">Details</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {visibleRows.map(({ row, value }, index) => (
+                    <TableRow key={row.strategy_url} className="hover:bg-[#FDF8EC]">
+                      <TableCell className="font-semibold text-[#0B1F3A]">{(currentPage - 1) * pageSize + index + 1}</TableCell>
+                      <TableCell>
+                        <p className="font-body font-semibold text-[#0B1F3A]">{strategyName(row)}</p>
+                        <p className="mt-1 text-xs text-muted-foreground">{row.amc_name} · Since {row.inception_date}</p>
+                      </TableCell>
+                      <TableCell className="text-sm text-[#4A5568]">{row.category}</TableCell>
+                      <TableCell className="text-sm text-[#4A5568]">{row.benchmark}</TableCell>
+                      <TableCell className="text-right text-sm text-[#4A5568]">{row.aum_crore}</TableCell>
+                      <TableCell className="text-right font-display text-lg font-semibold text-[#0B7A53]">
+                        {value?.toFixed(2)}%
+                      </TableCell>
+                      <TableCell className="text-right">
+                        <a href={row.strategy_url} target="_blank" rel="noopener noreferrer" aria-label={`View source details for ${strategyName(row)}`} className="inline-flex items-center gap-1 font-semibold text-[#0B1F3A] hover:opacity-70">
+                          View <ExternalLink className="h-3.5 w-3.5" />
+                        </a>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </div>
 
-                <p className="font-body mb-3 mt-5 text-sm text-muted-foreground">
-                  Showing {filteredUniverseApproaches.length.toLocaleString("en-IN")} of{" "}
-                  {pmsPerformanceMeta.investmentApproachCount.toLocaleString("en-IN")} scraped approaches.
-                </p>
-                <div className="max-h-[520px] overflow-auto rounded-xl bg-white shadow-[0_10px_34px_-18px_rgba(11,31,58,0.35)]">
-                  <Table>
-                    <TableHeader>
-                      <TableRow className="sticky top-0 z-10 hover:bg-transparent" style={{ backgroundColor: "#0B1F3A" }}>
-                        <TableHead className="w-20 text-white/75">No.</TableHead>
-                        <TableHead className="min-w-[320px] text-white/75">Investment approach</TableHead>
-                        <TableHead className="min-w-[170px] text-white/75">Latest returns</TableHead>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody>
-                      {filteredUniverseApproaches.map((approach, index) => (
-                        <TableRow key={approach.id} className="hover:bg-[#FDF8EC]">
-                          <TableCell className="font-body text-sm text-muted-foreground">
-                            {index + 1}
-                          </TableCell>
-                          <TableCell>
-                            <p className="font-body font-semibold" style={{ color: "#0B1F3A" }}>
-                              {approach.name}
-                            </p>
-                            <p className="font-body mt-1 text-xs text-muted-foreground">APMI approach ID: {approach.id}</p>
-                          </TableCell>
-                          <TableCell className="font-body text-sm" style={{ color: "#4A5568" }}>
-                            {insightReturnIds.has(approach.id) ? "IA Insight returns available" : "No IA Insight returns found"}
-                          </TableCell>
-                        </TableRow>
-                      ))}
-                    </TableBody>
-                  </Table>
-                </div>
+            <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm text-muted-foreground">Page {currentPage} of {pageCount}</p>
+              <div className="flex gap-2">
+                <Button variant="outline" disabled={currentPage === 1} onClick={() => setPage(currentPage - 1)}>
+                  <ChevronLeft className="h-4 w-4" /> Previous
+                </Button>
+                <Button variant="outline" disabled={currentPage === pageCount} onClick={() => setPage(currentPage + 1)}>
+                  Next <ChevronRight className="h-4 w-4" />
+                </Button>
               </div>
-            )}
+            </div>
           </div>
 
-          <div className="mt-6 flex flex-col gap-4 rounded-xl border border-[#E2E8F0] bg-white p-5 md:flex-row md:items-start">
-            <ShieldCheck className="h-6 w-6 shrink-0" style={{ color: "#C9A84C" }} />
-            <div className="font-body text-sm leading-relaxed" style={{ color: "#4A5568" }}>
+          <div className="mt-6 grid gap-4 md:grid-cols-[auto_1fr] rounded-xl border border-[#E2E8F0] bg-white p-5">
+            <ShieldCheck className="h-6 w-6 text-[#C9A84C]" />
+            <div className="font-body text-sm leading-relaxed text-[#4A5568]">
               <p>
-                The full universe list comes from the APMI PMS menu. The ranking table uses IA Insight detail-page
-                returns scraped across {pmsInsightReturnMeta.scrapedCount.toLocaleString("en-IN")} approaches, with{" "}
-                {pmsInsightReturnMeta.withReturns.toLocaleString("en-IN")} return records found. This is not an
-                investment recommendation. PMS selection should also review drawdowns, fees, churn, concentration,
-                taxation, manager continuity and portfolio fit.
+                Source: PMS Bazaar comparison data, as reported by the respective portfolio managers. Returns above one year are annualised and past performance does not guarantee future results. Rankings are period-specific discovery tools—not recommendations. Verify current returns, fees, drawdowns, portfolio concentration, manager continuity and availability before investing.
               </p>
-              <Link href="/portfolio-review" className="mt-3 inline-flex font-semibold" style={{ color: "#0B1F3A" }}>
-                Review PMS suitability with SoHo Wealth
+              <Link href="/portfolio-review" className="mt-3 inline-flex items-center gap-2 font-semibold text-[#0B1F3A]">
+                <BarChart3 className="h-4 w-4" /> Review PMS suitability with SoHo Wealth
               </Link>
+            </div>
+          </div>
+
+          <div className="mt-12">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.15em] text-[#C9A84C]">PMS learning centre</p>
+            <h2 className="font-display mt-3 text-3xl font-semibold text-[#0B1F3A]">Read the rankings in context</h2>
+            <div className="mt-6 grid gap-5 md:grid-cols-3">
+              {[
+                ["Best PMS in India: How to Compare 556 Strategies", "/insights/best-pms-in-india-how-to-compare", "Build a shortlist without treating one return period as a recommendation."],
+                ["PMS Returns Explained", "/insights/how-to-read-pms-returns", "Understand TWRR, benchmarks, annualised returns and ranking limitations."],
+                ["PMS vs Mutual Funds in India", "/insights/pms-vs-mutual-funds-india", "Compare ownership, minimums, diversification, fees and tax experience."],
+              ].map(([title, href, copy]) => (
+                <Link key={href} href={href} className="rounded-xl border border-[#E2E8F0] bg-white p-6 transition hover:-translate-y-1 hover:shadow-lg">
+                  <h3 className="font-display text-xl font-semibold text-[#0B1F3A]">{title}</h3>
+                  <p className="font-body mt-3 text-sm leading-relaxed text-[#4A5568]">{copy}</p>
+                  <span className="mt-5 inline-flex font-body text-sm font-semibold text-[#0B1F3A]">Read guide →</span>
+                </Link>
+              ))}
             </div>
           </div>
         </div>

@@ -111,7 +111,7 @@ const NRIClient = () => {
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 max-w-4xl text-center">
           <AnimatedSection>
-            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">NRI Wealth Planning from Hyderabad for{" "}<span style={{ color: "#C9A84C" }}>India-Linked Wealth.</span></h1>
+            <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-semibold text-white mb-6 leading-tight">NRI Wealth Planning for{" "}<span style={{ color: "#C9A84C" }}>India-Linked Wealth.</span></h1>
             <p className="font-body text-lg lg:text-xl leading-relaxed mb-8 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>SoHo Wealth helps NRIs organise India-linked portfolios, compare eligible mutual fund, SIF and PMS routes, and coordinate provider documentation. Video consultations are available worldwide.</p>
             <p className="mx-auto mb-8 max-w-3xl font-body text-xs leading-relaxed text-white/45">AMFI mutual fund and SIF distributor ARN 306593; APMI PMS distributor APRN01233. Not a SEBI Registered Investment Adviser or tax/legal practice.</p>
             <button onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>Book Your NRI Investment Consultation</button>

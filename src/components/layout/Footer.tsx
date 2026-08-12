@@ -17,6 +17,7 @@ const audienceLinks = [
   { name: "For Doctors", href: "/financial-planning-for-doctors" },
   { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },
   { name: "For Telugu NRIs", href: "/nri-telugu" },
+  { name: "RSU Calculator", href: "/tools/rsu-concentration-calculator" },
 ];
 
 const companyLinks = [
@@ -128,8 +129,9 @@ export function Footer() {
         <div className="border-t border-white/10 py-5">
           <p className="font-body text-xs leading-relaxed text-white/40">
             Investments are subject to market risk. Please read all scheme-related documents carefully. SoHo Wealth
-            is a distributor, not a SEBI Registered Investment Advisor. Past performance is not indicative of future
-            results.
+            is a distributor, not a SEBI Registered Investment Advisor. SoHo Wealth may earn commissions from product
+            manufacturers for investments made through its distribution arrangements; no separate advisory fee is charged.
+            Past performance is not indicative of future results.
           </p>
         </div>
 

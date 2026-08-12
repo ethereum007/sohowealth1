@@ -2,23 +2,23 @@ import type { Metadata } from "next";
 import RSUESOPsClient from "./RSUESOPsClient";
 
 export const metadata: Metadata = {
-  title: "RSU & ESOP Advisory — Tax-Efficient Stock Option Strategies | SoHo Wealth",
+  title: "RSU Wealth Planning for Indian Tech Professionals | SoHo",
   description:
-    "Expert RSU & ESOP advisory for tech professionals. Tax-efficient diversification strategies, FEMA compliance, GIFT City investments. Book a free consultation.",
+    "Coordinate RSU concentration, vesting records, Indian tax questions and diversification with a practical wealth plan for Indian tech professionals.",
   keywords:
-    "RSU advisory India, ESOP tax planning, RSU taxation India, GIFT City funds, stock option diversification, RSU FEMA compliance, SoHo Wealth",
+    "NRI RSU planning, RSU tax India, ESOP tax planning India, FEMA OPI RSUs, RSU dividend tax India, US estate tax Indian resident, UCITS ETF India, foreign asset reporting Schedule FA, RSU consultation",
   alternates: { canonical: "https://www.sohowealth.in/rsu-esops" },
   openGraph: {
-    title: "RSU & ESOP Advisory — Tax-Efficient Stock Option Strategies | SoHo Wealth",
+    title: "RSU Wealth Planning for Indian Tech Professionals | SoHo Wealth",
     description:
-      "Expert RSU & ESOP advisory for tech professionals. Tax-efficient diversification, FEMA compliance, and GIFT City investment strategies.",
+      "Bring employer-stock concentration, vesting records, tax questions and long-term goals into one coordinated wealth plan.",
     url: "https://www.sohowealth.in/rsu-esops",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "RSU & ESOP Advisory | SoHo Wealth",
-    description: "Tax-efficient stock option strategies. FEMA compliance & GIFT City investments.",
+    title: "RSU Wealth Planning | SoHo Wealth",
+    description: "A coordinated approach to employer stock, tax records, diversification and long-term goals.",
   },
 };
 

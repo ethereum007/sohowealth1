@@ -85,12 +85,12 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
   };
   const serviceSchema = {
     "@context": "https://schema.org",
-    "@type": config.slug === "best-pms-in-hyderabad" ? "CollectionPage" : "Service",
-    "@id": `${url}#${config.slug === "best-pms-in-hyderabad" ? "research" : "service"}`,
+    "@type": config.slug === "best-pms-in-india" ? "CollectionPage" : "Service",
+    "@id": `${url}#${config.slug === "best-pms-in-india" ? "research" : "service"}`,
     name: config.serviceName,
     description: config.serviceDescription,
     url,
-    ...(config.slug === "best-pms-in-hyderabad"
+    ...(config.slug === "best-pms-in-india"
       ? {
           isPartOf: { "@id": "https://www.sohowealth.in/#website" },
           about: { "@type": "Thing", name: "Portfolio Management Services in India" },
@@ -139,7 +139,7 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
         </div>
       </section>
 
-      {config.slug === "best-pms-in-hyderabad" && <PmsPerformanceLeadersSection />}
+      {config.slug === "best-pms-in-india" && <PmsPerformanceLeadersSection />}
 
       {config.sections.map((section, index) => (
         <section key={section.heading} className="py-24 lg:py-32" style={{ backgroundColor: index % 2 === 0 ? "#FFFFFF" : "#F7F8FA" }}>

@@ -111,6 +111,21 @@ const sebiBeforeInvestingSource = {
   url: "https://investor.sebi.gov.in/investment-thingsbeforeinv.html",
 };
 
+const sebiPmsInvestorSource = {
+  title: "SEBI Investor: Portfolio Management Services",
+  url: "https://investor.sebi.gov.in/pms_final.html",
+};
+
+const sebiPmsPerformanceSource = {
+  title: "SEBI: Performance Benchmarking and Reporting by Portfolio Managers",
+  url: "https://www.sebi.gov.in/legal/circulars/dec-2022/performance-benchmarking-and-reporting-of-performance-by-portfolio-managers_66256.html",
+};
+
+const pmsBazaarComparisonSource = {
+  title: "PMS Bazaar: PMS Comparison Universe",
+  url: "https://pmsbazaar.com/Explore/PMS",
+};
+
 const sebiAssetAllocationSource = {
   title: "SEBI Investor: Asset Allocation Calculator",
   url: "https://investor.sebi.gov.in/calculators/Assets_Allocations.html",
@@ -1902,6 +1917,216 @@ export const insightPosts: InsightPost[] = [
       "esop-rsu-espp-differences-india",
     ],
     sources: [sebiAssetAllocationSource, sebiRiskSource, rbiLrsSource],
+  },
+  {
+    slug: "best-pms-in-india-how-to-compare",
+    title: "Best PMS in India: How to Compare 556 Strategies",
+    description: "A practical framework for comparing PMS returns, benchmarks, AUM, categories, fees and portfolio fit without chasing a single leaderboard.",
+    category: "PMS Research",
+    audience: "HNIs comparing portfolio management services in India",
+    publishedAt: "2026-08-12",
+    updatedAt: "2026-08-12",
+    readingTime: "8 min read",
+    keywords: ["best PMS in India", "PMS comparison India", "PMS returns India", "portfolio management services India"],
+    heroKicker: "PMS Comparison Guide",
+    keyTakeaways: [
+      "There is no permanent best PMS; rankings change when the measurement period changes.",
+      "Compare a strategy with an appropriate benchmark and category, not with every PMS in the market.",
+      "Returns are only the opening screen: drawdown, concentration, fees, churn and manager continuity determine investor experience.",
+      "The ₹50 lakh minimum makes portfolio-level suitability more important than a standalone ranking.",
+    ],
+    sections: [
+      {
+        heading: "Why the Best PMS Changes With the Period",
+        body: [
+          "A PMS ranked near the top over one month can sit much lower over three or five years. That does not automatically make either ranking wrong. Short periods often capture a style rotation, sector move or recovery from a weak base, while longer periods reveal more of the manager's process across market conditions.",
+          "Start with the investor's horizon. A long-term equity allocation should not be selected primarily from a one-month table. Use short-period returns to understand current behaviour and longer periods to examine consistency, while remembering that even five years may represent only one dominant market regime.",
+        ],
+      },
+      {
+        heading: "Compare Like With Like",
+        body: [
+          "Large-cap, small-cap, multi-cap, thematic, quant and multi-asset strategies accept different opportunity sets and risks. Ranking them in one undifferentiated list can reward the category that happened to lead during the selected period rather than the strongest manager within a comparable mandate.",
+          "SEBI's performance-reporting framework requires relative performance against the selected benchmark and other portfolio managers within the strategy. Use category, benchmark and mandate together before interpreting rank.",
+        ],
+        table: {
+          columns: ["Field", "What it tells you", "What it does not tell you"],
+          rows: [
+            ["Return", "Outcome over a stated period", "Risk taken or path experienced"],
+            ["Benchmark", "Relevant market reference", "Whether the mandate stayed consistent"],
+            ["AUM", "Current scale of the strategy", "Future performance or liquidity quality"],
+            ["Inception", "Length of available history", "Whether the same manager ran the full period"],
+          ],
+        },
+      },
+      {
+        heading: "The Second Screen After Returns",
+        bullets: [
+          "Maximum drawdown and time taken to recover.",
+          "Number of holdings and exposure to the top five or ten positions.",
+          "Portfolio turnover and the investor-level tax consequences of trading.",
+          "Fixed fee, performance fee, hurdle, high-water mark and exit load.",
+          "Fund-manager tenure, team depth and changes in the investment approach.",
+          "Overlap with existing mutual funds, direct stocks, SIFs and other PMS holdings.",
+        ],
+      },
+      {
+        heading: "Use the SoHo Wealth PMS Comparison Table",
+        body: [
+          "The SoHo Wealth comparison page currently covers 556 PMS strategies and lets investors filter by category, search by manager or benchmark, and rank nine return periods. It is a discovery universe, not an availability list or recommendation engine.",
+          "Build a shortlist of comparable strategies, then review disclosure documents and current provider material before acting. Published performance can change monthly and may not match an individual client's return because entry dates, cash flows, fees and portfolio customisation differ.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Which is the best PMS in India?", a: "There is no universal best PMS. The answer depends on category, horizon, risk, costs, tax context, existing holdings and the period measured." },
+      { q: "How much is required to invest in PMS?", a: "SEBI's investor material states a ₹50 lakh minimum investment for PMS clients, subject to the applicable regulatory framework and provider documentation." },
+      { q: "Are PMS rankings recommendations?", a: "No. Rankings are period-specific research inputs. They do not establish suitability, availability or future performance." },
+    ],
+    relatedSlugs: ["how-to-read-pms-returns", "pms-vs-mutual-funds-india"],
+    sources: [sebiPmsInvestorSource, sebiPmsPerformanceSource, pmsBazaarComparisonSource],
+  },
+  {
+    slug: "how-to-read-pms-returns",
+    title: "PMS Returns Explained: TWRR, Benchmarks and Rankings",
+    description: "Learn how to read PMS returns across 1 month to since inception, compare benchmarks and avoid common ranking mistakes.",
+    category: "PMS Research",
+    audience: "Investors researching PMS performance in India",
+    publishedAt: "2026-08-12",
+    updatedAt: "2026-08-12",
+    readingTime: "7 min read",
+    keywords: ["PMS returns", "PMS performance India", "TWRR PMS", "PMS benchmark comparison"],
+    heroKicker: "Reading PMS Performance",
+    keyTakeaways: [
+      "Always confirm the as-on date, return period and whether a number is annualised.",
+      "TWRR is designed to reduce the impact of client cash-flow timing, but an investor's personal return can still differ.",
+      "A benchmark is useful only when it reasonably represents the strategy's opportunity set.",
+      "Since-inception returns are not directly comparable when strategies began in different market environments.",
+    ],
+    sections: [
+      {
+        heading: "Start With the Date and the Label",
+        body: [
+          "Performance tables are snapshots. Check the as-on date before comparing two sources, because one month of difference can materially change rankings in volatile markets. Then check whether the value is an absolute return or an annualised return.",
+          "On the SoHo Wealth table, every strategy is drawn from the same PMS Bazaar comparison snapshot dated 30 June 2026. Missing values remain unavailable rather than being estimated, which prevents an incomplete history from being presented as a zero return.",
+        ],
+      },
+      {
+        heading: "What TWRR Is Trying to Measure",
+        body: [
+          "Time-weighted rate of return separates the manager's investment performance from the timing and size of external cash flows. This supports comparison across portfolios where clients added or withdrew money at different times.",
+          "Your personal experience can still differ. The date you entered, securities transferred into the account, cash retained, fees, taxes, withdrawals and any custom restrictions can create a return that does not match the published strategy number.",
+        ],
+      },
+      {
+        heading: "How to Use Each Return Period",
+        table: {
+          columns: ["Period", "Useful for", "Main limitation"],
+          rows: [
+            ["1M–6M", "Recent style behaviour and market sensitivity", "Noise and base effects dominate"],
+            ["1Y–2Y", "Current cycle execution", "May still represent one market regime"],
+            ["3Y–5Y", "Medium-term consistency", "Manager or mandate may have changed"],
+            ["10Y / Since inception", "Long history and compounding context", "Different start dates weaken rank comparability"],
+          ],
+        },
+      },
+      {
+        heading: "Benchmark and Peer Context",
+        body: [
+          "A return number without context answers only half the question. Compare it with the stated benchmark and with strategies following a similar mandate. A small-cap PMS beating a broad large-cap index may still have underperformed a relevant small-cap opportunity set, while accepting materially higher volatility.",
+          "SEBI's benchmarking circular requires portfolio managers presenting performance to include performance relative to the selected benchmark and other portfolio managers within the selected strategy. Treat category labels as a first filter and confirm the documented investment approach before making a final comparison.",
+        ],
+      },
+      {
+        heading: "Questions to Ask Before Trusting a Ranking",
+        bullets: [
+          "Are all rows measured on the same date?",
+          "Are the returns net of applicable fees and expenses in the source presentation?",
+          "Is the benchmark appropriate for the mandate?",
+          "Did the same manager and process produce the full track record?",
+          "How deep was the largest drawdown and how long did recovery take?",
+          "Would taxes and fees materially change the investor's post-tax result?",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "What does TWRR mean in PMS?", a: "Time-weighted rate of return measures investment performance while reducing the distortion caused by external additions and withdrawals." },
+      { q: "Why is my PMS return different from the published return?", a: "Entry date, cash flows, fees, taxes, transferred securities, custom restrictions and portfolio differences can cause a client's return to vary." },
+      { q: "Should I select the top one-year PMS?", a: "Not on that fact alone. One-year leadership may reflect a temporary style cycle and does not show drawdown, concentration, costs or portfolio fit." },
+    ],
+    relatedSlugs: ["best-pms-in-india-how-to-compare", "pms-vs-mutual-funds-india"],
+    sources: [sebiPmsPerformanceSource, sebiPmsInvestorSource, pmsBazaarComparisonSource],
+  },
+  {
+    slug: "pms-vs-mutual-funds-india",
+    title: "PMS vs Mutual Funds in India: Which Fits Your Portfolio?",
+    description: "Compare PMS and mutual funds across minimum investment, ownership, diversification, fees, taxation, transparency and investor suitability.",
+    category: "PMS Research",
+    audience: "HNIs deciding between PMS and mutual funds",
+    publishedAt: "2026-08-12",
+    updatedAt: "2026-08-12",
+    readingTime: "8 min read",
+    keywords: ["PMS vs mutual funds", "PMS minimum investment", "PMS taxation India", "portfolio management services vs mutual fund"],
+    heroKicker: "PMS vs Mutual Funds",
+    keyTakeaways: [
+      "PMS gives the investor direct ownership of securities; mutual funds pool investor money into units.",
+      "PMS starts at ₹50 lakh and can be more concentrated, while mutual funds allow much smaller and more diversified allocations.",
+      "PMS trading can create investor-level capital gains; mutual-fund portfolio trading does not create a tax event for the unit holder.",
+      "The right choice depends on the whole portfolio, not on which product had the better recent return.",
+    ],
+    sections: [
+      {
+        heading: "The Structural Difference",
+        body: [
+          "In a discretionary PMS, the portfolio manager makes investment decisions within the agreed mandate and securities are held for the client through the PMS structure. In a mutual fund, investors own units of a pooled scheme rather than the underlying stocks in their individual name.",
+          "That distinction affects reporting, customisation, concentration and taxation. It does not make either structure automatically superior. A transparent direct portfolio can still be unsuitable if it duplicates existing holdings or creates more volatility than the household can tolerate.",
+        ],
+      },
+      {
+        heading: "PMS vs Mutual Funds at a Glance",
+        table: {
+          columns: ["Factor", "PMS", "Mutual fund"],
+          rows: [
+            ["Minimum", "₹50 lakh regulatory minimum for PMS clients", "Often accessible through small lump sums or SIPs"],
+            ["Ownership", "Client-level securities", "Units of a pooled portfolio"],
+            ["Diversification", "Can be concentrated", "Generally broader within scheme rules"],
+            ["Tax experience", "Trades can create client-level gains", "Tax generally arises for the investor on unit transactions/distributions as applicable"],
+            ["Fees", "May combine fixed and performance-linked charges", "Expense ratio and applicable transaction/exit costs"],
+            ["Customisation", "Potentially greater, subject to provider and mandate", "Common portfolio for all investors in the scheme"],
+          ],
+        },
+      },
+      {
+        heading: "When PMS May Fit",
+        bullets: [
+          "The household can allocate ₹50 lakh without weakening emergency liquidity or near-term goals.",
+          "The investor understands and accepts a concentrated direct-equity experience.",
+          "There is a clear role for the strategy alongside existing funds and stocks.",
+          "The investor can evaluate fees, drawdowns, tax reporting and manager risk—not only headline return.",
+        ],
+      },
+      {
+        heading: "When Mutual Funds May Be the Better Core",
+        body: [
+          "Mutual funds often suit investors who want diversification, systematic investing, easier rebalancing and smaller ticket sizes. They can also remain the core even for a large portfolio, with PMS used only as a deliberate satellite allocation.",
+          "A ₹50 lakh cheque is not evidence that PMS is appropriate. If the allocation would dominate the household's liquid wealth, create significant overlap or require selling goal-linked assets, a simpler fund portfolio may be more robust.",
+        ],
+      },
+      {
+        heading: "Make the Decision at Portfolio Level",
+        body: [
+          "List the household's mutual funds, direct equities, retirement assets, SIFs, AIFs and property before adding a PMS. Map market-cap exposure, sector concentration, manager styles, liquidity needs and tax lots across the complete balance sheet.",
+          "Use the SoHo Wealth PMS comparison universe to research candidates, then test whether the proposed allocation improves the portfolio's role clarity. Product selection comes after allocation, liquidity and risk capacity—not before them.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Is PMS better than mutual funds?", a: "Not inherently. PMS may offer direct ownership and concentration, while mutual funds may offer easier diversification, liquidity and systematic investing." },
+      { q: "What is the minimum investment for PMS?", a: "SEBI investor guidance states a ₹50 lakh minimum investment for PMS clients." },
+      { q: "Can I hold PMS and mutual funds together?", a: "Yes, if each has a defined role and the combined portfolio avoids unintended duplication, concentration and liquidity problems." },
+    ],
+    relatedSlugs: ["best-pms-in-india-how-to-compare", "how-to-read-pms-returns"],
+    sources: [sebiPmsInvestorSource, sebiPmsPerformanceSource, sebiBeforeInvestingSource],
   },
 ];
 

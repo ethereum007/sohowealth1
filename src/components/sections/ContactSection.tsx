@@ -64,7 +64,7 @@ export function ContactSection() {
           </h2>
           <p className="text-lg text-muted-foreground">
             Schedule a complimentary consultation to discuss your financial goals.
-            No obligations, just honest advice.
+            No obligation. We&apos;ll explain our distributor role before any implementation.
           </p>
         </motion.div>
 
@@ -170,7 +170,7 @@ export function ContactSection() {
                 Prefer a Quick Chat?
               </h3>
               <p className="text-muted-foreground mb-5">
-                Call us directly for an immediate conversation with our advisors.
+                Call us directly for an immediate conversation with the SoHo Wealth team.
               </p>
               <a
                 href="tel:+919032999466"

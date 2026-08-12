@@ -92,19 +92,19 @@ export const wealthManagementHyderabad: LandingPageConfig = {
   ],
 };
 
-export const bestPmsHyderabad: LandingPageConfig = {
-  slug: "best-pms-in-hyderabad",
-  title: "Best PMS in Hyderabad: Research Guide",
+export const bestPmsIndia: LandingPageConfig = {
+  slug: "best-pms-in-india",
+  title: "Best PMS in India: Research Guide",
   eyebrow: "Data-led PMS research",
-  h1: "Looking for the Best PMS in Hyderabad?",
+  h1: "Looking for the Best PMS in India?",
   highlightedH1: "Start With Evidence, Not a Winner List.",
   intro: "There is no universal best PMS. Use the source-backed tables on this page to discover strategies, then evaluate mandate, drawdowns, manager continuity, fees, churn, tax impact and fit with your existing holdings.",
   primaryCta: "Discuss the Research",
   secondaryCta: "WhatsApp About PMS",
-  serviceName: "PMS Research and Comparison in Hyderabad",
-  serviceDescription: "Educational PMS research for Hyderabad HNIs comparing published performance, investment approaches, drawdowns, fees and portfolio fit.",
+  serviceName: "PMS Research and Comparison in India",
+  serviceDescription: "Educational PMS research for Indian HNIs comparing published performance, investment approaches, drawdowns, fees and portfolio fit.",
   serviceType: "PMS Research and Educational Comparison",
-  leadSource: "best-pms-in-hyderabad page",
+  leadSource: "best-pms-in-india page",
   formHeading: "Book a PMS Comparison Call",
   formTitle: "Move From a Leaderboard to a Due-Diligence Shortlist",
   formCopy: "Use the public data as a starting point, then discuss mandate, manager continuity, volatility, fees, documentation and portfolio overlap before committing Rs. 50 lakh or more.",
@@ -157,7 +157,7 @@ export const bestPmsHyderabad: LandingPageConfig = {
   },
   faqs: [
     { q: "What is the minimum amount for PMS in India?", a: "The SEBI-mandated minimum for PMS is Rs. 50 lakh per investor. This applies across PMS providers." },
-    { q: "Which PMS is best in Hyderabad?", a: "There is no single best PMS for every investor. Rankings change with the period selected, while suitability depends on mandate, risk, time horizon, existing holdings, costs and tax context. Treat the table as a research starting point, not a recommendation." },
+    { q: "Which PMS is best in India?", a: "There is no single best PMS for every investor. Rankings change with the period selected, while suitability depends on mandate, risk, time horizon, existing holdings, costs and tax context. Treat the table as a research starting point, not a recommendation." },
     { q: "Can NRIs invest in PMS?", a: "Yes. NRIs can invest in PMS subject to FEMA rules and provider-level documentation. Account setup and taxation should be reviewed before investing." },
     { q: "Is PMS better than mutual funds?", a: "PMS is not automatically better. It can provide concentrated active management and direct ownership, but it also has higher minimums, different tax treatment and higher portfolio-specific risk." },
   ],

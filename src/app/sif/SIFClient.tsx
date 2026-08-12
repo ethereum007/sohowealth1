@@ -14,21 +14,18 @@ const sifFaqs = [
   { q: "Who regulates SIFs?", a: "SIFs are regulated by SEBI (Securities and Exchange Board of India) under the Mutual Fund framework. They are managed by SEBI-registered Asset Management Companies (AMCs)." },
   { q: "Who should invest in a SIF?", a: "SIFs suit HNIs with ₹10L–₹50L looking for PMS-like strategies, investors graduating beyond mutual funds, those wanting long-short or market-neutral exposure, NRIs seeking regulated India exposure, and existing PMS investors seeking complementary allocation." },
   { q: "Can NRIs invest in SIFs?", a: "Yes, NRIs can invest in SIFs through NRE/NRO accounts subject to AMC-level FATCA compliance. Minimum investment remains ₹10 lakh." },
-  { q: "How can I invest in a SIF in Hyderabad?", a: "SoHo Wealth is an AMFI-registered SIF distributor (ARN 306593). We help investors compare available scheme documents, understand structure and complete provider onboarding. Eligibility and availability should be confirmed at the time of investment." },
+  { q: "How can I invest in a SIF in India?", a: "SoHo Wealth is an AMFI-registered SIF distributor (ARN 306593). We help investors across India compare available scheme documents, understand structure and complete provider onboarding. Eligibility and availability should be confirmed at the time of investment." },
 ];
 
 const sifServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Specialized Investment Fund (SIF) Distribution",
-  description: "AMFI-registered SIF distribution in Hyderabad with scheme-document comparison, onboarding and ongoing service. Minimum ₹10 lakh.",
+  description: "AMFI-registered SIF distribution across India with scheme-document comparison, onboarding and ongoing service. Minimum ₹10 lakh.",
   serviceType: "Specialized Investment Fund Distribution",
   url: "https://www.sohowealth.in/sif",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
-  areaServed: [
-    { "@type": "City", name: "Hyderabad" },
-    { "@type": "Country", name: "India" },
-  ],
+  areaServed: { "@type": "Country", name: "India" },
   audience: { "@type": "Audience", audienceType: "HNIs and family offices" },
   offers: {
     "@type": "Offer",
@@ -108,7 +105,7 @@ const SIFClient = () => {
               <span style={{ color: "#C9A84C" }}>India&apos;s Newest SEBI-Regulated Category.</span>
             </h1>
             <p className="font-body text-lg lg:text-xl leading-relaxed mb-10 max-w-3xl mx-auto" style={{ color: "rgba(255,255,255,0.75)" }}>
-              SEBI introduced Specialized Investment Funds in 2025. SoHo Wealth is among Hyderabad's earliest SIF distributors \u2014 and we also run SIFPrime.com, India's first SIF comparison platform.
+              SEBI introduced Specialized Investment Funds in 2025. SoHo Wealth serves eligible investors across India \u2014 and we also run SIFPrime.com, India's first SIF comparison platform.
             </p>
             <button onClick={scrollToForm} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               Book a SIF Consultation \u2192
@@ -198,7 +195,7 @@ const SIFClient = () => {
             <p className="font-body text-lg lg:text-xl leading-relaxed text-center mb-12" style={{ color: "rgba(255,255,255,0.85)" }}>
               We don't just distribute SIFs \u2014 we built{" "}
               <a href="https://sifprime.com" target="_blank" rel="noopener noreferrer" className="font-semibold underline" style={{ color: "#C9A84C" }}>SIFPrime.com</a>
-              , India's first SIF comparison platform. That means we have deeper product knowledge than any distributor in Hyderabad.
+              , India's first SIF comparison platform. That gives investors access to product research built for the national SIF market.
             </p>
             <ul className="space-y-4 max-w-xl mx-auto mb-12">
               {whySohoBenefits.map((b) => (

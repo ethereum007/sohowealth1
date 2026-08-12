@@ -18,11 +18,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals/rsu-guide", lastModified: "2026-07-28", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools/rsu-concentration-calculator", lastModified: "2026-08-12", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/rsu-esops", lastModified: "2026-08-10", changeFrequency: "monthly", priority: 0.9 },
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/pms-advisory",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/wealth-management-hyderabad", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/financial-planning-for-doctors", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
-    { path: "/best-pms-in-hyderabad", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/best-pms-in-india", lastModified: "2026-08-12", changeFrequency: "weekly", priority: 0.95 },
     { path: "/sif-vs-pms",        lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/services/nri",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/nri-telugu",       lastModified: "2026-07-20", changeFrequency: "weekly",  priority: 0.95 },
@@ -39,7 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },
-    { path: "/insights",          lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.85 },
+    { path: "/insights",          lastModified: "2026-08-12", changeFrequency: "weekly",  priority: 0.85 },
   ];
 
   const staticRoutes = routes.map((r) => ({

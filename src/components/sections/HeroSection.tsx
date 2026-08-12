@@ -39,7 +39,7 @@ export function HeroSection() {
             transition={{ duration: 0.7 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
           >
-            Wealth Planning in Hyderabad for{" "}
+            Wealth Planning Across India for{" "}
             <span style={{ color: "#C9A84C" }}>HNIs, Founders &amp; NRIs.</span>
           </motion.h1>
 

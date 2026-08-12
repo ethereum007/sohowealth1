@@ -28,11 +28,6 @@ const nextConfig = {
         destination: "/insights/fire-planning-for-it-professionals-hyderabad",
         permanent: true,
       },
-      {
-        source: "/rsu-esops",
-        destination: "/wealth-planning-for-it-professionals/rsu-guide",
-        permanent: true,
-      },
     ];
   },
   async headers() {

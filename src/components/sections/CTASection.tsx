@@ -25,9 +25,9 @@ export function CTASection() {
             <span className="text-gradient-gold">to Work?</span>
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-10 max-w-2xl mx-auto">
-            Book a complimentary, no-obligation wealth consultation with our advisory team.
-            We'll assess your current portfolio, identify gaps, and create a roadmap tailored
-            to your financial goals.
+            Book a complimentary, no-obligation portfolio conversation with our wealth team.
+            We&apos;ll review your current allocation, identify questions and outline possible next
+            steps within our disclosed investment-distribution scope.
           </p>
           <Button
             size="lg"

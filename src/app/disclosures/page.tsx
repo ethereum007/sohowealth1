@@ -23,6 +23,7 @@ const disclosures = [
       "SoHo Wealth is an AMFI Registered SIF Distributor. ARN: 306593.",
       "SoHo Wealth is an APMI Registered PMS Distributor. APRN01233.",
       "SoHo Wealth is a distributor and is not a SEBI Registered Investment Advisor (RIA).",
+      "SoHo Wealth may earn commissions from product manufacturers for investments implemented through its distribution arrangements. It does not charge a separate investment-advisory fee.",
     ],
   },
   {
@@ -62,7 +63,7 @@ export default function DisclosuresPage() {
           Disclosures
         </h1>
         <p className="font-body text-sm mb-10" style={{ color: "#4A5568" }}>
-          Last updated: June 12, 2026
+          Last updated: August 12, 2026
         </p>
 
         <div className="space-y-10">

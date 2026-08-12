@@ -11,14 +11,11 @@ const aifServiceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   name: "Alternative Investment Fund (AIF) Evaluation and Access Support",
-  description: "AIF structure and portfolio-fit evaluation in Hyderabad across private equity, venture capital, structured credit and long-short equity. Minimum ₹1 crore.",
+  description: "AIF structure and portfolio-fit evaluation across India covering private equity, venture capital, structured credit and long-short equity. Minimum ₹1 crore.",
   serviceType: "Alternative Investment Fund Evaluation and Access Support",
   url: "https://www.sohowealth.in/aif-advisory",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
-  areaServed: [
-    { "@type": "City", name: "Hyderabad" },
-    { "@type": "Country", name: "India" },
-  ],
+  areaServed: { "@type": "Country", name: "India" },
   audience: { "@type": "Audience", audienceType: "HNIs, family offices and qualified investors" },
   offers: { "@type": "Offer", priceCurrency: "INR", price: "10000000", description: "Minimum AIF investment ₹1 crore" },
 };

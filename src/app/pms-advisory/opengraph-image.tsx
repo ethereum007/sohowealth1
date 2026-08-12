@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Best PMS in Hyderabad — Portfolio Management Services Advisory by SoHo Wealth";
+export const alt = "Compare PMS in India — Portfolio Management Services Distribution by SoHo Wealth";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -42,7 +42,7 @@ export default async function Image() {
             maxWidth: 1000,
           }}
         >
-          Best PMS in Hyderabad
+          Compare PMS in India
         </div>
         <div
           style={{

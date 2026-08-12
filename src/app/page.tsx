@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Wealth Planning in Hyderabad for HNIs, Founders & NRIs | SoHo Wealth",
+  title: "Wealth Planning India for HNIs, Founders & NRIs | SoHo Wealth",
   description:
-    "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs. Book a complimentary review.",
+    "Pan-India wealth planning, portfolio review and registered investment distribution for HNIs, founders, families and NRIs. Book a complimentary review.",
   keywords:
-    "wealth advisor Hyderabad, wealth management Hyderabad, investment advisor Hyderabad, PMS advisor Hyderabad, NRI investment advisor Hyderabad, financial advisor Hyderabad, SIF investment India",
+    "wealth planning India, wealth management India, portfolio review India, PMS distributor India, NRI wealth planning India, SIF investment India",
   alternates: { canonical: "https://www.sohowealth.in/" },
   openGraph: {
-    title: "Wealth Planning in Hyderabad | SoHo Wealth",
+    title: "Wealth Planning Across India | SoHo Wealth",
     description:
-      "Portfolio review and investment distribution for Hyderabad HNIs, founders, families and NRIs.",
+      "Portfolio review and investment distribution for HNIs, founders, families and NRIs across India.",
     url: "https://www.sohowealth.in/",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wealth Planning in Hyderabad | SoHo Wealth",
+    title: "Wealth Planning Across India | SoHo Wealth",
     description: "Portfolio review and investment distribution for HNIs, founders, families and NRIs.",
   },
 };
