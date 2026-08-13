@@ -975,6 +975,70 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "IPOPlatform LAPL financial report", href: "https://www.ipoplatform.com/ipo/financial-report/lapl-automotive-ipo/4095", kind: "Secondary" },
   ],
+}, {
+  slug: "optimystix-entertainment-india-ipo", company: "Optimystix Entertainment India", market: "SME", sector: "Television, film and digital-content production", status: "Issue closed; listing notice pending verification", analysisAsOf: "14 August 2026",
+  summary: "Optimystix is a long-established producer of television, film and digital content with more than 150 shows in its disclosed catalogue. FY25 brought a sharp revenue and profit acceleration after an FY23 loss, but content economics remain hit-driven, work-in-progress absorbs substantial capital, broadcaster concentration and rights ownership matter, and reported FY25 margins need testing across several production cycles.",
+  business: [
+    "Optimystix provides end-to-end content creation across ideation, scripting, production and post-production for television broadcasters, streaming platforms and film projects. Disclosed titles include Comedy Circus, Crime Patrol, Indian Idol Season 11, Laughter Chefs, Rising Star and Baalveer.",
+    "The company says it has produced more than 150 shows and 7,500 hours of content across fiction and non-fiction. Historical output demonstrates execution capacity, but commercial value depends on contract terms, commissioning volumes, audience response and whether intellectual-property and repeat-monetisation rights remain with Optimystix.",
+    "Promoters are Vipul Dhirajlal Shah, Rajesh Bahl and Optimystix Media Private Limited. Vipul Shah is central to strategy, business development, finance and creative planning, creating both domain strength and key-person dependence.",
+  ],
+  issueNote: "The September 2025 DRHP proposed up to 62 lakh shares: 50 lakh fresh shares and 12 lakh OFS shares. Final marketed data indicates a ₹97.65 crore offer at ₹166–₹175; the final fresh/OFS share counts and proceeds split are inferred from scaled offer data and remain subject to reconciliation with the RHP, allotment and NSE Emerge notices.",
+  issue: { open: "7 August 2026", close: "11 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹166–₹175", lotSize: null, totalCr: 97.65, freshCr: 78.75, ofsCr: 18.90, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Working-capital requirements for content production", amount: "DRHP allocation: ₹21.60 crore" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net fresh proceeds, within regulatory limits" },
+    { purpose: "Offer for sale", amount: "Final marketed estimate ₹18.90 crore to selling shareholders; verify against the prospectus" },
+    { purpose: "Debt repayment", amount: "Not identified as a principal DRHP object; reported financial debt was minimal" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 31.10, ebitdaCr: -6.44, patCr: -8.28, netWorthCr: 53.15, borrowingsCr: 0.90, assetsCr: 61.59 },
+    { year: "FY24", revenueCr: 54.76, ebitdaCr: 4.69, patCr: 6.65, netWorthCr: 59.80, borrowingsCr: 0.44, assetsCr: 105.81 },
+    { year: "FY25", revenueCr: 124.39, ebitdaCr: 24.59, patCr: 17.22, netWorthCr: 97.31, borrowingsCr: 0.09, assetsCr: 138.92 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "19.8%", context: "Up from 8.6% in FY24 after a negative FY23 result." },
+    { label: "FY25 PAT margin", value: "13.8%", context: "PAT increased to ₹17.22 crore from ₹6.65 crore in FY24." },
+    { label: "FY25 debt/equity", value: "~0.00×", context: "Reported borrowings were only ₹0.09 crore; working-capital risk sits mainly in project assets and collections." },
+    { label: "FY25 content WIP", value: "₹51.68 crore", context: "Work-in-progress disclosed in the restated financial statements, equal to about 42% of FY25 revenue." },
+  ],
+  strengths: [
+    "A 25-year operating history and a broad catalogue across fiction, non-fiction, reality and comedy demonstrate production experience and broadcaster relationships.",
+    "Revenue increased from ₹54.76 crore in FY24 to ₹124.39 crore in FY25, while EBITDA rose to ₹24.59 crore and PAT to ₹17.22 crore.",
+    "Reported borrowings declined to ₹0.09 crore in FY25, limiting conventional financial-leverage risk at the DRHP balance-sheet date.",
+    "The fresh issue is intended primarily to support working capital, directly addressing the funding gap created when production spend precedes broadcaster or platform receipts.",
+  ],
+  concerns: [
+    "FY23 produced an EBITDA loss of ₹6.44 crore and PAT loss of ₹8.28 crore, followed by a rapid turnaround. This volatility shows why one strong year should not be treated as a stable run rate.",
+    "Content success is unpredictable. Cancellation, delayed commissioning, weak ratings, budget overruns or platform strategy changes can reduce revenue and strand production costs.",
+    "FY25 work-in-progress was ₹51.68 crore, up from ₹41.01 crore in FY24 and ₹20.59 crore in FY23. Accounting profit can materially diverge from cash generation as productions ramp.",
+    "Broadcasters and streaming platforms have negotiating power over budgets, delivery schedules, intellectual-property ownership, syndication and payment terms. Customer concentration must be read together with contract rights.",
+    "Dependence on Vipul Shah and a limited pool of creative leaders creates succession, retention and programme-continuity risk.",
+    "Talent availability, artist costs, production insurance, copyright disputes, defamation claims, censorship and changing content regulation can affect schedules and margins.",
+    "The group has subsidiaries, LLP interests and related-party relationships across film and digital activities. Project allocation, rights transfers, expenses and transactions with these entities merit close scrutiny.",
+    "The OFS sends part of the offer proceeds to a selling shareholder, while NSE Emerge shares may have limited liquidity, large lots and market-maker dependence.",
+  ],
+  monitor: [
+    "Revenue and receivable concentration by broadcaster, streaming platform and production, together with contract duration and renewal.",
+    "Ownership and monetisation of intellectual property, library revenue, format rights, syndication and remake rights.",
+    "Operating cash flow versus PAT, changes in content work-in-progress, receivable days and customer advances.",
+    "New-show pipeline, episode delivery, cancellation rates, budget overruns and the mix of fiction, non-fiction, films and digital projects.",
+    "Final fresh/OFS structure, use of the ₹21.60 crore working-capital allocation and any deviation from disclosed objects.",
+    "Related-party transactions, allocation of opportunities among group entities, contingent claims and NSE Emerge trading liquidity.",
+  ],
+  valuation: [
+    "A definitive offer valuation requires the final post-offer share count and final prospectus. Preliminary calculations should not mix the 62-lakh-share DRHP maximum with the smaller ₹97.65 crore marketed offer.",
+    "Peers in television production, films, animation, digital studios and broadcasters have very different rights ownership, project accounting, content libraries and customer concentration, limiting simple P/E comparisons.",
+    "The central valuation question is normalized free cash flow after funding content work-in-progress. FY25 earnings deserve a discount if they cannot be repeated without continuing large working-capital injections.",
+  ],
+  sources: [
+    { label: "Optimystix official IPO documents", href: "https://optimystix.tv/investors/ipo-documents/", kind: "Primary" },
+    { label: "Optimystix September 2025 DRHP", href: "https://www.indiaipo.in/uploads/drhp/1773120295_69afab273c60b_Optimystix%20Entertainment%20India%20IPO%20drhp.pdf", kind: "Primary" },
+    { label: "Optimystix restated FY23–FY25 financial statements", href: "https://optimystix.tv/wp-content/uploads/2025/10/Restated-Consolidated-BS-31-Mar-2025.pdf", kind: "Primary" },
+    { label: "Optimystix investor information", href: "https://optimystix.tv/investors/investor-information/", kind: "Primary" },
+    { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
+    { label: "IPOPlatform Optimystix financial report", href: "https://www.ipoplatform.com/ipo/financial-report/optimystix-entertainment-india-ipo/4410", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
