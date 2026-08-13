@@ -789,6 +789,67 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "CRISIL alternative asset-management industry report", href: "https://gajacapital.com/assets/pdf/industry-report.pdf", kind: "Primary" },
     { label: "Zerodha Gaja updated-offer summary", href: "https://zerodha.com/ipo/441847/gaja-capital-is-a-promoter-led-indian-alternative-asset-management-firm/", kind: "Secondary" },
   ],
+}, {
+  slug: "anawil-wire-engineering-ipo", company: "Anawil Wire & Engineering", market: "SME", sector: "Wind-turbine towers and heavy steel fabrication", status: "Listed 10 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Anawil fabricates tubular steel towers and related structures, with demand tied heavily to wind-energy installations. FY24–FY26 show rapid revenue, margin and profit growth, but the expansion was debt-funded and accompanied by a large increase in assets. The all-fresh NSE Emerge issue is primarily a deleveraging transaction; customer and sector concentration, capacity utilisation and cash conversion remain central risks.",
+  business: [
+    "The company fabricates wind-turbine towers and undertakes related heavy engineering work from Gujarat. Its customers include wind-energy developers and turbine-sector participants, with disclosed relationships including Suzlon Energy and JSW Neo.",
+    "Tower manufacturing is project and order-book driven. Economics depend on steel procurement, tower specifications, plant utilisation, delivery logistics, customer inspections and the ability to pass raw-material and freight changes through contracts.",
+    "The company is relatively young, incorporated in 2021. Tower production rose from 114 units in FY24 to 135 in FY25, representing approximately 38% and 45% utilisation; FY26 capacity and production require confirmation from the final RHP.",
+  ],
+  issueNote: "Final market data indicates a ₹177.81 crore, all-fresh issue of approximately 65.86 lakh shares at the ₹270 upper band. Earlier calendar data showed ₹168.87 crore and has been corrected. ₹115 crore is earmarked for debt repayment, leaving the balance for general corporate purposes and issue expenses.",
+  issue: { open: "3 August 2026", close: "5 August 2026", listing: "10 August 2026", priceBand: "₹257–₹270", lotSize: 400, totalCr: 177.81, freshCr: 177.81, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of borrowings", amount: "₹115 crore" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds" },
+    { purpose: "Offer for sale", amount: "None; the issue is fully fresh" },
+  ],
+  financials: [
+    { year: "FY24", revenueCr: 54.06, ebitdaCr: 22.44, patCr: 4.39, netWorthCr: 27.76, borrowingsCr: 51.85, assetsCr: 89.63 },
+    { year: "FY25", revenueCr: 78.58, ebitdaCr: 30.85, patCr: 12.3, netWorthCr: 40.07, borrowingsCr: 55.1, assetsCr: 114.42 },
+    { year: "FY26", revenueCr: 143.36, ebitdaCr: 61.08, patCr: 36.62, netWorthCr: 89.51, borrowingsCr: 128.24, assetsCr: 291.62 },
+  ],
+  metrics: [
+    { label: "FY26 EBITDA margin", value: "42.6%", context: "High for fabrication and broadly consistent with the elevated margin reported in FY24." },
+    { label: "FY26 PAT margin", value: "25.5%", context: "Up from 8.1% in FY24 as scale and operating leverage improved." },
+    { label: "FY26 debt/equity", value: "1.43×", context: "Borrowings more than doubled in FY26 before the planned ₹115 crore repayment." },
+    { label: "FY24–FY26 revenue CAGR", value: "62.8%", context: "Rapid growth from a small base and a short operating history." },
+  ],
+  strengths: [
+    "Revenue more than doubled across FY24–FY26 while EBITDA and PAT grew faster, showing strong recent operating leverage.",
+    "Wind-capacity additions provide an industry demand tailwind for domestic tower fabrication, subject to tender and execution cycles.",
+    "The issue is entirely fresh and approximately 65% of gross proceeds is directed to debt repayment.",
+    "High disclosed EBITDA margins provide a buffer against some input and utilisation volatility, if they are sustainable after listing.",
+  ],
+  concerns: [
+    "The operating history is short and FY26 is a major step-up in scale; extrapolating its growth or margin is particularly uncertain.",
+    "Revenue is concentrated in wind-power towers and a limited customer set. Project deferrals or loss of a large account can sharply affect utilisation.",
+    "Borrowings rose from ₹55.10 crore in FY25 to ₹128.24 crore in FY26, while total assets increased to ₹291.62 crore. The cash-flow bridge behind this expansion needs close review.",
+    "Steel prices, fabrication yields, warranty claims, customer inspection failures and freight for oversized towers can change project margins.",
+    "Capacity utilisation was below 50% in FY24 and FY25. Low utilisation may provide growth capacity but can also expose fixed-cost absorption if orders slow.",
+    "NSE Emerge shares can have limited liquidity, wider bid-ask spreads, market-maker dependence and larger minimum tradable lots than mainboard shares.",
+    "No close listed Indian peer was identified in the RHP, limiting external checks on the unusually high reported margin profile.",
+  ],
+  monitor: [
+    "Order book, customer concentration and order conversion by turbine rating and tower type.",
+    "Production volume, rated capacity and utilisation after the FY26 asset expansion.",
+    "Actual debt repayment, release of collateral, finance cost and post-issue leverage.",
+    "Operating cash flow, receivable days, customer advances, inventory and capital expenditure.",
+    "Steel-cost pass-through, freight, rejection rates, liquidated damages and warranty claims.",
+    "Promoter transactions, contingent liabilities and NSE Emerge trading liquidity.",
+  ],
+  valuation: [
+    "At ₹270, published RHP-derived estimates indicate approximately 18.4× FY26 earnings on the relevant diluted share base. The multiple should be read against a short operating history and the sustainability of a 42.6% EBITDA margin.",
+    "The offer document identified no directly comparable listed Indian company. Broader wind-equipment and fabrication businesses differ in product mix, scale, integration and margin structure.",
+    "A normalized case should test lower utilisation, slower order conversion, narrower fabrication spreads and working-capital absorption after the one-time debt reduction.",
+  ],
+  sources: [
+    { label: "Anawil Wire DRHP hosted by NSE Emerge", href: "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_19092025205043_ANAWILWIREDRHP.pdf", kind: "Primary" },
+    { label: "Anawil Wire corporate website", href: "https://anawilwire.com/", kind: "Primary" },
+    { label: "Acuite rating rationale", href: "https://connect.acuite.in/fcompany-details/ANAWIL_WIRE_AND_ENGINEERING_PRIVATE_LIMITED/27th_Sep_24", kind: "Secondary" },
+    { label: "Economic Times SME offer table", href: "https://economictimes.indiatimes.com/markets/ipo/upcoming/sme", kind: "Secondary" },
+    { label: "HDFC Sky Anawil offer and RHP summary", href: "https://hdfcsky.com/sme-ipo/anawil-wire-engineering-limited-ipo", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);

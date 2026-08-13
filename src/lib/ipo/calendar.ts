@@ -20,7 +20,7 @@ export type IpoWeek = {
 // 13 August 2026. Entries are grouped by opening date. A null value means the
 // source had not published the final figure; it must never be rendered as zero.
 const august2026Ipos: IpoCalendarEntry[] = [
-  { company: "Anawil Wire & Engineering", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 168.87, priceBand: "₹257–₹270", exchange: "NSE SME" },
+  { company: "Anawil Wire & Engineering", slug: "anawil-wire-engineering-ipo", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 177.81, priceBand: "₹257–₹270", exchange: "NSE SME" },
   { company: "Aegeus Technologies", market: "SME", opens: "2026-08-04", closes: "2026-08-06", issueSizeCr: 20.3, priceBand: "₹100–₹105", exchange: "BSE SME" },
   { company: "Ardee Industries", slug: "ardee-industries-ipo", market: "Mainboard", opens: "2026-08-05", closes: "2026-08-07", issueSizeCr: 425.87, priceBand: "₹50–₹53" },
   { company: "LAPL Automotive", market: "SME", opens: "2026-08-06", closes: "2026-08-10", issueSizeCr: 30.77, priceBand: "₹88–₹94", exchange: "BSE SME" },
