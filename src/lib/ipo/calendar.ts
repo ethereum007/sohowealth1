@@ -24,7 +24,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Aegeus Technologies", market: "SME", opens: "2026-08-04", closes: "2026-08-06", issueSizeCr: 20.3, priceBand: "₹100–₹105", exchange: "BSE SME" },
   { company: "Ardee Industries", slug: "ardee-industries-ipo", market: "Mainboard", opens: "2026-08-05", closes: "2026-08-07", issueSizeCr: 425.87, priceBand: "₹50–₹53" },
   { company: "LAPL Automotive", market: "SME", opens: "2026-08-06", closes: "2026-08-10", issueSizeCr: 30.77, priceBand: "₹88–₹94", exchange: "BSE SME" },
-  { company: "LEAP India", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 2480, priceBand: null },
+  { company: "LEAP India", slug: "leap-india-ipo", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 2480, priceBand: "₹151–₹159" },
   { company: "Technocraft Ventures", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: null, priceBand: null },
   { company: "Optimystix Entertainment India", market: "SME", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 97.65, priceBand: "₹166–₹175", exchange: "NSE SME" },
 

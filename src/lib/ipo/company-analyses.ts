@@ -1,6 +1,7 @@
 export type CompanyIpoAnalysis = {
   slug: string; company: string; market: "Mainboard" | "SME"; sector: string; status: string; analysisAsOf: string; summary: string;
   business: string[];
+  issueNote?: string;
   issue: { open: string; close: string; listing: string; priceBand: string; lotSize: number; totalCr: number; freshCr: number; ofsCr: number; faceValue: string };
   useOfProceeds: Array<{ purpose: string; amount: string }>;
   financials: Array<{ year: string; revenueCr: number; ebitdaCr: number; patCr: number; netWorthCr: number; borrowingsCr: number; assetsCr: number }>;
@@ -54,6 +55,65 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Ardee Industries DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_29092025064558_Ardee_Industries_Limited.pdf", kind: "Primary" },
     { label: "Ardee Industries investor information", href: "https://ardeeindustries.com/investors/", kind: "Primary" },
     { label: "Issue announcement and use of proceeds (PTI)", href: "https://theprint.in/economy/ardee-industries-rs-426-cr-ipo-to-open-on-aug-5-fixes-price-band-at-rs-50-53/2999617/", kind: "Secondary" },
+  ],
+}, {
+  slug: "leap-india-ipo", company: "LEAP India", market: "Mainboard", sector: "Asset pooling and supply-chain equipment", status: "Issue closed; listing awaited", analysisAsOf: "13 August 2026",
+  summary: "LEAP India operates a pooled network of pallets, containers and material-handling equipment for enterprise supply chains. The model benefits from recurring rental relationships and network density, but it requires heavy upfront capital, carries meaningful debt and depends on utilisation, asset life and loss-control assumptions.",
+  business: [
+    "LEAP owns and pools reusable supply-chain assets such as wooden and plastic pallets, foldable large containers, crates, bins and material-handling equipment. Customers rent these assets instead of purchasing and managing them directly.",
+    "The company also provides repair, sanitation, inventory management and reverse-logistics services. Its economics depend on keeping assets deployed, extending their useful life and efficiently moving them between customer locations and fulfilment centres.",
+    "The DRHP reported more than 13 million assets, over 7,700 customer touchpoints, 30 fulfilment centres and more than 900 customers as of May 2025. These are issuer-reported operating measures and should be refreshed from the final prospectus when available.",
+  ],
+  issueNote: "Final price-band materials indicate a ₹2,480 crore offer comprising ₹480 crore of fresh issue and ₹2,000 crore of OFS. The August 2025 DRHP originally proposed up to ₹2,400 crore, including ₹400 crore fresh issue; final prospectus and exchange allotment notices should control if figures differ.",
+  issue: { open: "7 August 2026", close: "11 August 2026", listing: "Expected 14 August 2026", priceBand: "₹151–₹159", lotSize: 94, totalCr: 2480, freshCr: 480, ofsCr: 2000, faceValue: "₹1" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of identified borrowings", amount: "DRHP earmark: ₹300.10 crore" },
+    { purpose: "General corporate purposes", amount: "Balance of net fresh proceeds" },
+    { purpose: "Offer for sale", amount: "₹2,000 crore to selling shareholders; no proceeds to the company" },
+    { purpose: "Final fresh-issue allocation", amount: "Verify against the final prospectus; DRHP fresh issue was ₹400 crore" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 253.37, ebitdaCr: 126.29, patCr: 9.01, netWorthCr: 569.41, borrowingsCr: 354.54, assetsCr: 1115.39 },
+    { year: "FY24", revenueCr: 364.97, ebitdaCr: 209.92, patCr: 37.17, netWorthCr: 714.18, borrowingsCr: 513.07, assetsCr: 1400.28 },
+    { year: "FY25", revenueCr: 466.47, ebitdaCr: 273.8, patCr: 37.56, netWorthCr: 917.35, borrowingsCr: 801.66, assetsCr: 2042.46 },
+  ],
+  metrics: [
+    { label: "FY23–FY25 revenue CAGR", value: "35.7%", context: "Derived from restated revenue from operations of ₹253.37 crore and ₹466.47 crore." },
+    { label: "FY25 EBITDA margin", value: "58.7%", context: "Derived from DRHP financials; the asset-heavy rental model carries substantial depreciation and finance costs below EBITDA." },
+    { label: "FY25 PAT margin", value: "8.1%", context: "PAT was nearly flat versus FY24 despite approximately 28% revenue growth." },
+    { label: "FY25 borrowings/equity", value: "0.87×", context: "Borrowings increased to ₹801.66 crore from ₹513.07 crore in FY24." },
+  ],
+  strengths: [
+    "A large reusable-asset pool and broad fulfilment footprint can create network density and customer switching friction.",
+    "Revenue from operations grew from ₹253.37 crore in FY23 to ₹466.47 crore in FY25, while reported EBITDA margins remained high.",
+    "Multi-year enterprise relationships and outsourcing of pallet management can improve revenue visibility, subject to contract renewal and utilisation.",
+    "The fresh issue is intended primarily to reduce debt, which could lower finance costs if repayment occurs as disclosed.",
+  ],
+  concerns: [
+    "The business requires continuing capital expenditure. Total assets rose to ₹2,042.46 crore in FY25, more than four times FY25 revenue.",
+    "Borrowings increased by about 56% in FY25. Debt reduction from the IPO is modest relative to the reported borrowing base unless supplemented by internal cash generation.",
+    "FY25 PAT increased only around 1% even as revenue grew approximately 28%, highlighting depreciation, finance-cost and tax drag below EBITDA.",
+    "Asset theft, damage, loss, premature retirement and weaker-than-expected useful lives can reduce returns on the pooled fleet.",
+    "Customer concentration, contract renewals, receivable collection and utilisation rates can materially affect cash conversion.",
+    "The OFS represents most of the offer, so the majority of IPO proceeds go to selling shareholders rather than funding the company.",
+  ],
+  monitor: [
+    "Final prospectus, basis of allotment and exchange listing notice, including any change from the published issue structure.",
+    "Net debt and finance cost after the disclosed repayment of borrowings.",
+    "Asset utilisation, additions, disposals, losses and repair expense across the pallet and container pools.",
+    "Operating cash flow after capex; EBITDA alone does not capture the replacement and expansion cost of the fleet.",
+    "Customer concentration, contract duration and the revenue mix between pallet pooling, containers and material-handling equipment.",
+  ],
+  valuation: [
+    "A clean final P/E and enterprise-value comparison requires the final issue price, post-offer share count and updated net debt from the final prospectus. Until those are tied out, valuation is marked pending rather than inferred from incomplete offer data.",
+    "Peer comparison is imperfect: equipment-rental, logistics and supply-chain-service companies can have very different asset ownership, depreciation policies, leverage and contract structures.",
+    "The key valuation question is return on invested capital after maintenance capex and asset losses, not EBITDA growth in isolation. Cash generation through a full replacement cycle is the more useful test.",
+  ],
+  sources: [
+    { label: "SEBI filing page: LEAP India DRHP", href: "https://www.sebi.gov.in/filings/public-issues/sep-2025/leap-india-limited_96378.html", kind: "Primary" },
+    { label: "LEAP India DRHP filed with SEBI", href: "https://www.sebi.gov.in/sebi_data/attachdocs/sep-2025/1756798204736_932.pdf", kind: "Primary" },
+    { label: "LEAP India offer-document page", href: "https://www.leapindia.net/drhpdownload", kind: "Primary" },
+    { label: "India Ratings: LEAP India rating rationale, February 2026", href: "https://www.indiaratings.co.in/pressrelease/81339", kind: "Secondary" },
   ],
 }];
 
