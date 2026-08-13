@@ -29,6 +29,8 @@ export type InsightPost = {
   faqs: Array<{ q: string; a: string }>;
   relatedSlugs: string[];
   sources: InsightSource[];
+  seoTitle?: string;
+  language?: string;
 };
 
 const rbiAccountsSource = {
@@ -136,7 +138,215 @@ const rbiLrsSource = {
   url: "https://www.rbi.org.in/scripts/FAQDisplay.aspx?Id=115",
 };
 
+import { retirementInsightPosts } from "./retirement-posts";
+
 export const insightPosts: InsightPost[] = [
+  ...retirementInsightPosts,
+  {
+    slug: "nps-annuity-rates-retirement-decision",
+    title: "NPS Annuity Rates: One Retirement Decision You Cannot Judge by Rate Alone",
+    seoTitle: "NPS Annuity Rates: A Plain-English Decision Guide",
+    description: "A plain-English guide to comparing NPS annuity quotes, spouse protection, return of purchase price, inflation, liquidity and tax.",
+    category: "Retirement Planning",
+    audience: "NPS subscribers approaching retirement",
+    publishedAt: "2026-08-13",
+    updatedAt: "2026-08-13",
+    readingTime: "7 min read",
+    keywords: ["NPS annuity rates", "NPS annuity options", "NPS retirement planning", "annuity service provider comparison"],
+    heroKicker: "NPS Annuity Decision",
+    keyTakeaways: [
+      "An annuity quote is the income offered for a particular contract—not an investment return you can compare in isolation.",
+      "The highest starting income often provides less for a spouse or estate, so compare like-for-like options.",
+      "Inflation can steadily reduce what a fixed pension buys, which is why retirement usually needs both an income floor and flexible assets.",
+      "Use live quotes from empanelled providers; annuity rates change with age, option, payment frequency and market conditions.",
+    ],
+    sections: [
+      {
+        heading: "First, What Is an NPS Annuity?",
+        body: [
+          "An annuity is a contract with a life insurer. You hand over a purchase amount and the insurer promises regular income under the option you select. Under NPS exit rules, annuity purchase may be required except where the current rules provide an exemption.",
+          "Think of it as exchanging a lump sum for an income promise. That can make retirement cash flow more predictable, but the money usually becomes far less flexible once the contract begins.",
+        ],
+      },
+      {
+        heading: "Why the Highest Rate Can Be the Wrong Shortcut",
+        body: [
+          "A quote is attached to a specific promise. A life-only option may pay more while you are alive but stop at death. A joint-life option can continue income to a spouse. A return-of-purchase-price option may return the stated purchase amount after the covered lives end, but normally starts with a lower pension.",
+          "So do not compare 7% from one option with 6% from another as if they are identical fixed deposits. Ask what happens while you live, after you die, if your spouse survives you and if the family needs capital later.",
+        ],
+      },
+      {
+        heading: "A Simple Like-for-Like Comparison",
+        table: {
+          columns: ["Decision", "What it may improve", "What you may give up"],
+          rows: [
+            ["Life only", "Higher starting income", "Income generally ends at death"],
+            ["Joint life", "Continuing income for a spouse", "Usually a lower starting income"],
+            ["Return of purchase price", "Capital returned as defined by the contract", "Usually a lower income"],
+            ["Increasing income option", "Some help against rising expenses", "A lower initial payment and increase may still trail inflation"],
+          ],
+        },
+      },
+      {
+        heading: "The Quiet Risk Is Inflation",
+        body: [
+          "A fixed monthly pension can feel adequate on day one and become tight later. At 6% annual inflation, the purchasing power of money roughly halves in about 12 years. That is an illustration, not a forecast, but it shows why a 25- or 30-year retirement cannot rely only on a fixed rupee payment.",
+          "Many households therefore separate the plan into an income floor for essential expenses, a liquid reserve for near-term needs and growth assets for later years. The mix depends on health, other pensions, family support, risk capacity and the size of the total portfolio.",
+        ],
+      },
+      {
+        heading: "Use This Five-Step Decision Order",
+        bullets: [
+          "Estimate essential monthly spending after tax and identify income already covered by pensions, rent or other reliable sources.",
+          "Decide whose lifetime the income must protect—your own, your spouse's or both.",
+          "Decide whether leaving capital behind is essential or simply desirable.",
+          "Keep a separate emergency and healthcare reserve before locking money into an annuity.",
+          "Request live, same-day, like-for-like quotes from empanelled providers and read the policy terms before choosing.",
+        ],
+      },
+      {
+        heading: "What to Write Down Before You Confirm",
+        bullets: [
+          "Purchase amount and exact annuity option",
+          "Monthly, quarterly, half-yearly or annual payment frequency",
+          "Income payable to the spouse after the first death",
+          "Whether and when purchase price is returned",
+          "Nominee details, exclusions, surrender conditions and service process",
+          "Current tax treatment confirmed with your tax professional",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "Which NPS annuity provider gives the best rate?", a: "There is no permanent winner. NPS Trust says prevailing rates vary across providers and market conditions. Compare live quotes for the same age, amount, option and frequency." },
+      { q: "Can I choose my annuity provider under NPS?", a: "PFRDA states that subscribers can choose an empanelled Annuity Service Provider and annuity scheme based on their needs, subject to the rules applicable at exit." },
+      { q: "Is return of purchase price always better?", a: "No. It may support an estate goal but generally reduces the income paid during retirement. Judge it alongside spouse needs, other assets and required monthly income." },
+      { q: "Are annuity payments tax-free?", a: "Do not assume that. Tax treatment depends on current law and personal facts. Confirm the after-tax income with a qualified tax professional before purchase." },
+    ],
+    relatedSlugs: ["retirement-planning-doctors-irregular-income", "fire-planning-for-it-professionals-hyderabad"],
+    sources: [
+      { title: "NPS Trust: Annuity Service Providers and rate FAQs", url: "https://npstrust.org.in/index.php/list-of-annuity-service-provider-enrolled-under-nps" },
+      { title: "PFRDA: Annuity Service Providers", url: "https://pfrda.org.in/intermediaries/empaneled-entities/annuity-service-provider" },
+      { title: "PFRDA: Selection of ASP is the subscriber's choice", url: "https://pfrda.org.in/w/regulatory-framework/circulars/active-circulars/selection-of-asp-to-be-exercised-by-subscribers-upon-exit-from-nps" },
+      { title: "The FynPrint: NPS annuity rates—one retirement decision", url: "https://thefynprint.com/nps/nps-annuity-rates-one-retirement-decision-you-cant?id=6a73983afeea8610f16b6c79" },
+    ],
+  },
+  {
+    slug: "nri-tax-filing-guide-telugu",
+    seoTitle: "NRI Tax Filing in India Telugu Guide | SoHo Wealth",
+    language: "te-IN",
+    title: "NRI ట్యాక్స్ ఫైలింగ్ గైడ్: విదేశాల్లో ఉన్న తెలుగు వారు తప్పక తెలుసుకోవాల్సిన విషయాలు",
+    description: "NRI tax filing in Indiaపై తెలుగు గైడ్: residential status, TDS, DTAA, NRE/NRO accounts, RNOR, property tax, FBAR మరియు Schedule FA తెలుసుకోండి.",
+    category: "NRI Telugu",
+    audience: "విదేశాల్లో నివసిస్తున్న తెలుగు NRIs మరియు భారత్‌కు తిరిగి రావాలనుకునే కుటుంబాలు",
+    publishedAt: "2026-08-13",
+    updatedAt: "2026-08-13",
+    readingTime: "12 నిమిషాల పఠనం",
+    keywords: ["NRI tax filing Telugu", "NRI income tax return India Telugu", "NRI tax filing in India", "NRI ITR filing Telugu", "NRI taxation India Telugu", "RNOR Telugu", "NRE NRO tax Telugu", "DTAA Telugu", "NRI property tax India", "US NRI tax India", "NRI tax consultant Hyderabad"],
+    heroKicker: "తెలుగు NRI ట్యాక్స్ గైడ్",
+    keyTakeaways: [
+      "బ్యాంక్ లేదా ఇతర సంస్థ TDS కట్ చేసినంత మాత్రాన మీ పూర్తి ట్యాక్స్ బాధ్యత ముగిసినట్టు కాదు.",
+      "Residential status‌ను ప్రతి financial year‌కు మీ travel days మరియు గత సంవత్సరాల history ఆధారంగా విడిగా నిర్ణయించాలి.",
+      "Income-tax residential status, FEMA status ఒకటే కావు; bank accounts మరియు investments‌ను సరైన సమయంలో redesignate చేయాలి.",
+      "DTAA benefit పొందడానికి సాధారణంగా Tax Residency Certificate, Form 10F మరియు supporting documents అవసరం కావచ్చు.",
+      "US taxpayers‌కు Indian accounts, mutual funds మరియు ఇతర financial assets‌పై FBAR, Form 8938, PFIC reporting వర్తించవచ్చు.",
+    ],
+    sections: [
+      {
+        heading: "‘నేను NRIని—Indiaలో return ఎందుకు file చేయాలి?’",
+        body: [
+          "వీడియోలో మొదట సరిచేసిన అపోహ ఇదే: Indiaలో income తక్కువగా ఉందని, లేదా payer ఇప్పటికే TDS కట్ చేశాడని, ITR అవసరం లేదని అనుకోవడం ప్రమాదకరం. TDS అనేది ముందస్తు withholding మాత్రమే; అది మీ final tax computation కాదు.",
+          "ఉదాహరణకు, విదేశాల్లో నివసిస్తున్న వ్యక్తి resident savings account‌ను NROగా మార్చకపోతే bank interest‌పై తక్కువ rateలో TDS కట్ కావచ్చు. కానీ మొత్తం incomeపై వర్తించే final slab rate ఎక్కువగా ఉంటే tax shortfall, interest లేదా notice రావచ్చు. మరోవైపు property saleలో gross considerationపై అధిక TDS జరిగితే refund పొందడానికి return filing అవసరం కావచ్చు.",
+          "Rent, bank interest, dividends, capital gains లేదా property transactions ఉన్నప్పుడు AIS, Form 26AS మరియు actual computation‌ను reconcile చేయాలి. ‘TDS అయిపోయింది’ అనే ఒక్క కారణంతో filing decision తీసుకోవద్దు.",
+        ],
+      },
+      {
+        heading: "మొదటి అడుగు: మీ Residential Status",
+        body: [
+          "NR, RNOR లేదా ROR అనే status ప్రతి Indian financial year‌కు విడిగా నిర్ణయించబడుతుంది. 182-day rule ముఖ్యమే, కానీ అదే ఒక్క rule కాదు. 60 days plus preceding four yearsలో 365 days test, visiting Indian citizens/PIOs‌కు ప్రత్యేక rules, ₹15 lakh specified Indian income threshold మరియు deemed-residence provisions కూడా కొన్ని సందర్భాల్లో వర్తించవచ్చు.",
+          "అందుకే passport stamps, flight records మరియు Indiaలో ఉన్న ప్రతి రోజు log ఉంచడం మంచిది. Student, employment, visit లేదా permanent return—India విడిచిన లేదా తిరిగివచ్చిన ఉద్దేశ్యం కూడా సరైన test‌ను ఎంచుకోవడంలో relevant కావచ్చు.",
+        ],
+        table: {
+          columns: ["Status", "సాధారణంగా Indiaలో tax scope", "ప్రధాన జాగ్రత్త"],
+          rows: [
+            ["NR", "Indian-source లేదా Indiaలో received income", "TDS, DTAA documents, NRE/NRO status"],
+            ["RNOR", "Indian incomeతో పాటు India నుంచి controlled foreign business/profession income వంటి పరిమిత categories", "Return-to-India transition planning"],
+            ["ROR", "Worldwide income, treaty reliefకు subject", "Schedule FA, foreign income, accounts, RSUs, pensions"],
+          ],
+        },
+      },
+      {
+        heading: "RNOR: తిరిగి వచ్చే NRIకి planning window",
+        body: [
+          "చాలా సంవత్సరాలు విదేశాల్లో ఉన్న వ్యక్తి Indiaకు తిరిగివచ్చిన తర్వాత facts ఆధారంగా కొంతకాలం RNOR status పొందవచ్చు. ఈ సమయంలో foreign passive income సాధారణంగా ROR స్థాయిలో worldwide taxationకు లోబడకపోవచ్చు; అయితే India నుంచి controlled business లేదా profession incomeపై ప్రత్యేక విశ్లేషణ అవసరం.",
+          "ఇది automatic two-year exemption అని భావించకండి. Prior-year residence history, actual travel days మరియు income facts ఆధారంగా status మారుతుంది. 401(k), IRA, overseas pensions, RSUs, foreign accounts మరియు investments‌ను ROR ప్రారంభమయ్యే ముందు cross-border adviserతో review చేయడం ఉపయోగకరం.",
+        ],
+      },
+      {
+        heading: "DTAA: Double tax తగ్గించవచ్చు, income‌ను మాయం చేయదు",
+        body: [
+          "Indiaకు US, UAE మరియు ఇతర దేశాలతో ఉన్న Double Taxation Avoidance Agreements కొన్ని income categoriesపై taxing rights, reduced withholding లేదా foreign tax creditను నిర్ణయిస్తాయి. Interest, dividend, salary మరియు capital gainsకు ఒకే treatment ఉండదు; treaty మరియు transaction-specific article చూడాలి.",
+          "Treaty benefit claim చేయడానికి Tax Residency Certificate (TRC), Form 10F, PAN మరియు payer అడిగే declarations అవసరం కావచ్చు. UAEలో personal income tax లేకపోవడం వల్ల India-source income Indiaలో tax-free అవుతుందని అనుకోకండి. UAE, US, UK లేదా Canada treaty outcomes పరస్పరం copy చేయలేము.",
+        ],
+      },
+      {
+        heading: "NRE, NRO, FCNR: సరైన accountలో సరైన money trail",
+        table: {
+          columns: ["Account", "సాధారణ ఉపయోగం", "Tax / compliance point"],
+          rows: [
+            ["NRE", "Eligible foreign earnings remitted to India", "Interestకు Indiaలో సాధారణంగా exemption ఉండవచ్చు; overseas-country tax వేరుగా చూడాలి"],
+            ["NRO", "India rent, interest, dividends, sale proceeds", "Interest taxable; outward remittanceకు tax and bank documents అవసరం"],
+            ["FCNR(B)", "Eligible foreign-currency term deposit", "Return తర్వాత status మరియు maturity treatment review చేయాలి"],
+            ["RFC", "Returning residentకు eligible foreign currency", "FEMA eligibilityను authorised dealer bankతో confirm చేయాలి"],
+          ],
+        },
+        body: [
+          "Resident savings account‌ను NRI అయిన తర్వాత అలాగే కొనసాగించడం common mistake. Bank, demat, mutual fund, insurance మరియు ఇతర institutions‌కు status update చేయండి. Foreign salaryను మొదట Indiaలో receive చేయడం source/receipt-based tax issue సృష్టించవచ్చు; payment route‌ను ముందుగానే professionalతో confirm చేయండి.",
+        ],
+      },
+      {
+        heading: "Property sale, TDS మరియు repatriation",
+        body: [
+          "NRI property seller విషయంలో buyer gross sale considerationపై withholding చేయవచ్చు; మీ actual capital gain మాత్రం దానికంటే చాలా తక్కువ కావచ్చు. Sale agreementకు ముందు capital-gain computation, applicable withholding మరియు lower-deduction route అవసరమా అని పరిశీలించండి. Excess TDS refund సాధారణంగా return filing ద్వారా claim చేయాలి.",
+          "Eligible NRI/PIOలకు NRO balance మరియు కొన్ని eligible asset-sale proceeds నుంచి RBI framework కింద financial yearకు USD 1 million వరకు outward remittance facility సాధారణంగా అందుబాటులో ఉండవచ్చు. ఇది automatic right కాదు—tax payment, Form 15CA/15CB where applicable, source documents మరియు authorised dealer bank review అవసరం కావచ్చు.",
+        ],
+      },
+      {
+        heading: "US NRIs: FBAR, Form 8938 మరియు PFIC",
+        body: [
+          "US personకు Indiaలోని reportable foreign financial accounts aggregate value calendar yearలో ఏ సమయంలోనైనా USD 10,000 దాటితే FBAR filing సాధారణంగా relevant అవుతుంది. Form 8938 వేరు; filing status మరియు residence ఆధారంగా thresholds మారతాయి. ఒక form file చేయడం మరొకదాన్ని replace చేయదు.",
+          "Indian mutual funds US tax rulesలో PFICగా పరిగణించబడవచ్చు; Form 8621 మరియు punitive tax complexity రావచ్చు. Indian banks and institutions FATCA/automatic exchange frameworksలో tax-residency information collect చేస్తాయి. కాబట్టి India investment కొనకముందే US international-tax adviserతో structure పరిశీలించండి.",
+        ],
+      },
+      {
+        heading: "ప్రతి సంవత్సరం సిద్ధం చేసుకోవాల్సిన NRI tax file",
+        bullets: [
+          "India entry/exit dates మరియు purpose of travel log",
+          "Income-tax status మరియు FEMA status—రెండింటి separate review",
+          "AIS, Form 26AS, bank interest certificates మరియు capital-gain statements",
+          "TRC, Form 10F మరియు treaty-supporting declarations",
+          "Rent, property purchase/sale, TDS మరియు remittance records",
+          "US personsకు FBAR, Form 8938, PFIC/Form 8621 review",
+          "Returning NRIsకు foreign accounts, pensions, RSUs మరియు Schedule FA inventory",
+        ],
+      },
+      {
+        heading: "SoHo Wealth దృష్టికోణం",
+        body: [
+          "NRI tax filing ఒక standalone form-filling exercise కాదు. Residential status, FEMA, bank accounts, investments, property, repatriation మరియు overseas reporting—all ఒకే timelineలో చూడాలి.",
+          "SoHo Wealth మీ India-linked wealth pictureను organize చేసి, qualified CA, CPA, lawyer లేదా authorised dealer bankతో చర్చించాల్సిన questions‌ను coordinate చేయగలదు. మేము tax return filing, legal opinion లేదా వ్యక్తిగత tax advice ఇవ్వము.",
+        ],
+      },
+    ],
+    faqs: [
+      { q: "TDS కట్ అయితే NRI ITR file చేయనవసరం లేదా?", a: "అలా తప్పనిసరిగా చెప్పలేం. Final tax ఎక్కువైతే balance చెల్లించాలి; excess TDS అయితే refund claim చేయాలి. Income, gains, treaty claim మరియు filing rulesను కలిపి చూడాలి." },
+      { q: "NRI statusకు 182 days rule ఒక్కటేనా?", a: "కాదు. 60+365 test, visiting citizen/PIO provisions, ₹15 lakh specified Indian income rule మరియు deemed-residence provisions కొన్ని factsలో వర్తించవచ్చు." },
+      { q: "RNOR సమయంలో foreign assets Schedule FAలో చూపాలా?", a: "Official return guidance NR/RNOR మరియు ROR reportingను వేరు చేస్తుంది. ఆ సంవత్సరపు exact status మరియు సరైన ITR form‌ను tax professionalతో confirm చేయండి." },
+      { q: "US taxpayer Indian mutual funds కొనవచ్చా?", a: "కొనుగోలు సాధ్యమైనా, US PFIC/Form 8621 rules tax మరియు reportingను క్లిష్టం చేయవచ్చు. Investmentకు ముందు US international-tax advice తీసుకోవడం మంచిది." },
+      { q: "NRO money విదేశాలకు పంపవచ్చా?", a: "Eligible casesలో USD 1 million annual facility ఉపయోగపడవచ్చు, కానీ taxes, source documents మరియు bank approval requirements ఉంటాయి." },
+    ],
+    relatedSlugs: ["nri-tax-filing-investing-guide", "returning-to-india-wealth-checklist", "nre-vs-nro-repatriation"],
+    sources: [incomeTaxNonResidentSource, incomeTaxForeignAssetsSource, rbiAccountsSource, rbiRemittanceSource, irsFbarSource, irsForm8938Source, irsPficSource],
+  },
   {
     slug: "nri-tax-filing-investing-guide",
     title: "NRI Tax Filing and Investing: The Cross-Border Checklist Most Global Indians Need",
@@ -2122,6 +2332,57 @@ export const insightPosts: InsightPost[] = [
     ],
     relatedSlugs: ["best-pms-in-india-how-to-compare", "how-to-read-pms-returns"],
     sources: [sebiPmsInvestorSource, sebiPmsPerformanceSource, sebiBeforeInvestingSource],
+  },
+  {
+    slug: "rsus-when-changing-jobs-india",
+    title: "What Happens to RSUs When You Change Jobs in India?",
+    description: "A practical checklist for vested shares, unvested awards, options, broker access, tax records and financial runway before changing employers.",
+    category: "IT Professionals", audience: "Indian technology professionals changing employers", publishedAt: "2026-08-13", updatedAt: "2026-08-13", readingTime: "7 min read",
+    keywords: ["RSU job change India", "what happens to RSUs when leaving company", "unvested RSUs India"], heroKicker: "RSUs & Job Changes",
+    keyTakeaways: ["Unvested awards are commonly forfeited unless the plan or exit terms say otherwise.", "Vested shares can remain yours, but broker access and transfer choices need checking.", "Save payroll and vest records before corporate access disappears.", "Do not build a career-break runway from unvested awards."],
+    sections: [
+      { heading: "Separate Vested Shares, Unvested Awards and Options", body: ["A job change affects each form of equity differently. Vested shares are generally already delivered, unvested RSUs remain conditional, and options may have a shortened post-employment exercise window.", "Read the grant agreement, plan rules and exit communication. A company policy summary is not a substitute for the governing documents."] },
+      { heading: "Download Records Before Your Last Day", bullets: ["Every grant agreement and vest schedule", "Vest confirmations and payslips showing perquisite treatment", "Broker statements, trade confirmations and dividend records", "Option exercise prices, expiry dates and post-termination window", "HR or stock-plan contact details for future questions"] },
+      { heading: "Rebuild the Career Runway Without Unvested Equity", body: ["Treat forfeitable awards as a possible future benefit, not as cash available for rent, EMIs or family goals. Recalculate the emergency fund using cash salary, liquid investments and the timing of the next role."] },
+      { heading: "Review the Remaining Employer Stock", body: ["Leaving the company removes future salary dependency but does not remove concentration in vested shares. Decide whether the old employer stock still has a deliberate role, and coordinate any sale with tax lots, reporting and goal funding."] },
+    ],
+    faqs: [{ q: "Do I lose vested RSUs when I resign?", a: "Vested shares are generally already delivered, but confirm the plan, broker and any restrictions. Unvested awards are commonly forfeited unless specific terms provide otherwise." }, { q: "Should I sell old-employer shares after leaving?", a: "There is no universal rule. Review concentration, goals, taxes and whether you would buy the same holding today with cash." }],
+    relatedSlugs: ["sell-rsus-at-vest-indian-it-professionals", "rsu-tax-india-vesting-sale-schedule-fa", "fire-planning-for-it-professionals-hyderabad"],
+    sources: [{ title: "SEBI Investor: Factors to Consider Before Investing", url: "https://investor.sebi.gov.in/investment-thingsbeforeinv.html" }, incomeTaxScheduleFASource],
+  },
+  {
+    slug: "us-estate-tax-rsu-indian-residents",
+    title: "U.S. Estate Tax and RSUs: What Indian Residents Should Review",
+    description: "Understand why U.S.-company shares can create an estate-administration question for Indian residents and what records and ownership facts matter.",
+    category: "IT Professionals", audience: "Indian residents holding shares of U.S. corporations", publishedAt: "2026-08-13", updatedAt: "2026-08-13", readingTime: "7 min read",
+    keywords: ["US estate tax RSU India", "US shares estate tax Indian resident", "706-NA India"], heroKicker: "Cross-Border Estate Review",
+    keyTakeaways: ["Stock of a corporation organised under U.S. law can be U.S.-situated property.", "The USD 60,000 figure is a filing threshold in specified cases, not an automatic tax bill.", "Citizenship, domicile, ownership, treaty and asset type all matter.", "Beneficiary settings do not replace coordinated estate advice."],
+    sections: [
+      { heading: "Why Employer Shares Can Create a U.S. Question", body: ["The IRS states that stock of corporations organised under U.S. law is generally U.S.-situated property for estate-tax purposes. That can matter even when the shareholder lives and works in India."] },
+      { heading: "Do Not Turn a Filing Threshold Into a Tax Claim", body: ["The IRS says Form 706-NA may be required when a nonresident noncitizen's U.S.-situated assets exceed USD 60,000 at death. The final filing and tax outcome depends on the complete facts, deductions, ownership and any applicable treaty position."] },
+      { heading: "Information an Estate Professional Will Need", bullets: ["Citizenship and domicile history", "Issuer and legal domicile of each security", "Account ownership and beneficiary designations", "Approximate U.S.-situated asset value", "Wills, nominees and family access to foreign accounts"] },
+      { heading: "Reduce Operational Risk Too", body: ["A family should know where the broker account is, who to contact and which records exist. Do not share passwords; use lawful account-access, nomination and estate-planning arrangements."] },
+    ],
+    faqs: [{ q: "Is USD 60,000 an estate-tax exemption for every Indian investor?", a: "No. It is commonly referenced in relation to the filing requirement for estates of nonresident noncitizens. The tax result depends on the facts and specialist analysis." }, { q: "Does an Indian will solve the issue?", a: "A will is only one part of estate coordination. Jurisdiction, asset situs, account ownership and administration still require review." }],
+    relatedSlugs: ["rsu-esop-diversification-nri", "rsu-tax-india-vesting-sale-schedule-fa", "returning-to-india-wealth-checklist"],
+    sources: [{ title: "IRS: Estate tax returns for some nonresidents with U.S. assets", url: "https://www.irs.gov/individuals/international-taxpayers/some-nonresidents-with-us-assets-must-file-estate-tax-returns" }],
+  },
+  {
+    slug: "rsu-diversification-routes-india-ifsc-overseas",
+    title: "RSU Diversification Routes: India, IFSC or Overseas?",
+    description: "Compare domestic portfolios, eligible GIFT-IFSC offerings and permitted overseas reinvestment without assuming one route is universally tax-efficient.",
+    category: "IT Professionals", audience: "Indian residents diversifying foreign-company RSUs", publishedAt: "2026-08-13", updatedAt: "2026-08-13", readingTime: "8 min read",
+    keywords: ["RSU diversification India", "GIFT City RSU diversification", "reinvest RSU proceeds India"], heroKicker: "Diversification Routes",
+    keyTakeaways: ["Selling employer shares and choosing the destination portfolio are separate decisions.", "India, IFSC and overseas routes differ in currency, domicile, costs, tax and reporting.", "No blanket claim that a GIFT-IFSC product removes all investor tax or reporting is safe.", "Resolve the permitted money path before executing."],
+    sections: [
+      { heading: "Start With the Goal, Not the Wrapper", body: ["Decide whether the proceeds fund an India goal, a global long-term goal, a career runway or a mix. That determines the appropriate currency, liquidity and risk before product selection begins."] },
+      { heading: "Compare the Three Broad Routes", table: { columns: ["Route", "Potential role", "Verify before acting"], rows: [["India portfolio", "Rupee goals, domestic debt and diversified Indian assets", "Repatriation, tax, allocation and product costs"], ["GIFT-IFSC offering", "Eligible foreign-currency or global strategies", "Authorisation, legal structure, domicile, liquidity, tax and reporting"], ["Permitted overseas reinvestment", "Global diversification where the route allows", "Broker capability, OPI/LRS treatment, repatriation and estate exposure"]] } },
+      { heading: "Avoid False Tax Shortcuts", body: ["The words IFSC, offshore or fund-level tax do not determine an individual's outcome. Read the current offer document and obtain advice for the specific investor, product structure and transaction."] },
+      { heading: "Use a Decision Sequence", bullets: ["Define the goal and currency", "Decide how much employer stock to reduce", "Confirm tax lots and trading constraints", "Confirm the permitted proceeds path", "Compare diversified products on total cost, liquidity and risk", "Document the annual review rule"] },
+    ],
+    faqs: [{ q: "Is GIFT City always the most tax-efficient route?", a: "No. Outcomes vary by product structure, investor status and current law. Compare actual documents and personal facts." }, { q: "Can RSU proceeds remain abroad?", a: "Do not assume so. RBI guidance distinguishes income, realised foreign exchange and the underlying investment route. Confirm with an authorised dealer bank or FEMA specialist." }],
+    relatedSlugs: ["sell-rsus-at-vest-indian-it-professionals", "rsu-tax-india-vesting-sale-schedule-fa", "rsu-esop-diversification-nri"],
+    sources: [rbiLrsSource, { title: "IFSCA: Fund Management", url: "https://www.ifsca.gov.in/Pages/Contents/Fund_Management" }, incomeTaxScheduleFASource],
   },
 ];
 

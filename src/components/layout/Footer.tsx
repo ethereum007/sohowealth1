@@ -16,10 +16,15 @@ const investmentLinks = [
 
 const audienceLinks = [
   { name: "Who We Serve", href: "/who-we-serve" },
+  { name: "Retirement Planning", href: "/retirement-planning" },
+  { name: "EPF vs PPF vs NPS", href: "/insights/epf-vs-ppf-vs-nps" },
+  { name: "Retirement Calculator", href: "/tools/retirement-calculator" },
   { name: "For Doctors", href: "/financial-planning-for-doctors" },
   { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },
   { name: "For Telugu NRIs", href: "/nri-telugu" },
   { name: "RSU Calculator", href: "/tools/rsu-concentration-calculator" },
+  { name: "RSU Decision Check", href: "/tools/rsu-decision-check" },
+  { name: "RSU Planning", href: "/rsu-esops" },
 ];
 
 const companyLinks = [

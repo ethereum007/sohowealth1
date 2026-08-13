@@ -194,12 +194,12 @@ export default function NRITeluguClient() {
         <div className="container mx-auto max-w-6xl px-6 lg:px-8">
           <div className="grid items-center gap-8 rounded-2xl border border-[#0B1F3A]/10 bg-white p-8 shadow-sm md:p-12 lg:grid-cols-[1fr_auto]">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9A7A25]">Essential NRI guide</p>
-              <h2 className="mt-3 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">NRI tax filing and investing—one cross-border checklist</h2>
-              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">Understand residential status, RNOR, DTAA, NRE/NRO accounts, repatriation, US reporting and the decisions to make before returning to India.</p>
+              <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#9A7A25]">తెలుగు NRI ట్యాక్స్ గైడ్</p>
+              <h2 className="mt-3 font-display text-3xl font-semibold text-[#0B1F3A] md:text-4xl">NRI ట్యాక్స్ ఫైలింగ్: విదేశాల్లో ఉన్న తెలుగు వారు తెలుసుకోవాల్సిన పూర్తి checklist</h2>
+              <p className="mt-4 max-w-3xl leading-relaxed text-slate-600">Residential status, TDS, DTAA, NRE/NRO accounts, property sale, repatriation, US reporting మరియు Indiaకు తిరిగివచ్చే ముందు తీసుకోవాల్సిన నిర్ణయాలు—సులభమైన తెలుగులో.</p>
             </div>
-            <Link href="/insights/nri-tax-filing-investing-guide" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#C9A84C] px-6 py-3.5 font-semibold text-[#0B1F3A]">
-              Read the guide <ArrowRight className="h-4 w-4" />
+            <Link href="/insights/nri-tax-filing-guide-telugu" className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#C9A84C] px-6 py-3.5 font-semibold text-[#0B1F3A]">
+              తెలుగు గైడ్ చదవండి <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </div>

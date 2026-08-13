@@ -14,6 +14,13 @@ interface ServiceCard {
 
 const services: ServiceCard[] = [
   {
+    badge: { text: "PLANNING SERVICE", variant: "navy" },
+    title: "Retirement Planning",
+    text: "Build a retirement income plan around spending, inflation, healthcare, NPS, liquidity and family protection—not a single product.",
+    ctaLink: "/retirement-planning",
+    ctaText: "Plan Retirement →",
+  },
+  {
     badge: { text: "🆕 NEW IN INDIA", variant: "gold" },
     title: "Specialized Investment Funds (SIF)",
     text: "India's newest SEBI-regulated product. Min ₹10L. PMS-level flexibility with mutual fund transparency.",

@@ -111,7 +111,7 @@ export default function RSUConcentrationCalculatorPage() {
                 <ArrowRight className="ml-2 h-4 w-4" aria-hidden="true" />
               </Link>
               <Link href="/portfolio-review" className="inline-flex min-h-12 items-center justify-center rounded-xl border border-slate-300 px-6 text-sm font-semibold text-[#0B1F3A]">
-                Book a portfolio review
+                Book an RSU portfolio review
               </Link>
             </div>
           </div>

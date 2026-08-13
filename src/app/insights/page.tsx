@@ -5,15 +5,15 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { insightPosts } from "@/lib/insights/posts";
 
 export const metadata: Metadata = {
-  title: "Insights | NRI, Doctors, IT Professionals, SIF & PMS | SoHo Wealth",
+  title: "Retirement, NRI & Investment Insights | SoHo Wealth",
   description:
-    "Original SoHo Wealth guides for NRIs, doctors and IT professionals, plus SIF, PMS, GIFT City, NRE/NRO, RSU and India-investing research.",
+    "Original guides on retirement planning, EPF, PPF, NPS, NRIs, doctors, IT professionals, SIF, PMS, RSUs and India investing.",
   authors: [{ name: "SoHo Wealth" }],
   alternates: { canonical: "https://www.sohowealth.in/insights" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Insights | SoHo Wealth",
-    description: "NRI, doctor and IT-professional wealth-planning insights from SoHo Wealth.",
+    description: "Retirement, NRI and investment decision guides from SoHo Wealth.",
     url: "https://www.sohowealth.in/insights",
     type: "website",
     images: [{ url: "https://www.sohowealth.in/soho-logo.png", width: 1024, height: 1024, alt: "SoHo Wealth" }],
@@ -79,10 +79,10 @@ export default function InsightsPage() {
             SoHo Wealth Insights
           </span>
           <h1 className="font-display mb-6 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
-            Wealth Planning for NRIs, Doctors and Tech Professionals <span style={{ color: "#C9A84C" }}>Without the Noise.</span>
+            Retirement and Wealth Decisions <span style={{ color: "#C9A84C" }}>Without the Noise.</span>
           </h1>
           <p className="mx-auto max-w-3xl font-body text-lg leading-relaxed lg:text-xl" style={{ color: "rgba(255,255,255,0.75)" }}>
-            Current, practical notes on NRI investing, doctors&apos; capital decisions, RSUs, FIRE, GIFT City, SIFs, PMS, NRE/NRO and Indian market themes.
+            Current, practical guides on EPF, PPF, NPS, retirement income, NRI investing, doctors&apos; capital decisions, RSUs, GIFT City, SIFs and PMS.
           </p>
         </div>
       </section>

@@ -63,6 +63,16 @@ const investmentProducts: MenuLink[] = [
 
 const audienceLinks: MenuLink[] = [
   {
+    name: "Retirement Planning",
+    href: "/retirement-planning",
+    description: "Turn savings, pensions and NPS into a resilient retirement-income plan.",
+  },
+  {
+    name: "Retirement Calculator",
+    href: "/tools/retirement-calculator",
+    description: "Estimate future expenses, retirement corpus and monthly investment.",
+  },
+  {
     name: "AI Wealth Planner",
     href: "/tools/ai-wealth-planner",
     description: "Estimate your goal corpus, monthly SIP and illustrative asset mix.",
@@ -76,6 +86,21 @@ const audienceLinks: MenuLink[] = [
     name: "For IT Professionals",
     href: "/wealth-planning-for-it-professionals",
     description: "Plan salary, bonuses, RSUs, ESOPs and financial independence.",
+  },
+  {
+    name: "RSU Wealth Planning",
+    href: "/rsu-esops",
+    description: "Coordinate employer stock, records, goals and diversification.",
+  },
+  {
+    name: "RSU Calculator",
+    href: "/tools/rsu-concentration-calculator",
+    description: "Measure current concentration and broader employer dependency.",
+  },
+  {
+    name: "RSU Decision Check",
+    href: "/tools/rsu-decision-check",
+    description: "Compare sell-at-vest, fixed-rule and staged approaches.",
   },
   {
     name: "For Telugu NRIs",
@@ -101,6 +126,7 @@ const navigationItems: NavigationItem[] = [
   },
   { name: "About Us", href: "/about" },
   { name: "Team", href: "/team" },
+  { name: "IPO Research", href: "/ipo" },
   { name: "Insights", href: "/insights" },
   { name: "Contact", href: "/contact" },
 ];

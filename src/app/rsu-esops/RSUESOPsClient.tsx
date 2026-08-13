@@ -7,6 +7,7 @@ import { ArrowRight, CheckCircle2, ChevronDown, AlertTriangle, DollarSign, FileT
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { RelatedServices } from "@/components/seo/RelatedServices";
+import { trackEvent } from "@/lib/gtag";
 
 const rsuServiceSchema = {
   "@context": "https://schema.org",
@@ -110,7 +111,8 @@ const RSUESOPsClient = () => {
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">Your RSUs are compensation today—and a <span style={{ color: "#C9A84C" }}>portfolio decision tomorrow.</span></h1>
             <p className="text-lg text-white/70 leading-relaxed mb-8 max-w-2xl">When salary, future grants and investments depend on the same employer, a successful career can quietly create a concentrated financial life. Bring the records, risks and goals into one coordinated plan.</p>
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="h-14 px-8 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }} onClick={scrollToForm}>Book Free Consultation<ArrowRight className="ml-2 w-5 h-5" /></Button>
+              <Button size="lg" className="h-14 px-8 font-semibold" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }} onClick={() => { trackEvent("rsu_review_click", { location: "hero" }); scrollToForm(); }}>Book an RSU Portfolio Review<ArrowRight className="ml-2 w-5 h-5" /></Button>
+              <Button asChild size="lg" variant="outline" className="h-14 px-8 font-semibold border-white/30 text-white hover:bg-white/10"><a href="/guides/soho-wealth-annual-rsu-planning-pack.pdf" download onClick={() => trackEvent("rsu_pack_download", { location: "service_hero" })}>Download Planning Pack</a></Button>
               <Button asChild size="lg" variant="outline" className="h-14 px-8 font-semibold border-white/30 text-white hover:bg-white/10">
                 <a href="https://wa.me/919032999466?text=Hi%2C%20I%20need%20help%20with%20my%20RSUs" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
               </Button>
@@ -247,6 +249,8 @@ const RSUESOPsClient = () => {
           </AnimatedSection>
         </div>
       </section>
+
+      <section className="bg-white py-16"><div className="container mx-auto max-w-4xl px-6"><div className="rounded-2xl border border-slate-200 bg-[#F7F8FA] p-8"><p className="text-xs font-bold uppercase tracking-[.14em] text-[#8B6815]">Authorship and methodology</p><h2 className="mt-3 font-display text-2xl font-semibold text-[#0B1F3A]">Prepared by Kiran Dutta, Founder of SoHo Wealth</h2><p className="mt-3 text-sm leading-relaxed text-slate-600">Kiran is a Columbia MBA, former Wall Street professional and NISM-certified SEBI Research Analyst. The framework measures vested employer shares separately from conditional unvested awards, career income and related sector exposure. It uses published concentration reference points as review prompts—not universal limits.</p><p className="mt-3 text-xs leading-relaxed text-slate-500">Reviewed 13 August 2026. SoHo Wealth is an investment distributor, not a SEBI Registered Investment Adviser. Tax, legal, FEMA and security-level conclusions require appropriately qualified professionals.</p></div></div></section>
 
       {/* Lead Capture */}
       <LeadCaptureForm source="RSU/ESOP page" heading="Book Your RSU & ESOP Consultation" sectionId="rsu-consultation" leftContent={

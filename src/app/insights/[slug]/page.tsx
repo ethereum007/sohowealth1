@@ -25,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const url = `https://www.sohowealth.in/insights/${post.slug}`;
 
   return {
-    title: `${post.title} | SoHo Wealth`,
+    title: post.seoTitle ?? `${post.title} | SoHo Wealth`,
     description: post.description,
     keywords: post.keywords,
     authors: [{ name: "Kiran Dutta", url: "https://www.sohowealth.in/about" }],
@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       section: post.category,
       tags: post.keywords,
       siteName: "SoHo Wealth",
+      locale: post.language === "te-IN" ? "te_IN" : "en_IN",
       images: [{ url: "https://www.sohowealth.in/soho-logo.png", width: 1024, height: 1024, alt: "SoHo Wealth" }],
     },
     twitter: {
@@ -71,6 +72,8 @@ export default async function InsightPostPage({ params }: PageProps) {
   const url = `https://www.sohowealth.in/insights/${post.slug}`;
   const isDoctorPost = post.category === "Doctors";
   const isItProfessionalPost = post.category === "IT Professionals";
+  const isTeluguNriPost = post.category === "NRI Telugu";
+  const isRetirementPost = post.category === "Retirement Planning";
   const cta = isDoctorPost
     ? {
         title: "Review the Doctor Family Balance Sheet",
@@ -85,7 +88,21 @@ export default async function InsightPostPage({ params }: PageProps) {
           href: "/wealth-planning-for-it-professionals",
           label: "Explore Wealth Planning for IT Professionals",
         }
-      : {
+      : isRetirementPost
+        ? {
+            title: "Turn the Guide Into Your Retirement Numbers",
+            copy: "Estimate the corpus, first-year income and long-term withdrawal path, then review how pensions, NPS, liquidity and family needs fit together.",
+            href: "/tools/retirement-calculator",
+            label: "Use the Retirement Calculator",
+          }
+      : isTeluguNriPost
+        ? {
+            title: "మీ India-linked wealth మరియు tax checklist‌ను ఒకే చోట review చేయండి",
+            copy: "NRE/NRO accounts, India investments, property, repatriation మరియు return-to-India planningలో ముందుగా చూడాల్సిన అంశాలను Telugu లేదా Englishలో చర్చించండి.",
+            href: "/nri-telugu",
+            label: "Telugu NRI Wealth Review",
+          }
+        : {
           title: "Book a Portfolio Review",
           copy: "If your India portfolio includes old resident folios, NRE/NRO confusion, PMS, SIF, AIF, property or RSUs, a structured review can make the next decision much clearer.",
           href: "/portfolio-review",
@@ -105,7 +122,7 @@ export default async function InsightPostPage({ params }: PageProps) {
     mainEntityOfPage: url,
     url,
     isPartOf: { "@id": "https://www.sohowealth.in/insights#blog" },
-    inLanguage: "en-IN",
+    inLanguage: post.language ?? "en-IN",
     isAccessibleForFree: true,
     articleSection: post.category,
     keywords: post.keywords.join(", "),
@@ -233,6 +250,25 @@ export default async function InsightPostPage({ params }: PageProps) {
             ))}
           </div>
 
+          {isTeluguNriPost && (
+            <aside className="mt-14 rounded-lg border border-slate-200 bg-slate-50 p-6 md:p-8" aria-label="Related NRI resources">
+              <h2 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>సంబంధిత NRI మార్గదర్శకాలు మరియు సేవలు</h2>
+              <p className="mt-3 font-body leading-relaxed text-slate-600">Tax filingతో పాటు accounts, investments, repatriation మరియు India return planningను కలిపి చూడండి.</p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {[
+                  ["Telugu NRI wealth management", "/nri-telugu"],
+                  ["NRI investment services in India", "/services/nri"],
+                  ["NRI portfolio review", "/portfolio-review"],
+                  ["NRE vs NRO and repatriation guide", "/insights/nre-vs-nro-repatriation"],
+                ].map(([label, href]) => (
+                  <Link key={href} href={href} className="inline-flex items-center gap-2 font-body text-sm font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] decoration-2 underline-offset-4">
+                    {label}<ArrowRight className="h-4 w-4" />
+                  </Link>
+                ))}
+              </div>
+            </aside>
+          )}
+
           <div className="mt-16 rounded-lg p-8" style={{ backgroundColor: "#FDF8EC" }}>
             <h2 className="font-display mb-3 text-2xl font-semibold" style={{ color: "#0B1F3A" }}>{cta.title}</h2>
             <p className="font-body mb-6 max-w-2xl text-base leading-relaxed text-slate-700">
@@ -271,7 +307,7 @@ export default async function InsightPostPage({ params }: PageProps) {
         </div>
       </article>
 
-      <FAQSection faqs={post.faqs} heading="Frequently Asked Questions" background="#F7F8FA" />
+      <FAQSection faqs={post.faqs} heading={isTeluguNriPost ? "NRI Tax Filing: తరచుగా అడిగే ప్రశ్నలు" : "Frequently Asked Questions"} background="#F7F8FA" />
 
       {relatedPosts.length > 0 && (
         <section className="bg-white py-20 lg:py-24">
