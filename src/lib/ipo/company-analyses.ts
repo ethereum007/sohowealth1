@@ -357,6 +357,65 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Milky Mist offer-document page", href: "https://www.milkymist.com/drhp-english", kind: "Primary" },
     { label: "Milky Mist financial information", href: "https://www.milkymist.com/financial-information", kind: "Primary" },
   ],
+}, {
+  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Issue open", analysisAsOf: "13 August 2026",
+  summary: "Behari Lal Engineering manufactures metal rolls, engineering castings, alloy-steel products and forged components. FY23–FY25 filings show margin expansion, faster profit growth and a sharp reduction in debt, while steel-cycle exposure, working-capital needs, customer qualification and the sustainability of higher-value product margins remain key questions.",
+  business: [
+    "The company manufactures metal rolls used in rolling mills, engineering castings, alloy-steel rounds and flats, forging ingots, shafts and blocks. Its customers operate across steel and other capital-intensive industries.",
+    "The product strategy has shifted toward higher-value metal rolls, tool steel, die steel and customized castings. This supported margins through FY25, but requires metallurgical quality control, customer approvals and consistent utilization.",
+    "Operations are centered in Punjab and are exposed to electricity, scrap and alloy input costs. Selling prices and raw-material pass-through can move with the steel cycle and customer contracts.",
+  ],
+  issueNote: "Final offer materials indicate a ₹302 crore issue at ₹271–₹285, comprising ₹93 crore fresh issue and an OFS of 73.20 lakh shares worth approximately ₹208.62 crore at the upper band. Exact final proceeds depend on the discovered offer price.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026", priceBand: "₹271–₹285", lotSize: 52, totalCr: 301.62, freshCr: 93, ofsCr: 208.62, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of identified borrowings", amount: "Final allocation to be verified from the RHP" },
+    { purpose: "Funding working-capital requirements", amount: "Final allocation to be verified from the RHP" },
+    { purpose: "General corporate purposes", amount: "Balance of net fresh proceeds" },
+    { purpose: "Offer for sale", amount: "73.20 lakh shares; proceeds go to selling shareholders" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 462.93, ebitdaCr: 49.34, patCr: 28.8, netWorthCr: 119.59, borrowingsCr: 64.09, assetsCr: 203.24 },
+    { year: "FY24", revenueCr: 446.08, ebitdaCr: 60.99, patCr: 35.79, netWorthCr: 193.94, borrowingsCr: 41.21, assetsCr: 262.08 },
+    { year: "FY25", revenueCr: 507.91, ebitdaCr: 81.31, patCr: 52.95, netWorthCr: 241.62, borrowingsCr: 7.58, assetsCr: 295.98 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "16.0%", context: "Up from 10.7% in FY23 as higher-value products contributed more." },
+    { label: "FY25 PAT margin", value: "10.4%", context: "PAT grew faster than revenue across the three-year period." },
+    { label: "FY25 debt/equity", value: "0.03×", context: "Borrowings fell to ₹7.58 crore from ₹64.09 crore in FY23." },
+    { label: "FY23–FY25 PAT CAGR", value: "35.6%", context: "Profit growth was driven by margin expansion rather than continuous revenue growth." },
+  ],
+  strengths: [
+    "EBITDA margin expanded from 10.7% in FY23 to 16.0% in FY25 as the mix shifted toward higher-value products.",
+    "PAT increased from ₹28.80 crore to ₹52.95 crore even though FY24 revenue declined, indicating improved unit economics over the period.",
+    "Borrowings reduced sharply and FY25 liquidity was supported by low bank-limit utilization, according to CRISIL.",
+    "Three decades of promoter experience and established steel-industry relationships support customer qualification and procurement.",
+  ],
+  concerns: [
+    "Steel and foundry demand is cyclical and linked to industrial capex, mill utilization and commodity prices.",
+    "The FY25 margin step-up may normalize if high-value product mix, realizations, energy costs or plant utilization weaken.",
+    "Gross current assets remained around 100–120 days, driven partly by 45–60 inventory days. Growth can rebuild working-capital borrowing.",
+    "The company remains modest in scale relative to several listed engineering and casting peers.",
+    "Product defects, rejection, metallurgical inconsistency or delayed customer approvals can create warranty, rework and reputation costs.",
+    "Most of the public offer is an OFS, so only ₹93 crore of the approximately ₹302 crore issue is primary capital.",
+  ],
+  monitor: [
+    "Revenue and EBITDA margin by product category, particularly metal rolls and specialty alloy steel.",
+    "Inventory, receivable days and operating cash conversion as volumes increase.",
+    "Energy, scrap and alloy-input costs and the timing of price pass-through.",
+    "Capacity utilization, maintenance capex and customer additions outside the existing base.",
+    "Post-issue promoter holding, related-party transactions and final use of the fresh proceeds.",
+  ],
+  valuation: [
+    "A final P/E should be computed using the RHP's post-offer share count and applicable EPS. The historical FY25 earnings base is ₹52.95 crore; this page avoids an inferred multiple until the final denominator is tied out.",
+    "The DRHP references AIA Engineering, RHI Magnesita India and Steelcast. These businesses differ in scale, export exposure, product specialization, margins and capital intensity, limiting a simple peer-average comparison.",
+    "The valuation question is whether FY25's 16% EBITDA margin and low leverage represent a durable product-mix shift or a favorable point in the steel and input-cost cycle.",
+  ],
+  sources: [
+    { label: "SEBI corrigendum to Behari Lal Engineering DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html", kind: "Primary" },
+    { label: "Behari Lal Engineering IPO disclosures", href: "https://www.beharilalengineering.com/ipo.php", kind: "Primary" },
+    { label: "Behari Lal Engineering DRHP", href: "https://www.systematixgroup.in/download/Beharilal_Engg_DRHP.pdf", kind: "Primary" },
+    { label: "CRISIL Ratings rationale, December 2025", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/BehariLalEngineeringLimited_December%2031_%202025_RR_373525.html", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
