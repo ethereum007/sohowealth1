@@ -543,6 +543,67 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Zerodha Lalithaa Jewellery offer summary", href: "https://zerodha.com/ipo/417629/lalithaa-jewellery-mart/", kind: "Secondary" },
     { label: "Mint governance and litigation report, June 2026", href: "https://www.livemint.com/companies/lalithaa-jewellery-ipo-revival-roadshows-governance-concerns-gold-prices/amp-11781076959854.html", kind: "Secondary" },
   ],
+}, {
+  slug: "horizon-industrial-parks-ipo", company: "Horizon Industrial Parks", market: "Mainboard", sector: "Industrial and logistics real estate", status: "Issue opens 17 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Horizon Industrial Parks owns and operates a pan-India portfolio of modern warehouses and industrial parks backed by Blackstone-managed entities. High committed occupancy and long leases support recurring rental cash flow, but rapid acquisition-led expansion has produced heavy leverage, finance costs and continuing statutory losses. The all-fresh issue is principally a balance-sheet repair transaction.",
+  business: [
+    "Horizon develops, owns and leases Grade-A industrial and logistics parks to customers across e-commerce, third-party logistics, FMCG, retail, renewables, automotive components and manufacturing. The model combines recurring rent with development and acquisition-led portfolio growth.",
+    "As of 30 November 2025, DRHP-derived disclosures described 26.74 million square feet of operational space, 94.55% committed occupancy and 107 customers. More than half were Fortune 500 companies and no single tenant contributed more than 10% of rental income.",
+    "The portfolio was assembled through multiple project subsidiaries and acquisitions. Proforma financials are therefore more representative of the enlarged platform than the statutory historical consolidation, but they are prepared for offer-document comparison and are not identical to audited reported history.",
+  ],
+  issueNote: "The ₹2,600 crore issue is entirely fresh capital with no OFS. Approximately ₹2,250 crore is earmarked for repayment or prepayment of borrowings at the company and identified subsidiaries; the offer primarily recapitalises an asset-heavy, highly leveraged platform.",
+  issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹57–₹60", lotSize: 250, totalCr: 2600, freshCr: 2600, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of borrowings of the company and identified subsidiaries", amount: "₹2,250 crore" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds" },
+    { purpose: "Offer for sale", amount: "None; the issue is fully fresh" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 151.32, ebitdaCr: 40.34, patCr: -151.27, netWorthCr: 441.51, borrowingsCr: 2322.83, assetsCr: 3174.88 },
+    { year: "FY24", revenueCr: 233.55, ebitdaCr: 157.98, patCr: -138.97, netWorthCr: 293.24, borrowingsCr: 3284.08, assetsCr: 4290.27 },
+    { year: "FY25", revenueCr: 359.31, ebitdaCr: 310.82, patCr: -129.57, netWorthCr: 731.21, borrowingsCr: 5254.85, assetsCr: 7360.03 },
+  ],
+  metrics: [
+    { label: "FY25 reported EBITDA margin", value: "86.5%", context: "Derived from the statutory consolidation shown here; proforma platform disclosures use a broader perimeter and different revenue presentation." },
+    { label: "FY25 debt/equity", value: "7.19×", context: "Borrowings of ₹5,254.85 crore were large relative to ₹731.21 crore of reported net worth before the offer." },
+    { label: "Committed occupancy", value: "94.55%", context: "DRHP-derived operating disclosure as of 30 November 2025; occupancy should be refreshed from the final RHP." },
+    { label: "FY23–FY25 revenue CAGR", value: "54.1%", context: "Reported consolidation grew rapidly as the portfolio expanded; like-for-like rent growth is a different measure." },
+  ],
+  strengths: [
+    "High committed occupancy and a diversified tenant base support rental visibility; no individual customer accounted for more than 10% of rental income in the cited operating snapshot.",
+    "The network spans major consumption and manufacturing corridors, allowing multi-location leasing relationships with large customers.",
+    "Reported revenue and EBITDA expanded quickly as the operating portfolio grew, while operating cash flow remained positive despite statutory losses.",
+    "The offer contains no shareholder exit and directs most proceeds to debt reduction, which should lower finance cost if repayment occurs as disclosed.",
+  ],
+  concerns: [
+    "Horizon reported statutory losses throughout FY23–FY25 because depreciation and finance costs outweighed property-level earnings.",
+    "Borrowings more than doubled from ₹2,322.83 crore in FY23 to ₹5,254.85 crore in FY25. Even after the planned ₹2,250 crore repayment, the platform remains capital intensive.",
+    "Expansion has relied on acquisitions, project subsidiaries and proforma consolidation. Investors must reconcile statutory, proforma and final-RHP figures before comparing growth or margins.",
+    "Warehouse valuations are sensitive to occupancy, lease renewals, rent escalation, capitalisation rates, interest rates and residual development capex.",
+    "Delhi-NCR, Chennai, Bengaluru and Pune collectively contributed about 80% of FY25 proforma revenue, creating corridor concentration despite the national footprint.",
+    "Related-party and sponsor transactions, asset transfers, management arrangements and future Blackstone monetisation require ongoing governance review.",
+    "Customer defaults, early exits, delayed development, title or approval disputes and environmental compliance can interrupt cash flow or reduce asset value.",
+  ],
+  monitor: [
+    "Actual debt repaid, post-issue gross and net debt, finance cost and interest coverage.",
+    "Committed versus physical occupancy, lease expiries, renewal spreads and rent escalations by park.",
+    "Like-for-like rental growth separately from acquisitions, completed area and new developments.",
+    "Operating cash flow after maintenance and development capex, and free cash flow before acquisitions.",
+    "Geographic and tenant concentration, top-ten rental contribution and customer credit quality.",
+    "Sponsor-related transactions, project-level minority interests and reconciliation of statutory versus proforma results.",
+  ],
+  valuation: [
+    "P/E is not meaningful while statutory PAT remains negative. EV/EBITDA must use the final post-offer debt, cash and a consistently defined proforma EBITDA perimeter.",
+    "Relevant references include listed logistics and industrial real-estate vehicles, REITs and asset owners such as Anant Raj, but ownership structure, development exposure, leverage and distribution policies differ materially.",
+    "A net-asset-value framework should test stabilised rent, vacancy, lease escalation, remaining capex and capitalisation rates park by park. The offer price alone does not establish a reliable discount or premium to NAV without the final RHP bridge.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Horizon Industrial Parks DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jan-2026/horizon-industrial-parks-limited_98839.html", kind: "Primary" },
+    { label: "Horizon Industrial Parks DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_29122025155357_DRHP.pdf", kind: "Primary" },
+    { label: "SEBI proforma financial information", href: "https://www.sebi.gov.in/web/?file=https%3A%2F%2Fwww.sebi.gov.in%2Fsebi_data%2Fattachdocs%2Fjan-2026%2F1767598214527_1051.pdf", kind: "Primary" },
+    { label: "Horizon Industrial Parks corporate website", href: "https://www.hiparks.com/", kind: "Primary" },
+    { label: "Business Standard DRHP report", href: "https://www.business-standard.com/markets/ipo/blackstone-backed-horizon-industrial-parks-files-drhp-for-2-600-cr-ipo-125123000298_1.html", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
