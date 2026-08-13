@@ -480,6 +480,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Zerodha Shiprocket offer summary", href: "https://zerodha.com/ipo/414198/shiprocket/", kind: "Secondary" },
     { label: "IPOPlatform restated financial report", href: "https://www.ipoplatform.com/ipo/financial-report/shiprocket-ipo/4146", kind: "Secondary" },
   ],
+}, {
+  slug: "lalithaa-jewellery-mart-ipo", company: "Lalithaa Jewellery Mart", market: "Mainboard", sector: "Organised jewellery retail", status: "Issue opens 17 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Lalithaa Jewellery Mart is a large South India-focused jewellery retailer serving value-conscious customers through high-throughput stores and transparent pricing. Revenue and profit expanded through FY24, while FY25 revenue and profit growth moderated. The offer funds a store-led inventory expansion, but thin margins, gold-price exposure, customer-advance obligations, promoter-linked governance history and material litigation require close scrutiny.",
+  business: [
+    "The company manufactures, wholesales and retails gold, diamond-studded, platinum and silver jewellery, with stores across Tamil Nadu, Andhra Pradesh, Telangana, Karnataka and Puducherry. Gold jewellery and bullion dominate revenue, limiting product diversification.",
+    "Its positioning emphasizes low or transparent making charges and large-format, high-throughput stores. DRHP peer data indicated unusually high revenue per store, but headline revenue is heavily influenced by gold prices and bullion mix rather than only jewellery volume or same-store demand.",
+    "Jewellery purchase schemes collect customer advances before redemption. They support retention and working-capital efficiency but create fulfilment obligations and require careful liquidity, trust and regulatory management.",
+  ],
+  issueNote: "The ₹1,700 crore offer comprises a ₹1,200 crore fresh issue and ₹500 crore OFS at ₹190–₹201. Final materials allocate ₹998.68 crore—more than 83% of fresh proceeds—to inventory for new stores, making store ramp-up and inventory productivity the central post-issue execution test.",
+  issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹190–₹201", lotSize: 74, totalCr: 1700, freshCr: 1200, ofsCr: 500, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Inventory for new stores", amount: "₹998.68 crore" },
+    { purpose: "Capital expenditure for new stores", amount: "₹34.55 crore" },
+    { purpose: "General corporate purposes", amount: "Approximately ₹166.77 crore" },
+    { purpose: "Offer for sale", amount: "₹500 crore to selling shareholders; no proceeds to the company" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 13316.8, ebitdaCr: 502.2, patCr: 238.3, netWorthCr: 1207.5, borrowingsCr: 540, assetsCr: 4242.4 },
+    { year: "FY24", revenueCr: 16788.05, ebitdaCr: 680.1, patCr: 359.8, netWorthCr: 1564.3, borrowingsCr: 824.1, assetsCr: 5182.2 },
+    { year: "FY25", revenueCr: 16897.5, ebitdaCr: 739.3, patCr: 362.8, netWorthCr: 2012.9, borrowingsCr: 949.3, assetsCr: 7030.3 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "4.38%", context: "Margin improved from 3.77% in FY23 but remains thin for a business exposed to gold and inventory movements." },
+    { label: "FY25 PAT margin", value: "2.15%", context: "PAT increased only about 0.8% in FY25 as revenue was nearly flat." },
+    { label: "FY25 debt/equity", value: "0.47×", context: "Borrowings increased to ₹949.3 crore as assets and inventory expanded." },
+    { label: "FY23–FY25 revenue CAGR", value: "12.7%", context: "Revenue growth was concentrated in FY24; FY25 revenue increased less than 1%." },
+  ],
+  strengths: [
+    "A substantial South Indian footprint and long operating history support brand awareness and procurement scale.",
+    "FY25 EBITDA margin improved despite nearly flat revenue, and net worth increased to approximately ₹2,013 crore.",
+    "High reported revenue per store and comparatively efficient inventory turnover indicate productive mature stores, though bullion mix affects comparability.",
+    "The fresh issue directly funds new-store inventory and capex, providing a visible link between capital raised and retail expansion.",
+  ],
+  concerns: [
+    "FY25 revenue and PAT were nearly flat after strong FY24 growth; rising gold prices can lift reported rupee sales even when jewellery volumes weaken.",
+    "The business operates on low single-digit EBITDA and PAT margins. Small changes in gross margin, making charges, discounting, theft, shrinkage or finance cost can materially affect profit.",
+    "Gold procurement was not fully hedged in the DRHP period, exposing inventory value, consumer demand and margins to rapid price changes.",
+    "Borrowings rose from ₹540 crore in FY23 to ₹949.3 crore in FY25. New stores require substantial inventory before they establish throughput and customer advances.",
+    "The 2025 DRHP disclosed material legal and tax proceedings involving the company and promoter. Reported claims and demands are not provisions for certain loss, but their size and status require document-level tracking.",
+    "Promoter M. Kiran Kumar Jain previously received fees as brand ambassador in addition to remuneration, attracting related-party governance scrutiny. The arrangement was subsequently terminated and reportedly did not feature from FY25.",
+    "Revenue is geographically concentrated in South India and heavily dependent on gold jewellery and bullion, while organised and local competition remains intense.",
+  ],
+  monitor: [
+    "New-store opening schedule, inventory deployed per store, breakeven time and mature versus new-store sales productivity.",
+    "Gold jewellery volume, bullion contribution, same-store growth and gross margin rather than revenue growth alone.",
+    "Inventory turnover, customer advances, operating cash flow, borrowings and interest coverage after expansion.",
+    "Current status and potential financial exposure of material tax, regulatory and legal proceedings.",
+    "Promoter remuneration, related-party transactions, board independence and post-issue governance disclosures.",
+    "Geographic diversification and performance outside core Tamil Nadu and Andhra Pradesh markets.",
+  ],
+  valuation: [
+    "The final P/E should be calculated from the RHP's post-offer diluted share count and FY26 earnings. This page does not annualise partial-period profit or infer the denominator from unverified summaries.",
+    "Relevant listed references include Titan, Kalyan Jewellers, Senco Gold, Thangamayil Jewellery, Tribhovandas Bhimji Zaveri and PN Gadgil Jewellers. Differences in franchise mix, studded-jewellery share, geography, margins and inventory funding limit direct P/E comparison.",
+    "For Lalithaa, valuation should distinguish gold-price-led revenue growth from volume and store-productivity growth, and should explicitly incorporate the capital required to stock each new showroom.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Lalithaa Jewellery Mart DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jun-2025/lalithaa-jewellery-mart-limited_94576.html", kind: "Primary" },
+    { label: "Lalithaa Jewellery Mart DRHP", href: "https://www.lalithaajewellery.com/assets/pdf/Lalithaa_Jewellery_Mart_Limited-DRHP.pdf", kind: "Primary" },
+    { label: "Lalithaa Jewellery Mart DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_07062025083753_LalithaaJewelleryDRHP.pdf", kind: "Primary" },
+    { label: "ICRA rating rationale, February 2026", href: "https://www.icra.in/Rating/GetRationalReportFilePdf?Id=141042", kind: "Secondary" },
+    { label: "Zerodha Lalithaa Jewellery offer summary", href: "https://zerodha.com/ipo/417629/lalithaa-jewellery-mart/", kind: "Secondary" },
+    { label: "Mint governance and litigation report, June 2026", href: "https://www.livemint.com/companies/lalithaa-jewellery-ipo-revival-roadshows-governance-concerns-gold-prices/amp-11781076959854.html", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);

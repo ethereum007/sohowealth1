@@ -42,7 +42,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "ENS Enterprises", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "BSE SME" },
   { company: "Technocrats Plasma Systems", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "BSE SME" },
 
-  { company: "Lalithaa Jewellery Mart", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 1700, priceBand: null },
+  { company: "Lalithaa Jewellery Mart", slug: "lalithaa-jewellery-mart-ipo", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 1700, priceBand: "₹190–₹201" },
   { company: "Horizon Industrial Parks", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 2600, priceBand: "₹57–₹60" },
   { company: "Shankesh Jewellers", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 367.18, priceBand: "₹88–₹93" },
   { company: "Sunshine Pictures", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 282.14, priceBand: "₹342–₹360" },
