@@ -177,6 +177,68 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Dhoot Transmission IPO disclosures", href: "https://www.dhoottransmission.com/investor-relations/ipo-related-disclosures", kind: "Primary" },
     { label: "Bain Capital announcement: strategic investment", href: "https://www.baincapital.com/news/dhoot-transmission-group-secures-strategic-growth-investment-bain-capital-significant-minority", kind: "Primary" },
   ],
+}, {
+  slug: "molbio-diagnostics-ipo", company: "Molbio Diagnostics", market: "Mainboard", sector: "Point-of-care molecular diagnostics", status: "Issue closed; listing awaited", analysisAsOf: "13 August 2026",
+  summary: "Molbio Diagnostics develops the portable Truenat molecular-testing platform and disease-specific test kits. Its installed devices can support recurring consumable sales, but the economics are concentrated in tuberculosis programmes, government and aid-agency procurement, large customers and inventory with finite shelf life.",
+  business: [
+    "Molbio's Truenat platform combines portable, battery-operated PCR analysers with single-use disease-specific test chips and sample-processing products. The installed device base can create repeat consumable demand as tests are run.",
+    "As of March 2025, the issuer reported molecular tests for 30 diseases through 42 assays, including tuberculosis, COVID-19, HIV, hepatitis and HPV. Truenat's TB application has received WHO recognition for defined diagnostic uses.",
+    "The group also includes R&D and radiology activities through subsidiaries. This broadens the technology portfolio but adds acquisition, product-development, regulatory and capital-allocation complexity.",
+  ],
+  issueNote: "Final offer materials indicate a ₹939.70 crore issue at ₹768–₹807, comprising about ₹200 crore fresh issue and ₹739.70 crore OFS. The August 2025 DRHP originally described the OFS as up to 1.2556 crore shares; final RHP and allotment notices should control exact share counts.",
+  issue: { open: "10 August 2026", close: "12 August 2026", listing: "Expected 17 August 2026", priceBand: "₹768–₹807", lotSize: 18, totalCr: 939.7, freshCr: 200, ofsCr: 739.7, faceValue: "₹1" },
+  useOfProceeds: [
+    { purpose: "R&D facility, Centre of Excellence and connected office space", amount: "Up to ₹99.37 crore" },
+    { purpose: "Plant, machinery and equipment for Goa and Visakhapatnam units", amount: "Up to ₹73.60 crore" },
+    { purpose: "General corporate purposes", amount: "Balance of net fresh proceeds" },
+    { purpose: "Offer for sale", amount: "Approximately ₹739.70 crore to selling shareholders" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 332.46, ebitdaCr: 48.11, patCr: -3.45, netWorthCr: 706.04, borrowingsCr: 108.44, assetsCr: 1461.56 },
+    { year: "FY24", revenueCr: 836.56, ebitdaCr: 185.09, patCr: 83.54, netWorthCr: 807.94, borrowingsCr: 174.58, assetsCr: 1221.06 },
+    { year: "FY25", revenueCr: 1020.42, ebitdaCr: 256.64, patCr: 138.58, netWorthCr: 952.95, borrowingsCr: 123.16, assetsCr: 1034.21 },
+  ],
+  metrics: [
+    { label: "FY23–FY25 revenue CAGR", value: "75.2%", context: "Growth is from a low FY23 base and includes public-health procurement variability." },
+    { label: "FY25 EBITDA margin", value: "25.2%", context: "Derived from DRHP EBITDA and revenue; R&D capitalization and subsidiary mix require review." },
+    { label: "FY25 PAT margin", value: "13.6%", context: "Improved from a small loss in FY23." },
+    { label: "FY25 government/aid exposure", value: "87.8%", context: "Share of finished-goods sales disclosed in the DRHP risk factors." },
+  ],
+  strengths: [
+    "The device-plus-consumables architecture can create repeat kit revenue after analyser deployment.",
+    "Revenue rose from ₹332.46 crore in FY23 to ₹1,020.42 crore in FY25, with a swing from loss to ₹138.58 crore PAT.",
+    "The portable platform addresses decentralized testing where laboratory infrastructure and reliable power are limited.",
+    "Exports increased to ₹197.14 crore in FY25, providing an avenue to diversify beyond Indian procurement over time.",
+    "Fresh proceeds fund R&D infrastructure and manufacturing equipment rather than debt repayment.",
+  ],
+  concerns: [
+    "Government and international aid agencies accounted for 87.83% of FY25 finished-goods sales, exposing revenue to tenders, budgets, programme changes and payment timing.",
+    "TB test kits represented 69.11% of FY25 finished-goods sales; alternative testing protocols or procurement changes could affect the core franchise.",
+    "The top ten customers contributed 83.62% of FY25 finished-goods sales, creating significant counterparty concentration.",
+    "FY25 trade receivables were ₹271.66 crore and the average credit cycle was 125 days. Government collection delays can weaken cash conversion.",
+    "Inventory was ₹435.91 crore at March 2025 and many kits have limited shelf life, increasing forecasting, obsolescence and write-off risk.",
+    "Auditor reporting on internal financial controls included a disclaimer of opinion in FY23 and FY24; remediation and sustained FY25 controls warrant monitoring.",
+    "The OFS is almost four-fifths of the offer, so most proceeds provide liquidity to existing shareholders rather than capital to the company.",
+  ],
+  monitor: [
+    "Revenue diversification outside TB and outside government or aid-funded programmes.",
+    "Receivable days, operating cash flow and overdue government balances.",
+    "Inventory ageing, expiry provisions, write-offs and kit demand forecasting.",
+    "R&D spending, capitalization policy, regulatory approvals and commercial uptake of new assays.",
+    "Export registrations and recurring consumable revenue per installed Truenat device.",
+    "Internal-control reporting, related-party transactions and performance of acquired subsidiaries including OptraSCAN.",
+  ],
+  valuation: [
+    "At ₹807, the issue was marketed at approximately 54.6× reported FY26 EPS of ₹14.77. That multiple should be tied to the final RHP share count and audited FY26 financials before use.",
+    "Conventional diagnostics peers are imperfect comparisons because Molbio combines proprietary devices, consumables, public-health tenders, R&D and acquired medtech businesses. Revenue quality and cash conversion therefore matter alongside P/E.",
+    "A durable valuation framework should normalize procurement cycles, bad-debt and inventory provisions, R&D expense versus capitalization, and maintenance investment while testing how quickly non-TB and export assays scale.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Molbio Diagnostics DRHP", href: "https://www.sebi.gov.in/filings/public-issues/aug-2025/molbio-diagnostics-limited-drhp_96343.html", kind: "Primary" },
+    { label: "Molbio Diagnostics DRHP", href: "https://www.molbiodiagnostics.com/wp-content/uploads/2025/08/Molbio-Diagnostics-Limited-DRHP.pdf", kind: "Primary" },
+    { label: "Molbio investor disclosures and financials", href: "https://www.molbiodiagnostics.com/investors/", kind: "Primary" },
+    { label: "Molbio issuer announcement: IPO filing", href: "https://www.molbiodiagnostics.com/newsroom/molbio-diagnostics-files-for-ipo-to-raise-rs-200-cr-ofs-of-1-25-cr-shares/", kind: "Primary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);

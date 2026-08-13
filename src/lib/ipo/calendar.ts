@@ -29,7 +29,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Optimystix Entertainment India", market: "SME", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 97.65, priceBand: "₹166–₹175", exchange: "NSE SME" },
 
   { company: "Dhoot Transmission", slug: "dhoot-transmission-ipo", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: 3066.89, priceBand: "₹829–₹871" },
-  { company: "Molbio Diagnostics", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: null, priceBand: null },
+  { company: "Molbio Diagnostics", slug: "molbio-diagnostics-ipo", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: 939.7, priceBand: "₹768–₹807" },
   { company: "Milky Mist Dairy Food", market: "Mainboard", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 1553, priceBand: null },
   { company: "Sham Foam", market: "SME", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 38.45, priceBand: "₹130", exchange: "BSE SME" },
   { company: "Fascinate Textiles", market: "SME", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 63.62, priceBand: "₹148–₹156", exchange: "NSE SME" },
