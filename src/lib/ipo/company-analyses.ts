@@ -2,7 +2,7 @@ export type CompanyIpoAnalysis = {
   slug: string; company: string; market: "Mainboard" | "SME"; sector: string; status: string; analysisAsOf: string; summary: string;
   business: string[];
   issueNote?: string;
-  issue: { open: string; close: string; listing: string; priceBand: string; lotSize: number; totalCr: number; freshCr: number; ofsCr: number; faceValue: string };
+  issue: { open: string; close: string; listing: string; priceBand: string; lotSize: number | null; totalCr: number; freshCr: number; ofsCr: number; faceValue: string };
   useOfProceeds: Array<{ purpose: string; amount: string }>;
   financials: Array<{ year: string; revenueCr: number; ebitdaCr: number; patCr: number; netWorthCr: number; borrowingsCr: number; assetsCr: number }>;
   metrics: Array<{ label: string; value: string; context: string }>;
@@ -726,6 +726,68 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Sunshine Pictures financial disclosures", href: "https://ssp.spectradigital.co.in/financials/", kind: "Primary" },
     { label: "Sunshine Pictures corporate website", href: "https://www.sunshinepictures.in/", kind: "Primary" },
     { label: "Kotak Neo DRHP financial and risk summary", href: "https://www.kotakneo.com/ipo/sunshine-pictures-ltd-ipo", kind: "Secondary" },
+  ],
+}, {
+  slug: "gaja-alternative-asset-management-ipo", company: "Gaja Alternative Asset Management", market: "Mainboard", sector: "Private equity and alternative asset management", status: "Final offer dates and price awaited", analysisAsOf: "14 August 2026",
+  summary: "Gaja is a promoter-led Indian alternative asset manager with more than two decades across private-equity cycles. Its economics combine recurring management fees, volatile carried interest and returns on sponsor commitments. Profitability is high and leverage is low, but earnings depend on exits and fund performance; the large fresh issue principally finances sponsor capital for existing and proposed funds rather than conventional operating expansion.",
+  business: [
+    "Gaja manages and advises India-focused Category I and Category II AIFs and offshore funds, primarily in mid-market private equity. It earns management fees, carried interest and income on capital committed as fund sponsor.",
+    "Management fees are the most recurring stream, but represented 48.63%, 72.96%, 46.65% and 26.65% of total income in FY23, FY24, FY25 and H1 FY26 respectively. The changing mix shows how exits, carry and sponsor-investment income can dominate reported periods.",
+    "The company is raising capital for sponsor commitments to Fund IV constituents, proposed Fund V and a Secondaries Fund. Sponsor capital aligns interests and enables fundraising, but also places listed-company capital at risk in illiquid underlying investments.",
+  ],
+  issueNote: "The updated draft offer totals ₹656.20 crore, comprising ₹549.20 crore fresh issue and ₹107 crore OFS. As of this analysis, the issuer and major broker offer page had not published final dates, price band, lot size or listing schedule; calendar dates previously sourced from an IPO aggregator remain tentative and are not shown as confirmed terms here.",
+  issue: { open: "Tentative 19 August 2026", close: "Tentative 21 August 2026", listing: "Not yet announced", priceBand: "Not yet announced", lotSize: null, totalCr: 656.2, freshCr: 549.2, ofsCr: 107, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Sponsor commitments to existing and proposed funds, including bridge-loan repayment", amount: "₹387 crore" },
+    { purpose: "Repayment or prepayment of company borrowings", amount: "₹24.91 crore" },
+    { purpose: "General corporate purposes", amount: "₹137.29 crore" },
+    { purpose: "Offer for sale", amount: "₹107 crore to selling shareholders; no proceeds to the company" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 55.81, ebitdaCr: 57.92, patCr: 41.26, netWorthCr: 289.2, borrowingsCr: 4.23, assetsCr: 339.82 },
+    { year: "FY24", revenueCr: 95.64, ebitdaCr: 54.92, patCr: 44.74, netWorthCr: 333.95, borrowingsCr: 3.52, assetsCr: 388.6 },
+    { year: "FY25", revenueCr: 122, ebitdaCr: 60.81, patCr: 61.95, netWorthCr: 393.46, borrowingsCr: 4, assetsCr: 451.87 },
+  ],
+  metrics: [
+    { label: "FY25 PAT margin", value: "50.2%", context: "Based on total income; the unusually high margin reflects asset-light fees plus investment and carry economics." },
+    { label: "FY23–FY25 PAT CAGR", value: "22.5%", context: "PAT rose from ₹41.26 crore to ₹61.95 crore despite variability in income composition." },
+    { label: "FY25 debt/equity", value: "0.01×", context: "Balance-sheet borrowing was low before H1 FY26 bridge and sponsor-funding activity." },
+    { label: "H1 FY26 management-fee share", value: "26.65%", context: "A lower recurring-fee share means period earnings were more dependent on carry and sponsor-investment income." },
+  ],
+  strengths: [
+    "A two-decade operating history spans multiple fundraising, investment and exit cycles in Indian private equity.",
+    "The platform combines management fees with participation in carry and sponsor returns, capturing more fund economics when investments perform.",
+    "The operating company has historically carried little debt and generated high PAT margins relative to many diversified wealth managers.",
+    "Fresh capital can satisfy sponsor commitments for new strategies, supporting future fee-paying capital and alignment with limited partners.",
+  ],
+  concerns: [
+    "Reported income is not predominantly recurring in every period. Carried interest and sponsor-investment gains depend on valuations, exits and distribution waterfalls.",
+    "Fundraising is concentrated by vintage and strategy. Delay or failure in launching Fund V or the Secondaries Fund would reduce deployment of proceeds and future management-fee growth.",
+    "Sponsor commitments expose shareholder capital to illiquid portfolio-company losses, delayed exits, currency effects and valuation uncertainty.",
+    "Gopal Jain and the senior investment team are important to fundraising, sourcing, investment committees and limited-partner relationships, creating key-person and retention risk.",
+    "AIF regulation, taxation, valuation standards and rules governing sponsor commitments can change economics or restrict fundraising.",
+    "Private fund performance is difficult to compare: IRR and multiple metrics depend on valuation policy, timing, realised versus unrealised gains and vintage.",
+    "Final price, lot size and dates were not confirmed by primary offer materials at the analysis cut-off, so any published valuation multiple remains premature.",
+  ],
+  monitor: [
+    "Fee-paying AUM, committed capital, deployment and fundraising by fund and vintage.",
+    "Management fees separately from carried interest and income from sponsor commitments.",
+    "Realised versus unrealised carry, distributed-to-paid-in capital and net fund performance after fees.",
+    "Deployment of the ₹387 crore sponsor allocation and exposure concentration by portfolio company.",
+    "Key-person provisions, senior-team retention, compensation and carried-interest sharing.",
+    "Final RHP terms, post-offer share count, selling shareholders and related-party fund arrangements.",
+  ],
+  valuation: [
+    "Final P/E and market capitalisation cannot be calculated responsibly until the price band and post-offer diluted share count are published.",
+    "Listed references include 360 ONE WAM, HDFC AMC, Nippon Life India AMC, Nuvama Wealth, Anand Rathi Wealth, UTI AMC and Aditya Birla Sun Life AMC. Most have larger, more diversified and more recurring fee bases than a private-equity specialist.",
+    "A useful framework separates recurring management-fee earnings from volatile carry and sponsor returns, then values balance-sheet fund investments at an evidence-based discount or premium to reported NAV.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Gaja Alternative Asset Management", href: "https://www.sebi.gov.in/filings/public-issues/dec-2025/gaja-alternative-asset-management-limited_98194.html", kind: "Primary" },
+    { label: "Gaja Updated DRHP-I hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Gaja_Alternative_Asset_Management_Limited_UDRHP_1.pdf", kind: "Primary" },
+    { label: "Gaja investor-relations reports and IPO disclosures", href: "https://gajacapital.com/investor-relations/reports-and-publications", kind: "Primary" },
+    { label: "CRISIL alternative asset-management industry report", href: "https://gajacapital.com/assets/pdf/industry-report.pdf", kind: "Primary" },
+    { label: "Zerodha Gaja updated-offer summary", href: "https://zerodha.com/ipo/441847/gaja-capital-is-a-promoter-led-indian-alternative-asset-management-firm/", kind: "Secondary" },
   ],
 }];
 
