@@ -54,6 +54,11 @@ const investmentProducts: MenuLink[] = [
     href: "/global-investing",
     description: "Build measured exposure beyond Indian markets.",
   },
+  {
+    name: "GIFT City Outbound",
+    href: "/gift-city-outbound-investing",
+    description: "Compare global retail funds, AIFs and PMS routes from IFSC.",
+  },
 ];
 
 const audienceLinks: MenuLink[] = [

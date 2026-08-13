@@ -11,6 +11,7 @@ const investmentLinks = [
   { name: "AIF", href: "/aif-advisory" },
   { name: "Pre-IPO", href: "/pre-ipo" },
   { name: "Global Investing", href: "/global-investing" },
+  { name: "GIFT City Outbound", href: "/gift-city-outbound-investing" },
 ];
 
 const audienceLinks = [
