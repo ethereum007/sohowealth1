@@ -1,0 +1,43 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { ExternalLink } from "lucide-react";
+import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { JsonLd } from "@/components/seo/JsonLd";
+import { companyIpoAnalyses, getCompanyIpoAnalysis } from "@/lib/ipo/company-analyses";
+
+export const dynamicParams = false;
+export const generateStaticParams = () => companyIpoAnalyses.map(({ slug }) => ({ slug }));
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const item = getCompanyIpoAnalysis((await params).slug);
+  if (!item) return {};
+  return { title: `${item.company} IPO Analysis: Financials, Risks & Valuation`, description: `${item.company} IPO analysis covering issue structure, use of proceeds, three-year financials, leverage, customer concentration, risks and valuation context.`, alternates: { canonical: `https://www.sohowealth.in/ipo/${item.slug}` }, openGraph: { title: `${item.company} IPO Analysis`, description: item.summary, url: `https://www.sohowealth.in/ipo/${item.slug}`, type: "article" } };
+}
+
+const money = (value: number) => `₹${value.toLocaleString("en-IN")} Cr`;
+
+function BulletSection({ title, items, bg, dot }: { title: string; items: string[]; bg: string; dot: string }) {
+  return <section className="rounded-2xl p-7 md:p-9" style={{ background: bg }}><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>{title}</h2><ul className="mt-6 space-y-4">{items.map(item => <li key={item} className="flex gap-3 font-body text-sm leading-relaxed text-slate-700"><span className="mt-2 h-2 w-2 shrink-0 rounded-full" style={{ background: dot }} />{item}</li>)}</ul></section>;
+}
+
+export default async function IpoAnalysisPage({ params }: { params: Promise<{ slug: string }> }) {
+  const item = getCompanyIpoAnalysis((await params).slug);
+  if (!item) notFound();
+  return <main className="bg-white pb-20">
+    <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: `${item.company} IPO Analysis`, description: item.summary, datePublished: "2026-08-13", dateModified: "2026-08-13", author: { "@type": "Organization", name: "SoHo Wealth Editorial Team", url: "https://www.sohowealth.in/team" }, publisher: { "@type": "Organization", name: "SoHo Wealth", url: "https://www.sohowealth.in" }, mainEntityOfPage: `https://www.sohowealth.in/ipo/${item.slug}` }} />
+    <Breadcrumbs items={[{ name: "IPO Research", href: "/ipo" }, { name: `${item.company} IPO`, href: `/ipo/${item.slug}` }]} />
+    <header className="container mx-auto max-w-5xl px-6 pb-12 pt-9"><div className="flex flex-wrap gap-2 font-body text-xs font-bold uppercase tracking-[0.11em]"><span className="rounded-full bg-emerald-50 px-3 py-1.5 text-emerald-800">{item.market}</span><span className="rounded-full bg-slate-100 px-3 py-1.5 text-slate-600">{item.status}</span></div><h1 className="mt-5 font-display text-4xl font-semibold leading-tight md:text-6xl" style={{ color: "#0B1F3A" }}>{item.company} IPO analysis</h1><p className="mt-5 max-w-3xl font-body text-lg leading-relaxed text-slate-600">{item.summary}</p><p className="mt-5 font-body text-xs text-slate-500">Analysis as of {item.analysisAsOf} · Reviewed by <Link href="/team" className="font-semibold text-emerald-800">SoHo Wealth Editorial Team</Link></p></header>
+    <section className="border-y border-slate-200 bg-slate-50 px-6 py-10"><div className="container mx-auto grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-4">{[["Price band",item.issue.priceBand],["Issue size",money(item.issue.totalCr)],["Fresh issue",money(item.issue.freshCr)],["Offer for sale",money(item.issue.ofsCr)],["Open",item.issue.open],["Close",item.issue.close],["Listing",item.issue.listing],["Minimum lot",`${item.issue.lotSize} shares`]].map(([label,value]) => <div key={label} className="rounded-xl bg-white p-5"><p className="font-body text-xs font-bold uppercase tracking-[0.1em] text-slate-500">{label}</p><p className="mt-2 font-body text-base font-bold text-slate-900">{value}</p></div>)}</div></section>
+    <article className="container mx-auto max-w-5xl space-y-16 px-6 py-16">
+      <section><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>What the company does</h2><div className="mt-5 space-y-4 font-body leading-relaxed text-slate-600">{item.business.map(p => <p key={p}>{p}</p>)}</div></section>
+      <section><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>Where the IPO money goes</h2><div className="mt-6 overflow-hidden rounded-xl border border-slate-200">{item.useOfProceeds.map((row,i) => <div key={row.purpose} className={`grid gap-2 p-5 md:grid-cols-[1.5fr_1fr] ${i ? "border-t border-slate-200" : ""}`}><span className="font-body text-sm text-slate-700">{row.purpose}</span><strong className="font-body text-sm text-slate-900">{row.amount}</strong></div>)}</div></section>
+      <section><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>Three-year financial snapshot</h2><div className="mt-6 overflow-x-auto rounded-xl border border-slate-200"><table className="w-full min-w-[720px] text-left"><thead className="bg-slate-50 font-body text-xs uppercase tracking-[0.1em] text-slate-500"><tr>{["Year","Revenue","EBITDA","PAT","Net worth","Borrowings","Assets"].map(h => <th key={h} className="px-4 py-3">{h}</th>)}</tr></thead><tbody>{item.financials.map(row => <tr key={row.year} className="border-t border-slate-200 font-body text-sm"><td className="px-4 py-4 font-bold">{row.year}</td>{[row.revenueCr,row.ebitdaCr,row.patCr,row.netWorthCr,row.borrowingsCr,row.assetsCr].map((v,i) => <td key={i} className="px-4 py-4">{money(v)}</td>)}</tr>)}</tbody></table></div><p className="mt-3 font-body text-xs text-slate-500">Restated financial information from IPO source materials; rounding may create small differences.</p></section>
+      <section className="grid gap-4 md:grid-cols-2">{item.metrics.map(metric => <div key={metric.label} className="rounded-xl border border-slate-200 p-6"><p className="font-body text-xs font-bold uppercase tracking-[0.1em] text-slate-500">{metric.label}</p><p className="mt-2 font-display text-3xl font-semibold text-emerald-800">{metric.value}</p><p className="mt-3 font-body text-sm leading-relaxed text-slate-600">{metric.context}</p></div>)}</section>
+      <BulletSection title="What stands out" items={item.strengths} bg="#EAF7F1" dot="#137A52" /><BulletSection title="Key concerns" items={item.concerns} bg="#FFF0EE" dot="#B42318" /><BulletSection title="What to monitor after listing" items={item.monitor} bg="#FFF7E3" dot="#9A6500" />
+      <section><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>Valuation context</h2><div className="mt-5 space-y-4 font-body leading-relaxed text-slate-600">{item.valuation.map(p => <p key={p}>{p}</p>)}</div></section>
+      <section><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>Sources and verification</h2><div className="mt-5 space-y-3">{item.sources.map(source => <a key={source.href} href={source.href} target="_blank" rel="noreferrer" className="flex items-center justify-between rounded-lg border border-slate-200 p-4 font-body text-sm font-semibold text-slate-700 hover:border-emerald-300"><span><span className="mr-2 rounded-full bg-slate-100 px-2 py-1 text-[10px] uppercase text-slate-500">{source.kind}</span>{source.label}</span><ExternalLink className="h-4 w-4 shrink-0 text-emerald-700" /></a>)}</div></section>
+      <aside className="rounded-xl border border-amber-200 bg-amber-50 p-6 font-body text-sm leading-relaxed text-amber-900/80">This is factual, general analysis—not a recommendation to apply, buy, sell or hold. Review the final prospectus, exchange disclosures and your own circumstances.</aside>
+    </article>
+  </main>;
+}

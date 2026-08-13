@@ -1,4 +1,5 @@
 import { CalendarDays, ExternalLink } from "lucide-react";
+import Link from "next/link";
 import { august2026Snapshot, august2026Weeks, type IpoCalendarEntry } from "@/lib/ipo/calendar";
 
 const formatDate = (date: string) =>
@@ -33,7 +34,7 @@ function EntryTable({ entries, market }: { entries: IpoCalendarEntry[]; market: 
             {filtered.map((entry) => (
               <tr key={`${entry.company}-${entry.opens}`} className="border-t border-slate-100 font-body text-sm">
                 <td className="px-5 py-4">
-                  <span className="block font-bold text-slate-900">{entry.company}</span>
+                  {entry.slug ? <Link href={`/ipo/${entry.slug}`} className="block font-bold text-emerald-800 hover:underline">{entry.company}</Link> : <span className="block font-bold text-slate-900">{entry.company}</span>}
                   <span className="mt-1 block text-xs text-slate-500">{entry.exchange ?? "NSE & BSE Mainboard"}</span>
                 </td>
                 <td className="whitespace-nowrap px-4 py-4 text-slate-700">{formatDate(entry.opens)}–{formatDate(entry.closes)}</td>
@@ -102,4 +103,3 @@ export function AugustIpoCalendar() {
     </section>
   );
 }
-
