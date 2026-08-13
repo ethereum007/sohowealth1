@@ -912,6 +912,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "HDFC Sky Aegeus offer summary", href: "https://hdfcsky.com/sme-ipo/aegeus-technologies-ipo", kind: "Secondary" },
     { label: "IPOPlatform Aegeus financial report", href: "https://www.ipoplatform.com/ipo/financial-report/aegeus-technologies-ipo/4561", kind: "Secondary" },
   ],
+}, {
+  slug: "lapl-automotive-ipo", company: "LAPL Automotive", market: "SME", sector: "Automotive lighting, mirrors and moulded components", status: "Issue closed; listing notice pending verification", analysisAsOf: "14 August 2026",
+  summary: "LAPL Automotive designs and manufactures lighting systems, rear-view mirrors, motors and plastic-moulded components for vehicle manufacturers and its own LAPL brand. Profitability improved through FY25 and the nine months to December 2025, but a single customer supplied roughly three-quarters of revenue, borrowings and working capital rose, and the small BSE SME float adds liquidity risk.",
+  business: [
+    "LAPL operates as an original design manufacturer and an own-brand manufacturer across automotive lighting, rear-view mirrors, motors and plastic-moulded components. It supplies customer-specific products and sells standardized products under the LAPL brand.",
+    "The company disclosed three manufacturing units in Chhatrapati Sambhajinagar, Maharashtra. Proximity to automotive customers can support development and delivery, while dependence on a concentrated local manufacturing footprint creates disruption and utilisation risk.",
+    "Promoters Neeraj Satyaprakash Goyal, Shubham Neeraj Goyal and Anita Neeraj Goyal control the business. The DRHP describes family experience in automotive components; governance, succession and related-party oversight remain important in a promoter-led SME.",
+  ],
+  issueNote: "Final marketed materials indicate a ₹30.77 crore, entirely fresh BSE SME offer at ₹88–₹94. The May 2026 DRHP authorized up to 36 lakh shares and left final offer fields blank; final prospectus, basis of allotment and BSE listing notice should control the exact issued share count and listing status.",
+  issue: { open: "6 August 2026", close: "10 August 2026", listing: "Final BSE notice pending verification", priceBand: "₹88–₹94", lotSize: 1200, totalCr: 30.77, freshCr: 30.77, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Capital expenditure for an additional manufacturing unit at Auric City, Chhatrapati Sambhajinagar", amount: "Final amount to be verified from the prospectus" },
+    { purpose: "Repayment or prepayment of identified secured borrowings", amount: "Final amount to be verified from the prospectus" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds" },
+    { purpose: "Offer for sale", amount: "Nil; the offer is entirely fresh capital" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 59.92, ebitdaCr: 4.67, patCr: 1.98, netWorthCr: 9.42, borrowingsCr: 7.79, assetsCr: 25.15 },
+    { year: "FY24", revenueCr: 60.62, ebitdaCr: 5.38, patCr: 2.17, netWorthCr: 11.59, borrowingsCr: 13.37, assetsCr: 32.79 },
+    { year: "FY25", revenueCr: 65.97, ebitdaCr: 9.94, patCr: 5.03, netWorthCr: 16.63, borrowingsCr: 15.79, assetsCr: 44.34 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "15.1%", context: "Improved from approximately 7.8% in FY23 on modest revenue growth." },
+    { label: "FY25 PAT margin", value: "7.6%", context: "Up from approximately 3.3% in FY23." },
+    { label: "FY25 debt/equity", value: "0.95×", context: "Borrowings increased to ₹15.79 crore from ₹7.79 crore in FY23." },
+    { label: "Largest-customer share", value: "76.82%", context: "FY25 revenue concentration disclosed in the May 2026 DRHP." },
+  ],
+  strengths: [
+    "The product range spans lighting, mirrors, motors and moulded parts, giving LAPL multiple component opportunities on a vehicle platform.",
+    "FY25 EBITDA increased to ₹9.94 crore from ₹5.38 crore in FY24, while PAT rose to ₹5.03 crore from ₹2.17 crore.",
+    "The offer is entirely fresh capital and includes manufacturing expansion and debt repayment among its stated objects.",
+    "Participation in vehicle development and customer-specific design can create qualification barriers and programme stickiness when products perform as specified.",
+  ],
+  concerns: [
+    "The largest customer contributed 76.82% of FY25 revenue; the top five and top ten contributed 92.24% and 96.40%. Loss of one programme or customer can materially change results.",
+    "Revenue grew only about 10% between FY23 and FY25 while EBITDA more than doubled. The sustainability and drivers of the margin expansion need evidence beyond the reported period.",
+    "Borrowings rose from ₹7.79 crore in FY23 to ₹15.79 crore in FY25, alongside higher inventory and receivables. Expansion can increase cash absorption before revenue is collected.",
+    "Automotive-component demand depends on OEM production, model success, platform awards and annual price negotiations. Customers may require cost reductions even as labour and raw-material costs rise.",
+    "Product defects, recalls, warranty claims, tooling delays or failure to meet quality and delivery requirements can affect both margins and future nominations.",
+    "Three plants in one regional cluster create exposure to local labour, utility, logistics and operational disruptions.",
+    "Family-promoter control and a pre-issue promoter holding reported above 96% require close attention to related-party transactions, board independence and post-listing governance.",
+    "BSE SME shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads. Informal grey-market prices are excluded from this analysis.",
+  ],
+  monitor: [
+    "Revenue share of the largest, top-three and top-ten customers, new platform awards and customer diversification.",
+    "Product and channel mix across ODM, own-brand sales, lighting, mirrors, motors and moulded components.",
+    "Operating cash flow, receivable and inventory days, customer tooling advances and supplier-payment terms.",
+    "Final proceeds allocation, completion and utilisation of the Auric City unit, and actual debt repayment after the offer.",
+    "Gross and EBITDA margins through OEM price resets, raw-material movements and the ramp-up of new programmes.",
+    "Warranty provisions, rejection and recall costs, related-party transactions and BSE SME trading liquidity.",
+  ],
+  valuation: [
+    "A reliable final valuation requires the final issue price, exact post-offer share count and FY26 audited earnings. Until these are reconciled to the prospectus and BSE notices, the page does not infer a definitive P/E from mixed preliminary sources.",
+    "Listed auto-component peers differ widely in product complexity, OEM diversification, exports, scale and return on capital. LAPL's extreme customer concentration warrants separate treatment rather than a simple sector-average multiple.",
+    "A normalized case should test lower margins, slower customer diversification, working-capital absorption and under-utilisation at the new facility rather than annualizing the strong nine-month FY26 run rate.",
+  ],
+  sources: [
+    { label: "LAPL Automotive IPO document page", href: "https://laplautomotive.com/ipo/", kind: "Primary" },
+    { label: "LAPL Automotive May 2026 DRHP", href: "https://www.capitalmarket.com/pub/dp/dp95355.pdf", kind: "Primary" },
+    { label: "LAPL Automotive material documents", href: "https://laplautomotive.com/material-documents/", kind: "Primary" },
+    { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "IPOPlatform LAPL financial report", href: "https://www.ipoplatform.com/ipo/financial-report/lapl-automotive-ipo/4095", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
