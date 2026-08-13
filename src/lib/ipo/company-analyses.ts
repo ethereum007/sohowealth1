@@ -239,6 +239,66 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Molbio investor disclosures and financials", href: "https://www.molbiodiagnostics.com/investors/", kind: "Primary" },
     { label: "Molbio issuer announcement: IPO filing", href: "https://www.molbiodiagnostics.com/newsroom/molbio-diagnostics-files-for-ipo-to-raise-rs-200-cr-ofs-of-1-25-cr-shares/", kind: "Primary" },
   ],
+}, {
+  slug: "technocraft-ventures-ipo", company: "Technocraft Ventures", market: "Mainboard", sector: "Water, wastewater and public-infrastructure EPC", status: "Issue closed; listing awaited", analysisAsOf: "13 August 2026",
+  summary: "Technocraft Ventures executes government-led water, sewerage, roads and electrical EPC projects, often with operations-and-maintenance obligations. Revenue and margins expanded through FY25, but the model remains dependent on tender wins, project execution, government collections, joint ventures and a long working-capital cycle.",
+  business: [
+    "Technocraft provides engineering, procurement and construction services for sewage-treatment plants, sewer networks, water-supply systems, roads, electrical works and micro-tunnelling, with selected long-term operations and maintenance contracts.",
+    "Projects are primarily won through competitive government tenders. Scale depends on bid qualification, bank guarantees, working-capital funding, site availability, approvals, subcontractor execution and timely certification of bills.",
+    "The June 2025 order book was disclosed at approximately ₹685.83 crore after an addendum update, including projects executed through joint ventures. Earlier references to a larger order book should not be mixed with the updated figure.",
+  ],
+  issueNote: "The final offer comprised 95.05 lakh fresh shares and 23.76 lakh OFS shares at ₹200–₹212. At the upper band this equates to approximately ₹201.51 crore fresh issue, ₹50.37 crore OFS and ₹251.88 crore total.",
+  issue: { open: "7 August 2026", close: "11 August 2026", listing: "Expected 14 August 2026", priceBand: "₹200–₹212", lotSize: 70, totalCr: 251.88, freshCr: 201.51, ofsCr: 50.37, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Funding working-capital requirements", amount: "₹138 crore" },
+    { purpose: "General corporate purposes", amount: "Balance of net fresh proceeds" },
+    { purpose: "Offer for sale by Kartikey Constructions", amount: "Approximately ₹50.37 crore at the upper band" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 178.69, ebitdaCr: 21.88, patCr: 10.81, netWorthCr: 72.73, borrowingsCr: 50.8, assetsCr: 183.49 },
+    { year: "FY24", revenueCr: 226.1, ebitdaCr: 33.83, patCr: 19.05, netWorthCr: 91.78, borrowingsCr: 80.11, assetsCr: 258.05 },
+    { year: "FY25", revenueCr: 279.56, ebitdaCr: 48.19, patCr: 28.2, netWorthCr: 119.98, borrowingsCr: 88.04, assetsCr: 269.74 },
+  ],
+  metrics: [
+    { label: "FY23–FY25 revenue CAGR", value: "25.1%", context: "Derived from restated revenue from operations." },
+    { label: "FY25 EBITDA margin", value: "17.2%", context: "Up from 12.2% in FY23 as reported execution scaled." },
+    { label: "FY25 operating cash flow", value: "₹21.68 Cr", context: "Below PAT of ₹28.20 crore and volatile across the three-year period." },
+    { label: "Upper-band FY25 P/E", value: "22.6×", context: "Derived from ₹212 and restated FY25 EPS of ₹9.37." },
+  ],
+  strengths: [
+    "Revenue increased from ₹178.69 crore in FY23 to ₹279.56 crore in FY25, while EBITDA and PAT grew faster.",
+    "Capabilities across civil, mechanical and electrical works allow the company to bid for integrated water and sewerage projects.",
+    "An O&M component can extend customer relationships after construction, although its share and margin should be tracked separately.",
+    "The ₹138 crore working-capital allocation directly addresses the funding constraint visible in the operating cycle.",
+  ],
+  concerns: [
+    "Government-funded projects dominate the order book, creating tender, budget, approval, land-access, certification and collection risks.",
+    "The rating rationale reported a 190-day operating cycle in FY25, with 104 collection days and 114 inventory days. Growth can consume significant cash.",
+    "Operating cash flow was only ₹1.40 crore in FY24 before recovering to ₹21.68 crore in FY25, illustrating working-capital volatility.",
+    "Joint-venture projects introduce reliance on partners, shared control, guarantees and potentially different economics from wholly executed work.",
+    "Order-book size is not revenue: cancellations, scope changes, delays, cost inflation and liquidated damages can reduce conversion and margins.",
+    "The company disclosed missing or untraceable historical corporate records and certain unfiled RoC forms, which is a governance diligence item.",
+    "Promoters and related entities have operational and financial linkages; post-listing related-party transactions should be monitored.",
+  ],
+  monitor: [
+    "Quarterly order inflow, executable order book and conversion rather than headline order-book value alone.",
+    "Receivable ageing, unbilled revenue, retention money, inventory and operating cash flow.",
+    "Gross margin by project and provisions for cost overruns, claims or liquidated damages.",
+    "Debt, bank-guarantee utilization and finance costs after the working-capital infusion.",
+    "JV project economics, related-party transactions and contingent liabilities.",
+    "O&M revenue share and cash profitability after EPC projects enter their service phase.",
+  ],
+  valuation: [
+    "At ₹212, the offer implies approximately 22.6× FY25 EPS of ₹9.37 and about 5.3× FY25 NAV of ₹39.86. Both are historical measures before fresh-issue dilution and deployment.",
+    "The RHP peer set includes EMS, VA Tech Wabag, Enviro Infra Engineers and Denta Water and Infra Solutions. Differences in scale, order mix, geographic reach, technology, leverage and cash conversion limit simple P/E comparisons.",
+    "The valuation case ultimately depends on converting the order book into cash-backed earnings without sacrificing bidding discipline. Receivable ageing and operating cash flow are therefore as important as reported PAT growth.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Technocraft Ventures RHP", href: "https://www.sebi.gov.in/filings/public-issues/jul-2026/technocraft-ventures-limited-rhp_103278.html", kind: "Primary" },
+    { label: "SEBI filing page: Technocraft Ventures DRHP", href: "https://www.sebi.gov.in/filings/public-issues/aug-2025/technocraft-ventures-limited-drhp_96055.html", kind: "Primary" },
+    { label: "SEBI addendum to the DRHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2025/1760589175985.pdf", kind: "Primary" },
+    { label: "Infomerics rating rationale, March 2026", href: "https://infomericstorage.blob.core.windows.net/uploads/pr_Technocraft_Ventures_19mar26_1e225b0d2e.pdf", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
