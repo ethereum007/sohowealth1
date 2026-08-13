@@ -33,7 +33,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Milky Mist Dairy Food", slug: "milky-mist-dairy-food-ipo", market: "Mainboard", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 1553, priceBand: "₹133–₹140" },
   { company: "Sham Foam", market: "SME", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 38.45, priceBand: "₹130", exchange: "BSE SME" },
   { company: "Fascinate Textiles", market: "SME", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 63.62, priceBand: "₹148–₹156", exchange: "NSE SME" },
-  { company: "Shiprocket", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 1617.48, priceBand: "₹92–₹97" },
+  { company: "Shiprocket", slug: "shiprocket-ipo", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 1617.48, priceBand: "₹92–₹97" },
   { company: "Behari Lal Engineering", slug: "behari-lal-engineering-ipo", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 301.62, priceBand: "₹271–₹285" },
   { company: "Q&T Foods", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 24.92, priceBand: "₹115", exchange: "BSE SME" },
   { company: "Pramodini Medicare", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: null, priceBand: null, exchange: "NSE SME" },

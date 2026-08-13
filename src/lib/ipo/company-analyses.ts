@@ -416,6 +416,70 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Behari Lal Engineering DRHP", href: "https://www.systematixgroup.in/download/Beharilal_Engg_DRHP.pdf", kind: "Primary" },
     { label: "CRISIL Ratings rationale, December 2025", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/BehariLalEngineeringLimited_December%2031_%202025_RR_373525.html", kind: "Secondary" },
   ],
+}, {
+  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Issue open", analysisAsOf: "14 August 2026",
+  summary: "Shiprocket is a technology-led e-commerce enablement platform spanning domestic shipping, fulfilment, returns, cross-border logistics, checkout and merchant services. Revenue has scaled quickly, but FY26 returned to a reported EBITDA loss and the company remains loss-making at PAT level. Carrier concentration, emerging-business economics, cash conversion and acquisition complexity are the central diligence questions.",
+  business: [
+    "The core business aggregates third-party logistics capacity and provides shipping, order management, returns and related software to online merchants. The platform is asset-light relative to an owned delivery network, but service quality and unit economics remain dependent on courier partners.",
+    "Emerging businesses include fulfilment and warehousing, cross-border shipping, cargo, checkout and marketing tools, hyperlocal delivery and connections to merchant-capital providers. These widen the merchant proposition but several remain subscale or loss-making.",
+    "Core business generated about 73% of revenue in final offer-period disclosures summarized by Zerodha. The key question is whether platform breadth improves retention and contribution margin without recreating the cost intensity of an integrated logistics operator.",
+  ],
+  issueNote: "Final offer materials indicate a ₹1,617.48 crore issue at ₹92–₹97, comprising ₹885.50 crore of fresh issue and a ₹731.98 crore OFS. Approximately 45% of the offer is secondary; those proceeds go to selling shareholders rather than the company.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026", priceBand: "₹92–₹97", lotSize: 154, totalCr: 1617.48, freshCr: 885.5, ofsCr: 731.98, faceValue: "₹1" },
+  useOfProceeds: [
+    { purpose: "Investment in platform growth", amount: "₹365.60 crore" },
+    { purpose: "Repayment or prepayment of borrowings, including interest", amount: "₹210 crore" },
+    { purpose: "General corporate purposes", amount: "Approximately ₹309.90 crore" },
+    { purpose: "Offer for sale", amount: "₹731.98 crore to selling shareholders; no proceeds to the company" },
+  ],
+  financials: [
+    { year: "FY24", revenueCr: 1315.98, ebitdaCr: -127.96, patCr: -595.18, netWorthCr: 1286.18, borrowingsCr: 213.27, assetsCr: 2015.22 },
+    { year: "FY25", revenueCr: 1632.01, ebitdaCr: 7.03, patCr: -74.45, netWorthCr: 1491.25, borrowingsCr: 244.67, assetsCr: 2308.62 },
+    { year: "FY26", revenueCr: 2024.14, ebitdaCr: -16.56, patCr: -79.25, netWorthCr: 1524.29, borrowingsCr: 242.01, assetsCr: 2504.77 },
+  ],
+  metrics: [
+    { label: "FY24–FY26 revenue CAGR", value: "24.0%", context: "Derived from restated revenue from operations of ₹1,315.98 crore and ₹2,024.14 crore." },
+    { label: "FY26 reported EBITDA margin", value: "-0.82%", context: "Reported EBITDA moved from ₹7.03 crore in FY25 to a ₹16.56 crore loss in FY26." },
+    { label: "FY26 PAT margin", value: "-3.92%", context: "The loss narrowed sharply versus FY24 but increased from ₹74.45 crore in FY25 to ₹79.25 crore in FY26." },
+    { label: "FY26 debt/equity", value: "0.16×", context: "Borrowings were ₹242.01 crore; ₹210 crore of fresh proceeds is earmarked for repayment or prepayment including interest." },
+  ],
+  strengths: [
+    "Revenue from operations increased 24% in both FY25 and FY26, showing continued merchant and product scale.",
+    "The core platform combines shipping, fulfilment, returns and merchant software, creating opportunities for cross-sell and higher merchant retention.",
+    "An asset-light aggregation model can scale without owning a nationwide vehicle fleet, provided carrier pricing and service levels remain favourable.",
+    "The ₹210 crore debt-repayment allocation can reduce finance costs, while ₹365.60 crore for platform growth supports technology and go-to-market investment.",
+  ],
+  concerns: [
+    "The company remains loss-making. Reported EBITDA turned negative again in FY26 and PAT loss increased slightly from FY25, despite 24% revenue growth.",
+    "Adjusted EBITDA excludes items such as share-based payments and other adjustments; it should not be treated as equivalent to statutory profitability or operating cash flow.",
+    "More than 80% of logistics volume was handled by the top five vendors in the final-offer risk summary, creating pricing, capacity, service-quality and counterparty concentration.",
+    "Courier partners and marketplaces may compete directly with parts of Shiprocket's merchant proposition. The company does not fully control last-mile execution, lost or damaged shipments, weight disputes or delivery experience.",
+    "Emerging businesses broaden the addressable market but remain smaller and, in aggregate, are not yet profitable. Expansion can dilute consolidated margins and absorb cash.",
+    "Acquisitions have added goodwill, intangible assets and integration complexity. FY24's unusually large loss included exceptional charges, making normalized trend comparison important.",
+    "The OFS represents about 45% of the total issue, while approximately 35% of the fresh issue is allocated to general corporate purposes.",
+  ],
+  monitor: [
+    "Reported EBITDA and operating cash flow, separately from company-defined adjusted EBITDA.",
+    "Core-business contribution margin, merchant retention and shipment growth versus revenue per shipment.",
+    "Revenue and losses from emerging businesses, including cross-border, fulfilment, checkout and hyperlocal services.",
+    "Share of logistics handled by the top five vendors and changes in carrier pricing or service levels.",
+    "Receivable days, merchant balances, COD settlement exposure and cash conversion as the platform scales.",
+    "Actual repayment of borrowings, finance-cost savings and deployment of the platform-growth budget.",
+    "Goodwill, intangible assets, impairment charges, share-based compensation and post-issue dilution.",
+  ],
+  valuation: [
+    "A P/E multiple is not meaningful because FY26 PAT and EPS were negative. EV/EBITDA is also not meaningful on reported FY26 EBITDA.",
+    "Published post-offer valuation estimates conflict, so the final fully diluted share count and issue accounting must be tied directly to the RHP before presenting market-cap, price-to-sales or price-to-book multiples.",
+    "Relevant operating references include Delhivery and other logistics or commerce-enablement platforms, but Shiprocket's aggregation model, merchant mix, acquired products and current loss profile limit direct comparability.",
+    "The valuation debate rests on sustainable core contribution margin, the path from adjusted to reported profitability, emerging-business losses and cash conversion rather than a headline earnings multiple.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Shiprocket UDRHP", href: "https://www.sebi.gov.in/filings/public-issues/dec-2025/shiprocket-limited-udrhp_98357.html", kind: "Primary" },
+    { label: "Shiprocket investor relations", href: "https://www.shiprocket.in/investor-relations/", kind: "Primary" },
+    { label: "Shiprocket final prospectus hosted by Axis Capital", href: "https://www.axiscapital.co.in/", kind: "Primary" },
+    { label: "Zerodha Shiprocket offer summary", href: "https://zerodha.com/ipo/414198/shiprocket/", kind: "Secondary" },
+    { label: "IPOPlatform restated financial report", href: "https://www.ipoplatform.com/ipo/financial-report/shiprocket-ipo/4146", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
