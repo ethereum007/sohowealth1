@@ -28,7 +28,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Technocraft Ventures", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: null, priceBand: null },
   { company: "Optimystix Entertainment India", market: "SME", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 97.65, priceBand: "₹166–₹175", exchange: "NSE SME" },
 
-  { company: "Dhoot Transmission", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: 3066.89, priceBand: "₹829–₹871" },
+  { company: "Dhoot Transmission", slug: "dhoot-transmission-ipo", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: 3066.89, priceBand: "₹829–₹871" },
   { company: "Molbio Diagnostics", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: null, priceBand: null },
   { company: "Milky Mist Dairy Food", market: "Mainboard", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 1553, priceBand: null },
   { company: "Sham Foam", market: "SME", opens: "2026-08-11", closes: "2026-08-13", issueSizeCr: 38.45, priceBand: "₹130", exchange: "BSE SME" },

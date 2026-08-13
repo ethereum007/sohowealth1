@@ -115,6 +115,68 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "LEAP India offer-document page", href: "https://www.leapindia.net/drhpdownload", kind: "Primary" },
     { label: "India Ratings: LEAP India rating rationale, February 2026", href: "https://www.indiaratings.co.in/pressrelease/81339", kind: "Secondary" },
   ],
+}, {
+  slug: "dhoot-transmission-ipo", company: "Dhoot Transmission", market: "Mainboard", sector: "Automotive electrical and electronic components", status: "Issue closed; listing awaited", analysisAsOf: "13 August 2026",
+  summary: "Dhoot Transmission is a scaled wiring-harness and automotive-electronics supplier with strong positions in two- and three-wheelers and rising EV exposure. Its restated financials show rapid growth and high returns, while customer concentration, acquisition integration, cyclical OEM demand and debt-funded expansion remain central analytical risks.",
+  business: [
+    "Dhoot designs and manufactures wiring harnesses, battery packs, electronic sensors and controllers, automotive switches, connectors and other electrical systems for two-wheelers, three-wheelers, commercial vehicles, off-road equipment and selected non-automotive applications.",
+    "The company operated 22 manufacturing facilities across India and overseas as of December 2025. Plants located near customer factories support just-in-time supply, but they also increase execution complexity and fixed-cost exposure when individual vehicle programmes slow.",
+    "Issuer disclosures describe Dhoot as one of the two largest suppliers in India's two- and three-wheeler wiring-harness market. EV-related revenue rose from 8.05% in FY23 to 25.22% in FY25; market-share and industry-growth figures remain issuer-commissioned claims rather than independently audited financial metrics.",
+  ],
+  issueNote: "The final offer was marketed at ₹829–₹871 per share with a ₹1,400 crore fresh issue and approximately ₹1,666.89 crore OFS. The May 2026 UDRHP stated the OFS as 1.631 crore shares; final RHP, allotment and exchange notices should control any rounding differences.",
+  issue: { open: "10 August 2026", close: "12 August 2026", listing: "Expected 17 August 2026", priceBand: "₹829–₹871", lotSize: 17, totalCr: 3066.89, freshCr: 1400, ofsCr: 1666.89, faceValue: "₹2" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of company borrowings", amount: "Up to ₹493.99 crore" },
+    { purpose: "Investment in subsidiaries for repayment of their borrowings", amount: "Up to ₹272.59 crore" },
+    { purpose: "New wiring-harness plants at Jhajjar and Shoolagiri/Hosur", amount: "₹150 crore" },
+    { purpose: "Unidentified acquisitions and general corporate purposes", amount: "Balance, subject to disclosed limits" },
+    { purpose: "Offer for sale", amount: "Approximately ₹1,666.89 crore to selling shareholders" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 2125.86, ebitdaCr: 298.68, patCr: 163.91, netWorthCr: 468.53, borrowingsCr: 422.67, assetsCr: 1261.18 },
+    { year: "FY24", revenueCr: 2797.73, ebitdaCr: 512.4, patCr: 298.75, netWorthCr: 741.01, borrowingsCr: 554.89, assetsCr: 1711.7 },
+    { year: "FY25", revenueCr: 3444.86, ebitdaCr: 590.96, patCr: 353.89, netWorthCr: 978.18, borrowingsCr: 776.06, assetsCr: 2336.23 },
+  ],
+  metrics: [
+    { label: "FY23–FY25 revenue CAGR", value: "27.3%", context: "Derived from restated revenue from operations of ₹2,125.86 crore and ₹3,444.86 crore." },
+    { label: "FY25 EBITDA margin", value: "17.2%", context: "Up from 14.1% in FY23, though below the FY24 margin of 18.3%." },
+    { label: "FY25 PAT margin", value: "10.3%", context: "PAT more than doubled between FY23 and FY25." },
+    { label: "Upper-band FY25 P/E", value: "35.8×", context: "Derived from ₹871 and UDRHP FY25 EPS of ₹24.31; not a forward multiple." },
+  ],
+  strengths: [
+    "Revenue grew 62% between FY23 and FY25, while PAT expanded faster and EBITDA margin improved from the FY23 base.",
+    "Long OEM relationships, embedded vehicle programmes and manufacturing proximity can create switching friction after a component is validated.",
+    "EV-related revenue reached 25.22% of FY25 revenue, increasing Dhoot's exposure to higher electrical content per vehicle.",
+    "Approximately ₹766.58 crore of identified fresh proceeds is directed to parent and subsidiary debt repayment, which should reduce finance costs if deployed as filed.",
+    "The Jhajjar and Hosur facilities expand capacity near important northern and southern automotive clusters.",
+  ],
+  concerns: [
+    "The top five customers contributed 72.49% of revenue in the nine months ended December 2025. Programme loss, insourcing or weaker production at a major OEM could materially affect results.",
+    "Two- and three-wheelers represented roughly four-fifths of FY25 revenue, leaving the business exposed to category volumes and model cycles.",
+    "Borrowings increased from ₹422.67 crore in FY23 to ₹776.06 crore in FY25 as the group expanded; December 2025 borrowings were higher still at about ₹822.49 crore.",
+    "Copper, polymers, connectors and electronic inputs create commodity, foreign-exchange and supply-chain risk; pass-through arrangements may operate with a lag.",
+    "The group has expanded through acquisitions and internal restructuring. Integration, related-party history, goodwill and cross-border subsidiary controls need continued scrutiny.",
+    "Bain Capital affiliate BC Asia Investments XV is both a promoter and a major OFS seller. The sale is a partial liquidity event alongside primary capital raising.",
+  ],
+  monitor: [
+    "Actual consolidated debt and finance-cost reduction after deployment of the IPO proceeds.",
+    "Customer and vehicle-platform concentration, particularly revenue from the top five OEM relationships.",
+    "Ramp-up cost, utilisation and customer nominations at the Jhajjar and Hosur plants.",
+    "EV revenue mix and profitability rather than market-share claims alone.",
+    "Operating cash flow, working-capital days and capex after the recent expansion cycle.",
+    "Post-listing promoter shareholding, related-party transactions and acquisition discipline.",
+  ],
+  valuation: [
+    "At ₹871, the offer implies approximately 35.8× FY25 EPS of ₹24.31. This is a historical multiple and does not incorporate the FY26 result, post-issue dilution or interest savings from debt repayment.",
+    "The UDRHP peer set includes Minda Corporation, Uno Minda, Motherson Sumi Wiring India and Sona BLW Precision Forgings. Their product mix, end markets, global exposure and capital intensity differ, so the peer range is context rather than a direct valuation verdict.",
+    "The central valuation test is whether Dhoot can sustain mid-to-high-teen EBITDA margins and strong returns while funding new plants, managing customer concentration and normalising leverage. Post-listing cash conversion will be more informative than revenue growth alone.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Dhoot Transmission UDRHP-I", href: "https://www.sebi.gov.in/filings/public-issues/may-2026/dhoot-transmission-limited-udrhp-1_101683.html", kind: "Primary" },
+    { label: "Dhoot Transmission UDRHP-I hosted by SEBI", href: "https://www.sebi.gov.in/sebi_data/attachdocs/may-2026/1780048215478.pdf", kind: "Primary" },
+    { label: "Dhoot Transmission IPO disclosures", href: "https://www.dhoottransmission.com/investor-relations/ipo-related-disclosures", kind: "Primary" },
+    { label: "Bain Capital announcement: strategic investment", href: "https://www.baincapital.com/news/dhoot-transmission-group-secures-strategic-growth-investment-bain-capital-significant-minority", kind: "Primary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
