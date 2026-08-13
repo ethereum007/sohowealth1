@@ -63,6 +63,11 @@ const investmentProducts: MenuLink[] = [
 
 const audienceLinks: MenuLink[] = [
   {
+    name: "AI Wealth Planner",
+    href: "/tools/ai-wealth-planner",
+    description: "Estimate your goal corpus, monthly SIP and illustrative asset mix.",
+  },
+  {
     name: "For Doctors",
     href: "/financial-planning-for-doctors",
     description: "Connect practice finances, investments and family wealth.",

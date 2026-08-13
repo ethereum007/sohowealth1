@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals/rsu-guide", lastModified: "2026-07-28", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools/ai-wealth-planner", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.95 },
     { path: "/tools/rsu-concentration-calculator", lastModified: "2026-08-12", changeFrequency: "monthly", priority: 0.9 },
     { path: "/rsu-esops", lastModified: "2026-08-10", changeFrequency: "monthly", priority: 0.9 },
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
