@@ -604,6 +604,68 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Horizon Industrial Parks corporate website", href: "https://www.hiparks.com/", kind: "Primary" },
     { label: "Business Standard DRHP report", href: "https://www.business-standard.com/markets/ipo/blackstone-backed-horizon-industrial-parks-files-drhp-for-2-600-cr-ipo-125123000298_1.html", kind: "Secondary" },
   ],
+}, {
+  slug: "shankesh-jewellers-ipo", company: "Shankesh Jewellers", market: "Mainboard", sector: "B2B handcrafted gold jewellery", status: "Issue opens 18 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Shankesh Jewellers designs and supplies handcrafted 18K and 22K gold jewellery to organised and independent retailers. FY25 showed strong margin and profit expansion, while CRISIL indicates FY26 revenue and PAT accelerated further. The model is outsourced but working-capital intensive, exposed to gold prices, customer sell-through, artisan execution and the durability of the recent margin step-up.",
+  business: [
+    "The company supplies bangles, bridal jewellery, necklaces, chokers, earrings, mangalsutras and rings to B2B customers across India. Customers include large jewellery chains as well as non-corporate retailers.",
+    "Manufacturing is outsourced to artisans and job workers while Shankesh manages design, customization, bullion sourcing, quality control and delivery. This limits fixed manufacturing assets but creates third-party capacity, craftsmanship, labour-compliance and quality risks.",
+    "Revenue comes from direct sale of finished jewellery and job-work arrangements where customers provide bullion. Revenue, gross margin and working-capital intensity differ materially between these routes, so gold processed and product mix matter alongside headline sales.",
+  ],
+  issueNote: "The ₹367.18 crore offer comprises ₹274.18 crore of fresh issue and a ₹93 crore promoter OFS. Fresh proceeds are led by ₹158 crore for debt repayment, with ₹38 crore for working capital and approximately ₹78.18 crore for general corporate purposes.",
+  issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹88–₹93", lotSize: 159, totalCr: 367.18, freshCr: 274.18, ofsCr: 93, faceValue: "₹5" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of borrowings", amount: "₹158 crore" },
+    { purpose: "Working-capital requirements", amount: "₹38 crore" },
+    { purpose: "General corporate purposes", amount: "Approximately ₹78.18 crore" },
+    { purpose: "Offer for sale", amount: "₹93 crore to promoter selling shareholders; no proceeds to the company" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 909.19, ebitdaCr: 22.6, patCr: 10.44, netWorthCr: 47.52, borrowingsCr: 98.4, assetsCr: 174.34 },
+    { year: "FY24", revenueCr: 1061.78, ebitdaCr: 28.72, patCr: 12.82, netWorthCr: 60.29, borrowingsCr: 108.58, assetsCr: 177.07 },
+    { year: "FY25", revenueCr: 1403.83, ebitdaCr: 65.46, patCr: 40.31, netWorthCr: 100.6, borrowingsCr: 144.84, assetsCr: 249.56 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "4.66%", context: "Up from 2.49% in FY23 as gross margin and operating leverage improved." },
+    { label: "FY25 PAT margin", value: "2.87%", context: "PAT more than tripled versus FY24, substantially faster than revenue." },
+    { label: "FY25 debt/equity", value: "1.44×", context: "Borrowings increased to ₹144.84 crore; ₹158 crore is earmarked for repayment or prepayment." },
+    { label: "FY23–FY25 revenue CAGR", value: "24.3%", context: "Gold processed rose much more slowly, so gold price, realization and mix explain part of revenue growth." },
+  ],
+  strengths: [
+    "Long promoter experience and established relationships with organised jewellery retailers support repeat B2B orders and market access.",
+    "FY25 gross, EBITDA and PAT margins improved materially, while CRISIL reported FY26 operating income of about ₹1,630.8 crore and PAT of ₹107.5 crore.",
+    "The outsourced artisan network reduces fixed-asset intensity and allows product flexibility across handcrafted designs.",
+    "Debt repayment represents the largest use of fresh proceeds and can reduce finance costs and balance-sheet risk if completed as disclosed.",
+  ],
+  concerns: [
+    "FY25 profit grew far faster than revenue and gold processed. The sustainability of the gross-margin and PAT step-up needs verification across product mix and customer contracts.",
+    "The business is working-capital intensive: bullion and finished inventory must be funded while receivables depend on B2B customer payment cycles.",
+    "Gold-price volatility affects reported revenue, inventory values, collateral requirements, customer demand and the timing of procurement and settlement.",
+    "All manufacturing is outsourced to artisans and job workers, exposing the company to capacity shortages, labour practices, theft, quality defects and delivery delays.",
+    "Large organised retailers have bargaining power and Shankesh depends on their consumer sell-through. Customer concentration and contract terms should be tracked from the final RHP.",
+    "Two promoter shareholders are selling shares while the company is also raising funds to repay debt; post-issue holdings and related-party balances require review.",
+    "The ₹38 crore working-capital allocation is modest relative to FY25 borrowings and the scale of gold throughput, making cash conversion important after deleveraging.",
+  ],
+  monitor: [
+    "Gold processed, realization and direct-sale versus job-work mix, alongside revenue growth.",
+    "Gross and EBITDA margins after the FY25–FY26 expansion, including customer- and product-level concentration.",
+    "Actual debt repayment, finance-cost savings, bank-limit utilisation and adjusted debt/equity.",
+    "Inventory and receivable days, operating cash flow and gold-metal-loan or bullion funding arrangements.",
+    "Artisan concentration, quality rejects, losses or theft, labour compliance and delivery performance.",
+    "Promoter holding, related-party transactions and contingent liabilities after listing.",
+  ],
+  valuation: [
+    "A final earnings multiple should use FY26 restated RHP EPS and the post-offer diluted share count. CRISIL's FY26 PAT is useful corroboration but does not replace the final prospectus denominator.",
+    "Potential references include listed jewellery manufacturers and retailers, but Shankesh's B2B outsourced model, direct-sale/job-work mix and lower margins make retail-chain comparisons imperfect.",
+    "The central valuation question is whether FY25–FY26 profitability represents durable product and customer economics or a favourable combination of gold prices, mix and working-capital conditions.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Shankesh Jewellers DRHP", href: "https://www.sebi.gov.in/filings/public-issues/sep-2025/shankesh-jewellers-limited_96968.html", kind: "Primary" },
+    { label: "Shankesh Jewellers DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_29092025153631_Shankesh_Jewellers_Limited_DRHP.pdf", kind: "Primary" },
+    { label: "Shankesh Jewellers corporate website", href: "https://www.shankeshjewellers.com/", kind: "Primary" },
+    { label: "CRISIL rating rationale, June 2026", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/ShankeshJewellersLimited_June%2009_%202026_RR_393987.html", kind: "Secondary" },
+    { label: "Zerodha Shankesh Jewellers offer summary", href: "https://zerodha.com/ipo/441852/shankesh-jewellers/", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
