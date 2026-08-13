@@ -299,6 +299,64 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "SEBI addendum to the DRHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2025/1760589175985.pdf", kind: "Primary" },
     { label: "Infomerics rating rationale, March 2026", href: "https://infomericstorage.blob.core.windows.net/uploads/pr_Technocraft_Ventures_19mar26_1e225b0d2e.pdf", kind: "Secondary" },
   ],
+}, {
+  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "Issue closed; allotment awaited", analysisAsOf: "13 August 2026",
+  summary: "Milky Mist is a value-added dairy company built around paneer, curd, cheese, ice cream and other packaged products rather than commodity liquid milk. Its strong revenue growth is offset by thin net margins, heavy borrowings and substantial concentration in Tamil Nadu milk procurement, one core manufacturing campus and southern markets.",
+  business: [
+    "Milky Mist procures raw milk and converts it into value-added products including paneer, curd, cheese, butter, ghee, ice cream, cream and traditional dairy foods. Avoiding liquid-milk distribution supports a differentiated mix but does not remove raw-milk price and seasonality risk.",
+    "The company operates an integrated manufacturing campus at Perundurai, Tamil Nadu, supported by a cold-chain fleet, distributors, retail refrigeration equipment and direct farmer procurement.",
+    "In FY25 it procured 307.20 million litres of milk, with 97.68% sourced in Tamil Nadu. The issuer reported a network of more than 67,000 farmers, but there are generally no long-term supply commitments with individual farmers.",
+  ],
+  issueNote: "The original DRHP proposed ₹2,035 crore, including ₹1,785 crore fresh issue and ₹250 crore OFS. A ₹482 crore pre-IPO placement subsequently reduced the final offer to approximately ₹1,553 crore: ₹1,428 crore fresh issue and ₹125 crore OFS.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Expected 18 August 2026", priceBand: "₹133–₹140", lotSize: 107, totalCr: 1553, freshCr: 1428, ofsCr: 125, faceValue: "₹2" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of borrowings", amount: "Final RHP allocation: approximately ₹496.86 crore" },
+    { purpose: "Expansion and modernisation of the Perundurai facility", amount: "Final RHP allocation: approximately ₹469.24 crore" },
+    { purpose: "Deployment of visi-coolers, ice-cream freezers and chocolate coolers", amount: "Amount reduced/recast from the original DRHP; verify final prospectus schedule" },
+    { purpose: "General corporate purposes", amount: "Balance of net fresh proceeds" },
+    { purpose: "Offer for sale", amount: "₹125 crore to promoter selling shareholders" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 1394.18, ebitdaCr: 201.39, patCr: 27.23, netWorthCr: 177.37, borrowingsCr: 798.06, assetsCr: 1289.42 },
+    { year: "FY24", revenueCr: 1821.61, ebitdaCr: 222.33, patCr: 19.44, netWorthCr: 197.05, borrowingsCr: 1036.72, assetsCr: 1606.26 },
+    { year: "FY25", revenueCr: 2349.5, ebitdaCr: 310.35, patCr: 46.07, netWorthCr: 242.77, borrowingsCr: 1376.38, assetsCr: 2150.59 },
+  ],
+  metrics: [
+    { label: "FY23–FY25 revenue CAGR", value: "29.8%", context: "Restated revenue from operations grew consistently across the period." },
+    { label: "FY25 EBITDA margin", value: "13.2%", context: "Recovered from 12.2% in FY24 but remained below FY23's 14.4%." },
+    { label: "FY25 PAT margin", value: "2.0%", context: "Finance costs and depreciation absorb much of operating profit." },
+    { label: "FY25 debt/equity", value: "5.7×", context: "Derived from total borrowings and DRHP-defined net worth; leverage is the central balance-sheet risk." },
+  ],
+  strengths: [
+    "Revenue grew nearly 30% annually from FY23 to FY25, supported by a broad value-added product portfolio.",
+    "Integrated milk procurement, processing, cold-chain logistics and retail equipment give the company greater control over product handling.",
+    "FY25 PAT recovered to ₹46.07 crore as procurement prices eased and scale improved.",
+    "A material portion of the fresh issue is allocated to debt reduction, while capex supports capacity and automation at Perundurai.",
+  ],
+  concerns: [
+    "Tamil Nadu supplied 97.68% of FY25 raw milk, creating weather, cattle-health, fodder, competition and regional-policy exposure.",
+    "Core production is concentrated at Perundurai. An accident, contamination event, utility interruption or regulatory shutdown could affect multiple categories.",
+    "Southern India generated roughly 71% of FY25 revenue, so national expansion requires new procurement, cold-chain and distribution capabilities.",
+    "Borrowings rose from ₹798.06 crore in FY23 to ₹1,376.38 crore in FY25; FY25 finance cost was approximately ₹104.7 crore.",
+    "The 2% FY25 net margin leaves limited room for adverse milk prices, discounting, freight, spoilage or slower plant utilisation.",
+    "Food safety, cold-chain integrity, product recalls and shelf-life management can create financial and reputational risk.",
+  ],
+  monitor: [
+    "Actual debt repayment, interest savings and post-issue leverage.", "Perundurai expansion cost, commissioning schedule and utilisation by product category.",
+    "Milk procurement price versus selling-price realization and gross margin.", "Non-south revenue, distributor productivity and cold-chain economics.",
+    "Operating cash flow after capex, inventory days and receivable days.", "Quality incidents, product recalls, farmer retention and geographic diversification of milk sourcing.",
+  ],
+  valuation: [
+    "The upper-band valuation should be calculated from the final RHP FY26 EPS and post-offer share count. Published estimates range widely because the pre-IPO placement changed the capital structure; this page therefore does not present an unverified final P/E.",
+    "The DRHP peer set spans dairy businesses and diversified packaged-food companies including Dodla Dairy, Hatsun Agro, Parag Milk Foods, Britannia and Nestlé India. Their brand strength, margins, leverage and product mix are not directly comparable.",
+    "The critical valuation variables are normalized dairy spreads, post-deleveraging finance cost, incremental returns on the expanded plant and the cash cost of building a national cold chain.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Milky Mist DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jul-2025/milky-mist-dairy-food-limited_95576.html", kind: "Primary" },
+    { label: "Milky Mist DRHP hosted by SEBI", href: "https://www.sebi.gov.in/sebi_data/attachdocs/jun-2026/1780558204915_1257.pdf", kind: "Primary" },
+    { label: "Milky Mist offer-document page", href: "https://www.milkymist.com/drhp-english", kind: "Primary" },
+    { label: "Milky Mist financial information", href: "https://www.milkymist.com/financial-information", kind: "Primary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
