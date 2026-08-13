@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { createServerSupabase } from "@/integrations/supabase/server";
 import AppNav from "./AppNav";
+import { RegulatoryDisclosure } from "@/components/layout/RegulatoryDisclosure";
 
 export const metadata = {
   title: "Your Wealth Review",
@@ -63,12 +64,13 @@ export default async function AppLayout({ children }: { children: React.ReactNod
 
         <main className="flex-1">{children}</main>
 
-        <footer className="bg-slate-900 text-slate-400 text-xs py-6 mt-12 border-t border-white/5">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-wrap items-center justify-between gap-3">
-            <span>© {new Date().getFullYear()} SoHo Wealth · Confidential</span>
-            <span>
-              Need help? <a href="mailto:invest@sohowealth.in" className="hover:text-amber-400">invest@sohowealth.in</a>
-            </span>
+        <footer className="bg-slate-900 text-xs py-8 mt-12 border-t border-white/5">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="leading-relaxed"><RegulatoryDisclosure compact /></div>
+            <div className="mt-6 border-t border-white/5 pt-5 text-slate-400 flex flex-wrap items-center justify-between gap-3">
+              <span>© {new Date().getFullYear()} SoHo Wealth · Confidential</span>
+              <span>Need help? <a href="mailto:invest@sohowealth.in" className="hover:text-amber-400">invest@sohowealth.in</a></span>
+            </div>
           </div>
         </footer>
       </div>

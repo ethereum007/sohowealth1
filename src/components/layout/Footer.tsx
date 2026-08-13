@@ -1,6 +1,7 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { RegulatoryDisclosure } from "@/components/layout/RegulatoryDisclosure";
 
 const investmentLinks = [
   { name: "Investment Products", href: "/investment-products" },
@@ -126,13 +127,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/10 py-5">
-          <p className="font-body text-xs leading-relaxed text-white/40">
-            Investments are subject to market risk. Please read all scheme-related documents carefully. SoHo Wealth
-            is a distributor, not a SEBI Registered Investment Advisor. SoHo Wealth may earn commissions from product
-            manufacturers for investments made through its distribution arrangements; no separate advisory fee is charged.
-            Past performance is not indicative of future results.
-          </p>
+        <div className="border-t border-white/10 py-7 font-body text-xs leading-relaxed">
+          <RegulatoryDisclosure />
         </div>
 
         <div className="border-t border-white/10 py-4">
