@@ -133,7 +133,7 @@ export default function AIWealthPlannerPage() {
           </div>
           <h2 className="mt-14 font-display text-3xl font-semibold text-[#0B1F3A]">Continue your wealth-planning research</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {[["Goal-based mutual fund investing", "/mutual-funds"], ["Portfolio health review", "/portfolio-review"], ["Wealth planning in Hyderabad", "/wealth-management-hyderabad"]].map(([label, href]) => <Link key={href} href={href} className="group flex items-center justify-between rounded-2xl border border-slate-200 p-5 font-semibold text-[#0B1F3A] hover:border-[#C9A84C]"><span>{label}</span><ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></Link>)}
+            {[["Retirement planning", "/retirement-planning"], ["Child education planning", "/child-education-planning"], ["Goal-based SIP planning", "/goal-based-sip-planning"]].map(([label, href]) => <Link key={href} href={href} className="group flex items-center justify-between rounded-2xl border border-slate-200 p-5 font-semibold text-[#0B1F3A] hover:border-[#C9A84C]"><span>{label}</span><ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></Link>)}
           </div>
         </div>
       </section>
