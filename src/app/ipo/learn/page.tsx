@@ -5,7 +5,7 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { ipoLearnGuides } from "@/lib/ipo/learn";
 
 export const metadata: Metadata = {
-  title: "IPO Learning Centre | Subscription, Allotment & Applications",
+  title: "IPO Guide India: Subscription, Allotment & Applications",
   description: "Plain-language guides to IPO subscription, allotment, applications, Mainboard vs SME issues and issue structure in India.",
   alternates: { canonical: "https://www.sohowealth.in/ipo/learn" },
 };
@@ -25,6 +25,13 @@ export default function IpoLearnPage() {
       </section>
 
       <section className="container mx-auto max-w-6xl px-6">
+        <div className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-6 md:flex md:items-center md:justify-between">
+          <div>
+            <p className="font-body text-xs font-bold uppercase tracking-[0.12em] text-emerald-700">Interactive explainer</p>
+            <h2 className="mt-2 font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Calculate IPO subscription and illustrate retail allotment pressure</h2>
+          </div>
+          <Link href="/ipo/tools/subscription-explainer" className="mt-5 inline-flex items-center font-body text-sm font-bold text-emerald-800 md:mt-0">Open free tool <ArrowRight className="ml-2 h-4 w-4" /></Link>
+        </div>
         <div className="grid gap-5 md:grid-cols-2">
           {ipoLearnGuides.map((guide, index) => (
             <Link key={guide.slug} href={`/ipo/learn/${guide.slug}`} className={`group rounded-2xl border border-slate-200 bg-white p-7 transition hover:-translate-y-0.5 hover:border-emerald-300 hover:shadow-lg ${index === 0 ? "md:col-span-2" : ""}`}>
@@ -46,4 +53,3 @@ export default function IpoLearnPage() {
     </main>
   );
 }
-

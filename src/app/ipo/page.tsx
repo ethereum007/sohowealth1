@@ -3,11 +3,13 @@ import Link from "next/link";
 import { ArrowRight, BarChart3, BookOpenCheck, FileSearch, ShieldAlert } from "lucide-react";
 import { ipoReports } from "@/lib/ipo/reports";
 import { AugustIpoCalendar } from "@/components/ipo/AugustIpoCalendar";
+import { JsonLd } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "IPO Analysis India | Deep, Source-Led Research | SoHo Wealth",
+  title: "Upcoming IPOs August 2026: Mainboard & SME Calendar",
   description:
-    "Independent, source-led IPO analysis covering business quality, financials, valuation, governance, issue structure and key risks.",
+    "Upcoming IPOs in August 2026: week-wise Mainboard and SME IPO dates, issue sizes, price bands, learning guides and source-led analysis.",
+  keywords: ["upcoming IPO August 2026", "IPO calendar August 2026", "upcoming IPOs India", "Mainboard IPO", "SME IPO", "IPO analysis India"],
   alternates: { canonical: "https://www.sohowealth.in/ipo" },
   openGraph: {
     title: "IPO Research | SoHo Wealth",
@@ -31,14 +33,25 @@ const lenses = [
 ];
 
 export default function IpoHubPage() {
+  const collectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Upcoming IPOs August 2026: Mainboard and SME Calendar",
+    url: "https://www.sohowealth.in/ipo",
+    description: "Week-wise calendar and educational analysis of upcoming Mainboard and SME IPOs in India.",
+    isPartOf: { "@type": "WebSite", name: "SoHo Wealth", url: "https://www.sohowealth.in" },
+    publisher: { "@type": "Organization", name: "SoHo Wealth", url: "https://www.sohowealth.in" },
+    dateModified: "2026-08-13",
+  };
   return (
     <main className="pt-20 bg-white">
+      <JsonLd data={collectionSchema} />
       <section className="relative overflow-hidden px-6 py-20 lg:py-28" style={{ background: "#071A2F" }}>
         <div className="absolute inset-0 opacity-30" style={{ background: "radial-gradient(circle at 80% 20%, #1E8D68 0, transparent 34%)" }} />
         <div className="container relative mx-auto max-w-6xl">
           <p className="mb-5 font-body text-xs font-bold uppercase tracking-[0.2em]" style={{ color: "#77D3B1" }}>SoHo IPO Research</p>
           <h1 className="max-w-4xl font-display text-4xl font-semibold leading-tight text-white md:text-6xl">
-            IPO analysis for readers who want more than dates, demand and grey-market noise.
+            Upcoming IPOs in August 2026: Mainboard and SME calendar with deeper context.
           </h1>
           <p className="mt-7 max-w-2xl font-body text-lg leading-relaxed text-white/70">
             We examine the business, financial quality, valuation, governance and issue structure—then state what matters, what can go wrong and what would change our view.
@@ -52,6 +65,9 @@ export default function IpoHubPage() {
             </Link>
             <Link href="/ipo/learn" className="inline-flex items-center rounded-md border border-white/25 px-6 py-3 font-body text-sm font-semibold text-white">
               Learn IPO basics
+            </Link>
+            <Link href="/ipo/tools/subscription-explainer" className="inline-flex items-center rounded-md border border-white/25 px-6 py-3 font-body text-sm font-semibold text-white">
+              Subscription calculator
             </Link>
           </div>
         </div>
@@ -88,6 +104,29 @@ export default function IpoHubPage() {
       </section>
 
       <AugustIpoCalendar />
+
+      <section className="border-y border-slate-200 bg-slate-50 px-6 py-16">
+        <div className="container mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.2fr_0.8fr]">
+          <div>
+            <p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-emerald-700">Using this IPO calendar</p>
+            <h2 className="mt-3 font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>Dates and demand are the starting point—not the analysis</h2>
+            <div className="mt-5 space-y-4 font-body leading-relaxed text-slate-600">
+              <p>Each company is grouped by its IPO opening date. An issue that opens in one week and closes in the next remains under its opening week. Mainboard and SME IPOs are separated because their application sizes, listing platforms and liquidity conditions can differ materially.</p>
+              <p>Issue size shows the aggregate offer amount when published. It can combine a fresh issue that raises capital for the company with an offer for sale where existing shareholders receive the proceeds. Price bands and dates can change, so every table carries a source date and pending fields remain explicitly marked.</p>
+            </div>
+            <div className="mt-7 flex flex-wrap gap-4">
+              <Link href="/ipo/learn/issue-structure" className="font-body text-sm font-bold text-emerald-800">Fresh issue vs OFS explained →</Link>
+              <Link href="/ipo/learn/mainboard-vs-sme" className="font-body text-sm font-bold text-emerald-800">Mainboard vs SME IPO →</Link>
+            </div>
+          </div>
+          <aside className="rounded-2xl bg-white p-7 shadow-sm">
+            <p className="font-body text-xs font-bold uppercase tracking-[0.14em] text-emerald-700">Next useful step</p>
+            <h2 className="mt-3 font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Understand subscription before reading the headline multiple</h2>
+            <p className="mt-4 font-body text-sm leading-relaxed text-slate-600">Compare shares offered with shares bid in the same category, then separate QIB, NII and retail demand.</p>
+            <Link href="/ipo/tools/subscription-explainer" className="mt-6 inline-flex rounded-md bg-emerald-700 px-5 py-3 font-body text-sm font-bold text-white">Open subscription calculator</Link>
+          </aside>
+        </div>
+      </section>
 
       {ipoReports.length > 0 ? null : (
         <section className="container mx-auto max-w-6xl px-6 pb-20">
