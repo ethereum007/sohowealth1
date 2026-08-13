@@ -666,6 +666,67 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "CRISIL rating rationale, June 2026", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/ShankeshJewellersLimited_June%2009_%202026_RR_393987.html", kind: "Secondary" },
     { label: "Zerodha Shankesh Jewellers offer summary", href: "https://zerodha.com/ipo/441852/shankesh-jewellers/", kind: "Secondary" },
   ],
+}, {
+  slug: "sunshine-pictures-ipo", company: "Sunshine Pictures", market: "Mainboard", sector: "Film, television and digital content production", status: "Issue opens 18 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Sunshine Pictures develops, produces, markets and distributes films and web series, with promoter Vipul Shah central to creative and commercial execution. Earnings are inherently project-driven: FY24 was exceptionally strong, followed by lower FY25 revenue and profit. The offer adds production working capital, but slate concentration, customer dependence, rights ownership, release timing and cash conversion make normalized earnings more informative than any single year.",
+  business: [
+    "The company originates and develops scripts, produces films and digital series, markets content and monetises distribution and intellectual-property rights. Its catalogue includes projects such as Force, Holiday, the Commando franchise and The Kerala Story.",
+    "Revenue is recognised around delivery, licensing and exploitation of individual projects, making annual results lumpy. A successful title can create unusually high margins while delays, cost overruns or weak reception can shift or impair earnings.",
+    "The model relies on studios, streaming platforms and independent distributors for commissioning, licensing and distribution. Economics depend on who funds production, which rights Sunshine retains, revenue-share terms and the duration and geography of licences.",
+  ],
+  issueNote: "The ₹282.14 crore offer at ₹342–₹360 comprises ₹172.80 crore of fresh issue and approximately ₹109.34 crore OFS. Final RHP use-of-proceeds detail should control; earlier draft materials earmarked ₹94 crore for working capital, while the enlarged final fresh issue may carry an updated allocation.",
+  issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹342–₹360", lotSize: 41, totalCr: 282.14, freshCr: 172.8, ofsCr: 109.34, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Working-capital requirements for content production", amount: "Draft allocation: ₹94 crore; final RHP allocation to be verified" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net fresh proceeds" },
+    { purpose: "Offer for sale", amount: "Approximately ₹109.34 crore to selling shareholders; no proceeds to the company" },
+  ],
+  financials: [
+    { year: "FY22", revenueCr: 87.13, ebitdaCr: 15.11, patCr: 11.2, netWorthCr: 24.99, borrowingsCr: 0, assetsCr: 26.64 },
+    { year: "FY23", revenueCr: 26.51, ebitdaCr: 4.07, patCr: 2.31, netWorthCr: 27.3, borrowingsCr: 6.68, assetsCr: 38.57 },
+    { year: "FY24", revenueCr: 133.8, ebitdaCr: 67.42, patCr: 52.45, netWorthCr: 69.7, borrowingsCr: 16.67, assetsCr: 96.48 },
+  ],
+  metrics: [
+    { label: "FY24 PAT margin", value: "39.2%", context: "An exceptionally profitable delivery year; project mix and rights economics can cause large swings." },
+    { label: "FY24 revenue change", value: "+404.7%", context: "Revenue rebounded from ₹26.51 crore in FY23 to ₹133.80 crore, illustrating project lumpiness." },
+    { label: "FY24 debt/equity", value: "0.24×", context: "Borrowings were moderate, though productions also consume advances and working capital not captured by debt alone." },
+    { label: "FY22–FY24 revenue CAGR", value: "23.9%", context: "The endpoints conceal a sharp FY23 trough and FY24 rebound; it is not a stable run-rate measure." },
+  ],
+  strengths: [
+    "Vipul Shah and the creative team have delivered commercially recognised films and franchises, supporting relationships with talent, studios and distributors.",
+    "The company participates across content development, production and rights monetisation rather than acting only as a service producer.",
+    "FY24 reported high profitability and positive net worth, with moderate balance-sheet borrowings relative to equity.",
+    "Fresh capital for working capital can support a larger slate without relying entirely on project advances or borrowing.",
+  ],
+  concerns: [
+    "Revenue and profit are highly concentrated by project and release schedule. FY23, FY24 and FY25 are not directly comparable recurring periods.",
+    "A small number of studios, platforms and distributors account for most revenue. Delayed commissioning, contract termination or weaker licence terms can materially affect cash flow.",
+    "Films and series face audience-preference, censorship, litigation, reputational, piracy and release-window risks. Production costs are committed before commercial reception is known.",
+    "Promoter Vipul Shah is important to project selection, talent relationships and execution, creating key-person and succession risk.",
+    "Rights may be sold, shared, licensed for limited periods or retained by different counterparties; headline title success does not necessarily translate into durable library cash flow for Sunshine.",
+    "Historical operating cash flow has been volatile and was negative in earlier periods. Accounting profit can precede customer collection or be absorbed by the next production slate.",
+    "The OFS is approximately 39% of the issue, and the final split of selling shareholders and post-issue promoter ownership should be checked in the RHP.",
+  ],
+  monitor: [
+    "Project slate, contracted budgets, delivery dates and the share funded by customers versus Sunshine's own working capital.",
+    "Rights retained by title, licence duration, minimum guarantees, revenue shares and library monetisation.",
+    "Top-five customer contribution, receivables, contract assets, advances and operating cash flow.",
+    "Budget overruns, delayed releases, write-offs and impairment of content inventory or development costs.",
+    "Promoter compensation, related-party transactions, talent agreements and succession beyond Vipul Shah.",
+    "Normalized multi-year earnings rather than the margin or EPS of one successful release year.",
+  ],
+  valuation: [
+    "A single-year P/E is particularly fragile for project-based studios. FY24 captured unusually strong title economics, while FY25 revenue and PAT declined; a multi-year normalized earnings and cash-flow base is more appropriate.",
+    "The DRHP peer set includes Panorama Studios, Baweja Studios and Balaji Telefilms. Their content libraries, television exposure, production services, rights ownership, scale and recent hit cycles differ substantially.",
+    "The final valuation should reconcile the post-offer share count with FY26 restated RHP results and separately assess owned intellectual property, contracted slate obligations and working-capital requirements.",
+  ],
+  sources: [
+    { label: "SEBI filing page: Sunshine Pictures DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jan-2025/sunshine-pictures-limited-drhp_90683.html", kind: "Primary" },
+    { label: "Sunshine Pictures DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_02012025220312_DRHPSunshine.pdf", kind: "Primary" },
+    { label: "Sunshine Pictures financial disclosures", href: "https://ssp.spectradigital.co.in/financials/", kind: "Primary" },
+    { label: "Sunshine Pictures corporate website", href: "https://www.sunshinepictures.in/", kind: "Primary" },
+    { label: "Kotak Neo DRHP financial and risk summary", href: "https://www.kotakneo.com/ipo/sunshine-pictures-ltd-ipo", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
