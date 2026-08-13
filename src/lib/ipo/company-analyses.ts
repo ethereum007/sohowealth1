@@ -850,6 +850,68 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Economic Times SME offer table", href: "https://economictimes.indiatimes.com/markets/ipo/upcoming/sme", kind: "Secondary" },
     { label: "HDFC Sky Anawil offer and RHP summary", href: "https://hdfcsky.com/sme-ipo/anawil-wire-engineering-limited-ipo", kind: "Secondary" },
   ],
+}, {
+  slug: "aegeus-technologies-ipo", company: "Aegeus Technologies", market: "SME", sector: "Solar-plant robotics and intelligent automation", status: "Listed 11 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Aegeus Technologies develops robotic cleaning and intelligent automation systems for solar-power assets. Its reported revenue, profit and margins expanded rapidly through FY26, but the record is short, borrowings rose sharply, and project execution, customer concentration, product reliability and SME-market liquidity require close attention.",
+  business: [
+    "Aegeus designs robotic and intelligent automation solutions for the solar-energy sector, including systems intended to clean and monitor photovoltaic installations. Its product roadmap disclosed in the offer document includes newer robot variants and asset-protection solutions.",
+    "The operating model combines product design, procurement and assembly, installation and after-sales support. Economics therefore depend on project conversion, component availability, installation acceptance, robot uptime, warranty performance and the ability to build recurring service revenue.",
+    "The company was incorporated in 2017 and is led by promoters Suraj Vernekar'D, Roopa Vernekar and Nishith Rameshchandra Shah. The limited operating history and reliance on technical and promoter leadership make execution evidence after listing especially important.",
+  ],
+  issueNote: "The final offer was an entirely fresh issue of 22,58,400 shares at ₹100–₹105 per share, aggregating ₹23.71 crore at the upper band. The DRHP contained blanks for the final issue price and net proceeds; final prospectus and exchange notices should control where amounts differ.",
+  issue: { open: "4 August 2026", close: "6 August 2026", listing: "11 August 2026", priceBand: "₹100–₹105", lotSize: 1200, totalCr: 23.71, freshCr: 23.71, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Investment in product development", amount: "₹2.86 crore" },
+    { purpose: "Land and civil works for a manufacturing facility", amount: "₹5.74 crore" },
+    { purpose: "Working capital to fund business growth", amount: "₹8.00 crore" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds; final amount subject to the prospectus" },
+  ],
+  financials: [
+    { year: "FY24", revenueCr: 15.27, ebitdaCr: 1.69, patCr: 0.92, netWorthCr: 5.83, borrowingsCr: 4.15, assetsCr: 13.55 },
+    { year: "FY25", revenueCr: 21.89, ebitdaCr: 3.23, patCr: 1.39, netWorthCr: 11.41, borrowingsCr: 4.09, assetsCr: 22.08 },
+    { year: "FY26", revenueCr: 40.93, ebitdaCr: 6.48, patCr: 4.02, netWorthCr: 15.40, borrowingsCr: 11.93, assetsCr: 39.36 },
+  ],
+  metrics: [
+    { label: "FY24–FY26 revenue CAGR", value: "63.7%", context: "Derived from reported revenue of ₹15.27 crore and ₹40.93 crore." },
+    { label: "FY26 EBITDA margin", value: "15.83%", context: "Improved from approximately 11.1% in FY24." },
+    { label: "FY26 PAT margin", value: "9.82%", context: "PAT increased to ₹4.02 crore from ₹1.39 crore in FY25." },
+    { label: "Upper-band FY26 P/E", value: "21.88×", context: "Published RHP-derived estimate at ₹105; not a forward multiple." },
+  ],
+  strengths: [
+    "Revenue increased from ₹15.27 crore in FY24 to ₹40.93 crore in FY26, while EBITDA and PAT grew faster over the same period.",
+    "The solar-automation niche can benefit as plant owners seek lower cleaning costs, reduced water use and higher module availability, subject to demonstrated product economics.",
+    "The offer is entirely fresh capital, with disclosed allocations to product development, manufacturing infrastructure and working capital rather than shareholder exits.",
+    "EBITDA margin expanded to 15.83% in FY26, suggesting operating leverage as the business scaled, although durability has not yet been tested across a long cycle.",
+  ],
+  concerns: [
+    "FY26 revenue was almost twice FY25 revenue and PAT nearly tripled. Such a sharp step-up from a small base should not be extrapolated without evidence from order conversion and cash collection.",
+    "Borrowings rose from ₹4.09 crore in FY25 to ₹11.93 crore in FY26, faster than net worth. The IPO does not disclose debt repayment as a principal object.",
+    "Solar projects can be lumpy, and dependence on a limited number of customers or large orders can create volatility in revenue, receivables and capacity utilisation.",
+    "Electronic, mechanical and imported components expose the company to supplier disruption, foreign exchange and design-obsolescence risk. The exact imported-content mix should be checked in ongoing disclosures.",
+    "Robot underperformance, installation delays, panel damage, warranty claims or failure to deliver expected cleaning efficiency could impair margins and reputation.",
+    "Promoter and key-person dependence is meaningful in a young technology-led company. Related-party dealings, governance controls and retention of engineering talent merit monitoring.",
+    "BSE SME shares may have limited liquidity, wider bid-ask spreads, market-maker dependence and large minimum trading lots. A listing price is not evidence of business value or durable liquidity.",
+  ],
+  monitor: [
+    "Order book, customer concentration, repeat orders and the conversion timetable from orders to installation and acceptance.",
+    "Revenue mix between robot sales, installation, maintenance and recurring service contracts; installed base and robot uptime.",
+    "Operating cash flow, receivable days, inventory, customer advances and utilisation of the ₹8 crore working-capital allocation.",
+    "Progress and cost of the proposed manufacturing facility, product-development milestones and any capital-cost overruns.",
+    "Borrowings, finance cost and leverage after the issue, alongside warranty provisions and contingent liabilities.",
+    "Related-party transactions, promoter holdings and pledges, board oversight and BSE SME trading liquidity.",
+  ],
+  valuation: [
+    "At the ₹105 upper band, published offer calculations indicated approximately 21.88× FY26 earnings, 15.36× enterprise value/EBITDA and 2.25× book value. These are historical, small-base ratios rather than forecasts.",
+    "Direct peer comparison is difficult because listed solar companies differ across module manufacturing, EPC, operations and maintenance, software and robotic equipment. Scale, revenue recurrence and warranty exposure should be normalized before comparing multiples.",
+    "The valuation case depends on sustaining FY26 margins while converting growth into cash after working capital, product development, manufacturing capex and warranty support.",
+  ],
+  sources: [
+    { label: "Aegeus Technologies RHP and investor documents", href: "https://aegeustechnologies.com/our-investors/", kind: "Primary" },
+    { label: "Aegeus Technologies DRHP", href: "https://aegeustechnologies.com/wp-content/uploads/2025/12/DRHP_Aegeus.pdf", kind: "Primary" },
+    { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "HDFC Sky Aegeus offer summary", href: "https://hdfcsky.com/sme-ipo/aegeus-technologies-ipo", kind: "Secondary" },
+    { label: "IPOPlatform Aegeus financial report", href: "https://www.ipoplatform.com/ipo/financial-report/aegeus-technologies-ipo/4561", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);

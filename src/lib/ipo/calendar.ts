@@ -21,7 +21,7 @@ export type IpoWeek = {
 // source had not published the final figure; it must never be rendered as zero.
 const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Anawil Wire & Engineering", slug: "anawil-wire-engineering-ipo", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 177.81, priceBand: "₹257–₹270", exchange: "NSE SME" },
-  { company: "Aegeus Technologies", market: "SME", opens: "2026-08-04", closes: "2026-08-06", issueSizeCr: 20.3, priceBand: "₹100–₹105", exchange: "BSE SME" },
+  { company: "Aegeus Technologies", slug: "aegeus-technologies-ipo", market: "SME", opens: "2026-08-04", closes: "2026-08-06", issueSizeCr: 23.71, priceBand: "₹100–₹105", exchange: "BSE SME" },
   { company: "Ardee Industries", slug: "ardee-industries-ipo", market: "Mainboard", opens: "2026-08-05", closes: "2026-08-07", issueSizeCr: 425.87, priceBand: "₹50–₹53" },
   { company: "LAPL Automotive", market: "SME", opens: "2026-08-06", closes: "2026-08-10", issueSizeCr: 30.77, priceBand: "₹88–₹94", exchange: "BSE SME" },
   { company: "LEAP India", slug: "leap-india-ipo", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 2480, priceBand: "₹151–₹159" },
