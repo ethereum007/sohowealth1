@@ -1039,6 +1039,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
     { label: "IPOPlatform Optimystix financial report", href: "https://www.ipoplatform.com/ipo/financial-report/optimystix-entertainment-india-ipo/4410", kind: "Secondary" },
   ],
+}, {
+  slug: "sham-foam-ipo", company: "Sham Foam", market: "SME", sector: "Polyurethane foam, mattresses and home-comfort products", status: "Issue closed; listing awaited", analysisAsOf: "14 August 2026",
+  summary: "Sham Foam manufactures polyurethane foam, mattresses and allied comfort products from Haryana, with distribution concentrated in northern India. FY25 profitability was materially above FY23 despite lower revenue, and interim FY26 disclosures show another step-up; the key tests are margin durability, chemical-input pass-through, capacity utilisation, working-capital conversion and execution of a large issue-funded expansion.",
+  business: [
+    "The company manufactures, markets and distributes flexible polyurethane foam, mattresses, cushions, pillows and other home-comfort products, including products sold under its Featherfresh positioning.",
+    "Its manufacturing facility is in Ambala, Haryana, and the company disclosed a presence across 13 states with a stronger northern-India footprint. A single-site production base and regional concentration expose it to local disruption and expansion risk.",
+    "Sham Foam was incorporated in 2020. Promoters Rajinder Kumar Jindal, Sanjeev Kumar Jindal, Monica Jindal, Deepika Jindal and Charming Fashion Private Limited collectively held 80.27% before the issue; the wider promoter group held the balance in the draft filing.",
+  ],
+  issueNote: "Updated offer data indicates a ₹40.48 crore fixed-price offer at ₹130, entirely through fresh shares. This supersedes the earlier ₹38.45 crore calendar estimate. The February 2026 draft allowed up to 31.25 lakh shares; the final issued share count, market-maker reservation and lot should be taken from the prospectus and BSE allotment notice.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Expected after final BSE notice", priceBand: "₹130 fixed price", lotSize: null, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Civil construction, machinery and equipment at the existing manufacturing facility", amount: "Up to ₹13.72 crore" },
+    { purpose: "Part-finance working-capital requirements", amount: "₹14.25 crore across FY27 and FY28" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds, within regulatory limits" },
+    { purpose: "Offer for sale", amount: "Nil; the issue is entirely fresh capital" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 79.82, ebitdaCr: 2.08, patCr: 0.70, netWorthCr: 1.71, borrowingsCr: 18.39, assetsCr: 27.67 },
+    { year: "FY24", revenueCr: 73.73, ebitdaCr: 4.70, patCr: 2.97, netWorthCr: 8.88, borrowingsCr: 10.10, assetsCr: 33.54 },
+    { year: "FY25", revenueCr: 81.15, ebitdaCr: 5.32, patCr: 3.58, netWorthCr: 12.46, borrowingsCr: 9.11, assetsCr: 36.58 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "6.6%", context: "Up from approximately 2.6% in FY23." },
+    { label: "FY25 PAT margin", value: "4.4%", context: "PAT rose to ₹3.58 crore from ₹0.70 crore in FY23." },
+    { label: "FY25 debt/equity", value: "0.73×", context: "Improved from a highly leveraged FY23 base as equity expanded and debt declined." },
+    { label: "Offer P/E", value: "23.38×", context: "Published prospectus-derived metric; the earnings basis should be reconciled before peer comparison." },
+  ],
+  strengths: [
+    "The company participates across foam, finished mattresses and allied comfort products, providing both intermediate-product and consumer-product revenue opportunities.",
+    "EBITDA margin improved from approximately 2.6% in FY23 to 6.6% in FY25, while PAT increased more than fivefold.",
+    "Borrowings declined from ₹18.39 crore in FY23 to ₹9.11 crore in FY25 as reported net worth strengthened.",
+    "The entirely fresh issue allocates capital to both plant expansion and working capital rather than to selling shareholders.",
+  ],
+  concerns: [
+    "FY25 revenue was only modestly above FY23, while PAT rose sharply. Sustainability depends on product mix, raw-material spreads and cost controls rather than top-line growth alone.",
+    "Interim FY26 annualisation implies a major jump in revenue and margin. Seasonal or half-year results should not be treated as a full-cycle run rate without audited annual evidence.",
+    "Polyols, isocyanates and other petrochemical inputs can be volatile and may involve import and foreign-exchange exposure. Delayed price pass-through can compress a single-digit EBITDA margin.",
+    "The ₹14.25 crore working-capital allocation is large relative to FY25 profit. Inventory, receivables and advance supplier payments can absorb cash as capacity expands.",
+    "PU foam is combustible and chemical handling carries worker-safety, fire, emissions and waste-compliance risks. A serious plant incident could disrupt the single manufacturing site.",
+    "The company has a short corporate operating history and is undertaking civil works and equipment installation. Delays, cost overruns or weak utilisation would reduce returns on the fresh capital.",
+    "Family and promoter-group ownership was 100% before the issue. Related-party dealings, brand ownership, board independence and succession require monitoring.",
+    "BSE SME shares can have limited liquidity, large minimum lots, wide bid-ask spreads and market-maker dependence.",
+  ],
+  monitor: [
+    "Production capacity, utilisation and commissioning progress for the issue-funded civil works and machinery.",
+    "Revenue and gross-margin mix among PU foam, mattresses, branded products, institutional customers and distributors.",
+    "Polyol and isocyanate prices, import content, foreign-exchange exposure and customer price revisions.",
+    "Operating cash flow, inventory and receivable days, supplier advances and use of the ₹14.25 crore working-capital allocation.",
+    "Debt, finance costs and return on capital after the expansion, rather than annualised interim earnings alone.",
+    "Fire incidents, insurance, environmental compliance, related-party transactions and BSE SME liquidity.",
+  ],
+  valuation: [
+    "Published offer calculations indicate approximately 23.38× earnings and 2.43× post-issue book value at ₹130. The earnings multiple needs care because FY26 figures circulated in market summaries are annualised from an interim period.",
+    "Sheela Foam and other organized mattress brands operate at much larger scale, with different brand spending, distribution, acquisitions and product mixes. Their multiples are not directly transferable to Sham Foam.",
+    "A normalized valuation should test whether FY25 margins persist after petrochemical-cost changes and whether new capacity earns an adequate return after inventory, receivables and marketing investment.",
+  ],
+  sources: [
+    { label: "Sham Foam February 2026 draft prospectus", href: "https://www.shamfoam.com/custom/investors/Draft%20Prospectus%20-%20Sham%20Foam%20Limited.pdf", kind: "Primary" },
+    { label: "Sham Foam corporate website", href: "https://shamfoam.com/", kind: "Primary" },
+    { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "IPOPlatform Sham Foam offer and financial report", href: "https://www.ipoplatform.com/ipo/financial-report/sham-foam-ipo/4592", kind: "Secondary" },
+    { label: "Kotak Neo Sham Foam DRHP summary", href: "https://www.kotakneo.com/ipo/sham-foam-ipo/", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
