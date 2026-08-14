@@ -753,6 +753,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY23–FY25 PAT CAGR", value: "22.5%", context: "PAT rose from ₹41.26 crore to ₹61.95 crore despite variability in income composition." },
     { label: "FY25 debt/equity", value: "0.01×", context: "Balance-sheet borrowing was low before H1 FY26 bridge and sponsor-funding activity." },
     { label: "H1 FY26 management-fee share", value: "26.65%", context: "A lower recurring-fee share means period earnings were more dependent on carry and sponsor-investment income." },
+    { label: "FY25 operating cash flow", value: "–₹120.17 Cr", context: "Despite ₹61.95 crore PAT; H1 FY26 operating cash flow then turned positive at ₹162.74 crore." },
   ],
   strengths: [
     "A two-decade operating history spans multiple fundraising, investment and exit cycles in Indian private equity.",
@@ -764,6 +765,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Reported income is not predominantly recurring in every period. Carried interest and sponsor-investment gains depend on valuations, exits and distribution waterfalls.",
     "Fundraising is concentrated by vintage and strategy. Delay or failure in launching Fund V or the Secondaries Fund would reduce deployment of proceeds and future management-fee growth.",
     "Sponsor commitments expose shareholder capital to illiquid portfolio-company losses, delayed exits, currency effects and valuation uncertainty.",
+    "Operating cash flow was negative ₹115.88 crore in FY23, ₹13.27 crore in FY24 and ₹120.17 crore in FY25 before turning positive ₹162.74 crore in H1 FY26. Fund investments, sponsor commitments and distributor payouts can make cash conversion much more volatile than accounting profit.",
     "Gopal Jain and the senior investment team are important to fundraising, sourcing, investment committees and limited-partner relationships, creating key-person and retention risk.",
     "AIF regulation, taxation, valuation standards and rules governing sponsor commitments can change economics or restrict fundraising.",
     "Private fund performance is difficult to compare: IRR and multiple metrics depend on valuation policy, timing, realised versus unrealised gains and vintage.",
