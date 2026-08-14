@@ -1228,6 +1228,70 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "IPOPlatform Q&T offer and proceeds summary", href: "https://www.ipoplatform.com/ipo/qandt-foods-ipo/4693", kind: "Secondary" },
   ],
+}, {
+  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closes 14 August 2026; final exchange terms require reconciliation", analysisAsOf: "14 August 2026",
+  summary: "Pramodini Medicare operates a multi-state diagnostics network through public-private, private-hospital, PSU and standalone-centre arrangements. FY23–FY25 revenue growth was moderate while profit and margins expanded sharply, and the nine months to December 2025 show further scale. The central questions are whether unusually high margins convert to cash, whether new equipment earns adequate utilisation, and how much renewal, referral, counterparty and clinical-compliance risk sits inside its partnership-led model.",
+  business: [
+    "The company provides radiology, clinical laboratory and nuclear-medicine services through public-private partnerships with government hospitals and teaching hospitals, arrangements with private hospitals, strategic partnerships with central-government PSUs and privately operated centres.",
+    "As of 31 December 2025, Pramodini disclosed 15 diagnostic centres across 13 cities in Uttar Pradesh, Andhra Pradesh, Karnataka, West Bengal, Haryana/NCR Delhi and Kerala, where operations were yet to commence. It also operates a processing unit-cum-laboratory in Vijayawada.",
+    "Promoters are Dr Chalasani Kuldeep Kumar, Dr Chalasani Kavitha, Chalasani Durga Aashritha and Sri Ram Medicare Private Limited. The two doctor-promoters bring clinical experience, but promoter, referral and key-person dependence must be assessed alongside board and clinical-governance controls.",
+  ],
+  issueNote: "The April 2026 DRHP proposed up to 58,51,200 shares: up to 53,50,800 fresh shares and 5,00,400 OFS shares. Marketed summaries indicate a ₹118 fixed price, implying an approximately ₹69.04 crore maximum offer, ₹63.14 crore fresh component and ₹5.90 crore OFS. These rupee values are derived from the DRHP maxima and marketed price—not yet reconciled to a final prospectus, allotment notice or NSE Emerge circular—and are therefore tentative.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹118 fixed price (tentative)", lotSize: null, totalCr: 69.04, freshCr: 63.14, ofsCr: 5.90, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Medical equipment for existing and proposed diagnostic centres", amount: "₹45.15 crore in the DRHP" },
+    { purpose: "Unidentified inorganic acquisition", amount: "Part of the residual net fresh proceeds; target and amount were not identified in the DRHP" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net fresh proceeds, within regulatory limits" },
+    { purpose: "Offer for sale", amount: "Approximately ₹5.90 crore at the tentative marketed price; proceeds go to selling shareholders" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 30.58, ebitdaCr: 14.67, patCr: 4.28, netWorthCr: 16.53, borrowingsCr: 21.38, assetsCr: 47.46 },
+    { year: "FY24", revenueCr: 35.22, ebitdaCr: 15.53, patCr: 5.76, netWorthCr: 22.55, borrowingsCr: 11.95, assetsCr: 46.58 },
+    { year: "FY25", revenueCr: 38.23, ebitdaCr: 20.96, patCr: 10.04, netWorthCr: 32.59, borrowingsCr: 10.80, assetsCr: 53.26 },
+    { year: "9M FY26", revenueCr: 44.45, ebitdaCr: 22.33, patCr: 12.56, netWorthCr: 45.16, borrowingsCr: 11.03, assetsCr: 85.98 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "54.8%", context: "Up from 44.1% in FY24; the level is high and should be tested centre by centre." },
+    { label: "FY25 PAT margin", value: "26.3%", context: "PAT increased to ₹10.04 crore from ₹5.76 crore despite 8.6% revenue growth." },
+    { label: "9M FY26 debt/equity", value: "0.24×", context: "Improved from 1.29× in FY23 as net worth grew and borrowings declined." },
+    { label: "Diagnostic centres", value: "15", context: "Across 13 cities and six disclosed states as of 31 December 2025; Kerala operations had not commenced." },
+  ],
+  strengths: [
+    "A more than 25-year corporate history and a network spanning government, private-hospital, PSU and standalone formats provide operating experience across several contracting models.",
+    "Revenue increased in each reported year, while FY25 EBITDA and PAT expanded materially faster than revenue and the nine-month FY26 period exceeded full-year FY25 revenue.",
+    "Borrowings declined from ₹21.38 crore in FY23 to ₹10.80 crore in FY25, while net worth nearly doubled to ₹32.59 crore.",
+    "The largest fresh-issue allocation is tied to medical equipment, which can expand service capability if installation, approvals, referrals and utilisation develop as planned.",
+  ],
+  concerns: [
+    "FY25 EBITDA margin of 54.8% and PAT margin of 26.3% are unusually high for a service network and rose despite modest revenue growth. Contract accounting, equipment ownership, lease terms, depreciation, consumables and centre maturity need detailed reconciliation.",
+    "Partnership centres depend on hospital, government and PSU contracts. Tender terms, minimum service levels, revenue sharing, price caps, renewal, termination and payment delays can materially change centre economics.",
+    "Medical equipment is capital intensive and can become obsolete. Low scan volumes, delayed installation, downtime, imported parts, maintenance contracts or shortages of radiologists and technologists can reduce returns.",
+    "The asset base rose from ₹53.26 crore in FY25 to ₹85.98 crore by December 2025. Cash-flow statements and the split among receivables, equipment, advances and acquisitions are important before treating profit growth as cash generation.",
+    "Diagnostic accuracy failures, radiation-safety breaches, sample mishandling, data leaks or delayed reporting can create clinical, regulatory, litigation and reputational consequences.",
+    "Compliance may include AERB radiation requirements, PCPNDT obligations, biomedical-waste rules and laboratory accreditation or licensing depending on each centre's services and jurisdiction.",
+    "The issue permits spending on an unidentified inorganic acquisition. Until a target, valuation, related-party status and integration plan are disclosed, the capital-allocation outcome is uncertain.",
+    "The OFS does not fund the company, and NSE Emerge shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Revenue, EBITDA, utilisation and contract tenure by centre, modality and operating model, including the Kerala commissioning schedule.",
+    "Government, PSU, hospital and referral concentration; tender renewals; revenue-sharing terms; receivable ageing and disputed claims.",
+    "Operating cash flow versus PAT, capital expenditure, depreciation, maintenance costs and return on new medical equipment.",
+    "Equipment installation and utilisation against the ₹45.15 crore allocation, including approvals, staffing and downtime.",
+    "Clinical incidents, radiation and laboratory compliance, accreditations, professional indemnity, cyber security and patient-data controls.",
+    "Final offer structure and lot, acquisition deployment, related-party transactions, promoter remuneration and NSE Emerge liquidity.",
+  ],
+  valuation: [
+    "A definitive offer P/E should wait for the final price, issued share count and prospectus EPS. Applying ₹118 to draft maximum shares provides an offer-size estimate, not a confirmed valuation.",
+    "The DRHP peer set includes Invicta Diagnostic, Krsnaa Diagnostics and Star Imaging & Path Labs. They differ in scale, public-contract exposure, modality mix, equipment ownership, geography and balance sheets, so headline P/E comparisons are incomplete.",
+    "A normalized valuation should use centre-level cash returns after equipment replacement, maintenance, staffing and receivable funding, and should not annualise nine-month FY26 profit without seasonality and cash-flow checks.",
+  ],
+  sources: [
+    { label: "Pramodini Medicare April 2026 DRHP", href: "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_24042026111823_DRHPPramodiniMedicareLimited.pdf", kind: "Primary" },
+    { label: "Pramodini Diagnostics investor page", href: "https://www.pramodinidiagnostics.com/investor", kind: "Primary" },
+    { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
+    { label: "IPOPlatform Pramodini financial report", href: "https://www.ipoplatform.com/ipo/financial-report/pramodini-medicare-ipo/4671", kind: "Secondary" },
+    { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
