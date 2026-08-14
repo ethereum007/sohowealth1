@@ -1,4 +1,4 @@
-import { CalendarDays, ExternalLink } from "lucide-react";
+import { CalendarDays, CheckCircle2, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { august2026Snapshot, august2026Weeks, type IpoCalendarEntry } from "@/lib/ipo/calendar";
 
@@ -100,6 +100,20 @@ export function AugustIpoCalendar() {
           ))}
         </div>
       </div>
+
+      <aside className="mt-6 rounded-xl border border-emerald-200 bg-emerald-50/60 p-5" aria-label="IPO calendar verification log">
+        <div className="flex items-center gap-2">
+          <CheckCircle2 className="h-5 w-5 text-emerald-700" />
+          <h3 className="font-display text-xl font-semibold" style={{ color: "#0B1F3A" }}>Verification log</h3>
+        </div>
+        <ul className="mt-4 space-y-3">
+          {august2026Snapshot.verificationNotes.map((note) => (
+            <li key={note} className="flex gap-3 font-body text-sm leading-relaxed text-slate-700">
+              <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-700" />{note}
+            </li>
+          ))}
+        </ul>
+      </aside>
     </section>
   );
 }

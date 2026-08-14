@@ -41,7 +41,7 @@ export default function IpoHubPage() {
     description: "Week-wise calendar and educational analysis of upcoming Mainboard and SME IPOs in India.",
     isPartOf: { "@type": "WebSite", name: "SoHo Wealth", url: "https://www.sohowealth.in" },
     publisher: { "@type": "Organization", name: "SoHo Wealth", url: "https://www.sohowealth.in" },
-    dateModified: "2026-08-13",
+    dateModified: "2026-08-14",
   };
   return (
     <main className="pt-20 bg-white">

@@ -73,6 +73,13 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 
 export const august2026Snapshot = {
   asOf: "14 August 2026",
+  coverageCount: 25,
+  verificationNotes: [
+    "All 25 companies currently shown in the August calendar link to an individual analysis page.",
+    "Gaja Alternative Asset Management's 19–21 August dates remain tentative because final issuer and exchange offer terms were not available at the review cut-off.",
+    "Skyways Air Services is not included: its March 2026 RHP launch was deferred, and no primary filing confirming an August relaunch was found.",
+    "Asterisks beside selected SME prices identify marketed terms that still require reconciliation to the final prospectus or exchange notice.",
+  ],
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
     { label: "Chittorgarh SME IPO Calendar", href: "https://www.chittorgarh.com/calendar/sme-ipo-calendar/2/?month=8&year=2026" },
