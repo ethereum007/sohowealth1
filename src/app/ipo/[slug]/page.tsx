@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return { title: `${item.company} IPO Analysis: Financials, Risks & Valuation`, description: `${item.company} IPO analysis covering issue structure, use of proceeds, three-year financials, leverage, customer concentration, risks and valuation context.`, alternates: { canonical: `https://www.sohowealth.in/ipo/${item.slug}` }, openGraph: { title: `${item.company} IPO Analysis`, description: item.summary, url: `https://www.sohowealth.in/ipo/${item.slug}`, type: "article" } };
 }
 
-const money = (value: number) => `₹${value.toLocaleString("en-IN")} Cr`;
+const money = (value: number | null) => value === null ? "Not announced" : `₹${value.toLocaleString("en-IN")} Cr`;
 
 function BulletSection({ title, items, bg, dot }: { title: string; items: string[]; bg: string; dot: string }) {
   return <section className="rounded-2xl p-7 md:p-9" style={{ background: bg }}><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>{title}</h2><ul className="mt-6 space-y-4">{items.map(item => <li key={item} className="flex gap-3 font-body text-sm leading-relaxed text-slate-700"><span className="mt-2 h-2 w-2 shrink-0 rounded-full" style={{ background: dot }} />{item}</li>)}</ul></section>;

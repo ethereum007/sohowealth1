@@ -2,7 +2,7 @@ export type CompanyIpoAnalysis = {
   slug: string; company: string; market: "Mainboard" | "SME"; sector: string; status: string; analysisAsOf: string; summary: string;
   business: string[];
   issueNote?: string;
-  issue: { open: string; close: string; listing: string; priceBand: string; lotSize: number | null; totalCr: number; freshCr: number; ofsCr: number; faceValue: string };
+  issue: { open: string; close: string; listing: string; priceBand: string; lotSize: number | null; totalCr: number | null; freshCr: number | null; ofsCr: number | null; faceValue: string };
   useOfProceeds: Array<{ purpose: string; amount: string }>;
   financials: Array<{ year: string; revenueCr: number; ebitdaCr: number; patCr: number; netWorthCr: number; borrowingsCr: number; assetsCr: number }>;
   metrics: Array<{ label: string; value: string; context: string }>;
@@ -1546,6 +1546,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "IPOPlatform Technocrats financial report", href: "https://www.ipoplatform.com/ipo/financial-report/technocrats-plasma-systems-ipo/4574", kind: "Secondary" },
     { label: "Bajaj Markets objects and business summary", href: "https://www.bajajfinservmarkets.in/ipo/technocrats-plasma-systems-ltd", kind: "Secondary" },
+  ],
+}, {
+  slug: "skyways-air-services-ipo", company: "Skyways Air Services", market: "Mainboard", sector: "Air-cargo forwarding and multimodal logistics", status: "March 2026 launch deferred; new dates unavailable", analysisAsOf: "14 August 2026",
+  summary: "Skyways is a freight forwarder and logistics aggregator, not an airline owner. Its scale expanded sharply in FY25, but the model operates on thin margins and requires substantial working capital, carrier capacity and credit. The March 2026 IPO launch was deferred amid market volatility; no primary exchange filing supporting an August launch was found, so new dates, price and rupee issue size remain unavailable.",
+  business: [
+    "The company arranges air and ocean freight, express cargo, warehousing, customs support and related logistics through airline, shipping-line and overseas-agent capacity. It does not own aircraft, making carrier access, contracted rates and reliable space allocation central to execution.",
+    "Air cargo generated about 73.0% of FY25 revenue and 76.3% in the first half of FY26. Ocean freight contributed about 17.6% and 15.7%, respectively, while express and other services supplied the balance.",
+    "The group expanded through majority stakes in RIV Worldwide, CTC Air Carriers and Odyssey Logistics. These transactions broaden capabilities but add integration, minority-interest, capital-allocation and consolidated-reporting complexity.",
+  ],
+  issueNote: "The 2 March 2026 RHP scheduled bidding for 18-20 March, but the company deferred the launch on 18 March. The RHP offered up to 4,22,31,600 shares: up to 2,88,98,300 fresh shares and 1,33,33,300 OFS shares. Without a new price band or exchange notice, rupee values, lot size, dates and valuation are unavailable. The earlier August calendar dates have therefore been removed.",
+  issue: { open: "Deferred; new date unavailable", close: "Deferred; new date unavailable", listing: "Not announced", priceBand: "Not announced", lotSize: null, totalCr: null, freshCr: null, ofsCr: null, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Repayment or prepayment of company and subsidiary borrowings", amount: "₹216.79 crore identified in the RHP" },
+    { purpose: "Capital expenditure and logistics infrastructure", amount: "Refer to the reissued offer document; final allocation may change" },
+    { purpose: "General corporate purposes", amount: "Balance within regulatory limits" },
+    { purpose: "Offer-for-sale proceeds", amount: "Paid to selling shareholders; not received by the company" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 1484.12, ebitdaCr: 58.71, patCr: 37.90, netWorthCr: 125.18, borrowingsCr: 175.02, assetsCr: 448.29 },
+    { year: "FY24", revenueCr: 1289.11, ebitdaCr: 48.34, patCr: 34.49, netWorthCr: 154.26, borrowingsCr: 357.34, assetsCr: 700.35 },
+    { year: "FY25", revenueCr: 2247.82, ebitdaCr: 86.49, patCr: 48.14, netWorthCr: 247.14, borrowingsCr: 558.43, assetsCr: 1321.64 },
+    { year: "H1 FY26", revenueCr: 1328.20, ebitdaCr: 57.15, patCr: 25.46, netWorthCr: 305.07, borrowingsCr: 577.05, assetsCr: 1313.58 },
+  ],
+  metrics: [
+    { label: "FY25 revenue growth", value: "74.4%", context: "A sharp rebound from FY24; freight rates, volumes and acquisitions can all affect comparability." },
+    { label: "H1 FY26 EBITDA margin", value: "4.3%", context: "The forwarding model remains high-throughput and low-margin." },
+    { label: "H1 FY26 debt/equity", value: "1.89×", context: "Borrowings of ₹577.05 crore remained material relative to ₹305.07 crore net worth." },
+    { label: "H1 FY26 air-cargo mix", value: "76.3%", context: "Concentration makes airline capacity, rates and disruption especially important." },
+  ],
+  strengths: [
+    "More than four decades of operating history and relationships across airlines, agents, customers and trade lanes support sourcing and execution.",
+    "The platform spans air, ocean, express and related logistics, with acquisitions adding specialised capabilities and geographic reach.",
+    "FY25 revenue, EBITDA and PAT recovered strongly, and first-half FY26 revenue reached ₹1,328.20 crore.",
+    "The fresh issue was intended partly to reduce borrowings, which could lower finance costs if the offer is relaunched on comparable terms.",
+  ],
+  concerns: [
+    "The March 2026 issue was deferred and no new primary timetable has been published. Any current date, price, lot or rupee issue-size claim should be treated as unverified.",
+    "EBITDA margins were only about 3.8% in FY25 and 4.3% in H1 FY26. Small changes in freight rates, carrier rebates, fuel surcharges, claims or pricing discipline can materially affect profit.",
+    "Borrowings rose from ₹175.02 crore in FY23 to ₹558.43 crore in FY25 and ₹577.05 crore by September 2025, increasing refinancing and interest-rate sensitivity.",
+    "The company depends on third-party airline and shipping capacity. Carrier consolidation, unavailable space, route disruption, sanctions, war or abrupt rate changes can interrupt service or compress spreads.",
+    "Wholesale forwarding, customer credit and milestone collections create receivable and cash-conversion risk; reported PAT should be assessed against operating cash flow across a full freight cycle.",
+    "Recent acquisitions create integration, governance, related-party, goodwill, minority-shareholder and contingent-liability risks.",
+    "Cargo loss, damage, delay, customs error, dangerous-goods handling and temperature-control failures can cause claims and reputational harm beyond freight revenue.",
+    "The OFS would provide no operating capital and reduces promoter holdings; the final selling-shareholder mix must be rechecked if the offer is relaunched.",
+  ],
+  monitor: [
+    "A fresh RHP or exchange notice confirming dates, price band, lot size, allocation, anchor book and revised issue structure.",
+    "Air and ocean volumes, yield per tonne, gross spread, carrier rebates, segment margins and freight-rate pass-through.",
+    "Trade receivables, ageing, operating cash flow, working-capital days, borrowings, finance cost and covenant headroom.",
+    "Top customers, freight-agent concentration, major airlines and shipping lines, capacity commitments and trade-lane exposure.",
+    "Acquisition performance, inter-company balances, minority interests, contingent liabilities and return on deployed capital.",
+    "Use of debt-repayment proceeds and the post-issue leverage profile if the transaction returns.",
+  ],
+  valuation: [
+    "No defensible IPO valuation is available because the deferred offer has no current price band or confirmed post-issue share count.",
+    "Any relaunch multiple should use the latest restated earnings and diluted share count, and should separate reported growth from freight-rate inflation and acquisition effects.",
+    "Peer comparisons require caution: asset-light forwarders, integrated logistics firms, express operators and shipping businesses have different margin structures, capital needs and cycle sensitivity.",
+  ],
+  sources: [
+    { label: "Skyways Air Services March 2026 RHP", href: "https://r2.skyways-air.in/RHP-Skyways.pdf", kind: "Primary" },
+    { label: "Skyways Air Services investor disclosures", href: "https://skyways-air.in/investors/", kind: "Primary" },
+    { label: "SEBI Skyways public-issue filing page", href: "https://www.sebi.gov.in/filings/public-issues/jul-2025/skyways-air-services-limited_95015.html", kind: "Primary" },
+    { label: "Fortune India report on IPO deferral", href: "https://www.fortuneindia.com/markets/ipo/skyways-air-services-defers-ipo-launch-cmd-yashpal-sharmasays-middle-east-exposure-limited/131361", kind: "Secondary" },
   ],
 }];
 

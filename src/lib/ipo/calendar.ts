@@ -48,7 +48,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Sunshine Pictures", slug: "sunshine-pictures-ipo", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 282.14, priceBand: "₹342–₹360" },
   { company: "Gaja Alternative Asset Management", slug: "gaja-alternative-asset-management-ipo", market: "Mainboard", opens: "2026-08-19", closes: "2026-08-21", issueSizeCr: 656.2, priceBand: null },
 
-  { company: "Skyways Air Services", market: "Mainboard", opens: "2026-08-24", closes: "2026-08-27", issueSizeCr: null, priceBand: null },
+  // Skyways Air Services removed: its March 2026 RHP launch was deferred and no August dates were verified as of 14 August 2026.
 ];
 
 const weekForDate = (date: string): 1 | 2 | 3 | 4 => {
