@@ -1420,6 +1420,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Finshore offer-document repository", href: "https://www.finshoregroup.com/downloads/ipo", kind: "Primary" },
     { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
   ],
+}, {
+  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "14 August 2026",
+  summary: "ENS builds online-commerce platforms, ONDC integrations, software, mobile applications and cloud systems, alongside digital marketing and proprietary SaaS products. Revenue and margins expanded rapidly through FY26, but operating cash flow turned negative, top-ten customer concentration rose to 69%, financial investments absorbed cash and the company added short-term debt. The key question is how much growth is recurring, organic and cash-generative rather than project-led or working-capital funded.",
+  business: [
+    "The Noida-based company provides digital-commerce enablement and software services across online storefronts, ONDC integrations, custom software, mobile applications, cloud and DevOps and digital marketing.",
+    "ENS also reports proprietary SaaS products with subscription revenue. The economic quality depends on the disclosed split between recurring product subscriptions and one-time implementation, engineering, marketing or project revenue.",
+    "The company says it serves clients across India and overseas with a team of about 140 professionals. Promoters are Manish Kumar Srivastava, Avinash Kumar Singh and Anupam Kumar Srivastava; Manish Srivastava also serves as CFO, concentrating operating and financial oversight.",
+  ],
+  issueNote: "The August 2026 RHP provides for up to 36,02,400 fresh shares and no OFS. Marketed terms indicate a ₹92 issue price and ₹33.14 crore offer, consistent with the maximum share count. Final issued shares, market-maker reservation, lot and allotment remain subject to the prospectus and BSE notices.",
+  issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final BSE SME notice pending", priceBand: "₹92 fixed price", lotSize: null, totalCr: 33.14, freshCr: 33.14, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Enhancement, maintenance and upgrade of existing products through manpower hiring", amount: "₹17.02 crore" },
+    { purpose: "Upgrade of information-technology infrastructure", amount: "₹6.75 crore" },
+    { purpose: "Repayment or prepayment of borrowings", amount: "₹1.20 crore" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds; no OFS" },
+  ],
+  financials: [
+    { year: "FY24", revenueCr: 10.11, ebitdaCr: 1.38, patCr: 0.90, netWorthCr: 1.90, borrowingsCr: 0, assetsCr: 3.66 },
+    { year: "FY25", revenueCr: 28.33, ebitdaCr: 5.48, patCr: 3.70, netWorthCr: 10.04, borrowingsCr: 0, assetsCr: 20.89 },
+    { year: "FY26", revenueCr: 51.37, ebitdaCr: 11.71, patCr: 8.40, netWorthCr: 18.44, borrowingsCr: 3.97, assetsCr: 32.46 },
+  ],
+  metrics: [
+    { label: "FY24–FY26 revenue CAGR", value: "125.4%", context: "Revenue increased from ₹10.11 crore to ₹51.37 crore in two years." },
+    { label: "FY26 EBITDA margin", value: "22.8%", context: "Up from 13.7% in FY24 as reported scale increased." },
+    { label: "FY26 PAT margin", value: "16.4%", context: "PAT rose to ₹8.40 crore from ₹0.90 crore in FY24." },
+    { label: "FY26 operating cash flow", value: "-₹1.10 crore", context: "Negative despite ₹8.40 crore PAT, after positive ₹2.50 crore in FY25." },
+  ],
+  strengths: [
+    "ENS addresses digital-commerce, ONDC, mobile and cloud implementation needs through an integrated engineering and marketing portfolio.",
+    "Revenue more than quintupled between FY24 and FY26, while EBITDA margin expanded from 13.7% to 22.8% and PAT margin to 16.4%.",
+    "Proprietary SaaS products may add recurring revenue and operating leverage if retention, annual recurring revenue and product-level economics substantiate the positioning.",
+    "The entirely fresh issue allocates most proceeds to technical manpower and IT infrastructure, with no cash paid to selling shareholders.",
+  ],
+  concerns: [
+    "FY26 operating cash flow was negative ₹1.10 crore despite ₹8.40 crore PAT. Profit growth therefore did not translate into cash in the latest year.",
+    "Top-ten customers generated 69.17% of FY26 revenue, up from 60.12% in FY25. Individual contracts, renewals, project completion and payment delays can materially affect results.",
+    "The RHP cash-flow statement shows ₹6.05 crore invested in shares in FY26 and ₹2.50 crore of inter-corporate deposits in FY25. Treasury allocation, counterparties, liquidity and related-party status require scrutiny.",
+    "Short-term borrowings rose to ₹3.97 crore in FY26 after nil reported debt in FY24 and FY25, even as revenue and accounting profit increased.",
+    "The company groups SaaS with project engineering, commerce implementation and digital marketing. Without recurring-revenue, churn, contract-duration and product contribution data, a software-product multiple may be misleading.",
+    "Hiring funded by ₹17.02 crore of proceeds creates utilisation risk: employee costs arrive before project wins, product adoption and customer collections.",
+    "Technology services face talent attrition, wage inflation, delivery delays, cyber incidents, data-privacy obligations, open-source licensing and intellectual-property disputes.",
+    "BSE SME shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Revenue and gross margin split among SaaS subscriptions, implementation, custom engineering, ONDC, cloud and digital marketing.",
+    "Annual recurring revenue, customer churn, net retention, subscription contract length and product-development capitalisation.",
+    "Top-customer concentration, contract renewals, unbilled revenue, receivable ageing and operating cash conversion.",
+    "Hiring pace, billable utilisation, employee attrition and revenue generated per technical employee from the ₹17.02 crore programme.",
+    "Use and counterparties of investments and inter-corporate deposits, debt repayment and future treasury policy.",
+    "Promoter/CFO concentration, related-party transactions, cyber incidents, contingent liabilities and BSE SME liquidity.",
+  ],
+  valuation: [
+    "Published prospectus-derived calculations indicate approximately 14.9× FY26 earnings at ₹92. The multiple should be checked against final post-issue shares and audited EPS.",
+    "RHP peers such as ASM Technologies, InfoBeans and Silver Touch differ in scale, offshore mix, recurring revenue, service lines and cash conversion. SaaS product companies are even less directly comparable.",
+    "A normalized valuation should discount growth that requires rising receivables, investments or borrowing and separately value recurring SaaS only when retention and product revenue are disclosed.",
+  ],
+  sources: [
+    { label: "ENS Enterprises August 2026 RHP", href: "https://www.ens.enterprises/wp-content/uploads/2026/08/RHP-ENS-Final.pdf", kind: "Primary" },
+    { label: "ENS Enterprises investor page", href: "https://www.ens.enterprises/investors-old/", kind: "Primary" },
+    { label: "Corporate Makers offer-document repository", href: "https://corporatemakers.in/ipo-offer-documents.php", kind: "Primary" },
+    { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);

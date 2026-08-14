@@ -39,7 +39,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Pramodini Medicare", slug: "pramodini-medicare-ipo", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 69.04, priceBand: "₹118 fixed price*", exchange: "NSE SME" },
   { company: "Credent Connect N Care", slug: "credent-connect-n-care-ipo", market: "SME", opens: "2026-08-13", closes: "2026-08-17", issueSizeCr: 89.13, priceBand: "₹179–₹189", exchange: "NSE SME" },
   { company: "Skytech Infinite Platform", slug: "skytech-infinite-platform-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 22.68, priceBand: "₹77 fixed price*", exchange: "NSE SME" },
-  { company: "ENS Enterprises", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "BSE SME" },
+  { company: "ENS Enterprises", slug: "ens-enterprises-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 33.14, priceBand: "₹92", exchange: "BSE SME" },
   { company: "Technocrats Plasma Systems", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "BSE SME" },
 
   { company: "Lalithaa Jewellery Mart", slug: "lalithaa-jewellery-mart-ipo", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 1700, priceBand: "₹190–₹201" },
