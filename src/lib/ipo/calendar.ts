@@ -46,8 +46,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Horizon Industrial Parks", slug: "horizon-industrial-parks-ipo", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 2600, priceBand: "₹57–₹60" },
   { company: "Shankesh Jewellers", slug: "shankesh-jewellers-ipo", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 367.18, priceBand: "₹88–₹93" },
   { company: "Sunshine Pictures", slug: "sunshine-pictures-ipo", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 282.14, priceBand: "₹342–₹360" },
-  { company: "Gaja Alternative Asset Management", slug: "gaja-alternative-asset-management-ipo", market: "Mainboard", opens: "2026-08-19", closes: "2026-08-21", issueSizeCr: 656.2, priceBand: null },
-
+  // Gaja Alternative Asset Management removed: only draft-stage offer documents were verified; no RHP or exchange notice confirmed 19–21 August.
   // Skyways Air Services removed: its March 2026 RHP launch was deferred and no August dates were verified as of 14 August 2026.
 ];
 
@@ -73,10 +72,10 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 
 export const august2026Snapshot = {
   asOf: "14 August 2026",
-  coverageCount: 25,
+  coverageCount: 24,
   verificationNotes: [
-    "All 25 companies currently shown in the August calendar link to an individual analysis page.",
-    "Gaja Alternative Asset Management's 19–21 August dates remain tentative because final issuer and exchange offer terms were not available at the review cut-off.",
+    "All 24 companies currently shown in the August calendar link to an individual analysis page.",
+    "Gaja Alternative Asset Management is not included: SEBI and NSE sources showed draft-stage documents, but no RHP or exchange notice confirming 19–21 August was found.",
     "Skyways Air Services is not included: its March 2026 RHP launch was deferred, and no primary filing confirming an August relaunch was found.",
     "Asterisks beside selected SME prices identify marketed terms that still require reconciliation to the final prospectus or exchange notice.",
   ],

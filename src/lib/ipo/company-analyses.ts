@@ -735,8 +735,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Management fees are the most recurring stream, but represented 48.63%, 72.96%, 46.65% and 26.65% of total income in FY23, FY24, FY25 and H1 FY26 respectively. The changing mix shows how exits, carry and sponsor-investment income can dominate reported periods.",
     "The company is raising capital for sponsor commitments to Fund IV constituents, proposed Fund V and a Secondaries Fund. Sponsor capital aligns interests and enables fundraising, but also places listed-company capital at risk in illiquid underlying investments.",
   ],
-  issueNote: "The updated draft offer totals ₹656.20 crore, comprising ₹549.20 crore fresh issue and ₹107 crore OFS. As of this analysis, the issuer and major broker offer page had not published final dates, price band, lot size or listing schedule; calendar dates previously sourced from an IPO aggregator remain tentative and are not shown as confirmed terms here.",
-  issue: { open: "Tentative 19 August 2026", close: "Tentative 21 August 2026", listing: "Not yet announced", priceBand: "Not yet announced", lotSize: null, totalCr: 656.2, freshCr: 549.2, ofsCr: 107, faceValue: "₹10" },
+  issueNote: "The updated draft offer totals ₹656.20 crore, comprising ₹549.20 crore fresh issue and ₹107 crore OFS. No RHP or exchange notice confirming the previously circulated 19–21 August dates was found as of 14 August 2026. The company is therefore excluded from the confirmed August calendar until primary offer terms are published.",
+  issue: { open: "Not announced", close: "Not announced", listing: "Not announced", priceBand: "Not announced", lotSize: null, totalCr: 656.2, freshCr: 549.2, ofsCr: 107, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Sponsor commitments to existing and proposed funds, including bridge-loan repayment", amount: "₹387 crore" },
     { purpose: "Repayment or prepayment of company borrowings", amount: "₹24.91 crore" },
@@ -784,7 +784,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   sources: [
     { label: "SEBI filing page: Gaja Alternative Asset Management", href: "https://www.sebi.gov.in/filings/public-issues/dec-2025/gaja-alternative-asset-management-limited_98194.html", kind: "Primary" },
-    { label: "Gaja Updated DRHP-I hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Gaja_Alternative_Asset_Management_Limited_UDRHP_1.pdf", kind: "Primary" },
+    { label: "Gaja Updated DRHP-I hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/sshetye_02022026153222_EAAADRHP.pdf", kind: "Primary" },
     { label: "Gaja investor-relations reports and IPO disclosures", href: "https://gajacapital.com/investor-relations/reports-and-publications", kind: "Primary" },
     { label: "CRISIL alternative asset-management industry report", href: "https://gajacapital.com/assets/pdf/industry-report.pdf", kind: "Primary" },
     { label: "Zerodha Gaja updated-offer summary", href: "https://zerodha.com/ipo/441847/gaja-capital-is-a-promoter-led-indian-alternative-asset-management-firm/", kind: "Secondary" },
