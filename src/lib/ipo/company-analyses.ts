@@ -488,8 +488,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Its positioning emphasizes low or transparent making charges and large-format, high-throughput stores. DRHP peer data indicated unusually high revenue per store, but headline revenue is heavily influenced by gold prices and bullion mix rather than only jewellery volume or same-store demand.",
     "Jewellery purchase schemes collect customer advances before redemption. They support retention and working-capital efficiency but create fulfilment obligations and require careful liquidity, trust and regulatory management.",
   ],
-  issueNote: "The ₹1,700 crore offer comprises a ₹1,200 crore fresh issue and ₹500 crore OFS at ₹190–₹201. Final materials allocate ₹998.68 crore—more than 83% of fresh proceeds—to inventory for new stores, making store ramp-up and inventory productivity the central post-issue execution test.",
-  issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹190–₹201", lotSize: 74, totalCr: 1700, freshCr: 1200, ofsCr: 500, faceValue: "₹10" },
+  issueNote: "NSE's current-issue feed confirms ₹190–₹201 and bidding from 17–19 August. Marketed final terms describe a ₹1,700 crore offer comprising a ₹1,200 crore fresh issue and ₹500 crore OFS, with a 74-share lot. The stated objects allocate ₹998.68 crore—more than 83% of fresh proceeds—to inventory for new stores, making store ramp-up and inventory productivity the central post-issue execution test. The final split, lot, allotment and listing should be reconciled to the RHP, prospectus and exchange notices as they become directly available.",
+  issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹190–₹201", lotSize: 74, totalCr: 1700, freshCr: 1200, ofsCr: 500, faceValue: "₹5" },
   useOfProceeds: [
     { purpose: "Inventory for new stores", amount: "₹998.68 crore" },
     { purpose: "Capital expenditure for new stores", amount: "₹34.55 crore" },
@@ -536,6 +536,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "For Lalithaa, valuation should distinguish gold-price-led revenue growth from volume and store-productivity growth, and should explicitly incorporate the capital required to stock each new showroom.",
   ],
   sources: [
+    { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
     { label: "SEBI filing page: Lalithaa Jewellery Mart DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jun-2025/lalithaa-jewellery-mart-limited_94576.html", kind: "Primary" },
     { label: "Lalithaa Jewellery Mart DRHP", href: "https://www.lalithaajewellery.com/assets/pdf/Lalithaa_Jewellery_Mart_Limited-DRHP.pdf", kind: "Primary" },
     { label: "Lalithaa Jewellery Mart DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_07062025083753_LalithaaJewelleryDRHP.pdf", kind: "Primary" },

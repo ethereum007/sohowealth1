@@ -82,6 +82,7 @@ export const august2026Snapshot = {
     "Fascinate Textiles' closing date was corrected from 13 August to 19 August using NSE's official current-issue feed.",
     "Pramodini Medicare's final RHP confirms ₹110–₹118, a 1,200-share lot and a proposed 19 August listing; the earlier fixed-price label was corrected.",
     "ENS Enterprises' final RHP confirms a ₹87–₹92 book-built issue, a 2,400-share minimum bid and proposed 21 August trading; the earlier ₹92 fixed-price label was corrected.",
+    "NSE's current-issue feed confirms Lalithaa Jewellery Mart's ₹190–₹201 band and 17–19 August bidding; its offer split and lot remain identified as marketed terms pending direct final-document reconciliation.",
   ],
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
