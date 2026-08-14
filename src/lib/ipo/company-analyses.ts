@@ -552,7 +552,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "As of 30 November 2025, DRHP-derived disclosures described 26.74 million square feet of operational space, 94.55% committed occupancy and 107 customers. More than half were Fortune 500 companies and no single tenant contributed more than 10% of rental income.",
     "The portfolio was assembled through multiple project subsidiaries and acquisitions. Proforma financials are therefore more representative of the enlarged platform than the statutory historical consolidation, but they are prepared for offer-document comparison and are not identical to audited reported history.",
   ],
-  issueNote: "The ₹2,600 crore issue is entirely fresh capital with no OFS. Approximately ₹2,250 crore is earmarked for repayment or prepayment of borrowings at the company and identified subsidiaries; the offer primarily recapitalises an asset-heavy, highly leveraged platform.",
+  issueNote: "NSE's current-issue feed confirms ₹57–₹60 and bidding from 17–19 August. Marketed final terms describe a ₹2,600 crore issue comprising entirely fresh capital with no OFS, of which approximately ₹2,250 crore is earmarked for repayment or prepayment of borrowings at the company and identified subsidiaries. The offer primarily recapitalises an asset-heavy, highly leveraged platform; final lot, proceeds, allotment and listing should be reconciled to the RHP, prospectus and exchange notices as they become directly available.",
   issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹57–₹60", lotSize: 250, totalCr: 2600, freshCr: 2600, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings of the company and identified subsidiaries", amount: "₹2,250 crore" },
@@ -567,6 +567,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   metrics: [
     { label: "FY25 reported EBITDA margin", value: "86.5%", context: "Derived from the statutory consolidation shown here; proforma platform disclosures use a broader perimeter and different revenue presentation." },
     { label: "FY25 debt/equity", value: "7.19×", context: "Borrowings of ₹5,254.85 crore were large relative to ₹731.21 crore of reported net worth before the offer." },
+    { label: "Illustrative debt after stated repayment", value: "₹3,004.85 crore", context: "FY25 borrowings less the stated ₹2,250 crore use of proceeds; this is not a forecast and excludes later borrowing, cash, issue expenses and other balance-sheet movements." },
     { label: "Committed occupancy", value: "94.55%", context: "DRHP-derived operating disclosure as of 30 November 2025; occupancy should be refreshed from the final RHP." },
     { label: "FY23–FY25 revenue CAGR", value: "54.1%", context: "Reported consolidation grew rapidly as the portfolio expanded; like-for-like rent growth is a different measure." },
   ],
@@ -599,6 +600,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "A net-asset-value framework should test stabilised rent, vacancy, lease escalation, remaining capex and capitalisation rates park by park. The offer price alone does not establish a reliable discount or premium to NAV without the final RHP bridge.",
   ],
   sources: [
+    { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
     { label: "SEBI filing page: Horizon Industrial Parks DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jan-2026/horizon-industrial-parks-limited_98839.html", kind: "Primary" },
     { label: "Horizon Industrial Parks DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_29122025155357_DRHP.pdf", kind: "Primary" },
     { label: "SEBI proforma financial information", href: "https://www.sebi.gov.in/web/?file=https%3A%2F%2Fwww.sebi.gov.in%2Fsebi_data%2Fattachdocs%2Fjan-2026%2F1767598214527_1051.pdf", kind: "Primary" },
