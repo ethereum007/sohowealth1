@@ -1231,20 +1231,20 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Q&T offer and proceeds summary", href: "https://www.ipoplatform.com/ipo/qandt-foods-ipo/4693", kind: "Secondary" },
   ],
 }, {
-  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closes 14 August 2026; final exchange terms require reconciliation", analysisAsOf: "14 August 2026",
+  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closed; allotment and 19 August listing awaited", analysisAsOf: "14 August 2026",
   summary: "Pramodini Medicare operates a multi-state diagnostics network through public-private, private-hospital, PSU and standalone-centre arrangements. FY23–FY25 revenue growth was moderate while profit and margins expanded sharply, and the nine months to December 2025 show further scale. The central questions are whether unusually high margins convert to cash, whether new equipment earns adequate utilisation, and how much renewal, referral, counterparty and clinical-compliance risk sits inside its partnership-led model.",
   business: [
     "The company provides radiology, clinical laboratory and nuclear-medicine services through public-private partnerships with government hospitals and teaching hospitals, arrangements with private hospitals, strategic partnerships with central-government PSUs and privately operated centres.",
     "As of 31 December 2025, Pramodini disclosed 15 diagnostic centres across 13 cities in Uttar Pradesh, Andhra Pradesh, Karnataka, West Bengal, Haryana/NCR Delhi and Kerala, where operations were yet to commence. It also operates a processing unit-cum-laboratory in Vijayawada.",
     "Promoters are Dr Chalasani Kuldeep Kumar, Dr Chalasani Kavitha, Chalasani Durga Aashritha and Sri Ram Medicare Private Limited. The two doctor-promoters bring clinical experience, but promoter, referral and key-person dependence must be assessed alongside board and clinical-governance controls.",
   ],
-  issueNote: "The April 2026 DRHP proposed up to 58,51,200 shares: up to 53,50,800 fresh shares and 5,00,400 OFS shares. Marketed summaries indicate a ₹118 fixed price, implying an approximately ₹69.04 crore maximum offer, ₹63.14 crore fresh component and ₹5.90 crore OFS. These rupee values are derived from the DRHP maxima and marketed price—not yet reconciled to a final prospectus, allotment notice or NSE Emerge circular—and are therefore tentative.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹118 fixed price (tentative)", lotSize: null, totalCr: 69.04, freshCr: 63.14, ofsCr: 5.90, faceValue: "₹10" },
+  issueNote: "The 4 August RHP confirms up to 58,51,200 shares: up to 53,50,800 fresh shares, 5,00,400 OFS shares and a 3,36,000-share market-maker reservation. At the ₹118 cap this implies up to ₹69.04 crore, including approximately ₹63.14 crore fresh and ₹5.90 crore OFS. The RHP proposes a 19 August NSE Emerge listing; final allotment and listing notices remain controlling.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Proposed 19 August 2026; final NSE notice pending", priceBand: "₹110–₹118", lotSize: 1200, totalCr: 69.04, freshCr: 63.14, ofsCr: 5.90, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Medical equipment for existing and proposed diagnostic centres", amount: "₹45.15 crore in the DRHP" },
     { purpose: "Unidentified inorganic acquisition", amount: "Part of the residual net fresh proceeds; target and amount were not identified in the DRHP" },
     { purpose: "General corporate purposes and issue expenses", amount: "Balance of net fresh proceeds, within regulatory limits" },
-    { purpose: "Offer for sale", amount: "Approximately ₹5.90 crore at the tentative marketed price; proceeds go to selling shareholders" },
+    { purpose: "Offer for sale", amount: "Up to approximately ₹5.90 crore at the cap; proceeds go to selling shareholders" },
   ],
   financials: [
     { year: "FY23", revenueCr: 30.58, ebitdaCr: 14.67, patCr: 4.28, netWorthCr: 16.53, borrowingsCr: 21.38, assetsCr: 47.46 },
@@ -1288,6 +1288,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "A normalized valuation should use centre-level cash returns after equipment replacement, maintenance, staffing and receivable funding, and should not annualise nine-month FY26 profit without seasonality and cash-flow checks.",
   ],
   sources: [
+    { label: "Pramodini Medicare August 2026 RHP", href: "https://www.chittorgarh.net/reports/ipo_notes/red-herring-prospectus.pdf", kind: "Primary" },
     { label: "Pramodini Medicare April 2026 DRHP", href: "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_24042026111823_DRHPPramodiniMedicareLimited.pdf", kind: "Primary" },
     { label: "Pramodini Diagnostics investor page", href: "https://www.pramodinidiagnostics.com/investor", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
