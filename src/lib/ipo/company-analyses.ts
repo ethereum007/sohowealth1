@@ -1292,6 +1292,71 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Pramodini financial report", href: "https://www.ipoplatform.com/ipo/financial-report/pramodini-medicare-ipo/4671", kind: "Secondary" },
     { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
   ],
+}, {
+  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Credent is a B2B healthcare-operations provider combining temperature-sensitive diagnostic-sample logistics, workforce services, technology and a recently acquired diagnostics subsidiary. The six months to September 2025 show a major step-up after consolidation, but debt and assets also rose sharply and operating cash flow was almost nil. The core analysis therefore turns on acquisition quality, customer retention, sample-chain execution and whether issue-funded working capital converts accounting growth into cash.",
+  business: [
+    "The group provides B2B healthcare logistics, including transportation of diagnostic samples, home collection and related field services, to laboratories, IVD and pharmaceutical companies, hospitals, clinics and other institutions.",
+    "As of 30 September 2025, Credent disclosed a fleet of 94 commercial vehicles, two warehouses and four branch offices, including Mumbai, Pune, Chennai and Varanasi. Its operating model depends on route density, turnaround time, specialised packaging, temperature integrity and trained field staff.",
+    "Credent Healthcare Private Limited became a material subsidiary in April 2025 and wholly owned in October 2025, expanding the group into diagnostic and allied healthcare services. Promoters are Ashok Kumar Sharma, Karan Sharma, Tarun Sharma, Dimple Sharma and Tanveen.",
+  ],
+  issueNote: "The March 2026 DRHP proposed up to 49,68,000 fresh shares and no OFS. The calendar reflects marketed proceeds of ₹89.13 crore at ₹179–₹189, which implies a smaller final share count than the draft maximum. Final issued shares, reservations and proceeds must therefore be reconciled to the RHP, prospectus, allotment basis and NSE Emerge notices.",
+  issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 600, totalCr: 89.13, freshCr: 89.13, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Investment in Credent Healthcare for working capital", amount: "₹17.89 crore in the DRHP" },
+    { purpose: "Investment in Credent Healthcare for diagnostic machinery", amount: "₹2.05 crore in the DRHP" },
+    { purpose: "Working-capital requirements of the parent company", amount: "₹26.30 crore in the DRHP" },
+    { purpose: "Repayment or prepayment of company borrowings", amount: "₹4.12 crore in the DRHP" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds; no OFS" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 59.75, ebitdaCr: 4.00, patCr: 2.69, netWorthCr: 10.99, borrowingsCr: 4.16, assetsCr: 19.48 },
+    { year: "FY24", revenueCr: 75.73, ebitdaCr: 4.29, patCr: 2.66, netWorthCr: 13.65, borrowingsCr: 6.83, assetsCr: 26.41 },
+    { year: "FY25", revenueCr: 77.94, ebitdaCr: 4.99, patCr: 2.24, netWorthCr: 15.90, borrowingsCr: 7.41, assetsCr: 29.49 },
+    { year: "6M FY26", revenueCr: 90.02, ebitdaCr: 11.82, patCr: 7.60, netWorthCr: 23.51, borrowingsCr: 20.76, assetsCr: 61.32 },
+  ],
+  metrics: [
+    { label: "6M FY26 EBITDA margin", value: "13.1%", context: "Up from 6.4% in FY25, after the diagnostics subsidiary entered the consolidated group." },
+    { label: "6M FY26 PAT margin", value: "8.4%", context: "Compared with 2.9% in FY25; comparability is affected by consolidation and acquisitions." },
+    { label: "6M FY26 debt/equity", value: "0.88×", context: "Borrowings rose to ₹20.76 crore from ₹7.41 crore at FY25." },
+    { label: "6M FY26 operating cash flow", value: "₹0.01 crore", context: "About ₹1.41 lakh despite ₹7.60 crore PAT, based on the DRHP cash-flow statement." },
+  ],
+  strengths: [
+    "Healthcare samples require time-sensitive, traceable logistics, creating specialised operating requirements beyond ordinary parcel delivery.",
+    "The company disclosed national operating infrastructure through 94 vehicles, two warehouses and four branches, supporting laboratories and other healthcare customers.",
+    "The first six months of FY26 exceeded full-year FY25 revenue and produced higher EBITDA and PAT, albeit with an acquisition-driven change in group perimeter.",
+    "The issue is entirely fresh capital and directs funds to working capital, diagnostic machinery and debt repayment rather than selling shareholders.",
+  ],
+  concerns: [
+    "Six-month FY26 results are not comparable with prior standalone periods because Credent Healthcare entered the consolidated group. Annualising ₹7.60 crore PAT without acquisition, seasonality and integration adjustments would overstate certainty.",
+    "Operating cash flow was only about ₹1.41 lakh in the six months to September 2025 despite ₹7.60 crore PAT. Receivables, working capital and acquisition-related balance-sheet changes require close review.",
+    "Assets more than doubled to ₹61.32 crore and borrowings rose to ₹20.76 crore by September 2025. The issue repays only ₹4.12 crore of identified debt while committing ₹44.19 crore across parent and subsidiary working capital.",
+    "Customer contracts may be short term, renewable or without minimum-volume commitments. Loss, repricing or delayed payment by major diagnostic customers could impair fleet economics and cash conversion.",
+    "Delayed, lost, contaminated or temperature-compromised samples can trigger retesting, claims, clinical consequences and reputational damage. Specialised packaging and consumable availability are operational dependencies.",
+    "The acquisition of Credent Healthcare creates purchase-price, integration and governance risk. Historic growth must be separated among organic logistics, acquired diagnostics and intra-group transactions.",
+    "The promoter family has roles across group entities. Opportunity allocation, service contracts, acquisitions, remuneration, guarantees and related-party balances deserve continued oversight.",
+    "NSE Emerge shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Organic revenue and margin by logistics, diagnostics, manpower and technology services, with a clear acquisition bridge.",
+    "Top-customer concentration, contract duration, minimum volumes, price resets, retention and receivable ageing.",
+    "Operating cash flow versus PAT, debtor days and use of the ₹44.19 crore combined working-capital allocations.",
+    "Fleet utilisation, route density, cost per sample, on-time performance, temperature excursions, sample loss and insurance claims.",
+    "Credent Healthcare's centre and equipment utilisation, accreditation, clinical quality and returns on the ₹2.05 crore machinery investment.",
+    "Post-issue borrowings, related-party transactions, acquisition accounting, promoter governance and NSE Emerge liquidity.",
+  ],
+  valuation: [
+    "A definitive P/E requires the final prospectus share count and a normalized earnings base. The six-month FY26 result includes a changed consolidation perimeter and should not simply be doubled.",
+    "The DRHP states that no listed Indian company is directly comparable across temperature-sensitive sample logistics, collection, workforce and diagnostics. General logistics or diagnostics multiples omit important differences.",
+    "A normalized valuation should prioritise organic free cash flow after fleet replacement and working-capital funding, and should separately value acquired diagnostics only after sustainable centre-level economics are visible.",
+  ],
+  sources: [
+    { label: "Credent Connect N Care March 2026 DRHP", href: "https://invtrade.choiceindia.com/IPO/IPOReport/INE1KPX01025-ipo-report.pdf", kind: "Primary" },
+    { label: "Credent investor-relations and offer documents", href: "https://c3logistics.co.in/investor", kind: "Primary" },
+    { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
+    { label: "IPOPlatform Credent filing and financial summary", href: "https://www.ipoplatform.com/Funding-news/credent-connect-n-care-limited", kind: "Secondary" },
+    { label: "Choice Credent marketed offer summary", href: "https://choiceindia.com/ipo/credent-connect-n-care-ipo", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);

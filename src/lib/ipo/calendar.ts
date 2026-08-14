@@ -36,8 +36,8 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Shiprocket", slug: "shiprocket-ipo", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 1617.48, priceBand: "₹92–₹97" },
   { company: "Behari Lal Engineering", slug: "behari-lal-engineering-ipo", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 301.62, priceBand: "₹271–₹285" },
   { company: "Q&T Foods", slug: "qt-foods-ipo", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 24.92, priceBand: "₹115", exchange: "BSE SME" },
-  { company: "Pramodini Medicare", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 69.04, priceBand: "₹118 fixed price*", exchange: "NSE SME" },
-  { company: "Credent Connect N Care", market: "SME", opens: "2026-08-13", closes: "2026-08-17", issueSizeCr: 89.13, priceBand: "₹179–₹189", exchange: "NSE SME" },
+  { company: "Pramodini Medicare", slug: "pramodini-medicare-ipo", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 69.04, priceBand: "₹118 fixed price*", exchange: "NSE SME" },
+  { company: "Credent Connect N Care", slug: "credent-connect-n-care-ipo", market: "SME", opens: "2026-08-13", closes: "2026-08-17", issueSizeCr: 89.13, priceBand: "₹179–₹189", exchange: "NSE SME" },
   { company: "Skytech Infinite Platform", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "NSE SME" },
   { company: "ENS Enterprises", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "BSE SME" },
   { company: "Technocrats Plasma Systems", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: null, priceBand: null, exchange: "BSE SME" },
@@ -72,7 +72,7 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 }));
 
 export const august2026Snapshot = {
-  asOf: "13 August 2026",
+  asOf: "14 August 2026",
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
     { label: "Chittorgarh SME IPO Calendar", href: "https://www.chittorgarh.com/calendar/sme-ipo-calendar/2/?month=8&year=2026" },
