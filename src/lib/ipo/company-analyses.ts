@@ -1489,14 +1489,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
   ],
 }, {
-  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue opens 14 August 2026; final terms require exchange reconciliation", analysisAsOf: "14 August 2026",
+  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "14 August 2026",
   summary: "Technocrats designs, manufactures, installs and services plasma cutting, welding, laser and customised automation systems. FY25 revenue rose more than eightfold after the company adopted customer-site manufacturing for larger projects, producing strong profit but also much higher customer concentration, receivables, inventory and borrowings. The analytical question is whether this new execution model can repeat without sacrificing cash conversion, quality or project margins.",
   business: [
     "The company supplies manual and CNC-controlled plate and pipe cutting systems, MIG, TIG, ARC, SAW and laser welding equipment, plasma systems and customised automation cells.",
     "Its activities span configuration, engineering, fabrication, assembly, testing, installation, commissioning, operator support, spares, consumables, maintenance and retrofit services. FY25 also marked a shift toward on-site manufacturing and assembly for large customised machinery because of space constraints at its Vasai facilities.",
     "Technocrats reports more than 2,500 customers, 17 dealers and 14 service locations. Promoters Arun Kumar and Vandana Sharma have long operating involvement, creating domain continuity alongside key-person and family-control considerations.",
   ],
-  issueNote: "The December 2025 DRHP proposed up to 46,20,000 fresh shares and no OFS. Marketed references indicate ₹125–₹132, implying up to approximately ₹60.98 crore at the cap. Price, size, lot and issued shares remain tentative until reconciled with the RHP, prospectus, allotment basis and BSE SME notices.",
+  issueNote: "The issuer-hosted RHP dated 10 August 2026 confirms an entirely fresh issue of up to 46,20,000 shares, including 2,31,000 market-maker shares and a 43,89,000-share net issue, with bidding from 14–18 August. The RHP leaves the price and minimum lot to a later advertisement. Marketed references indicate ₹125–₹132, implying up to approximately ₹60.98 crore at the cap; price, lot, final proceeds and listing remain subject to the price-band advertisement, prospectus, allotment basis and BSE notices.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final BSE SME notice pending", priceBand: "₹125–₹132 (tentative)", lotSize: null, totalCr: 60.98, freshCr: 60.98, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Plant and machinery for plasma cutting, welding and customised automation at existing premises", amount: "₹8.79 crore in the DRHP" },
@@ -1546,6 +1546,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "A normalized valuation should use cash earnings across several project cycles and charge an adequate return on the much larger receivable and inventory base funded by the issue.",
   ],
   sources: [
+    { label: "Technocrats Plasma August 2026 RHP", href: "https://www.technocratplasma.com/wp-content/uploads/2026/08/RHP.pdf", kind: "Primary" },
     { label: "Technocrats Plasma December 2025 DRHP", href: "https://www.capitalmarket.com/pub/dp/dp96388.pdf", kind: "Primary" },
     { label: "Technocrats Plasma corporate DRHP", href: "https://www.technocratplasma.com/pdf/DRHPTECHNOCRATS.pdf", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },

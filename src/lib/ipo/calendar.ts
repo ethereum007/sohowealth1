@@ -78,6 +78,7 @@ export const august2026Snapshot = {
     "Gaja Alternative Asset Management is not included: SEBI and NSE sources showed draft-stage documents, but no RHP or exchange notice confirming 19–21 August was found.",
     "Skyways Air Services is not included: its March 2026 RHP launch was deferred, and no primary filing confirming an August relaunch was found.",
     "Asterisks beside selected SME prices identify marketed terms that still require reconciliation to the final prospectus or exchange notice.",
+    "Technocrats Plasma's issuer-hosted RHP confirms 46,20,000 fresh shares and 14–18 August bidding; its marketed price remains starred pending the separate price-band advertisement and BSE SME notice.",
     "Fascinate Textiles' closing date was corrected from 13 August to 19 August using NSE's official current-issue feed.",
     "Pramodini Medicare's final RHP confirms ₹110–₹118, a 1,200-share lot and a proposed 19 August listing; the earlier fixed-price label was corrected.",
   ],
