@@ -1105,15 +1105,15 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Kotak Neo Sham Foam DRHP summary", href: "https://www.kotakneo.com/ipo/sham-foam-ipo/", kind: "Secondary" },
   ],
 }, {
-  slug: "fascinate-textiles-ipo", company: "Fascinate Textiles", market: "SME", sector: "Readymade garment manufacturing", status: "Issue timetable and final offer data require exchange reconciliation", analysisAsOf: "14 August 2026",
+  slug: "fascinate-textiles-ipo", company: "Fascinate Textiles", market: "SME", sector: "Readymade garment manufacturing", status: "Issue active; scheduled to close 19 August 2026", analysisAsOf: "14 August 2026",
   summary: "Fascinate Textiles manufactures knit and woven garments, with a focus on children's apparel, from West Bengal. Disclosures show FY25 revenue more than doubled and profit rose exceptionally, but debt, working capital and customer concentration also increased. Material differences across draft, addendum and market summaries make document reconciliation a core part of the analysis rather than a footnote.",
   business: [
     "The company manufactures menswear, womenswear and children's garments, with cutting, printing, stitching, finishing, design and merchandising activities described at its Barasat facility.",
     "Fascinate was incorporated in 2017 and says it manufactures against confirmed orders. This may limit finished-goods risk, but it does not remove receivable, raw-material inventory, customer cancellation or outsourced-production risk.",
     "Promoters include Rishabh Nahar, Chirag Ahuja, Vishal Nahar, Vishal Nahar HUF and Narinder Kumar Ahuja. The company converted to public status in 2025, leaving a short public-governance track record.",
   ],
-  issueNote: "The calendar reflects marketed data of ₹63.62 crore at ₹148–₹156. Draft materials proposed capex, working capital and debt repayment, while different public versions contain differing profit, capacity and offer figures. The final RHP, addenda, basis of allotment and NSE Emerge notices must be read together before treating the offer structure or timetable as settled.",
-  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹148–₹156", lotSize: null, totalCr: 63.62, freshCr: 63.62, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "NSE's official current-issue feed confirms an 11 August opening, 19 August closing and 42,93,600 shares offered, superseding the aggregator's earlier 13 August closing date. Marketed data indicate ₹63.62 crore at ₹148–₹156, while different public document versions contain differing profit, capacity and offer figures. Price, lot, final structure and listing terms should be reconciled to the prospectus, addenda, allotment basis and NSE Emerge notices.",
+  issue: { open: "11 August 2026", close: "19 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹148–₹156", lotSize: null, totalCr: 63.62, freshCr: 63.62, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Additional manufacturing facility", amount: "Draft allocation: ₹12.40 crore" },
     { purpose: "Working-capital requirements", amount: "Draft allocation: ₹19.03 crore" },
