@@ -615,8 +615,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Manufacturing is outsourced to artisans and job workers while Shankesh manages design, customization, bullion sourcing, quality control and delivery. This limits fixed manufacturing assets but creates third-party capacity, craftsmanship, labour-compliance and quality risks.",
     "Revenue comes from direct sale of finished jewellery and job-work arrangements where customers provide bullion. Revenue, gross margin and working-capital intensity differ materially between these routes, so gold processed and product mix matter alongside headline sales.",
   ],
-  issueNote: "The ₹367.18 crore offer comprises ₹274.18 crore of fresh issue and a ₹93 crore promoter OFS. Fresh proceeds are led by ₹158 crore for debt repayment, with ₹38 crore for working capital and approximately ₹78.18 crore for general corporate purposes.",
-  issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹88–₹93", lotSize: 159, totalCr: 367.18, freshCr: 274.18, ofsCr: 93, faceValue: "₹5" },
+  issueNote: "NSE's current-issue feed confirms 3,94,82,000 total shares, ₹88–₹93 and bidding from 18–20 August. Marketed final terms split the cap-price offer into approximately ₹274.18 crore of fresh issue and ₹93 crore promoter OFS, with a 160-share minimum lot. Fresh proceeds are led by ₹158 crore for debt repayment and ₹38 crore for working capital; final proceeds, allotment and listing remain subject to the RHP, prospectus and exchange notices.",
+  issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹88–₹93", lotSize: 160, totalCr: 367.18, freshCr: 274.18, ofsCr: 93, faceValue: "₹5" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹158 crore" },
     { purpose: "Working-capital requirements", amount: "₹38 crore" },
@@ -631,7 +631,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   metrics: [
     { label: "FY25 EBITDA margin", value: "4.66%", context: "Up from 2.49% in FY23 as gross margin and operating leverage improved." },
     { label: "FY25 PAT margin", value: "2.87%", context: "PAT more than tripled versus FY24, substantially faster than revenue." },
-    { label: "FY25 debt/equity", value: "1.44×", context: "Borrowings increased to ₹144.84 crore; ₹158 crore is earmarked for repayment or prepayment." },
+    { label: "FY25 debt/equity", value: "1.44×", context: "Borrowings increased to ₹144.84 crore. The stated ₹158 crore repayment exceeds this FY25 balance, so the final FY26 debt schedule and eligible facilities must be reconciled." },
     { label: "FY23–FY25 revenue CAGR", value: "24.3%", context: "Gold processed rose much more slowly, so gold price, realization and mix explain part of revenue growth." },
   ],
   strengths: [
@@ -663,6 +663,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The central valuation question is whether FY25–FY26 profitability represents durable product and customer economics or a favourable combination of gold prices, mix and working-capital conditions.",
   ],
   sources: [
+    { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
     { label: "SEBI filing page: Shankesh Jewellers DRHP", href: "https://www.sebi.gov.in/filings/public-issues/sep-2025/shankesh-jewellers-limited_96968.html", kind: "Primary" },
     { label: "Shankesh Jewellers DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_29092025153631_Shankesh_Jewellers_Limited_DRHP.pdf", kind: "Primary" },
     { label: "Shankesh Jewellers corporate website", href: "https://www.shankeshjewellers.com/", kind: "Primary" },
