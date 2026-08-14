@@ -1483,6 +1483,70 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
   ],
+}, {
+  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue opens 14 August 2026; final terms require exchange reconciliation", analysisAsOf: "14 August 2026",
+  summary: "Technocrats designs, manufactures, installs and services plasma cutting, welding, laser and customised automation systems. FY25 revenue rose more than eightfold after the company adopted customer-site manufacturing for larger projects, producing strong profit but also much higher customer concentration, receivables, inventory and borrowings. The analytical question is whether this new execution model can repeat without sacrificing cash conversion, quality or project margins.",
+  business: [
+    "The company supplies manual and CNC-controlled plate and pipe cutting systems, MIG, TIG, ARC, SAW and laser welding equipment, plasma systems and customised automation cells.",
+    "Its activities span configuration, engineering, fabrication, assembly, testing, installation, commissioning, operator support, spares, consumables, maintenance and retrofit services. FY25 also marked a shift toward on-site manufacturing and assembly for large customised machinery because of space constraints at its Vasai facilities.",
+    "Technocrats reports more than 2,500 customers, 17 dealers and 14 service locations. Promoters Arun Kumar and Vandana Sharma have long operating involvement, creating domain continuity alongside key-person and family-control considerations.",
+  ],
+  issueNote: "The December 2025 DRHP proposed up to 46,20,000 fresh shares and no OFS. Marketed references indicate ₹125–₹132, implying up to approximately ₹60.98 crore at the cap. Price, size, lot and issued shares remain tentative until reconciled with the RHP, prospectus, allotment basis and BSE SME notices.",
+  issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final BSE SME notice pending", priceBand: "₹125–₹132 (tentative)", lotSize: null, totalCr: 60.98, freshCr: 60.98, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Plant and machinery for plasma cutting, welding and customised automation at existing premises", amount: "₹8.79 crore in the DRHP" },
+    { purpose: "Long-term working-capital requirements", amount: "₹44.07 crore across FY27 and FY28" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds, within regulatory limits" },
+    { purpose: "Offer for sale", amount: "Nil; the issue is entirely fresh capital" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 4.45, ebitdaCr: 0.77, patCr: 1.50, netWorthCr: 1.53, borrowingsCr: 4.15, assetsCr: 11.68 },
+    { year: "FY24", revenueCr: 6.06, ebitdaCr: 1.29, patCr: 2.20, netWorthCr: 3.73, borrowingsCr: 6.66, assetsCr: 13.55 },
+    { year: "FY25", revenueCr: 49.35, ebitdaCr: 8.59, patCr: 8.10, netWorthCr: 14.24, borrowingsCr: 10.23, assetsCr: 36.71 },
+    { year: "Q1 FY26", revenueCr: 30.68, ebitdaCr: 4.97, patCr: 3.55, netWorthCr: 20.74, borrowingsCr: 11.04, assetsCr: 39.51 },
+  ],
+  metrics: [
+    { label: "FY25 revenue growth", value: "714%", context: "Driven by a fundamental execution-model shift and larger on-site projects." },
+    { label: "FY25 EBITDA margin", value: "17.4%", context: "Below FY24's 21.3% despite the major increase in scale." },
+    { label: "FY25 debt/equity", value: "0.72×", context: "Improved through equity growth, though borrowings rose to ₹10.23 crore." },
+    { label: "Q1 FY26 top-ten customers", value: "93.27%", context: "The top five generated 78.72% of quarterly revenue." },
+  ],
+  strengths: [
+    "A more than 30-year corporate history and broad installed-customer base provide engineering experience and aftermarket opportunities.",
+    "The company covers equipment, automation, commissioning, maintenance, retrofits, spares and consumables across the machine lifecycle.",
+    "FY25 produced a large increase in revenue, EBITDA and PAT, while Q1 FY26 revenue reached ₹30.68 crore.",
+    "The offer is entirely fresh capital and funds both production equipment and the project working-capital constraint.",
+  ],
+  concerns: [
+    "FY25 revenue growth came from a fundamental shift toward manufacturing and assembly at customer sites. This short record cannot yet establish a stable run rate or margin profile.",
+    "Top-ten customers contributed 83.89% of FY25 revenue and 93.27% in Q1 FY26; four Q1 customers each contributed more than 13%. Project completion or customer loss can create sharp volatility.",
+    "Trade receivables rose from ₹3.27 crore in FY24 to ₹14.94 crore in FY25 and ₹36.05 crore by June 2025. A portion was due from a related party for more than six months.",
+    "Net operating cash flow was negative ₹0.67 crore in FY25 despite ₹8.10 crore PAT, before turning positive ₹0.28 crore in Q1 FY26. Reported profit has not yet demonstrated durable cash conversion.",
+    "The ₹44.07 crore working-capital allocation is more than five times FY25 PAT. Inventory, customer acceptance, milestone billing, retention money and collections can absorb substantial capital.",
+    "Custom machinery carries specification, fabrication, site-access, integration, performance-guarantee, warranty, liquidated-damages and safety risks.",
+    "The proposed machinery quotations had no stated validity and firm purchase orders had not been placed at the draft stage, creating cost and implementation uncertainty.",
+    "BSE SME shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Order book, customer concentration, project milestones, cancellations, acceptance tests, liquidated damages and execution at customer sites.",
+    "Receivable ageing, related-party receivables, inventory, advances, retention money and operating cash flow versus PAT.",
+    "Revenue and margin split among equipment, on-site fabrication, installation, maintenance, retrofits, spares and consumables.",
+    "Deployment of ₹44.07 crore working capital and ₹8.79 crore machinery proceeds, including quotations, orders and commissioning.",
+    "Borrowings, finance costs, warranty provisions, contingent liabilities, safety incidents and insurance coverage.",
+    "Promoter dependence, related-party transactions, succession and BSE SME liquidity.",
+  ],
+  valuation: [
+    "A definitive offer multiple requires the final prospectus share count and EPS. Annualising Q1 FY26 PAT would ignore project timing and extreme customer concentration.",
+    "DRHP peers Ador Welding, ESAB India and Jyoti CNC operate at much larger scale with different product ownership, distribution, exports and service mixes; their multiples are not directly transferable.",
+    "A normalized valuation should use cash earnings across several project cycles and charge an adequate return on the much larger receivable and inventory base funded by the issue.",
+  ],
+  sources: [
+    { label: "Technocrats Plasma December 2025 DRHP", href: "https://www.capitalmarket.com/pub/dp/dp96388.pdf", kind: "Primary" },
+    { label: "Technocrats Plasma corporate DRHP", href: "https://www.technocratplasma.com/pdf/DRHPTECHNOCRATS.pdf", kind: "Primary" },
+    { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "IPOPlatform Technocrats financial report", href: "https://www.ipoplatform.com/ipo/financial-report/technocrats-plasma-systems-ipo/4574", kind: "Secondary" },
+    { label: "Bajaj Markets objects and business summary", href: "https://www.bajajfinservmarkets.in/ipo/technocrats-plasma-systems-ltd", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
