@@ -1357,6 +1357,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Credent filing and financial summary", href: "https://www.ipoplatform.com/Funding-news/credent-connect-n-care-limited", kind: "Secondary" },
     { label: "Choice Credent marketed offer summary", href: "https://choiceindia.com/ipo/credent-connect-n-care-ipo", kind: "Secondary" },
   ],
+}, {
+  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue opens 14 August 2026; final offer terms require exchange reconciliation", analysisAsOf: "14 August 2026",
+  summary: "Skytech designs and executes industrial-automation systems and control panels using products from established automation vendors. FY25 revenue was nearly flat while EBITDA and PAT rose sharply, but receivables, customer concentration and project working capital also increased and operating cash covered only a fraction of profit. The issue is primarily a bet on funding larger EPC orders without losing margin or cash discipline.",
+  business: [
+    "The company designs, engineers, assembles, installs and supports turnkey automation systems, including PCC, MCC, PLC, VFD, APFC and control-desk panels that integrate controllers, drives, switchgear, sensors and actuators.",
+    "Skytech is an authorised channel partner, distributor, integrator or solution provider for Mitsubishi Electric India, Endress+Hauser India, Exor India and Euroteck Environmental within defined product, territory and customer scopes.",
+    "EPC contracts contributed 84.84% of FY25 revenue, product supply 10.03% and AMC or other services 5.14%. Promoters Paramashivam Deiveekan and Suma Deiveekan have led the Bengaluru-based company since its early operating period.",
+  ],
+  issueNote: "The September 2025 DRHP proposed up to 29,46,000 fresh shares and no OFS, with ₹14.96 crore allocated to working capital. Marketed references indicate ₹77 per share, implying an approximately ₹22.68 crore maximum issue. The price, size and lot remain tentative until reconciled to the RHP, prospectus, allotment basis and NSE Emerge notices.",
+  issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹77 fixed price (tentative)", lotSize: null, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Incremental working-capital requirements", amount: "₹14.96 crore in the DRHP, split across FY26 and FY27" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds, within regulatory limits" },
+    { purpose: "Offer for sale", amount: "Nil; the issue is entirely fresh capital" },
+    { purpose: "Plant expansion or debt repayment", amount: "Not identified as principal DRHP objects" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 35.13, ebitdaCr: 3.13, patCr: 1.75, netWorthCr: 9.75, borrowingsCr: 5.79, assetsCr: 27.34 },
+    { year: "FY24", revenueCr: 44.13, ebitdaCr: 3.09, patCr: 1.35, netWorthCr: 11.10, borrowingsCr: 3.90, assetsCr: 26.00 },
+    { year: "FY25", revenueCr: 45.14, ebitdaCr: 6.13, patCr: 3.71, netWorthCr: 14.81, borrowingsCr: 5.39, assetsCr: 30.05 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "13.6%", context: "Up from 7.0% in FY24 despite only 2.3% revenue growth." },
+    { label: "FY25 PAT margin", value: "8.2%", context: "PAT increased 175% to ₹3.71 crore after declining in FY24." },
+    { label: "FY25 debt/equity", value: "0.36×", context: "Borrowings increased to ₹5.39 crore but remained below net worth." },
+    { label: "FY25 operating cash flow", value: "₹0.81 crore", context: "Only 22% of ₹3.71 crore PAT as receivables and working capital absorbed cash." },
+  ],
+  strengths: [
+    "A 16-year operating history and authorisations from established automation vendors provide product access, technical support and customer credibility.",
+    "The company combines panel assembly, engineering, integration, commissioning and aftermarket support rather than relying on simple component resale.",
+    "FY25 EBITDA margin nearly doubled to 13.6%, PAT rose to ₹3.71 crore and debt/equity remained moderate at 0.36×.",
+    "The offer is entirely fresh capital and directly targets the working-capital constraint involved in procuring components before project collection.",
+  ],
+  concerns: [
+    "FY25 revenue increased only 2.3% while EBITDA nearly doubled and PAT rose 175%. The durability of project mix, procurement gains and expense controls must be tested over more than one year.",
+    "The top customer contributed 19.94%, the top five 50.93% and the top ten 64.99% of FY25 revenue, all materially higher than FY24 concentration.",
+    "Trade receivables increased to ₹15.93 crore, or roughly 35% of FY25 revenue, and the DRHP assumes about 120 receivable days in future projections.",
+    "Operating cash flow fell to ₹0.81 crore from ₹3.02 crore in FY24. The working-capital gap is projected to rise from ₹13.80 crore in FY25 to ₹44.14 crore in FY27, far faster than the recent revenue record.",
+    "EPC work carries design error, component availability, site delay, commissioning, warranty, liquidated-damages and cost-overrun risk. Fixed-price orders can compress margin when delivery slips.",
+    "Authorised-partner arrangements may be changed or terminated, and vendor pricing, territories, warranties and product availability can affect competitive position.",
+    "Government revenue rose to 21.37% of FY25 sales from 9.61% in FY24, increasing exposure to tender qualification, documentation, payment timing and policy decisions.",
+    "NSE Emerge shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Order book, execution cycle, cancellations, cost overruns and revenue mix among EPC, product supply, AMC and services.",
+    "Customer concentration, government receivables, ageing, retention money, disputed invoices and collection days.",
+    "Operating cash flow versus PAT and deployment of the ₹14.96 crore working-capital allocation.",
+    "Gross and EBITDA margin by project, supplier rebates, foreign-exchange exposure and pass-through of component costs.",
+    "Status of Mitsubishi, Endress+Hauser, Exor and Euroteck authorisations, plus supplier concentration and product availability.",
+    "Related-party transactions, promoter dependence, contingent liabilities, warranties and NSE Emerge liquidity.",
+  ],
+  valuation: [
+    "At the tentative ₹77 price, the DRHP's post-bonus FY25 EPS of ₹5.40 implies roughly 14.3× trailing earnings before accounting for dilution. Final prospectus EPS and share count must control.",
+    "The DRHP identifies no directly comparable listed Indian company. Capital-goods and automation peers differ greatly in proprietary technology, product manufacturing, service annuities, customer scale and export exposure.",
+    "A normalized valuation should test FY24-like margins, slower customer collections and the return generated on a working-capital base projected to expand much faster than recent revenue.",
+  ],
+  sources: [
+    { label: "Skytech Infinite September 2025 DRHP", href: "https://nsearchives.nseindia.com/emerge/corporates/content/Registration_30092025235631_DRHP_Skytech_NSE_30092025_Final.pdf", kind: "Primary" },
+    { label: "Skytech Infinite investor-relations page", href: "https://skytechinfinite.com/investor-relation/", kind: "Primary" },
+    { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
+    { label: "Finshore offer-document repository", href: "https://www.finshoregroup.com/downloads/ipo", kind: "Primary" },
+    { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
