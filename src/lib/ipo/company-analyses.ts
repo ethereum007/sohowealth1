@@ -1102,6 +1102,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Sham Foam offer and financial report", href: "https://www.ipoplatform.com/ipo/financial-report/sham-foam-ipo/4592", kind: "Secondary" },
     { label: "Kotak Neo Sham Foam DRHP summary", href: "https://www.kotakneo.com/ipo/sham-foam-ipo/", kind: "Secondary" },
   ],
+}, {
+  slug: "fascinate-textiles-ipo", company: "Fascinate Textiles", market: "SME", sector: "Readymade garment manufacturing", status: "Issue timetable and final offer data require exchange reconciliation", analysisAsOf: "14 August 2026",
+  summary: "Fascinate Textiles manufactures knit and woven garments, with a focus on children's apparel, from West Bengal. Disclosures show FY25 revenue more than doubled and profit rose exceptionally, but debt, working capital and customer concentration also increased. Material differences across draft, addendum and market summaries make document reconciliation a core part of the analysis rather than a footnote.",
+  business: [
+    "The company manufactures menswear, womenswear and children's garments, with cutting, printing, stitching, finishing, design and merchandising activities described at its Barasat facility.",
+    "Fascinate was incorporated in 2017 and says it manufactures against confirmed orders. This may limit finished-goods risk, but it does not remove receivable, raw-material inventory, customer cancellation or outsourced-production risk.",
+    "Promoters include Rishabh Nahar, Chirag Ahuja, Vishal Nahar, Vishal Nahar HUF and Narinder Kumar Ahuja. The company converted to public status in 2025, leaving a short public-governance track record.",
+  ],
+  issueNote: "The calendar reflects marketed data of ₹63.62 crore at ₹148–₹156. Draft materials proposed capex, working capital and debt repayment, while different public versions contain differing profit, capacity and offer figures. The final RHP, addenda, basis of allotment and NSE Emerge notices must be read together before treating the offer structure or timetable as settled.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹148–₹156", lotSize: null, totalCr: 63.62, freshCr: 63.62, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Additional manufacturing facility", amount: "Draft allocation: ₹12.40 crore" },
+    { purpose: "Working-capital requirements", amount: "Draft allocation: ₹19.03 crore" },
+    { purpose: "Repayment or prepayment of secured and unsecured loans", amount: "Draft allocation: ₹2.68 crore" },
+    { purpose: "General corporate purposes and offer expenses", amount: "Balance; reconcile with final RHP" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 21.85, ebitdaCr: 1.07, patCr: 0.47, netWorthCr: 2.72, borrowingsCr: 6.41, assetsCr: 15.76 },
+    { year: "FY24", revenueCr: 28.88, ebitdaCr: 1.85, patCr: 0.63, netWorthCr: 4.45, borrowingsCr: 12.32, assetsCr: 25.44 },
+    { year: "FY25", revenueCr: 60.24, ebitdaCr: 10.21, patCr: 8.08, netWorthCr: 10.44, borrowingsCr: 18.20, assetsCr: 42.25 },
+  ],
+  metrics: [
+    { label: "FY25 EBITDA margin", value: "16.9%", context: "Up from approximately 6.4% in FY24; the abrupt change needs reconciliation to product and outsourcing mix." },
+    { label: "FY25 PAT margin", value: "13.4%", context: "Some earlier disclosures reported a lower FY25 PAT; final restated schedules should control." },
+    { label: "FY25 debt/equity", value: "1.74×", context: "Borrowings increased to ₹18.20 crore from ₹6.41 crore in FY23." },
+    { label: "Top-ten customer share", value: "93.22%", context: "FY25 share disclosed in the DRHP, down from 99.35% in FY24 but still exceptionally concentrated." },
+  ],
+  strengths: [
+    "Reported FY25 revenue of ₹60.24 crore was more than twice FY24 revenue, with a much larger increase in EBITDA and PAT.",
+    "In-house design and manufacturing steps can improve control over delivery and provide scope for higher-value garment programmes if capacity disclosures are borne out operationally.",
+    "The stated issue objects address manufacturing capacity, working capital and a portion of borrowings.",
+    "Top-ten customer concentration declined from 99.35% in FY24 to 93.22% in FY25, although it remains extremely high.",
+  ],
+  concerns: [
+    "FY25 profit expanded far faster than revenue. Earlier public materials show different FY25 PAT figures, so the reconciliation among restated statements, addenda and the final prospectus is essential.",
+    "The top five customers generated 68.75% and the top ten 93.22% of FY25 sales. Loss or delayed payment from a major buyer could materially affect revenue and cash flow.",
+    "Borrowings nearly tripled from FY23 to FY25 and exceeded FY25 net worth. Only ₹2.68 crore of draft proceeds was earmarked for repayment.",
+    "Net working capital rose from ₹5.35 crore in FY23 to ₹22.24 crore in FY25 and was projected to rise further. Reported profit may not translate into operating cash if receivables and inventory keep expanding.",
+    "Fabric, yarn, dyes and processing costs can move rapidly, while customer orders may have fixed prices and short delivery windows.",
+    "Public commentary has challenged aspects of the issuer's capacity and classification disclosures. These are allegations, not established findings; investors should rely on filed addenda, exchange correspondence and audited evidence rather than social-media claims.",
+    "A new production facility introduces land, construction, machinery, labour, approval and utilisation risk. Draft documents identify a property arrangement that should be tied to final title and implementation disclosures.",
+    "NSE Emerge shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Final RHP, addenda and NSE correspondence reconciling FY25 profit, operating capacity, product classification, issue size and dates.",
+    "Top-five and top-ten customers, order cancellations, repeat business and receivable ageing by major buyer.",
+    "Operating cash flow, inventory and receivable days, debt and use of the ₹19.03 crore working-capital allocation.",
+    "Actual in-house production versus job work or traded goods, by product category and revenue contribution.",
+    "New-facility land rights, commissioning, installed capacity, utilisation, employee count and capital cost.",
+    "Related-party transactions, auditor observations, contingent liabilities and NSE Emerge liquidity.",
+  ],
+  valuation: [
+    "A credible valuation cannot be separated from financial reconciliation. A multiple based on ₹8.08 crore FY25 PAT will differ materially from one based on earlier lower profit disclosures.",
+    "Listed garment exporters and manufacturers differ in customer diversification, exports, owned capacity, job work, working capital and compliance. Scale and cash conversion matter more than a headline sector P/E.",
+    "A normalized case should test materially lower margins, slower customer payments, higher fabric costs and under-utilisation at the proposed facility.",
+  ],
+  sources: [
+    { label: "Fascinate Textiles IPO page", href: "https://fascinatetextile.com/initial-public-offer/", kind: "Primary" },
+    { label: "Fascinate Textiles DRHP hosted by lead manager", href: "https://www.affinityglobalcap.in/img/pdf/sme/facinate/DRHP.pdf", kind: "Primary" },
+    { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
+    { label: "IPOPlatform Fascinate financial report", href: "https://www.ipoplatform.com/ipo/financial-report/fascinate-textiles-ipo/4349", kind: "Secondary" },
+    { label: "HDFC Sky DRHP summary and proceeds", href: "https://hdfcsky.com/news/fascinate-textiles-files-drhp-for-nse-emerge-ipo", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
