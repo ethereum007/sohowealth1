@@ -1303,7 +1303,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "As of 30 September 2025, Credent disclosed a fleet of 94 commercial vehicles, two warehouses and four branch offices, including Mumbai, Pune, Chennai and Varanasi. Its operating model depends on route density, turnaround time, specialised packaging, temperature integrity and trained field staff.",
     "Credent Healthcare Private Limited became a material subsidiary in April 2025 and wholly owned in October 2025, expanding the group into diagnostic and allied healthcare services. Promoters are Ashok Kumar Sharma, Karan Sharma, Tarun Sharma, Dimple Sharma and Tanveen.",
   ],
-  issueNote: "The March 2026 DRHP proposed up to 49,68,000 fresh shares and no OFS. The calendar reflects marketed proceeds of ₹89.13 crore at ₹179–₹189, which implies a smaller final share count than the draft maximum. Final issued shares, reservations and proceeds must therefore be reconciled to the RHP, prospectus, allotment basis and NSE Emerge notices.",
+  issueNote: "NSE's current-issue feed confirms the issue is active from 13–17 August and shows 35,64,000 bid-eligible shares; that feed figure should not be mistaken for the total issue before anchor or reservation adjustments. The March 2026 DRHP proposed up to 49,68,000 fresh shares and no OFS. Marketed proceeds of ₹89.13 crore at ₹179–₹189 imply a smaller final share count than the draft maximum, so issued shares, reservations, lot and proceeds still require RHP and allotment-basis reconciliation.",
   issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 600, totalCr: 89.13, freshCr: 89.13, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in Credent Healthcare for working capital", amount: "₹17.89 crore in the DRHP" },
@@ -1357,18 +1357,19 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Credent Connect N Care March 2026 DRHP", href: "https://invtrade.choiceindia.com/IPO/IPOReport/INE1KPX01025-ipo-report.pdf", kind: "Primary" },
     { label: "Credent investor-relations and offer documents", href: "https://c3logistics.co.in/investor", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
+    { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/market-data/all-upcoming-issues-ipo", kind: "Primary" },
     { label: "IPOPlatform Credent filing and financial summary", href: "https://www.ipoplatform.com/Funding-news/credent-connect-n-care-limited", kind: "Secondary" },
     { label: "Choice Credent marketed offer summary", href: "https://choiceindia.com/ipo/credent-connect-n-care-ipo", kind: "Secondary" },
   ],
 }, {
-  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue opens 14 August 2026; final offer terms require exchange reconciliation", analysisAsOf: "14 August 2026",
+  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "14 August 2026",
   summary: "Skytech designs and executes industrial-automation systems and control panels using products from established automation vendors. FY25 revenue was nearly flat while EBITDA and PAT rose sharply, but receivables, customer concentration and project working capital also increased and operating cash covered only a fraction of profit. The issue is primarily a bet on funding larger EPC orders without losing margin or cash discipline.",
   business: [
     "The company designs, engineers, assembles, installs and supports turnkey automation systems, including PCC, MCC, PLC, VFD, APFC and control-desk panels that integrate controllers, drives, switchgear, sensors and actuators.",
     "Skytech is an authorised channel partner, distributor, integrator or solution provider for Mitsubishi Electric India, Endress+Hauser India, Exor India and Euroteck Environmental within defined product, territory and customer scopes.",
     "EPC contracts contributed 84.84% of FY25 revenue, product supply 10.03% and AMC or other services 5.14%. Promoters Paramashivam Deiveekan and Suma Deiveekan have led the Bengaluru-based company since its early operating period.",
   ],
-  issueNote: "The September 2025 DRHP proposed up to 29,46,000 fresh shares and no OFS, with ₹14.96 crore allocated to working capital. Marketed references indicate ₹77 per share, implying an approximately ₹22.68 crore maximum issue. The price, size and lot remain tentative until reconciled to the RHP, prospectus, allotment basis and NSE Emerge notices.",
+  issueNote: "NSE's current-issue feed confirms the issue is active from 14–18 August and reports 29,45,600 shares offered, matching the draft maximum after rounding convention. The September 2025 DRHP proposed an entirely fresh issue and ₹14.96 crore for working capital. Marketed references indicate ₹77 and approximately ₹22.68 crore; price, lot and final listing terms still require prospectus, allotment-basis and NSE Emerge reconciliation.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹77 fixed price (tentative)", lotSize: null, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "₹14.96 crore in the DRHP, split across FY26 and FY27" },
@@ -1421,6 +1422,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Skytech Infinite investor-relations page", href: "https://skytechinfinite.com/investor-relation/", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
     { label: "Finshore offer-document repository", href: "https://www.finshoregroup.com/downloads/ipo", kind: "Primary" },
+    { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/market-data/all-upcoming-issues-ipo", kind: "Primary" },
     { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
   ],
 }, {
