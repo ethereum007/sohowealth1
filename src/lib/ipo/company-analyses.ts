@@ -1433,8 +1433,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "ENS also reports proprietary SaaS products with subscription revenue. The economic quality depends on the disclosed split between recurring product subscriptions and one-time implementation, engineering, marketing or project revenue.",
     "The company says it serves clients across India and overseas with a team of about 140 professionals. Promoters are Manish Kumar Srivastava, Avinash Kumar Singh and Anupam Kumar Srivastava; Manish Srivastava also serves as CFO, concentrating operating and financial oversight.",
   ],
-  issueNote: "The August 2026 RHP provides for up to 36,02,400 fresh shares and no OFS. Marketed terms indicate a ₹92 issue price and ₹33.14 crore offer, consistent with the maximum share count. Final issued shares, market-maker reservation, lot and allotment remain subject to the prospectus and BSE notices.",
-  issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final BSE SME notice pending", priceBand: "₹92 fixed price", lotSize: null, totalCr: 33.14, freshCr: 33.14, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. At the cap, the maximum offer is approximately ₹33.14 crore. Final issue price, issued shares, allotment and listing remain subject to the prospectus and BSE notices.",
+  issue: { open: "14 August 2026", close: "18 August 2026", listing: "21 August 2026 (proposed in RHP)", priceBand: "₹87–₹92", lotSize: 2400, totalCr: 33.14, freshCr: 33.14, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Enhancement, maintenance and upgrade of existing products through manpower hiring", amount: "₹17.02 crore" },
     { purpose: "Upgrade of information-technology infrastructure", amount: "₹6.75 crore" },
@@ -1477,7 +1477,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoter/CFO concentration, related-party transactions, cyber incidents, contingent liabilities and BSE SME liquidity.",
   ],
   valuation: [
-    "Published prospectus-derived calculations indicate approximately 14.9× FY26 earnings at ₹92. The multiple should be checked against final post-issue shares and audited EPS.",
+    "Published prospectus-derived calculations indicate approximately 14.9× FY26 earnings at the ₹92 cap. The multiple should be checked against the final issue price, post-issue shares and audited EPS.",
     "RHP peers such as ASM Technologies, InfoBeans and Silver Touch differ in scale, offshore mix, recurring revenue, service lines and cash conversion. SaaS product companies are even less directly comparable.",
     "A normalized valuation should discount growth that requires rising receivables, investments or borrowing and separately value recurring SaaS only when retention and product revenue are disclosed.",
   ],
