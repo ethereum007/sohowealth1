@@ -1165,6 +1165,69 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Fascinate financial report", href: "https://www.ipoplatform.com/ipo/financial-report/fascinate-textiles-ipo/4349", kind: "Secondary" },
     { label: "HDFC Sky DRHP summary and proceeds", href: "https://hdfcsky.com/news/fascinate-textiles-files-drhp-for-nse-emerge-ipo", kind: "Secondary" },
   ],
+}, {
+  slug: "qt-foods-ipo", company: "Q&T Foods", market: "SME", sector: "Fresh bakery products", status: "Issue closes 14 August 2026", analysisAsOf: "14 August 2026",
+  summary: "Q&T Foods manufactures bread, buns, pav, kulcha and pizza bases under the American Bakers brand, primarily for Uttar Pradesh. Revenue and margins improved through FY25, but leverage remained high, fresh bakery has short shelf life and route-density economics, and the issue-funded machinery and working capital must translate into cash rather than only higher receivables and inventory.",
+  business: [
+    "The company makes savoury bakery products including milk, white, multigrain and brown bread, pav, burger buns, kulcha and pizza bases under the American Bakers brand.",
+    "Q&T relocated to a manufacturing facility at Dasna, Ghaziabad in 2024. It distributes primarily in Uttar Pradesh through a network described as more than 50 dealers, making production scheduling, freshness, returns and delivery-route density central to economics.",
+    "The company was incorporated in 2018 and converted to a public company in 2024. Nishant Raj Gupta is identified as a promoter and leads corporate strategy; promoter concentration and the short public-company track record require ongoing governance checks.",
+  ],
+  issueNote: "The calendar reflects marketed data of a ₹24.92 crore fixed-price issue at ₹115. The June 2026 draft authorized up to 23 lakh fresh shares but did not contain the final issue price or final issued share count. The prospectus, basis of allotment and BSE SME notices should control the exact structure.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Final BSE notice pending", priceBand: "₹115 fixed price", lotSize: null, totalCr: 24.92, freshCr: 24.92, ofsCr: 0, faceValue: "₹10" },
+  useOfProceeds: [
+    { purpose: "Equipment and machinery for the existing manufacturing facility", amount: "₹4.42 crore" },
+    { purpose: "Part-finance working-capital requirements", amount: "₹7.50 crore" },
+    { purpose: "Repayment or prepayment of identified borrowings", amount: "₹6.75 crore" },
+    { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds" },
+  ],
+  financials: [
+    { year: "FY23", revenueCr: 36.85, ebitdaCr: 0.83, patCr: 0.05, netWorthCr: 0.48, borrowingsCr: 5.34, assetsCr: 9.02 },
+    { year: "FY24", revenueCr: 40.22, ebitdaCr: 3.77, patCr: 1.96, netWorthCr: 2.44, borrowingsCr: 9.84, assetsCr: 14.34 },
+    { year: "FY25", revenueCr: 46.83, ebitdaCr: 4.82, patCr: 2.74, netWorthCr: 7.03, borrowingsCr: 10.10, assetsCr: 19.68 },
+  ],
+  metrics: [
+    { label: "FY23–FY25 revenue CAGR", value: "12.7%", context: "Derived from revenue from operations of ₹36.85 crore and ₹46.83 crore." },
+    { label: "FY25 EBITDA margin", value: "10.3%", context: "Up from 2.3% in FY23; based on the corrected KPI announcement." },
+    { label: "FY25 PAT margin", value: "5.8%", context: "PAT rose to ₹2.74 crore from ₹0.05 crore in FY23." },
+    { label: "FY25 debt/equity", value: "1.44×", context: "Borrowings of ₹10.10 crore remained above reported net worth." },
+  ],
+  strengths: [
+    "Bread and everyday bakery products can provide frequent repeat purchases when freshness, availability and dealer economics are maintained.",
+    "Revenue increased across FY23–FY25, while EBITDA margin expanded to 10.3% from 2.3% and PAT improved materially.",
+    "The issue is entirely fresh capital and allocates ₹6.75 crore to debt repayment, which could reduce finance cost and balance-sheet risk.",
+    "The machinery and working-capital allocations could support higher throughput at the relocated Dasna facility if distribution expands without elevated product returns.",
+  ],
+  concerns: [
+    "Fresh bread has limited shelf life. Forecasting errors, retailer returns, wastage and weak route density can reduce realized margins even when factory output rises.",
+    "Borrowings increased from ₹5.34 crore in FY23 to ₹10.10 crore in FY25. The disclosed repayment is material, but actual post-issue debt and released collateral need confirmation.",
+    "Flour, edible oil, sugar, yeast, packaging and fuel costs can move quickly, while regional competition and consumer price sensitivity may delay pass-through.",
+    "The company is geographically concentrated in Uttar Pradesh and operates from one principal facility, exposing it to local disruption and limiting brand diversification.",
+    "Food contamination, allergen or labelling failures, failed quality tests and product recalls can cause direct cost, regulatory action and brand damage.",
+    "The ₹7.50 crore working-capital allocation exceeds twice FY25 PAT. Dealer credit, inventory and supplier advances can absorb cash as the route network expands.",
+    "FY23 profitability was close to break-even and the margin history is short. FY25 performance has not yet been demonstrated across a long commodity or demand cycle.",
+    "BSE SME shares can have limited liquidity, large minimum tradable lots, market-maker dependence and wide bid-ask spreads.",
+  ],
+  monitor: [
+    "Sales by product, district and dealer; route productivity, product returns, wastage and shelf-life performance.",
+    "Capacity, utilisation and commissioning of the ₹4.42 crore machinery programme at Dasna.",
+    "Gross and EBITDA margins versus flour, oil, sugar, packaging, labour, electricity and distribution costs.",
+    "Operating cash flow, receivable and inventory days, dealer credit and use of the ₹7.50 crore working-capital allocation.",
+    "Actual debt repayment, finance costs, security release and post-issue debt/equity.",
+    "FSSAI and food-safety compliance, recalls, related-party transactions and BSE SME liquidity.",
+  ],
+  valuation: [
+    "A final offer P/E requires the exact post-issue share count and final prospectus EPS. The page therefore does not infer a definitive multiple from the draft's maximum share authorization.",
+    "Mrs. Bectors and other listed bakery or packaged-food businesses operate at much larger scale with broader brands, institutional channels and geography. Their multiples are not directly transferable to a regional SME bakery.",
+    "The valuation case should be tested on post-wastage cash margins and return on the new machinery after working capital, not revenue growth or factory capacity alone.",
+  ],
+  sources: [
+    { label: "Q&T Foods corporate and investor website", href: "https://qtfoods.in/", kind: "Primary" },
+    { label: "Lead manager offer-document page", href: "https://corporatemakers.in/ipo-offer-documents.php", kind: "Primary" },
+    { label: "Q&T Foods corrected KPI public announcement", href: "https://nsearchives.nseindia.com/corporate/SGTL2008_12062026144006_IntimationofPreNewspaperAGM.pdf", kind: "Primary" },
+    { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "IPOPlatform Q&T offer and proceeds summary", href: "https://www.ipoplatform.com/ipo/qandt-foods-ipo/4693", kind: "Secondary" },
+  ],
 }];
 
 export const getCompanyIpoAnalysis = (slug: string) => companyIpoAnalyses.find((item) => item.slug === slug);
