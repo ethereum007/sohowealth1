@@ -694,14 +694,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "CRISIL rating rationale, June 2026", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/ShankeshJewellersLimited_June%2009_%202026_RR_393987.html", kind: "Secondary" },
   ],
 }, {
-  slug: "sunshine-pictures-ipo", company: "Sunshine Pictures", market: "Mainboard", sector: "Film, television and digital content production", status: "Issue scheduled to open 18 August 2026", analysisAsOf: "15 August 2026",
+  slug: "sunshine-pictures-ipo", company: "Sunshine Pictures", market: "Mainboard", sector: "Film, television and digital content production", status: "Issue scheduled to open 18 August 2026", analysisAsOf: "16 August 2026",
   summary: "Sunshine Pictures develops, produces, markets and distributes films and web series, with promoter Vipul Shah central to creative and commercial execution. Earnings are project-driven: revenue fell in FY25 and again in FY26 even as FY26 PAT recovered. Inventory and receivables absorbed cash, making slate concentration, rights ownership, release timing and cash conversion more informative than any single-year margin.",
   business: [
     "The company originates and develops scripts, produces films and digital series, markets content and monetises distribution and intellectual-property rights. Its catalogue includes projects such as Force, Holiday, the Commando franchise and The Kerala Story.",
-    "Revenue is recognised around delivery, licensing and exploitation of individual projects, making annual results lumpy. A successful title can create unusually high margins while delays, cost overruns or weak reception can shift or impair earnings.",
+    "Revenue is recognised around delivery, licensing and exploitation of individual projects, making annual results lumpy. The RHP says a content project can take roughly 15–30 months from development through release, so a successful title can create unusually high margins while delays, cost overruns or weak reception can shift or impair earnings.",
     "The model relies on studios, streaming platforms and independent distributors for commissioning, licensing and distribution. Economics depend on who funds production, which rights Sunshine retains, revenue-share terms and the duration and geography of licences.",
   ],
-  issueNote: "The final RHP dated 10 August confirms up to 78,37,191 shares: 48,00,034 fresh shares and 30,37,157 OFS shares sold by Vipul Shah and Shefali Shah. At the ₹360 cap, that implies approximately ₹172.80 crore fresh issue, ₹109.34 crore OFS and ₹282.14 crore total. NSE confirms ₹342–₹360 and bidding from 18–20 August; the advertised minimum lot is 41 shares.",
+  issueNote: "The final RHP dated 10 August confirms up to 78,37,191 shares: 48,00,034 fresh shares and 30,37,157 OFS shares sold by Vipul Shah and Shefali Shah. At the ₹360 cap, that implies approximately ₹172.80 crore fresh issue, ₹109.34 crore OFS and ₹282.14 crore total. BSE and NSE confirm ₹342–₹360 and bidding from 18–20 August; the 41-share lot requires ₹14,760 at the cap.",
   issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹342–₹360", lotSize: 41, totalCr: 282.14, freshCr: 172.8, ofsCr: 109.34, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Long-term working-capital requirements for content production", amount: "Up to ₹112.50 crore in the final RHP" },
@@ -718,6 +718,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "53.8%", context: "PAT was ₹40.02 crore; unusually high project economics should not be treated as a stable margin." },
     { label: "FY26 operating cash flow", value: "–₹33.21 Cr", context: "Inventory rose by ₹50.98 crore and trade receivables by ₹38.11 crore during the year." },
     { label: "FY26 debt/equity", value: "0.06×", context: "Borrowings were ₹9.09 crore, but production funding needs also appear through inventory, receivables and related-party facilities." },
+    { label: "FY26 top-five customers", value: "74.81%", context: "The largest customer contributed 26.87% and the top ten 87.76% of revenue." },
   ],
   strengths: [
     "Vipul Shah and the creative team have delivered commercially recognised films and franchises, supporting relationships with talent, studios and distributors.",
@@ -732,7 +733,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoter Vipul Shah is important to project selection, talent relationships and execution, creating key-person and succession risk.",
     "Rights may be sold, shared, licensed for limited periods or retained by different counterparties; headline title success does not necessarily translate into durable library cash flow for Sunshine.",
     "FY26 operating cash flow was negative ₹33.21 crore despite ₹40.02 crore PAT. Inventory increased to ₹75.06 crore and receivables to ₹66.51 crore, showing how accounting profit can be absorbed by the next production slate and delayed collection.",
-    "The OFS is approximately 39% of the issue. Vipul Shah offers up to 20,31,388 shares and Shefali Shah up to 10,05,769 shares, while the company receives no OFS proceeds.",
+    "The OFS is approximately 39% of the issue. Vipul Shah offers up to 20,31,388 shares and Shefali Shah up to 10,05,769 shares, worth approximately ₹73.13 crore and ₹36.21 crore at the cap; the company receives no OFS proceeds.",
+    "The RHP labels FY26 results standalone while the earlier periods were consolidated. Disposal or reclassification of an associate can reduce comparability in addition to normal content-slate volatility.",
   ],
   monitor: [
     "Project slate, contracted budgets, delivery dates and the share funded by customers versus Sunshine's own working capital.",
@@ -745,10 +747,13 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "A single-year P/E is particularly fragile for project-based studios. Revenue declined in FY25 and FY26 while PAT recovered in FY26, and cash conversion moved in the opposite direction; a multi-year normalized earnings and cash-flow base is more appropriate.",
     "The DRHP peer set includes Panorama Studios, Baweja Studios and Balaji Telefilms. Their content libraries, television exposure, production services, rights ownership, scale and recent hit cycles differ substantially.",
-    "The final valuation should reconcile the post-offer share count with FY26 restated RHP results and separately assess owned intellectual property, contracted slate obligations and working-capital requirements.",
+    "At the ₹360 cap, 3,11,48,784 post-fresh-issue shares imply an equity value of approximately ₹1,121.36 crore, or about 28.0× FY26 PAT of ₹40.02 crore. The lower 23.7× figure derived from the RHP's pre-issue FY26 EPS of ₹15.19 does not capture the full fresh-issue dilution.",
+    "A normalized valuation should separately assess owned intellectual property, contracted slate obligations, customer concentration and the working capital needed to fund the next 15–30-month production cycle.",
   ],
   sources: [
     { label: "Sunshine Pictures final RHP, 10 August 2026", href: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf", kind: "Primary" },
+    { label: "Sunshine Pictures official price-band advertisement", href: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/Financial-Express_Price-Band-Sunshine.pdf", kind: "Primary" },
+    { label: "BSE current public-issue feed", href: "https://api.bseindia.com/BseIndiaAPI/api/GetPublicIssue_par_updated/w?flag=1&status=&exchange=&ir_flag=", kind: "Primary" },
     { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
     { label: "SEBI filing page: Sunshine Pictures DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jan-2025/sunshine-pictures-limited-drhp_90683.html", kind: "Primary" },
     { label: "Sunshine Pictures DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_02012025220312_DRHPSunshine.pdf", kind: "Primary" },
@@ -1344,14 +1349,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
   ],
 }, {
-  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "15 August 2026",
+  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "16 August 2026",
   summary: "Credent is a B2B healthcare-operations provider combining temperature-sensitive diagnostic-sample logistics, workforce services, technology and an acquired diagnostics subsidiary. FY26 consolidated revenue reached ₹214.16 crore and PAT ₹18.45 crore, but operating cash flow was negative ₹6.62 crore while receivables and borrowings rose. The core analysis therefore turns on acquisition quality, customer retention, sample-chain execution and whether issue-funded working capital converts accounting growth into cash.",
   business: [
     "The group provides B2B healthcare logistics, including transportation of diagnostic samples, home collection and related field services, to laboratories, IVD and pharmaceutical companies, hospitals, clinics and other institutions.",
     "By 30 June 2026 Credent disclosed 97 commercial vehicles; the group also reported 2,530 associated laboratories at 31 March 2026 and a workforce of 6,338. Its operating model depends on route density, turnaround time, specialised packaging, temperature integrity and trained field staff.",
-    "Credent Healthcare Private Limited became a material subsidiary in April 2025 and wholly owned in October 2025, expanding the group into diagnostic and allied healthcare services. Promoters are Ashok Kumar Sharma, Karan Sharma, Tarun Sharma, Dimple Sharma and Tanveen.",
+    "Credent Healthcare became a material subsidiary on 2 April 2025 and wholly owned on 8 October 2025. Credent Team and Alltrak were acquired on 26 December 2025 and 26 February 2026, respectively, meaning three subsidiaries entered the FY26 group perimeter. Promoters are Ashok Kumar Sharma, Karan Sharma, Tarun Sharma, Dimple Sharma and Tanveen.",
   ],
-  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. Current offer data indicates a 600-share trading lot, while the RHP requires individual investors to apply for at least two lots, making the minimum bid 1,200 shares. The issuer page has not yet linked its separate opening advertisement, so price, bid lot and listing remain subject to the prospectus, allotment basis and NSE notices.",
+  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP requires individual investors to apply for at least two 600-share lots, making the minimum bid 1,200 shares and the cap-price application ₹2,26,800. NSE's 16 August feed still showed the issue active; allotment and listing remain subject to final notices.",
   issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 1200, totalCr: 93.90, freshCr: 93.90, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in Credent Healthcare for working capital", amount: "₹26.80 crore" },
@@ -1371,6 +1376,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "8.6%", context: "Compared with 2.9% in FY25; comparability is affected by consolidation and acquisitions." },
     { label: "FY26 debt/equity", value: "0.50×", context: "Borrowings rose to ₹21.95 crore from ₹7.41 crore at FY25." },
     { label: "FY26 operating cash flow", value: "-₹6.62 crore", context: "Negative despite ₹18.45 crore PAT as receivables and other working-capital balances absorbed cash." },
+    { label: "FY26 healthcare share", value: "43.04%", context: "Healthcare services contributed ₹92.18 crore after three subsidiaries entered the group perimeter during FY26." },
   ],
   strengths: [
     "Healthcare samples require time-sensitive, traceable logistics, creating specialised operating requirements beyond ordinary parcel delivery.",
@@ -1385,7 +1391,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The top customer contributed 15.76%, the top five 59.05% and the top ten 81.76% of FY26 revenue, leaving cash flow and route economics sensitive to a relatively concentrated client base.",
     "Customer contracts may be short term, renewable or without minimum-volume commitments. Loss, repricing or delayed payment by major diagnostic customers could impair fleet economics and cash conversion.",
     "Delayed, lost, contaminated or temperature-compromised samples can trigger retesting, claims, clinical consequences and reputational damage. Specialised packaging and consumable availability are operational dependencies.",
-    "The acquisition of Credent Healthcare creates purchase-price, integration and governance risk. Historic growth must be separated among organic logistics, acquired diagnostics and intra-group transactions.",
+    "Three subsidiaries entered the group perimeter during FY26. Purchase-price allocation, integration and governance risk therefore extend beyond Credent Healthcare; historic growth must be separated among organic logistics, acquired operations and intra-group transactions.",
     "The promoter family has roles across group entities. Opportunity allocation, service contracts, acquisitions, remuneration, guarantees and related-party balances deserve continued oversight.",
     "NSE Emerge shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
   ],
@@ -1407,19 +1413,19 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Credent Connect N Care March 2026 DRHP", href: "https://invtrade.choiceindia.com/IPO/IPOReport/INE1KPX01025-ipo-report.pdf", kind: "Primary" },
     { label: "Credent investor-relations and offer documents", href: "https://c3logistics.co.in/investor", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
-    { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/market-data/all-upcoming-issues-ipo", kind: "Primary" },
+    { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/api/ipo-current-issue", kind: "Primary" },
     { label: "IPOPlatform Credent filing and financial summary", href: "https://www.ipoplatform.com/Funding-news/credent-connect-n-care-limited", kind: "Secondary" },
     { label: "Choice Credent marketed offer summary", href: "https://choiceindia.com/ipo/credent-connect-n-care-ipo", kind: "Secondary" },
   ],
 }, {
-  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "15 August 2026",
+  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "16 August 2026",
   summary: "Skytech designs and executes industrial-automation systems and control panels using products from established automation vendors. FY26 revenue rose to ₹51.65 crore and PAT to ₹4.20 crore, but operating cash flow turned negative as receivables and inventory increased. The issue is primarily a bet on funding larger EPC orders without losing margin or cash discipline.",
   business: [
     "The company designs, engineers, assembles, installs and supports turnkey automation systems, including PCC, MCC, PLC, VFD, APFC and control-desk panels that integrate controllers, drives, switchgear, sensors and actuators.",
     "Skytech is an authorised channel partner, distributor, integrator or solution provider for Mitsubishi Electric India, Endress+Hauser India, Exor India and Euroteck Environmental within defined product, territory and customer scopes.",
     "EPC contracts contributed 79.90% of FY26 revenue, product supply 14.91% and AMC or other services 5.20%. Promoters Paramashivam Deiveekan and Suma Deiveekan have led the Bengaluru-based company since its early operating period.",
   ],
-  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement sets a ₹73–₹77 band and a minimum bid of 3,200 shares, with subsequent bids in multiples of 1,600. The full fresh issue is approximately ₹21.50–₹22.68 crore; final price, allotment and listing remain subject to the prospectus and NSE Emerge notices.",
+  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement sets a ₹73–₹77 band and a minimum bid of 3,200 shares, with subsequent bids in multiples of 1,600. That minimum application is ₹2,33,600–₹2,46,400. NSE's 16 August feed showed the issue active; final price, allotment and listing remain subject to NSE Emerge notices.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹73–₹77", lotSize: 3200, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "₹16.81 crore, split between FY27 and FY28" },
@@ -1454,6 +1460,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "EPC work carries design error, component availability, site delay, commissioning, warranty, liquidated-damages and cost-overrun risk. Fixed-price orders can compress margin when delivery slips.",
     "Authorised-partner arrangements may be changed or terminated, and vendor pricing, territories, warranties and product availability can affect competitive position.",
     "Government revenue rose to 21.37% of FY25 sales from 9.61% in FY24, increasing exposure to tender qualification, documentation, payment timing and policy decisions.",
+    "Promoters are expected to retain 70.01% after the issue, preserving control. Bank guarantees of approximately ₹0.91 crore are contingent obligations tied to contract execution.",
     "NSE Emerge shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads.",
   ],
   monitor: [
@@ -1465,7 +1472,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Related-party transactions, promoter dependence, contingent liabilities, warranties and NSE Emerge liquidity.",
   ],
   valuation: [
-    "At the ₹77 cap, 98,20,600 post-issue shares imply an equity value of approximately ₹75.62 crore, or about 18.0× FY26 PAT of ₹4.20 crore. The price advertisement's 12.59× cap-price P/E uses pre-issue diluted FY26 EPS of ₹6.12, so it does not capture the full fresh-issue dilution.",
+    "Across the ₹73–₹77 band, 98,20,600 post-issue shares imply an equity value of approximately ₹71.69–₹75.62 crore, or about 17.1–18.0× FY26 PAT of ₹4.20 crore. The price advertisement's 12.59× cap-price P/E uses pre-issue diluted FY26 EPS of ₹6.12, so it does not capture the full fresh-issue dilution.",
     "The DRHP identifies no directly comparable listed Indian company. Capital-goods and automation peers differ greatly in proprietary technology, product manufacturing, service annuities, customer scale and export exposure.",
     "A normalized valuation should test FY24-like margins, slower customer collections and the return generated on a working-capital base projected to expand much faster than recent revenue.",
   ],
@@ -1476,18 +1483,18 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Finshore offer-document repository", href: "https://www.finshoregroup.com/downloads/ipo", kind: "Primary" },
     { label: "Skytech Infinite 9 August 2026 RHP", href: "https://www.finshoregroup.com/assets/download_pdf/710182_RHP_Skytech_NSE.pdf", kind: "Primary" },
     { label: "Skytech Infinite official price advertisement", href: "https://www.finshoregroup.com/assets/download_pdf/250232_Adv_2_Skytech_Price_Band_Published.pdf", kind: "Primary" },
-    { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/market-data/all-upcoming-issues-ipo", kind: "Primary" },
+    { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/api/ipo-current-issue", kind: "Primary" },
     { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
   ],
 }, {
-  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "15 August 2026",
+  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "16 August 2026",
   summary: "ENS builds online-commerce platforms, ONDC integrations, software, mobile applications and cloud systems, alongside digital marketing and proprietary SaaS products. Revenue and margins expanded rapidly through FY26, but operating cash flow turned negative, top-ten customer concentration rose to 69%, financial investments absorbed cash and the company added short-term debt. The key question is how much growth is recurring, organic and cash-generative rather than project-led or working-capital funded.",
   business: [
     "The Noida-based company provides digital-commerce enablement and software services across online storefronts, ONDC integrations, custom software, mobile applications, cloud and DevOps and digital marketing.",
-    "ENS also reports proprietary SaaS products with subscription revenue. The economic quality depends on the disclosed split between recurring product subscriptions and one-time implementation, engineering, marketing or project revenue.",
+    "ENS describes proprietary SaaS products, but the RHP's service-wise table records no subscription-based revenue in FY24, FY25 or FY26. FY26 revenue was 76.82% one-time project fees and 23.18% recurring services, so the current economics remain service- and project-led rather than subscription-led.",
     "The company says it serves clients across India and overseas with a team of about 140 professionals. Promoters are Manish Kumar Srivastava, Avinash Kumar Singh and Anupam Kumar Srivastava; Manish Srivastava also serves as CFO, concentrating operating and financial oversight.",
   ],
-  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. At the cap, the gross offer is approximately ₹33.14 crore and the net public issue ₹31.47 crore; final issue price, issued shares, allotment and listing remain subject to the prospectus and BSE notices.",
+  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. The minimum application is ₹2,08,800–₹2,20,800. BSE's 16 August feed showed the issue live; at the cap the gross offer is approximately ₹33.14 crore and the net public issue ₹31.47 crore.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "21 August 2026 (proposed in RHP)", priceBand: "₹87–₹92", lotSize: 2400, totalCr: 33.14, freshCr: 33.14, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Enhancement, maintenance and upgrade of existing products through manpower hiring", amount: "₹17.02 crore" },
@@ -1505,11 +1512,12 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "22.8%", context: "Up from 13.7% in FY24 as reported scale increased." },
     { label: "FY26 PAT margin", value: "16.4%", context: "PAT rose to ₹8.40 crore from ₹0.90 crore in FY24." },
     { label: "FY26 operating cash flow", value: "-₹1.10 crore", context: "Negative despite ₹8.40 crore PAT, after positive ₹2.50 crore in FY25." },
+    { label: "FY26 revenue model", value: "76.82% project", context: "Recurring services were 23.18%; the RHP records nil subscription-based revenue for FY24–FY26." },
   ],
   strengths: [
     "ENS addresses digital-commerce, ONDC, mobile and cloud implementation needs through an integrated engineering and marketing portfolio.",
     "Revenue more than quintupled between FY24 and FY26, while EBITDA margin expanded from 13.7% to 22.8% and PAT margin to 16.4%.",
-    "Proprietary SaaS products may add recurring revenue and operating leverage if retention, annual recurring revenue and product-level economics substantiate the positioning.",
+    "Recurring service revenue improved to 23.18% of FY26 revenue from 16.68% in FY25, although the RHP records no subscription-based revenue in either period.",
     "The entirely fresh issue allocates most proceeds to technical manpower and IT infrastructure, with no cash paid to selling shareholders.",
   ],
   concerns: [
@@ -1517,13 +1525,13 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Top-ten customers generated 69.17% of FY26 revenue, up from 60.12% in FY25. Individual contracts, renewals, project completion and payment delays can materially affect results.",
     "The RHP cash-flow statement shows ₹6.05 crore invested in shares in FY26 and ₹2.50 crore of inter-corporate deposits in FY25. Treasury allocation, counterparties, liquidity and related-party status require scrutiny.",
     "Short-term borrowings rose to ₹3.97 crore in FY26 after nil reported debt in FY24 and FY25, even as revenue and accounting profit increased.",
-    "The company groups SaaS with project engineering, commerce implementation and digital marketing. Without recurring-revenue, churn, contract-duration and product contribution data, a software-product multiple may be misleading.",
+    "The RHP records no subscription-based revenue in FY24–FY26 despite the proprietary-product narrative. Without product revenue, churn, contract duration and retention data, a software-product multiple would be misleading.",
     "Hiring funded by ₹17.02 crore of proceeds creates utilisation risk: employee costs arrive before project wins, product adoption and customer collections.",
     "Technology services face talent attrition, wage inflation, delivery delays, cyber incidents, data-privacy obligations, open-source licensing and intellectual-property disputes.",
     "BSE SME shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
   ],
   monitor: [
-    "Revenue and gross margin split among SaaS subscriptions, implementation, custom engineering, ONDC, cloud and digital marketing.",
+    "Revenue and gross margin split among one-time projects, recurring services and any future SaaS subscriptions, including whether product revenue moves above nil.",
     "Annual recurring revenue, customer churn, net retention, subscription contract length and product-development capitalisation.",
     "Top-customer concentration, contract renewals, unbilled revenue, receivable ageing and operating cash conversion.",
     "Hiring pace, billable utilisation, employee attrition and revenue generated per technical employee from the ₹17.02 crore programme.",
@@ -1531,7 +1539,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoter/CFO concentration, related-party transactions, cyber incidents, contingent liabilities and BSE SME liquidity.",
   ],
   valuation: [
-    "At the ₹92 cap, 1,35,94,912 post-issue shares imply an equity value of approximately ₹125.07 crore, or about 14.9× FY26 PAT of ₹8.40 crore. That headline multiple depends on the latest year's exceptional growth being durable and cash-generative.",
+    "Across the ₹87–₹92 band, 1,35,94,912 post-issue shares imply an equity value of approximately ₹118.28–₹125.07 crore, or about 14.1–14.9× FY26 PAT of ₹8.40 crore. That headline multiple depends on the latest year's exceptional growth being durable and cash-generative.",
     "RHP peers such as ASM Technologies, InfoBeans and Silver Touch differ in scale, offshore mix, recurring revenue, service lines and cash conversion. SaaS product companies are even less directly comparable.",
     "A normalized valuation should discount growth that requires rising receivables, investments or borrowing and separately value recurring SaaS only when retention and product revenue are disclosed.",
   ],
@@ -1540,6 +1548,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "ENS Enterprises investor page", href: "https://www.ens.enterprises/investors-old/", kind: "Primary" },
     { label: "Corporate Makers offer-document repository", href: "https://corporatemakers.in/ipo-offer-documents.php", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
+    { label: "BSE current public-issue feed", href: "https://api.bseindia.com/BseIndiaAPI/api/GetPublicIssue_par_updated/w?flag=1&status=&exchange=&ir_flag=", kind: "Primary" },
     { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
   ],
 }, {
