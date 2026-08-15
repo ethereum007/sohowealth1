@@ -1120,20 +1120,21 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Kotak Neo Sham Foam DRHP summary", href: "https://www.kotakneo.com/ipo/sham-foam-ipo/", kind: "Secondary" },
   ],
 }, {
-  slug: "fascinate-textiles-ipo", company: "Fascinate Textiles", market: "SME", sector: "Readymade garment manufacturing", status: "Issue active; scheduled to close 19 August 2026", analysisAsOf: "14 August 2026",
+  slug: "fascinate-textiles-ipo", company: "Fascinate Textiles", market: "SME", sector: "Readymade garment manufacturing", status: "Issue active; NSE feed shows extended close on 19 August 2026", analysisAsOf: "15 August 2026",
   summary: "Fascinate Textiles manufactures knit and woven garments, with a focus on children's apparel, from West Bengal. Disclosures show FY25 revenue more than doubled and profit rose exceptionally, but debt, working capital and customer concentration also increased. Material differences across draft, addendum and market summaries make document reconciliation a core part of the analysis rather than a footnote.",
   business: [
     "The company manufactures menswear, womenswear and children's garments, with cutting, printing, stitching, finishing, design and merchandising activities described at its Barasat facility.",
     "Fascinate was incorporated in 2017 and says it manufactures against confirmed orders. This may limit finished-goods risk, but it does not remove receivable, raw-material inventory, customer cancellation or outsourced-production risk.",
     "Promoters include Rishabh Nahar, Chirag Ahuja, Vishal Nahar, Vishal Nahar HUF and Narinder Kumar Ahuja. The company converted to public status in 2025, leaving a short public-governance track record.",
   ],
-  issueNote: "NSE's official current-issue feed confirms an 11 August opening, 19 August closing and 42,93,600 shares offered, superseding the aggregator's earlier 13 August closing date. Marketed data indicate ₹63.62 crore at ₹148–₹156, while different public document versions contain differing profit, capacity and offer figures. Price, lot, final structure and listing terms should be reconciled to the prospectus, addenda, allotment basis and NSE Emerge notices.",
-  issue: { open: "11 August 2026", close: "19 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹148–₹156", lotSize: null, totalCr: 63.62, freshCr: 63.62, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The 23 July RHP confirms up to 42,93,600 shares: 34,57,600 fresh shares and an 8,36,000-share OFS by promoter-group shareholder Neetu Nahar, including a 2,15,200-share market-maker reservation. At the marketed ₹156 cap, the full offer is approximately ₹66.98 crore, comprising approximately ₹53.94 crore fresh and ₹13.04 crore OFS. The RHP's original 13 August close was superseded by NSE's current-issue feed showing 19 August; final exchange and allotment notices remain controlling.",
+  issue: { open: "11 August 2026", close: "19 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹148–₹156", lotSize: 1600, totalCr: 66.98, freshCr: 53.94, ofsCr: 13.04, faceValue: "₹10" },
   useOfProceeds: [
-    { purpose: "Additional manufacturing facility", amount: "Draft allocation: ₹12.40 crore" },
-    { purpose: "Working-capital requirements", amount: "Draft allocation: ₹19.03 crore" },
-    { purpose: "Repayment or prepayment of secured and unsecured loans", amount: "Draft allocation: ₹2.68 crore" },
-    { purpose: "General corporate purposes and offer expenses", amount: "Balance; reconcile with final RHP" },
+    { purpose: "Additional manufacturing facility", amount: "₹12.35 crore from proceeds; estimated project cost ₹12.50 crore" },
+    { purpose: "Incremental working-capital requirements", amount: "₹25.15 crore for FY27" },
+    { purpose: "Repayment or prepayment of secured and unsecured loans", amount: "₹2.68 crore" },
+    { purpose: "Offer for sale", amount: "Approximately ₹13.04 crore at the cap to Neetu Nahar; the company receives no OFS proceeds" },
+    { purpose: "General corporate purposes and offer expenses", amount: "Balance within regulatory limits" },
   ],
   financials: [
     { year: "FY23", revenueCr: 21.85, ebitdaCr: 1.07, patCr: 0.47, netWorthCr: 2.72, borrowingsCr: 6.41, assetsCr: 15.76 },
@@ -1145,6 +1146,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY25 PAT margin", value: "13.4%", context: "Some earlier disclosures reported a lower FY25 PAT; final restated schedules should control." },
     { label: "FY25 debt/equity", value: "1.74×", context: "Borrowings increased to ₹18.20 crore from ₹6.41 crore in FY23." },
     { label: "Top-ten customer share", value: "93.22%", context: "FY25 share disclosed in the DRHP, down from 99.35% in FY24 but still exceptionally concentrated." },
+    { label: "FY26 net working capital", value: "₹51.08 Cr", context: "Up from ₹22.24 crore in FY25; the RHP reports a 146-day working-capital cycle." },
+    { label: "FY26 inventory / receivables", value: "₹48.13 Cr / ₹35.28 Cr", context: "Both increased sharply as the RHP-reported total income rose to ₹117.23 crore." },
   ],
   strengths: [
     "Reported FY25 revenue of ₹60.24 crore was more than twice FY24 revenue, with a much larger increase in EBITDA and PAT.",
@@ -1165,7 +1168,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   monitor: [
     "Final RHP, addenda and NSE correspondence reconciling FY25 profit, operating capacity, product classification, issue size and dates.",
     "Top-five and top-ten customers, order cancellations, repeat business and receivable ageing by major buyer.",
-    "Operating cash flow, inventory and receivable days, debt and use of the ₹19.03 crore working-capital allocation.",
+    "Operating cash flow, the 146-day FY26 working-capital cycle, inventory and receivable days, debt and use of the ₹25.15 crore working-capital allocation.",
     "Actual in-house production versus job work or traded goods, by product category and revenue contribution.",
     "New-facility land rights, commissioning, installed capacity, utilisation, employee count and capital cost.",
     "Related-party transactions, auditor observations, contingent liabilities and NSE Emerge liquidity.",
@@ -1178,6 +1181,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   sources: [
     { label: "Fascinate Textiles IPO page", href: "https://fascinatetextile.com/initial-public-offer/", kind: "Primary" },
     { label: "Fascinate Textiles DRHP hosted by lead manager", href: "https://www.affinityglobalcap.in/img/pdf/sme/facinate/DRHP.pdf", kind: "Primary" },
+    { label: "Fascinate Textiles 23 July 2026 RHP", href: "https://fascinatetextile.com/wp-content/uploads/2026/08/Fascinate_RHP.pdf", kind: "Primary" },
+    { label: "Fascinate Textiles issuer addendum", href: "https://fascinatetextile.com/wp-content/uploads/2026/08/Addendum_Linked.pdf", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
     { label: "IPOPlatform Fascinate financial report", href: "https://www.ipoplatform.com/ipo/financial-report/fascinate-textiles-ipo/4349", kind: "Secondary" },
     { label: "HDFC Sky DRHP summary and proceeds", href: "https://hdfcsky.com/news/fascinate-textiles-files-drhp-for-nse-emerge-ipo", kind: "Secondary" },
