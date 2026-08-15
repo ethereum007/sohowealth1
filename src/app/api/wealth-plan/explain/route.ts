@@ -1,13 +1,26 @@
 import { NextResponse } from "next/server";
+import { z } from "zod";
 
-const ALLOWED_KEYS = new Set(["goal", "horizonYears", "risk", "target", "projected", "monthlyInvestment", "requiredSip", "sipStepUpPct", "fundingRatioPct", "downsideRatioPct"]);
+const requestSchema = z.object({
+  goal: z.enum(["retirement", "education", "home", "wealth"]),
+  horizonYears: z.number().min(1).max(50),
+  risk: z.enum(["conservative", "balanced", "growth"]),
+  target: z.number().nonnegative().max(1e12),
+  projected: z.number().nonnegative().max(1e12),
+  monthlyInvestment: z.number().nonnegative().max(1e9),
+  requiredSip: z.number().nonnegative().max(1e9),
+  sipStepUpPct: z.number().min(0).max(30),
+  fundingRatioPct: z.number().min(0).max(10000),
+  downsideRatioPct: z.number().min(0).max(10000),
+}).strict();
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json() as Record<string, unknown>;
-    if (Object.keys(body).some((key) => !ALLOWED_KEYS.has(key))) {
+    const parsed = requestSchema.safeParse(await request.json());
+    if (!parsed.success) {
       return NextResponse.json({ error: "Only non-identifying planning fields are accepted" }, { status: 400 });
     }
+    const body = parsed.data;
     const apiKey = process.env.ANTHROPIC_API_KEY;
     if (!apiKey) return NextResponse.json({ explanation: null, mode: "deterministic" });
 
