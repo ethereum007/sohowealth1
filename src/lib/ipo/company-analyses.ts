@@ -503,7 +503,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Gold jewellery contributed 92.33% of FY26 revenue from operations. The company also runs jewellery purchase schemes that collect customer advances before redemption; these aid retention and funding but create substantial fulfilment and liquidity obligations.",
     "Two manufacturing facilities support its retail network, while procurement remains concentrated: the top three raw-material suppliers accounted for 58.03% of FY26 purchases.",
   ],
-  issueNote: "The final RHP dated 9 August and price-band advertisement confirm a ₹1,700 crore offer: ₹1,200 crore fresh issue plus ₹500 crore promoter OFS, a ₹190–₹201 band and a 74-share minimum lot. The minimum application at the cap is ₹14,874. An employee reservation of up to ₹6 crore carries a discount of up to 10%. NSE's 16 August feed shows 6,27,61,403 shares for public bidding after the 14 August anchor allocation; that post-anchor pool does not replace the original gross offer size.",
+  issueNote: "The final RHP dated 9 August and price-band advertisement confirm a ₹1,700 crore offer: ₹1,200 crore fresh issue plus ₹500 crore promoter OFS, a ₹190–₹201 band and a 74-share minimum lot. The minimum application at the cap is ₹14,874. An employee reservation of up to ₹6 crore carries a discount of up to 10%. The Regulation 6(1) offer makes up to 50% of the net offer available to QIBs, at least 15% to non-institutional bidders and at least 35% to retail bidders. NSE's 16 August feed shows 6,27,61,403 shares for public bidding after the 14 August anchor allocation; that post-anchor pool does not replace the original gross offer size.",
   issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹190–₹201", lotSize: 74, totalCr: 1700, freshCr: 1200, ofsCr: 500, faceValue: "₹5" },
   useOfProceeds: [
     { purpose: "Inventory for 10 new stores", amount: "₹998.68 crore" },
@@ -521,6 +521,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "6.69%", context: "Up from 4.38% in FY25; FY26 PAT margin also rose to 4.04%." },
     { label: "FY26 operating cash flow", value: "−₹397.76 crore", context: "Accounting profit of ₹1,009.82 crore did not convert to operating cash as inventory and working capital expanded." },
     { label: "Working-capital days", value: "65 days", context: "Up from 56 days in FY25 and 50 days in FY24; inventory turnover fell to 2.55×." },
+    { label: "Indicative post-offer promoter holding", value: "≈82.1–82.8%", context: "Derived across the price band from the fresh issue, ₹500 crore promoter OFS and disclosed pre-offer shareholding; the employee discount can cause a small variation." },
     { label: "Upper-band diluted P/E", value: "≈11.1×", context: "Approximation using FY26 PAT and post-fresh-issue shares at ₹201; final allotment may make a small difference." },
   ],
   strengths: [
@@ -537,6 +538,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The RHP reports six company tax proceedings involving ₹56.04 crore and one criminal plus seven tax proceedings involving promoters, with promoter tax exposure of ₹27.02 crore. Outcomes remain uncertain.",
     "SEBI had issued summons to promoter M. Kiran Kumar Jain in 2022 in connection with Krishana Fabrics; the RHP says no further communication or action had been received as of its date.",
     "A prior related-party brand-ambassador fee reached ₹50.28 crore in FY24. Although the arrangement ended, promoter remuneration and related-party governance warrant continued review.",
+    "Promoters are expected to retain roughly 82–83% after the offer. That preserves operating continuity but leaves public shareholders with limited influence over board appointments, related-party approvals and capital allocation.",
   ],
   monitor: [
     "Opening and ramp-up of the 10 funded stores, inventory deployed per store, breakeven time and mature versus new-store productivity.",
@@ -571,7 +573,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Fulfilment centres, industrial facilities and in-city centres accounted for 16.34, 11.42 and 0.79 million operational square feet respectively. The company also offers built-to-suit facilities, cold storage, energy solutions and fitted infrastructure.",
     "The portfolio was assembled through project subsidiaries and acquisitions: 35 of 45 assets were acquired during or after FY25. Proforma financials illustrate the enlarged platform but do not represent an uninterrupted reported ownership history.",
   ],
-  issueNote: "The final RHP dated 11 August and price-band advertisement confirm an entirely fresh ₹2,600 crore issue with no OFS, a ₹57–₹60 band and 250-share lot; the minimum application at the cap is ₹15,000. At ₹60, the gross offer is up to 43,34,09,090 shares including the employee reservation and ₹5 discount. NSE's 16 August feed shows a post-anchor public bid pool of 25,13,56,273 shares, which is not the gross offer. ₹2,250 crore is earmarked for repayment or prepayment of company and subsidiary borrowings.",
+  issueNote: "The final RHP dated 11 August and price-band advertisement confirm an entirely fresh ₹2,600 crore issue with no OFS, a ₹57–₹60 band and 250-share lot; the minimum application at the cap is ₹15,000. At ₹60, the gross offer is up to 43,34,09,090 shares including the employee reservation and ₹5 discount. The Regulation 6(2) structure allocates at least 75% of the net issue to QIBs, no more than 15% to non-institutional bidders and no more than 10% to retail bidders. NSE's 16 August feed shows a post-anchor public bid pool of 25,13,56,273 shares, which is not the gross offer. ₹2,250 crore is earmarked for repayment or prepayment of company and subsidiary borrowings.",
   issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹57–₹60", lotSize: 250, totalCr: 2600, freshCr: 2600, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings of the company and identified subsidiaries", amount: "₹2,250 crore" },
@@ -587,6 +589,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "79.16%", context: "RHP KPI based on EBITDA divided by total income; depreciation and finance costs still produced a ₹203.65 crore loss." },
     { label: "FY26 operating cash flow", value: "₹464.07 crore", context: "Positive operating cash was dwarfed by ₹4,872.84 crore of investing outflow during the acquisition and development phase." },
     { label: "Post-repayment borrowings", value: "₹4,634.34 crore", context: "RHP price ad illustrates total FY26 borrowings after the proposed ₹2,250 crore repayment, before subsequent balance-sheet movements." },
+    { label: "Illustrative post-issue debt/equity", value: "0.55×", context: "Official price-ad bridge, down from 1.18× pre-issue; net external debt falls from ₹4,242.22 crore to ₹1,992.22 crore on the disclosed assumptions." },
     { label: "Committed occupancy", value: "93.56%", context: "Across 28.55 million operational square feet as of 31 May 2026." },
     { label: "Upper-band EV/EBITDA", value: "31.16×", context: "Official price-ad calculation on restated FY26 EBITDA; proforma EV/EBITDA was 31.31×." },
   ],
@@ -599,6 +602,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   concerns: [
     "Horizon reported losses in FY24, FY25 and FY26 on both restated and proforma bases because depreciation and finance costs outweighed property-level earnings.",
     "FY26 borrowings were ₹6,884.34 crore. The RHP illustrates ₹4,634.34 crore after repayment, so leverage remains substantial even after using most of the issue proceeds.",
+    "FY26 capital expenditure on investment property, plant, work-in-progress and asset acquisitions was ₹1,569.77 crore. Debt reduction does not eliminate the future funding requirement of a development- and acquisition-led platform.",
     "Expansion has relied on acquisitions, project subsidiaries and proforma consolidation. Investors must reconcile statutory, proforma and final-RHP figures before comparing growth or margins.",
     "Warehouse valuations are sensitive to occupancy, lease renewals, rent escalation, capitalisation rates, interest rates and residual development capex.",
     "Delhi-NCR, Chennai, Bengaluru and Pune contributed 79% of FY26 restated revenue, creating corridor concentration despite the national footprint.",
@@ -634,8 +638,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company supplies bangles, bridal jewellery, necklaces, chokers, earrings, mangalsutras and rings to B2B customers across India. Customers include large jewellery chains as well as non-corporate retailers.",
     "Manufacturing is outsourced to artisans and job workers while Shankesh manages design, customization, bullion sourcing, quality control and delivery. This limits fixed manufacturing assets but creates third-party capacity, craftsmanship, labour-compliance and quality risks.",
     "Revenue comes from direct sale of finished jewellery and job-work arrangements where customers provide bullion. Revenue, gross margin and working-capital intensity differ materially between these routes, so gold processed and product mix matter alongside headline sales.",
+    "Corporate clients contributed 64.25% of FY26 revenue from operations, up from 55.80% in FY25. The disclosed customer set includes organised chains, making sell-through and procurement decisions at large retailers relevant to Shankesh's order flow.",
   ],
-  issueNote: "The 10 August RHP confirms 3,94,82,000 shares: 2,94,82,000 fresh shares and 1,00,00,000 OFS shares sold by promoters Kantilal Kheemraj Jain and Manoj Kantilal Jain. It leaves the price band and lot to a separate advertisement; NSE's 16 August upcoming-issue feed supplies the marketed ₹88–₹93 band and 18–20 August bidding, while the current marketed minimum is 160 shares (₹14,880 at the cap). At ₹93, the offer is approximately ₹367.18 crore, split into ₹274.18 crore fresh and ₹93 crore OFS. An issuer-hosted separate price advertisement had not been located as of this analysis date.",
+  issueNote: "The 10 August RHP and the official 11 August price-band advertisement confirm 3,94,82,000 shares: 2,94,82,000 fresh shares and 1,00,00,000 OFS shares sold by promoters Kantilal Kheemraj Jain and Manoj Kantilal Jain. The ₹88–₹93 band, 160-share lot and 18–20 August bidding are now primary-source verified; the minimum application at the cap is ₹14,880. At ₹93, the offer is approximately ₹367.18 crore, split into ₹274.18 crore fresh and ₹93 crore OFS. Anchor bidding is scheduled for 17 August, one working day before the public offer.",
   issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹88–₹93", lotSize: 160, totalCr: 367.18, freshCr: 274.18, ofsCr: 93, faceValue: "₹5" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹158 crore" },
@@ -653,6 +658,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "6.54%", context: "PAT rose 164.6% to ₹106.68 crore while revenue increased 16.2%." },
     { label: "FY26 operating cash flow", value: "₹0.33 crore", context: "Only a fraction of FY26 PAT converted to operating cash; FY25 operating cash flow was negative ₹23.11 crore." },
     { label: "Core working-capital days", value: "81.33 days", context: "Up from 62.35 days in FY25 and 58.85 days in FY24." },
+    { label: "FY26 product returns", value: "7.22% of revenue", context: "₹117.76 crore, up from 5.23% in FY25 and 4.36% in FY24; this is a quality, rework and cash-conversion indicator." },
     { label: "Upper-band diluted P/E", value: "12.82×", context: "Based on 14.7032 crore post-offer shares, ₹93 and FY26 PAT of ₹106.68 crore." },
   ],
   strengths: [
@@ -668,7 +674,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "All manufacturing is outsourced to artisans and job workers, exposing the company to capacity shortages, labour practices, theft, quality defects and delivery delays.",
     "The top 10 customers contributed 39.56% of FY26 revenue and the top five states 67.84%, creating customer and geographic concentration.",
     "Two promoter shareholders are selling shares while the company is also raising funds to repay debt; post-issue holdings and related-party balances require review.",
-    "Customer product returns rose to ₹117.76 crore in FY26 from ₹73.40 crore in FY25, creating quality, rework and cash-flow risk.",
+    "Customer product returns rose to ₹117.76 crore, or 7.22% of FY26 revenue, from 5.23% in FY25 and 4.36% in FY24, creating increasing quality, rework and cash-flow risk.",
+    "The official price-band advertisement states a 13.90% weighted-average RoNW, while the separately published basis-of-offer-price table derives 42.37% from FY24–FY26 RoNW of 21.26%, 40.07% and 50.94%. The annual figures reconcile to 42.37%; the advertisement discrepancy should be treated as unresolved unless corrected by the issuer or bookrunners.",
     "The ₹38 crore working-capital allocation is modest relative to FY26 borrowings and the scale of bullion throughput, making cash conversion important after deleveraging.",
   ],
   monitor: [
@@ -683,11 +690,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The FY26 share capital implies 11.755 crore pre-offer shares. Adding 2.9482 crore fresh shares gives 14.7032 crore post-offer shares and, at the NSE-published ₹93 cap, a market capitalisation of approximately ₹1,367.40 crore.",
     "Against FY26 PAT of ₹106.68 crore, the fully diluted P/E at the NSE-published cap is about 12.82×. This is higher than the simple ₹93 divided by pre-offer FY26 EPS of ₹9.09 because the fresh issue dilutes EPS.",
     "Potential references include listed jewellery manufacturers and retailers, but Shankesh's B2B outsourced model, direct-sale/job-work mix and lower margins make retail-chain comparisons imperfect.",
+    "The issuer's offer-price document identifies Shanti Gold International and Sky Gold & Diamonds as peers, with 15 July 2026 trailing P/E of 10.04× and 34.86× respectively. Shankesh's post-offer FY26 P/E of about 12.82× sits near the low end, but its one-year margin step-up and weak cash conversion limit a mechanical comparison.",
     "The central valuation question is whether FY26 profitability is durable when gold throughput fell and operating cash conversion was almost zero.",
   ],
   sources: [
     { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
     { label: "Shankesh final RHP dated 10 August 2026", href: "https://www.afsl.co.in/pdfnew/RHP_Shankesh_Jewellers_Limited.pdf", kind: "Primary" },
+    { label: "Shankesh official price-band advertisement, 11 August 2026", href: "https://shcapl.com/wp-content/uploads/2026/08/Pre-Issue-and-Price-Band-Advertisement.pdf", kind: "Primary" },
+    { label: "Shankesh basis of offer price", href: "https://shcapl.com/wp-content/uploads/2026/08/Basis-of-Offer-Price_Shankesh-Jewellers-Limited.pdf", kind: "Primary" },
     { label: "Shankesh abridged prospectus", href: "https://www.afsl.co.in/pdfnew/8_Shankesh_Jewellers_Limited_Abridged_Prospectus.pdf", kind: "Primary" },
     { label: "AFSL offer-document index", href: "https://www.afsl.co.in/mainipofiles.php?catid=56&ipocat_id=1", kind: "Primary" },
     { label: "SEBI filing page: Shankesh Jewellers DRHP", href: "https://www.sebi.gov.in/filings/public-issues/sep-2025/shankesh-jewellers-limited_96968.html", kind: "Primary" },
@@ -1369,7 +1379,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "By 30 June 2026 Credent disclosed 97 commercial vehicles; the group also reported 2,530 associated laboratories at 31 March 2026 and a workforce of 6,338. Its operating model depends on route density, turnaround time, specialised packaging, temperature integrity and trained field staff.",
     "Credent Healthcare became a material subsidiary on 2 April 2025 and wholly owned on 8 October 2025. Credent Team and Alltrak were acquired on 26 December 2025 and 26 February 2026, respectively, meaning three subsidiaries entered the FY26 group perimeter. Promoters are Ashok Kumar Sharma, Karan Sharma, Tarun Sharma, Dimple Sharma and Tanveen.",
   ],
-  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP requires individual investors to apply for at least two 600-share lots, making the minimum bid 1,200 shares and the cap-price application ₹2,26,800. NSE's 16 August feed still showed the issue active; allotment and listing remain subject to final notices.",
+  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP requires individual investors to apply for at least two 600-share lots, making the minimum bid 1,200 shares and the cap-price application ₹2,26,800. NSE's 16 August feed showed 4,00,10,400 bids against the 35,64,000-share post-anchor public pool, or 11.23×; this is a changing pre-close snapshot, not the final subscription. The issuer download labelled 'Prospectus' is a one-page 8 August board resolution approving the RHP rather than a final prospectus, so final price, allotment and listing still require exchange notices.",
   issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 1200, totalCr: 93.90, freshCr: 93.90, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in Credent Healthcare for working capital", amount: "₹26.80 crore" },
@@ -1389,6 +1399,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "8.6%", context: "Compared with 2.9% in FY25; comparability is affected by consolidation and acquisitions." },
     { label: "FY26 debt/equity", value: "0.50×", context: "Borrowings rose to ₹21.95 crore from ₹7.41 crore at FY25." },
     { label: "FY26 operating cash flow", value: "-₹6.62 crore", context: "Negative despite ₹18.45 crore PAT as receivables and other working-capital balances absorbed cash." },
+    { label: "NSE subscription snapshot", value: "11.23×", context: "4,00,10,400 shares bid against a 35,64,000-share post-anchor public pool when retrieved on 16 August; not a final close figure." },
     { label: "FY26 healthcare share", value: "43.04%", context: "Healthcare services contributed ₹92.18 crore after three subsidiaries entered the group perimeter during FY26." },
   ],
   strengths: [
@@ -1415,6 +1426,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Fleet utilisation, route density, cost per sample, on-time performance, temperature excursions, sample loss and insurance claims.",
     "Credent Healthcare's centre and equipment utilisation, accreditation, clinical quality and returns on the ₹3.00 crore machinery investment.",
     "Post-issue borrowings, related-party transactions, acquisition accounting, promoter governance and NSE Emerge liquidity.",
+    "Final 17 August subscription by category, basis of allotment, issue price and the authentic final prospectus or exchange listing notice.",
   ],
   valuation: [
     "At the ₹189 cap, 1,87,86,900 post-issue shares imply an equity value of approximately ₹355.07 crore, or about 19.3× FY26 PAT of ₹18.45 crore. The RHP's pre-issue FY26 EPS of ₹13.95 produces a lower 13.5× headline multiple because it does not include the full fresh-issue dilution.",
