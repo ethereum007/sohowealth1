@@ -5,6 +5,8 @@ import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { WealthPlanner } from "./WealthPlanner";
+import { GoalPortfolioLab } from "./GoalPortfolioLab";
+import { SavedPlansPanel } from "./SavedPlansPanel";
 
 const canonicalUrl = "https://www.sohowealth.in/tools/ai-wealth-planner";
 
@@ -78,6 +80,8 @@ export default function AIWealthPlannerPage() {
       </section>
 
       <WealthPlanner />
+      <GoalPortfolioLab />
+      <SavedPlansPanel />
 
       <section className="border-y border-slate-200 bg-[#F7F8FA] py-16 lg:py-20">
         <div className="container mx-auto max-w-5xl px-6 lg:px-8">

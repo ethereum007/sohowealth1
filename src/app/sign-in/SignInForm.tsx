@@ -10,7 +10,7 @@ import { toast } from "sonner";
 
 export default function SignInForm() {
   const search = useSearchParams();
-  const next = search.get("next") || "/app";
+  const next = search?.get("next") || "/app";
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
