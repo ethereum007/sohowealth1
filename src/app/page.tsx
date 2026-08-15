@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Wealth Planning India for HNIs, Founders & NRIs | SoHo Wealth",
+  title: "Wealth Planning India + Free AI Wealth Planner | SoHo Wealth",
   description:
-    "Pan-India wealth planning, portfolio review and registered investment distribution for HNIs, founders, families and NRIs. Book a complimentary review.",
+    "Start with SoHo Wealth's free AI wealth planning tool. Estimate your goal corpus, required monthly SIP and asset mix, then book a professional portfolio review.",
   keywords:
-    "wealth planning India, wealth management India, portfolio review India, PMS distributor India, NRI wealth planning India, SIF investment India",
+    "wealth planning India, AI wealth planner India, financial goal planner, SIP goal calculator, wealth management India, portfolio review India",
   alternates: { canonical: "https://www.sohowealth.in/" },
   openGraph: {
     title: "Wealth Planning Across India | SoHo Wealth",

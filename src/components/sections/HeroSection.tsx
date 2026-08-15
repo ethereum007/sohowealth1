@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, MessageCircle } from "lucide-react";
+import { ArrowRight, Calculator, ShieldCheck, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
@@ -33,6 +33,22 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-7 flex justify-center"
+          >
+            <Link
+              href="/tools/ai-wealth-planner"
+              className="group inline-flex items-center gap-2 rounded-full border border-[#C9A84C]/40 bg-[#C9A84C]/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.15em] text-[#E5CB83] transition hover:border-[#C9A84C]/70 hover:bg-[#C9A84C]/15"
+            >
+              <Sparkles className="h-4 w-4" aria-hidden="true" />
+              Free Wealth Planning Tool
+              <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+            </Link>
+          </motion.div>
+
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,7 +73,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.15 }}
-            className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-12 font-body leading-relaxed"
+            className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-9 font-body leading-relaxed"
           >
             Portfolio review, goal mapping and investment distribution across
             Mutual Funds, PMS and SIF, with access support for AIF, Pre-IPO and
@@ -68,7 +84,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-7"
           >
             <Button
               size="lg"
@@ -76,22 +92,32 @@ export function HeroSection() {
               style={{ background: "#C9A84C", color: "#0B1F3A" }}
               asChild
             >
-              <Link href="/portfolio-review">
-                Book Your Free Portfolio Review
+              <Link href="/tools/ai-wealth-planner">
+                <Calculator className="mr-2 h-5 w-5" aria-hidden="true" />
+                Start My Wealth Plan
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
 
-            <a
-              href="https://wa.me/919032999466"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-white/90 hover:text-white font-medium text-base transition-colors group"
+            <Button
+              size="lg"
+              variant="outline"
+              className="h-14 rounded-md border-white/25 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/10 hover:text-white"
+              asChild
             >
-              <MessageCircle className="w-5 h-5" />
-              WhatsApp Us Now
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </a>
+              <Link href="/portfolio-review">Book a Portfolio Review</Link>
+            </Button>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="mb-12 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/55"
+          >
+            <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-[#C9A84C]" /> No sign-up</span>
+            <span>Private browser-based calculation</span>
+            <span>Goal corpus · Required SIP · Asset mix</span>
           </motion.div>
 
           <motion.div
