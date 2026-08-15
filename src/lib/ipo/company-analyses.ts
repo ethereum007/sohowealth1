@@ -503,7 +503,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Gold jewellery contributed 92.33% of FY26 revenue from operations. The company also runs jewellery purchase schemes that collect customer advances before redemption; these aid retention and funding but create substantial fulfilment and liquidity obligations.",
     "Two manufacturing facilities support its retail network, while procurement remains concentrated: the top three raw-material suppliers accounted for 58.03% of FY26 purchases.",
   ],
-  issueNote: "The final RHP dated 9 August and price-band advertisement confirm a ₹1,700 crore offer: ₹1,200 crore fresh issue plus ₹500 crore promoter OFS, a ₹190–₹201 band and a 74-share minimum lot. The minimum application at the cap is ₹14,874. An employee reservation of up to ₹6 crore carries a discount of up to 10%. The Regulation 6(1) offer makes up to 50% of the net offer available to QIBs, at least 15% to non-institutional bidders and at least 35% to retail bidders. NSE's 16 August feed shows 6,27,61,403 shares for public bidding after the 14 August anchor allocation; that post-anchor pool does not replace the original gross offer size.",
+  issueNote: "The final RHP dated 9 August and price-band advertisement confirm a ₹1,700 crore offer: ₹1,200 crore fresh issue plus ₹500 crore promoter OFS, a ₹190–₹201 band and a 74-share minimum lot. The minimum application at the cap is ₹14,874. An employee reservation of up to ₹6 crore carries a ₹19 discount. The Regulation 6(1) offer makes up to 50% of the net offer available to QIBs, at least 15% to non-institutional bidders and at least 35% to retail bidders. BSE's 14 August anchor notice confirms allocation of 2,52,83,581 shares at ₹201, equal to ₹508.20 crore. NSE and BSE then show 6,27,61,403 shares for public bidding; that post-anchor exchange pool does not replace the original ₹1,700 crore gross offer.",
   issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹190–₹201", lotSize: 74, totalCr: 1700, freshCr: 1200, ofsCr: 500, faceValue: "₹5" },
   useOfProceeds: [
     { purpose: "Inventory for 10 new stores", amount: "₹998.68 crore" },
@@ -523,6 +523,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Working-capital days", value: "65 days", context: "Up from 56 days in FY25 and 50 days in FY24; inventory turnover fell to 2.55×." },
     { label: "Indicative post-offer promoter holding", value: "≈82.1–82.8%", context: "Derived across the price band from the fresh issue, ₹500 crore promoter OFS and disclosed pre-offer shareholding; the employee discount can cause a small variation." },
     { label: "Upper-band diluted P/E", value: "≈11.1×", context: "Approximation using FY26 PAT and post-fresh-issue shares at ₹201; final allotment may make a small difference." },
+    { label: "Anchor allocation", value: "₹508.20 Cr", context: "BSE confirms 2,52,83,581 shares allocated at the ₹201 cap on 14 August." },
   ],
   strengths: [
     "The final RHP shows a substantial 61-store South Indian footprint, long operating history and FY26 revenue above ₹25,000 crore.",
@@ -559,6 +560,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Lalithaa final RHP dated 9 August 2026", href: "https://www.anandrathiib.com/pdf/documents/LJML-RHP.pdf", kind: "Primary" },
     { label: "Lalithaa price-band advertisement", href: "https://www.anandrathiib.com/pdf/documents/Lalithaa-Price-Band-Ad.pdf", kind: "Primary" },
     { label: "Lalithaa abridged prospectus", href: "https://www.anandrathiib.com/pdf/documents/LJML-Abridged-Prospectus.pdf", kind: "Primary" },
+    { label: "BSE Lalithaa live issue details", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7886", kind: "Primary" },
+    { label: "BSE Lalithaa anchor-allocation notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-48/20260814-48.pdf", kind: "Primary" },
     { label: "Anand Rathi offer-document index", href: "https://www.anandrathiib.com/lalithajewellerymartlimited.php", kind: "Primary" },
     { label: "SEBI filing page: Lalithaa Jewellery Mart DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jun-2025/lalithaa-jewellery-mart-limited_94576.html", kind: "Primary" },
     { label: "ICRA rating rationale, February 2026", href: "https://www.icra.in/Rating/GetRationalReportFilePdf?Id=141042", kind: "Secondary" },
@@ -573,7 +576,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Fulfilment centres, industrial facilities and in-city centres accounted for 16.34, 11.42 and 0.79 million operational square feet respectively. The company also offers built-to-suit facilities, cold storage, energy solutions and fitted infrastructure.",
     "The portfolio was assembled through project subsidiaries and acquisitions: 35 of 45 assets were acquired during or after FY25. Proforma financials illustrate the enlarged platform but do not represent an uninterrupted reported ownership history.",
   ],
-  issueNote: "The final RHP dated 11 August and price-band advertisement confirm an entirely fresh ₹2,600 crore issue with no OFS, a ₹57–₹60 band and 250-share lot; the minimum application at the cap is ₹15,000. At ₹60, the gross offer is up to 43,34,09,090 shares including the employee reservation and ₹5 discount. The Regulation 6(2) structure allocates at least 75% of the net issue to QIBs, no more than 15% to non-institutional bidders and no more than 10% to retail bidders. NSE's 16 August feed shows a post-anchor public bid pool of 25,13,56,273 shares, which is not the gross offer. ₹2,250 crore is earmarked for repayment or prepayment of company and subsidiary borrowings.",
+  issueNote: "The final RHP dated 11 August and price-band advertisement confirm an entirely fresh ₹2,600 crore issue with no OFS, a ₹57–₹60 band and 250-share lot; the minimum application at the cap is ₹15,000. At ₹60, the gross offer is up to 43,34,09,090 shares including the employee reservation and ₹5 discount. The Regulation 6(2) structure allocates at least 75% of the net issue to QIBs, no more than 15% to non-institutional bidders and no more than 10% to retail bidders. BSE's 14 August anchor notice confirms allocation of 19,46,25,000 shares at ₹60, equal to ₹1,167.75 crore. NSE and BSE then show a 25,13,56,273-share public bid pool; that post-anchor exchange pool is not the gross offer. ₹2,250 crore is earmarked for repayment or prepayment of company and subsidiary borrowings.",
   issue: { open: "17 August 2026", close: "19 August 2026", listing: "Expected 24 August 2026", priceBand: "₹57–₹60", lotSize: 250, totalCr: 2600, freshCr: 2600, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings of the company and identified subsidiaries", amount: "₹2,250 crore" },
@@ -592,6 +595,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Illustrative post-issue debt/equity", value: "0.55×", context: "Official price-ad bridge, down from 1.18× pre-issue; net external debt falls from ₹4,242.22 crore to ₹1,992.22 crore on the disclosed assumptions." },
     { label: "Committed occupancy", value: "93.56%", context: "Across 28.55 million operational square feet as of 31 May 2026." },
     { label: "Upper-band EV/EBITDA", value: "31.16×", context: "Official price-ad calculation on restated FY26 EBITDA; proforma EV/EBITDA was 31.31×." },
+    { label: "Anchor allocation", value: "₹1,167.75 Cr", context: "BSE confirms 19,46,25,000 shares allocated at the ₹60 cap on 14 August." },
   ],
   strengths: [
     "High committed occupancy and a diversified tenant base support rental visibility; the largest customer contributed 11.12% of FY26 proforma revenue and the top five 28.14%.",
@@ -628,6 +632,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Horizon final RHP dated 11 August 2026", href: "https://www.axiscapital.co.in/public/contents/Horizon%20Industrial%20Parks%20Limited_RHP-1786462662-1786687274.pdf", kind: "Primary" },
     { label: "Horizon price-band advertisement", href: "https://www.axiscapital.co.in/public/contents/HORIZON%20INDUSTRIAL%20PARKS%20LIMITED%20Price%20Band%20ad-1786513063-1786687425.pdf", kind: "Primary" },
     { label: "Horizon abridged prospectus", href: "https://www.axiscapital.co.in/public/contents/Horizon%20Industrial%20Parks%20Limited_Abridged%20Prospectus-1786462683-1786687328.pdf", kind: "Primary" },
+    { label: "BSE Horizon live issue details", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7890", kind: "Primary" },
+    { label: "BSE Horizon anchor-allocation notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-49/20260814-49.pdf", kind: "Primary" },
     { label: "Horizon issuer offer documents", href: "https://www.hiparks.com/offer-documents", kind: "Primary" },
     { label: "SEBI filing page: Horizon Industrial Parks DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jan-2026/horizon-industrial-parks-limited_98839.html", kind: "Primary" },
   ],
@@ -1176,7 +1182,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Fascinate says it manufactures against confirmed orders. Yarn is sent to outside job workers for knitting and dyeing before downstream production is completed in-house, so the operating model combines owned finishing capacity with external process dependence.",
     "Promoters include Rishabh Nahar, Chirag Ahuja, Vishal Nahar, Vishal Nahar HUF and Narinder Kumar Ahuja. The company converted to public status in 2025, leaving a short public-governance track record.",
   ],
-  issueNote: "The 23 July RHP confirms up to 42,93,600 shares: 34,57,600 fresh shares and an 8,36,000-share OFS by promoter-group shareholder Neetu Nahar, including a 2,15,200-share market-maker reservation. The 40,78,400-share net public offer is approximately ₹63.62 crore at the ₹156 cap, while the gross offer is ₹66.98 crore: ₹53.94 crore fresh and ₹13.04 crore OFS. The minimum bid is 1,600 shares (₹2.50 lakh at the cap), followed by multiples of 800. NSE's current-issue feed on 16 August continued to show the RHP's original 13 August close as extended to 19 August.",
+  issueNote: "The 23 July RHP confirms up to 42,93,600 shares: 34,57,600 fresh shares and an 8,36,000-share OFS by promoter-group shareholder Neetu Nahar, including a 2,15,200-share market-maker reservation. The 40,78,400-share net public offer is approximately ₹63.62 crore at the ₹156 cap, while the gross offer is ₹66.98 crore: ₹53.94 crore fresh and ₹13.04 crore OFS. The minimum bid is 1,600 shares (₹2.50 lakh at the cap), followed by multiples of 800. NSE's feed retrieved on 16 August showed the close extended to 19 August and 23,04,800 bids against 42,93,600 displayed gross-offer shares, or 0.54×. Because the exchange display includes the market-maker reservation, this is not a final category-wise subscription figure.",
   issue: { open: "11 August 2026", close: "19 August 2026", listing: "Final NSE Emerge notice pending verification", priceBand: "₹148–₹156", lotSize: 1600, totalCr: 66.98, freshCr: 53.94, ofsCr: 13.04, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Additional manufacturing facility", amount: "₹12.35 crore from proceeds; estimated project cost ₹12.50 crore" },
@@ -1199,6 +1205,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 net working capital", value: "₹51.08 crore", context: "Inventory was ₹48.13 crore and receivables ₹35.28 crore; the RHP reports a 146-day cycle." },
     { label: "Upper-band diluted P/E", value: "≈14.22×", context: "Based on ₹15.10 crore FY26 PAT, 1.3761 crore post-fresh-issue shares and the ₹156 cap." },
     { label: "FY26 garment utilisation", value: "106.70%", context: "Garment output exceeded stated double-shift capacity, while knitted fabric, woven fabric and yarn utilisation were only 22.33%, 7.11% and 11.34%." },
+    { label: "NSE live demand snapshot", value: "0.54×", context: "23,04,800 bids versus the 42,93,600-share gross offer at the 16 August retrieval; not a final category-wise figure." },
   ],
   strengths: [
     "Final RHP restated revenue nearly doubled to ₹117.09 crore in FY26, while EBITDA reached ₹24.15 crore and PAT ₹15.10 crore.",
