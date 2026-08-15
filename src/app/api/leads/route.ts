@@ -23,12 +23,26 @@ const leadSchema = z.object({
   utm_campaign: z.string().nullable().optional(),
   utm_term: z.string().nullable().optional(),
   utm_content: z.string().nullable().optional(),
+  consent: z.boolean().optional(),
+  consented_at: z.string().datetime().optional(),
+  consent_scope: z.string().trim().max(250).optional(),
+  privacy_notice_version: z.string().trim().max(50).optional(),
+  client_request_id: z.string().uuid().optional(),
 });
+
+function escapeHtml(value: unknown) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
 
 function rows(data: Record<string, unknown>) {
   return Object.entries(data)
     .filter(([, value]) => value !== null && value !== undefined && value !== "")
-    .map(([key, value]) => `<tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#64748b;">${key}</td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#0f172a;"><strong>${String(value)}</strong></td></tr>`)
+    .map(([key, value]) => `<tr><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#64748b;">${escapeHtml(key)}</td><td style="padding:6px 10px;border-bottom:1px solid #e5e7eb;color:#0f172a;"><strong>${escapeHtml(value)}</strong></td></tr>`)
     .join("");
 }
 
@@ -77,6 +91,9 @@ export async function POST(req: NextRequest) {
   }
 
   const lead = parsed.data;
+  if (lead.source === "AI Wealth Planner" && (!lead.consent || !lead.consented_at || !lead.consent_scope || !lead.client_request_id)) {
+    return NextResponse.json({ error: "Explicit consent evidence is required" }, { status: 400 });
+  }
   const email = await sendLeadEmail(lead);
-  return NextResponse.json({ ok: true, email });
+  return NextResponse.json({ ok: email.sent, delivered: email.sent, requestId: lead.client_request_id || null, email });
 }

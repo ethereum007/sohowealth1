@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import {
   ArrowLeft,
@@ -113,6 +113,9 @@ export function WealthPlanner() {
   const [explanationStatus, setExplanationStatus] = useState("Calculated locally from your inputs");
   const [lead, setLead] = useState({ name: "", email: "", phone: "", consent: false });
   const [leadStatus, setLeadStatus] = useState("");
+  const [leadSending, setLeadSending] = useState(false);
+  const [leadDelivered, setLeadDelivered] = useState(false);
+  const leadRequestId = useRef<string | null>(null);
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setForm((current) => ({ ...current, [key]: value }));
@@ -176,21 +179,42 @@ export function WealthPlanner() {
   };
 
   const requestReview = async () => {
-    if (!lead.consent || !lead.name || !lead.email || !lead.phone) {
+    const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(lead.email.trim());
+    const phoneDigits = lead.phone.replace(/\D/g, "");
+    if (!lead.consent || !lead.name.trim() || !emailValid || phoneDigits.length < 10) {
       setLeadStatus("Please complete the fields and confirm consent.");
       return;
     }
+    if (leadSending || leadDelivered) return;
+    leadRequestId.current ||= crypto.randomUUID();
+    setLeadSending(true);
     setLeadStatus("Sending…");
-    const response = await fetch("/api/leads", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        name: lead.name, email: lead.email, phone: lead.phone, portfolio_size: "Wealth planner enquiry",
-        is_nri: false, source: "AI Wealth Planner", service: "Goal Planning Review", landing_page: "/tools/ai-wealth-planner",
-        notes: `${form.goal} goal | ${form.horizonYears} years | ${Math.round(result.fundingRatio * 100)}% funded | monthly SIP ${form.monthlyInvestment}. Shared with explicit consent.`,
-      }),
-    });
-    setLeadStatus(response.ok ? "Thank you. SoHo Wealth will contact you within one business day." : "We could not send this now. Please use WhatsApp instead.");
+    try {
+      const response = await fetch("/api/leads", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: lead.name.trim(), email: lead.email.trim(), phone: lead.phone.trim(), portfolio_size: "Wealth planner enquiry",
+          is_nri: false, source: "AI Wealth Planner", service: "Goal Planning Review", landing_page: "/tools/ai-wealth-planner",
+          notes: `${form.goal} goal | ${form.horizonYears} years | ${Math.round(result.fundingRatio * 100)}% funded | monthly SIP ${form.monthlyInvestment}.`,
+          consent: true, consented_at: new Date().toISOString(), consent_scope: "Contact details and non-sensitive planning summary for one-to-one follow-up",
+          privacy_notice_version: "wealth-planner-2026-08", client_request_id: leadRequestId.current,
+        }),
+      });
+      const data = await response.json().catch(() => ({})) as { delivered?: boolean };
+      if (response.ok && data.delivered) {
+        setLeadDelivered(true);
+        setLeadStatus("Request delivered. SoHo Wealth will contact you within one business day.");
+      } else {
+        leadRequestId.current = null;
+        setLeadStatus("We could not deliver this now. Your details remain here so you can retry or use WhatsApp.");
+      }
+    } catch {
+      leadRequestId.current = null;
+      setLeadStatus("Connection unavailable. Your details remain here so you can retry or use WhatsApp.");
+    } finally {
+      setLeadSending(false);
+    }
   };
 
   const printPlan = () => {
@@ -398,7 +422,7 @@ export function WealthPlanner() {
               <div className="flex flex-wrap gap-4"><button type="button" onClick={savePlan} className="inline-flex shrink-0 items-center gap-2 font-semibold text-[#0B1F3A]"><Save className="h-4 w-4" /> Save on this device</button><button type="button" onClick={printPlan} className="inline-flex shrink-0 items-center gap-2 font-semibold text-[#0B1F3A]"><Download className="h-4 w-4" /> Download branded plan</button></div>
             </div>
 
-            <div className="rounded-3xl bg-[#07192F] p-6 text-white md:p-9"><div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]"><div><p className="text-xs font-bold uppercase tracking-[0.15em] text-[#E5CB83]">Consent-based handoff</p><h3 className="mt-3 font-display text-3xl font-semibold">Ask a human to review the plan.</h3><p className="mt-3 text-sm leading-relaxed text-white/65">We send your goal type, horizon, contribution and funding ratio only after you consent. Do not enter PAN, account numbers or passwords.</p></div><div className="grid gap-3 sm:grid-cols-2"><input aria-label="Name" placeholder="Name" value={lead.name} onChange={(event) => setLead({ ...lead, name: event.target.value })} className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 text-white placeholder:text-white/40 outline-none focus:border-[#C9A84C]" /><input aria-label="Phone" placeholder="Phone" value={lead.phone} onChange={(event) => setLead({ ...lead, phone: event.target.value })} className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 text-white placeholder:text-white/40 outline-none focus:border-[#C9A84C]" /><input aria-label="Email" type="email" placeholder="Email" value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 text-white placeholder:text-white/40 outline-none focus:border-[#C9A84C] sm:col-span-2" /><label className="flex gap-3 text-xs leading-relaxed text-white/65 sm:col-span-2"><input type="checkbox" checked={lead.consent} onChange={(event) => setLead({ ...lead, consent: event.target.checked })} className="mt-0.5 h-4 w-4 accent-[#C9A84C]" />I consent to SoHo Wealth receiving my contact details and the non-sensitive planning summary shown above for a follow-up.</label><button type="button" onClick={requestReview} className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#C9A84C] px-6 font-bold text-[#07192F] sm:col-span-2">Request my plan review <ArrowRight className="ml-2 h-4 w-4" /></button>{leadStatus && <p className="text-sm text-[#E5CB83] sm:col-span-2">{leadStatus}</p>}</div></div></div>
+            <div className="rounded-3xl bg-[#07192F] p-6 text-white md:p-9"><div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]"><div><p className="text-xs font-bold uppercase tracking-[0.15em] text-[#E5CB83]">Consent-based handoff</p><h3 className="mt-3 font-display text-3xl font-semibold">Ask a human to review the plan.</h3><p className="mt-3 text-sm leading-relaxed text-white/65">We send your goal type, horizon, contribution and funding ratio only after you consent. Do not enter PAN, account numbers or passwords.</p></div><div className="grid gap-3 sm:grid-cols-2"><input aria-label="Name" autoComplete="name" disabled={leadDelivered} placeholder="Name" value={lead.name} onChange={(event) => setLead({ ...lead, name: event.target.value })} className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 text-white placeholder:text-white/40 outline-none focus:border-[#C9A84C] disabled:opacity-60" /><input aria-label="Phone" autoComplete="tel" inputMode="tel" disabled={leadDelivered} placeholder="Phone" value={lead.phone} onChange={(event) => setLead({ ...lead, phone: event.target.value })} className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 text-white placeholder:text-white/40 outline-none focus:border-[#C9A84C] disabled:opacity-60" /><input aria-label="Email" autoComplete="email" disabled={leadDelivered} type="email" placeholder="Email" value={lead.email} onChange={(event) => setLead({ ...lead, email: event.target.value })} className="h-12 rounded-xl border border-white/15 bg-white/10 px-4 text-white placeholder:text-white/40 outline-none focus:border-[#C9A84C] disabled:opacity-60 sm:col-span-2" /><label className="flex gap-3 text-xs leading-relaxed text-white/65 sm:col-span-2"><input type="checkbox" disabled={leadDelivered} checked={lead.consent} onChange={(event) => setLead({ ...lead, consent: event.target.checked })} className="mt-0.5 h-4 w-4 accent-[#C9A84C]" />I consent to SoHo Wealth receiving my contact details and the non-sensitive planning summary shown above for a follow-up.</label><button type="button" onClick={requestReview} disabled={leadSending || leadDelivered} className="inline-flex min-h-12 items-center justify-center rounded-xl bg-[#C9A84C] px-6 font-bold text-[#07192F] disabled:cursor-not-allowed disabled:opacity-60 sm:col-span-2">{leadDelivered ? "Review requested" : leadSending ? "Sending securely…" : "Request my plan review"} {!leadDelivered && <ArrowRight className="ml-2 h-4 w-4" />}</button>{leadStatus && <p aria-live="polite" className="text-sm text-[#E5CB83] sm:col-span-2">{leadStatus}</p>}</div></div></div>
             {savedMessage && <p className="text-center text-sm font-semibold text-emerald-700">{savedMessage}</p>}
           </div>
         )}
