@@ -109,11 +109,16 @@ export function WealthPlanner() {
   const [savedMessage, setSavedMessage] = useState("");
   const [aiNarrative, setAiNarrative] = useState("");
   const [aiLoading, setAiLoading] = useState(false);
+  const [explanationMode, setExplanationMode] = useState<"deterministic" | "ai">("deterministic");
+  const [explanationStatus, setExplanationStatus] = useState("Calculated locally from your inputs");
   const [lead, setLead] = useState({ name: "", email: "", phone: "", consent: false });
   const [leadStatus, setLeadStatus] = useState("");
 
   const update = <K extends keyof FormState>(key: K, value: FormState[K]) => {
     setForm((current) => ({ ...current, [key]: value }));
+    setAiNarrative("");
+    setExplanationMode("deterministic");
+    setExplanationStatus("Plan changed — explanation recalculated locally");
   };
 
   const result = useMemo(() => {
@@ -133,6 +138,7 @@ export function WealthPlanner() {
 
   const explainWithAI = async () => {
     setAiLoading(true);
+    setExplanationStatus("Creating a privacy-safe explanation…");
     try {
       const response = await fetch("/api/wealth-plan/explain", {
         method: "POST",
@@ -150,8 +156,20 @@ export function WealthPlanner() {
           downsideRatioPct: Math.round(result.scenarios[0].fundingRatio * 100),
         }),
       });
-      const data = await response.json() as { explanation?: string };
-      if (data.explanation) setAiNarrative(data.explanation);
+      const data = await response.json() as { explanation?: string | null; mode?: "ai" | "deterministic"; reason?: string | null };
+      if (data.explanation && data.mode === "ai") {
+        setAiNarrative(data.explanation);
+        setExplanationMode("ai");
+        setExplanationStatus("AI explanation · anonymous planning figures only");
+      } else {
+        setAiNarrative("");
+        setExplanationMode("deterministic");
+        setExplanationStatus(data.reason === "rate_limited" ? "AI limit reached — showing the instant local explanation" : "AI unavailable — showing the instant local explanation");
+      }
+    } catch {
+      setAiNarrative("");
+      setExplanationMode("deterministic");
+      setExplanationStatus("Connection unavailable — showing the instant local explanation");
     } finally {
       setAiLoading(false);
     }
@@ -359,7 +377,7 @@ export function WealthPlanner() {
               <div className="rounded-3xl border border-slate-200 bg-white p-6 md:p-8"><h3 className="font-display text-2xl font-semibold text-[#0B1F3A]">Goal stress test</h3><p className="mt-2 text-sm text-slate-500">What could weaken the plan?</p><div className="mt-5 space-y-3">{result.stressTests.map((test) => <div key={test.name} className="flex items-center justify-between rounded-xl border border-slate-100 p-4"><span className="text-sm font-medium text-[#0B1F3A]">{test.name}</span><span className={`rounded-full px-2.5 py-1 text-xs font-bold ${test.fundingRatio >= 1 ? "bg-emerald-100 text-emerald-700" : "bg-amber-100 text-amber-800"}`}>{Math.round(test.fundingRatio * 100)}%</span></div>)}</div></div>
             </div>
 
-            <div className="rounded-3xl border border-[#C9A84C]/30 bg-white p-6 md:p-8"><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#A9862D]"><Sparkles className="h-4 w-4" /> Personalised plan explanation</div><p className="mt-4 text-lg leading-relaxed text-[#0B1F3A]">{aiNarrative || narrative}</p><div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center"><button type="button" onClick={explainWithAI} disabled={aiLoading} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-[#0B1F3A] px-5 text-sm font-semibold text-white disabled:opacity-60"><Sparkles className="mr-2 h-4 w-4 text-[#E5CB83]" />{aiLoading ? "Creating explanation…" : "Explain this plan with AI"}</button><p className="text-xs text-slate-500">Only aggregated planning numbers are sent—never names, email, phone, PAN or account details.</p></div></div>
+            <div className="rounded-3xl border border-[#C9A84C]/30 bg-white p-6 md:p-8"><div className="flex flex-wrap items-center justify-between gap-2"><div className="flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#A9862D]"><Sparkles className="h-4 w-4" /> Personalised plan explanation</div><span className={`rounded-full px-3 py-1 text-[11px] font-semibold ${explanationMode === "ai" ? "bg-violet-50 text-violet-700" : "bg-emerald-50 text-emerald-700"}`}>{explanationMode === "ai" ? "AI enhanced" : "Private local mode"}</span></div><p className="mt-4 text-lg leading-relaxed text-[#0B1F3A]">{aiNarrative || narrative}</p><div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center"><button type="button" onClick={explainWithAI} disabled={aiLoading} className="inline-flex min-h-11 items-center justify-center rounded-xl bg-[#0B1F3A] px-5 text-sm font-semibold text-white disabled:opacity-60"><Sparkles className="mr-2 h-4 w-4 text-[#E5CB83]" />{aiLoading ? "Creating explanation…" : "Explain this plan with AI"}</button><div><p className="text-xs font-medium text-slate-600" aria-live="polite">{explanationStatus}</p><p className="mt-1 text-xs text-slate-500">Only aggregated planning numbers are sent—never names, email, phone, PAN or account details.</p></div></div></div>
 
             <div className="rounded-3xl border border-[#C9A84C]/30 bg-[#FFFDF7] p-6 md:p-9">
               <div className="flex flex-col items-start justify-between gap-7 lg:flex-row lg:items-center">
