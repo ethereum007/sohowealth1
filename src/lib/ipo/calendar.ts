@@ -26,7 +26,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "LAPL Automotive", slug: "lapl-automotive-ipo", market: "SME", opens: "2026-08-06", closes: "2026-08-10", issueSizeCr: 32.40, priceBand: "₹88–₹94", exchange: "BSE SME" },
   { company: "LEAP India", slug: "leap-india-ipo", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 2480, priceBand: "₹151–₹159" },
   { company: "Technocraft Ventures", slug: "technocraft-ventures-ipo", market: "Mainboard", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 251.88, priceBand: "₹200–₹212" },
-  { company: "Optimystix Entertainment India", slug: "optimystix-entertainment-india-ipo", market: "SME", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 97.65, priceBand: "₹166–₹175", exchange: "NSE SME" },
+  { company: "Optimystix Entertainment India", slug: "optimystix-entertainment-india-ipo", market: "SME", opens: "2026-08-07", closes: "2026-08-11", issueSizeCr: 108.50, priceBand: "₹166–₹175", exchange: "NSE SME" },
 
   { company: "Dhoot Transmission", slug: "dhoot-transmission-ipo", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: 3066.89, priceBand: "₹829–₹871" },
   { company: "Molbio Diagnostics", slug: "molbio-diagnostics-ipo", market: "Mainboard", opens: "2026-08-10", closes: "2026-08-12", issueSizeCr: 939.7, priceBand: "₹768–₹807" },
@@ -88,6 +88,7 @@ export const august2026Snapshot = {
     "Sunshine Pictures' final RHP confirms 48,00,034 fresh shares, 30,37,157 OFS shares and ₹112.50 crore for long-term working capital; NSE confirms ₹342–₹360 and 18–20 August bidding.",
     "Q&T Foods' final prospectus corrects the issue size to ₹26.2476 crore and confirms a 2,400-share minimum application; the earlier ₹24.92 crore calendar figure was removed.",
     "LAPL Automotive's final RHP confirms 34,46,400 fresh shares and corrects the maximum issue size to approximately ₹32.40 crore; the earlier ₹30.77 crore figure represented only the net issue at the cap.",
+    "Optimystix Entertainment's final RHP confirms 50,00,000 fresh shares, 12,00,000 OFS shares and a 1,600-share minimum bid; ₹97.65 crore was the net issue at the cap, while the full offer is approximately ₹108.50 crore.",
   ],
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
