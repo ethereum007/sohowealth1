@@ -1317,15 +1317,15 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
   ],
 }, {
-  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "14 August 2026",
+  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "15 August 2026",
   summary: "Credent is a B2B healthcare-operations provider combining temperature-sensitive diagnostic-sample logistics, workforce services, technology and a recently acquired diagnostics subsidiary. The six months to September 2025 show a major step-up after consolidation, but debt and assets also rose sharply and operating cash flow was almost nil. The core analysis therefore turns on acquisition quality, customer retention, sample-chain execution and whether issue-funded working capital converts accounting growth into cash.",
   business: [
     "The group provides B2B healthcare logistics, including transportation of diagnostic samples, home collection and related field services, to laboratories, IVD and pharmaceutical companies, hospitals, clinics and other institutions.",
     "As of 30 September 2025, Credent disclosed a fleet of 94 commercial vehicles, two warehouses and four branch offices, including Mumbai, Pune, Chennai and Varanasi. Its operating model depends on route density, turnaround time, specialised packaging, temperature integrity and trained field staff.",
     "Credent Healthcare Private Limited became a material subsidiary in April 2025 and wholly owned in October 2025, expanding the group into diagnostic and allied healthcare services. Promoters are Ashok Kumar Sharma, Karan Sharma, Tarun Sharma, Dimple Sharma and Tanveen.",
   ],
-  issueNote: "NSE's current-issue feed confirms the issue is active from 13–17 August and shows 35,64,000 bid-eligible shares; that feed figure should not be mistaken for the total issue before anchor or reservation adjustments. The March 2026 DRHP proposed up to 49,68,000 fresh shares and no OFS. Marketed proceeds of ₹89.13 crore at ₹179–₹189 imply a smaller final share count than the draft maximum, so issued shares, reservations, lot and proceeds still require RHP and allotment-basis reconciliation.",
-  issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 600, totalCr: 89.13, freshCr: 89.13, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. Current offer data indicates a 600-share trading lot, while the RHP requires individual investors to apply for at least two lots, making the minimum bid 1,200 shares. The issuer page has not yet linked its separate opening advertisement, so price, bid lot and listing remain subject to the prospectus, allotment basis and NSE notices.",
+  issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 1200, totalCr: 93.90, freshCr: 93.90, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in Credent Healthcare for working capital", amount: "₹17.89 crore in the DRHP" },
     { purpose: "Investment in Credent Healthcare for diagnostic machinery", amount: "₹2.05 crore in the DRHP" },
@@ -1370,11 +1370,12 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Post-issue borrowings, related-party transactions, acquisition accounting, promoter governance and NSE Emerge liquidity.",
   ],
   valuation: [
-    "A definitive P/E requires the final prospectus share count and a normalized earnings base. The six-month FY26 result includes a changed consolidation perimeter and should not simply be doubled.",
+    "At the ₹189 cap, 1,82,22,900 post-issue shares imply an equity value of approximately ₹344.4 crore. Against FY25 PAT of ₹2.25 crore, that is roughly 153× fully diluted trailing earnings; the much lower multiple produced by annualising six-month FY26 PAT is not a like-for-like comparison because the consolidation perimeter changed.",
     "The DRHP states that no listed Indian company is directly comparable across temperature-sensitive sample logistics, collection, workforce and diagnostics. General logistics or diagnostics multiples omit important differences.",
     "A normalized valuation should prioritise organic free cash flow after fleet replacement and working-capital funding, and should separately value acquired diagnostics only after sustainable centre-level economics are visible.",
   ],
   sources: [
+    { label: "Credent Connect N Care 8 August 2026 RHP", href: "https://c3logistics.co.in/Downloads/Offer%20Document/RHP_CredentConnectNCareLimited.pdf", kind: "Primary" },
     { label: "Credent Connect N Care March 2026 DRHP", href: "https://invtrade.choiceindia.com/IPO/IPOReport/INE1KPX01025-ipo-report.pdf", kind: "Primary" },
     { label: "Credent investor-relations and offer documents", href: "https://c3logistics.co.in/investor", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
@@ -1449,7 +1450,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
   ],
 }, {
-  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "14 August 2026",
+  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "15 August 2026",
   summary: "ENS builds online-commerce platforms, ONDC integrations, software, mobile applications and cloud systems, alongside digital marketing and proprietary SaaS products. Revenue and margins expanded rapidly through FY26, but operating cash flow turned negative, top-ten customer concentration rose to 69%, financial investments absorbed cash and the company added short-term debt. The key question is how much growth is recurring, organic and cash-generative rather than project-led or working-capital funded.",
   business: [
     "The Noida-based company provides digital-commerce enablement and software services across online storefronts, ONDC integrations, custom software, mobile applications, cloud and DevOps and digital marketing.",
@@ -1500,7 +1501,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoter/CFO concentration, related-party transactions, cyber incidents, contingent liabilities and BSE SME liquidity.",
   ],
   valuation: [
-    "Published prospectus-derived calculations indicate approximately 14.9× FY26 earnings at the ₹92 cap. The multiple should be checked against the final issue price, post-issue shares and audited EPS.",
+    "At the ₹92 cap, 1,36,02,400 post-issue shares imply an equity value of approximately ₹125.1 crore, or about 14.9× FY26 PAT of ₹8.40 crore. That headline multiple depends on the latest year's exceptional growth being durable and cash-generative.",
     "RHP peers such as ASM Technologies, InfoBeans and Silver Touch differ in scale, offshore mix, recurring revenue, service lines and cash conversion. SaaS product companies are even less directly comparable.",
     "A normalized valuation should discount growth that requires rising receivables, investments or borrowing and separately value recurring SaaS only when retention and product revenue are disclosed.",
   ],
@@ -1512,7 +1513,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
   ],
 }, {
-  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "14 August 2026",
+  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "15 August 2026",
   summary: "Technocrats designs, manufactures, installs and services plasma cutting, welding, laser and customised automation systems. FY25 revenue rose more than eightfold after the company adopted customer-site manufacturing for larger projects, producing strong profit but also much higher customer concentration, receivables, inventory and borrowings. The analytical question is whether this new execution model can repeat without sacrificing cash conversion, quality or project margins.",
   business: [
     "The company supplies manual and CNC-controlled plate and pipe cutting systems, MIG, TIG, ARC, SAW and laser welding equipment, plasma systems and customised automation cells.",
@@ -1564,7 +1565,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoter dependence, related-party transactions, succession and BSE SME liquidity.",
   ],
   valuation: [
-    "A definitive offer multiple requires the final prospectus share count and EPS. Annualising Q1 FY26 PAT would ignore project timing and extreme customer concentration.",
+    "At the marketed ₹132 cap, the RHP's maximum 1,75,00,000 post-issue shares imply an equity value of approximately ₹231.0 crore, or about 28.5× FY25 PAT of ₹8.10 crore. Annualising Q1 FY26 PAT would ignore project timing and extreme customer concentration.",
     "DRHP peers Ador Welding, ESAB India and Jyoti CNC operate at much larger scale with different product ownership, distribution, exports and service mixes; their multiples are not directly transferable.",
     "A normalized valuation should use cash earnings across several project cycles and charge an adequate return on the much larger receivable and inventory base funded by the issue.",
   ],
