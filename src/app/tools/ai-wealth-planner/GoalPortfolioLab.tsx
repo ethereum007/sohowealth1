@@ -36,12 +36,30 @@ export function GoalPortfolioLab() {
     });
     const totalRequired = rows.reduce((sum, row) => sum + row.required, 0);
     const totalUrgency = rows.reduce((sum, row) => sum + row.urgency, 0);
-    return rows.map((row) => {
+    const allocatedRows = rows.map((row) => {
       const idealShare = totalRequired ? row.required / totalRequired : 0;
       const priorityShare = totalUrgency ? row.urgency / totalUrgency : 0;
       const allocated = Math.min(row.required, budget * (idealShare * 0.7 + priorityShare * 0.3));
-      return { ...row, allocated, coverage: row.required ? allocated / row.required : 1 };
+      return { ...row, allocated };
     });
+
+    // If a small goal reaches 100%, keep redistributing its unused share to
+    // goals that are still underfunded. This uses the full available budget
+    // without ever allocating more than a goal actually requires.
+    for (let pass = 0; pass < allocatedRows.length; pass += 1) {
+      const used = allocatedRows.reduce((sum, row) => sum + row.allocated, 0);
+      const remaining = Math.max(0, Math.min(budget, totalRequired) - used);
+      const underfunded = allocatedRows.filter((row) => row.allocated + 0.01 < row.required);
+      if (remaining < 0.01 || !underfunded.length) break;
+
+      const weightTotal = underfunded.reduce((sum, row) => sum + row.required + row.urgency * totalRequired, 0);
+      underfunded.forEach((row) => {
+        const weight = weightTotal ? (row.required + row.urgency * totalRequired) / weightTotal : 1 / underfunded.length;
+        row.allocated += Math.min(row.required - row.allocated, remaining * weight);
+      });
+    }
+
+    return allocatedRows.map((row) => ({ ...row, coverage: row.required ? row.allocated / row.required : 1 }));
   }, [goals, budget, risk]);
 
   const update = (id: string, patch: Partial<GoalRow>) => setGoals((current) => current.map((goal) => goal.id === id ? { ...goal, ...patch } : goal));
