@@ -90,6 +90,7 @@ export const august2026Snapshot = {
     "LAPL Automotive's final RHP confirms 34,46,400 fresh shares and corrects the maximum issue size to approximately ₹32.40 crore; the earlier ₹30.77 crore figure represented only the net issue at the cap.",
     "Optimystix Entertainment's final RHP confirms 50,00,000 fresh shares, 12,00,000 OFS shares and a 1,600-share minimum bid; ₹97.65 crore was the net issue at the cap, while the full offer is approximately ₹108.50 crore.",
     "Fascinate Textiles' RHP confirms 34,57,600 fresh shares, an 8,36,000-share OFS and a 1,600-share minimum bid; the calendar now shows the approximately ₹66.98 crore full offer at the cap rather than a floor-price estimate.",
+    "Skytech Infinite Platform's final RHP confirms 29,45,600 fresh shares, including a 1,48,800-share market-maker reservation, and the lead manager's price advertisement confirms ₹77.",
   ],
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },

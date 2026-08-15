@@ -1383,15 +1383,15 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Choice Credent marketed offer summary", href: "https://choiceindia.com/ipo/credent-connect-n-care-ipo", kind: "Secondary" },
   ],
 }, {
-  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "14 August 2026",
+  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "15 August 2026",
   summary: "Skytech designs and executes industrial-automation systems and control panels using products from established automation vendors. FY25 revenue was nearly flat while EBITDA and PAT rose sharply, but receivables, customer concentration and project working capital also increased and operating cash covered only a fraction of profit. The issue is primarily a bet on funding larger EPC orders without losing margin or cash discipline.",
   business: [
     "The company designs, engineers, assembles, installs and supports turnkey automation systems, including PCC, MCC, PLC, VFD, APFC and control-desk panels that integrate controllers, drives, switchgear, sensors and actuators.",
     "Skytech is an authorised channel partner, distributor, integrator or solution provider for Mitsubishi Electric India, Endress+Hauser India, Exor India and Euroteck Environmental within defined product, territory and customer scopes.",
     "EPC contracts contributed 84.84% of FY25 revenue, product supply 10.03% and AMC or other services 5.14%. Promoters Paramashivam Deiveekan and Suma Deiveekan have led the Bengaluru-based company since its early operating period.",
   ],
-  issueNote: "NSE's current-issue feed confirms the issue is active from 14–18 August and reports 29,45,600 shares offered, matching the draft maximum after rounding convention. The September 2025 DRHP proposed an entirely fresh issue and ₹14.96 crore for working capital. Marketed references indicate ₹77 and approximately ₹22.68 crore; price, lot and final listing terms still require prospectus, allotment-basis and NSE Emerge reconciliation.",
-  issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹77 fixed price (tentative)", lotSize: null, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement and NSE feed show ₹77, implying approximately ₹22.68 crore of gross fresh proceeds. The minimum bid and final listing terms remain subject to the application form, allotment basis and NSE Emerge notices.",
+  issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹77 fixed price", lotSize: null, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "₹14.96 crore in the DRHP, split across FY26 and FY27" },
     { purpose: "General corporate purposes and issue expenses", amount: "Balance of net proceeds, within regulatory limits" },
@@ -1443,6 +1443,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Skytech Infinite investor-relations page", href: "https://skytechinfinite.com/investor-relation/", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
     { label: "Finshore offer-document repository", href: "https://www.finshoregroup.com/downloads/ipo", kind: "Primary" },
+    { label: "Skytech Infinite 9 August 2026 RHP", href: "https://www.finshoregroup.com/assets/download_pdf/710182_RHP_Skytech_NSE.pdf", kind: "Primary" },
+    { label: "Skytech Infinite official price advertisement", href: "https://www.finshoregroup.com/assets/download_pdf/250232_Adv_2_Skytech_Price_Band_Published.pdf", kind: "Primary" },
     { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/market-data/all-upcoming-issues-ipo", kind: "Primary" },
     { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
   ],
