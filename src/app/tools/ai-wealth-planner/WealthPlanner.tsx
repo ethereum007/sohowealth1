@@ -126,6 +126,7 @@ export function WealthPlanner() {
     const saved = JSON.parse(localStorage.getItem("soho-wealth-plans") || "[]") as unknown[];
     saved.unshift({ id: crypto.randomUUID(), savedAt: new Date().toISOString(), inputs: form, result });
     localStorage.setItem("soho-wealth-plans", JSON.stringify(saved.slice(0, 12)));
+    window.dispatchEvent(new Event("soho-plan-saved"));
     setSavedMessage("Plan saved privately on this device");
   };
 

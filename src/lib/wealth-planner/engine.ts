@@ -112,7 +112,7 @@ export function buildStressTests(input: PlanInputs) {
     { name: "20% market shock today", projected: projectPlan(input, base, input.monthlyInvestment, 0.2).projected },
     { name: "Returns 2% lower", projected: projectPlan(input, Math.max(0.04, base - 0.02)).projected },
     { name: "Investing starts 12 months late", projected: projectPlan({ ...input, delayMonths: input.delayMonths + 12 }).projected },
-    { name: "SIP stops for 12 months", projected: projectPlan({ ...input, delayMonths: input.delayMonths + 12 }).projected },
+    { name: "Monthly SIP is 10% lower", projected: projectPlan(input, base, input.monthlyInvestment * 0.9).projected },
   ];
   return tests.map((test) => ({ ...test, fundingRatio: test.projected / target, shortfall: Math.max(0, target - test.projected) }));
 }

@@ -19,8 +19,14 @@ export function SavedPlansPanel() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    setPlans(JSON.parse(localStorage.getItem("soho-wealth-plans") || "[]") as SavedPlan[]);
+    const load = () => {
+      try { setPlans(JSON.parse(localStorage.getItem("soho-wealth-plans") || "[]") as SavedPlan[]); }
+      catch { setPlans([]); }
+    };
+    load();
     setReady(true);
+    window.addEventListener("soho-plan-saved", load);
+    return () => window.removeEventListener("soho-plan-saved", load);
   }, []);
 
   const persist = (next: SavedPlan[]) => {
