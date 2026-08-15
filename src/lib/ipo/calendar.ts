@@ -17,7 +17,7 @@ export type IpoWeek = {
 };
 
 // Source snapshot: Chittorgarh Mainboard and SME IPO calendars, accessed
-// 15 August 2026. Entries are grouped by opening date. A null value means the
+// 16 August 2026. Entries are grouped by opening date. A null value means the
 // source had not published the final figure; it must never be rendered as zero.
 const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Anawil Wire & Engineering", slug: "anawil-wire-engineering-ipo", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 177.81, priceBand: "₹257–₹270", exchange: "NSE SME" },
@@ -71,7 +71,7 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 }));
 
 export const august2026Snapshot = {
-  asOf: "15 August 2026",
+  asOf: "16 August 2026",
   coverageCount: 24,
   verificationNotes: [
     "All 24 companies currently shown in the August calendar link to an individual analysis page.",
@@ -81,16 +81,16 @@ export const august2026Snapshot = {
     "Technocrats Plasma's issuer-hosted RHP confirms 46,20,000 fresh shares and 14–18 August bidding; its marketed price remains starred pending the separate price-band advertisement and BSE SME notice.",
     "Skytech Infinite Platform's official price advertisement confirms a ₹73–₹77 band and a 3,200-share minimum bid; the earlier ₹77 fixed-price label was corrected. Its ₹22.68 crore calendar size is the full fresh issue at the cap.",
     "ENS Enterprises' ₹33.14 crore calendar size is the full fresh issue at the cap; the 34,21,200-share net public issue is approximately ₹31.47 crore after the 1,81,200-share market-maker reservation.",
-    "Fascinate Textiles' closing date was corrected from 13 August to 19 August using NSE's official current-issue feed.",
+    "Fascinate Textiles remained active through 19 August in NSE's 16 August current-issue feed, superseding the RHP's original 13 August close; its page now uses the final RHP's FY24–FY26 restated financials.",
     "Pramodini Medicare's final RHP confirms ₹110–₹118, a 1,200-share lot and a proposed 19 August listing; the earlier fixed-price label was corrected.",
     "ENS Enterprises' final RHP confirms a ₹87–₹92 book-built issue, a 2,400-share minimum bid and proposed 21 August trading; the earlier ₹92 fixed-price label was corrected.",
     "Credent Connect N Care's 8 August RHP confirms 49,68,000 fresh shares, including a 2,52,000-share market-maker reservation. The full offer at the cap is approximately ₹93.90 crore; the previously shown ₹89.13 crore was only the 47,16,000-share net issue at the cap.",
-    "Lalithaa Jewellery Mart's final RHP dated 9 August and price advertisement confirm a ₹1,200 crore fresh issue, ₹500 crore OFS, ₹190–₹201 band, 74-share lot and inventory plus fit-out for 10 new stores.",
+    "Lalithaa Jewellery Mart's final RHP and price advertisement confirm a ₹1,200 crore fresh issue, ₹500 crore OFS, ₹190–₹201 band and 74-share lot. NSE's 16 August feed shows 6,27,61,403 shares in the post-anchor public bid pool; the calendar retains the ₹1,700 crore gross offer.",
     "Milky Mist Dairy Food's final prospectus dated 13 August fixes the offer price at ₹140 and confirms a ₹1,428 crore fresh issue plus ₹125 crore promoter OFS. FY26 financials and the complete ₹155.31 crore refrigeration-equipment allocation are now reflected in its analysis.",
     "Shiprocket's final prospectus dated 14 August fixes the offer price at ₹97, confirms a ₹885.50 crore fresh issue plus ₹731.98 crore OFS and corrects the face value to ₹10. Its page now separates statutory EBITDA from company-defined adjusted EBITDA.",
     "Behari Lal Engineering's Emkay offer-document page confirms that final RHP, abridged prospectus and price materials were published. The issue is marked closed; final discovered price and prospectus remain pending as of 15 August.",
-    "Horizon Industrial Parks' final RHP dated 11 August and price advertisement confirm an all-fresh ₹2,600 crore issue, ₹57–₹60 band, 250-share lot and ₹2,250 crore debt-repayment object.",
-    "Shankesh Jewellers' final RHP dated 10 August confirms 2,94,82,000 fresh shares plus 1,00,00,000 OFS shares; the ₹88–₹93 band and 160-share lot are reconciled to final offer materials.",
+    "Horizon Industrial Parks' final RHP and price advertisement confirm an all-fresh ₹2,600 crore issue, ₹57–₹60 band, 250-share lot and ₹2,250 crore debt-repayment object. NSE's post-anchor public pool was 25,13,56,273 shares on 16 August.",
+    "Shankesh Jewellers' 10 August RHP confirms 2,94,82,000 fresh shares plus 1,00,00,000 OFS shares, while NSE's current upcoming-issue feed supplies the marketed ₹88–₹93 band and 18–20 August dates. The issuer-hosted separate price advertisement was not located as of 16 August, so the 160-share lot remains clearly source-caveated.",
     "Sunshine Pictures' final RHP confirms 48,00,034 fresh shares, 30,37,157 OFS shares and ₹112.50 crore for long-term working capital; NSE confirms ₹342–₹360 and 18–20 August bidding.",
     "Q&T Foods' final prospectus corrects the issue size to ₹26.2476 crore and confirms a 2,400-share minimum application; the earlier ₹24.92 crore calendar figure was removed.",
     "LAPL Automotive's final RHP confirms 34,46,400 fresh shares and corrects the maximum issue size to approximately ₹32.40 crore; the earlier ₹30.77 crore figure represented only the net issue at the cap.",
