@@ -1174,15 +1174,15 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "HDFC Sky DRHP summary and proceeds", href: "https://hdfcsky.com/news/fascinate-textiles-files-drhp-for-nse-emerge-ipo", kind: "Secondary" },
   ],
 }, {
-  slug: "qt-foods-ipo", company: "Q&T Foods", market: "SME", sector: "Fresh bakery products", status: "Issue closes 14 August 2026", analysisAsOf: "14 August 2026",
+  slug: "qt-foods-ipo", company: "Q&T Foods", market: "SME", sector: "Fresh bakery products", status: "Issue closed; allotment and listing awaited", analysisAsOf: "15 August 2026",
   summary: "Q&T Foods manufactures bread, buns, pav, kulcha and pizza bases under the American Bakers brand, primarily for Uttar Pradesh. Revenue and margins improved through FY25, but leverage remained high, fresh bakery has short shelf life and route-density economics, and the issue-funded machinery and working capital must translate into cash rather than only higher receivables and inventory.",
   business: [
     "The company makes savoury bakery products including milk, white, multigrain and brown bread, pav, burger buns, kulcha and pizza bases under the American Bakers brand.",
     "Q&T relocated to a manufacturing facility at Dasna, Ghaziabad in 2024. It distributes primarily in Uttar Pradesh through a network described as more than 50 dealers, making production scheduling, freshness, returns and delivery-route density central to economics.",
     "The company was incorporated in 2018 and converted to a public company in 2024. Nishant Raj Gupta is identified as a promoter and leads corporate strategy; promoter concentration and the short public-company track record require ongoing governance checks.",
   ],
-  issueNote: "The calendar reflects marketed data of a ₹24.92 crore fixed-price issue at ₹115. The June 2026 draft authorized up to 23 lakh fresh shares but did not contain the final issue price or final issued share count. The prospectus, basis of allotment and BSE SME notices should control the exact structure.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Final BSE notice pending", priceBand: "₹115 fixed price", lotSize: null, totalCr: 24.92, freshCr: 24.92, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The final prospectus dated 6 August confirms an entirely fresh fixed-price issue of up to 22,82,400 shares at ₹115, aggregating to ₹26.2476 crore. This includes a 1,15,200-share market-maker reservation and a 21,67,200-share net issue. The market lot is 1,200 shares, while the minimum application is two lots, or 2,400 shares. Final allotment and BSE SME listing notices remain controlling.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Final BSE notice pending", priceBand: "₹115 fixed price", lotSize: 2400, totalCr: 26.25, freshCr: 26.25, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Equipment and machinery for the existing manufacturing facility", amount: "₹4.42 crore" },
     { purpose: "Part-finance working-capital requirements", amount: "₹7.50 crore" },
@@ -1230,6 +1230,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The valuation case should be tested on post-wastage cash margins and return on the new machinery after working capital, not revenue growth or factory capacity alone.",
   ],
   sources: [
+    { label: "Q&T Foods final prospectus, 6 August 2026", href: "https://corporatemakers.in/pdf/QT_Prospectus_Final.pdf", kind: "Primary" },
     { label: "Q&T Foods corporate and investor website", href: "https://qtfoods.in/", kind: "Primary" },
     { label: "Lead manager offer-document page", href: "https://corporatemakers.in/ipo-offer-documents.php", kind: "Primary" },
     { label: "Q&T Foods corrected KPI public announcement", href: "https://nsearchives.nseindia.com/corporate/SGTL2008_12062026144006_IntimationofPreNewspaperAGM.pdf", kind: "Primary" },

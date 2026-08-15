@@ -17,7 +17,7 @@ export type IpoWeek = {
 };
 
 // Source snapshot: Chittorgarh Mainboard and SME IPO calendars, accessed
-// 13 August 2026. Entries are grouped by opening date. A null value means the
+// 15 August 2026. Entries are grouped by opening date. A null value means the
 // source had not published the final figure; it must never be rendered as zero.
 const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Anawil Wire & Engineering", slug: "anawil-wire-engineering-ipo", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 177.81, priceBand: "₹257–₹270", exchange: "NSE SME" },
@@ -35,7 +35,7 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Fascinate Textiles", slug: "fascinate-textiles-ipo", market: "SME", opens: "2026-08-11", closes: "2026-08-19", issueSizeCr: 63.62, priceBand: "₹148–₹156", exchange: "NSE SME" },
   { company: "Shiprocket", slug: "shiprocket-ipo", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 1617.48, priceBand: "₹92–₹97" },
   { company: "Behari Lal Engineering", slug: "behari-lal-engineering-ipo", market: "Mainboard", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 301.62, priceBand: "₹271–₹285" },
-  { company: "Q&T Foods", slug: "qt-foods-ipo", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 24.92, priceBand: "₹115", exchange: "BSE SME" },
+  { company: "Q&T Foods", slug: "qt-foods-ipo", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 26.25, priceBand: "₹115", exchange: "BSE SME" },
   { company: "Pramodini Medicare", slug: "pramodini-medicare-ipo", market: "SME", opens: "2026-08-12", closes: "2026-08-14", issueSizeCr: 69.04, priceBand: "₹110–₹118", exchange: "NSE SME" },
   { company: "Credent Connect N Care", slug: "credent-connect-n-care-ipo", market: "SME", opens: "2026-08-13", closes: "2026-08-17", issueSizeCr: 89.13, priceBand: "₹179–₹189", exchange: "NSE SME" },
   { company: "Skytech Infinite Platform", slug: "skytech-infinite-platform-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 22.68, priceBand: "₹77 fixed price*", exchange: "NSE SME" },
@@ -71,7 +71,7 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 }));
 
 export const august2026Snapshot = {
-  asOf: "14 August 2026",
+  asOf: "15 August 2026",
   coverageCount: 24,
   verificationNotes: [
     "All 24 companies currently shown in the August calendar link to an individual analysis page.",
@@ -86,6 +86,7 @@ export const august2026Snapshot = {
     "NSE's current-issue feed confirms Horizon Industrial Parks' ₹57–₹60 band and 17–19 August bidding; its marketed offer objects remain subject to direct final-document reconciliation.",
     "NSE's current-issue feed confirms Shankesh Jewellers' 3,94,82,000-share issue, ₹88–₹93 band and 18–20 August bidding; the detail page corrects the marketed minimum lot to 160 shares.",
     "Sunshine Pictures' final RHP confirms 48,00,034 fresh shares, 30,37,157 OFS shares and ₹112.50 crore for long-term working capital; NSE confirms ₹342–₹360 and 18–20 August bidding.",
+    "Q&T Foods' final prospectus corrects the issue size to ₹26.2476 crore and confirms a 2,400-share minimum application; the earlier ₹24.92 crore calendar figure was removed.",
   ],
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
