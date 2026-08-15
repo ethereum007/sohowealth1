@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import { allocationFor, analysePlan, buildScenarios, futureGoalAmount, projectPlan, requiredStartingSip, type PlanInputs } from "./engine";
+import { decodeSavedPlans, encodeSavedPlans, expectedCorpusAt, WEALTH_PLANS_VERSION, type SavedWealthPlan } from "./storage";
 
 const base: PlanInputs = {
   goal: "education", amountMode: "today", targetAmount: 25_00_000, inflationRate: 0.08,
@@ -51,4 +52,24 @@ test("delay and downside stress reduce funding outcomes", () => {
 test("existing corpus that fully funds a goal produces zero required SIP", () => {
   const required = requiredStartingSip({ ...base, currentSavings: 1_00_00_000 });
   assert.equal(required, 0);
+});
+
+test("saved plan storage migrates legacy arrays into a versioned envelope", () => {
+  const result = analysePlan(base);
+  const plan: SavedWealthPlan = { id: "plan-1", savedAt: "2026-01-01T00:00:00.000Z", inputs: base, result };
+  const legacy = decodeSavedPlans(JSON.stringify([plan]));
+  assert.equal(legacy.length, 1);
+  const encoded = JSON.parse(encodeSavedPlans(legacy)) as { version: number; plans: SavedWealthPlan[] };
+  assert.equal(encoded.version, WEALTH_PLANS_VERSION);
+  assert.equal(encoded.plans[0].id, "plan-1");
+  assert.deepEqual(decodeSavedPlans("damaged"), []);
+});
+
+test("tracking path interpolates between annual projection points", () => {
+  const points = [
+    { year: 0, invested: 100, projected: 100, target: 100 },
+    { year: 1, invested: 200, projected: 220, target: 110 },
+  ];
+  assert.equal(expectedCorpusAt(points, 0.5, 0), 160);
+  assert.equal(expectedCorpusAt(points, 2, 0), 220);
 });

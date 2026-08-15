@@ -2,26 +2,19 @@
 
 import { useEffect, useState } from "react";
 import { History, Trash2 } from "lucide-react";
-
-type SavedPlan = {
-  id: string;
-  savedAt: string;
-  inputs: { goal: string; currentSavings: number; horizonYears: number };
-  result: { target: number; projected: number; fundingRatio: number; points?: Array<{ year: number; projected: number }> };
-  actualCorpus?: number;
-  lastCheckedAt?: string;
-};
+import { decodeSavedPlans, encodeSavedPlans, expectedCorpusAt, WEALTH_PLANS_KEY, type SavedWealthPlan } from "@/lib/wealth-planner/storage";
 
 const money = (value: number) => new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0, notation: "compact" }).format(value || 0);
 
 export function SavedPlansPanel() {
-  const [plans, setPlans] = useState<SavedPlan[]>([]);
+  const [plans, setPlans] = useState<SavedWealthPlan[]>([]);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
     const load = () => {
-      try { setPlans(JSON.parse(localStorage.getItem("soho-wealth-plans") || "[]") as SavedPlan[]); }
-      catch { setPlans([]); }
+      const decoded = decodeSavedPlans(localStorage.getItem(WEALTH_PLANS_KEY));
+      setPlans(decoded);
+      localStorage.setItem(WEALTH_PLANS_KEY, encodeSavedPlans(decoded));
     };
     load();
     setReady(true);
@@ -29,9 +22,9 @@ export function SavedPlansPanel() {
     return () => window.removeEventListener("soho-plan-saved", load);
   }, []);
 
-  const persist = (next: SavedPlan[]) => {
+  const persist = (next: SavedWealthPlan[]) => {
     setPlans(next);
-    localStorage.setItem("soho-wealth-plans", JSON.stringify(next));
+    localStorage.setItem(WEALTH_PLANS_KEY, encodeSavedPlans(next));
   };
 
   if (!ready) return null;
@@ -43,8 +36,7 @@ export function SavedPlansPanel() {
           const actual = plan.actualCorpus ?? plan.inputs.currentSavings;
           const progress = Math.min(100, (actual / plan.result.target) * 100);
           const elapsedYears = Math.max(0, (Date.now() - new Date(plan.savedAt).getTime()) / (365.25 * 24 * 60 * 60 * 1000));
-          const expectedPoint = plan.result.points?.reduce((best, point) => Math.abs(point.year - elapsedYears) < Math.abs(best.year - elapsedYears) ? point : best, plan.result.points[0]);
-          const expectedCorpus = expectedPoint?.projected ?? plan.inputs.currentSavings;
+          const expectedCorpus = expectedCorpusAt(plan.result.points, elapsedYears, plan.inputs.currentSavings);
           const variance = actual - expectedCorpus;
           return <article key={plan.id} className="rounded-2xl border border-slate-200 bg-white p-6"><div className="flex items-start justify-between"><div><p className="text-xs font-bold uppercase tracking-wider text-[#A9862D]">{plan.inputs.goal}</p><h3 className="mt-1 font-display text-xl font-semibold text-[#0B1F3A]">Target {money(plan.result.target)}</h3><p className="mt-1 text-xs text-slate-500">Saved {new Date(plan.savedAt).toLocaleDateString("en-IN")}</p></div><button type="button" onClick={() => persist(plans.filter((item) => item.id !== plan.id))} aria-label="Delete saved plan" className="text-slate-400 hover:text-red-600"><Trash2 className="h-4 w-4" /></button></div><div className="mt-5 h-2 overflow-hidden rounded-full bg-slate-100"><div className="h-full rounded-full bg-[#C9A84C]" style={{ width: `${progress}%` }} /></div><div className="mt-4 flex items-end gap-3"><label className="flex-1 text-xs text-slate-500">Latest goal corpus<input type="number" value={actual} onChange={(event) => persist(plans.map((item) => item.id === plan.id ? { ...item, actualCorpus: Number(event.target.value), lastCheckedAt: new Date().toISOString() } : item))} className="mt-1 h-11 w-full rounded-xl border border-slate-200 px-3 text-sm text-[#0B1F3A]" /></label><div className="pb-2 text-right"><p className="text-xs text-slate-500">Actual progress</p><strong className="text-[#0B1F3A]">{progress.toFixed(1)}%</strong></div></div><div className={`mt-4 rounded-xl p-3 text-sm ${variance >= 0 ? "bg-emerald-50 text-emerald-800" : "bg-amber-50 text-amber-900"}`}><strong>{variance >= 0 ? "Ahead of saved path" : "Behind saved path"}</strong><span className="ml-2">by {money(Math.abs(variance))}</span></div></article>;
         })}</div>}

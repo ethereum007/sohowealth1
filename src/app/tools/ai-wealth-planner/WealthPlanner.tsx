@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import { Cell, Pie, PieChart, ResponsiveContainer, Tooltip } from "recharts";
 import { analysePlan, DEFAULT_INFLATION, deterministicNarrative, type GoalType, type PlanInputs, type RiskProfile } from "@/lib/wealth-planner/engine";
+import { decodeSavedPlans, encodeSavedPlans, WEALTH_PLANS_KEY, type SavedWealthPlan } from "@/lib/wealth-planner/storage";
 
 type Goal = GoalType;
 type Risk = RiskProfile;
@@ -123,9 +124,9 @@ export function WealthPlanner() {
   const narrative = useMemo(() => deterministicNarrative(form, result), [form, result]);
 
   const savePlan = () => {
-    const saved = JSON.parse(localStorage.getItem("soho-wealth-plans") || "[]") as unknown[];
-    saved.unshift({ id: crypto.randomUUID(), savedAt: new Date().toISOString(), inputs: form, result });
-    localStorage.setItem("soho-wealth-plans", JSON.stringify(saved.slice(0, 12)));
+    const saved = decodeSavedPlans(localStorage.getItem(WEALTH_PLANS_KEY));
+    const plan: SavedWealthPlan = { id: crypto.randomUUID(), savedAt: new Date().toISOString(), inputs: form, result };
+    localStorage.setItem(WEALTH_PLANS_KEY, encodeSavedPlans([plan, ...saved]));
     window.dispatchEvent(new Event("soho-plan-saved"));
     setSavedMessage("Plan saved privately on this device");
   };
