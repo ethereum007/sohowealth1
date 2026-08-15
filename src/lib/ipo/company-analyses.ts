@@ -711,7 +711,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Revenue is recognised around delivery, licensing and exploitation of individual projects, making annual results lumpy. The RHP says a content project can take roughly 15–30 months from development through release, so a successful title can create unusually high margins while delays, cost overruns or weak reception can shift or impair earnings.",
     "The model relies on studios, streaming platforms and independent distributors for commissioning, licensing and distribution. Economics depend on who funds production, which rights Sunshine retains, revenue-share terms and the duration and geography of licences.",
   ],
-  issueNote: "The final RHP dated 10 August confirms up to 78,37,191 shares: 48,00,034 fresh shares and 30,37,157 OFS shares sold by Vipul Shah and Shefali Shah. At the ₹360 cap, that implies approximately ₹172.80 crore fresh issue, ₹109.34 crore OFS and ₹282.14 crore total. BSE and NSE confirm ₹342–₹360 and bidding from 18–20 August; the 41-share lot requires ₹14,760 at the cap.",
+  issueNote: "The final RHP dated 10 August confirms up to 78,37,191 shares: 48,00,034 fresh shares and 30,37,157 OFS shares sold by Vipul Shah and Shefali Shah. At the ₹360 cap, that implies approximately ₹172.80 crore fresh issue, ₹109.34 crore OFS and ₹282.14 crore total. BSE and NSE confirm ₹342–₹360 and bidding from 18–20 August; the 41-share lot requires ₹14,760 at the cap. The RHP schedules the anchor book for 17 August and initially allocates up to 39,18,576 shares to QIBs, 11,75,592 to non-institutional bidders and 27,43,023 to retail bidders, subject to final anchor allocation and permitted category spillovers.",
   issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹342–₹360", lotSize: 41, totalCr: 282.14, freshCr: 172.8, ofsCr: 109.34, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Long-term working-capital requirements for content production", amount: "Up to ₹112.50 crore in the final RHP" },
@@ -729,6 +729,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 operating cash flow", value: "–₹33.21 Cr", context: "Inventory rose by ₹50.98 crore and trade receivables by ₹38.11 crore during the year." },
     { label: "FY26 debt/equity", value: "0.06×", context: "Borrowings were ₹9.09 crore, but production funding needs also appear through inventory, receivables and related-party facilities." },
     { label: "FY26 top-five customers", value: "74.81%", context: "The largest customer contributed 26.87% and the top ten 87.76% of revenue." },
+    { label: "Fresh share of offer", value: "61.25%", context: "The remaining 38.75% is OFS; only the fresh-issue proceeds reach the company." },
   ],
   strengths: [
     "Vipul Shah and the creative team have delivered commercially recognised films and franchises, supporting relationships with talent, studios and distributors.",
@@ -1450,7 +1451,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Skytech is an authorised channel partner, distributor, integrator or solution provider for Mitsubishi Electric India, Endress+Hauser India, Exor India and Euroteck Environmental within defined product, territory and customer scopes.",
     "EPC contracts contributed 79.90% of FY26 revenue, product supply 14.91% and AMC or other services 5.20%. Promoters Paramashivam Deiveekan and Suma Deiveekan have led the Bengaluru-based company since its early operating period.",
   ],
-  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement sets a ₹73–₹77 band and a minimum bid of 3,200 shares, with subsequent bids in multiples of 1,600. That minimum application is ₹2,33,600–₹2,46,400. NSE's 16 August feed showed the issue active; final price, allotment and listing remain subject to NSE Emerge notices.",
+  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement sets a ₹73–₹77 band and a minimum bid of 3,200 shares, with subsequent bids in multiples of 1,600. That minimum application is ₹2,33,600–₹2,46,400. NSE's feed retrieved on 16 August showed 12,38,400 bids against 29,45,600 displayed offer shares, or 0.42×. That exchange display uses the gross offer including the market-maker reservation, so it should not be confused with final category-wise subscription. Final price, allotment and listing remain subject to NSE Emerge notices.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹73–₹77", lotSize: 3200, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "₹16.81 crore, split between FY27 and FY28" },
@@ -1469,6 +1470,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "8.1%", context: "PAT increased 13.4% to ₹4.20 crore as revenue rose 14.4%." },
     { label: "FY26 debt/equity", value: "0.49×", context: "Borrowings increased to ₹9.25 crore but remained below net worth." },
     { label: "FY26 operating cash flow", value: "-₹1.66 crore", context: "Negative despite ₹4.20 crore PAT as receivables, inventory and working capital absorbed cash." },
+    { label: "NSE live demand snapshot", value: "0.42×", context: "12,38,400 bids versus the exchange-displayed gross offer at the 16 August retrieval; not a final category-wise figure." },
   ],
   strengths: [
     "A 16-year operating history and authorisations from established automation vendors provide product access, technical support and customer credibility.",
@@ -1519,7 +1521,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "ENS describes proprietary SaaS products, but the RHP's service-wise table records no subscription-based revenue in FY24, FY25 or FY26. FY26 revenue was 76.82% one-time project fees and 23.18% recurring services, so the current economics remain service- and project-led rather than subscription-led.",
     "The company says it serves clients across India and overseas with a team of about 140 professionals. Promoters are Manish Kumar Srivastava, Avinash Kumar Singh and Anupam Kumar Srivastava; Manish Srivastava also serves as CFO, concentrating operating and financial oversight.",
   ],
-  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. The minimum application is ₹2,08,800–₹2,20,800. BSE's 16 August feed showed the issue live; at the cap the gross offer is approximately ₹33.14 crore and the net public issue ₹31.47 crore.",
+  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. The minimum application is ₹2,08,800–₹2,20,800. At the cap the gross offer is approximately ₹33.14 crore and the net issue ₹31.47 crore. BSE's 14 August close snapshot used a smaller 25,76,400-share live public pool after anchor and market-maker allocations; cumulative demand at ₹92 was 15,38,400 shares, or 0.60× that pool. This is an interim exchange-book snapshot, not final subscription.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "21 August 2026 (proposed in RHP)", priceBand: "₹87–₹92", lotSize: 2400, totalCr: 33.14, freshCr: 33.14, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Enhancement, maintenance and upgrade of existing products through manpower hiring", amount: "₹17.02 crore" },
@@ -1538,6 +1540,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "16.4%", context: "PAT rose to ₹8.40 crore from ₹0.90 crore in FY24." },
     { label: "FY26 operating cash flow", value: "-₹1.10 crore", context: "Negative despite ₹8.40 crore PAT, after positive ₹2.50 crore in FY25." },
     { label: "FY26 revenue model", value: "76.82% project", context: "Recurring services were 23.18%; the RHP records nil subscription-based revenue for FY24–FY26." },
+    { label: "BSE live demand snapshot", value: "0.60×", context: "15,38,400 cap-price bids against the 25,76,400-share post-anchor, post-market-maker pool at 14 August close." },
   ],
   strengths: [
     "ENS addresses digital-commerce, ONDC, mobile and cloud implementation needs through an integrated engineering and marketing portfolio.",
@@ -1572,6 +1575,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "ENS Enterprises August 2026 RHP", href: "https://www.ens.enterprises/wp-content/uploads/2026/08/RHP-ENS-Final.pdf", kind: "Primary" },
     { label: "ENS Enterprises investor page", href: "https://www.ens.enterprises/investors-old/", kind: "Primary" },
     { label: "Corporate Makers offer-document repository", href: "https://corporatemakers.in/ipo-offer-documents.php", kind: "Primary" },
+    { label: "BSE ENS live issue and demand details", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7885", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "BSE current public-issue feed", href: "https://api.bseindia.com/BseIndiaAPI/api/GetPublicIssue_par_updated/w?flag=1&status=&exchange=&ir_flag=", kind: "Primary" },
     { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
@@ -1585,7 +1589,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "In FY26, customised machinery and retrofit work contributed 39.54% of revenue, other services 38.55%, automated machines 18.42% and non-automated machines 3.49%, making project and service execution more material than standard equipment sales.",
     "Technocrats reports more than 2,500 customers, 17 dealers and 14 service locations. Promoters Arun Kumar and Vandana Sharma have long operating involvement, creating domain continuity alongside key-person and family-control considerations.",
   ],
-  issueNote: "The 10 August RHP confirms an entirely fresh issue of up to 46,20,000 shares, including 2,31,000 market-maker shares and a 43,89,000-share net issue. BSE confirms ₹125–₹132, a 1,000-share market lot and a 2,000-share minimum bid, requiring ₹2,50,000–₹2,64,000. The gross fresh issue is approximately ₹57.75–₹60.98 crore and the net issue ₹54.86–₹57.93 crore. BSE's 33,06,000-share live bidding pool reflects the post-anchor and market-maker pool, not the gross offer.",
+  issueNote: "The 10 August RHP confirms an entirely fresh issue of up to 46,20,000 shares, including 2,31,000 market-maker shares and a 43,89,000-share net issue. BSE confirms ₹125–₹132, a 1,000-share market lot and a 2,000-share minimum bid, requiring ₹2,50,000–₹2,64,000. The gross fresh issue is approximately ₹57.75–₹60.98 crore and the net issue ₹54.86–₹57.93 crore. BSE's 14 August close snapshot used a 33,06,000-share live public pool after anchor and market-maker allocations; cumulative demand at the ₹132 cap was 12,85,000 shares, or 0.39× that pool. This is an interim exchange-book snapshot, not final subscription.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final BSE SME notice pending", priceBand: "₹125–₹132", lotSize: 2000, totalCr: 60.98, freshCr: 60.98, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Plant and machinery for plasma cutting, welding and customised automation at existing premises", amount: "₹8.79 crore in the DRHP" },
@@ -1605,6 +1609,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "0.38×", context: "Borrowings rose to ₹14.73 crore, but net worth expanded to ₹39.01 crore." },
     { label: "FY26 operating cash flow", value: "-₹11.66 crore", context: "Negative despite ₹14.94 crore PAT as working-capital balances absorbed cash." },
     { label: "FY26 Maharashtra + Gujarat", value: "75.91%", context: "Revenue remains geographically concentrated despite a national customer and service network." },
+    { label: "BSE live demand snapshot", value: "0.39×", context: "12,85,000 cap-price bids against the 33,06,000-share post-anchor, post-market-maker pool at 14 August close." },
   ],
   strengths: [
     "A more than 30-year corporate history and broad installed-customer base provide engineering experience and aftermarket opportunities.",
