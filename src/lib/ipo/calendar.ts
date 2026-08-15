@@ -40,13 +40,13 @@ const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Credent Connect N Care", slug: "credent-connect-n-care-ipo", market: "SME", opens: "2026-08-13", closes: "2026-08-17", issueSizeCr: 93.90, priceBand: "₹179–₹189", exchange: "NSE SME" },
   { company: "Skytech Infinite Platform", slug: "skytech-infinite-platform-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 22.68, priceBand: "₹73–₹77", exchange: "NSE SME" },
   { company: "ENS Enterprises", slug: "ens-enterprises-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 33.14, priceBand: "₹87–₹92", exchange: "BSE SME" },
-  { company: "Technocrats Plasma Systems", slug: "technocrats-plasma-systems-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 60.98, priceBand: "₹125–₹132*", exchange: "BSE SME" },
+  { company: "Technocrats Plasma Systems", slug: "technocrats-plasma-systems-ipo", market: "SME", opens: "2026-08-14", closes: "2026-08-18", issueSizeCr: 60.98, priceBand: "₹125–₹132", exchange: "BSE SME" },
 
   { company: "Lalithaa Jewellery Mart", slug: "lalithaa-jewellery-mart-ipo", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 1700, priceBand: "₹190–₹201" },
   { company: "Horizon Industrial Parks", slug: "horizon-industrial-parks-ipo", market: "Mainboard", opens: "2026-08-17", closes: "2026-08-19", issueSizeCr: 2600, priceBand: "₹57–₹60" },
   { company: "Shankesh Jewellers", slug: "shankesh-jewellers-ipo", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 367.18, priceBand: "₹88–₹93" },
   { company: "Sunshine Pictures", slug: "sunshine-pictures-ipo", market: "Mainboard", opens: "2026-08-18", closes: "2026-08-20", issueSizeCr: 282.14, priceBand: "₹342–₹360" },
-  // Gaja Alternative Asset Management removed: only draft-stage offer documents were verified; no RHP or exchange notice confirmed 19–21 August.
+  { company: "Gaja Alternative Asset Management", slug: "gaja-alternative-asset-management-ipo", market: "Mainboard", opens: "2026-08-19", closes: "2026-08-21", issueSizeCr: 550, priceBand: "₹152–₹160" },
   // Skyways Air Services removed: its March 2026 RHP launch was deferred and no August dates were verified as of 14 August 2026.
 ];
 
@@ -72,13 +72,12 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 
 export const august2026Snapshot = {
   asOf: "16 August 2026",
-  coverageCount: 24,
+  coverageCount: 25,
   verificationNotes: [
-    "All 24 companies currently shown in the August calendar link to an individual analysis page.",
-    "Gaja Alternative Asset Management is not yet included: BSE's 16 August feed now shows a forthcoming 19–21 August issue at ₹152–₹160, but the final RHP and complete offer structure still require reconciliation. It is queued for the next research batch.",
+    "All 25 companies currently shown in the August calendar link to an individual analysis page.",
+    "Gaja Alternative Asset Management's 12 August RHP and price advertisement confirm a ₹550 crore offer: ₹450 crore fresh issue, ₹100 crore OFS, ₹152–₹160 band, 93-share lot and 19–21 August bidding. The earlier ₹656.20 crore draft structure and ₹10 face value were replaced; the final face value is ₹5.",
     "Skyways Air Services is not included: its March 2026 RHP launch was deferred, and no primary filing confirming an August relaunch was found.",
-    "Asterisks beside selected SME prices identify marketed terms that still require reconciliation to the final prospectus or exchange notice.",
-    "Technocrats Plasma's issuer-hosted RHP confirms 46,20,000 fresh shares and 14–18 August bidding; its marketed price remains starred pending the separate price-band advertisement and BSE SME notice.",
+    "Technocrats Plasma's issuer-hosted RHP confirms 46,20,000 fresh shares and 14–18 August bidding. BSE now confirms ₹125–₹132, a 1,000-share market lot and a 2,000-share minimum bid, so the earlier tentative asterisk has been removed.",
     "Skytech Infinite Platform's official price advertisement confirms a ₹73–₹77 band and a 3,200-share minimum bid, equal to ₹2,33,600–₹2,46,400. NSE's 16 August feed shows the issue active; its ₹22.68 crore calendar size is the full fresh issue at the cap.",
     "ENS Enterprises remains live in BSE's 16 August feed at ₹87–₹92. Its ₹33.14 crore calendar size is the full fresh issue at the cap; the 34,21,200-share net public issue is approximately ₹31.47 crore after the 1,81,200-share market-maker reservation. The RHP records nil subscription revenue in FY24–FY26 despite the SaaS product narrative.",
     "Fascinate Textiles remained active through 19 August in NSE's 16 August current-issue feed, superseding the RHP's original 13 August close; its page now uses the final RHP's FY24–FY26 restated financials.",
@@ -102,5 +101,6 @@ export const august2026Snapshot = {
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
     { label: "Chittorgarh SME IPO Calendar", href: "https://www.chittorgarh.com/calendar/sme-ipo-calendar/2/?month=8&year=2026" },
     { label: "NSE Issue Information", href: "https://www.nseindia.com/market-data/all-upcoming-issues-ipo" },
+    { label: "BSE Public Issue Information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx" },
   ],
 };
