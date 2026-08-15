@@ -67,6 +67,15 @@ function formatCurrency(value: number, compact = false) {
   }).format(value);
 }
 
+function escapePrintHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
 function InputField({
   label,
   value,
@@ -94,7 +103,7 @@ function InputField({
           value={value}
           min={min}
           max={max}
-          onChange={(event) => onChange(Math.max(min, Number(event.target.value) || 0))}
+          onChange={(event) => onChange(Math.min(max ?? Infinity, Math.max(min, Number(event.target.value) || 0)))}
           className="min-w-0 flex-1 bg-transparent text-base font-medium text-[#0B1F3A] outline-none"
         />
         {suffix && <span className="ml-2 text-sm text-slate-400">{suffix}</span>}
@@ -218,12 +227,13 @@ export function WealthPlanner() {
   };
 
   const printPlan = () => {
-    const goalLabel = GOALS.find((goal) => goal.value === form.goal)?.label || "Financial goal";
+    const goalLabel = escapePrintHtml(GOALS.find((goal) => goal.value === form.goal)?.label || "Financial goal");
+    const planExplanation = escapePrintHtml(aiNarrative || narrative).replaceAll("\n", "<br />");
     const scenarioRows = result.scenarios.map((scenario) => `<tr><td>${scenario.name}</td><td>${(scenario.returnRate * 100).toFixed(1)}%</td><td>${formatCurrency(scenario.projected)}</td><td>${Math.round(scenario.fundingRatio * 100)}%</td></tr>`).join("");
     const allocationRows = result.allocation.map((item) => `<span>${item.name}: <strong>${item.value}%</strong></span>`).join("");
     const printWindow = window.open("", "_blank");
     if (!printWindow) return;
-    printWindow.document.write(`<!doctype html><html><head><title>${goalLabel} Wealth Plan</title><style>body{font-family:Arial,sans-serif;color:#0B1F3A;margin:0;padding:48px}header{background:#07192F;color:white;padding:32px;border-radius:16px}h1{margin:8px 0;font-size:34px}.gold{color:#C9A84C}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0}.card{background:#f5f6f8;padding:18px;border-radius:12px}.label{font-size:11px;text-transform:uppercase;color:#64748b}.value{font-size:22px;font-weight:700;margin-top:6px}table{width:100%;border-collapse:collapse;margin:18px 0}td,th{padding:10px;border-bottom:1px solid #e2e8f0;text-align:left}.mix{display:flex;gap:18px;flex-wrap:wrap;background:#FFF9E9;padding:16px;border-radius:12px}.note{font-size:11px;color:#64748b;margin-top:28px;line-height:1.5}@media print{body{padding:20px}}</style></head><body><header><div class="gold">SOHO WEALTH · NOVELTY WEALTH PLAN</div><h1>${goalLabel} roadmap</h1><p>${form.horizonYears}-year horizon · ${form.risk} risk approach · Generated ${new Date().toLocaleDateString("en-IN")}</p></header><div class="grid"><div class="card"><div class="label">Future target</div><div class="value">${formatCurrency(result.target)}</div></div><div class="card"><div class="label">Projected corpus</div><div class="value">${formatCurrency(result.projected)}</div></div><div class="card"><div class="label">Suggested starting SIP</div><div class="value">${formatCurrency(result.requiredSip)}</div></div><div class="card"><div class="label">Funding ratio</div><div class="value">${Math.round(result.fundingRatio * 100)}%</div></div></div><h2>Plan explanation</h2><p>${aiNarrative || narrative}</p><h2>Scenario range</h2><table><thead><tr><th>Scenario</th><th>Return assumption</th><th>Projected</th><th>Funded</th></tr></thead><tbody>${scenarioRows}</tbody></table><h2>Illustrative asset mix</h2><div class="mix">${allocationRows}</div><p class="note">Educational illustration only. Inflation and return assumptions are not guarantees. This document is not investment, tax or legal advice and does not recommend a product. SoHo Wealth is a distributor, not a SEBI Registered Investment Adviser.</p><script>window.onload=()=>window.print()</script></body></html>`);
+    printWindow.document.write(`<!doctype html><html><head><title>${goalLabel} Wealth Plan</title><style>body{font-family:Arial,sans-serif;color:#0B1F3A;margin:0;padding:48px}header{background:#07192F;color:white;padding:32px;border-radius:16px}h1{margin:8px 0;font-size:34px}.gold{color:#C9A84C}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:24px 0}.card{background:#f5f6f8;padding:18px;border-radius:12px}.label{font-size:11px;text-transform:uppercase;color:#64748b}.value{font-size:22px;font-weight:700;margin-top:6px}table{width:100%;border-collapse:collapse;margin:18px 0}td,th{padding:10px;border-bottom:1px solid #e2e8f0;text-align:left}.mix{display:flex;gap:18px;flex-wrap:wrap;background:#FFF9E9;padding:16px;border-radius:12px}.note{font-size:11px;color:#64748b;margin-top:28px;line-height:1.5}@media print{body{padding:20px}}</style></head><body><header><div class="gold">SOHO WEALTH · NOVELTY WEALTH PLAN</div><h1>${goalLabel} roadmap</h1><p>${form.horizonYears}-year horizon · ${form.risk} risk approach · Generated ${new Date().toLocaleDateString("en-IN")}</p></header><div class="grid"><div class="card"><div class="label">Future target</div><div class="value">${formatCurrency(result.target)}</div></div><div class="card"><div class="label">Projected corpus</div><div class="value">${formatCurrency(result.projected)}</div></div><div class="card"><div class="label">Suggested starting SIP</div><div class="value">${formatCurrency(result.requiredSip)}</div></div><div class="card"><div class="label">Funding ratio</div><div class="value">${Math.round(result.fundingRatio * 100)}%</div></div></div><h2>Plan explanation</h2><p>${planExplanation}</p><h2>Scenario range</h2><table><thead><tr><th>Scenario</th><th>Return assumption</th><th>Projected</th><th>Funded</th></tr></thead><tbody>${scenarioRows}</tbody></table><h2>Illustrative asset mix</h2><div class="mix">${allocationRows}</div><p class="note">Educational illustration only. Inflation and return assumptions are not guarantees. This document is not investment, tax or legal advice and does not recommend a product. SoHo Wealth is a distributor, not a SEBI Registered Investment Adviser.</p><script>window.onload=()=>window.print()</script></body></html>`);
     printWindow.document.close();
   };
 

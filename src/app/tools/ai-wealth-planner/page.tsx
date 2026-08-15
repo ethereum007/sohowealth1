@@ -29,10 +29,10 @@ const faqs: FAQ[] = [
   { q: "What is an AI wealth planner?", a: "An AI wealth planner turns goal, time-horizon, savings and risk inputs into an illustrative financial roadmap. This version uses transparent planning calculations to estimate a future corpus, required monthly investment and broad asset allocation; it does not select products or replace personal advice." },
   { q: "How much SIP do I need to reach my financial goal?", a: "The required SIP depends on your target amount, current goal-linked savings, time available and assumed return. Enter those values for an instant monthly estimate. Actual returns will vary, so contributions and assumptions should be reviewed regularly." },
   { q: "Can I use this tool for retirement planning in India?", a: "Yes. Select Retirement, enter the corpus you want, your existing retirement savings and the years remaining. A complete retirement plan should also consider inflation, post-retirement expenses, taxes, insurance and longevity." },
-  { q: "Does SoHo Wealth store my financial information?", a: "No. The values entered in this basic planner are calculated locally in your browser and are not saved. You do not need to provide a PAN, account number, email address or phone number." },
+  { q: "Does SoHo Wealth store my financial information?", a: "Planning calculations run in your browser. Plans are stored only on your device when you explicitly choose Save. If you request an AI explanation, only anonymous planning figures are sent—never your name, PAN, email, phone or account details. Contact information is shared only when you complete the review form and consent." },
   { q: "Is the suggested asset allocation investment advice?", a: "No. It is an educational starting point based only on the selected risk preference. A suitable allocation requires a review of your complete finances, liquidity, taxes, dependants, insurance, existing holdings and ability to tolerate losses." },
   { q: "What return assumptions does the wealth planner use?", a: "The planner uses illustrative annual return assumptions of 8% for Stability First, 10% for Balanced and 11.5% for Growth Focused. These are planning assumptions, not forecasts or guaranteed returns." },
-  { q: "Does the calculator adjust my goal for inflation?", a: "The basic planner expects you to enter the future amount you want to accumulate. If your goal is expressed in today's rupees, first increase it for expected inflation. Education and healthcare costs may rise differently from general inflation." },
+  { q: "Does the calculator adjust my goal for inflation?", a: "Yes. Choose Today's value and the planner compounds your selected inflation rate over the goal horizon, or choose Future target if you already know the amount needed at the goal date. Education and healthcare costs may rise differently from general inflation." },
   { q: "How often should I review my financial goal plan?", a: "Review a goal plan at least annually and after major changes such as marriage, a new child, a home purchase, job change, inheritance or market-driven shifts in your asset allocation." },
 ];
 
@@ -48,9 +48,9 @@ const structuredData = {
   description: "A browser-based goal planning tool with an illustrative corpus projection, monthly investment estimate and asset allocation.",
   provider: { "@id": "https://www.sohowealth.in/#organization" },
   author: { "@id": "https://www.sohowealth.in/#kiran-dutta" },
-  dateModified: "2026-08-13",
+  dateModified: "2026-08-15",
   offers: { "@type": "Offer", price: "0", priceCurrency: "INR" },
-  featureList: ["Goal corpus projection", "Required monthly SIP estimate", "Risk-based asset allocation", "Retirement planning", "Education goal planning"],
+  featureList: ["Inflation-adjusted goal projection", "Step-up SIP simulation", "Required monthly SIP estimate", "Downside and upside scenarios", "Goal stress testing", "Multi-goal prioritisation", "Private goal tracking", "Downloadable wealth plan"],
 };
 
 export default function AIWealthPlannerPage() {
@@ -119,7 +119,7 @@ export default function AIWealthPlannerPage() {
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#E5CB83]">Calculator methodology</p>
             <h2 className="mt-3 font-display text-3xl font-semibold md:text-4xl">How the SIP and corpus projection is calculated.</h2>
-            <p className="mt-5 leading-relaxed text-white/70">The planner compounds existing savings annually and adds the future value of monthly investments. It then works backwards from your target corpus to estimate the monthly SIP required over the selected horizon.</p>
+            <p className="mt-5 leading-relaxed text-white/70">The planner compounds existing savings monthly, adds monthly investments and applies your chosen annual SIP step-up. It then works backwards from the inflation-adjusted target to estimate the starting monthly SIP required over the selected horizon.</p>
             <p className="mt-4 leading-relaxed text-white/70">The asset mix is a broad educational framework linked to your chosen risk preference. It does not recommend mutual funds, PMS, SIF, AIF or individual securities.</p>
           </div>
           <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05]">
