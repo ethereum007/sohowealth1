@@ -85,6 +85,7 @@ export const august2026Snapshot = {
     "NSE's current-issue feed confirms Lalithaa Jewellery Mart's ₹190–₹201 band and 17–19 August bidding; its offer split and lot remain identified as marketed terms pending direct final-document reconciliation.",
     "NSE's current-issue feed confirms Horizon Industrial Parks' ₹57–₹60 band and 17–19 August bidding; its marketed offer objects remain subject to direct final-document reconciliation.",
     "NSE's current-issue feed confirms Shankesh Jewellers' 3,94,82,000-share issue, ₹88–₹93 band and 18–20 August bidding; the detail page corrects the marketed minimum lot to 160 shares.",
+    "Sunshine Pictures' final RHP confirms 48,00,034 fresh shares, 30,37,157 OFS shares and ₹112.50 crore for long-term working capital; NSE confirms ₹342–₹360 and 18–20 August bidding.",
   ],
   sourceLinks: [
     { label: "Chittorgarh Mainboard IPO Calendar", href: "https://www.chittorgarh.com/calendar/ipo-calendar/1/?month=8&year=2026" },
