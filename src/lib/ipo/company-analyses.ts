@@ -127,15 +127,15 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "India Ratings: LEAP India rating rationale, February 2026", href: "https://www.indiaratings.co.in/pressrelease/81339", kind: "Secondary" },
   ],
 }, {
-  slug: "dhoot-transmission-ipo", company: "Dhoot Transmission", market: "Mainboard", sector: "Automotive electrical and electronic components", status: "Issue closed; listing expected 17 August 2026", analysisAsOf: "16 August 2026",
+  slug: "dhoot-transmission-ipo", company: "Dhoot Transmission", market: "Mainboard", sector: "Automotive electrical and electronic components", status: "BSE listing confirmed for 17 August 2026; trading not started as of 16 August", analysisAsOf: "16 August 2026",
   summary: "Dhoot Transmission is a scaled wiring-harness and automotive-electronics supplier with strong positions in two- and three-wheelers and rising EV exposure. Its restated financials show rapid growth and high returns, while customer concentration, acquisition integration, cyclical OEM demand and debt-funded expansion remain central analytical risks.",
   business: [
     "Dhoot designs and manufactures wiring harnesses, battery packs, electronic sensors and controllers, automotive switches, connectors and other electrical systems for two-wheelers, three-wheelers, commercial vehicles, off-road equipment and selected non-automotive applications.",
     "The company operated 22 manufacturing facilities across India and overseas as of December 2025. Plants located near customer factories support just-in-time supply, but they also increase execution complexity and fixed-cost exposure when individual vehicle programmes slow.",
     "Issuer disclosures describe Dhoot as one of the two largest suppliers in India's two- and three-wheeler wiring-harness market. EV-related revenue reached 24.17% in FY26, slightly below 25.22% in FY25; market-share and industry-growth figures remain issuer-commissioned claims.",
   ],
-  issueNote: "The final RHP confirms a ₹1,400 crore fresh issue and OFS of 1,91,37,602 shares. At ₹871, the OFS is approximately ₹1,666.89 crore and total offer approximately ₹3,066.89 crore. Listing remained scheduled for 17 August when checked on 16 August.",
-  issue: { open: "10 August 2026", close: "12 August 2026", listing: "Expected 17 August 2026", priceBand: "₹829–₹871", lotSize: 17, totalCr: 3066.89, freshCr: 1400, ofsCr: 1666.89, faceValue: "₹2" },
+  issueNote: "The final RHP confirms a ₹1,400 crore fresh issue and OFS of 1,91,37,602 shares. BSE notice 20260814-32 fixes the issue price at ₹871, making the OFS approximately ₹1,666.89 crore and the total offer approximately ₹3,066.89 crore. It also confirms 13 August allotment, 20,45,48,057 post-issue shares, scrip 544867 / DHOOTTRANS and admission to BSE's B group from 17 August with a one-share market lot. Trading had not begun when this analysis was checked on 16 August, so no listing-price outcome is stated.",
+  issue: { open: "10 August 2026", close: "12 August 2026", listing: "BSE listing confirmed for 17 August 2026", priceBand: "₹829–₹871; issue price ₹871", lotSize: 17, totalCr: 3066.89, freshCr: 1400, ofsCr: 1666.89, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of company borrowings", amount: "Up to ₹493.99 crore" },
     { purpose: "Investment in subsidiaries for repayment of their borrowings", amount: "Up to ₹272.59 crore" },
@@ -156,6 +156,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Largest-customer share", value: "31.84%", context: "Bajaj Auto was Dhoot's largest customer in FY26; the top ten customers contributed 80.93%." },
     { label: "FY26 employee attrition", value: "15.20%", context: "Permanent-employee attrition improved from 19.10% in FY24; the group reported 2,735 permanent employees." },
     { label: "Upper-band FY26 P/E", value: "35.7×", context: "Based on ₹871 and RHP FY26 EPS of ₹24.40, before fresh-issue dilution." },
+    { label: "Final issue price", value: "₹871", context: "BSE notice 20260814-32 confirms 20,45,48,057 post-issue shares and trading from 17 August under scrip 544867." },
   ],
   strengths: [
     "Revenue grew 31.4% in FY26 and PAT reached ₹396.84 crore, while capacity utilisation improved to 74.3%.",
@@ -192,18 +193,19 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Dhoot Transmission final RHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1785825527649.pdf", kind: "Primary" },
     { label: "Dhoot Transmission price-band advertisement", href: "https://www.dhoottransmission.com/pdf/Dhoot-Transmission-Limited-Price-Band-Advt.pdf", kind: "Primary" },
     { label: "Dhoot Transmission IPO disclosures", href: "https://www.dhoottransmission.com/investor-relations/ipo-related-disclosures", kind: "Primary" },
+    { label: "BSE Dhoot listing notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-32/20260814-32.pdf", kind: "Primary" },
     { label: "Bain Capital announcement: strategic investment", href: "https://www.baincapital.com/news/dhoot-transmission-group-secures-strategic-growth-investment-bain-capital-significant-minority", kind: "Primary" },
   ],
 }, {
-  slug: "molbio-diagnostics-ipo", company: "Molbio Diagnostics", market: "Mainboard", sector: "Point-of-care molecular diagnostics", status: "Issue closed; listing expected 17 August 2026", analysisAsOf: "16 August 2026",
+  slug: "molbio-diagnostics-ipo", company: "Molbio Diagnostics", market: "Mainboard", sector: "Point-of-care molecular diagnostics", status: "BSE listing confirmed for 17 August 2026; trading not started as of 16 August", analysisAsOf: "16 August 2026",
   summary: "Molbio Diagnostics develops the portable Truenat molecular-testing platform and disease-specific test kits. Its installed devices can support recurring consumable sales, but the economics are concentrated in tuberculosis programmes, government and aid-agency procurement, large customers and inventory with finite shelf life.",
   business: [
     "Molbio's Truenat platform combines portable, battery-operated PCR analysers with single-use disease-specific test chips and sample-processing products. The installed device base can create repeat consumable demand as tests are run.",
     "As of March 2026, the issuer offered molecular tests for 30 diseases through 43 assays, including tuberculosis, COVID-19, HIV, hepatitis and HPV. Truenat's TB application has received WHO recognition for defined diagnostic uses.",
     "The group also includes R&D, radiology and digital-pathology activities through subsidiaries. OptraSCAN became a subsidiary in November 2025, broadening the portfolio but adding acquisition, product-development and control complexity.",
   ],
-  issueNote: "The final RHP confirms a ₹200 crore fresh issue and OFS of 91.66 lakh shares. At ₹807, that is 24.80246 lakh fresh shares, ₹739.70 crore OFS and ₹939.70 crore total. A 7 August addendum records promoter Exxora selling 19,82,649 additional pre-offer shares at ₹807 outside the OFS, reducing its holding to 39.47% before the offer.",
-  issue: { open: "10 August 2026", close: "12 August 2026", listing: "Expected 17 August 2026", priceBand: "₹768–₹807", lotSize: 18, totalCr: 939.7, freshCr: 200, ofsCr: 739.7, faceValue: "₹1" },
+  issueNote: "The final RHP confirms a ₹200 crore fresh issue and OFS of 91.66 lakh shares. At the ₹807 final issue price confirmed by BSE notice 20260814-42, that is 24.80246 lakh fresh shares, approximately ₹739.70 crore OFS and ₹939.70 crore total. A 7 August addendum records promoter Exxora selling 19,82,649 additional pre-offer shares at ₹807 outside the OFS, reducing its holding to 39.47% before the offer. The BSE notice also confirms 13 August allotment, 11,52,39,996 post-issue shares, scrip 544866 / MOLBIO and B-group trading from 17 August. Trading had not begun as of 16 August, so listing-price performance remains unavailable.",
+  issue: { open: "10 August 2026", close: "12 August 2026", listing: "BSE listing confirmed for 17 August 2026", priceBand: "₹768–₹807; issue price ₹807", lotSize: 18, totalCr: 939.7, freshCr: 200, ofsCr: 739.7, faceValue: "₹1" },
   useOfProceeds: [
     { purpose: "R&D facility, Centre of Excellence and connected office space", amount: "Up to ₹99.37 crore" },
     { purpose: "Plant, machinery and equipment for Goa and Visakhapatnam units", amount: "Up to ₹73.60 crore" },
@@ -223,6 +225,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 contingent liabilities", value: "₹168.74 Cr", context: "Primarily bank guarantees of ₹90.10 crore and disputed direct and indirect taxes of ₹78.39 crore." },
     { label: "FY26 employee attrition", value: "14.38%", context: "160 permanent employees exited; the rate improved from 22.18% in FY24." },
     { label: "Upper-band FY26 P/E", value: "54.64×", context: "Issuer-disclosed multiple at ₹807 using FY26 diluted EPS of ₹14.77." },
+    { label: "Final issue price", value: "₹807", context: "BSE notice 20260814-42 confirms 11,52,39,996 post-issue shares and trading from 17 August under scrip 544866." },
   ],
   strengths: [
     "The device-plus-consumables architecture can create repeat kit revenue after analyser deployment.",
@@ -262,6 +265,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Molbio Diagnostics final RHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1786084999541.pdf", kind: "Primary" },
     { label: "Molbio Diagnostics addendum to RHP, 7 August 2026", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1786085053193.pdf", kind: "Primary" },
     { label: "Molbio investor disclosures and financials", href: "https://www.molbiodiagnostics.com/investors/", kind: "Primary" },
+    { label: "BSE Molbio listing notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-42/20260814-42.pdf", kind: "Primary" },
     { label: "Molbio issuer announcement: IPO filing", href: "https://www.molbiodiagnostics.com/newsroom/molbio-diagnostics-files-for-ipo-to-raise-rs-200-cr-ofs-of-1-25-cr-shares/", kind: "Primary" },
   ],
 }, {
