@@ -150,6 +150,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "15.7%", context: "Down from 17.2% in FY25 and 18.3% in FY24 despite higher scale." },
     { label: "FY26 operating cash flow", value: "₹347.66 Cr", context: "Positive, while investing outflow was ₹1,261.69 crore following acquisitions and capex." },
     { label: "FY26 capacity utilisation", value: "74.3%", context: "Up from 64.2% in FY25 across the disclosed manufacturing base." },
+    { label: "Largest-customer share", value: "31.84%", context: "Bajaj Auto was Dhoot's largest customer in FY26; the top ten customers contributed 80.93%." },
+    { label: "FY26 employee attrition", value: "15.20%", context: "Permanent-employee attrition improved from 19.10% in FY24; the group reported 2,735 permanent employees." },
     { label: "Upper-band FY26 P/E", value: "35.7×", context: "Based on ₹871 and RHP FY26 EPS of ₹24.40, before fresh-issue dilution." },
   ],
   strengths: [
@@ -160,12 +162,13 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The Jhajjar and Hosur facilities expand capacity near important northern and southern automotive clusters.",
   ],
   concerns: [
-    "The top five customers contributed 72.49% of revenue in the nine months ended December 2025. Programme loss, insourcing or weaker production at a major OEM could materially affect results.",
+    "The top five customers contributed 72.49% of revenue in the nine months ended December 2025. In FY26, Bajaj Auto alone contributed 31.84% and the top ten customers contributed 80.93%; programme loss, insourcing or weaker production at a major OEM could materially affect results.",
     "Two- and three-wheelers represented 78.3% of FY26 revenue, leaving the business exposed to category volumes and model cycles.",
     "Borrowings increased to ₹841.39 crore in FY26. The March balance sheet also held ₹1,084.28 crore of cash and equivalents after a ₹1,022.56 crore promoter capital infusion not yet fully deployed.",
     "EBITDA margin fell to 15.7% in FY26 from 18.3% in FY24, so strong revenue growth has not translated into stable operating spreads.",
     "Copper, polymers, connectors and electronic inputs create commodity, foreign-exchange and supply-chain risk; pass-through arrangements may operate with a lag.",
     "The group has expanded through acquisitions and internal restructuring. Integration, related-party history, goodwill and cross-border subsidiary controls need continued scrutiny.",
+    "The FY26 auditor reported that the core accounting software's audit trail did not operate throughout the year, another software lacked an audit-trail feature, evidence was inadequate for a third system and prior-year logs were not fully preserved. These are governance and financial-reporting control signals even though the restated financial statements were filed.",
     "Bain Capital affiliate BC Asia Investments XV is both a promoter and a major OFS seller. The sale is a partial liquidity event alongside primary capital raising.",
   ],
   monitor: [
@@ -174,7 +177,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Ramp-up cost, utilisation and customer nominations at the Jhajjar and Hosur plants.",
     "EV revenue mix and profitability rather than market-share claims alone.",
     "Operating cash flow, working-capital days and capex after the recent expansion cycle.",
-    "Post-listing promoter shareholding, related-party transactions and acquisition discipline.",
+    "Closure of the disclosed audit-trail gaps, alongside post-listing promoter shareholding, related-party transactions and acquisition discipline.",
   ],
   valuation: [
     "At ₹871, the RHP multiple is approximately 35.7× FY26 EPS of ₹24.40 on a pre-offer basis. Fresh-issue dilution and interest savings from debt repayment move in opposite directions and should be modelled separately.",
@@ -184,6 +187,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   sources: [
     { label: "SEBI filing page: Dhoot Transmission RHP", href: "https://www.sebi.gov.in/filings/public-issues/aug-2026/dhoot-transmission-limited-rhp_103333.html", kind: "Primary" },
     { label: "Dhoot Transmission final RHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1785825527649.pdf", kind: "Primary" },
+    { label: "Dhoot Transmission price-band advertisement", href: "https://www.dhoottransmission.com/pdf/Dhoot-Transmission-Limited-Price-Band-Advt.pdf", kind: "Primary" },
     { label: "Dhoot Transmission IPO disclosures", href: "https://www.dhoottransmission.com/investor-relations/ipo-related-disclosures", kind: "Primary" },
     { label: "Bain Capital announcement: strategic investment", href: "https://www.baincapital.com/news/dhoot-transmission-group-secures-strategic-growth-investment-bain-capital-significant-minority", kind: "Primary" },
   ],
@@ -213,6 +217,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "22.1%", context: "Derived consistently from PBT, finance cost, depreciation and other income; below FY25's 25.2%." },
     { label: "FY26 operating cash flow", value: "₹50.39 Cr", context: "Down from ₹287.10 crore as receivables and inventory absorbed cash." },
     { label: "FY26 government/aid exposure", value: "84.6%", context: "Non-government agencies provided only 15.44% of finished-goods sales." },
+    { label: "FY26 contingent liabilities", value: "₹168.74 Cr", context: "Primarily bank guarantees of ₹90.10 crore and disputed direct and indirect taxes of ₹78.39 crore." },
+    { label: "FY26 employee attrition", value: "14.38%", context: "160 permanent employees exited; the rate improved from 22.18% in FY24." },
     { label: "Upper-band FY26 P/E", value: "54.64×", context: "Issuer-disclosed multiple at ₹807 using FY26 diluted EPS of ₹14.77." },
   ],
   strengths: [
@@ -227,6 +233,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "TB test kits represented 70.20% of FY26 finished-goods sales; alternative testing protocols or procurement changes could affect the core franchise.",
     "The top customer, top five and top ten customers contributed 56.52%, 73.83% and 83.26% of FY26 finished-goods sales respectively.",
     "Trade receivables rose to ₹408.74 crore and inventory to ₹449.26 crore. FY26 operating cash flow fell to ₹50.39 crore despite ₹164.14 crore PAT.",
+    "Contingent liabilities were ₹168.74 crore at March 2026, comprising ₹90.10 crore of bank guarantees, ₹46.15 crore of disputed direct taxes, ₹32.24 crore of disputed indirect taxes and ₹0.26 crore of legal claims. These are exposures, not booked debt, and their outcome remains uncertain.",
     "Auditor reporting on internal financial controls included a disclaimer of opinion in FY23 and FY24; remediation and sustained FY25 controls warrant monitoring.",
     "The OFS is 78.7% of the upper-band offer, so most proceeds provide liquidity to existing shareholders rather than capital to the company.",
     "The Bigtec IP agreement requires royalty of up to 10% of Molbio's topline for an extended term and a security deposit up to ₹200 crore; intra-group royalty is eliminated on consolidation but remains material to subsidiary economics.",
@@ -237,6 +244,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Revenue diversification outside TB and outside government or aid-funded programmes.",
     "Receivable days, operating cash flow and overdue government balances.",
     "Inventory ageing, expiry provisions, write-offs and kit demand forecasting.",
+    "Movement in disputed tax exposures, bank guarantees and other contingent liabilities.",
     "R&D spending, capitalization policy, regulatory approvals and commercial uptake of new assays.",
     "Export registrations and recurring consumable revenue per installed Truenat device.",
     "Internal-control reporting, related-party transactions and performance of acquired subsidiaries including OptraSCAN.",
