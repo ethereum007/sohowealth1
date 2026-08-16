@@ -120,6 +120,7 @@ const retirementTools = [
   { title: "Readiness check", text: "Review ten foundations and find the most useful next planning step.", href: "/tools/retirement-readiness-check" },
   { title: "NPS annuity calculator", text: "Turn a live annuity quote into monthly, quarterly and annual income.", href: "/tools/nps-annuity-calculator" },
   { title: "EPF calculator", text: "Estimate how an existing EPF balance and future monthly credits may grow.", href: "/tools/epf-calculator" },
+  { title: "PPF calculator", text: "Estimate a PPF maturity value with editable deposit, term and rate assumptions.", href: "/tools/ppf-calculator" },
 ] as const;
 
 const officialRetirementResources = [
