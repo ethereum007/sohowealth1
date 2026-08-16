@@ -19,7 +19,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The current promoters acquired the company in 2021 and manufacturing under the present operating setup began that year. The reported growth therefore comes from a relatively short operating history under current control.",
     "The Andhra Pradesh facility's authorized capacity was 1,04,025 MTPA in FY26. Total production reached 69,855 tonnes and utilisation improved to 67.15%, from 45.16% in FY25, after the authorized capacity had expanded during FY25.",
   ],
-  issueNote: "The 27 July final RHP and the ₹53 issue price reflected in NSE's 12 August trading file support a gross offer of 8,03,52,358 shares: approximately 6,03,77,358 fresh shares raising ₹320 crore and 1,99,75,000 OFS shares worth ₹105.87 crore. The two promoter selling shareholders offered 99,87,500 shares each. The company receives only the fresh-issue proceeds; the OFS proceeds go to the sellers.",
+  issueNote: "The 27 July final RHP and the ₹53 issue price reflected in NSE's 12 August trading file support a gross offer of 8,03,52,358 shares: approximately 6,03,77,358 fresh shares raising ₹320 crore and 1,99,75,000 OFS shares worth ₹105.87 crore. The two promoter selling shareholders offered 99,87,500 shares each. The company receives only the fresh-issue proceeds; the OFS proceeds go to the sellers. NSE's official 12 August file records a ₹72.00 open and ₹67.12 close on the first trading day, 35.8% and 26.6% above the ₹53 issue price respectively; these are historical market outcomes, not a forward view.",
   issue: { open: "5 August 2026", close: "7 August 2026", listing: "12 August 2026", priceBand: "₹50–₹53", lotSize: 281, totalCr: 425.87, freshCr: 320, ofsCr: 105.87, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "₹220 crore" }, { purpose: "Repayment or prepayment of borrowings", amount: "₹22 crore" },
@@ -34,6 +34,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "12.60%", context: "Up from approximately 6.1% in FY24." }, { label: "FY26 PAT margin", value: "7.25%", context: "Profit grew faster than revenue across the reported period." },
     { label: "FY26 debt/equity", value: "1.25×", context: "Improved as equity expanded, though absolute borrowings increased." }, { label: "Upper-band P/E", value: "15.96×", context: "Based on reported FY26 EPS of ₹3.32 and the ₹53 upper band." },
     { label: "FY26 operating cash/PAT", value: "35.2%", context: "₹29.83 crore operating cash flow versus ₹84.68 crore PAT; FY24 operating cash flow was negative ₹25.26 crore." },
+    { label: "Listing-day close vs issue", value: "+26.6%", context: "NSE recorded a ₹72.00 open and ₹67.12 close on 12 August versus the ₹53 issue price." },
   ],
   strengths: [
     "Revenue increased from ₹462.96 crore in FY24 to ₹1,167.65 crore in FY26, while EBITDA and PAT expanded faster.", "EBITDA margin improved materially, indicating operating leverage and/or better spreads over the reported period.",
@@ -69,7 +70,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company also provides repair, sanitation, inventory management and reverse-logistics services. Its economics depend on keeping assets deployed, extending their useful life and efficiently moving them between customer locations and fulfilment centres.",
     "The final RHP describes a network business whose value depends on asset density, retrieval discipline and repeat customer routes. Scale improves pooling economics only when utilisation and asset recovery keep pace with fleet additions.",
   ],
-  issueNote: "The final RHP confirms a ₹2,480 crore offer comprising ₹480 crore fresh issue and ₹2,000 crore OFS. A 5 August addendum also records promoter Vertical Holdings II transferring 2.3511 crore pre-offer shares, equal to 5.67% of fully diluted pre-offer capital, mostly at ₹159; those transfers were outside the OFS.",
+  issueNote: "The final RHP confirms a ₹2,480 crore offer comprising ₹480 crore fresh issue and ₹2,000 crore OFS. A 5 August addendum also records promoter Vertical Holdings II transferring 2.3511 crore pre-offer shares, equal to 5.67% of fully diluted pre-offer capital, mostly at ₹159; those transfers were outside the OFS. NSE's official 14 August file records a ₹165.90 open and ₹144.93 close, equal to 4.3% above and 8.8% below the ₹159 issue price respectively; the first-day range was ₹143–₹167.",
   issue: { open: "7 August 2026", close: "11 August 2026", listing: "14 August 2026", priceBand: "₹151–₹159", lotSize: 94, totalCr: 2480, freshCr: 480, ofsCr: 2000, faceValue: "₹1" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of identified borrowings", amount: "Up to ₹360 crore" },
@@ -86,6 +87,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "49.5%", context: "Derived consistently from PBT, finance cost, depreciation and other income; depreciation alone was ₹204.33 crore." },
     { label: "FY26 operating cash flow", value: "₹268.27 Cr", context: "Positive, but below ₹390.24 crore spent on property, plant and equipment." },
     { label: "FY26 borrowings/equity", value: "1.01×", context: "Borrowings reached ₹1,017.73 crore before the planned ₹360 crore repayment." },
+    { label: "Listing-day close vs issue", value: "-8.8%", context: "NSE recorded a ₹165.90 open and ₹144.93 close on 14 August versus the ₹159 issue price." },
     { label: "Upper-band FY26 P/E", value: "106.0×", context: "RHP multiple using the ₹159 cap price and FY26 diluted EPS of ₹1.50, before fresh-issue dilution." },
   ],
   strengths: [
@@ -121,6 +123,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "LEAP India final RHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1785734131378.pdf", kind: "Primary" },
     { label: "LEAP India addendum and corrigendum, 5 August 2026", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1786079029135.pdf", kind: "Primary" },
     { label: "LEAP India offer-document page", href: "https://www.leapindia.net/drhpdownload", kind: "Primary" },
+    { label: "NSE security bhavdata: 14 August 2026", href: "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_14082026.csv", kind: "Primary" },
     { label: "India Ratings: LEAP India rating rationale, February 2026", href: "https://www.indiaratings.co.in/pressrelease/81339", kind: "Secondary" },
   ],
 }, {
@@ -269,7 +272,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Projects are primarily won through competitive government tenders. Scale depends on bid qualification, bank guarantees, working-capital funding, site availability, approvals, subcontractor execution and timely certification of bills.",
     "The final RHP reports a ₹1,235.90 crore closing order book at March 2026, up from ₹768.82 crore a year earlier. Outstanding work reached ₹1,320.73 crore by 15 July, plus a ₹196.47 crore L1 Delhi Jal Board project not yet included.",
   ],
-  issueNote: "The final offer comprised 95.05 lakh fresh shares and 23.76 lakh OFS shares at ₹200–₹212. At the upper band this equates to approximately ₹201.51 crore fresh issue, ₹50.37 crore OFS and ₹251.88 crore total.",
+  issueNote: "The final offer comprised 95.05 lakh fresh shares and 23.76 lakh OFS shares at ₹200–₹212. At the upper band this equates to approximately ₹201.51 crore fresh issue, ₹50.37 crore OFS and ₹251.88 crore total. NSE's official 14 August file records a ₹284.00 open and ₹311.15 close, 34.0% and 46.8% above the ₹212 issue price respectively; the first-day range was ₹284.00–₹334.40.",
   issue: { open: "7 August 2026", close: "11 August 2026", listing: "14 August 2026", priceBand: "₹200–₹212", lotSize: 70, totalCr: 251.88, freshCr: 201.51, ofsCr: 50.37, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Funding working-capital requirements", amount: "₹138 crore" },
@@ -286,6 +289,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "20.3%", context: "Derived consistently from PBT, finance cost, depreciation and other income; up from 17.2% in FY25." },
     { label: "FY26 operating cash flow", value: "₹28.70 Cr", context: "Positive but below ₹43.32 crore PAT as working capital absorbed cash." },
     { label: "FY26 order book", value: "₹1,235.90 Cr", context: "3.6× FY26 revenue before the later July update and L1 project." },
+    { label: "Listing-day close vs issue", value: "+46.8%", context: "NSE recorded a ₹284.00 open and ₹311.15 close on 14 August versus the ₹212 issue price." },
     { label: "Upper-band FY26 P/E", value: "14.7×", context: "Based on ₹212 and RHP FY26 EPS of ₹14.39, before fresh-issue dilution." },
   ],
   strengths: [
@@ -322,6 +326,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Technocraft Ventures final RHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/jul-2026/1785495636128.pdf", kind: "Primary" },
     { label: "SEBI filing page: Technocraft Ventures DRHP", href: "https://www.sebi.gov.in/filings/public-issues/aug-2025/technocraft-ventures-limited-drhp_96055.html", kind: "Primary" },
     { label: "SEBI addendum to the DRHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/oct-2025/1760589175985.pdf", kind: "Primary" },
+    { label: "NSE security bhavdata: 14 August 2026", href: "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_14082026.csv", kind: "Primary" },
     { label: "Infomerics rating rationale, March 2026", href: "https://infomericstorage.blob.core.windows.net/uploads/pr_Technocraft_Ventures_19mar26_1e225b0d2e.pdf", kind: "Secondary" },
   ],
 }, {
