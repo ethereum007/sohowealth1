@@ -524,6 +524,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Indicative post-offer promoter holding", value: "≈82.1–82.8%", context: "Derived across the price band from the fresh issue, ₹500 crore promoter OFS and disclosed pre-offer shareholding; the employee discount can cause a small variation." },
     { label: "Upper-band diluted P/E", value: "≈11.1×", context: "Approximation using FY26 PAT and post-fresh-issue shares at ₹201; final allotment may make a small difference." },
     { label: "Anchor allocation", value: "₹508.20 Cr", context: "BSE confirms 2,52,83,581 shares allocated at the ₹201 cap on 14 August." },
+    { label: "FY26 inventory intensity", value: "89.7% of assets", context: "Derived from ₹9,816.28 crore of inventory and ₹10,945.14 crore of total assets; the ₹998.68 crore offer-funded inventory adds about 10.2% to the FY26 stock base." },
   ],
   strengths: [
     "The final RHP shows a substantial 61-store South Indian footprint, long operating history and FY26 revenue above ₹25,000 crore.",
@@ -532,7 +533,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "₹1,033.23 crore of fresh proceeds is tied directly to inventory and fit-out for 10 new stores, making deployment measurable after listing.",
   ],
   concerns: [
-    "Inventory reached ₹9,816.28 crore in FY26 and operating cash flow was negative ₹397.76 crore despite ₹1,009.82 crore PAT. The offer adds still more inventory before new stores establish throughput.",
+    "Inventory reached ₹9,816.28 crore, or 89.7% of FY26 assets, and operating cash flow was negative ₹397.76 crore despite ₹1,009.82 crore PAT. The ₹998.68 crore offer-funded inventory equals about 10.2% of the FY26 inventory base and arrives before the 10 new stores establish throughput.",
     "Borrowings rose to ₹1,604.14 crore in FY26 from ₹949.26 crore in FY25; outstanding borrowings were ₹1,238.10 crore at 30 June 2026.",
     "Gold jewellery contributed 92.33% of FY26 revenue and procurement is concentrated. Gold-price movements can affect consumer demand, reported sales, collateral and margins.",
     "Customer purchase schemes contributed more than 10% of revenue and create advance obligations that must be matched by inventory and liquidity.",
@@ -596,6 +597,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Committed occupancy", value: "93.56%", context: "Across 28.55 million operational square feet as of 31 May 2026." },
     { label: "Upper-band EV/EBITDA", value: "31.16×", context: "Official price-ad calculation on restated FY26 EBITDA; proforma EV/EBITDA was 31.31×." },
     { label: "Anchor allocation", value: "₹1,167.75 Cr", context: "BSE confirms 19,46,25,000 shares allocated at the ₹60 cap on 14 August." },
+    { label: "Illustrative post-issue net debt/EBITDA", value: "3.28×", context: "Derived from the price advertisement's ₹1,992.22 crore post-repayment net external debt and ₹607.80 crore FY26 restated EBITDA." },
   ],
   strengths: [
     "High committed occupancy and a diversified tenant base support rental visibility; the largest customer contributed 11.12% of FY26 proforma revenue and the top five 28.14%.",
@@ -605,7 +607,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   concerns: [
     "Horizon reported losses in FY24, FY25 and FY26 on both restated and proforma bases because depreciation and finance costs outweighed property-level earnings.",
-    "FY26 borrowings were ₹6,884.34 crore. The RHP illustrates ₹4,634.34 crore after repayment, so leverage remains substantial even after using most of the issue proceeds.",
+    "FY26 borrowings were ₹6,884.34 crore. The RHP illustrates ₹4,634.34 crore after repayment, still 7.62× FY26 restated EBITDA; the price-advertisement bridge leaves net external debt at about 3.28× EBITDA on the disclosed assumptions.",
     "FY26 capital expenditure on investment property, plant, work-in-progress and asset acquisitions was ₹1,569.77 crore. Debt reduction does not eliminate the future funding requirement of a development- and acquisition-led platform.",
     "Expansion has relied on acquisitions, project subsidiaries and proforma consolidation. Investors must reconcile statutory, proforma and final-RHP figures before comparing growth or margins.",
     "Warehouse valuations are sensitive to occupancy, lease renewals, rent escalation, capitalisation rates, interest rates and residual development capex.",
@@ -646,7 +648,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Revenue comes from direct sale of finished jewellery and job-work arrangements where customers provide bullion. Revenue, gross margin and working-capital intensity differ materially between these routes, so gold processed and product mix matter alongside headline sales.",
     "Corporate clients contributed 64.25% of FY26 revenue from operations, up from 55.80% in FY25. The disclosed customer set includes organised chains, making sell-through and procurement decisions at large retailers relevant to Shankesh's order flow.",
   ],
-  issueNote: "The 10 August RHP and the official 11 August price-band advertisement confirm 3,94,82,000 shares: 2,94,82,000 fresh shares and 1,00,00,000 OFS shares sold by promoters Kantilal Kheemraj Jain and Manoj Kantilal Jain. The ₹88–₹93 band, 160-share lot and 18–20 August bidding are now primary-source verified; the minimum application at the cap is ₹14,880. At ₹93, the offer is approximately ₹367.18 crore, split into ₹274.18 crore fresh and ₹93 crore OFS. Anchor bidding is scheduled for 17 August, one working day before the public offer.",
+  issueNote: "The 10 August RHP and the official 11 August price-band advertisement confirm 3,94,82,000 shares: 2,94,82,000 fresh shares and 1,00,00,000 OFS shares sold by promoters Kantilal Kheemraj Jain and Manoj Kantilal Jain. The ₹88–₹93 band, 160-share lot and 18–20 August bidding are primary-source verified; the minimum application at the cap is ₹14,880. BSE issue record 7889 currently shows a one-share market lot and minimum bid, which conflicts with the official price advertisement and appears to be a pre-open placeholder; this analysis therefore uses the 160-share marketed lot while flagging the exchange display for recheck. At ₹93, the offer is approximately ₹367.18 crore, split into ₹274.18 crore fresh and ₹93 crore OFS. Anchor bidding is scheduled for 17 August, one working day before the public offer.",
   issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹88–₹93", lotSize: 160, totalCr: 367.18, freshCr: 274.18, ofsCr: 93, faceValue: "₹5" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹158 crore" },
@@ -682,6 +684,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Two promoter shareholders are selling shares while the company is also raising funds to repay debt; post-issue holdings and related-party balances require review.",
     "Customer product returns rose to ₹117.76 crore, or 7.22% of FY26 revenue, from 5.23% in FY25 and 4.36% in FY24, creating increasing quality, rework and cash-flow risk.",
     "The official price-band advertisement states a 13.90% weighted-average RoNW, while the separately published basis-of-offer-price table derives 42.37% from FY24–FY26 RoNW of 21.26%, 40.07% and 50.94%. The annual figures reconcile to 42.37%; the advertisement discrepancy should be treated as unresolved unless corrected by the issuer or bookrunners.",
+    "BSE issue record 7889 displays a one-share market lot and minimum bid before the offer opens, conflicting with the official 160-share lot. Until BSE corrects or reconfirms the field, application-size references should be checked against the price advertisement and broker bidding interface.",
     "The ₹38 crore working-capital allocation is modest relative to FY26 borrowings and the scale of bullion throughput, making cash conversion important after deleveraging.",
   ],
   monitor: [
@@ -691,6 +694,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Inventory and receivable days, operating cash flow and gold-metal-loan or bullion funding arrangements.",
     "Artisan concentration, quality rejects, losses or theft, labour compliance and delivery performance.",
     "Promoter holding, related-party transactions and contingent liabilities after listing.",
+    "Whether BSE corrects the pre-open one-share lot placeholder before bidding begins on 18 August.",
   ],
   valuation: [
     "The FY26 share capital implies 11.755 crore pre-offer shares. Adding 2.9482 crore fresh shares gives 14.7032 crore post-offer shares and, at the NSE-published ₹93 cap, a market capitalisation of approximately ₹1,367.40 crore.",
@@ -701,6 +705,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   sources: [
     { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
+    { label: "BSE Shankesh issue record 7889", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7889", kind: "Primary" },
     { label: "Shankesh final RHP dated 10 August 2026", href: "https://www.afsl.co.in/pdfnew/RHP_Shankesh_Jewellers_Limited.pdf", kind: "Primary" },
     { label: "Shankesh official price-band advertisement, 11 August 2026", href: "https://shcapl.com/wp-content/uploads/2026/08/Pre-Issue-and-Price-Band-Advertisement.pdf", kind: "Primary" },
     { label: "Shankesh basis of offer price", href: "https://shcapl.com/wp-content/uploads/2026/08/Basis-of-Offer-Price_Shankesh-Jewellers-Limited.pdf", kind: "Primary" },
@@ -717,10 +722,10 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Revenue is recognised around delivery, licensing and exploitation of individual projects, making annual results lumpy. The RHP says a content project can take roughly 15–30 months from development through release, so a successful title can create unusually high margins while delays, cost overruns or weak reception can shift or impair earnings.",
     "The model relies on studios, streaming platforms and independent distributors for commissioning, licensing and distribution. Economics depend on who funds production, which rights Sunshine retains, revenue-share terms and the duration and geography of licences.",
   ],
-  issueNote: "The final RHP dated 10 August confirms up to 78,37,191 shares: 48,00,034 fresh shares and 30,37,157 OFS shares sold by Vipul Shah and Shefali Shah. At the ₹360 cap, that implies approximately ₹172.80 crore fresh issue, ₹109.34 crore OFS and ₹282.14 crore total. BSE and NSE confirm ₹342–₹360 and bidding from 18–20 August; the 41-share lot requires ₹14,760 at the cap. The RHP schedules the anchor book for 17 August and initially allocates up to 39,18,576 shares to QIBs, 11,75,592 to non-institutional bidders and 27,43,023 to retail bidders, subject to final anchor allocation and permitted category spillovers.",
+  issueNote: "The final RHP dated 10 August confirms up to 78,37,191 shares: 48,00,034 fresh shares and 30,37,157 OFS shares sold by Vipul Shah and Shefali Shah. At the ₹360 cap, that implies approximately ₹172.80 crore fresh issue, ₹109.34 crore OFS and ₹282.14 crore total. BSE issue record 7892 and NSE confirm ₹342–₹360, 78,37,191 gross offer shares and bidding from 18–20 August; the 41-share lot requires ₹14,760 at the cap. The RHP schedules the anchor book for 17 August and initially allocates up to 39,18,576 shares to QIBs, 11,75,592 to non-institutional bidders and 27,43,023 to retail bidders, subject to final anchor allocation and permitted category spillovers.",
   issue: { open: "18 August 2026", close: "20 August 2026", listing: "Expected 25 August 2026", priceBand: "₹342–₹360", lotSize: 41, totalCr: 282.14, freshCr: 172.8, ofsCr: 109.34, faceValue: "₹10" },
   useOfProceeds: [
-    { purpose: "Long-term working-capital requirements for content production", amount: "Up to ₹112.50 crore in the final RHP" },
+    { purpose: "Long-term working-capital requirements for content production", amount: "₹112.50 crore of the ₹320.49 crore FY27 requirement; the RHP assumes ₹207.99 crore from equity/internal accruals" },
     { purpose: "General corporate purposes and issue expenses", amount: "Balance of net fresh proceeds" },
     { purpose: "Offer for sale", amount: "Approximately ₹109.34 crore to selling shareholders; no proceeds to the company" },
   ],
@@ -736,6 +741,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "0.06×", context: "Borrowings were ₹9.09 crore, but production funding needs also appear through inventory, receivables and related-party facilities." },
     { label: "FY26 top-five customers", value: "74.81%", context: "The largest customer contributed 26.87% and the top ten 87.76% of revenue." },
     { label: "Fresh share of offer", value: "61.25%", context: "The remaining 38.75% is OFS; only the fresh-issue proceeds reach the company." },
+    { label: "FY26 inventory days", value: "1,328 days", context: "The RHP attributes the mathematical spike to unreleased and partly monetised content; it projects 314 days in FY27 as major titles release." },
+    { label: "FY26 receivable days", value: "233 days", context: "Up from 64 days in FY25; the RHP projects 117 days in FY27 as year-end billings collect and major content is released." },
   ],
   strengths: [
     "Vipul Shah and the creative team have delivered commercially recognised films and franchises, supporting relationships with talent, studios and distributors.",
@@ -749,7 +756,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Films and series face audience-preference, censorship, litigation, reputational, piracy and release-window risks. Production costs are committed before commercial reception is known.",
     "Promoter Vipul Shah is important to project selection, talent relationships and execution, creating key-person and succession risk.",
     "Rights may be sold, shared, licensed for limited periods or retained by different counterparties; headline title success does not necessarily translate into durable library cash flow for Sunshine.",
-    "FY26 operating cash flow was negative ₹33.21 crore despite ₹40.02 crore PAT. Inventory increased to ₹75.06 crore and receivables to ₹66.51 crore, showing how accounting profit can be absorbed by the next production slate and delayed collection.",
+    "FY26 operating cash flow was negative ₹33.21 crore despite ₹40.02 crore PAT. Inventory increased to ₹75.06 crore and receivables to ₹66.51 crore; the RHP calculates 1,328 inventory days and 233 receivable days, showing how accounting profit can be absorbed by an unreleased slate and delayed collection.",
+    "The FY27 working-capital estimate is ₹320.49 crore. Offer proceeds cover ₹112.50 crore, while the RHP assumes ₹207.99 crore from equity or internal accruals and no working-capital borrowing; that funding mix and the projected fall in inventory days to 314 and receivable days to 117 require delivery and collection to occur broadly as scheduled.",
     "The OFS is approximately 39% of the issue. Vipul Shah offers up to 20,31,388 shares and Shefali Shah up to 10,05,769 shares, worth approximately ₹73.13 crore and ₹36.21 crore at the cap; the company receives no OFS proceeds.",
     "The RHP labels FY26 results standalone while the earlier periods were consolidated. Disposal or reclassification of an associate can reduce comparability in addition to normal content-slate volatility.",
   ],
@@ -760,6 +768,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Budget overruns, delayed releases, write-offs and impairment of content inventory or development costs.",
     "Promoter compensation, related-party transactions, talent agreements and succession beyond Vipul Shah.",
     "Normalized multi-year earnings rather than the margin or EPS of one successful release year.",
+    "Actual FY27 funding of the ₹320.49 crore working-capital requirement, including whether the assumed ₹207.99 crore of equity/internal accruals is available without new debt or project delays.",
+    "Whether inventory days move toward 314 and receivable days toward 117 as the RHP projects after major releases and collections.",
   ],
   valuation: [
     "A single-year P/E is particularly fragile for project-based studios. Revenue declined in FY25 and FY26 while PAT recovered in FY26, and cash conversion moved in the opposite direction; a multi-year normalized earnings and cash-flow base is more appropriate.",
@@ -771,6 +781,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Sunshine Pictures final RHP, 10 August 2026", href: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/FinalRHP_Sunshine-Pictures-Ltd-GYR.pdf", kind: "Primary" },
     { label: "Sunshine Pictures official price-band advertisement", href: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/08/Financial-Express_Price-Band-Sunshine.pdf", kind: "Primary" },
     { label: "BSE current public-issue feed", href: "https://api.bseindia.com/BseIndiaAPI/api/GetPublicIssue_par_updated/w?flag=1&status=&exchange=&ir_flag=", kind: "Primary" },
+    { label: "BSE Sunshine issue record 7892", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7892", kind: "Primary" },
     { label: "NSE current and upcoming issue feed", href: "https://www.nseindia.com/api/all-upcoming-issues?category=ipo", kind: "Primary" },
     { label: "SEBI filing page: Sunshine Pictures DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jan-2025/sunshine-pictures-limited-drhp_90683.html", kind: "Primary" },
     { label: "Sunshine Pictures DRHP hosted by NSE", href: "https://nsearchives.nseindia.com/corporate/Registration_02012025220312_DRHPSunshine.pdf", kind: "Primary" },
