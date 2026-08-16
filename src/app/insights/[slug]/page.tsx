@@ -10,6 +10,14 @@ type PageProps = {
   params: Promise<{ slug: string }>;
 };
 
+function headingId(heading: string) {
+  return heading
+    .toLowerCase()
+    .normalize("NFKC")
+    .replace(/[^\p{Letter}\p{Mark}\p{Number}]+/gu, "-")
+    .replace(/^-|-$/g, "");
+}
+
 export function generateStaticParams() {
   return insightPosts.map((post) => ({ slug: post.slug }));
 }
@@ -43,13 +51,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       tags: post.keywords,
       siteName: "SoHo Wealth",
       locale: post.language === "te-IN" ? "te_IN" : "en_IN",
-      images: [{ url: "https://www.sohowealth.in/soho-logo.png", width: 1024, height: 1024, alt: "SoHo Wealth" }],
+      images: [{ url: `${url}/opengraph-image`, width: 1200, height: 630, alt: post.title }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: ["https://www.sohowealth.in/soho-logo.png"],
+      images: [`${url}/opengraph-image`],
     },
   };
 }
@@ -69,6 +77,12 @@ export default async function InsightPostPage({ params }: PageProps) {
     year: "numeric",
     timeZone: "UTC",
   }).format(new Date(`${post.publishedAt}T00:00:00Z`));
+  const updatedLabel = new Intl.DateTimeFormat("en-IN", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(`${post.updatedAt}T00:00:00Z`));
   const url = `https://www.sohowealth.in/insights/${post.slug}`;
   const isDoctorPost = post.category === "Doctors";
   const isItProfessionalPost = post.category === "IT Professionals";
@@ -125,18 +139,30 @@ export default async function InsightPostPage({ params }: PageProps) {
     inLanguage: post.language ?? "en-IN",
     isAccessibleForFree: true,
     articleSection: post.category,
+    audience: { "@type": "Audience", audienceType: post.audience },
     keywords: post.keywords.join(", "),
     about: post.keywords.map((keyword) => ({ "@type": "Thing", name: keyword })),
+    hasPart: post.sections.map((section) => ({
+      "@type": "WebPageElement",
+      name: section.heading,
+      url: `${url}#${headingId(section.heading)}`,
+    })),
     citation: post.sources.map((source) => source.url),
   };
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
-      { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.sohowealth.in/insights" },
-      { "@type": "ListItem", position: 3, name: post.title, item: url },
-    ],
+    itemListElement: isRetirementPost
+      ? [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+          { "@type": "ListItem", position: 2, name: "Retirement Planning", item: "https://www.sohowealth.in/retirement-planning" },
+          { "@type": "ListItem", position: 3, name: post.title, item: url },
+        ]
+      : [
+          { "@type": "ListItem", position: 1, name: "Home", item: "https://www.sohowealth.in/" },
+          { "@type": "ListItem", position: 2, name: "Insights", item: "https://www.sohowealth.in/insights" },
+          { "@type": "ListItem", position: 3, name: post.title, item: url },
+        ],
   };
 
   return (
@@ -146,16 +172,16 @@ export default async function InsightPostPage({ params }: PageProps) {
       <section className="relative overflow-hidden py-16 lg:py-24" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
         <div className="container relative z-10 mx-auto max-w-4xl px-6 lg:px-8">
-          <Link href="/insights" className="mb-8 inline-flex items-center gap-2 font-body text-sm font-semibold text-white/70 transition hover:text-white">
+          <Link href={isRetirementPost ? "/retirement-planning" : "/insights"} className="mb-8 inline-flex items-center gap-2 font-body text-sm font-semibold text-white/70 transition hover:text-white">
             <ArrowLeft className="h-4 w-4" />
-            Back to insights
+            {isRetirementPost ? "Back to retirement planning" : "Back to insights"}
           </Link>
           <div className="mb-5 flex flex-wrap items-center gap-3 font-body text-sm" style={{ color: "rgba(255,255,255,0.68)" }}>
             <span className="rounded-full px-3 py-1 text-xs font-bold uppercase tracking-[0.14em]" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               {post.heroKicker}
             </span>
             <span>{post.category}</span>
-            <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-4 w-4" />{publishedLabel}</span>
+            <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-4 w-4" /><time dateTime={post.publishedAt}>{publishedLabel}</time></span>
             <span className="inline-flex items-center gap-1.5"><Clock className="h-4 w-4" />{post.readingTime}</span>
           </div>
           <h1 className="font-display mb-6 text-4xl font-semibold leading-tight text-white md:text-5xl lg:text-6xl">
@@ -164,12 +190,13 @@ export default async function InsightPostPage({ params }: PageProps) {
           <p className="font-body text-lg leading-relaxed lg:text-xl" style={{ color: "rgba(255,255,255,0.75)" }}>
             {post.description}
           </p>
+          <p className="mt-5 font-body text-sm leading-relaxed text-white/60"><span className="font-semibold text-white/80">Written for:</span> {post.audience}</p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 font-body text-sm text-white/60">
             <span>By <Link href="/team" className="font-semibold text-white underline-offset-4 hover:underline">Kiran Dutta</Link></span>
             <span aria-hidden="true">•</span>
-            <span>Founder, SoHo Wealth</span>
+            <span>Founder, SoHo Wealth · Columbia MBA · NISM-certified professional</span>
             <span aria-hidden="true">•</span>
-            <span>Reviewed {publishedLabel}</span>
+            <span>Reviewed <time dateTime={post.updatedAt}>{updatedLabel}</time></span>
           </div>
         </div>
       </section>
@@ -190,12 +217,23 @@ export default async function InsightPostPage({ params }: PageProps) {
         </div>
       </section>
 
+      {post.sections.length >= 4 && (
+        <nav aria-labelledby="article-contents-heading" className="border-y border-slate-200 bg-[#F7F8FA] py-8">
+          <div className="container mx-auto max-w-4xl px-6 lg:px-8">
+            <h2 id="article-contents-heading" className="font-display text-2xl font-semibold text-[#0B1F3A]">In this guide</h2>
+            <ol className="mt-5 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+              {post.sections.map((section, index) => <li key={section.heading} className="text-sm leading-relaxed"><a href={`#${headingId(section.heading)}`} className="font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9A761F]"><span className="mr-2 text-[#9A761F]">{index + 1}.</span>{section.heading}</a></li>)}
+            </ol>
+          </div>
+        </nav>
+      )}
+
       <article className="bg-white pb-20">
         <div className="container mx-auto max-w-4xl px-6 lg:px-8">
           <div className="space-y-14">
             {post.sections.map((section) => (
-              <section key={section.heading}>
-                <h2 className="font-display mb-5 text-3xl font-semibold leading-tight md:text-4xl" style={{ color: "#0B1F3A" }}>
+              <section key={section.heading} aria-labelledby={headingId(section.heading)}>
+                <h2 id={headingId(section.heading)} className="scroll-mt-28 font-display mb-5 text-3xl font-semibold leading-tight md:text-4xl" style={{ color: "#0B1F3A" }}>
                   {section.heading}
                 </h2>
 
@@ -223,10 +261,11 @@ export default async function InsightPostPage({ params }: PageProps) {
                 {section.table && (
                   <div className="mt-6 overflow-x-auto rounded-lg border border-slate-200">
                     <table className="w-full min-w-[680px] border-collapse font-body text-sm">
+                      <caption className="sr-only">{section.heading}</caption>
                       <thead style={{ backgroundColor: "#0B1F3A" }}>
                         <tr>
                           {section.table.columns.map((column) => (
-                            <th key={column} className="px-4 py-4 text-left font-semibold text-white">
+                            <th key={column} scope="col" className="px-4 py-4 text-left font-semibold text-white">
                               {column}
                             </th>
                           ))}
@@ -236,9 +275,9 @@ export default async function InsightPostPage({ params }: PageProps) {
                         {section.table.rows.map((row) => (
                           <tr key={row.join("-")} className="border-b border-slate-200 last:border-b-0">
                             {row.map((cell, index) => (
-                              <td key={`${cell}-${index}`} className="px-4 py-4 align-top text-slate-700">
-                                {cell}
-                              </td>
+                              index === 0
+                                ? <th key={`${cell}-${index}`} scope="row" className="px-4 py-4 text-left align-top font-semibold text-[#0B1F3A]">{cell}</th>
+                                : <td key={`${cell}-${index}`} className="px-4 py-4 align-top text-slate-700">{cell}</td>
                             ))}
                           </tr>
                         ))}
@@ -269,6 +308,26 @@ export default async function InsightPostPage({ params }: PageProps) {
             </aside>
           )}
 
+          {isRetirementPost && (
+            <aside className="mt-14 rounded-lg border border-[#C9A84C]/30 bg-[#FDF8EC] p-6 md:p-8" aria-label="Retirement planning tools">
+              <h2 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Put this retirement guide into practice</h2>
+              <p className="mt-3 font-body leading-relaxed text-slate-600">Use your own spending, timeline and existing assets, then continue with the most relevant planning check.</p>
+              <div className="mt-5 grid gap-3 sm:grid-cols-2">
+                {[
+                  ["Estimate your retirement corpus", "/tools/retirement-calculator"],
+                  ["See the impact of inflation", "/tools/retirement-inflation-calculator"],
+                  ["Estimate income from your corpus", "/tools/retirement-income-calculator"],
+                  ["Take the 10-point readiness check", "/tools/retirement-readiness-check"],
+                  ["Explore the retirement planning service", "/retirement-planning"],
+                ].map(([label, href]) => (
+                  <Link key={href} href={href} className="inline-flex items-center gap-2 font-body text-sm font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] decoration-2 underline-offset-4 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#9A761F]">
+                    {label}<ArrowRight className="h-4 w-4" />
+                  </Link>
+                ))}
+              </div>
+            </aside>
+          )}
+
           <div className="mt-16 rounded-lg p-8" style={{ backgroundColor: "#FDF8EC" }}>
             <h2 className="font-display mb-3 text-2xl font-semibold" style={{ color: "#0B1F3A" }}>{cta.title}</h2>
             <p className="font-body mb-6 max-w-2xl text-base leading-relaxed text-slate-700">
@@ -287,12 +346,14 @@ export default async function InsightPostPage({ params }: PageProps) {
 
           <div className="mt-12 border-t border-slate-200 pt-8">
             <h2 className="font-display mb-4 text-2xl font-semibold" style={{ color: "#0B1F3A" }}>Sources Checked</h2>
+            <p className="mb-5 font-body text-sm text-slate-500">Sources last reviewed <time dateTime={post.updatedAt}>{updatedLabel}</time>.</p>
             <ul className="grid gap-3">
               {post.sources.map((source) => (
                 <li key={source.url}>
                   <a href={source.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 font-body text-sm font-semibold text-slate-700 underline-offset-4 hover:underline">
                     {source.title}
                     <ExternalLink className="h-3.5 w-3.5" />
+                    <span className="sr-only"> (opens in a new tab)</span>
                   </a>
                 </li>
               ))}
@@ -319,7 +380,11 @@ export default async function InsightPostPage({ params }: PageProps) {
                   ? "Continue the Doctor Wealth Thread"
                   : isItProfessionalPost
                     ? "Continue the Tech Wealth Thread"
-                    : "Continue the NRI Wealth Thread"}
+                    : isRetirementPost
+                      ? "Continue Your Retirement Planning"
+                      : isTeluguNriPost
+                        ? "Continue the NRI Wealth Thread"
+                        : "Continue Reading"}
               </h2>
             </div>
             <div className="mx-auto grid max-w-5xl gap-6 md:grid-cols-3">

@@ -222,7 +222,7 @@ export const insightPosts: InsightPost[] = [
       { q: "Is return of purchase price always better?", a: "No. It may support an estate goal but generally reduces the income paid during retirement. Judge it alongside spouse needs, other assets and required monthly income." },
       { q: "Are annuity payments tax-free?", a: "Do not assume that. Tax treatment depends on current law and personal facts. Confirm the after-tax income with a qualified tax professional before purchase." },
     ],
-    relatedSlugs: ["retirement-planning-doctors-irregular-income", "fire-planning-for-it-professionals-hyderabad"],
+    relatedSlugs: ["retirement-planning-doctors-irregular-income", "early-retirement-planning-india"],
     sources: [
       { title: "NPS Trust: Annuity Service Providers and rate FAQs", url: "https://npstrust.org.in/index.php/list-of-annuity-service-provider-enrolled-under-nps" },
       { title: "PFRDA: Annuity Service Providers", url: "https://pfrda.org.in/intermediaries/empaneled-entities/annuity-service-provider" },
@@ -2119,7 +2119,7 @@ export const insightPosts: InsightPost[] = [
     relatedSlugs: [
       "sell-rsus-at-vest-indian-it-professionals",
       "rsu-tax-india-vesting-sale-schedule-fa",
-      "esop-rsu-espp-differences-india",
+      "early-retirement-planning-india",
     ],
     sources: [sebiAssetAllocationSource, sebiRiskSource, rbiLrsSource],
   },
@@ -2347,7 +2347,7 @@ export const insightPosts: InsightPost[] = [
       { heading: "Review the Remaining Employer Stock", body: ["Leaving the company removes future salary dependency but does not remove concentration in vested shares. Decide whether the old employer stock still has a deliberate role, and coordinate any sale with tax lots, reporting and goal funding."] },
     ],
     faqs: [{ q: "Do I lose vested RSUs when I resign?", a: "Vested shares are generally already delivered, but confirm the plan, broker and any restrictions. Unvested awards are commonly forfeited unless specific terms provide otherwise." }, { q: "Should I sell old-employer shares after leaving?", a: "There is no universal rule. Review concentration, goals, taxes and whether you would buy the same holding today with cash." }],
-    relatedSlugs: ["sell-rsus-at-vest-indian-it-professionals", "rsu-tax-india-vesting-sale-schedule-fa", "fire-planning-for-it-professionals-hyderabad"],
+    relatedSlugs: ["sell-rsus-at-vest-indian-it-professionals", "rsu-tax-india-vesting-sale-schedule-fa", "fire-planning-it-professionals-hyderabad"],
     sources: [{ title: "SEBI Investor: Factors to Consider Before Investing", url: "https://investor.sebi.gov.in/investment-thingsbeforeinv.html" }, incomeTaxScheduleFASource],
   },
   {

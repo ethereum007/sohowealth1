@@ -114,6 +114,7 @@ const structuredData = [
     "url": "https://www.sohowealth.in/team",
     "image": "https://www.sohowealth.in/kiran-dutta.jpeg",
     "jobTitle": "Founder, SoHo Wealth",
+    "description": "Founder of SoHo Wealth, Columbia MBA and NISM-certified professional with Wall Street and family-office experience.",
     "worksFor": { "@id": "https://www.sohowealth.in/#organization" },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
@@ -126,7 +127,9 @@ const structuredData = [
       "Portfolio review",
       "Portfolio Management Services",
       "Specialized Investment Funds",
-      "NRI investing"
+      "NRI investing",
+      "Retirement planning",
+      "Retirement income planning"
     ]
   },
   {

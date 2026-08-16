@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Target, Heart, Compass } from "lucide-react";
+import { Target, Handshake, Compass } from "lucide-react";
 
 const values = [
   {
@@ -12,7 +12,7 @@ const values = [
     description: "Every strategy is built around your unique life goals and aspirations.",
   },
   {
-    icon: Heart,
+    icon: Handshake,
     title: "Client-First",
     description: "Your interests always come first. We succeed only when you succeed.",
   },
@@ -67,7 +67,7 @@ export function AboutSection() {
                   className="flex items-start gap-4"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
-                    <value.icon className="w-6 h-6 text-primary" />
+                    <value.icon className="w-6 h-6 text-primary" aria-hidden="true" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">{value.title}</h3>

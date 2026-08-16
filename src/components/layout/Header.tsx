@@ -73,6 +73,21 @@ const audienceLinks: MenuLink[] = [
     description: "Estimate future expenses, retirement corpus and monthly investment.",
   },
   {
+    name: "Inflation Calculator",
+    href: "/tools/retirement-inflation-calculator",
+    description: "See future retirement expenses and a fixed pension's purchasing power.",
+  },
+  {
+    name: "Retirement Income Calculator",
+    href: "/tools/retirement-income-calculator",
+    description: "Estimate monthly income from an existing corpus and pension.",
+  },
+  {
+    name: "Retirement Readiness Check",
+    href: "/tools/retirement-readiness-check",
+    description: "Check ten retirement foundations and find the next planning step.",
+  },
+  {
     name: "AI Wealth Planner",
     href: "/tools/ai-wealth-planner",
     description: "Estimate your goal corpus, monthly SIP and illustrative asset mix.",

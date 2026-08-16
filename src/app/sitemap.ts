@@ -16,8 +16,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/",                  lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 1.0 },
     { path: "/investment-products", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
-    { path: "/retirement-planning", lastModified: "2026-08-13", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/retirement-planning", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.95 },
     { path: "/tools/retirement-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.95 },
+    { path: "/tools/retirement-inflation-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools/retirement-readiness-check", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools/retirement-income-calculator", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.9 },
     { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals/rsu-guide", lastModified: "2026-07-28", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/rsu-concentration-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },
@@ -57,7 +60,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },
-    { path: "/insights",          lastModified: "2026-08-12", changeFrequency: "weekly",  priority: 0.85 },
+    { path: "/insights",          lastModified: "2026-08-16", changeFrequency: "weekly",  priority: 0.85 },
   ];
 
   const staticRoutes = routes.map((r) => ({
@@ -70,8 +73,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const insightRoutes = insightPosts.map((post) => ({
     url: `${baseUrl}/insights/${post.slug}`,
     lastModified: new Date(post.updatedAt),
-    changeFrequency: "monthly" as const,
-    priority: 0.75,
+    changeFrequency: post.category === "Retirement Planning" ? "weekly" as const : "monthly" as const,
+    priority: post.category === "Retirement Planning" ? 0.85 : 0.75,
   }));
 
   const realEstateRoutes = allRealEstateGuides.map((page) => ({
