@@ -1244,14 +1244,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   summary: "Sham Foam manufactures polyurethane foam, mattresses and allied comfort products from Haryana. The final prospectus replaces interim estimates with audited FY26 revenue of ₹92.32 crore, EBITDA of ₹11.00 crore, PAT of ₹8.65 crore and operating cash flow of ₹12.78 crore. The central questions are whether the FY26 margin step-up survives petrochemical-cost changes and whether ₹14.72 crore of new capex creates returns without stretching working capital or a single-site operating model.",
   business: [
     "The company manufactures, markets and distributes flexible polyurethane foam, mattresses, cushions, pillows and other home-comfort products, including products sold under its Featherfresh positioning.",
-    "The Ambala facility has stated installed PU-foam capacity of 15,000 tonnes per annum, but the prospectus calculates utilisation against 6,000 tonnes of available cutting and associated-machine capacity. Production rose to 5,257 tonnes and reported utilisation to 87.62% in FY26.",
+    "The Ambala facility has stated installed PU-foam capacity of 15,000 tonnes per annum, but the prospectus calculates utilisation against 6,000 tonnes of available cutting and associated-machine capacity. Production rose to 5,257 tonnes and reported utilisation to 87.62% in FY26. The issue-funded programme is intended to lift available cutting capacity to 10,000 tonnes while leaving headline installed capacity unchanged at 15,000 tonnes.",
     "PU foam generated 86.22% of FY26 revenue. Uttar Pradesh, Punjab, Haryana and Delhi together contributed about 72.9%, so product, geography and the single manufacturing site remain more concentrated than the customer base.",
     "Sham Foam was incorporated in 2020. Rajinder Kumar Jindal, Sanjeev Kumar Jindal, Monica Jindal, Deepika Jindal and Charming Fashions Private Limited collectively held the pre-issue capital; the prospectus also identifies Aggarwal Comfort Products Private Limited as a promoter-group entity pursuing a similar business.",
   ],
   issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments; the secondary-market trading lot is 1,000 shares. The prospectus proposed 18 August trading, but BSE's official notices through 16 August did not yet contain final allotment or listing approval.",
   issue: { open: "11 August 2026", close: "13 August 2026", listing: "18 August 2026 proposed; final BSE notice pending", priceBand: "₹130 fixed price", lotSize: 2000, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
-    { purpose: "Civil construction, machinery and equipment at the existing manufacturing facility", amount: "Up to ₹14.72 crore" },
+    { purpose: "Civil construction, machinery and equipment at the existing manufacturing facility", amount: "Up to ₹14.72 crore; no machinery orders had been placed and no object expenditure beyond ₹0.06 crore of issue costs was deployed by 30 June" },
     { purpose: "Part-finance working-capital requirements", amount: "₹14.25 crore: ₹8.25 crore in FY27 and ₹6.00 crore in FY28" },
     { purpose: "General corporate purposes", amount: "Up to ₹6.04 crore" },
     { purpose: "Issue expenses", amount: "Estimated ₹5.48 crore; estimated net proceeds are ₹35.01 crore" },
@@ -1274,6 +1274,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Dilution-consistent P/E", value: "≈17.3×", context: "Based on FY26 PAT and the full post-issue share count; the prospectus's 12.58× uses pre-issue FY26 EPS." },
     { label: "FY26 cash conversion cycle", value: "≈53 days", context: "The prospectus reports 44 inventory days plus 93 receivable days less 84 payable days; supplier credit was a material funding source." },
     { label: "FY28 working-capital gap", value: "₹33.60 Cr", context: "Up from ₹19.17 crore in FY26 and an estimated ₹27.56 crore in FY27; the issue funds ₹8.25 crore in FY27 and ₹6.00 crore in FY28." },
+    { label: "Offer-funded capex ordered", value: "0%", context: "The final prospectus says machinery estimates rely on time-limited budgetary quotations, with no orders or definitive vendor agreements in place." },
+    { label: "Post-capex available capacity", value: "10,000 TPA", context: "Up from 6,000 TPA of cutting and associated-machine capacity; stated installed foam capacity remains 15,000 TPA." },
+    { label: "FY26 contingent liabilities", value: "₹2.00 Cr", context: "The final prospectus records ₹2.001 crore relating to a civil case, principally the pending Feather Fresh trademark dispute." },
   ],
   strengths: [
     "FY26 audited revenue rose 13.8%, EBITDA more than doubled to ₹11.00 crore and PAT reached ₹8.65 crore.",
@@ -1294,6 +1297,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "BSE SME shares can have limited liquidity, large minimum lots, wide bid-ask spreads and market-maker dependence.",
     "FY26 operating cash flow was stronger than PAT partly because trade payables increased to ₹21.30 crore and payable days reached 84. The prospectus assumes 82 days in FY27 and 75 in FY28, so faster supplier payment could reduce future cash conversion.",
     "The projected working-capital gap rises from ₹19.17 crore in FY26 to ₹27.56 crore in FY27 and ₹33.60 crore in FY28. IPO proceeds fund only part of this requirement; the balance depends on internal accruals and continuing borrowings.",
+    "No machinery order or definitive vendor agreement was in place for the ₹14.72 crore capex programme, and quotations may expire. Available cutting capacity is expected to rise from 6,000 to 10,000 tonnes rather than increase the 15,000-tonne headline installed capacity, so execution should be judged on bottleneck relief and incremental output.",
+    "Sheela Foam has filed a civil suit alleging trademark infringement and passing off in relation to Feather Fresh. The matter remains pending, and the prospectus records ₹2.001 crore of contingent liability for a civil case.",
   ],
   monitor: [
     "Production capacity, utilisation and commissioning progress for the issue-funded civil works and machinery.",
@@ -1302,7 +1307,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Operating cash flow, trade-payable normalisation, inventory and receivable days and deployment of the ₹14.25 crore working-capital allocation.",
     "The FY27–FY28 working-capital plan against the prospectus assumptions of 44 inventory days, 93 receivable days and payable days falling from 82 to 75.",
     "Debt, finance costs and incremental return on capital after the expansion, rather than the pre-issue FY26 EPS multiple.",
-    "Factory lease and security arrangements, transactions with promoter-group entities, fire incidents, insurance, environmental compliance and BSE SME liquidity.",
+    "The 30-year promoter-property lease through July 2055, rent escalation and security arrangements; transactions with promoter-group entities; the Feather Fresh litigation; fire incidents, insurance, environmental compliance and BSE SME liquidity.",
   ],
   valuation: [
     "At ₹130, 1,14,90,750 post-issue shares imply a market capitalisation of about ₹149.38 crore. Against FY26 PAT of ₹8.65 crore, the dilution-consistent trailing P/E is approximately 17.3×.",
@@ -1483,7 +1488,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   summary: "Pramodini Medicare operates a multi-state diagnostics network through public-private, private-hospital, PSU and standalone-centre arrangements. FY26 revenue reached ₹62.29 crore, EBITDA ₹30.90 crore and PAT ₹17.38 crore, while operating cash flow was ₹25.39 crore. The central questions are whether unusually high margins persist, whether new equipment earns adequate utilisation, and how much renewal, referral, counterparty and clinical-compliance risk sits inside its partnership-led model.",
   business: [
     "The company provides radiology, clinical laboratory and nuclear-medicine services through public-private partnerships with government hospitals and teaching hospitals, arrangements with private hospitals, strategic partnerships with central-government PSUs and privately operated centres.",
-    "As of 31 December 2025, Pramodini disclosed 15 diagnostic centres across 13 cities in Uttar Pradesh, Andhra Pradesh, Karnataka, West Bengal, Haryana/NCR Delhi and Kerala, where operations were yet to commence. It also operates a processing unit-cum-laboratory in Vijayawada.",
+    "At the RHP date, Pramodini disclosed 16 diagnostic centres across 14 cities in Uttar Pradesh, Andhra Pradesh, Karnataka, West Bengal, Haryana/NCR Delhi, Madhya Pradesh and Kerala, where one centre had not commenced operations. It also operates a processing unit-cum-laboratory in Vijayawada. A separate Karnataka cardiac-facility award was excluded from the operating count because its governing MOU was still unexecuted.",
     "Promoters are Dr Chalasani Kuldeep Kumar, Dr Chalasani Kavitha, Chalasani Durga Aashritha and Sri Ram Medicare Private Limited. The two doctor-promoters bring clinical experience, but promoter, referral and key-person dependence must be assessed alongside board and clinical-governance controls.",
     "The network is operationally concentrated despite its multi-state footprint: radiology supplied 97.05% of FY26 revenue, B2G arrangements 61.46% and Andhra Pradesh 61.90%. Contract continuity, equipment uptime and scan utilisation therefore drive a large portion of economics.",
   ],
@@ -1512,6 +1517,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 B2G share", value: "61.46%", context: "PPP revenue was 54.19% and strategic PSU partnership revenue 7.27%; government payment and renewal risk remain material." },
     { label: "FY26 Andhra Pradesh share", value: "61.90%", context: "Down from 84.78% in FY25, but still a majority of revenue despite the multi-state network." },
     { label: "Offer-funded equipment ordered", value: "0%", context: "The RHP says ₹1.1915 crore of advances came from internal accruals, while 100% of the ₹45.1485 crore equipment financed from offer proceeds was still to be ordered." },
+    { label: "FY26 diagnostic volumes", value: "4,74,419 tests", context: "Radiology represented 4,24,146 tests, including 1,28,566 MRIs, 1,10,583 X-rays and 97,880 CT scans." },
+    { label: "Deployed imaging fleet", value: "8 CT / 7 MRI", context: "The RHP also lists 20 X-ray, 15 ultrasound, one PET-CT, two DEXA and two mammography machines across the network." },
+    { label: "Contingent guarantees", value: "₹5.62 Cr", context: "At FY26 the company disclosed ₹0.67 crore of bank guarantees and ₹4.95 crore of guarantees given for group companies." },
   ],
   strengths: [
     "A more than 25-year corporate history and a network spanning government, private-hospital, PSU and standalone formats provide operating experience across several contracting models.",
@@ -1532,6 +1540,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "All equipment intended to be financed from the offer proceeds remained unordered at the RHP date. Only ₹1.1915 crore of advances for certain equipment had been paid from internal accruals, while quotations were non-binding and models, vendors and quantities could still change.",
     "Two group companies operate in radiology or diagnostic services and no non-compete agreement was disclosed. Common business opportunities, referrals, staff, assets and related-party transactions require governance oversight.",
     "Radiology contributed 97.05% of FY26 revenue, B2G arrangements 61.46% and Andhra Pradesh 61.90%. A modality disruption, government contract change or regional event can therefore affect several concentration layers at once.",
+    "The company had ₹4.95 crore of contingent guarantees for group companies at FY26, in addition to ₹0.67 crore of bank guarantees. These exposures should be tracked alongside the equipment payables and letters of credit already supporting growth.",
+    "The RHP discloses an ongoing Andhra Pradesh High Court writ petition alleging irregular diversion of payments in a government diagnostic-imaging project involving promoters and group company Infer Radiological and Imaging Services. The group company has filed a reply and the matter remains unresolved; the allegation is not a finding.",
   ],
   monitor: [
     "Revenue, EBITDA, utilisation and contract tenure by centre, modality and operating model, including the Kerala commissioning schedule.",
@@ -1543,6 +1553,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Radiology, B2G and Andhra Pradesh revenue concentration, with renewal dates, scan volumes, revenue share and receivable ageing for the largest centres and counterparties.",
     "Clinical incidents, radiation and laboratory compliance, accreditations, professional indemnity, cyber security and patient-data controls.",
     "Final offer price and allotment, acquisition deployment, related-party transactions, promoter remuneration and NSE Emerge liquidity.",
+    "Contingent guarantees for group companies, the pending government-project writ petition and any change in common-business or non-compete arrangements.",
   ],
   valuation: [
     "The RHP confirms 2,20,45,595 post-offer shares. At the ₹118 cap, this implies approximately ₹260.14 crore market capitalisation and about 15.0× FY26 PAT of ₹17.38 crore; the final discovered price remains pending.",
