@@ -1751,7 +1751,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
   ],
 }, {
-  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "16 August 2026",
+  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue open; scheduled to close 17 August 2026", analysisAsOf: "17 August 2026",
   summary: "Credent is a B2B healthcare-operations provider combining temperature-sensitive diagnostic-sample logistics, workforce services, technology and an acquired diagnostics subsidiary. FY26 consolidated revenue reached ₹214.16 crore and PAT ₹18.45 crore, but operating cash flow was negative ₹6.62 crore while receivables and borrowings rose. The core analysis therefore turns on acquisition quality, customer retention, sample-chain execution and whether issue-funded working capital converts accounting growth into cash.",
   business: [
     "The group provides B2B healthcare logistics, including transportation of diagnostic samples, home collection and related field services, to laboratories, IVD and pharmaceutical companies, hospitals, clinics and other institutions.",
@@ -1763,7 +1763,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The standalone parent reported 3,515 employees at FY26 and 19.16% attrition, compared with 18.30% in FY25 and 29.49% in FY24. Workforce retention is operationally important because collection, transport and diagnostic-support services depend on trained field personnel.",
     "On a consolidated operating view the RHP reports 6,338 people: 4,052 on payroll and 2,286 contract staff. Healthcare services generated 43.04% of FY26 revenue, operations and supply-chain management 27.67%, logistics 25.26% and other services 4.03%.",
   ],
-  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP requires individual investors to apply for at least two 600-share lots, making the minimum bid 1,200 shares and the cap-price application ₹2,26,800. NSE's 16 August feed showed 4,00,10,400 bids against the 35,64,000-share post-anchor public pool, or 11.23×; this is a changing pre-close snapshot, not the final subscription. The issuer download labelled 'Prospectus' is a one-page 8 August board resolution approving the RHP rather than a final prospectus, so final price, allotment and listing still require exchange notices.",
+  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP requires individual investors to apply for at least two 600-share lots, making the minimum bid 1,200 shares and the cap-price application ₹2,26,800. NSE's feed retrieved early on 17 August still showed 4,00,10,400 bids against the 35,64,000-share post-anchor public pool, or 11.23×; this is a changing pre-close snapshot, not the final subscription. The issuer download labelled 'Prospectus' is a one-page 8 August board resolution approving the RHP rather than a final prospectus, so final price, allotment and listing still require exchange notices.",
   issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 1200, totalCr: 93.90, freshCr: 93.90, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in Credent Healthcare for working capital", amount: "₹26.80 crore" },
@@ -1783,7 +1783,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 PAT margin", value: "8.6%", context: "Compared with 2.9% in FY25; comparability is affected by consolidation and acquisitions." },
     { label: "FY26 debt/equity", value: "0.50×", context: "Borrowings rose to ₹21.95 crore from ₹7.41 crore at FY25." },
     { label: "FY26 operating cash flow", value: "-₹6.62 crore", context: "Negative despite ₹18.45 crore PAT as receivables and other working-capital balances absorbed cash." },
-    { label: "NSE subscription snapshot", value: "11.23×", context: "4,00,10,400 shares bid against a 35,64,000-share post-anchor public pool when retrieved on 16 August; not a final close figure." },
+    { label: "NSE subscription snapshot", value: "11.23×", context: "4,00,10,400 shares bid against a 35,64,000-share post-anchor public pool when retrieved early on 17 August; not a final close figure." },
     { label: "FY26 healthcare share", value: "43.04%", context: "Healthcare services contributed ₹92.18 crore after three subsidiaries entered the group perimeter during FY26." },
     { label: "Combined working-capital allocation", value: "₹63.80 crore", context: "₹26.80 crore is routed to Credent Healthcare and ₹37.00 crore to the parent across FY27 and FY28." },
     { label: "Combined FY26 working-capital gap", value: "₹51.89 crore", context: "The parent contributed ₹33.67 crore and Credent Healthcare ₹18.22 crore; their RHP schedules project a combined ₹124.65 crore gap by FY28." },
@@ -1795,6 +1795,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 top-ten customers", value: "81.76%", context: "The top five contributed 59.05%; concentration improved from 87.92% in FY24 but remains high for a working-capital-intensive service model." },
     { label: "Consolidated workforce", value: "6,338 people", context: "4,052 payroll and 2,286 contract staff across diagnostics, collections, logistics, supply chain and paramedical services at FY26." },
     { label: "FY26 top-ten suppliers", value: "46.97%", context: "Up from 37.06% in FY25 and 22.70% in FY24, adding procurement concentration as the acquired group scaled." },
+    { label: "30 June unsecured demand loans", value: "₹10.91 crore", context: "The final RHP says recallable unsecured loans represented 47.42% of ₹23.01 crore total indebtedness at 30 June 2026." },
+    { label: "FY26 current ratio", value: "2.06×", context: "Up from 1.57× in FY25, but the RHP attributes the improvement to a material rise in trade receivables rather than cash conversion." },
   ],
   strengths: [
     "Healthcare samples require time-sensitive, traceable logistics, creating specialised operating requirements beyond ordinary parcel delivery.",
@@ -1823,6 +1825,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Credent Healthcare's shop-and-establishment registrations in Ahmedabad and Karnataka were pending, and its Hyderabad professional-tax enrolment application had not yet been filed at the RHP date. These are local compliance gaps across a geographically dispersed workforce.",
     "Promoter and non-executive director Ashok Kumar Sharma appeared on the Registrar of Companies' disqualified-director list from November 2016 to October 2021 because the then Credent Management Consultants did not file statements or annual returns for three consecutive years. He is not currently disqualified, but the history adds context to the group's more recent corporate-law remediation.",
     "Promoters Ashok Kumar Sharma and Dimple Sharma have provided personal guarantees for existing borrowings. The RHP says these guarantees may continue after listing, leaving financing arrangements partly dependent on promoter support until lenders release or replace them.",
+    "At 30 June 2026, ₹10.91 crore of unsecured loans was repayable on demand and represented 47.42% of total indebtedness. The FY26 loan schedule shows material interest-free promoter and director funding, so a recall, repayment or refinancing requirement could compete with the working-capital and debt-repayment objects of the issue.",
+    "The FY26 current ratio improved to 2.06× from 1.57×, but the RHP explicitly attributes the change to higher receivables. The headline liquidity ratio therefore does not offset the negative operating cash flow, unbilled revenue and ageing concerns.",
+    "Working-capital facilities are secured by book debts or current assets and, for some lenders, promoter personal guarantees, two residential properties and a corporate guarantee from the listed issuer for its healthcare subsidiary. Fresh capital may reduce borrowing pressure, but release of these securities was not committed in the RHP.",
     "The promoter family has roles across group entities. Opportunity allocation, service contracts, acquisitions, remuneration, guarantees and related-party balances deserve continued oversight.",
     "NSE Emerge shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
   ],
@@ -1841,6 +1846,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Final 17 August subscription by category, basis of allotment, issue price and the authentic final prospectus or exchange listing notice.",
     "Grant and renewal of the pending state registrations, filing of the Hyderabad professional-tax enrolment and workforce compliance across all operating locations.",
     "Release or replacement of promoter personal guarantees and any lender conditions attached to the post-issue debt structure.",
+    "Repayment, refinancing or rollover of the ₹10.91 crore unsecured demand-loan balance reported at 30 June 2026, including the share funded by promoters, directors and group-linked parties.",
+    "Release of residential collateral, book-debt charges and the parent corporate guarantee after debt repayment and working-capital deployment.",
   ],
   valuation: [
     "At the ₹189 cap, 1,87,86,900 post-issue shares imply an equity value of approximately ₹355.07 crore, or about 19.3× FY26 PAT of ₹18.45 crore. The RHP's pre-issue FY26 EPS of ₹13.95 produces a lower 13.5× headline multiple because it does not include the full fresh-issue dilution.",
@@ -1857,7 +1864,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Choice Credent marketed offer summary", href: "https://choiceindia.com/ipo/credent-connect-n-care-ipo", kind: "Secondary" },
   ],
 }, {
-  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "16 August 2026",
+  slug: "skytech-infinite-platform-ipo", company: "Skytech Infinite Platform", market: "SME", sector: "Industrial automation, control panels and turnkey engineering", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "17 August 2026",
   summary: "Skytech designs and executes industrial-automation systems and control panels using products from established automation vendors. FY26 revenue rose to ₹51.65 crore and PAT to ₹4.20 crore, but operating cash flow turned negative as receivables and inventory increased. The issue is primarily a bet on funding larger EPC orders without losing margin or cash discipline.",
   business: [
     "The company designs, engineers, assembles, installs and supports turnkey automation systems, including PCC, MCC, PLC, VFD, APFC and control-desk panels that integrate controllers, drives, switchgear, sensors and actuators.",
@@ -1866,7 +1873,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The RHP does not disclose a quantified order book or backlog. Revenue visibility therefore depends on individual purchase orders, project execution and collections rather than a published contracted pipeline.",
     "Skytech generally provides an 18-month warranty from supply. The RHP reports no significant warranty issue in the last three years, but a larger EPC mix increases the future importance of commissioning quality, warranty provisions and field-service response.",
   ],
-  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement sets a ₹73–₹77 band and a minimum bid of 3,200 shares, with subsequent bids in multiples of 1,600. That minimum application is ₹2,33,600–₹2,46,400. NSE's feed retrieved on 16 August showed 12,38,400 bids against 29,45,600 displayed offer shares, or 0.42×. That exchange display uses the gross offer including the market-maker reservation, so it should not be confused with final category-wise subscription. Final price, allotment and listing remain subject to NSE Emerge notices.",
+  issueNote: "The 9 August RHP confirms an entirely fresh issue of up to 29,45,600 shares, including a 1,48,800-share market-maker reservation and a 27,96,800-share net issue, with bidding from 14–18 August. The lead manager's official price advertisement sets a ₹73–₹77 band and a minimum bid of 3,200 shares, with subsequent bids in multiples of 1,600. That minimum application is ₹2,33,600–₹2,46,400. NSE's feed retrieved early on 17 August still showed 12,38,400 bids against 29,45,600 displayed offer shares, or 0.42×. That exchange display uses the gross offer including the market-maker reservation, so it should not be confused with final category-wise subscription. Final price, allotment and listing remain subject to NSE Emerge notices.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final NSE Emerge notice pending", priceBand: "₹73–₹77", lotSize: 3200, totalCr: 22.68, freshCr: 22.68, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "Up to ₹16.81 crore: ₹8.81 crore in FY27 and ₹8.00 crore in FY28" },
@@ -1886,7 +1893,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "0.49×", context: "Borrowings increased to ₹9.25 crore but remained below net worth." },
     { label: "FY26 operating cash flow", value: "-₹1.66 crore", context: "Negative despite ₹4.20 crore PAT as receivables, inventory and working capital absorbed cash." },
     { label: "FY26 debtor days", value: "196 days", context: "The RHP projects a fall to 110 days in FY27 and FY28; collection performance is central to the working-capital case." },
-    { label: "NSE live demand snapshot", value: "0.42×", context: "12,38,400 bids versus the exchange-displayed gross offer at the 16 August retrieval; not a final category-wise figure." },
+    { label: "NSE live demand snapshot", value: "0.42×", context: "12,38,400 bids versus the exchange-displayed gross offer at the early 17 August retrieval; not a final category-wise figure." },
     { label: "FY26 working-capital line utilisation", value: "98.8%", context: "₹5.75 crore was drawn from a ₹5.82 crore sanctioned fund-based limit at 31 March 2026." },
     { label: "FY26 working-capital gap / revenue", value: "36.34%", context: "Up from 17.07% in FY24 as the working-capital gap rose to ₹18.95 crore and the cycle lengthened to 103 days." },
     { label: "Receivables over six months", value: "₹4.94 crore", context: "17.8% of FY26 receivables; this includes ₹0.75 crore classified as disputed and outstanding for more than three years." },
@@ -1894,6 +1901,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 director-loan balance", value: "₹0.50 crore", context: "The company took ₹0.81 crore from promoter-directors and repaid ₹0.37 crore during FY26; the closing balance was ₹50.11 lakh." },
     { label: "IPO working-capital coverage", value: "47.9% of FY28 gap", context: "The ₹16.81 crore allocation is measured against the RHP's projected ₹35.07 crore FY28 working-capital gap." },
     { label: "Longest disclosed MSME filing delay", value: "997 days", context: "The RHP lists historical half-yearly MSME-return delays of 267–997 days, including a 2021 return filed in January 2024." },
+    { label: "PNB cash-credit rate", value: "7.45%", context: "The facility is secured by stock and book debts, an equitable mortgage and personal guarantees from both promoter-directors." },
+    { label: "FY26 current ratio", value: "1.65×", context: "Down from 1.89× in FY25 as receivables, inventory and short-term borrowings expanded with the working-capital cycle." },
   ],
   strengths: [
     "A 16-year operating history and authorisations from established automation vendors provide product access, technical support and customer credibility.",
@@ -1911,6 +1920,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The working-capital forecast assumes debtor days fall from 196 in FY26 to 110 in FY27, inventory days from 61 to 40 and creditor days from 155 to 30. Faster collections and inventory turns are therefore essential even as the company plans to pay suppliers much sooner.",
     "The FY26 receivables ageing table shows ₹4.94 crore, or 17.8%, outstanding beyond six months. This includes ₹74.64 lakh of disputed receivables older than three years, linked in the RHP to a ₹76.64 lakh commercial recovery suit that remained at the evidence stage. The company nevertheless recorded no allowance for doubtful debts across the ₹27.71 crore receivable balance; no post-10 August court update was verified in the offer document set.",
     "Promoter-directors supplied ₹80.75 lakh of loans and received ₹37.43 lakh of repayments during FY26, leaving ₹50.11 lakh outstanding. The amount is modest, but continued promoter funding alongside a nearly exhausted bank line is a governance and liquidity signal until the fresh issue is deployed.",
+    "The PNB cash-credit facility is priced at 7.45% and secured by inventory, book debts, an equitable mortgage over company or guarantor property and personal guarantees from both promoter-directors. The RHP does not commit to releasing those guarantees or the mortgage after the IPO.",
+    "The current ratio fell to 1.65× in FY26 from 1.89× in FY25 while the company used 98.8% of its sanctioned fund-based line. Liquidity therefore depends on customer collections and fresh-issue deployment rather than unused bank headroom.",
     "The financial statements present ₹8.80 crore as creditors other than MSMEs, but the FY26 ageing schedule classifies the same ₹8.80 crore as disputed MSME dues. This internal RHP classification conflict is material to supplier-payment quality and requires clarification in a corrigendum, final prospectus or post-listing financials.",
     "The top ten suppliers accounted for 43.79% of FY26 purchases, and the company disclosed no long-term supply contracts. Component availability, price changes and vendor terms can disrupt project execution.",
     "EPC work carries design error, component availability, site delay, commissioning, warranty, liquidated-damages and cost-overrun risk. Fixed-price orders can compress margin when delivery slips.",
@@ -1931,6 +1942,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Operating cash flow versus PAT and deployment of the ₹16.81 crore working-capital allocation.",
     "Sanctioned working-capital limits, utilisation, interest cost and the mix of IPO proceeds, internal accruals and borrowings used to fund the projected gap.",
     "Repayment or replacement of the ₹50.11 lakh director-loan balance and any new promoter funding after the IPO proceeds enter the business.",
+    "Release or continuation of the promoter personal guarantees and equitable mortgage supporting the PNB cash-credit facility after the fresh issue is deployed.",
     "Gross and EBITDA margin by project, supplier rebates, foreign-exchange exposure and pass-through of component costs.",
     "Status of Mitsubishi, Endress+Hauser, Exor and Euroteck authorisations, plus supplier concentration and product availability.",
     "Related-party transactions, promoter dependence, contingent liabilities, warranties and NSE Emerge liquidity.",
