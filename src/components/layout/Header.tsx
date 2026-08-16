@@ -11,6 +11,7 @@ type MenuLink = {
   name: string;
   href: string;
   description: string;
+  children?: MenuLink[];
 };
 
 type NavigationItem =
@@ -63,54 +64,19 @@ const investmentProducts: MenuLink[] = [
 
 const audienceLinks: MenuLink[] = [
   {
-    name: "Retirement Planning",
-    href: "/retirement-planning",
-    description: "Turn savings, pensions and NPS into a resilient retirement-income plan.",
+    name: "For HNIs",
+    href: "/wealth-management-for-hnis",
+    description: "Coordinate complex portfolios, liquidity and intergenerational wealth.",
   },
   {
-    name: "All Retirement Calculators",
-    href: "/tools/retirement-planning-calculators",
-    description: "Choose from seven free tools for corpus, income, EPF, PPF and NPS.",
+    name: "For Entrepreneurs",
+    href: "/wealth-planning-for-entrepreneurs",
+    description: "Separate business risk from personal wealth and plan liquidity events.",
   },
   {
-    name: "Retirement Calculator",
-    href: "/tools/retirement-calculator",
-    description: "Estimate future expenses, retirement corpus and monthly investment.",
-  },
-  {
-    name: "Inflation Calculator",
-    href: "/tools/retirement-inflation-calculator",
-    description: "See future retirement expenses and a fixed pension's purchasing power.",
-  },
-  {
-    name: "Retirement Income Calculator",
-    href: "/tools/retirement-income-calculator",
-    description: "Estimate monthly income from an existing corpus and pension.",
-  },
-  {
-    name: "NPS Annuity Calculator",
-    href: "/tools/nps-annuity-calculator",
-    description: "Compare monthly, quarterly and annual income from a live NPS annuity quote.",
-  },
-  {
-    name: "EPF Calculator",
-    href: "/tools/epf-calculator",
-    description: "Project an EPF balance with editable contributions and interest assumptions.",
-  },
-  {
-    name: "PPF Calculator",
-    href: "/tools/ppf-calculator",
-    description: "Estimate PPF maturity with editable deposits, term and rate.",
-  },
-  {
-    name: "Retirement Readiness Check",
-    href: "/tools/retirement-readiness-check",
-    description: "Check ten retirement foundations and find the next planning step.",
-  },
-  {
-    name: "AI Wealth Planner",
-    href: "/tools/ai-wealth-planner",
-    description: "Estimate your goal corpus, monthly SIP and illustrative asset mix.",
+    name: "For Family Offices",
+    href: "/family-office-investment-solutions",
+    description: "Support manager selection, alternatives and consolidated oversight.",
   },
   {
     name: "For Doctors",
@@ -121,26 +87,81 @@ const audienceLinks: MenuLink[] = [
     name: "For IT Professionals",
     href: "/wealth-planning-for-it-professionals",
     description: "Plan salary, bonuses, RSUs, ESOPs and financial independence.",
-  },
-  {
-    name: "RSU Wealth Planning",
-    href: "/rsu-esops",
-    description: "Coordinate employer stock, records, goals and diversification.",
-  },
-  {
-    name: "RSU Calculator",
-    href: "/tools/rsu-concentration-calculator",
-    description: "Measure current concentration and broader employer dependency.",
-  },
-  {
-    name: "RSU Decision Check",
-    href: "/tools/rsu-decision-check",
-    description: "Compare sell-at-vest, fixed-rule and staged approaches.",
+    children: [
+      {
+        name: "RSU Wealth Planning",
+        href: "/rsu-esops",
+        description: "Coordinate employer stock, records, goals and diversification.",
+      },
+      {
+        name: "RSU Concentration Calculator",
+        href: "/tools/rsu-concentration-calculator",
+        description: "Measure current concentration and broader employer dependency.",
+      },
+      {
+        name: "RSU Decision Check",
+        href: "/tools/rsu-decision-check",
+        description: "Compare sell-at-vest, fixed-rule and staged approaches.",
+      },
+    ],
   },
   {
     name: "For Telugu NRIs",
     href: "/nri-telugu",
     description: "Coordinate India-linked wealth in Telugu or English.",
+  },
+];
+
+const retirementLinks: MenuLink[] = [
+  {
+    name: "Retirement Planning Overview",
+    href: "/retirement-planning",
+    description: "Build a resilient plan for corpus, income, healthcare and legacy.",
+  },
+  {
+    name: "All Retirement Calculators",
+    href: "/tools/retirement-planning-calculators",
+    description: "Choose from the full suite of free retirement-planning tools.",
+  },
+  {
+    name: "Retirement Calculator",
+    href: "/tools/retirement-calculator",
+    description: "Estimate future expenses, retirement corpus and monthly investment.",
+  },
+  {
+    name: "Retirement Income Calculator",
+    href: "/tools/retirement-income-calculator",
+    description: "Estimate income from an existing corpus and pension.",
+  },
+  {
+    name: "Retirement Inflation Calculator",
+    href: "/tools/retirement-inflation-calculator",
+    description: "See how inflation may change expenses and pension purchasing power.",
+  },
+  {
+    name: "NPS Annuity Calculator",
+    href: "/tools/nps-annuity-calculator",
+    description: "Compare monthly, quarterly and annual annuity income.",
+  },
+  {
+    name: "EPF Calculator",
+    href: "/tools/epf-calculator",
+    description: "Project EPF with editable contributions and interest assumptions.",
+  },
+  {
+    name: "PPF Calculator",
+    href: "/tools/ppf-calculator",
+    description: "Estimate PPF maturity with editable deposits, term and rate.",
+  },
+  {
+    name: "Retirement Readiness Check",
+    href: "/tools/retirement-readiness-check",
+    description: "Check ten retirement foundations and identify the next gap.",
+  },
+  {
+    name: "AI Wealth Planner",
+    href: "/tools/ai-wealth-planner",
+    description: "Estimate a goal corpus, monthly SIP and illustrative asset mix.",
   },
 ];
 
@@ -158,6 +179,13 @@ const navigationItems: NavigationItem[] = [
     menuId: "who-we-serve-menu",
     submenu: audienceLinks,
     overviewLabel: "Explore who we serve",
+  },
+  {
+    name: "Retirement Planning",
+    href: "/retirement-planning",
+    menuId: "retirement-planning-menu",
+    submenu: retirementLinks,
+    overviewLabel: "Explore retirement planning",
   },
   { name: "About Us", href: "/about" },
   { name: "Team", href: "/team" },
@@ -257,19 +285,30 @@ export function Header() {
                             item.name === "Investment Products" ? "w-[38rem]" : "w-[32rem]"
                           }`}
                         >
-                          <div className={item.name === "Investment Products" ? "grid grid-cols-2 gap-1" : "grid gap-1"}>
+                          <div className={item.name === "Who We Serve" ? "grid gap-1" : "grid grid-cols-2 gap-1"}>
                             {item.submenu.map((subitem) => (
-                              <Link
-                                key={subitem.name}
-                                href={subitem.href}
-                                onClick={closeNavigation}
-                                className="rounded-xl px-4 py-3 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-                              >
-                                <span className="block font-body text-sm font-bold text-foreground">{subitem.name}</span>
-                                <span className="mt-1 block font-body text-xs leading-relaxed text-muted-foreground">
-                                  {subitem.description}
-                                </span>
-                              </Link>
+                              <div key={subitem.name}>
+                                <Link
+                                  href={subitem.href}
+                                  onClick={closeNavigation}
+                                  className="block rounded-xl px-4 py-3 transition-colors hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                                >
+                                  <span className="block font-body text-sm font-bold text-foreground">{subitem.name}</span>
+                                  <span className="mt-1 block font-body text-xs leading-relaxed text-muted-foreground">
+                                    {subitem.description}
+                                  </span>
+                                </Link>
+                                {subitem.children && (
+                                  <div className="ml-5 border-l border-border/70 pl-3">
+                                    {subitem.children.map((child) => (
+                                      <Link key={child.name} href={child.href} onClick={closeNavigation} className="block rounded-lg px-3 py-2 text-xs text-muted-foreground transition hover:bg-muted hover:text-foreground">
+                                        <span className="font-semibold text-foreground">{child.name}</span>
+                                        <span className="ml-1">— {child.description}</span>
+                                      </Link>
+                                    ))}
+                                  </div>
+                                )}
+                              </div>
                             ))}
                           </div>
                           <div className="mt-2 border-t border-border/60 px-2 pt-2">
@@ -371,15 +410,22 @@ export function Header() {
                                 {item.overviewLabel} →
                               </Link>
                               {item.submenu.map((subitem) => (
-                                <Link
-                                  key={subitem.name}
-                                  href={subitem.href}
-                                  onClick={closeNavigation}
-                                  className="block rounded-lg py-2.5 font-body text-sm text-muted-foreground transition-colors hover:text-foreground"
-                                >
-                                  <span className="block font-semibold text-foreground">{subitem.name}</span>
-                                  <span className="mt-0.5 block text-xs leading-relaxed">{subitem.description}</span>
-                                </Link>
+                                <div key={subitem.name}>
+                                  <Link href={subitem.href} onClick={closeNavigation} className="block rounded-lg py-2.5 font-body text-sm text-muted-foreground transition-colors hover:text-foreground">
+                                    <span className="block font-semibold text-foreground">{subitem.name}</span>
+                                    <span className="mt-0.5 block text-xs leading-relaxed">{subitem.description}</span>
+                                  </Link>
+                                  {subitem.children && (
+                                    <div className="mb-2 ml-3 border-l border-border pl-3">
+                                      {subitem.children.map((child) => (
+                                        <Link key={child.name} href={child.href} onClick={closeNavigation} className="block py-2 text-xs text-muted-foreground hover:text-foreground">
+                                          <span className="block font-semibold text-foreground">{child.name}</span>
+                                          <span className="mt-0.5 block leading-relaxed">{child.description}</span>
+                                        </Link>
+                                      ))}
+                                    </div>
+                                  )}
+                                </div>
                               ))}
                             </div>
                           </motion.div>

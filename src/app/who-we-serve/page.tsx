@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import {
   ArrowRight,
+  Building2,
+  BriefcaseBusiness,
   CheckCircle2,
   Globe2,
   Languages,
   Laptop2,
   MapPin,
   Stethoscope,
+  UsersRound,
 } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
@@ -15,14 +18,14 @@ import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 const canonicalUrl = "https://www.sohowealth.in/who-we-serve";
 
 export const metadata: Metadata = {
-  title: "Who We Serve: Doctors, IT Professionals & Telugu NRIs | SoHo",
+  title: "Who We Serve: HNIs, Entrepreneurs, Families & Professionals | SoHo",
   description:
-    "Distinct wealth-planning experiences for doctors, IT professionals and Telugu NRIs—each built around different income, career and family decisions.",
+    "Focused wealth-planning paths for HNIs, entrepreneurs, family offices, doctors, IT professionals and Telugu NRIs.",
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Who SoHo Wealth Serves",
     description:
-      "Purpose-built wealth journeys for doctors, IT professionals and Telugu NRIs.",
+      "Purpose-built wealth journeys for private clients, business owners, family offices and professionals.",
     url: canonicalUrl,
     siteName: "SoHo Wealth",
     type: "website",
@@ -30,11 +33,44 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Who SoHo Wealth Serves",
-    description: "Doctors, IT professionals and Telugu NRIs need different starting points—not a generic template.",
+    description: "HNIs, entrepreneurs, family offices and professionals need different starting points—not a generic template.",
   },
 };
 
 const audiences = [
+  {
+    icon: UsersRound,
+    eyebrow: "High-Net-Worth Individuals",
+    title: "Bring every portfolio, manager and wealth objective into one view.",
+    description:
+      "For affluent individuals and families managing multiple investment accounts, concentrated positions, alternatives, property exposure and the transfer of wealth across generations.",
+    href: "/wealth-management-for-hnis",
+    cta: "Explore HNI Wealth Management",
+    tool: "Consolidated portfolio review",
+    topics: ["Portfolio consolidation", "PMS, SIF and AIF selection", "Liquidity and concentration", "Legacy coordination"],
+  },
+  {
+    icon: BriefcaseBusiness,
+    eyebrow: "Entrepreneurs",
+    title: "Build personal wealth that does not depend entirely on the business.",
+    description:
+      "For founders and business owners balancing reinvestment, irregular cash flows, personal diversification, succession choices and the preparation or deployment of a liquidity event.",
+    href: "/wealth-planning-for-entrepreneurs",
+    cta: "Explore Entrepreneur Wealth Planning",
+    tool: "Business-to-personal wealth map",
+    topics: ["Personal–business separation", "Liquidity-event planning", "Promoter concentration", "Succession and family goals"],
+  },
+  {
+    icon: Building2,
+    eyebrow: "Family Offices",
+    title: "Add disciplined investment support without adding unnecessary complexity.",
+    description:
+      "For single- and multi-family offices seeking an informed distribution partner for manager discovery, product comparisons, private-market access and portfolio-level reporting support.",
+    href: "/family-office-investment-solutions",
+    cta: "Explore Family Office Solutions",
+    tool: "Institutional opportunity review",
+    topics: ["Manager due diligence", "Alternatives and private markets", "Exposure mapping", "Decision-ready reporting"],
+  },
   {
     icon: Stethoscope,
     eyebrow: "Doctors in AP & Telangana",
@@ -91,7 +127,7 @@ const collectionSchema = {
   "@id": `${canonicalUrl}#webpage`,
   url: canonicalUrl,
   name: "Who SoHo Wealth Serves",
-  description: "Wealth-planning paths for doctors, IT professionals and Telugu NRIs.",
+  description: "Wealth-planning paths for HNIs, entrepreneurs, family offices, doctors, IT professionals and Telugu NRIs.",
   isPartOf: { "@id": "https://www.sohowealth.in/#website" },
   mainEntity: {
     "@type": "ItemList",
@@ -138,8 +174,8 @@ export default function WhoWeServePage() {
               The same investment product can solve three very different wealth problems.
             </h1>
             <p className="mt-7 max-w-3xl font-body text-lg leading-relaxed text-white/70 md:text-xl">
-              Doctors, IT professionals and Telugu NRIs need different questions, different planning sequences and
-              different conversations. Choose the path that feels most like your financial life.
+              HNIs, entrepreneurs, family offices and professionals face different concentrations, cash flows and
+              family decisions. Choose the path that feels most like your financial life.
             </p>
           </div>
         </div>

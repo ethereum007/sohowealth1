@@ -17,6 +17,18 @@ const investmentLinks = [
 
 const audienceLinks = [
   { name: "Who We Serve", href: "/who-we-serve" },
+  { name: "For HNIs", href: "/wealth-management-for-hnis" },
+  { name: "For Entrepreneurs", href: "/wealth-planning-for-entrepreneurs" },
+  { name: "For Family Offices", href: "/family-office-investment-solutions" },
+  { name: "For Doctors", href: "/financial-planning-for-doctors" },
+  { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },
+  { name: "↳ RSU Wealth Planning", href: "/rsu-esops" },
+  { name: "↳ RSU Concentration Calculator", href: "/tools/rsu-concentration-calculator" },
+  { name: "↳ RSU Decision Check", href: "/tools/rsu-decision-check" },
+  { name: "For Telugu NRIs", href: "/nri-telugu" },
+];
+
+const retirementLinks = [
   { name: "Retirement Planning", href: "/retirement-planning" },
   { name: "EPF vs PPF vs NPS", href: "/insights/epf-vs-ppf-vs-nps" },
   { name: "All Retirement Calculators", href: "/tools/retirement-planning-calculators" },
@@ -27,12 +39,7 @@ const audienceLinks = [
   { name: "EPF Calculator", href: "/tools/epf-calculator" },
   { name: "PPF Calculator", href: "/tools/ppf-calculator" },
   { name: "Retirement Readiness Check", href: "/tools/retirement-readiness-check" },
-  { name: "For Doctors", href: "/financial-planning-for-doctors" },
-  { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },
-  { name: "For Telugu NRIs", href: "/nri-telugu" },
-  { name: "RSU Calculator", href: "/tools/rsu-concentration-calculator" },
-  { name: "RSU Decision Check", href: "/tools/rsu-decision-check" },
-  { name: "RSU Planning", href: "/rsu-esops" },
+  { name: "AI Wealth Planner", href: "/tools/ai-wealth-planner" },
 ];
 
 const companyLinks = [
@@ -51,7 +58,7 @@ export function Footer() {
   return (
     <footer style={{ backgroundColor: "#0B1F3A" }}>
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-10 py-14 md:grid-cols-3 lg:grid-cols-5 lg:gap-12">
+        <div className="grid grid-cols-2 gap-10 py-14 md:grid-cols-3 lg:grid-cols-6 lg:gap-10">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 inline-block" aria-label="SoHo Wealth — Home">
               <Image
@@ -81,6 +88,7 @@ export function Footer() {
 
           <FooterLinkColumn title="Investment Products" links={investmentLinks} />
           <FooterLinkColumn title="Who We Serve" links={audienceLinks} />
+          <FooterLinkColumn title="Retirement Planning" links={retirementLinks} />
           <FooterLinkColumn title="Company" links={companyLinks} />
 
           <div>

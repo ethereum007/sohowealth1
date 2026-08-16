@@ -80,11 +80,11 @@ const TeamClient = () => {
             >
               <div className="rounded-xl aspect-[3/4] overflow-hidden shadow-[0_20px_60px_-24px_rgba(11,31,58,0.35)]">
                 <Image
-                  src="/kiran-dutta.jpeg"
+                  src="/kiran-dutta-team.jpeg"
                   alt="Kiran Dutta, Founder of SoHo Wealth and SIFPrime"
                   width={720}
                   height={960}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-center"
                   priority
                 />
               </div>
