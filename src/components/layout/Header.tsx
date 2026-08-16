@@ -93,6 +93,11 @@ const audienceLinks: MenuLink[] = [
     description: "Project an EPF balance with editable contributions and interest assumptions.",
   },
   {
+    name: "PPF Calculator",
+    href: "/tools/ppf-calculator",
+    description: "Estimate PPF maturity with editable deposits, term and rate.",
+  },
+  {
     name: "Retirement Readiness Check",
     href: "/tools/retirement-readiness-check",
     description: "Check ten retirement foundations and find the next planning step.",

@@ -24,6 +24,7 @@ const audienceLinks = [
   { name: "Income Calculator", href: "/tools/retirement-income-calculator" },
   { name: "NPS Annuity Calculator", href: "/tools/nps-annuity-calculator" },
   { name: "EPF Calculator", href: "/tools/epf-calculator" },
+  { name: "PPF Calculator", href: "/tools/ppf-calculator" },
   { name: "Retirement Readiness Check", href: "/tools/retirement-readiness-check" },
   { name: "For Doctors", href: "/financial-planning-for-doctors" },
   { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },

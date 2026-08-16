@@ -319,6 +319,7 @@ export default async function InsightPostPage({ params }: PageProps) {
                   ["Estimate income from your corpus", "/tools/retirement-income-calculator"],
                   ["Compare an NPS annuity quote", "/tools/nps-annuity-calculator"],
                   ["Project your EPF retirement balance", "/tools/epf-calculator"],
+                  ["Estimate your PPF maturity value", "/tools/ppf-calculator"],
                   ["Take the 10-point readiness check", "/tools/retirement-readiness-check"],
                   ["Explore the retirement planning service", "/retirement-planning"],
                 ].map(([label, href]) => (
