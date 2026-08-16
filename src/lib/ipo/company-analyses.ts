@@ -1094,7 +1094,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company was incorporated in 2017 and is led by promoters Suraj Vernekar'D, Roopa Vernekar and Nishith Rameshchandra Shah. The limited operating history and reliance on technical and promoter leadership make execution evidence after listing especially important.",
     "The RHP reports 55 permanent employees and 33 contractual employees at FY26. Permanent-employee attrition fell to 3.5% from 21.4% in FY25, while contractual attrition was 6.6% in both FY25 and FY26.",
   ],
-  issueNote: "The 27 July final RHP confirms an entirely fresh 22,58,400-share offer with no OFS. It reserves 3,25,200 shares for the market maker and leaves a 19,33,200-share net issue. At the ₹105 cap the gross offer is ₹23.71 crore. The market lot was 1,200 shares, while the minimum individual application was two lots, or 2,400 shares and ₹2.40–₹2.52 lakh across the price band.",
+  issueNote: "The 27 July final RHP confirms an entirely fresh 22,58,400-share offer with no OFS. It reserves 3,25,200 shares for the market maker and leaves a 19,33,200-share net issue. At the ₹105 cap the gross offer is ₹23.71 crore. The market lot was 1,200 shares, while the minimum individual application was two lots, or 2,400 shares and ₹2.40–₹2.52 lakh across the price band. BSE notice 20260810-35 confirms the ₹105 final price, 7 August allotment and trading from 11 August under scrip 544858. BSE's first-day file records a ₹124.50 open, ₹130.70 high and close, and ₹122 low: the close was 24.5% above the issue price. This is dated market history, not a forward view.",
   issue: { open: "4 August 2026", close: "6 August 2026", listing: "Listed 11 August 2026 on BSE SME", priceBand: "₹100–₹105", lotSize: 2400, totalCr: 23.71, freshCr: 23.71, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in product development", amount: "₹2.86 crore" },
@@ -1116,6 +1116,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 receivable days", value: "139 days", context: "Trade receivables reached ₹15.77 crore, up from ₹8.05 crore in FY25." },
     { label: "FY26 permanent attrition", value: "3.5%", context: "Two permanent employees exited; the rate improved from 21.4% in FY25." },
     { label: "RHP contingent liabilities", value: "Nil", context: "The final RHP states that the company had no contingent liabilities as of its date." },
+    { label: "Listing-day close vs issue", value: "+24.5%", context: "BSE recorded a ₹124.50 open and ₹130.70 close on 11 August versus the ₹105 issue price; 10,32,000 shares traded in the trade-for-trade segment." },
   ],
   strengths: [
     "Revenue increased from ₹15.27 crore in FY24 to ₹40.93 crore in FY26, while EBITDA and PAT grew faster over the same period.",
@@ -1143,7 +1144,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Progress and cost of the proposed manufacturing facility, product-development milestones and any capital-cost overruns.",
     "Borrowings, finance cost and leverage after the issue, alongside warranty provisions and contingent liabilities.",
     "Audit-trail operation and preservation, statutory-payment timeliness, related-party transactions, promoter holdings and board oversight.",
-    "BSE SME trading liquidity and the first post-listing evidence on the 55 permanent and 33 contractual employees disclosed in the RHP.",
+    "BSE SME trading liquidity after the first-day 10,32,000-share volume, and the first post-listing evidence on the 55 permanent and 33 contractual employees disclosed in the RHP.",
   ],
   valuation: [
     "At the ₹105 upper band, published offer calculations indicated approximately 21.88× FY26 earnings, 15.36× enterprise value/EBITDA and 2.25× book value. These are historical, small-base ratios rather than forecasts.",
@@ -1152,6 +1153,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   sources: [
     { label: "Aegeus Technologies final RHP", href: "https://www.aegeustechnologies.com/docs/investors/rhp.pdf", kind: "Primary" },
+    { label: "BSE Aegeus listing notice, 10 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260810-35/20260810-35.pdf", kind: "Primary" },
+    { label: "BSE Aegeus first-day historical prices, 11 August 2026", href: "https://api.bseindia.com/BseIndiaAPI/api/StockpricesearchData/w?MonthDate=11%2F08%2F2026&YearDate=11%2F08%2F2026&pageType=0&Scode=544858&Seg=C&rbType=D&SortOrder=true", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "ICICI Direct Aegeus offer terms and RHP link", href: "https://www.icicidirect.com/ipo/aegeus-technologies-ltd-ipo", kind: "Secondary" },
     { label: "IPOPlatform Aegeus financial report", href: "https://www.ipoplatform.com/ipo/financial-report/aegeus-technologies-ipo/4561", kind: "Secondary" },
@@ -1164,7 +1167,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company disclosed three manufacturing units in Chhatrapati Sambhajinagar, Maharashtra. Proximity to automotive customers can support development and delivery, while dependence on a concentrated local manufacturing footprint creates disruption and utilisation risk.",
     "Promoters Neeraj Satyaprakash Goyal, Shubham Neeraj Goyal and Anita Neeraj Goyal control the business. The DRHP describes family experience in automotive components; governance, succession and related-party oversight remain important in a promoter-led SME.",
   ],
-  issueNote: "The 29 July RHP confirms an entirely fresh issue of 34,46,400 shares, including a 1,72,800-share market-maker reservation. BSE notice 20260805-21 records 9,76,800 anchor shares allotted at ₹94, or ₹9.18 crore. BSE's post-anchor issue feed therefore shows 24,69,600 shares, including the market-maker reservation, leaving 22,96,800 post-anchor public-investor shares. The exchange confirms a 2,400-share minimum bid in 1,200-share multiples. BSE listing notice 20260812-34 records the ₹94 final issue price, 11 August allotment and trading from 13 August under scrip 544863, symbol LAPL, with a 1,200-share trading lot.",
+  issueNote: "The 29 July RHP confirms an entirely fresh issue of 34,46,400 shares, including a 1,72,800-share market-maker reservation. BSE notice 20260805-21 records 9,76,800 anchor shares allotted at ₹94, or ₹9.18 crore. BSE's post-anchor issue feed therefore shows 24,69,600 shares, including the market-maker reservation, leaving 22,96,800 post-anchor public-investor shares. The exchange confirms a 2,400-share minimum bid in 1,200-share multiples. BSE listing notice 20260812-34 records the ₹94 final issue price, 11 August allotment and trading from 13 August under scrip 544863, symbol LAPL, with a 1,200-share trading lot. BSE's first-day file records a ₹135 open, ₹139 high, ₹128.25 low and ₹128.29 close; the close was 36.5% above the issue price. This is dated market history, not a forward view.",
   issue: { open: "6 August 2026", close: "10 August 2026", listing: "Listed 13 August 2026 on BSE SME", priceBand: "₹88–₹94; issue price ₹94", lotSize: 2400, totalCr: 32.40, freshCr: 32.40, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Capital expenditure for a new manufacturing facility at Auric City, Chhatrapati Sambhajinagar", amount: "Up to ₹19.56 crore; total estimated project cost ₹22.35 crore" },
@@ -1183,6 +1186,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "0.83×", context: "Total borrowings reached ₹20.99 crore; ₹4.79 crore is identified for repayment." },
     { label: "FY26 operating cash flow", value: "₹1.95 Cr", context: "Only 22.6% of ₹8.63 crore PAT as inventory and receivables absorbed cash." },
     { label: "Largest-customer share", value: "77.18%", context: "Top five and top ten were 91.58% and 95.49% of FY26 revenue." },
+    { label: "Listing-day close vs issue", value: "+36.5%", context: "BSE recorded a ₹135.00 open and ₹128.29 close on 13 August versus the ₹94 issue price; 18,45,600 shares traded in the trade-for-trade segment." },
   ],
   strengths: [
     "The product range spans lighting, mirrors, motors and moulded parts, giving LAPL multiple component opportunities on a vehicle platform.",
@@ -1209,7 +1213,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Deployment of the ₹19.56 crore capex allocation, regulatory approvals and operationalisation of the Auric City unit within the stated 15–18-month period.",
     "Actual repayment from the ₹4.79 crore debt allocation and the resulting interest, leverage and working-capital position.",
     "Gross and EBITDA margins through OEM price resets, raw-material movements and the ramp-up of new programmes.",
-    "Warranty provisions, rejection and recall costs, related-party transactions and BSE SME trading liquidity.",
+    "Warranty provisions, rejection and recall costs, related-party transactions and BSE SME trading liquidity after the first-day 18,45,600-share volume.",
   ],
   valuation: [
     "The BSE notice confirms 1,25,36,218 post-issue shares and a ₹94 issue price, implying approximately ₹117.84 crore market capitalisation. Against FY26 PAT of ₹8.63 crore, that is about 13.7× historical earnings.",
@@ -1224,6 +1228,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "LAPL Automotive 29 July 2026 RHP", href: "https://gyrcapitaladvisors.com/wp-content/uploads/2026/07/RHP_LAPL_29072026.pdf", kind: "Primary" },
     { label: "BSE LAPL anchor-allocation notice, 5 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260805-21/20260805-21.pdf", kind: "Primary" },
     { label: "BSE LAPL listing notice, 12 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260812-34/20260812-34.pdf", kind: "Primary" },
+    { label: "BSE LAPL first-day historical prices, 13 August 2026", href: "https://api.bseindia.com/BseIndiaAPI/api/StockpricesearchData/w?MonthDate=13%2F08%2F2026&YearDate=13%2F08%2F2026&pageType=0&Scode=544863&Seg=C&rbType=D&SortOrder=true", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "IPOPlatform LAPL financial report", href: "https://www.ipoplatform.com/ipo/financial-report/lapl-automotive-ipo/4095", kind: "Secondary" },
   ],
