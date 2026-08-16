@@ -1043,6 +1043,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Limited-partner base", value: "298 LPs", context: "At FY26, 139 were located in India and 159 outside India, creating both fundraising reach and cross-border capital-call sensitivity." },
     { label: "FY26 employee attrition", value: "13.33%", context: "Three employees left during FY26, up from one and 4.76% in FY25; the RHP reports no attrition among KMP and senior management in FY24–FY26." },
     { label: "Employee-benefit share", value: "49.90%", context: "₹35.12 crore in FY26, up from 44.30% of total expenses in FY25 and 44.23% in FY24." },
+    { label: "Outstanding ESOPs", value: "15.61 lakh", context: "The RHP shows 15,60,700 options in force, all unvested, with three-year vesting and exercise prices of ₹143.95 or ₹160; full exercise is roughly 1.1% of post-offer shares." },
+    { label: "Largest disclosed ESOP grant", value: "11.44 lakh", context: "Dheeraj Prasad Devata received 11,43,500 FY26 options, about 73.3% of the options shown in force at the RHP date, concentrating a material part of the retention pool in one senior executive." },
+    { label: "FY24 carried-interest reclassification", value: "₹18.40 Cr", context: "The restated accounts moved ₹18.395 crore of carried interest from other income to revenue from operations; total income and profit were unchanged, so the reclassification improves presentation but not economics." },
   ],
   strengths: [
     "A two-decade operating history spans multiple fundraising, investment and exit cycles in Indian private equity.",
@@ -1070,11 +1073,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "AIF regulation, taxation, valuation standards and rules governing sponsor commitments can change economics or restrict fundraising.",
     "Private fund performance is difficult to compare: IRR and multiple metrics depend on valuation policy, timing, realised versus unrealised gains and vintage.",
     "Fund V had filed its private-placement memorandum application with SEBI on 10 June 2026 but remained subject to approvals at the RHP date. Delay could change the timing or permitted deployment of proceeds.",
+    "The RHP says no LP failed to honour a capital call in FY24–FY26, but it also records past delays in LP capital contributions. That history matters because a delayed call can force bridge funding or cause a fund to miss an investment even when headline commitments remain intact.",
     "The ₹372 crore sponsor allocation is scheduled across FY27, FY28 and FY29 at ₹141.50 crore, ₹146.50 crore and ₹84.00 crore. Shareholders therefore retain multi-year capital-call, deployment and liquidity risk after listing rather than receiving an immediately fee-generating asset.",
     "The RHP reports gross MOIC, TVPI and gross IRR before fees, expenses and taxes. Fund IV's 1.74× MOIC, 1.47× TVPI and 27.91% IRR are for an under-deployment, unrealised vintage and should not be treated like Fund II's largely realised 3.81× MOIC.",
     "Fund IV's governing agreements contain a clawback: previously distributed carried interest may have to be returned if LP returns fall below the hurdle because of indemnity payments or tax assessments. Reported carry therefore has contingent cash-flow risk even after receipt.",
     "Fund IV's top ten LPs supplied 63.42% of commitments. Delayed or missed capital calls, redemptive sentiment toward India or concentration among large domestic and overseas allocators can slow deployment and future fundraising.",
     "Several marks using the operating company's current Gaja Capital names were still applications filed in December 2024. Other registered Gaja marks are held by Gaja Advisors Private Limited, while the Mauritius subsidiary uses the name under a 2015 branding agreement, making ownership, licensing and renewal across group entities a continuing control item.",
+    "The 2025 ESOP pool is nearly fully allocated: the RHP shows 15,60,700 options in force against a 15,87,462-option plan maximum. None had vested or been exercised. One FY26 grant to Dheeraj Prasad Devata accounts for about 73.3% of options in force, which strengthens retention alignment but concentrates future dilution and key-person exposure.",
+    "FY24's restated presentation moved ₹18.395 crore of carried interest from other income to revenue from operations without changing total income or profit. Trend analysis should therefore use a consistent income definition and should not interpret the higher operating-revenue line as an economic restatement.",
   ],
   monitor: [
     "Fee-paying AUM, committed capital, deployment and fundraising by fund and vintage.",
@@ -1092,6 +1098,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Uncalled commitments against cash, liquid investments, debt covenants and the timing of future capital calls, including the ₹58.58 crore balance outstanding at FY26.",
     "Employee attrition below senior-management level, employee-benefit expense as a share of revenue and continuity of investment, portfolio-operations and LP-reporting teams.",
     "Registration of the current company-name trademarks and continuing rights under intra-group brand licences.",
+    "Vesting, cancellations and exercises under the 15.61-lakh outstanding ESOP balance, including the concentration of awards among senior employees and the resulting post-offer dilution.",
+    "Consistent classification of carried interest between revenue from operations and other income, plus any further restatement or policy change that affects recurring-fee comparisons.",
   ],
   valuation: [
     "The official price advertisement gives post-offer market capitalisation of approximately ₹2,165.86–₹2,256.16 crore. That is about 26.4–27.5× FY26 consolidated PAT of ₹81.96 crore, or roughly 27.2–28.3× the ₹79.66 crore attributable to owners.",
@@ -1915,6 +1923,10 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Longest disclosed MSME filing delay", value: "997 days", context: "The RHP lists historical half-yearly MSME-return delays of 267–997 days, including a 2021 return filed in January 2024." },
     { label: "PNB cash-credit rate", value: "7.45%", context: "The facility is secured by stock and book debts, an equitable mortgage and personal guarantees from both promoter-directors." },
     { label: "FY26 current ratio", value: "1.65×", context: "Down from 1.89× in FY25 as receivables, inventory and short-term borrowings expanded with the working-capital cycle." },
+    { label: "FY26 existing-customer revenue", value: "83.91%", context: "Repeat customers supplied most revenue, up from 66.95% in FY24; this indicates relationship continuity but is not a disclosed recurring-contract or backlog measure." },
+    { label: "FY26 domestic revenue", value: "100%", context: "The RHP states that Skytech supplied only to Indian states, so revenue is exposed to domestic industrial capex rather than export diversification." },
+    { label: "FY26 inventory composition", value: "78.9% raw material", context: "₹6.83 crore of ₹8.66 crore inventory was raw material, ₹1.70 crore work-in-progress and ₹0.13 crore finished goods." },
+    { label: "Top-three procurement states", value: "84.56%", context: "Karnataka, Maharashtra and Haryana supplied 84.56% of FY26 purchases, compared with 91.71% in FY25." },
   ],
   strengths: [
     "A 16-year operating history and authorisations from established automation vendors provide product access, technical support and customer credibility.",
@@ -1936,6 +1948,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The current ratio fell to 1.65× in FY26 from 1.89× in FY25 while the company used 98.8% of its sanctioned fund-based line. Liquidity therefore depends on customer collections and fresh-issue deployment rather than unused bank headroom.",
     "The financial statements present ₹8.80 crore as creditors other than MSMEs, but the FY26 ageing schedule classifies the same ₹8.80 crore as disputed MSME dues. This internal RHP classification conflict is material to supplier-payment quality and requires clarification in a corrigendum, final prospectus or post-listing financials.",
     "The top ten suppliers accounted for 43.79% of FY26 purchases, and the company disclosed no long-term supply contracts. Component availability, price changes and vendor terms can disrupt project execution.",
+    "The supply chain is geographically concentrated: Karnataka, Maharashtra and Haryana represented 84.56% of FY26 purchases. A disruption in one of these corridors can affect component availability even though individual-supplier concentration has improved.",
+    "FY26 inventory nearly doubled to ₹8.66 crore, of which ₹6.83 crore was raw material and ₹1.70 crore work-in-progress. The accounts value inventory at the lower of cost and net realisable value but do not separately disclose an obsolescence or slow-moving-stock allowance, making ageing and subsequent usage important evidence gaps.",
     "EPC work carries design error, component availability, site delay, commissioning, warranty, liquidated-damages and cost-overrun risk. Fixed-price orders can compress margin when delivery slips.",
     "Authorised-partner arrangements may be changed or terminated, and vendor pricing, territories, warranties and product availability can affect competitive position.",
     "Government revenue rose to 21.37% of FY25 sales from 9.61% in FY24, increasing exposure to tender qualification, documentation, payment timing and policy decisions.",
@@ -1943,6 +1957,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The RHP records historical PAS-3 errors for allotments made in 2014, 2015 and 2021. Corrected filings were made on 16 April 2025 and an adjudication application was filed on 7 May 2025; the final regulatory outcome was not disclosed in the RHP.",
     "Corporate compliance was historically delayed in several areas. The most pronounced disclosure is the MSME half-yearly-return series, with delays of 267, 448, 632, 813 and 997 days, which is relevant alongside the RHP's conflicting ₹8.80 crore supplier classification.",
     "The standard 18-month product warranty creates a post-delivery obligation. Although no significant warranty issue was reported for the last three years, larger and more customised EPC installations could raise provision, rework and service costs.",
+    "The RHP attributes part of FY26 material-cost improvement to a transition in HMI-panel procurement from Emerson to Mitsubishi. That is a disclosed historical margin driver, but the persistence of the benefit depends on Mitsubishi pricing, authorisation and component availability.",
     "NSE Emerge shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads.",
   ],
   monitor: [
@@ -1960,6 +1975,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Related-party transactions, promoter dependence, contingent liabilities, warranties and NSE Emerge liquidity.",
     "Outcome of the PAS-3 adjudication application, timeliness of MSME and other statutory filings and any clarification of supplier-payment records.",
     "Warranty claims, provisions, rework costs and service turnaround under the 18-month coverage period as project size increases.",
+    "Inventory ageing, slow-moving or obsolete components, write-downs and the conversion of ₹6.83 crore of raw material and ₹1.70 crore of work-in-progress into billed projects.",
+    "The 83.91% existing-customer revenue share versus signed recurring contracts, order frequency and customer-specific project values; repeat business should not be treated as contractual backlog without those disclosures.",
+    "Procurement concentration across Karnataka, Maharashtra and Haryana, plus the cost and availability of HMI panels following the disclosed supplier transition.",
   ],
   valuation: [
     "Across the ₹73–₹77 band, 98,20,600 post-issue shares imply an equity value of approximately ₹71.69–₹75.62 crore, or about 17.1–18.0× FY26 PAT of ₹4.20 crore. The price advertisement's 12.59× cap-price P/E uses pre-issue diluted FY26 EPS of ₹6.12, so it does not capture the full fresh-issue dilution.",
@@ -1977,7 +1995,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Skytech issue tracker", href: "https://www.ipoplatform.com/ipo/subscription/skytech-infinite-platform-ipo/4436", kind: "Secondary" },
   ],
 }, {
-  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "16 August 2026",
+  slug: "ens-enterprises-ipo", company: "ENS Enterprises", market: "SME", sector: "Digital commerce, software engineering and SaaS", status: "Issue open; scheduled to close 18 August 2026", analysisAsOf: "17 August 2026",
   summary: "ENS builds online-commerce platforms, ONDC integrations, software, mobile applications and cloud systems, alongside digital marketing and proprietary SaaS products. Revenue and margins expanded rapidly through FY26, but operating cash flow turned negative, top-ten customer concentration rose to 69%, financial investments absorbed cash and the company added short-term debt. The key question is how much growth is recurring, organic and cash-generative rather than project-led or working-capital funded.",
   business: [
     "The Noida-based company provides digital-commerce enablement and software services across online storefronts, ONDC integrations, custom software, mobile applications, cloud and DevOps and digital marketing.",
@@ -1985,7 +2003,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The final RHP records 100 employees at 30 June 2026, including 92 in engineering and technology, after reporting 127 employees at FY26. Promoters are Manish Kumar Srivastava, Avinash Kumar Singh and Anupam Kumar Srivastava; Manish Srivastava also serves as CFO, concentrating operating and financial oversight.",
     "The RHP says promoter Anupam Kumar Srivastava resigned as whole-time director from 1 December 2025 but remains a promoter and shareholder. The transition leaves Manish Kumar Srivastava as the sole executive director disclosed on the four-member board and as CFO.",
   ],
-  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. The minimum application is ₹2,08,800–₹2,20,800. BSE notice 20260813-19 confirms that anchor investors received 10,26,000 shares at ₹92, worth ₹9.44 crore. BSE's 14 August book therefore displayed 25,76,400 shares after anchor allocation but still including the 1,81,200-share market-maker reservation; the residual public-investor pool was 23,95,200 shares. Cumulative cap-price demand was 15,38,400 shares, equal to 0.60× the displayed pool or 0.64× the residual public-investor pool. Both are interim exchange-book calculations, not final category-wise subscription.",
+  issueNote: "The issuer-hosted RHP dated 7 August 2026 confirms a 100% book-built, entirely fresh issue of up to 36,02,400 shares, including 1,81,200 market-maker shares and a 34,21,200-share net issue. The RHP records a ₹87–₹92 price band, a minimum bid of 2,400 shares with 1,200-share increments, bidding from 14–18 August and proposed trading from 21 August. The minimum application is ₹2,08,800–₹2,20,800. BSE notice 20260813-19 confirms that anchor investors received 10,26,000 shares at ₹92, worth ₹9.44 crore. BSE's book retrieved early on 17 August was still timestamped 14 August and displayed 25,76,400 shares after anchor allocation but still including the 1,81,200-share market-maker reservation; the residual public-investor pool was 23,95,200 shares. Cumulative cap-price demand remained 15,38,400 shares, equal to 0.60× the displayed pool or 0.64× the residual public-investor pool. Both are interim exchange-book calculations, not final category-wise subscription.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "21 August 2026 (proposed in RHP)", priceBand: "₹87–₹92", lotSize: 2400, totalCr: 33.14, freshCr: 33.14, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Enhancement, maintenance and upgrade of existing products through manpower hiring", amount: "₹17.02 crore" },
@@ -2014,6 +2032,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 TDS payable", value: "₹63.54 lakh", context: "The RHP says the balance was outstanding at 31 March 2026 and the company was in the process of depositing it; subsequent payment was not verified in the primary offer documents." },
     { label: "Delayed corporate filings disclosed", value: "31", context: "The RHP's schedule spans ADT, AOC, MGT, DIR, MR and PAS forms; the longest delay was 3,447 days for a 2016 ADT-1 filing completed in July 2025." },
     { label: "FY26 director/family remuneration", value: "₹1.20 crore", context: "Derived from the RHP related-party table: ₹45.00 lakh to the whole-time director/CFO, ₹11.25 lakh to the chairman, ₹30.00 lakh to the resigning whole-time director and ₹33.75 lakh to a director's spouse." },
+    { label: "FY26 revenue outside India", value: "11.05%", context: "₹5.68 crore of FY26 revenue was generated outside India, up from 8.98% in FY25; the business remains predominantly domestic but has a measurable currency and cross-border delivery exposure." },
+    { label: "Unbilled trade receivables", value: "Nil", context: "The restated schedules report no not-due or unbilled trade receivables in FY24–FY26; the ₹17.11 crore FY26 balance was billed receivables rather than contract assets awaiting invoicing." },
+    { label: "IPO-funded payroll horizon", value: "Initial year only", context: "The RHP states that salaries and advance software tools under the product-upgrade object are funded by IPO proceeds only initially; recurring costs must then be met from operating cash flow and internal accruals." },
   ],
   strengths: [
     "ENS addresses digital-commerce, ONDC, mobile and cloud implementation needs through an integrated engineering and marketing portfolio.",
@@ -2021,6 +2042,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Recurring service revenue improved to 23.18% of FY26 revenue from 16.68% in FY25, although the RHP records no subscription-based revenue in either period.",
     "The 10,26,000-share anchor allocation at ₹92 raised approximately ₹9.44 crore before the public book opened.",
     "The entirely fresh issue allocates most proceeds to technical manpower and IT infrastructure, with no cash paid to selling shareholders.",
+    "Although not mandatory for an SME offer below ₹50 crore, ENS appointed Brickwork Ratings India as monitoring agency for quarterly review of proceeds until full utilisation.",
   ],
   concerns: [
     "FY26 operating cash flow was negative ₹1.10 crore despite ₹8.40 crore PAT. Profit growth therefore did not translate into cash in the latest year.",
@@ -2032,6 +2054,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Short-term loans and advances reached ₹8.23 crore, including ₹5.39 crore to vendors and a ₹2.73 crore inter-corporate deposit. These balances require counterparty-level recovery evidence rather than being treated as operating liquidity.",
     "ENS reports proprietary SaaS products, but the FY26 balance sheet shows nil intangible assets and nil intangibles under development. That does not disprove internal product development, but it leaves investors without a capitalised-software roll-forward to reconcile development spend, product ownership and future amortisation.",
     "Hiring funded by ₹17.02 crore of proceeds creates utilisation risk: employee costs arrive before project wins, product adoption and customer collections.",
+    "The RHP funds salaries and advance software tools only for the initial year. Thereafter the enlarged cost base is expected to be supported by revenue growth, operating cash flow and internal accruals, despite FY26 operating cash flow already being negative ₹1.10 crore.",
     "The 65-position hiring budget is based on a single six-month quotation dated 26 March 2026, and no definitive vendor agreement had been signed. The programme would expand the 30 June workforce by 65% and carries annual CTC equal to 33.1% of FY26 revenue before recruiting commissions and statutory costs.",
     "ENS held no registered intellectual-property rights at the RHP date. Its logo trademark application remained pending, while the company presented multiple proprietary SaaS products without reporting subscription revenue in FY24–FY26.",
     "The RHP lists five direct-tax and five GST proceedings against the company with an aggregate amount of about ₹0.86 crore, alongside historical delays in depositing statutory dues and filing returns.",
@@ -2060,6 +2083,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Board refresh, verification of independent-director experience and management continuity after Anupam Srivastava's executive resignation.",
     "Clarification of the unit and components behind the RHP's 1,519.74 FY26 contingent-liability figure, related-party remuneration and director-payable balances.",
     "Cyber, professional-indemnity and business-interruption insurance limits, exclusions, claims and any post-listing enhancement of cover.",
+    "The FY27 transition from IPO-funded salaries and software tools to internally funded recurring costs, including payroll run-rate, utilisation and operating cash flow after the 65-position hiring programme.",
+    "Revenue generated outside India, foreign-currency gains or losses and whether cross-border delivery develops into a repeatable customer base rather than isolated projects.",
   ],
   valuation: [
     "Across the ₹87–₹92 band, 1,35,94,912 post-issue shares imply an equity value of approximately ₹118.28–₹125.07 crore, or about 14.1–14.9× FY26 PAT of ₹8.40 crore. That headline multiple depends on the latest year's exceptional growth being durable and cash-generative.",
@@ -2078,7 +2103,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform ENS financial report", href: "https://www.ipoplatform.com/ipo/financial-report/ens-enterprise-ipo/4503", kind: "Secondary" },
   ],
 }, {
-  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "16 August 2026",
+  slug: "technocrats-plasma-systems-ipo", company: "Technocrats Plasma Systems", market: "SME", sector: "Plasma cutting, welding and industrial automation equipment", status: "Issue active; scheduled to close 18 August 2026", analysisAsOf: "17 August 2026",
   summary: "Technocrats designs, manufactures, installs and services plasma cutting, welding, laser and customised automation systems. FY26 revenue reached ₹131.31 crore and PAT ₹14.94 crore after the company adopted customer-site manufacturing for larger projects, but operating cash flow was negative ₹11.66 crore as inventory, receivables and advances absorbed cash. The analytical question is whether this new execution model can repeat without sacrificing cash conversion, quality or project margins.",
   business: [
     "The company supplies manual and CNC-controlled plate and pipe cutting systems, MIG, TIG, ARC, SAW and laser welding equipment, plasma systems and customised automation cells.",
@@ -2086,7 +2111,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "In FY26, customised machinery and retrofit work contributed 39.54% of revenue, other services 38.55%, automated machines 18.42% and non-automated machines 3.49%, making project and service execution more material than standard equipment sales.",
     "Technocrats reports more than 2,500 customers, 17 dealers and 14 service locations. Promoters Arun Kumar and Vandana Sharma have long operating involvement, creating domain continuity alongside key-person and family-control considerations.",
   ],
-  issueNote: "The 10 August RHP confirms an entirely fresh issue of up to 46,20,000 shares, including 2,31,000 market-maker shares and a 43,89,000-share net issue. BSE confirms ₹125–₹132, a 1,000-share market lot and a 2,000-share minimum bid, requiring ₹2,50,000–₹2,64,000. The gross fresh issue is approximately ₹57.75–₹60.98 crore and the net issue ₹54.86–₹57.93 crore. BSE notice 20260813-18 confirms a 13,14,000-share anchor allocation at ₹132, worth ₹17.34 crore. BSE's 14 August book displayed 33,06,000 shares after anchor allocation but still included the 2,31,000-share market-maker reservation; the residual public-investor pool was 30,75,000 shares. Cap-price demand of 12,85,000 shares equalled 0.39× the displayed pool or 0.42× the residual public pool. These are interim exchange-book calculations, not final category-wise subscription.",
+  issueNote: "The 10 August RHP confirms an entirely fresh issue of up to 46,20,000 shares, including 2,31,000 market-maker shares and a 43,89,000-share net issue. BSE confirms ₹125–₹132, a 1,000-share market lot and a 2,000-share minimum bid, requiring ₹2,50,000–₹2,64,000. The gross fresh issue is approximately ₹57.75–₹60.98 crore and the net issue ₹54.86–₹57.93 crore. BSE notice 20260813-18 confirms a 13,14,000-share anchor allocation at ₹132, worth ₹17.34 crore. BSE's book retrieved early on 17 August was still timestamped 14 August and displayed 33,06,000 shares after anchor allocation but still included the 2,31,000-share market-maker reservation; the residual public-investor pool was 30,75,000 shares. Cap-price demand remained 12,85,000 shares, equal to 0.39× the displayed pool or 0.42× the residual public pool. These are interim exchange-book calculations, not final category-wise subscription.",
   issue: { open: "14 August 2026", close: "18 August 2026", listing: "Final BSE SME notice pending", priceBand: "₹125–₹132", lotSize: 2000, totalCr: 60.98, freshCr: 60.98, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Plant and machinery for plasma cutting, welding and customised automation at existing premises", amount: "₹8.79 crore in the final RHP" },
@@ -2115,6 +2140,10 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 employee attrition", value: "38.81%", context: "Down from 60.00% in FY25 but above 27.91% in FY24; FY26 ended with 38 employees after 13 exits." },
     { label: "FY26 contingent liabilities", value: "₹5.52 crore", context: "₹5.22 crore of claims not acknowledged as debt plus ₹0.30 crore of bank guarantees, before any outcome of separate tax litigation." },
     { label: "FY26 top-ten suppliers", value: "93.50%", context: "Up from 43.63% in FY24 and still without formal written long-term supply agreements; FY25 concentration was 93.12%." },
+    { label: "Secured fund-based utilisation", value: "90.8%", context: "₹9.08 crore was outstanding against ₹9.99 crore sanctioned at FY26: ₹4.33 crore of cash credit or overdraft and ₹4.74 crore of term loan." },
+    { label: "Canara cash-credit cost", value: "11.35%", context: "The ₹5.00 crore limit carried 9.25% plus a 2.10% spread, was payable on demand and had ₹4.33 crore outstanding; company and promoter properties, personal guarantees and subordinated director loans formed part of the security package." },
+    { label: "Arka term-loan cost", value: "11.50% floating", context: "₹4.74 crore was outstanding against a ₹4.99 crore facility repayable within 156 months and secured over disclosed residential and industrial properties." },
+    { label: "Quantified order book", value: "Not disclosed", context: "The RHP discusses aligning capacity to order-book and product mix but does not publish a pending order value, execution schedule or cancellation-adjusted backlog." },
   ],
   strengths: [
     "A more than 30-year corporate history and broad installed-customer base provide engineering experience and aftermarket opportunities.",
@@ -2134,6 +2163,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Project revenue is recognised on a cost-to-cost basis using estimates of progress, total cost, expected revenue and foreseeable losses. With ₹26.08 crore of WIP, revisions to cost-to-complete or project-loss assumptions can shift revenue and margin between periods before customer acceptance and cash collection.",
     "Net operating cash flow was negative ₹11.66 crore in FY26 despite ₹14.94 crore PAT. Reported profit has not yet demonstrated durable cash conversion across the scaled-up project model.",
     "The ₹40.00 crore working-capital allocation is 2.7 times FY26 PAT. Inventory, customer acceptance, milestone billing, retention money and collections can absorb substantial capital.",
+    "Secured fund-based facilities were 90.8% utilised at FY26. The Canara cash-credit line was payable on demand at 11.35% and the Arka term loan carried an 11.50% floating rate, leaving limited low-cost headroom before the IPO-funded working-capital programme.",
     "Custom machinery carries specification, fabrication, site-access, integration, performance-guarantee, warranty, liquidated-damages and safety risks.",
     "The final RHP discusses warranty exposure but does not separately quantify a warranty provision or historical claim experience. Future provisioning, claims and post-commissioning service costs are therefore an important unavailable data point rather than a demonstrated nil exposure.",
     "The final RHP's machinery quotations were valid only through 31 August to 30 September 2026, and firm orders had not been placed. Delayed procurement can therefore expose the ₹8.79 crore programme to repricing and commissioning slippage.",
@@ -2144,6 +2174,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The RHP reports eight tax matters against the company involving ₹2.86 crore and FY26 contingent liabilities of ₹5.52 crore. It also records historic provident-fund delays reaching 642 days in FY24; later FY26 delays were reduced to two days.",
     "The company says it had no business-interruption insurance at the RHP date. A cyber incident, extended facility outage or project-system failure could therefore create lost revenue and recovery costs beyond insured property damage.",
     "FY26 employee attrition was 38.81% after 60.00% in FY25. Engineering, installation and service execution can be disrupted if the business cannot retain specialised personnel during its scale-up.",
+    "The RHP refers to capacity planning against the order book but does not quantify pending orders, executable value, ageing, cancellation rights or expected conversion. That limits independent testing of revenue visibility behind the FY27–FY28 working-capital forecast.",
     "Promoters held 86.96% before the issue and would retain approximately 64.00% after the maximum fresh issue, preserving family control. Vandana Sharma is both promoter and CFO, concentrating financial oversight within the family.",
     "BSE SME shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
   ],
@@ -2161,6 +2192,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Business-interruption and cyber-insurance limits, exclusions, claims and any enhancement after listing.",
     "Promoter dependence, related-party transactions, succession and BSE SME liquidity.",
     "Final BSE category-wise demand, issue price, basis of allotment and listing notice after the 18 August close.",
+    "Cash-credit and term-loan utilisation, floating interest cost, repayment, release of charged properties and continuation of promoter guarantees after the issue proceeds are deployed.",
+    "A quantified order book with customer, product, milestone, execution-window and cancellation data so the working-capital forecast can be reconciled to executable demand.",
   ],
   valuation: [
     "Across the BSE-confirmed ₹125–₹132 band, 1,75,00,000 post-issue shares imply an equity value of approximately ₹218.75–₹231.00 crore, or about 14.6–15.5× FY26 PAT of ₹14.94 crore.",
