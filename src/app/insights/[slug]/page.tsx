@@ -318,6 +318,7 @@ export default async function InsightPostPage({ params }: PageProps) {
                   ["See the impact of inflation", "/tools/retirement-inflation-calculator"],
                   ["Estimate income from your corpus", "/tools/retirement-income-calculator"],
                   ["Compare an NPS annuity quote", "/tools/nps-annuity-calculator"],
+                  ["Project your EPF retirement balance", "/tools/epf-calculator"],
                   ["Take the 10-point readiness check", "/tools/retirement-readiness-check"],
                   ["Explore the retirement planning service", "/retirement-planning"],
                 ].map(([label, href]) => (

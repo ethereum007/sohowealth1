@@ -4,6 +4,7 @@ import Link from "next/link";
 import { RegulatoryDisclosure } from "@/components/layout/RegulatoryDisclosure";
 
 const investmentLinks = [
+  { name: "REIT Investing", href: "/reits" },
   { name: "Investment Products", href: "/investment-products" },
   { name: "Mutual Funds", href: "/mutual-funds" },
   { name: "PMS", href: "/pms-advisory" },
@@ -22,6 +23,7 @@ const audienceLinks = [
   { name: "Inflation Calculator", href: "/tools/retirement-inflation-calculator" },
   { name: "Income Calculator", href: "/tools/retirement-income-calculator" },
   { name: "NPS Annuity Calculator", href: "/tools/nps-annuity-calculator" },
+  { name: "EPF Calculator", href: "/tools/epf-calculator" },
   { name: "Retirement Readiness Check", href: "/tools/retirement-readiness-check" },
   { name: "For Doctors", href: "/financial-planning-for-doctors" },
   { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },

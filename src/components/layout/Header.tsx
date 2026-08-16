@@ -88,6 +88,11 @@ const audienceLinks: MenuLink[] = [
     description: "Compare monthly, quarterly and annual income from a live NPS annuity quote.",
   },
   {
+    name: "EPF Calculator",
+    href: "/tools/epf-calculator",
+    description: "Project an EPF balance with editable contributions and interest assumptions.",
+  },
+  {
     name: "Retirement Readiness Check",
     href: "/tools/retirement-readiness-check",
     description: "Check ten retirement foundations and find the next planning step.",
