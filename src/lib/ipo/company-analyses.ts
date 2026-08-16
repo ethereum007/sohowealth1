@@ -1416,7 +1416,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "PU foam generated 86.22% of FY26 revenue. Uttar Pradesh, Punjab, Haryana and Delhi together contributed about 72.9%, so product, geography and the single manufacturing site remain more concentrated than the customer base.",
     "Sham Foam was incorporated in 2020. Rajinder Kumar Jindal, Sanjeev Kumar Jindal, Monica Jindal, Deepika Jindal and Charming Fashions Private Limited collectively held the pre-issue capital; the prospectus also identifies Aggarwal Comfort Products Private Limited as a promoter-group entity pursuing a similar business.",
   ],
-  issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments; the secondary-market trading lot is 1,000 shares. The prospectus proposed 18 August trading, but BSE's official notices early on 17 August did not yet contain final allotment or listing approval.",
+  issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments; the secondary-market trading lot is 1,000 shares. BSE's official close book, timestamped 13 August at 5:00 p.m., records 72,47,000 bids: 7,000 QIB, 33,66,000 non-institutional and 38,74,000 retail. That is 2.33× the gross offer or 2.45× the net issue by calculation, but BSE left the offered or reserved category fields blank, so no category-level subscription multiple is stated. The prospectus proposed 18 August trading, but BSE's official notices early on 17 August did not yet contain final allotment or listing approval.",
   issue: { open: "11 August 2026", close: "13 August 2026", listing: "18 August 2026 proposed; final BSE notice pending", priceBand: "₹130 fixed price", lotSize: 2000, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Civil construction, machinery and equipment at the existing manufacturing facility", amount: "Up to ₹14.72 crore; no machinery orders had been placed and no object expenditure beyond ₹0.06 crore of issue costs was deployed by 30 June" },
@@ -1448,6 +1448,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Offer-funded capex ordered", value: "0%", context: "The final prospectus says machinery estimates rely on time-limited budgetary quotations, with no orders or definitive vendor agreements in place." },
     { label: "Post-capex available capacity", value: "10,000 TPA", context: "Up from 6,000 TPA of cutting and associated-machine capacity; stated installed foam capacity remains 15,000 TPA." },
     { label: "FY26 contingent liabilities", value: "₹2.00 Cr", context: "The final prospectus records ₹2.001 crore relating to a civil case, principally the pending Feather Fresh trademark dispute." },
+    { label: "BSE close-book demand", value: "72,47,000 shares", context: "Official 13 August 5:00 p.m. snapshot: 7,000 QIB, 33,66,000 NII and 38,74,000 retail bids. Derived demand is 2.33× gross or 2.45× net offer; category offered-share fields were blank." },
   ],
   strengths: [
     "FY26 audited revenue rose 13.8%, EBITDA more than doubled to ₹11.00 crore and PAT reached ₹8.65 crore.",
@@ -1493,6 +1494,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   sources: [
     { label: "Sham Foam 10 August 2026 final prospectus", href: "https://www.bseindia.com/downloads/ipo/Prospectus_100820262138.pdf", kind: "Primary" },
     { label: "BSE Sham Foam issue record 7881", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7881", kind: "Primary" },
+    { label: "BSE Sham Foam cumulative category-demand close book", href: "https://api.bseindia.com/BseIndiaAPI/api/Pubissues_GetBkbldgCatdem_ng/w?IPO_NO=7881", kind: "Primary" },
     { label: "Sham Foam February 2026 draft prospectus", href: "https://www.shamfoam.com/custom/investors/Draft%20Prospectus%20-%20Sham%20Foam%20Limited.pdf", kind: "Primary" },
     { label: "Sham Foam corporate website", href: "https://shamfoam.com/", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
@@ -1612,7 +1614,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company was incorporated in 2018 and converted to a public company in 2024. Nishant Raj Gupta is identified as a promoter and leads corporate strategy; promoter concentration and the short public-company track record require ongoing governance checks.",
     "Customer concentration declined as the top ten supplied 25.01% of FY26 revenue versus 31.56% in FY24. Supply remains somewhat more concentrated: the top ten suppliers represented 36.07% of FY26 purchases, and the company has no long-term raw-material agreements.",
   ],
-  issueNote: "The final prospectus dated 6 August and BSE issue 7883 confirm an entirely fresh fixed-price issue of 22,82,400 shares at ₹115, aggregating to ₹26.2476 crore. This includes a 1,15,200-share market-maker reservation and a 21,67,200-share net issue. The market lot is 1,200 shares, while the minimum application is two lots, or 2,400 shares. Issue expenses are estimated at ₹3.66 crore, leaving ₹22.59 crore net proceeds. BSE's official notices early on 17 August did not yet contain final allotment or listing approval.",
+  issueNote: "The final prospectus dated 6 August and BSE issue 7883 confirm an entirely fresh fixed-price issue of 22,82,400 shares at ₹115, aggregating to ₹26.2476 crore. This includes a 1,15,200-share market-maker reservation and a 21,67,200-share net issue. The market lot is 1,200 shares, while the minimum application is two lots, or 2,400 shares. Issue expenses are estimated at ₹3.66 crore, leaving ₹22.59 crore net proceeds. BSE's official close book, timestamped 14 August at 5:36:15 p.m., records 31,99,200 bids: nil QIB, 3,33,600 non-institutional and 28,65,600 retail. That is 1.40× the gross offer or 1.48× the net issue by calculation, but BSE left the offered or reserved category fields blank, so no category-level subscription multiple is stated. BSE's official notices early on 17 August did not yet contain final allotment or listing approval.",
   issue: { open: "12 August 2026", close: "14 August 2026", listing: "Final BSE notice pending", priceBand: "₹115 fixed price", lotSize: 2400, totalCr: 26.25, freshCr: 26.25, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Equipment and machinery for the existing manufacturing facility", amount: "₹4.42 crore" },
@@ -1638,6 +1640,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Receivables + inventory", value: "87.64% of current assets", context: "FY26 trade receivables were ₹9.38 crore and inventory ₹5.37 crore; the two balances supplied 55.73% and 31.91% of current assets." },
     { label: "FY24–FY26 inventory growth", value: "114.7%", context: "Inventory increased to ₹5.37 crore from ₹2.50 crore; the prospectus attributes the rise to raw material not fully consumed in production." },
     { label: "FY28 working-capital gap", value: "₹20.89 Cr", context: "Up from ₹13.82 crore in FY26 and an estimated ₹17.36 crore in FY27; IPO funding is ₹4.00 crore in FY27 and ₹3.50 crore in FY28." },
+    { label: "BSE close-book demand", value: "31,99,200 shares", context: "Official 14 August 5:36:15 p.m. snapshot: nil QIB, 3,33,600 NII and 28,65,600 retail bids. Derived demand is 1.40× gross or 1.48× net offer; category offered-share fields were blank." },
   ],
   strengths: [
     "Bread and everyday bakery products can provide frequent repeat purchases when freshness, availability and dealer economics are maintained.",
@@ -1687,12 +1690,13 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Q&T Foods corporate and investor website", href: "https://qtfoods.in/", kind: "Primary" },
     { label: "Lead manager offer-document page", href: "https://corporatemakers.in/ipo-offer-documents.php", kind: "Primary" },
     { label: "BSE Q&T Foods issue record 7883", href: "https://api.bseindia.com/BseIndiaAPI/api/GetMkt_ISSUE_BBS_IPO/w?IPO_NO=7883", kind: "Primary" },
+    { label: "BSE Q&T Foods cumulative category-demand close book", href: "https://api.bseindia.com/BseIndiaAPI/api/Pubissues_GetBkbldgCatdem_ng/w?IPO_NO=7883", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "BSE notices and listing circulars", href: "https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx", kind: "Primary" },
     { label: "IPOPlatform Q&T offer and proceeds summary", href: "https://www.ipoplatform.com/ipo/qandt-foods-ipo/4693", kind: "Secondary" },
   ],
 }, {
-  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closed; allotment and 19 August listing awaited", analysisAsOf: "16 August 2026",
+  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closed; allotment and 19 August listing awaited", analysisAsOf: "17 August 2026",
   summary: "Pramodini Medicare operates a multi-state diagnostics network through public-private, private-hospital, PSU and standalone-centre arrangements. FY26 revenue reached ₹62.29 crore, EBITDA ₹30.90 crore and PAT ₹17.38 crore, while operating cash flow was ₹25.39 crore. The central questions are whether unusually high margins persist, whether new equipment earns adequate utilisation, and how much renewal, referral, counterparty and clinical-compliance risk sits inside its partnership-led model.",
   business: [
     "The company provides radiology, clinical laboratory and nuclear-medicine services through public-private partnerships with government hospitals and teaching hospitals, arrangements with private hospitals, strategic partnerships with central-government PSUs and privately operated centres.",
@@ -1700,7 +1704,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoters are Dr Chalasani Kuldeep Kumar, Dr Chalasani Kavitha, Chalasani Durga Aashritha and Sri Ram Medicare Private Limited. The two doctor-promoters bring clinical experience, but promoter, referral and key-person dependence must be assessed alongside board and clinical-governance controls.",
     "The network is operationally concentrated despite its multi-state footprint: radiology supplied 97.05% of FY26 revenue, B2G arrangements 61.46% and Andhra Pradesh 61.90%. Contract continuity, equipment uptime and scan utilisation therefore drive a large portion of economics.",
   ],
-  issueNote: "The 4 August RHP confirms 58,51,200 shares: 53,50,800 fresh shares, 5,00,400 OFS shares and a 3,36,000-share market-maker reservation, leaving a 55,15,200-share net offer. At the ₹118 cap this implies up to ₹69.04 crore, including ₹63.14 crore fresh and ₹5.90 crore OFS. The market lot is 1,200 shares, but the RHP requires a two-lot minimum application, or 2,400 shares. NSE's 16 August current-issue feed no longer showed the closed issue as active, but that does not itself establish the final price, allotment or listing approval; the RHP's proposed 19 August listing remains tentative.",
+  issueNote: "The 4 August RHP confirms 58,51,200 shares: 53,50,800 fresh shares, 5,00,400 OFS shares and a 3,36,000-share market-maker reservation, leaving a 55,15,200-share net offer. At the ₹118 cap this implies up to ₹69.04 crore, including ₹63.14 crore fresh and ₹5.90 crore OFS. The market lot is 1,200 shares, but the RHP requires a two-lot minimum application, or 2,400 shares. Early on 17 August the issue was absent from both NSE's current-issue feed and its past-issues table. That transition state does not establish the final price, demand, allotment or listing approval; the RHP's proposed 19 August listing remains tentative.",
   issue: { open: "12 August 2026", close: "14 August 2026", listing: "Proposed 19 August 2026; final NSE notice pending", priceBand: "₹110–₹118", lotSize: 2400, totalCr: 69.04, freshCr: 63.14, ofsCr: 5.90, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Medical equipment for existing and proposed diagnostic centres", amount: "₹45.1485 crore in the RHP" },
@@ -1777,6 +1781,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Pramodini Diagnostics investor page", href: "https://www.pramodinidiagnostics.com/investor", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
     { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/api/ipo-current-issue", kind: "Primary" },
+    { label: "NSE past public issues table", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
     { label: "IPOPlatform Pramodini financial report", href: "https://www.ipoplatform.com/ipo/financial-report/pramodini-medicare-ipo/4671", kind: "Secondary" },
     { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
   ],
