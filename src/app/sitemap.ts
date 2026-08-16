@@ -24,6 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/nps-annuity-calculator", lastModified: "2026-08-16", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/epf-calculator", lastModified: "2026-08-16", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/ppf-calculator", lastModified: "2026-08-16", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools/retirement-planning-calculators", lastModified: "2026-08-16", changeFrequency: "monthly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals/rsu-guide", lastModified: "2026-07-28", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/rsu-concentration-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },
