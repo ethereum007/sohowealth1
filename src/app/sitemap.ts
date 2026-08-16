@@ -44,6 +44,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/aif-advisory",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/mutual-funds",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/global-investing",  lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/reits",             lastModified: "2026-08-16", changeFrequency: "monthly", priority: 0.85 },
     { path: "/gift-city-outbound-investing", lastModified: "2026-08-13", changeFrequency: "weekly", priority: 0.9 },
     { path: "/pre-ipo",           lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/ipo",               lastModified: "2026-08-13", changeFrequency: "daily", priority: 0.95 },
