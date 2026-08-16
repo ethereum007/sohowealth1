@@ -1027,7 +1027,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The final RHP records combined annual capacity of 612 towers and approximately 48.17% utilisation in FY26. The Gujarat plant began operations only in March 2026; its first-month utilisation was 8.04%, while the Karnataka facility reported 41.74% for FY26.",
     "The 31 March 2026 order book was ₹359.82 crore across 379 towers and only six customers. It provides execution visibility but is not guaranteed revenue because orders may be delayed, changed or cancelled.",
   ],
-  issueNote: "The 28 July final RHP confirms 65,85,600 shares: 52,84,800 fresh shares and 13,00,800 OFS shares sold by promoter Nimish Kumar Rameshchandra Vashi. A 3,31,200-share market-maker reservation leaves a 62,54,400-share net offer. The ₹270 issue price in NSE's 10 August trading file makes the fresh issue ₹142.69 crore, the OFS ₹35.12 crore and the total ₹177.81 crore. The quoted market lot was 400 shares, but the minimum individual bid was two lots, or 800 shares and ₹2.16 lakh at the issue price.",
+  issueNote: "The 28 July final RHP confirms 65,85,600 shares: 52,84,800 fresh shares and 13,00,800 OFS shares sold by promoter Nimish Kumar Rameshchandra Vashi. A 3,31,200-share market-maker reservation leaves a 62,54,400-share net offer. The ₹270 issue price in NSE's 10 August trading file makes the fresh issue ₹142.69 crore, the OFS ₹35.12 crore and the total ₹177.81 crore. The quoted market lot was 400 shares, but the minimum individual bid was two lots, or 800 shares and ₹2.16 lakh at the issue price. NSE's official first-day file records a ₹329.65 open and ₹346.10 close, 22.1% and 28.2% above the issue price respectively; the ₹313.20–₹346.10 range is historical market context, not a forward view.",
   issue: { open: "3 August 2026", close: "5 August 2026", listing: "Listed 10 August 2026 on NSE Emerge", priceBand: "₹257–₹270; issue price ₹270", lotSize: 800, totalCr: 177.81, freshCr: 142.69, ofsCr: 35.12, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹115 crore" },
@@ -1045,6 +1045,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "1.43×", context: "Borrowings more than doubled in FY26 before the planned ₹115 crore repayment." },
     { label: "FY24–FY26 revenue CAGR", value: "62.8%", context: "Rapid growth from a small base and a short operating history." },
     { label: "FY26 operating cash/PAT", value: "50.4%", context: "₹18.44 crore operating cash flow versus ₹36.62 crore PAT; capex was ₹97.27 crore." },
+    { label: "Listing-day close vs issue", value: "+28.2%", context: "NSE recorded a ₹329.65 open and ₹346.10 close on 10 August versus the ₹270 issue price." },
   ],
   strengths: [
     "Revenue more than doubled across FY24–FY26 while EBITDA and PAT grew faster, showing strong recent operating leverage.",
@@ -1091,6 +1092,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Aegeus designs robotic and intelligent automation solutions for the solar-energy sector, including systems intended to clean and monitor photovoltaic installations. Its product roadmap disclosed in the offer document includes newer robot variants and asset-protection solutions.",
     "The operating model combines product design, procurement and assembly, installation and after-sales support. Economics therefore depend on project conversion, component availability, installation acceptance, robot uptime, warranty performance and the ability to build recurring service revenue.",
     "The company was incorporated in 2017 and is led by promoters Suraj Vernekar'D, Roopa Vernekar and Nishith Rameshchandra Shah. The limited operating history and reliance on technical and promoter leadership make execution evidence after listing especially important.",
+    "The RHP reports 55 permanent employees and 33 contractual employees at FY26. Permanent-employee attrition fell to 3.5% from 21.4% in FY25, while contractual attrition was 6.6% in both FY25 and FY26.",
   ],
   issueNote: "The 27 July final RHP confirms an entirely fresh 22,58,400-share offer with no OFS. It reserves 3,25,200 shares for the market maker and leaves a 19,33,200-share net issue. At the ₹105 cap the gross offer is ₹23.71 crore. The market lot was 1,200 shares, while the minimum individual application was two lots, or 2,400 shares and ₹2.40–₹2.52 lakh across the price band.",
   issue: { open: "4 August 2026", close: "6 August 2026", listing: "Listed 11 August 2026 on BSE SME", priceBand: "₹100–₹105", lotSize: 2400, totalCr: 23.71, freshCr: 23.71, ofsCr: 0, faceValue: "₹10" },
@@ -1112,6 +1114,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Upper-band FY26 P/E", value: "21.88×", context: "Published RHP-derived estimate at ₹105; not a forward multiple." },
     { label: "FY26 operating cash flow", value: "−₹1.51 crore", context: "Negative despite ₹4.02 crore PAT, after large increases in receivables, inventory and other current assets." },
     { label: "FY26 receivable days", value: "139 days", context: "Trade receivables reached ₹15.77 crore, up from ₹8.05 crore in FY25." },
+    { label: "FY26 permanent attrition", value: "3.5%", context: "Two permanent employees exited; the rate improved from 21.4% in FY25." },
+    { label: "RHP contingent liabilities", value: "Nil", context: "The final RHP states that the company had no contingent liabilities as of its date." },
   ],
   strengths: [
     "Revenue increased from ₹15.27 crore in FY24 to ₹40.93 crore in FY26, while EBITDA and PAT grew faster over the same period.",
@@ -1128,6 +1132,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Electronic, mechanical and imported components expose the company to supplier disruption, foreign exchange and design-obsolescence risk. The exact imported-content mix should be checked in ongoing disclosures.",
     "Robot underperformance, installation delays, panel damage, warranty claims or failure to deliver expected cleaning efficiency could impair margins and reputation.",
     "Promoter and key-person dependence is meaningful in a young technology-led company. The RHP records ₹2.60 crore of interest-free, on-demand promoter loans outstanding at FY26, making related-party funding and governance controls worth monitoring.",
+    "The FY25 auditor reported that the accounting software's audit-trail feature was not operational throughout the year and statutory record-retention requirements were therefore not met. The RHP says the FY26 audit contained no qualification, but listed-company reporting should demonstrate sustained remediation.",
+    "The RHP notes delays in a few cases when depositing undisputed statutory dues. FY26 statutory and other current liabilities were ₹5.94 crore, including customer advances; payment timeliness should be distinguished from the balance-sheet amount.",
     "BSE SME shares may have limited liquidity, wider bid-ask spreads, market-maker dependence and large minimum trading lots. A listing price is not evidence of business value or durable liquidity.",
   ],
   monitor: [
@@ -1136,7 +1142,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Operating cash flow relative to PAT, receivable days, inventory, customer advances and utilisation of the ₹8 crore working-capital allocation.",
     "Progress and cost of the proposed manufacturing facility, product-development milestones and any capital-cost overruns.",
     "Borrowings, finance cost and leverage after the issue, alongside warranty provisions and contingent liabilities.",
-    "Related-party transactions, promoter holdings and pledges, board oversight and BSE SME trading liquidity.",
+    "Audit-trail operation and preservation, statutory-payment timeliness, related-party transactions, promoter holdings and board oversight.",
+    "BSE SME trading liquidity and the first post-listing evidence on the 55 permanent and 33 contractual employees disclosed in the RHP.",
   ],
   valuation: [
     "At the ₹105 upper band, published offer calculations indicated approximately 21.88× FY26 earnings, 15.36× enterprise value/EBITDA and 2.25× book value. These are historical, small-base ratios rather than forecasts.",
@@ -1228,7 +1235,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company says it has produced more than 150 shows and 7,500 hours of content across fiction and non-fiction. Historical output demonstrates execution capacity, but commercial value depends on contract terms, commissioning volumes, audience response and whether intellectual-property and repeat-monetisation rights remain with Optimystix.",
     "Promoters are Vipul Dhirajlal Shah, Rajesh Bahl and Optimystix Media Private Limited. Vipul Shah is central to strategy, business development, finance and creative planning, creating both domain strength and key-person dependence.",
   ],
-  issueNote: "The 30 July RHP confirms 62,00,000 shares: 50,00,000 fresh shares and a 12,00,000-share OFS by promoter Vipul D. Shah. It includes a 6,20,000-share market-maker reservation and a 55,80,000-share net offer. At ₹175, the full offer is ₹108.50 crore; ₹97.65 crore is only the net offer. The RHP confirms a 1,600-share minimum bid in 800-share multiples. NSE's official 14 August bhavdata records OPTIMYSTIX in the ST series opening at ₹175 and closing at ₹189 on 28,79,200 shares, confirming the first trading day.",
+  issueNote: "The 30 July RHP confirms 62,00,000 shares: 50,00,000 fresh shares and a 12,00,000-share OFS by promoter Vipul D. Shah. It includes a 6,20,000-share market-maker reservation and a 55,80,000-share net offer. At ₹175, the full offer is ₹108.50 crore; ₹97.65 crore is only the net offer. The RHP confirms a 1,600-share minimum bid in 800-share multiples. NSE's official 14 August bhavdata records OPTIMYSTIX in the ST series opening at ₹180 and closing at ₹189 on 28,79,200 shares, equal to 2.9% and 8.0% above the ₹175 issue price respectively.",
   issue: { open: "7 August 2026", close: "11 August 2026", listing: "Listed 14 August 2026 on NSE Emerge", priceBand: "₹166–₹175; issue price ₹175", lotSize: 1600, totalCr: 108.50, freshCr: 87.50, ofsCr: 21.00, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Working-capital requirements for content production", amount: "₹64.38 crore: ₹36.75 crore in FY27 and ₹27.63 crore in FY28" },
@@ -1247,6 +1254,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 operating cash flow", value: "−₹8.05 Cr", context: "A sharp divergence from ₹23.96 crore PAT." },
     { label: "FY26 content inventory", value: "₹70.41 Cr", context: "Up from ₹51.68 crore in FY25 and equal to 52% of FY26 revenue." },
     { label: "FY26 trade receivables", value: "₹48.69 Cr", context: "Receivable days rose to 94 from 55 in FY25." },
+    { label: "Listing-day close vs issue", value: "+8.0%", context: "NSE recorded a ₹180 open and ₹189 close on 14 August versus the ₹175 issue price." },
   ],
   strengths: [
     "A 25-year operating history and a broad catalogue across fiction, non-fiction, reality and comedy demonstrate production experience and broadcaster relationships.",
