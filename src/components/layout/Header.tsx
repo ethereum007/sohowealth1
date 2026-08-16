@@ -68,6 +68,11 @@ const audienceLinks: MenuLink[] = [
     description: "Turn savings, pensions and NPS into a resilient retirement-income plan.",
   },
   {
+    name: "All Retirement Calculators",
+    href: "/tools/retirement-planning-calculators",
+    description: "Choose from seven free tools for corpus, income, EPF, PPF and NPS.",
+  },
+  {
     name: "Retirement Calculator",
     href: "/tools/retirement-calculator",
     description: "Estimate future expenses, retirement corpus and monthly investment.",
