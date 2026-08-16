@@ -118,6 +118,7 @@ const retirementTools = [
   { title: "Inflation calculator", text: "See how today's spending and a fixed pension may change in purchasing power.", href: "/tools/retirement-inflation-calculator" },
   { title: "Income calculator", text: "Estimate first-year monthly income from an existing corpus and pension.", href: "/tools/retirement-income-calculator" },
   { title: "Readiness check", text: "Review ten foundations and find the most useful next planning step.", href: "/tools/retirement-readiness-check" },
+  { title: "NPS annuity calculator", text: "Turn a live annuity quote into monthly, quarterly and annual income.", href: "/tools/nps-annuity-calculator" },
 ] as const;
 
 const officialRetirementResources = [

@@ -21,6 +21,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/tools/retirement-inflation-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/retirement-readiness-check", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/retirement-income-calculator", lastModified: "2026-08-14", changeFrequency: "monthly", priority: 0.9 },
+    { path: "/tools/nps-annuity-calculator", lastModified: "2026-08-16", changeFrequency: "monthly", priority: 0.9 },
     { path: "/wealth-planning-for-it-professionals", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-planning-for-it-professionals/rsu-guide", lastModified: "2026-07-28", changeFrequency: "monthly", priority: 0.9 },
     { path: "/tools/rsu-concentration-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },

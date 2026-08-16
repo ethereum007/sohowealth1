@@ -92,7 +92,10 @@ const filesToCheck = [
   "src/components/layout/Footer.tsx",
 ];
 
-const retirementToolPages = appPages.filter((file) => file.replaceAll("\\", "/").includes("src/app/tools/retirement-"));
+const retirementToolPages = appPages.filter((file) => {
+  const normalized = file.replaceAll("\\", "/");
+  return normalized.includes("src/app/tools/retirement-") || normalized.includes("src/app/tools/nps-annuity-calculator/");
+});
 const incompleteToolMetadata = [];
 for (const file of retirementToolPages) {
   const source = fs.readFileSync(file, "utf8");
