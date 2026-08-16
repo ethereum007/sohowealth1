@@ -83,6 +83,11 @@ const audienceLinks: MenuLink[] = [
     description: "Estimate monthly income from an existing corpus and pension.",
   },
   {
+    name: "NPS Annuity Calculator",
+    href: "/tools/nps-annuity-calculator",
+    description: "Compare monthly, quarterly and annual income from a live NPS annuity quote.",
+  },
+  {
     name: "Retirement Readiness Check",
     href: "/tools/retirement-readiness-check",
     description: "Check ten retirement foundations and find the next planning step.",

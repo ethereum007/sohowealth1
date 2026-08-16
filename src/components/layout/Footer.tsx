@@ -21,6 +21,7 @@ const audienceLinks = [
   { name: "Retirement Calculator", href: "/tools/retirement-calculator" },
   { name: "Inflation Calculator", href: "/tools/retirement-inflation-calculator" },
   { name: "Income Calculator", href: "/tools/retirement-income-calculator" },
+  { name: "NPS Annuity Calculator", href: "/tools/nps-annuity-calculator" },
   { name: "Retirement Readiness Check", href: "/tools/retirement-readiness-check" },
   { name: "For Doctors", href: "/financial-planning-for-doctors" },
   { name: "For IT Professionals", href: "/wealth-planning-for-it-professionals" },
