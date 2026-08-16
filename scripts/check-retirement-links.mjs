@@ -94,7 +94,7 @@ const filesToCheck = [
 
 const retirementToolPages = appPages.filter((file) => {
   const normalized = file.replaceAll("\\", "/");
-  return normalized.includes("src/app/tools/retirement-") || normalized.includes("src/app/tools/nps-annuity-calculator/");
+  return normalized.includes("src/app/tools/retirement-") || normalized.includes("src/app/tools/nps-annuity-calculator/") || normalized.includes("src/app/tools/epf-calculator/");
 });
 const incompleteToolMetadata = [];
 for (const file of retirementToolPages) {

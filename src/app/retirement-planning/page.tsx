@@ -119,6 +119,7 @@ const retirementTools = [
   { title: "Income calculator", text: "Estimate first-year monthly income from an existing corpus and pension.", href: "/tools/retirement-income-calculator" },
   { title: "Readiness check", text: "Review ten foundations and find the most useful next planning step.", href: "/tools/retirement-readiness-check" },
   { title: "NPS annuity calculator", text: "Turn a live annuity quote into monthly, quarterly and annual income.", href: "/tools/nps-annuity-calculator" },
+  { title: "EPF calculator", text: "Estimate how an existing EPF balance and future monthly credits may grow.", href: "/tools/epf-calculator" },
 ] as const;
 
 const officialRetirementResources = [
