@@ -794,6 +794,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 floating-rate exposure", value: "₹6,766.14 crore", context: "The RHP sensitivity table classifies this borrowing exposure as variable rate; a 100-basis-point increase would reduce annual profit by about ₹67.66 crore, all else equal." },
     { label: "Pre-issue debt-service cover", value: "1.16×", context: "Restated FY26 DSCR; interest-service cover was 1.36×. The official debt-repayment bridge labels both post-issue coverage ratios not available, so finance-cost relief cannot yet be read from a prospective coverage ratio." },
     { label: "Debt addressed by IPO object", value: "32.68%", context: "The ₹2,250 crore repayment allocation covers 32.68% of the ₹6,884.34 crore restated FY26 borrowings; most of the debt stack therefore remains after the offer." },
+    { label: "Illustrative annual interest relief", value: "₹166–₹222 Cr", context: "Derived by applying the RHP's disclosed 7.39–9.85% borrowing-rate range to the ₹2,250 crore debt object. This is not issuer guidance and excludes lender mix, repayment timing, refinancing and charges." },
+    { label: "Fresh issue / FY26 net worth", value: "55.60%", context: "The ₹2,600 crore all-fresh issue is more than half the ₹4,676.16 crore restated FY26 net worth, making the offer a material recapitalisation rather than a small balance-sheet adjustment." },
   ],
   strengths: [
     "High committed occupancy and a diversified tenant base support rental visibility; the largest customer contributed 11.12% of FY26 proforma revenue and the top five 28.14%.",
@@ -817,6 +819,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Warehouse valuations are sensitive to occupancy, lease renewals, rent escalation, capitalisation rates, interest rates and residual development capex.",
     "₹6,766.14 crore of FY26 borrowings was exposed to variable rates. Company borrowing rates were 8.30–9.10% and subsidiary rates 7.39–9.85%; the RHP estimates a 100-basis-point increase would reduce annual profit by ₹67.66 crore before the offer-funded repayment and subsequent refinancing effects.",
     "The ₹2,250 crore debt object retires only 32.68% of restated FY26 borrowings. The RHP also permits the identified borrower mix to change as facilities are drawn or repaid and says some subsidiary loans can carry prepayment penalties or break costs of up to 1% with notice. Final lender-wise utilisation and transaction costs therefore matter to the realised interest-saving bridge.",
+    "Applying the disclosed company and subsidiary borrowing-rate range to the ₹2,250 crore repayment gives an illustrative ₹166–₹222 crore of annual pre-tax interest relief before lender mix, timing, refinancing and charges. The company has not provided a post-offer finance-cost or coverage forecast, so this range is a sensitivity rather than guidance.",
     "Delhi-NCR, Chennai, Bengaluru and Pune contributed 79% of FY26 restated revenue, creating corridor concentration despite the national footprint.",
     "Related-party and sponsor transactions, asset transfers, management arrangements and future Blackstone monetisation require ongoing governance review.",
     "Title and concession issues are asset-specific: 8.71 acres at MWC face land-use restrictions, 41.51 acres at Chakan V await forest-land recategorisation, four CWC assets totalling 1.24 msf have conditions precedent, and claims affect land supporting 3.42 msf at Dobbaspet I.",
@@ -840,6 +843,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "P/E is not meaningful because FY26 EPS is negative. At the ₹60 cap, the price ad reports post-issue market capitalisation of ₹17,297.61 crore and EV/EBITDA of 31.16× on restated FY26 EBITDA or 31.31× on proforma EBITDA.",
     "The ₹60 cap is about 2.15× the stated FY26 restated NAV per share of ₹27.89 before fresh-issue effects. Post-issue book value depends on final expenses and issue accounting.",
+    "The ₹2,600 crore fresh issue equals 55.60% of FY26 restated net worth. That large equity injection should be separated from operating value creation when comparing post-listing leverage, NAV growth and return on equity with the pre-offer record.",
     "Relevant references include listed logistics and industrial real-estate vehicles, REITs and asset owners such as Anant Raj, but ownership structure, development exposure, leverage and distribution policies differ materially.",
     "A park-level NAV framework should test stabilised rent, vacancy, lease escalation, remaining capex and capitalisation rates. The official EV/EBITDA multiple must also be read alongside continuing losses and acquisition-heavy history.",
   ],
@@ -896,6 +900,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Aggregate insurance cover", value: "₹886.06 crore", context: "The RHP compares this with ₹242.51 crore of FY26 insurable assets, or 365.37%; overlapping policy limits, deductibles and exclusions mean this is not assured loss recovery." },
     { label: "Jeweller's-block policy limit", value: "₹476.25 crore", context: "Valid through 28 October 2026 for specified transit, stock-at-premises, public-liability and money risks; the company separately says it has no product-liability insurance." },
     { label: "Secured borrowing rate", value: "8.39–9.75%", context: "The final RHP describes the working-capital facilities as generally repayable on demand. Where a facility stipulates a prepayment penalty, it is 2% of the sanctioned amount; actual lender consent and charges must be confirmed at repayment." },
+    { label: "Debt object / FY26 borrowings", value: "94.44%", context: "The ₹158 crore repayment object is 94.44% of ₹167.30 crore FY26 borrowings, so the post-offer funding of bullion inventory and receivables becomes a central liquidity question." },
+    { label: "Fresh issue / FY26 net worth", value: "130.92%", context: "The ₹274.18 crore cap-price fresh issue exceeds the ₹209.43 crore FY26 net worth; post-offer return ratios will therefore face substantial equity dilution even if absolute profit is unchanged." },
   ],
   strengths: [
     "Long promoter experience and established relationships with organised jewellery retailers support repeat B2B orders and market access.",
@@ -950,6 +956,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "The FY26 share capital implies 11.755 crore pre-offer shares. Adding 2.9482 crore fresh shares gives 14.7032 crore post-offer shares and, at the NSE-published ₹93 cap, a market capitalisation of approximately ₹1,367.40 crore.",
     "Against FY26 PAT of ₹106.68 crore, the fully diluted P/E at the NSE-published cap is about 12.82×. This is higher than the simple ₹93 divided by pre-offer FY26 EPS of ₹9.09 because the fresh issue dilutes EPS.",
+    "The final RHP reports FY26 pre-offer NAV of ₹17.82 per share, putting the ₹93 cap at about 5.22× pre-offer book. Adding the cap-price fresh proceeds to FY26 net worth gives an illustrative gross post-offer book value of about ₹32.89 per share and 2.83× price-to-book, before issue expenses and subsequent trading; this is a derived bridge, not the final reported NAV.",
     "Potential references include listed jewellery manufacturers and retailers, but Shankesh's B2B outsourced model, direct-sale/job-work mix and lower margins make retail-chain comparisons imperfect.",
     "The issuer's offer-price document identifies Shanti Gold International and Sky Gold & Diamonds as peers, with 15 July 2026 trailing P/E of 10.04× and 34.86× respectively. Shankesh's post-offer FY26 P/E of about 12.82× sits near the low end, but its one-year margin step-up and weak cash conversion limit a mechanical comparison.",
     "The central valuation question is whether FY26 profitability is durable when gold throughput fell and operating cash conversion was almost zero.",
@@ -1008,6 +1015,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Two-year receivable growth", value: "8.35×", context: "Trade receivables rose from ₹7.97 crore in FY24 to ₹66.51 crore in FY26; the full balance remained classified good with no expected-credit-loss allowance." },
     { label: "Disclosed related-party balances", value: "₹3.57 crore", context: "Includes a ₹1.50 crore refundable deposit receivable from Vipul Shah and ₹2.07 crore of loans or advances to Miracle Movies at FY26." },
     { label: "Issuer-stated project exposure limit", value: "30% of annual budget", context: "Sunshine states that it limits exposure to any individual project to 30% of its total annual budget. This is an internal portfolio claim, not a disclosed contractual cap; own productions remain exposed to all overruns." },
+    { label: "Fresh issue / FY26 net worth", value: "119.07%", context: "The ₹172.80 crore cap-price fresh issue is larger than the ₹145.13 crore FY26 net worth, materially expanding the equity base used to fund the next production cycle." },
   ],
   strengths: [
     "Vipul Shah and the creative team have delivered commercially recognised films and franchises, supporting relationships with talent, studios and distributors.",
@@ -1063,6 +1071,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "A single-year P/E is particularly fragile for project-based studios. Revenue declined in FY25 and FY26 while PAT recovered in FY26, and cash conversion moved in the opposite direction; a multi-year normalized earnings and cash-flow base is more appropriate.",
     "The DRHP peer set includes Panorama Studios, Baweja Studios and Balaji Telefilms. Their content libraries, television exposure, production services, rights ownership, scale and recent hit cycles differ substantially.",
     "At the ₹360 cap, 3,11,48,784 post-fresh-issue shares imply an equity value of approximately ₹1,121.36 crore, or about 28.0× FY26 PAT of ₹40.02 crore. The lower 23.7× figure derived from the RHP's pre-issue FY26 EPS of ₹15.19 does not capture the full fresh-issue dilution.",
+    "The RHP reports FY26 pre-offer NAV of ₹55.08 per share, so the ₹360 cap is about 6.54× pre-offer book. Adding the cap-price fresh proceeds to FY26 net worth gives an illustrative gross post-offer book value of about ₹102.07 per share and 3.53× price-to-book before issue expenses; the lower multiple reflects new cash, not an operating re-rating.",
     "A normalized valuation should separately assess owned intellectual property, contracted slate obligations, customer concentration and the working capital needed to fund the next 15–30-month production cycle.",
   ],
   sources: [
@@ -1124,6 +1133,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Outstanding ESOPs", value: "15.61 lakh", context: "The RHP shows 15,60,700 options in force, all unvested, with three-year vesting and exercise prices of ₹143.95 or ₹160; full exercise is roughly 1.1% of post-offer shares." },
     { label: "Largest disclosed ESOP grant", value: "11.44 lakh", context: "Dheeraj Prasad Devata received 11,43,500 FY26 options, about 73.3% of the options shown in force at the RHP date, concentrating a material part of the retention pool in one senior executive." },
     { label: "FY24 carried-interest reclassification", value: "₹18.40 Cr", context: "The restated accounts moved ₹18.395 crore of carried interest from other income to revenue from operations; total income and profit were unchanged, so the reclassification improves presentation but not economics." },
+    { label: "New sponsor allocation / FY26 net worth", value: "61.33%", context: "The ₹372 crore earmarked for Fund IV, proposed Fund V and the Secondaries Fund equals 61.33% of FY26 net worth and is scheduled across FY27–FY29." },
+    { label: "Fund exposure plus uncalled capital", value: "54.49% of net worth", context: "Derived from ₹271.93 crore of alternative-fund investments plus ₹58.58 crore of uncalled commitments against ₹606.52 crore FY26 net worth; the two balances represent invested and future funding exposure, not a single asset." },
+    { label: "Fresh issue / FY26 net worth", value: "74.19%", context: "The ₹450 crore fresh issue is a large balance-sheet expansion relative to FY26 equity and should depress return ratios until capital is called, invested and produces fees, carry or realised gains." },
   ],
   strengths: [
     "A two-decade operating history spans multiple fundraising, investment and exit cycles in Indian private equity.",
@@ -1182,6 +1194,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "The official price advertisement gives post-offer market capitalisation of approximately ₹2,165.86–₹2,256.16 crore. That is about 26.4–27.5× FY26 consolidated PAT of ₹81.96 crore, or roughly 27.2–28.3× the ₹79.66 crore attributable to owners.",
     "The advertisement's lower 21.20–22.32× P/E uses pre-offer diluted EPS of ₹7.17 and therefore does not capture the full fresh-issue dilution.",
+    "The RHP reports FY26 pre-offer NAV of ₹53.73 per share, putting the ₹152–₹160 band at about 2.83–2.98× pre-offer book. Adding the ₹450 crore fresh issue to FY26 net worth produces an illustrative gross post-offer book value of roughly ₹74.15–₹74.92 per share and price-to-book of about 2.05–2.14× before issue expenses; the bridge varies with the price-dependent fresh share count.",
     "Listed references include 360 ONE WAM, HDFC AMC, Nippon Life India AMC, Nuvama Wealth, Anand Rathi Wealth, UTI AMC and Aditya Birla Sun Life AMC. Most have larger, more diversified and more recurring fee bases than a private-equity specialist.",
     "A useful framework separates recurring management-fee earnings from volatile carry and sponsor returns, then values balance-sheet fund investments at an evidence-based discount or premium to reported NAV.",
   ],
