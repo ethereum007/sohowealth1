@@ -141,7 +141,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "India Ratings: LEAP India rating rationale, February 2026", href: "https://www.indiaratings.co.in/pressrelease/81339", kind: "Secondary" },
   ],
 }, {
-  slug: "dhoot-transmission-ipo", company: "Dhoot Transmission", market: "Mainboard", sector: "Automotive electrical and electronic components", status: "BSE listing confirmed for 17 August 2026; pre-open check completed", analysisAsOf: "17 August 2026",
+  slug: "dhoot-transmission-ipo", company: "Dhoot Transmission", market: "Mainboard", sector: "Automotive electrical and electronic components", status: "Listed 17 August 2026", analysisAsOf: "17 August 2026",
   summary: "Dhoot Transmission is a scaled wiring-harness and automotive-electronics supplier with strong positions in two- and three-wheelers and rising EV exposure. Its restated financials show rapid growth and high returns, while customer concentration, acquisition integration, cyclical OEM demand and debt-funded expansion remain central analytical risks.",
   business: [
     "Dhoot designs and manufactures wiring harnesses, battery packs, electronic sensors and controllers, automotive switches, connectors and other electrical systems for two-wheelers, three-wheelers, commercial vehicles, off-road equipment and selected non-automotive applications.",
@@ -149,8 +149,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Issuer disclosures describe Dhoot as one of the two largest suppliers in India's two- and three-wheeler wiring-harness market. EV-related revenue reached 24.17% in FY26, slightly below 25.22% in FY25; market-share and industry-growth figures remain issuer-commissioned claims.",
     "Two- and three-wheelers generated 78.33% of FY26 revenue, while 90.14% of revenue was earned within India. The business therefore combines high OEM and vehicle-category concentration with more limited geographic diversification than a global auto-component peer.",
   ],
-  issueNote: "The final RHP confirms a ₹1,400 crore fresh issue and OFS of 1,91,37,602 shares. BSE notice 20260814-32 fixes the issue price at ₹871, making the OFS approximately ₹1,666.89 crore and the total offer approximately ₹3,066.89 crore. It also confirms 13 August allotment, 20,45,48,057 post-issue shares, scrip 544867 / DHOOTTRANS and admission to BSE's B group from 17 August with a one-share market lot. Trading had not begun at the 17 August pre-open check, so no listing-price outcome is stated.",
-  issue: { open: "10 August 2026", close: "12 August 2026", listing: "BSE listing confirmed for 17 August 2026", priceBand: "₹829–₹871; issue price ₹871", lotSize: 17, totalCr: 3066.89, freshCr: 1400, ofsCr: 1666.89, faceValue: "₹2" },
+  issueNote: "The final RHP confirms a ₹1,400 crore fresh issue and OFS of 1,91,37,602 shares. BSE notice 20260814-32 fixes the issue price at ₹871, making the OFS approximately ₹1,666.89 crore and the total offer approximately ₹3,066.89 crore. It also confirms 13 August allotment, 20,45,48,057 post-issue shares, scrip 544867 / DHOOTTRANS and admission to BSE's B group from 17 August with a one-share market lot. BSE's official 09:51 IST listing snapshot records a ₹1,193.80 open, ₹322.80 or 37.06% above the issue price. This is the opening print, not a recommendation or a forecast of later trading.",
+  issue: { open: "10 August 2026", close: "12 August 2026", listing: "Listed 17 August 2026", priceBand: "₹829–₹871; issue price ₹871", lotSize: 17, totalCr: 3066.89, freshCr: 1400, ofsCr: 1666.89, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of company borrowings", amount: "Up to ₹493.99 crore" },
     { purpose: "Investment in subsidiaries for repayment of their borrowings", amount: "Up to ₹272.59 crore" },
@@ -177,6 +177,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Borrowings at 20 July", value: "₹914.78 Cr", context: "Consolidated outstanding debt was mostly secured; disclosed term-loan rates generally ranged from 7.75% to 8.90%." },
     { label: "FY26 contingent liabilities", value: "₹60.05 Cr", context: "Primarily ₹48.04 crore of disputed advisory and consultancy fees plus tax and other legal matters." },
     { label: "Final issue price", value: "₹871", context: "BSE notice 20260814-32 confirms 20,45,48,057 post-issue shares and trading from 17 August under scrip 544867." },
+    { label: "BSE listing open", value: "₹1,193.80 (+37.06%)", context: "Official BSE snapshot at 09:51 IST on 17 August versus the ₹871 issue price; this timestamped opening print should not be read as a later-session price." },
+    { label: "Opening market cap / FY26 PAT", value: "₹24,418.95 Cr / 61.5×", context: "Derived from the BSE-confirmed 20,45,48,057 post-issue shares and ₹1,193.80 opening price, divided by FY26 PAT of ₹396.84 crore." },
   ],
   strengths: [
     "Revenue grew 31.4% in FY26 and PAT reached ₹396.84 crore, while capacity utilisation improved to 74.3%.",
@@ -210,6 +212,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   valuation: [
     "At ₹871, the RHP multiple is approximately 35.7× FY26 EPS of ₹24.40 on a pre-offer basis. The BSE-confirmed 20,45,48,057 post-issue shares instead imply approximately ₹17,816.14 crore market capitalisation and 44.9× FY26 PAT. Fresh-issue dilution and interest savings from debt repayment move in opposite directions and should be modelled separately.",
+    "At the ₹1,193.80 BSE opening print, the same post-offer share count implies approximately ₹24,418.95 crore market capitalisation and 61.5× FY26 PAT. That is a point-in-time listing calculation, not a normalised earnings estimate or a view on subsequent price performance.",
     "The UDRHP peer set includes Minda Corporation, Uno Minda, Motherson Sumi Wiring India and Sona BLW Precision Forgings. Their product mix, end markets, global exposure and capital intensity differ, so the peer range is context rather than a direct valuation verdict.",
     "The central valuation test is whether Dhoot can sustain mid-to-high-teen EBITDA margins and strong returns while funding new plants, managing customer concentration and normalising leverage. Post-listing cash conversion will be more informative than revenue growth alone.",
   ],
@@ -219,10 +222,11 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Dhoot Transmission price-band advertisement", href: "https://www.dhoottransmission.com/pdf/Dhoot-Transmission-Limited-Price-Band-Advt.pdf", kind: "Primary" },
     { label: "Dhoot Transmission IPO disclosures", href: "https://www.dhoottransmission.com/investor-relations/ipo-related-disclosures", kind: "Primary" },
     { label: "BSE Dhoot listing notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-32/20260814-32.pdf", kind: "Primary" },
+    { label: "BSE Dhoot live security header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?scripcode=544867&Debtflag=&seriesid=", kind: "Primary" },
     { label: "Bain Capital announcement: strategic investment", href: "https://www.baincapital.com/news/dhoot-transmission-group-secures-strategic-growth-investment-bain-capital-significant-minority", kind: "Primary" },
   ],
 }, {
-  slug: "molbio-diagnostics-ipo", company: "Molbio Diagnostics", market: "Mainboard", sector: "Point-of-care molecular diagnostics", status: "BSE listing confirmed for 17 August 2026; pre-open check completed", analysisAsOf: "17 August 2026",
+  slug: "molbio-diagnostics-ipo", company: "Molbio Diagnostics", market: "Mainboard", sector: "Point-of-care molecular diagnostics", status: "Listed 17 August 2026", analysisAsOf: "17 August 2026",
   summary: "Molbio Diagnostics develops the portable Truenat molecular-testing platform and disease-specific test kits. Its installed devices can support recurring consumable sales, but the economics are concentrated in tuberculosis programmes, government and aid-agency procurement, large customers and inventory with finite shelf life.",
   business: [
     "Molbio's Truenat platform combines portable, battery-operated PCR analysers with single-use disease-specific test chips and sample-processing products. The installed device base can create repeat consumable demand as tests are run.",
@@ -231,8 +235,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "In FY26 Molbio sold 2,524 Truenat workstations and 17.56 million test kits. Test-kit revenue was ₹1,034.82 crore versus ₹203.28 crore from devices, illustrating why assay utilisation and repeat consumable demand matter more than analyser shipments alone.",
     "Bigtec is the group's R&D hub. FY26 R&D spending was ₹87.46 crore, or 6.05% of revenue, supported by 153 permanent R&D employees; only one assay and no new disease test was commercialised during the year despite the broader pipeline.",
   ],
-  issueNote: "The final RHP confirms a ₹200 crore fresh issue and OFS of 91.66 lakh shares. At the ₹807 final issue price confirmed by BSE notice 20260814-42, that is 24.80246 lakh fresh shares, approximately ₹739.70 crore OFS and ₹939.70 crore total. A 7 August addendum records promoter Exxora selling 19,82,649 additional pre-offer shares at ₹807 outside the OFS, reducing its holding to 39.47% before the offer. The BSE notice also confirms 13 August allotment, 11,52,39,996 post-issue shares, scrip 544866 / MOLBIO and B-group trading from 17 August. Trading had not begun at the 17 August pre-open check, so listing-price performance remains unavailable.",
-  issue: { open: "10 August 2026", close: "12 August 2026", listing: "BSE listing confirmed for 17 August 2026", priceBand: "₹768–₹807; issue price ₹807", lotSize: 18, totalCr: 939.7, freshCr: 200, ofsCr: 739.7, faceValue: "₹1" },
+  issueNote: "The final RHP confirms a ₹200 crore fresh issue and OFS of 91.66 lakh shares. At the ₹807 final issue price confirmed by BSE notice 20260814-42, that is 24.80246 lakh fresh shares, approximately ₹739.70 crore OFS and ₹939.70 crore total. A 7 August addendum records promoter Exxora selling 19,82,649 additional pre-offer shares at ₹807 outside the OFS, reducing its holding to 39.47% before the offer. The BSE notice also confirms 13 August allotment, 11,52,39,996 post-issue shares, scrip 544866 / MOLBIO and B-group trading from 17 August. BSE's official 09:51 IST listing snapshot records a ₹980 open, ₹173 or 21.44% above the issue price. This is the opening print, not a recommendation or a forecast of later trading.",
+  issue: { open: "10 August 2026", close: "12 August 2026", listing: "Listed 17 August 2026", priceBand: "₹768–₹807; issue price ₹807", lotSize: 18, totalCr: 939.7, freshCr: 200, ofsCr: 739.7, faceValue: "₹1" },
   useOfProceeds: [
     { purpose: "R&D facility, Centre of Excellence and connected office space", amount: "Up to ₹99.37 crore" },
     { purpose: "Plant, machinery and equipment for Goa and Visakhapatnam units", amount: "Up to ₹73.60 crore" },
@@ -258,6 +262,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Upper-band FY26 P/E", value: "54.64×", context: "Issuer-disclosed multiple at ₹807 using FY26 diluted EPS of ₹14.77." },
     { label: "Post-issue PAT multiple", value: "≈56.7×", context: "The BSE-confirmed 11,52,39,996 post-issue shares imply ₹9,299.87 crore market capitalisation at ₹807, divided by FY26 PAT of ₹164.14 crore." },
     { label: "Final issue price", value: "₹807", context: "BSE notice 20260814-42 confirms 11,52,39,996 post-issue shares and trading from 17 August under scrip 544866." },
+    { label: "BSE listing open", value: "₹980 (+21.44%)", context: "Official BSE snapshot at 09:51 IST on 17 August versus the ₹807 issue price; this timestamped opening print should not be read as a later-session price." },
+    { label: "Opening market cap / FY26 PAT", value: "₹11,293.52 Cr / 68.8×", context: "Derived from the BSE-confirmed 11,52,39,996 post-issue shares and ₹980 opening price, divided by FY26 PAT of ₹164.14 crore." },
   ],
   strengths: [
     "The device-plus-consumables architecture can create repeat kit revenue after analyser deployment.",
@@ -294,6 +300,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   valuation: [
     "At ₹807, the RHP discloses 54.64× FY26 diluted EPS of ₹14.77. The BSE-confirmed post-offer share count implies approximately ₹9,299.87 crore market capitalisation and 56.7× FY26 PAT; the difference makes the dilution basis explicit.",
+    "At the ₹980 BSE opening print, the same post-offer share count implies approximately ₹11,293.52 crore market capitalisation and 68.8× FY26 PAT. That is a point-in-time listing calculation, not a normalised earnings estimate or a view on subsequent price performance.",
     "Conventional diagnostics peers are imperfect comparisons because Molbio combines proprietary devices, consumables, public-health tenders, R&D and acquired medtech businesses. Revenue quality and cash conversion therefore matter alongside P/E.",
     "A durable valuation framework should normalize procurement cycles, bad-debt and inventory provisions, R&D expense versus capitalization, and maintenance investment while testing how quickly non-TB and export assays scale.",
   ],
@@ -303,6 +310,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Molbio Diagnostics addendum to RHP, 7 August 2026", href: "https://www.sebi.gov.in/sebi_data/attachdocs/aug-2026/1786085053193.pdf", kind: "Primary" },
     { label: "Molbio investor disclosures and financials", href: "https://www.molbiodiagnostics.com/investors/", kind: "Primary" },
     { label: "BSE Molbio listing notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-42/20260814-42.pdf", kind: "Primary" },
+    { label: "BSE Molbio live security header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?scripcode=544866&Debtflag=&seriesid=", kind: "Primary" },
     { label: "Molbio issuer announcement: IPO filing", href: "https://www.molbiodiagnostics.com/newsroom/molbio-diagnostics-files-for-ipo-to-raise-rs-200-cr-ofs-of-1-25-cr-shares/", kind: "Primary" },
   ],
 }, {
@@ -666,6 +674,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 EBITDA margin", value: "6.69%", context: "Up from 4.38% in FY25; FY26 PAT margin also rose to 4.04%." },
     { label: "FY26 adjusted RoNW", value: "39.90%", context: "Up from 19.73% in FY25; the final RHP calculates the ratio using restated PAT and average net worth before the ₹1,200 crore fresh issue." },
     { label: "Cap price / pre-offer NAV", value: "3.43×", context: "Derived from the ₹201 cap and FY26 restated NAV of ₹58.60 per share. The ratio is pre-offer and does not represent the final post-offer book value." },
+    { label: "Fresh issue / FY26 net worth", value: "40.96%", context: "The ₹1,200 crore fresh issue is about 41% of FY26 net worth of ₹2,929.73 crore, before the ₹500 crore promoter OFS." },
+    { label: "Illustrative cap-price post-offer P/B", value: "2.72×", context: "Adding ₹1,200 crore gross fresh proceeds to FY26 net worth gives approximately ₹73.79 book value per indicative post-offer share before issue expenses; final employee-discount allotment can make a small difference." },
     { label: "FY26 operating cash flow", value: "−₹397.76 crore", context: "Accounting profit of ₹1,009.82 crore did not convert to operating cash as inventory and working capital expanded." },
     { label: "Working-capital days", value: "65 days", context: "Up from 56 days in FY25 and 50 days in FY24; inventory turnover fell to 2.55×." },
     { label: "Indicative post-offer promoter holding", value: "≈82.1–82.8%", context: "Derived across the price band from the fresh issue, ₹500 crore promoter OFS and disclosed pre-offer shareholding; the employee discount can cause a small variation." },
@@ -733,7 +743,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "The RHP shows 49.998 crore pre-offer shares. Dividing the ₹1,200 crore fresh issue by the ₹201 cap implies roughly 5.97 crore new shares before the small effect of the employee discount, producing an indicative post-offer market capitalisation near ₹11,250 crore.",
     "Against FY26 PAT of ₹1,009.82 crore, that indicates a fully diluted upper-band P/E of roughly 11.1×. The pre-offer EPS-based P/E is lower at 9.95×, but it omits fresh-issue dilution.",
-    "The ₹201 cap is 3.43× FY26 restated NAV of ₹58.60 per share. This is a pre-offer book-value comparison; the final post-offer NAV depends on the issue price, allotment and issue expenses.",
+    "The ₹201 cap is 3.43× FY26 restated NAV of ₹58.60 per share. Adding ₹1,200 crore of gross fresh capital produces an illustrative ₹73.79 post-offer book value and 2.72× price-to-book before issue expenses; the lower multiple is a financing effect, not evidence of improved store economics.",
     "The RHP peer set spans FY26 P/E values from 7.12× to 85.25×. That range is too wide to serve as a standalone valuation anchor because business mix, studded-jewellery share, inventory funding and geographic scale differ materially.",
     "Relevant listed references include Titan, Kalyan Jewellers, Senco Gold, Thangamayil Jewellery, Tribhovandas Bhimji Zaveri and PN Gadgil Jewellers. Differences in franchise mix, studded-jewellery share, geography, margins and inventory funding limit direct P/E comparison.",
     "The multiple must be read alongside negative FY26 operating cash flow and the ₹998.68 crore inventory deployment. Cash return on the 10 new stores is more informative than gold-price-led revenue growth alone.",
@@ -779,6 +789,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 operating cash flow", value: "₹464.07 crore", context: "Positive operating cash was dwarfed by ₹4,872.84 crore of investing outflow during the acquisition and development phase." },
     { label: "Post-repayment borrowings", value: "₹4,634.34 crore", context: "RHP price ad illustrates total FY26 borrowings after the proposed ₹2,250 crore repayment, before subsequent balance-sheet movements." },
     { label: "Illustrative post-issue debt/equity", value: "0.55×", context: "Official price-ad bridge, down from 1.18× pre-issue; net external debt falls from ₹4,242.22 crore to ₹1,992.22 crore on the disclosed assumptions." },
+    { label: "Debt-bridge equity denominator", value: "₹5,858.74 Cr → ₹8,458.74 Cr", context: "The official price ad adds the ₹2,600 crore fresh issue to total equity for its 0.55× post-issue debt/equity illustration. This broader total-equity denominator differs from ₹4,676.16 crore of restated net worth used for NAV." },
     { label: "Committed occupancy", value: "93.56%", context: "Across 28.55 million operational square feet as of 31 May 2026." },
     { label: "Upper-band EV/EBITDA", value: "31.16×", context: "Official price-ad calculation on restated FY26 EBITDA; proforma EV/EBITDA was 31.31×." },
     { label: "Anchor allocation", value: "₹1,167.75 Cr", context: "BSE confirms 19,46,25,000 shares allocated at the ₹60 cap on 14 August." },
@@ -843,7 +854,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "P/E is not meaningful because FY26 EPS is negative. At the ₹60 cap, the price ad reports post-issue market capitalisation of ₹17,297.61 crore and EV/EBITDA of 31.16× on restated FY26 EBITDA or 31.31× on proforma EBITDA.",
     "The ₹60 cap is about 2.15× the stated FY26 restated NAV per share of ₹27.89 before fresh-issue effects. Post-issue book value depends on final expenses and issue accounting.",
-    "The ₹2,600 crore fresh issue equals 55.60% of FY26 restated net worth. That large equity injection should be separated from operating value creation when comparing post-listing leverage, NAV growth and return on equity with the pre-offer record.",
+    "The ₹2,600 crore fresh issue equals 55.60% of FY26 restated net worth. The official leverage bridge instead uses broader total equity of ₹5,858.74 crore before and ₹8,458.74 crore after the issue; those figures are not interchangeable with the ₹4,676.16 crore restated net worth used for NAV. The injection should be separated from operating value creation when comparing post-listing leverage, NAV growth and return on equity with the pre-offer record.",
     "Relevant references include listed logistics and industrial real-estate vehicles, REITs and asset owners such as Anant Raj, but ownership structure, development exposure, leverage and distribution policies differ materially.",
     "A park-level NAV framework should test stabilised rent, vacancy, lease escalation, remaining capex and capitalisation rates. The official EV/EBITDA multiple must also be read alongside continuing losses and acquisition-heavy history.",
   ],
