@@ -664,6 +664,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   metrics: [
     { label: "FY26 revenue growth", value: "48.1%", context: "Revenue from operations rose to ₹25,023.93 crore after increasing only 0.7% in FY25." },
     { label: "FY26 EBITDA margin", value: "6.69%", context: "Up from 4.38% in FY25; FY26 PAT margin also rose to 4.04%." },
+    { label: "FY26 adjusted RoNW", value: "39.90%", context: "Up from 19.73% in FY25; the final RHP calculates the ratio using restated PAT and average net worth before the ₹1,200 crore fresh issue." },
+    { label: "Cap price / pre-offer NAV", value: "3.43×", context: "Derived from the ₹201 cap and FY26 restated NAV of ₹58.60 per share. The ratio is pre-offer and does not represent the final post-offer book value." },
     { label: "FY26 operating cash flow", value: "−₹397.76 crore", context: "Accounting profit of ₹1,009.82 crore did not convert to operating cash as inventory and working capital expanded." },
     { label: "Working-capital days", value: "65 days", context: "Up from 56 days in FY25 and 50 days in FY24; inventory turnover fell to 2.55×." },
     { label: "Indicative post-offer promoter holding", value: "≈82.1–82.8%", context: "Derived across the price band from the fresh issue, ₹500 crore promoter OFS and disclosed pre-offer shareholding; the employee discount can cause a small variation." },
@@ -709,6 +711,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "SEBI had issued summons to promoter M. Kiran Kumar Jain in 2022 in connection with Krishana Fabrics; the RHP says no further communication or action had been received as of its date.",
     "A prior related-party brand-ambassador fee reached ₹50.28 crore in FY24. Although the arrangement ended, promoter remuneration and related-party governance warrant continued review.",
     "Promoters are expected to retain roughly 82–83% after the offer. That preserves operating continuity but leaves public shareholders with limited influence over board appointments, related-party approvals and capital allocation.",
+    "The RHP's 39.90% FY26 adjusted RoNW is a pre-offer measure. The ₹1,200 crore fresh issue equals about 41.0% of FY26 net worth, so reported return ratios can fall mechanically until the 10-store inventory and fit-out programme produces incremental earnings.",
   ],
   monitor: [
     "Opening and ramp-up of the 10 funded stores, inventory deployed per store, breakeven time and mature versus new-store productivity.",
@@ -730,6 +733,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "The RHP shows 49.998 crore pre-offer shares. Dividing the ₹1,200 crore fresh issue by the ₹201 cap implies roughly 5.97 crore new shares before the small effect of the employee discount, producing an indicative post-offer market capitalisation near ₹11,250 crore.",
     "Against FY26 PAT of ₹1,009.82 crore, that indicates a fully diluted upper-band P/E of roughly 11.1×. The pre-offer EPS-based P/E is lower at 9.95×, but it omits fresh-issue dilution.",
+    "The ₹201 cap is 3.43× FY26 restated NAV of ₹58.60 per share. This is a pre-offer book-value comparison; the final post-offer NAV depends on the issue price, allotment and issue expenses.",
+    "The RHP peer set spans FY26 P/E values from 7.12× to 85.25×. That range is too wide to serve as a standalone valuation anchor because business mix, studded-jewellery share, inventory funding and geographic scale differ materially.",
     "Relevant listed references include Titan, Kalyan Jewellers, Senco Gold, Thangamayil Jewellery, Tribhovandas Bhimji Zaveri and PN Gadgil Jewellers. Differences in franchise mix, studded-jewellery share, geography, margins and inventory funding limit direct P/E comparison.",
     "The multiple must be read alongside negative FY26 operating cash flow and the ₹998.68 crore inventory deployment. Cash return on the 10 new stores is more informative than gold-price-led revenue growth alone.",
   ],
@@ -2034,6 +2039,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   metrics: [
     { label: "FY26 operating EBITDA margin", value: "12.9%", context: "Operating EBITDA was ₹6.65 crore, compared with ₹6.13 crore in FY25." },
     { label: "FY26 PAT margin", value: "8.1%", context: "PAT increased 13.4% to ₹4.20 crore as revenue rose 14.4%." },
+    { label: "FY26 RoNW / ROCE", value: "22.11% / 25.45%", context: "Final-RHP ratios on the pre-issue capital base; RoNW was below FY25's 25.07% despite higher PAT." },
+    { label: "Fresh issue / FY26 net worth", value: "119.2%", context: "The ₹22.68 crore gross fresh issue exceeds FY26 net worth of ₹19.02 crore and represents about 30.0% of the post-issue share count." },
+    { label: "Cap price / pre-issue NAV", value: "2.78×", context: "Derived from the ₹77 cap and FY26 NAV of ₹27.66 per share; the RHP leaves post-issue NAV blank pending final pricing." },
     { label: "FY26 debt/equity", value: "0.49×", context: "Borrowings increased to ₹9.25 crore but remained below net worth." },
     { label: "FY26 operating cash flow", value: "-₹1.66 crore", context: "Negative despite ₹4.20 crore PAT as receivables, inventory and working capital absorbed cash." },
     { label: "FY26 debtor days", value: "196 days", context: "The RHP projects a fall to 110 days in FY27 and FY28; collection performance is central to the working-capital case." },
@@ -2086,6 +2094,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The standard 18-month product warranty creates a post-delivery obligation. Although no significant warranty issue was reported for the last three years, larger and more customised EPC installations could raise provision, rework and service costs.",
     "The RHP says AMCs are generally one-year arrangements. The 5.20% AMC and other-services share may repeat through customer relationships, but it is not a disclosed multi-year contracted annuity and still carries annual renewal and pricing risk.",
     "None of the directors had prior directorship experience at a listed company. That transition risk is more relevant because Skytech is entering public-market reporting with historical PAS-3 corrections, long MSME filing delays and an unresolved supplier-classification conflict in the RHP.",
+    "The ₹22.68 crore gross fresh issue is 119.2% of FY26 net worth and expands the equity base by about 42.8%, even though the new shares are about 30.0% of post-issue capital. Historic RoNW therefore cannot carry forward without a substantial increase in cash-generative earnings.",
     "The RHP attributes part of FY26 material-cost improvement to a transition in HMI-panel procurement from Emerson to Mitsubishi. That is a disclosed historical margin driver, but the persistence of the benefit depends on Mitsubishi pricing, authorisation and component availability.",
     "NSE Emerge shares can have limited liquidity, large tradable lots, market-maker dependence and wide bid-ask spreads.",
   ],
@@ -2112,6 +2121,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   valuation: [
     "Across the ₹73–₹77 band, 98,20,600 post-issue shares imply an equity value of approximately ₹71.69–₹75.62 crore, or about 17.1–18.0× FY26 PAT of ₹4.20 crore. The price advertisement's 12.59× cap-price P/E uses pre-issue diluted FY26 EPS of ₹6.12, so it does not capture the full fresh-issue dilution.",
+    "At the cap, the offer is 2.78× FY26 pre-issue NAV of ₹27.66 per share. The 22.11% FY26 RoNW and 25.45% ROCE were earned before an issue equal to 119.2% of net worth, making post-issue capital deployment and cash conversion more relevant than the historic return ratios alone.",
     "The DRHP identifies no directly comparable listed Indian company. Capital-goods and automation peers differ greatly in proprietary technology, product manufacturing, service annuities, customer scale and export exposure.",
     "A normalized valuation should test FY24-like margins, slower customer collections and the return generated on a working-capital base projected to expand much faster than recent revenue.",
   ],
@@ -2152,6 +2162,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY24–FY26 revenue CAGR", value: "125.4%", context: "Revenue increased from ₹10.11 crore to ₹51.37 crore in two years." },
     { label: "FY26 EBITDA margin", value: "22.8%", context: "Up from 13.7% in FY24 as reported scale increased." },
     { label: "FY26 PAT margin", value: "16.4%", context: "PAT rose to ₹8.40 crore from ₹0.90 crore in FY24." },
+    { label: "FY26 RoNW", value: "58.97%", context: "The final RHP's pre-issue return ratio, down from 62.01% in FY25; it is based on year-end net worth rather than the much larger post-issue equity base." },
+    { label: "Fresh issue / FY26 net worth", value: "179.7%", context: "The ₹33.14 crore gross fresh issue is about 1.8× FY26 net worth of ₹18.44 crore and equals 26.50% of post-issue paid-up capital." },
+    { label: "Cap price / pre-issue NAV", value: "4.99×", context: "Derived from the ₹92 cap and FY26 NAV of ₹18.45 per share; final post-issue NAV was not populated in the RHP." },
     { label: "FY26 operating cash flow", value: "-₹1.10 crore", context: "Negative despite ₹8.40 crore PAT, after positive ₹2.50 crore in FY25." },
     { label: "FY26 revenue model", value: "76.82% project", context: "Recurring services were 23.18%; the RHP records nil subscription-based revenue for FY24–FY26." },
     { label: "BSE live demand snapshot", value: "0.60× displayed pool", context: "15,38,400 cap-price bids against 25,76,400 displayed post-anchor shares at 14 August close; the display still includes 1,81,200 market-maker shares." },
@@ -2194,6 +2207,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "ENS reports proprietary SaaS products, but the FY26 balance sheet shows nil intangible assets and nil intangibles under development. That does not disprove internal product development, but it leaves investors without a capitalised-software roll-forward to reconcile development spend, product ownership and future amortisation.",
     "Hiring funded by ₹17.02 crore of proceeds creates utilisation risk: employee costs arrive before project wins, product adoption and customer collections.",
     "The RHP funds salaries and advance software tools only for the initial year. Thereafter the enlarged cost base is expected to be supported by revenue growth, operating cash flow and internal accruals, despite FY26 operating cash flow already being negative ₹1.10 crore.",
+    "The 58.97% FY26 RoNW was earned on the pre-issue balance sheet. The ₹33.14 crore fresh issue is about 1.8 times FY26 net worth, so preserving that return rate would require a step-change in profit and cash conversion after the hiring and technology programme expands the capital base.",
     "The 65-position hiring budget is based on a single six-month quotation dated 26 March 2026, and no definitive vendor agreement had been signed. The programme would expand the 30 June workforce by 65% and carries annual CTC equal to 33.1% of FY26 revenue before recruiting commissions and statutory costs.",
     "ENS held no registered intellectual-property rights at the RHP date. Its logo trademark application remained pending, while the company presented multiple proprietary SaaS products without reporting subscription revenue in FY24–FY26.",
     "The RHP lists five direct-tax and five GST proceedings against the company with an aggregate amount of about ₹0.86 crore, alongside historical delays in depositing statutory dues and filing returns.",
@@ -2231,6 +2245,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   valuation: [
     "Across the ₹87–₹92 band, 1,35,94,912 post-issue shares imply an equity value of approximately ₹118.28–₹125.07 crore, or about 14.1–14.9× FY26 PAT of ₹8.40 crore. That headline multiple depends on the latest year's exceptional growth being durable and cash-generative.",
+    "At ₹92, the offer is 4.99× FY26 pre-issue NAV of ₹18.45. The RHP's 58.97% FY26 RoNW is also pre-issue: gross fresh proceeds equal 179.7% of FY26 net worth, so post-listing return ratios will depend on how quickly the enlarged payroll and technology base generates incremental cash earnings.",
     "RHP peers such as ASM Technologies, InfoBeans and Silver Touch differ in scale, offshore mix, recurring revenue, service lines and cash conversion. SaaS product companies are even less directly comparable.",
     "A normalized valuation should discount growth that requires rising receivables, investments or borrowing and separately value recurring SaaS only when retention and product revenue are disclosed.",
   ],
@@ -2272,6 +2287,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   metrics: [
     { label: "FY26 revenue growth", value: "166%", context: "Driven by the execution-model shift and larger on-site projects after FY25's much smaller base." },
     { label: "FY26 EBITDA margin", value: "20.0%", context: "EBITDA reached ₹26.29 crore on ₹131.31 crore of revenue." },
+    { label: "FY26 RoNW", value: "56.10%", context: "The final RHP's pre-issue ratio, below 90.21% in FY25; the weighted three-year RoNW was 72.08%." },
+    { label: "Fresh issue / FY26 net worth", value: "156.3%", context: "The ₹60.98 crore upper-band gross fresh issue is 1.56× FY26 net worth of ₹39.01 crore and represents 26.40% of post-issue shares." },
+    { label: "Cap price / pre-issue NAV", value: "4.36×", context: "Derived from the ₹132 cap and FY26 actual-share-count NAV of ₹30.28; final post-issue NAV was not populated in the RHP." },
     { label: "FY26 debt/equity", value: "0.38×", context: "Borrowings rose to ₹14.73 crore, but net worth expanded to ₹39.01 crore." },
     { label: "FY26 operating cash flow", value: "-₹11.66 crore", context: "Negative despite ₹14.94 crore PAT as working-capital balances absorbed cash." },
     { label: "FY26 Maharashtra + Gujarat", value: "75.91%", context: "Revenue remains geographically concentrated despite a national customer and service network." },
@@ -2325,6 +2343,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "FY26 employee attrition was 38.81% after 60.00% in FY25. Engineering, installation and service execution can be disrupted if the business cannot retain specialised personnel during its scale-up.",
     "The RHP refers to capacity planning against the order book but does not quantify pending orders, executable value, ageing, cancellation rights or expected conversion. That limits independent testing of revenue visibility behind the FY27–FY28 working-capital forecast.",
     "Promoters held 86.96% before the issue and would retain approximately 64.00% after the maximum fresh issue, preserving family control. Vandana Sharma is both promoter and CFO, concentrating financial oversight within the family.",
+    "The 56.10% FY26 RoNW was generated before a fresh issue equal to 156.3% of FY26 net worth. Maintaining anything close to that return after listing requires the ₹40.00 crore working-capital programme and ₹8.79 crore machinery spend to produce incremental cash earnings rather than only a larger receivable and WIP base.",
     "FY26 related-party disclosures record ₹1.50 crore of promoter loans repaid by issuing shares and ₹1.54 crore of advance repaid or adjusted with Techno Dyne, a firm owned by a director's relative. These transactions are disclosed, but their terms, valuation basis and post-listing recurrence should remain visible in governance review.",
     "Only 180 customers were served in FY26 versus 273 in FY25, even though revenue grew 166%. Lower top-five concentration is constructive, but the larger average engagement and on-site execution model can make individual project acceptance, cost-to-complete estimates and cash collection more consequential.",
     "BSE SME shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
@@ -2351,6 +2370,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   valuation: [
     "Across the BSE-confirmed ₹125–₹132 band, 1,75,00,000 post-issue shares imply an equity value of approximately ₹218.75–₹231.00 crore, or about 14.6–15.5× FY26 PAT of ₹14.94 crore.",
+    "At ₹132, the offer is 4.36× FY26 pre-issue NAV of ₹30.28 per share. The final RHP's 56.10% FY26 RoNW was earned before gross fresh capital equal to 156.3% of net worth, so the post-issue return profile hinges on WIP conversion, collections and machinery utilisation.",
     "DRHP peers Ador Welding, ESAB India and Jyoti CNC operate at much larger scale with different product ownership, distribution, exports and service mixes; their multiples are not directly transferable.",
     "A normalized valuation should use cash earnings across several project cycles and charge an adequate return on the much larger receivable and inventory base funded by the issue.",
   ],

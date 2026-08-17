@@ -17,6 +17,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 const money = (value: number | null) => value === null ? "Not announced" : `₹${value.toLocaleString("en-IN")} Cr`;
+const analysisDateIso = (value: string) => {
+  const [day, month, year] = value.split(" ");
+  const months: Record<string, string> = { January: "01", February: "02", March: "03", April: "04", May: "05", June: "06", July: "07", August: "08", September: "09", October: "10", November: "11", December: "12" };
+  return months[month] && day && year ? `${year}-${months[month]}-${day.padStart(2, "0")}` : "2026-08-17";
+};
 
 function BulletSection({ title, items, bg, dot }: { title: string; items: string[]; bg: string; dot: string }) {
   return <section className="rounded-2xl p-7 md:p-9" style={{ background: bg }}><h2 className="font-display text-3xl font-semibold" style={{ color: "#0B1F3A" }}>{title}</h2><ul className="mt-6 space-y-4">{items.map(item => <li key={item} className="flex gap-3 font-body text-sm leading-relaxed text-slate-700"><span className="mt-2 h-2 w-2 shrink-0 rounded-full" style={{ background: dot }} />{item}</li>)}</ul></section>;
@@ -25,14 +30,18 @@ function BulletSection({ title, items, bg, dot }: { title: string; items: string
 export default async function IpoAnalysisPage({ params }: { params: Promise<{ slug: string }> }) {
   const item = getCompanyIpoAnalysis((await params).slug);
   if (!item) notFound();
+  const latestFinancials = item.financials.at(-1);
   const faqs = [
     { question: `What is the ${item.company} IPO price band?`, answer: `The stated price band is ${item.issue.priceBand}. Offer terms should be checked against the final prospectus and exchange notices.` },
     { question: `When does the ${item.company} IPO open and close?`, answer: `The IPO is scheduled to open on ${item.issue.open} and close on ${item.issue.close}. The stated listing date is ${item.issue.listing}.` },
     { question: `What is the ${item.company} IPO issue size?`, answer: `The stated total issue size is ${money(item.issue.totalCr)}, comprising ${money(item.issue.freshCr)} of fresh issue and ${money(item.issue.ofsCr)} of offer for sale.` },
     { question: `What is the minimum lot for the ${item.company} IPO?`, answer: item.issue.lotSize ? `The stated minimum lot is ${item.issue.lotSize} shares.` : "The minimum lot has not yet been confirmed in the source materials reviewed." },
+    { question: `What do the latest ${item.company} financials show?`, answer: latestFinancials ? `For ${latestFinancials.year}, the offer documents report revenue of ${money(latestFinancials.revenueCr)}, EBITDA of ${money(latestFinancials.ebitdaCr)} and PAT of ${money(latestFinancials.patCr)}. Read these figures with the cash-flow, leverage and working-capital analysis on this page.` : "The latest comparable financial period was not available in the source materials reviewed." },
+    { question: `What is a key risk in the ${item.company} IPO analysis?`, answer: item.concerns[0] ?? "Material risks should be reviewed in the final prospectus and exchange disclosures." },
+    { question: `How is the ${item.company} IPO valued?`, answer: item.valuation[0] ?? "A reliable valuation comparison was not available in the source materials reviewed." },
   ];
   return <main className="bg-white pb-20">
-    <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: `${item.company} IPO Analysis`, description: item.summary, datePublished: "2026-08-13", dateModified: "2026-08-16", author: { "@type": "Organization", name: "SoHo Wealth Editorial Team", url: "https://www.sohowealth.in/team" }, publisher: { "@type": "Organization", name: "SoHo Wealth", url: "https://www.sohowealth.in" }, mainEntityOfPage: `https://www.sohowealth.in/ipo/${item.slug}` }} />
+    <JsonLd data={{ "@context": "https://schema.org", "@type": "Article", headline: `${item.company} IPO Analysis`, description: item.summary, datePublished: "2026-08-13", dateModified: analysisDateIso(item.analysisAsOf), inLanguage: "en-IN", isAccessibleForFree: true, keywords: [`${item.company} IPO`, `${item.company} IPO analysis`, `${item.company} IPO price band`, `${item.company} IPO financials`, `${item.company} IPO lot size`, `${item.company} IPO valuation`], about: { "@type": "FinancialProduct", name: `${item.company} IPO`, category: `${item.market} initial public offering` }, author: { "@type": "Organization", name: "SoHo Wealth Editorial Team", url: "https://www.sohowealth.in/team" }, publisher: { "@type": "Organization", name: "SoHo Wealth", url: "https://www.sohowealth.in" }, mainEntityOfPage: `https://www.sohowealth.in/ipo/${item.slug}` }} />
     <JsonLd data={{ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faqs.map(faq => ({ "@type": "Question", name: faq.question, acceptedAnswer: { "@type": "Answer", text: faq.answer } })) }} />
     <Breadcrumbs items={[{ name: "IPO Research", href: "/ipo" }, { name: `${item.company} IPO`, href: `/ipo/${item.slug}` }]} />
     <header className="container mx-auto max-w-5xl px-6 pb-12 pt-9"><div className="flex flex-wrap gap-2 font-body text-xs font-bold uppercase tracking-[0.11em]"><span className="rounded-full bg-emerald-50 px-3 py-1.5 text-emerald-800">{item.market}</span><span className="rounded-full bg-slate-100 px-3 py-1.5 text-slate-600">{item.status}</span></div><h1 className="mt-5 font-display text-4xl font-semibold leading-tight md:text-6xl" style={{ color: "#0B1F3A" }}>{item.company} IPO analysis</h1><p className="mt-5 max-w-3xl font-body text-lg leading-relaxed text-slate-600">{item.summary}</p><p className="mt-5 font-body text-xs text-slate-500">Analysis as of {item.analysisAsOf} · Reviewed by <Link href="/team" className="font-semibold text-emerald-800">SoHo Wealth Editorial Team</Link></p></header>
