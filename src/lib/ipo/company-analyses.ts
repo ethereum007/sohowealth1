@@ -477,7 +477,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE Milky Mist trading-commencement notice 20260817-39", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-39/20260817-39.pdf", kind: "Primary" },
   ],
 }, {
-  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Issue closed; final prospectus and allotment awaited after overnight check", analysisAsOf: "17 August 2026",
+  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Issue closed; NSE still shows final price and listing as unavailable", analysisAsOf: "17 August 2026",
   summary: "Behari Lal Engineering manufactures metal rolls, engineering castings, alloy-steel products and forged components. The final RHP shows FY26 revenue of ₹534.03 crore, EBITDA of ₹101.33 crore and PAT of ₹64.64 crore, but cash conversion weakened as inventory and receivables absorbed funds. The analysis therefore turns on whether higher-value product margins survive the steel cycle and whether a fully undeployed ₹63.04 crore expansion earns adequate returns.",
   business: [
     "The company manufactures metal rolls used in rolling mills, engineering castings, alloy-steel rounds and flats, forging ingots, shafts and blocks. Its customers operate across steel and other capital-intensive industries.",
@@ -485,8 +485,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Operations are centered in Punjab and are exposed to electricity, scrap and alloy input costs. Selling prices and raw-material pass-through can move with the steel cycle and customer contracts.",
     "Repeat customers generated 84.69% of FY26 revenue, while the top ten customers generated 38.00%. This supports relationship continuity but does not remove order risk because customers are not tied in by long-term contracts.",
   ],
-  issueNote: "The final RHP and official price advertisement confirm a ₹271–₹285 band, ₹93 crore rupee-sized fresh issue and 73.20 lakh-share OFS. At the cap the OFS is ₹208.62 crore and the total offer approximately ₹301.62 crore. Bidding closed on 14 August; the final prospectus, discovered price, allotment basis and listing approval were still not posted on the issuer or lead-manager offer pages in the overnight check early 17 August.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026; final exchange notice unavailable early 17 August", priceBand: "₹271–₹285", lotSize: 52, totalCr: 301.62, freshCr: 93, ofsCr: 208.62, faceValue: "₹10" },
+  issueNote: "The final RHP and official price advertisement confirm a ₹271–₹285 band, ₹93 crore rupee-sized fresh issue and 73.20 lakh-share OFS. At the cap the OFS is ₹208.62 crore and the total offer approximately ₹301.62 crore. Bidding closed on 14 August. NSE's past-issues table now lists Behari Lal, but its issue-price and listing-date fields remained blank at the 20:00 IST recheck on 17 August; the final prospectus, discovered price, allotment basis and listing approval therefore remain unavailable.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026; NSE listing field still unavailable", priceBand: "₹271–₹285", lotSize: 52, totalCr: 301.62, freshCr: 93, ofsCr: 208.62, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Equipment, machinery and associated civil work at Manufacturing Facility 1", amount: "₹19.589 crore" },
     { purpose: "Rooftop solar panels at Manufacturing Facility 1", amount: "₹3.40 crore" },
@@ -559,10 +559,11 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Behari Lal Engineering official price-band advertisement", href: "https://www.beharilalengineering.com/assets/img/annual/BEHARI-LAL_Price-Band_upload.pdf", kind: "Primary" },
     { label: "Behari Lal Engineering issuer IPO disclosures", href: "https://www.beharilalengineering.com/ipo.php", kind: "Primary" },
     { label: "Behari Lal Engineering DRHP", href: "https://www.systematixgroup.in/download/Beharilal_Engg_DRHP.pdf", kind: "Primary" },
+    { label: "NSE past public issues table", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
     { label: "CRISIL Ratings rationale, December 2025", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/BehariLalEngineeringLimited_December%2031_%202025_RR_373525.html", kind: "Secondary" },
   ],
 }, {
-  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Final prospectus filed; exchange listing notice unavailable early 17 August", analysisAsOf: "17 August 2026",
+  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Final prospectus filed; NSE still shows listing as unavailable", analysisAsOf: "17 August 2026",
   summary: "Shiprocket is a technology-led e-commerce enablement platform spanning domestic shipping, fulfilment, returns, cross-border logistics, checkout and merchant services. It processed 202.08 million transactions for 214,769 active merchants in FY26 and operating cash flow turned positive, but statutory EBITDA and PAT remained negative. Carrier concentration, emerging-business losses, acquisition goodwill, audit-trail controls and the bridge from adjusted to reported profitability are the central diligence questions.",
   business: [
     "The core business aggregates third-party logistics capacity and provides shipping, order management, returns and related software to online merchants. The platform is asset-light relative to an owned delivery network, but service quality and unit economics remain dependent on courier partners.",
@@ -572,8 +573,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The core platform served 69.58 million end consumers in FY26, including 40.20 million repeat consumers. The repeat rate increased to 57.78% from 46.79% in FY24, an issuer-defined engagement signal that still needs to translate into merchant retention and reported profitability.",
     "Merchant revenue is diversified: the largest merchant generated 2.83% of FY26 revenue and the top 20 generated 17.65%. Operational supply is more concentrated, with the top five of 42 active couriers handling 84.50% of shipments.",
   ],
-  issueNote: "The final prospectus dated 14 August fixes the offer price at ₹97 and confirms 16,67,61,566 shares: 9,12,99,203 fresh shares aggregating to ₹885.50 crore and 7,54,62,363 OFS shares aggregating to ₹731.98 crore. A 1,13,636-share employee reservation carried a ₹9 discount. No final exchange listing circular was visible in the overnight issuer and exchange check early 17 August, so 19 August remains the expected rather than confirmed trading date.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026; final exchange notice unavailable early 17 August", priceBand: "₹92–₹97; offer price ₹97", lotSize: 154, totalCr: 1617.48, freshCr: 885.5, ofsCr: 731.98, faceValue: "₹10" },
+  issueNote: "The final prospectus dated 14 August fixes the offer price at ₹97 and confirms 16,67,61,566 shares: 9,12,99,203 fresh shares aggregating to ₹885.50 crore and 7,54,62,363 OFS shares aggregating to ₹731.98 crore. A 1,13,636-share employee reservation carried a ₹9 discount. NSE's past-issues table now lists Shiprocket but still displays a blank issue-price field and no listing date at the 20:00 IST recheck on 17 August. The prospectus remains the primary source for the ₹97 final price, while 19 August remains the expected rather than exchange-confirmed trading date.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026; NSE listing field still unavailable", priceBand: "₹92–₹97; offer price ₹97", lotSize: 154, totalCr: 1617.48, freshCr: 885.5, ofsCr: 731.98, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in platform growth", amount: "₹365.60 crore" },
     { purpose: "Repayment or prepayment of borrowings, including interest", amount: "₹210 crore" },
@@ -650,6 +651,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Shiprocket final prospectus, 14 August 2026", href: "https://www.axiscapital.co.in/public/contents/Shiprocket%20Limited%20-%20Prospectus%20-%20Aug%2014,%202026-1786738627.pdf", kind: "Primary" },
     { label: "Shiprocket RHP", href: "https://www.axiscapital.co.in/public/contents/Shiprocket%20Limited%20-%20RHP%20-%20August%205%2C%202026-1785937235.pdf", kind: "Primary" },
     { label: "Shiprocket price-band advertisement", href: "https://www.axiscapital.co.in/public/contents/Shiprocket%20Limited%20-%20Pre-issue%20and%20Price%20Band%20Advertisement-1785990649.pdf", kind: "Primary" },
+    { label: "NSE past public issues table", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
     { label: "Zerodha Shiprocket offer summary", href: "https://zerodha.com/ipo/414198/shiprocket/", kind: "Secondary" },
     { label: "IPOPlatform restated financial report", href: "https://www.ipoplatform.com/ipo/financial-report/shiprocket-ipo/4146", kind: "Secondary" },
   ],
@@ -1849,7 +1851,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Q&T offer and proceeds summary", href: "https://www.ipoplatform.com/ipo/qandt-foods-ipo/4693", kind: "Secondary" },
   ],
 }, {
-  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closed; allotment and 19 August listing awaited", analysisAsOf: "17 August 2026",
+  slug: "pramodini-medicare-ipo", company: "Pramodini Medicare", market: "SME", sector: "Diagnostic imaging, laboratory and nuclear-medicine services", status: "Issue closed; NSE still shows final price and listing as unavailable", analysisAsOf: "17 August 2026",
   summary: "Pramodini Medicare operates a multi-state diagnostics network through public-private, private-hospital, PSU and standalone-centre arrangements. FY26 revenue reached ₹62.29 crore, EBITDA ₹30.90 crore and PAT ₹17.38 crore, while operating cash flow was ₹25.39 crore. The central questions are whether unusually high margins persist, whether new equipment earns adequate utilisation, and how much renewal, referral, counterparty and clinical-compliance risk sits inside its partnership-led model.",
   business: [
     "The company provides radiology, clinical laboratory and nuclear-medicine services through public-private partnerships with government hospitals and teaching hospitals, arrangements with private hospitals, strategic partnerships with central-government PSUs and privately operated centres.",
@@ -1857,8 +1859,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoters are Dr Chalasani Kuldeep Kumar, Dr Chalasani Kavitha, Chalasani Durga Aashritha and Sri Ram Medicare Private Limited. The two doctor-promoters bring clinical experience, but promoter, referral and key-person dependence must be assessed alongside board and clinical-governance controls.",
     "The network is operationally concentrated despite its multi-state footprint: radiology supplied 97.05% of FY26 revenue, B2G arrangements 61.46% and Andhra Pradesh 61.90%. Contract continuity, equipment uptime and scan utilisation therefore drive a large portion of economics.",
   ],
-  issueNote: "The 4 August RHP confirms 58,51,200 shares: 53,50,800 fresh shares, 5,00,400 OFS shares and a 3,36,000-share market-maker reservation, leaving a 55,15,200-share net offer. At the ₹118 cap this implies up to ₹69.04 crore, including ₹63.14 crore fresh and ₹5.90 crore OFS. The market lot is 1,200 shares, but the RHP requires a two-lot minimum application, or 2,400 shares. At the 7:30 a.m. IST recheck on 17 August the issue remained absent from both NSE's current-issue feed and its past-issues table. That transition state does not establish the final price, demand, allotment or listing approval; the RHP's proposed 19 August listing remains tentative.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Proposed 19 August 2026; final NSE notice pending", priceBand: "₹110–₹118", lotSize: 2400, totalCr: 69.04, freshCr: 63.14, ofsCr: 5.90, faceValue: "₹10" },
+  issueNote: "The 4 August RHP confirms 58,51,200 shares: 53,50,800 fresh shares, 5,00,400 OFS shares and a 3,36,000-share market-maker reservation, leaving a 55,15,200-share net offer. At the ₹118 cap this implies up to ₹69.04 crore, including ₹63.14 crore fresh and ₹5.90 crore OFS. The market lot is 1,200 shares, but the RHP requires a two-lot minimum application, or 2,400 shares. NSE's past-issues table now lists Pramodini, correcting the earlier transition state in which it was absent from both exchange feeds. The same table still shows no final issue price or listing date at the 20:00 IST recheck on 17 August, so demand, allotment and the RHP's proposed 19 August listing remain unconfirmed.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Proposed 19 August 2026; NSE listing field still unavailable", priceBand: "₹110–₹118", lotSize: 2400, totalCr: 69.04, freshCr: 63.14, ofsCr: 5.90, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Medical equipment for existing and proposed diagnostic centres", amount: "₹45.1485 crore in the RHP" },
     { purpose: "Unidentified inorganic acquisition", amount: "Residual allocation not finalised in the RHP; capped at 25% of gross proceeds" },
