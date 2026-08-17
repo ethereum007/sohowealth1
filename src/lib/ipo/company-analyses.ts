@@ -386,7 +386,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Infomerics rating rationale, March 2026", href: "https://infomericstorage.blob.core.windows.net/uploads/pr_Technocraft_Ventures_19mar26_1e225b0d2e.pdf", kind: "Secondary" },
   ],
 }, {
-  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "Final prospectus filed; exchange listing notice unavailable early 17 August", analysisAsOf: "17 August 2026",
+  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "BSE listing admission announced; trading date awaits separate notice", analysisAsOf: "17 August 2026",
   summary: "Milky Mist is a value-added dairy company built around paneer, curd, cheese, ice cream and other packaged products rather than commodity liquid milk. FY26 brought faster growth, a higher 4.0% PAT margin and positive operating cash flow, but borrowings still rose to ₹1,671.85 crore. The final prospectus also shows lower direct-farmer sourcing, uneven product-level utilisation, receivables growing faster than revenue, a ₹229.01 crore contingent-liability base and audit-control observations that make procurement, capex execution and governance central to the analysis.",
   business: [
     "Milky Mist procures raw milk and converts it into value-added products including paneer, curd, cheese, butter, ghee, ice cream, cream and traditional dairy foods. Avoiding liquid-milk distribution supports a differentiated mix but does not remove raw-milk price and seasonality risk.",
@@ -395,8 +395,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "At FY26 the network included 4,001 distributors, more than 3.75 lakh retail touchpoints and 57 C&F depots across 15 states. Southern India still generated 69.23% of revenue, though that share declined from 73.68% in FY24.",
     "Paneer, cheese and curd generated 59.05% of FY26 revenue. Ice cream and yoghurt have grown faster, but the three established categories still determine a majority of product economics and milk balancing.",
   ],
-  issueNote: "The final prospectus dated 13 August fixes the offer price at ₹140 and confirms 11,09,43,192 shares: 10,20,14,622 fresh shares aggregating to ₹1,428 crore and 89,28,570 promoter OFS shares aggregating to ₹125 crore. The offer followed a ₹357 crore pre-IPO placement that reduced the original fresh-issue size. No final exchange listing circular was visible in the overnight issuer and exchange check early 17 August, so 18 August remains the expected rather than confirmed trading date.",
-  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Expected 18 August 2026; final exchange notice unavailable early 17 August", priceBand: "₹133–₹140", lotSize: 107, totalCr: 1553, freshCr: 1428, ofsCr: 125, faceValue: "₹2" },
+  issueNote: "The final prospectus dated 13 August fixes the offer price at ₹140 and confirms 11,09,43,192 shares: 10,20,14,622 fresh shares aggregating to ₹1,428 crore and 89,28,570 promoter OFS shares aggregating to ₹125 crore. The offer followed a ₹357 crore pre-IPO placement that reduced the original fresh-issue size. BSE notice 20260817-15 assigns scrip 544868, symbol MILKYMIST and ISIN INE00IT01020 and says the equity shares shall be listed and admitted to dealings in due course. The same circular explicitly defers the trading date and security details to a separate notice, so this is an admission milestone rather than confirmation that trading has begun.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "BSE admission announced; trading date and security details await a separate notice", priceBand: "₹133–₹140", lotSize: 107, totalCr: 1553, freshCr: 1428, ofsCr: 125, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹496.86 crore" },
     { purpose: "Expansion and modernisation of the Perundurai facility", amount: "₹469.24 crore" },
@@ -447,6 +447,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Contingent liabilities were ₹229.01 crore, including ₹194.87 crore of EPCG duty obligations and disputed GST and other liabilities. The export obligations must be completed within licence timelines or could convert into cash outflows.",
   ],
   monitor: [
+    "Separate BSE notice confirming the trading date, security particulars and final listing commencement for scrip 544868 / MILKYMIST.",
     "Actual debt repayment, interest savings and post-issue leverage.", "Perundurai expansion cost, commissioning schedule and utilisation by product category.",
     "Milk procurement price, direct-farmer versus third-party sourcing and selling-price realization.", "Non-south revenue, distributor productivity and cold-chain economics.",
     "Operating cash flow after capex, inventory days and receivable days.", "Quality incidents, product recalls, farmer retention and geographic diversification of milk sourcing.",
@@ -467,6 +468,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Milky Mist RHP", href: "https://www.axiscapital.co.in/public/contents/Milky%20Mist%20Dairy%20Food%20Limited%20-%20RHP-1785869566.pdf", kind: "Primary" },
     { label: "Milky Mist price-band advertisement", href: "https://www.axiscapital.co.in/public/contents/Milky%20Mist%20Dairy%20Food%20Limited%20-%20Pre-issue%20and%20Price%20Band%20Advertisement-1786002898.pdf", kind: "Primary" },
     { label: "Milky Mist financial information", href: "https://www.milkymist.com/financial-information", kind: "Primary" },
+    { label: "BSE Milky Mist listing-admission notice 20260817-15", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-15/20260817-15.pdf", kind: "Primary" },
   ],
 }, {
   slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Issue closed; final prospectus and allotment awaited after overnight check", analysisAsOf: "17 August 2026",
@@ -1537,7 +1539,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Optimystix financial report", href: "https://www.ipoplatform.com/ipo/financial-report/optimystix-entertainment-india-ipo/4410", kind: "Secondary" },
   ],
 }, {
-  slug: "sham-foam-ipo", company: "Sham Foam", market: "SME", sector: "Polyurethane foam, mattresses and home-comfort products", status: "Issue closed; proposed 18 August listing, final BSE notice unavailable early 17 August", analysisAsOf: "17 August 2026",
+  slug: "sham-foam-ipo", company: "Sham Foam", market: "SME", sector: "Polyurethane foam, mattresses and home-comfort products", status: "BSE listing admission announced; trading date awaits separate notice", analysisAsOf: "17 August 2026",
   summary: "Sham Foam manufactures polyurethane foam, mattresses and allied comfort products from Haryana. The final prospectus replaces interim estimates with audited FY26 revenue of ₹92.32 crore, EBITDA of ₹11.00 crore, PAT of ₹8.65 crore and operating cash flow of ₹12.78 crore. The central questions are whether the FY26 margin step-up survives petrochemical-cost changes and whether ₹14.72 crore of new capex creates returns without stretching working capital or a single-site operating model.",
   business: [
     "The company manufactures, markets and distributes flexible polyurethane foam, mattresses, cushions, pillows and other home-comfort products, including products sold under its Featherfresh positioning.",
@@ -1545,8 +1547,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "PU foam generated 86.22% of FY26 revenue. Uttar Pradesh, Punjab, Haryana and Delhi together contributed about 72.9%, so product, geography and the single manufacturing site remain more concentrated than the customer base.",
     "Sham Foam was incorporated in 2020. Rajinder Kumar Jindal, Sanjeev Kumar Jindal, Monica Jindal, Deepika Jindal and Charming Fashions Private Limited collectively held the pre-issue capital; the prospectus also identifies Aggarwal Comfort Products Private Limited as a promoter-group entity pursuing a similar business.",
   ],
-  issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments; the secondary-market trading lot is 1,000 shares. BSE's official close book, timestamped 13 August at 5:00 p.m., records 72,47,000 bids: 7,000 QIB, 33,66,000 non-institutional and 38,74,000 retail. That is 2.33× the gross offer or 2.45× the net issue by calculation, but BSE left the offered or reserved category fields blank, so no category-level subscription multiple is stated. The prospectus proposed 18 August trading, but BSE's official notices early on 17 August did not yet contain final allotment or listing approval.",
-  issue: { open: "11 August 2026", close: "13 August 2026", listing: "18 August 2026 proposed; final BSE notice pending", priceBand: "₹130 fixed price", lotSize: 2000, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments; the secondary-market trading lot is 1,000 shares. BSE's official close book, timestamped 13 August at 5:00 p.m., records 72,47,000 bids: 7,000 QIB, 33,66,000 non-institutional and 38,74,000 retail. That is 2.33× the gross offer or 2.45× the net issue by calculation, but BSE left the offered or reserved category fields blank, so no category-level subscription multiple is stated. BSE notice 20260817-17 assigns scrip 544869, symbol SHAMFOAM and ISIN INE0Z9N01013 and says the shares shall be listed and admitted to dealings in due course. The circular explicitly defers the trading date and security details to a separate notice, so the prospectus's proposed 18 August date is not treated as confirmed.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "BSE admission announced; trading date and security details await a separate notice", priceBand: "₹130 fixed price", lotSize: 2000, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Civil construction, machinery and equipment at the existing manufacturing facility", amount: "Up to ₹14.72 crore; no machinery orders had been placed and no object expenditure beyond ₹0.06 crore of issue costs was deployed by 30 June" },
     { purpose: "Part-finance working-capital requirements", amount: "₹14.25 crore: ₹8.25 crore in FY27 and ₹6.00 crore in FY28" },
@@ -1606,6 +1608,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The prospectus reports 45.73% FY26 ROCE, but the denominator predates ₹35.01 crore of net issue proceeds. If commissioning or working-capital deployment is slow, post-issue return ratios can fall even without an operating setback.",
   ],
   monitor: [
+    "Separate BSE notice confirming the trading date, security particulars and final listing commencement for scrip 544869 / SHAMFOAM.",
     "Production capacity, utilisation and commissioning progress for the issue-funded civil works and machinery.",
     "Revenue and gross-margin mix among PU foam, mattresses, branded products, institutional customers and distributors.",
     "Polyol and isocyanate prices, top-supplier concentration, import content, foreign-exchange exposure and customer price revisions.",
@@ -1632,6 +1635,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Sham Foam corporate website", href: "https://shamfoam.com/", kind: "Primary" },
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "BSE notices and listing circulars", href: "https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx", kind: "Primary" },
+    { label: "BSE Sham Foam listing-admission notice 20260817-17", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-17/20260817-17.pdf", kind: "Primary" },
     { label: "IPOPlatform Sham Foam offer and financial report", href: "https://www.ipoplatform.com/ipo/financial-report/sham-foam-ipo/4592", kind: "Secondary" },
     { label: "Kotak Neo Sham Foam DRHP summary", href: "https://www.kotakneo.com/ipo/sham-foam-ipo/", kind: "Secondary" },
   ],
