@@ -149,7 +149,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Issuer disclosures describe Dhoot as one of the two largest suppliers in India's two- and three-wheeler wiring-harness market. EV-related revenue reached 24.17% in FY26, slightly below 25.22% in FY25; market-share and industry-growth figures remain issuer-commissioned claims.",
     "Two- and three-wheelers generated 78.33% of FY26 revenue, while 90.14% of revenue was earned within India. The business therefore combines high OEM and vehicle-category concentration with more limited geographic diversification than a global auto-component peer.",
   ],
-  issueNote: "The final RHP confirms a ₹1,400 crore fresh issue and OFS of 1,91,37,602 shares. BSE notice 20260814-32 fixes the issue price at ₹871, making the OFS approximately ₹1,666.89 crore and the total offer approximately ₹3,066.89 crore. It also confirms 13 August allotment, 20,45,48,057 post-issue shares, scrip 544867 / DHOOTTRANS and admission to BSE's B group from 17 August with a one-share market lot. BSE's official 09:51 IST listing snapshot records a ₹1,193.80 open, ₹322.80 or 37.06% above the issue price. This is the opening print, not a recommendation or a forecast of later trading.",
+  issueNote: "The final RHP confirms a ₹1,400 crore fresh issue and OFS of 1,91,37,602 shares. BSE notice 20260814-32 fixes the issue price at ₹871, making the OFS approximately ₹1,666.89 crore and the total offer approximately ₹3,066.89 crore. It also confirms 13 August allotment, 20,45,48,057 post-issue shares, scrip 544867 / DHOOTTRANS and admission to BSE's B group from 17 August with a one-share market lot. BSE's official 17 August trading record shows a ₹1,193.80 open, an intraday range of ₹1,130.95–₹1,197.05 and a ₹1,187.50 end-of-session value at 16:01, 36.34% above the ₹871 issue price.",
   issue: { open: "10 August 2026", close: "12 August 2026", listing: "Listed 17 August 2026", priceBand: "₹829–₹871; issue price ₹871", lotSize: 17, totalCr: 3066.89, freshCr: 1400, ofsCr: 1666.89, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of company borrowings", amount: "Up to ₹493.99 crore" },
@@ -178,6 +178,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 contingent liabilities", value: "₹60.05 Cr", context: "Primarily ₹48.04 crore of disputed advisory and consultancy fees plus tax and other legal matters." },
     { label: "Final issue price", value: "₹871", context: "BSE notice 20260814-32 confirms 20,45,48,057 post-issue shares and trading from 17 August under scrip 544867." },
     { label: "BSE listing open", value: "₹1,193.80 (+37.06%)", context: "Official BSE snapshot at 09:51 IST on 17 August versus the ₹871 issue price; this timestamped opening print should not be read as a later-session price." },
+    { label: "BSE first-day session", value: "₹1,187.50 (+36.34%)", context: "Official BSE 16:01 record on 17 August; the share opened at ₹1,193.80 and traded between ₹1,130.95 and ₹1,197.05." },
     { label: "Opening market cap / FY26 PAT", value: "₹24,418.95 Cr / 61.5×", context: "Derived from the BSE-confirmed 20,45,48,057 post-issue shares and ₹1,193.80 opening price, divided by FY26 PAT of ₹396.84 crore." },
   ],
   strengths: [
@@ -223,6 +224,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Dhoot Transmission IPO disclosures", href: "https://www.dhoottransmission.com/investor-relations/ipo-related-disclosures", kind: "Primary" },
     { label: "BSE Dhoot listing notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-32/20260814-32.pdf", kind: "Primary" },
     { label: "BSE Dhoot live security header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?scripcode=544867&Debtflag=&seriesid=", kind: "Primary" },
+    { label: "BSE Dhoot 17 August intraday record", href: "https://api.bseindia.com/BseIndiaAPI/api/StockReachGraph/w?scripcode=544867&flag=0&fromdate=&todate=&seriesid=", kind: "Primary" },
     { label: "Bain Capital announcement: strategic investment", href: "https://www.baincapital.com/news/dhoot-transmission-group-secures-strategic-growth-investment-bain-capital-significant-minority", kind: "Primary" },
   ],
 }, {
@@ -235,7 +237,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "In FY26 Molbio sold 2,524 Truenat workstations and 17.56 million test kits. Test-kit revenue was ₹1,034.82 crore versus ₹203.28 crore from devices, illustrating why assay utilisation and repeat consumable demand matter more than analyser shipments alone.",
     "Bigtec is the group's R&D hub. FY26 R&D spending was ₹87.46 crore, or 6.05% of revenue, supported by 153 permanent R&D employees; only one assay and no new disease test was commercialised during the year despite the broader pipeline.",
   ],
-  issueNote: "The final RHP confirms a ₹200 crore fresh issue and OFS of 91.66 lakh shares. At the ₹807 final issue price confirmed by BSE notice 20260814-42, that is 24.80246 lakh fresh shares, approximately ₹739.70 crore OFS and ₹939.70 crore total. A 7 August addendum records promoter Exxora selling 19,82,649 additional pre-offer shares at ₹807 outside the OFS, reducing its holding to 39.47% before the offer. The BSE notice also confirms 13 August allotment, 11,52,39,996 post-issue shares, scrip 544866 / MOLBIO and B-group trading from 17 August. BSE's official 09:51 IST listing snapshot records a ₹980 open, ₹173 or 21.44% above the issue price. This is the opening print, not a recommendation or a forecast of later trading.",
+  issueNote: "The final RHP confirms a ₹200 crore fresh issue and OFS of 91.66 lakh shares. At the ₹807 final issue price confirmed by BSE notice 20260814-42, that is 24.80246 lakh fresh shares, approximately ₹739.70 crore OFS and ₹939.70 crore total. A 7 August addendum records promoter Exxora selling 19,82,649 additional pre-offer shares at ₹807 outside the OFS, reducing its holding to 39.47% before the offer. The BSE notice also confirms 13 August allotment, 11,52,39,996 post-issue shares, scrip 544866 / MOLBIO and B-group trading from 17 August. BSE's official 17 August trading record shows a ₹980 open, an intraday range of ₹928.40–₹1,064.50 and a ₹1,036.30 end-of-session value at 16:01, 28.41% above the ₹807 issue price.",
   issue: { open: "10 August 2026", close: "12 August 2026", listing: "Listed 17 August 2026", priceBand: "₹768–₹807; issue price ₹807", lotSize: 18, totalCr: 939.7, freshCr: 200, ofsCr: 739.7, faceValue: "₹1" },
   useOfProceeds: [
     { purpose: "R&D facility, Centre of Excellence and connected office space", amount: "Up to ₹99.37 crore" },
@@ -263,6 +265,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Post-issue PAT multiple", value: "≈56.7×", context: "The BSE-confirmed 11,52,39,996 post-issue shares imply ₹9,299.87 crore market capitalisation at ₹807, divided by FY26 PAT of ₹164.14 crore." },
     { label: "Final issue price", value: "₹807", context: "BSE notice 20260814-42 confirms 11,52,39,996 post-issue shares and trading from 17 August under scrip 544866." },
     { label: "BSE listing open", value: "₹980 (+21.44%)", context: "Official BSE snapshot at 09:51 IST on 17 August versus the ₹807 issue price; this timestamped opening print should not be read as a later-session price." },
+    { label: "BSE first-day session", value: "₹1,036.30 (+28.41%)", context: "Official BSE 16:01 record on 17 August; the share opened at ₹980 and traded between ₹928.40 and ₹1,064.50." },
     { label: "Opening market cap / FY26 PAT", value: "₹11,293.52 Cr / 68.8×", context: "Derived from the BSE-confirmed 11,52,39,996 post-issue shares and ₹980 opening price, divided by FY26 PAT of ₹164.14 crore." },
   ],
   strengths: [
@@ -311,6 +314,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Molbio investor disclosures and financials", href: "https://www.molbiodiagnostics.com/investors/", kind: "Primary" },
     { label: "BSE Molbio listing notice, 14 August 2026", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260814-42/20260814-42.pdf", kind: "Primary" },
     { label: "BSE Molbio live security header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?scripcode=544866&Debtflag=&seriesid=", kind: "Primary" },
+    { label: "BSE Molbio 17 August intraday record", href: "https://api.bseindia.com/BseIndiaAPI/api/StockReachGraph/w?scripcode=544866&flag=0&fromdate=&todate=&seriesid=", kind: "Primary" },
     { label: "Molbio issuer announcement: IPO filing", href: "https://www.molbiodiagnostics.com/newsroom/molbio-diagnostics-files-for-ipo-to-raise-rs-200-cr-ofs-of-1-25-cr-shares/", kind: "Primary" },
   ],
 }, {
@@ -386,7 +390,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Infomerics rating rationale, March 2026", href: "https://infomericstorage.blob.core.windows.net/uploads/pr_Technocraft_Ventures_19mar26_1e225b0d2e.pdf", kind: "Secondary" },
   ],
 }, {
-  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "BSE listing admission announced; trading date awaits separate notice", analysisAsOf: "17 August 2026",
+  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "Trading scheduled from 18 August 2026", analysisAsOf: "17 August 2026",
   summary: "Milky Mist is a value-added dairy company built around paneer, curd, cheese, ice cream and other packaged products rather than commodity liquid milk. FY26 brought faster growth, a higher 4.0% PAT margin and positive operating cash flow, but borrowings still rose to ₹1,671.85 crore. The final prospectus also shows lower direct-farmer sourcing, uneven product-level utilisation, receivables growing faster than revenue, a ₹229.01 crore contingent-liability base and audit-control observations that make procurement, capex execution and governance central to the analysis.",
   business: [
     "Milky Mist procures raw milk and converts it into value-added products including paneer, curd, cheese, butter, ghee, ice cream, cream and traditional dairy foods. Avoiding liquid-milk distribution supports a differentiated mix but does not remove raw-milk price and seasonality risk.",
@@ -395,8 +399,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "At FY26 the network included 4,001 distributors, more than 3.75 lakh retail touchpoints and 57 C&F depots across 15 states. Southern India still generated 69.23% of revenue, though that share declined from 73.68% in FY24.",
     "Paneer, cheese and curd generated 59.05% of FY26 revenue. Ice cream and yoghurt have grown faster, but the three established categories still determine a majority of product economics and milk balancing.",
   ],
-  issueNote: "The final prospectus dated 13 August fixes the offer price at ₹140 and confirms 11,09,43,192 shares: 10,20,14,622 fresh shares aggregating to ₹1,428 crore and 89,28,570 promoter OFS shares aggregating to ₹125 crore. The offer followed a ₹357 crore pre-IPO placement that reduced the original fresh-issue size. BSE notice 20260817-15 assigns scrip 544868, symbol MILKYMIST and ISIN INE00IT01020 and says the equity shares shall be listed and admitted to dealings in due course. The same circular explicitly defers the trading date and security details to a separate notice, so this is an admission milestone rather than confirmation that trading has begun.",
-  issue: { open: "11 August 2026", close: "13 August 2026", listing: "BSE admission announced; trading date and security details await a separate notice", priceBand: "₹133–₹140", lotSize: 107, totalCr: 1553, freshCr: 1428, ofsCr: 125, faceValue: "₹2" },
+  issueNote: "The final prospectus dated 13 August fixes the offer price at ₹140 and confirms 11,09,43,192 shares: 10,20,14,622 fresh shares aggregating to ₹1,428 crore and 89,28,570 promoter OFS shares aggregating to ₹125 crore. The offer followed a ₹357 crore pre-IPO placement that reduced the original fresh-issue size. BSE notice 20260817-39 confirms that trading starts on 18 August in the B group through a special pre-open session. It records 14 August allotment, 76,98,43,411 post-issue shares, scrip 544868 / MILKYMIST, ISIN INE00IT01020, a ₹140 issue price and a one-share secondary-market lot.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Trading scheduled from 18 August 2026", priceBand: "₹133–₹140; issue price ₹140", lotSize: 107, totalCr: 1553, freshCr: 1428, ofsCr: 125, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹496.86 crore" },
     { purpose: "Expansion and modernisation of the Perundurai facility", amount: "₹469.24 crore" },
@@ -424,6 +428,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 working-capital days", value: "48 days", context: "Prospectus measure of inventory plus receivables less payables, compared with 42 days in FY25 and 49 days in FY24." },
     { label: "Contingent liabilities", value: "₹229.01 crore", context: "Includes ₹194.87 crore of EPCG duty obligations and ₹25.47 crore of disputed statutory liabilities at FY26." },
     { label: "Capex orders placed", value: "17.33%", context: "₹89.75 crore of orders had been placed against the expansion estimate; ₹48.70 crore had been paid by 30 June 2026." },
+    { label: "BSE trading commencement", value: "18 August 2026", context: "BSE notice 20260817-39 confirms B-group trading through a special pre-open session under scrip 544868 / MILKYMIST with a one-share market lot." },
   ],
   strengths: [
     "Revenue grew 31.3% annually from FY24 to FY26, supported by a broad value-added product portfolio.",
@@ -447,7 +452,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Contingent liabilities were ₹229.01 crore, including ₹194.87 crore of EPCG duty obligations and disputed GST and other liabilities. The export obligations must be completed within licence timelines or could convert into cash outflows.",
   ],
   monitor: [
-    "Separate BSE notice confirming the trading date, security particulars and final listing commencement for scrip 544868 / MILKYMIST.",
+    "First-day open, intraday range, volume and end-of-session value after the 18 August special pre-open session.",
     "Actual debt repayment, interest savings and post-issue leverage.", "Perundurai expansion cost, commissioning schedule and utilisation by product category.",
     "Milk procurement price, direct-farmer versus third-party sourcing and selling-price realization.", "Non-south revenue, distributor productivity and cold-chain economics.",
     "Operating cash flow after capex, inventory days and receivable days.", "Quality incidents, product recalls, farmer retention and geographic diversification of milk sourcing.",
@@ -469,6 +474,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Milky Mist price-band advertisement", href: "https://www.axiscapital.co.in/public/contents/Milky%20Mist%20Dairy%20Food%20Limited%20-%20Pre-issue%20and%20Price%20Band%20Advertisement-1786002898.pdf", kind: "Primary" },
     { label: "Milky Mist financial information", href: "https://www.milkymist.com/financial-information", kind: "Primary" },
     { label: "BSE Milky Mist listing-admission notice 20260817-15", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-15/20260817-15.pdf", kind: "Primary" },
+    { label: "BSE Milky Mist trading-commencement notice 20260817-39", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-39/20260817-39.pdf", kind: "Primary" },
   ],
 }, {
   slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Issue closed; final prospectus and allotment awaited after overnight check", analysisAsOf: "17 August 2026",
