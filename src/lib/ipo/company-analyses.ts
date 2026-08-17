@@ -173,6 +173,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Largest-customer share", value: "31.84%", context: "Bajaj Auto was Dhoot's largest customer in FY26; the top ten customers contributed 80.93%." },
     { label: "FY26 employee attrition", value: "15.20%", context: "Permanent-employee attrition improved from 19.10% in FY24; the group reported 2,735 permanent employees." },
     { label: "Upper-band FY26 P/E", value: "35.7×", context: "Based on ₹871 and RHP FY26 EPS of ₹24.40, before fresh-issue dilution." },
+    { label: "Post-issue market cap", value: "₹17,816.14 Cr", context: "Derived from the BSE-confirmed 20,45,48,057 post-issue shares at the ₹871 final issue price; this equals about 44.9× FY26 PAT." },
     { label: "Borrowings at 20 July", value: "₹914.78 Cr", context: "Consolidated outstanding debt was mostly secured; disclosed term-loan rates generally ranged from 7.75% to 8.90%." },
     { label: "FY26 contingent liabilities", value: "₹60.05 Cr", context: "Primarily ₹48.04 crore of disputed advisory and consultancy fees plus tax and other legal matters." },
     { label: "Final issue price", value: "₹871", context: "BSE notice 20260814-32 confirms 20,45,48,057 post-issue shares and trading from 17 August under scrip 544867." },
@@ -208,7 +209,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Closure of the disclosed audit-trail gaps, alongside post-listing promoter shareholding, related-party transactions and acquisition discipline.",
   ],
   valuation: [
-    "At ₹871, the RHP multiple is approximately 35.7× FY26 EPS of ₹24.40 on a pre-offer basis. Fresh-issue dilution and interest savings from debt repayment move in opposite directions and should be modelled separately.",
+    "At ₹871, the RHP multiple is approximately 35.7× FY26 EPS of ₹24.40 on a pre-offer basis. The BSE-confirmed 20,45,48,057 post-issue shares instead imply approximately ₹17,816.14 crore market capitalisation and 44.9× FY26 PAT. Fresh-issue dilution and interest savings from debt repayment move in opposite directions and should be modelled separately.",
     "The UDRHP peer set includes Minda Corporation, Uno Minda, Motherson Sumi Wiring India and Sona BLW Precision Forgings. Their product mix, end markets, global exposure and capital intensity differ, so the peer range is context rather than a direct valuation verdict.",
     "The central valuation test is whether Dhoot can sustain mid-to-high-teen EBITDA margins and strong returns while funding new plants, managing customer concentration and normalising leverage. Post-listing cash conversion will be more informative than revenue growth alone.",
   ],
@@ -255,6 +256,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 contingent liabilities", value: "₹168.74 Cr", context: "Primarily bank guarantees of ₹90.10 crore and disputed direct and indirect taxes of ₹78.39 crore." },
     { label: "FY26 employee attrition", value: "14.38%", context: "160 permanent employees exited; the rate improved from 22.18% in FY24." },
     { label: "Upper-band FY26 P/E", value: "54.64×", context: "Issuer-disclosed multiple at ₹807 using FY26 diluted EPS of ₹14.77." },
+    { label: "Post-issue PAT multiple", value: "≈56.7×", context: "The BSE-confirmed 11,52,39,996 post-issue shares imply ₹9,299.87 crore market capitalisation at ₹807, divided by FY26 PAT of ₹164.14 crore." },
     { label: "Final issue price", value: "₹807", context: "BSE notice 20260814-42 confirms 11,52,39,996 post-issue shares and trading from 17 August under scrip 544866." },
   ],
   strengths: [
@@ -291,7 +293,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "OptraSCAN revenue, losses, scanner-technology amortisation and headroom in the goodwill impairment model.",
   ],
   valuation: [
-    "At ₹807, the RHP discloses 54.64× FY26 diluted EPS of ₹14.77. The final upper-band post-offer market capitalisation was approximately ₹9,299.87 crore.",
+    "At ₹807, the RHP discloses 54.64× FY26 diluted EPS of ₹14.77. The BSE-confirmed post-offer share count implies approximately ₹9,299.87 crore market capitalisation and 56.7× FY26 PAT; the difference makes the dilution basis explicit.",
     "Conventional diagnostics peers are imperfect comparisons because Molbio combines proprietary devices, consumables, public-health tenders, R&D and acquired medtech businesses. Revenue quality and cash conversion therefore matter alongside P/E.",
     "A durable valuation framework should normalize procurement cycles, bad-debt and inventory provisions, R&D expense versus capitalization, and maintenance investment while testing how quickly non-TB and export assays scale.",
   ],
@@ -1531,6 +1533,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Offer-funded capex ordered", value: "0%", context: "The final prospectus says machinery estimates rely on time-limited budgetary quotations, with no orders or definitive vendor agreements in place." },
     { label: "Post-capex available capacity", value: "10,000 TPA", context: "Up from 6,000 TPA of cutting and associated-machine capacity; stated installed foam capacity remains 15,000 TPA." },
     { label: "FY26 contingent liabilities", value: "₹2.00 Cr", context: "The final prospectus records ₹2.001 crore relating to a civil case, principally the pending Feather Fresh trademark dispute." },
+    { label: "FY26 reported ROCE", value: "45.73%", context: "Up from 22.56% in FY25. It is a pre-issue measure and should be re-tested after ₹35.01 crore of net fresh capital enters the business." },
     { label: "BSE close-book demand", value: "72,47,000 shares", context: "Official 13 August 5:00 p.m. snapshot: 7,000 QIB, 33,66,000 NII and 38,74,000 retail bids. Derived demand is 2.33× gross or 2.45× net offer; category offered-share fields were blank." },
   ],
   strengths: [
@@ -1556,6 +1559,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The projected working-capital gap rises from ₹19.17 crore in FY26 to ₹27.56 crore in FY27 and ₹33.60 crore in FY28. IPO proceeds fund only part of this requirement; the balance depends on internal accruals and continuing borrowings.",
     "No machinery order or definitive vendor agreement was in place for the ₹14.72 crore capex programme, and quotations may expire. Available cutting capacity is expected to rise from 6,000 to 10,000 tonnes rather than increase the 15,000-tonne headline installed capacity, so execution should be judged on bottleneck relief and incremental output.",
     "Sheela Foam has filed a civil suit alleging trademark infringement and passing off in relation to Feather Fresh. The matter remains pending, and the prospectus records ₹2.001 crore of contingent liability for a civil case.",
+    "The prospectus reports 45.73% FY26 ROCE, but the denominator predates ₹35.01 crore of net issue proceeds. If commissioning or working-capital deployment is slow, post-issue return ratios can fall even without an operating setback.",
   ],
   monitor: [
     "Production capacity, utilisation and commissioning progress for the issue-funded civil works and machinery.",
@@ -1566,11 +1570,13 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Repayment or renewal of the ₹3.52 crore unsecured demand loans, outstanding bank facilities and continuing reliance on promoter mortgages and guarantees.",
     "The FY27–FY28 working-capital plan against the prospectus assumptions of 44 inventory days, 93 receivable days and payable days falling from 82 to 75.",
     "Debt, finance costs and incremental return on capital after the expansion, rather than the pre-issue FY26 EPS multiple.",
+    "Post-issue ROCE as the ₹14.72 crore capex programme and ₹14.25 crore working-capital allocation move from cash into productive assets.",
     "The 30-year promoter-property lease through July 2055, rent escalation and security arrangements; transactions with promoter-group entities; the Feather Fresh litigation; fire incidents, insurance, environmental compliance and BSE SME liquidity.",
   ],
   valuation: [
     "At ₹130, 1,14,90,750 post-issue shares imply a market capitalisation of about ₹149.38 crore. Against FY26 PAT of ₹8.65 crore, the dilution-consistent trailing P/E is approximately 17.3×.",
     "The prospectus quotes 12.58× using pre-issue FY26 EPS of ₹10.33. That calculation does not include the 31,14,000 fresh shares; post-issue EPS is approximately ₹7.53 before any earnings from the new capital.",
+    "The issuer-reported 45.73% FY26 ROCE also uses the pre-issue capital base. The more informative comparison will be operating profit and cash flow generated after the new capital has been deployed.",
     "The prospectus compares Sham Foam with Sheela Foam and Wakefit Innovations, but both peers operate at much larger scale with different brands, channels, acquisitions and product mixes. Their multiples are context rather than direct valuation anchors.",
     "A normalized valuation should test a reversal of the FY26 margin step-up, petrochemical-cost volatility, trade-payable normalisation and the return generated on the capex and working-capital deployment.",
   ],
@@ -1723,6 +1729,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Receivables + inventory", value: "87.64% of current assets", context: "FY26 trade receivables were ₹9.38 crore and inventory ₹5.37 crore; the two balances supplied 55.73% and 31.91% of current assets." },
     { label: "FY24–FY26 inventory growth", value: "114.7%", context: "Inventory increased to ₹5.37 crore from ₹2.50 crore; the prospectus attributes the rise to raw material not fully consumed in production." },
     { label: "FY28 working-capital gap", value: "₹20.89 Cr", context: "Up from ₹13.82 crore in FY26 and an estimated ₹17.36 crore in FY27; IPO funding is ₹4.00 crore in FY27 and ₹3.50 crore in FY28." },
+    { label: "FY26 reported ROCE", value: "70.88%", context: "Up from 60.69% in FY25. It is calculated on the pre-issue capital base and will mechanically reset after the ₹22.59 crore net fresh issue." },
     { label: "BSE close-book demand", value: "31,99,200 shares", context: "Official 14 August 5:36:15 p.m. snapshot: nil QIB, 3,33,600 NII and 28,65,600 retail bids. Derived demand is 1.40× gross or 1.48× net offer; category offered-share fields were blank." },
   ],
   strengths: [
@@ -1749,6 +1756,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The prospectus records delays in depositing income tax, GST, provident fund, employee-state-insurance and other statutory dues during FY24–FY26, although it says the amounts had been deposited by the prospectus date.",
     "FY26 contingent liabilities were ₹20.61 lakh for litigation pending in various courts. Related-party transactions principally involved remuneration and loans, so post-listing balances and terms should be reconciled against audited disclosures.",
     "The central FSSAI licence was valid to 21 October 2026, but the prospectus says its address was still being updated to the current manufacturing facility. Timely amendment and renewal are important operating controls for a food business.",
+    "The prospectus records a CFO resignation in October 2025 and replacement effective January 2026, plus a company-secretary resignation in January 2025 and replacement effective February 2026. The appointments fill the positions, but the recent finance and compliance leadership turnover is a governance-continuity signal.",
   ],
   monitor: [
     "Sales by product, district and dealer; route productivity, product returns, wastage and shelf-life performance.",
@@ -1759,12 +1767,14 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Raw-material versus finished-goods inventory, expiry and write-offs, FEFO control effectiveness and whether the FY26 inventory build reverses without increasing returns or wastage.",
     "Receivable ageing, bad-debt allowances and dealer defaults, especially as receivables and inventory together represent 87.64% of current assets.",
     "Actual debt repayment, finance costs, security release and post-issue debt/equity.",
+    "Continuity and quality of financial reporting under the recently appointed CFO and company secretary, including statutory-payment discipline and timely BSE disclosures.",
     "FSSAI address amendment and renewal, ISO 22000 and HACCP validity, food-safety compliance and recalls.",
     "Statutory-payment timeliness, contingent litigation, related-party remuneration and loans, and BSE SME liquidity.",
   ],
   valuation: [
     "The prospectus confirms 70,78,400 post-issue shares. At ₹115, this implies approximately ₹81.40 crore market capitalisation and about 15.7× FY26 PAT of ₹5.20 crore.",
     "The prospectus also presents a 10.61× P/E from ₹10.84 FY26 EPS, but that EPS uses pre-issue weighted shares. Market capitalisation divided by FY26 profit is the dilution-consistent historical comparison.",
+    "The 70.88% FY26 reported ROCE is also a pre-issue measure. Post-issue returns should be recalculated after the debt repayment, machinery installation and incremental working-capital cycle are visible in audited accounts.",
     "Mrs. Bectors and other listed bakery or packaged-food businesses operate at much larger scale with broader brands, institutional channels and geography. Their multiples are not directly transferable to a regional SME bakery.",
     "The valuation case should be tested on post-wastage cash margins and return on the new machinery after working capital, not revenue growth or factory capacity alone.",
   ],
