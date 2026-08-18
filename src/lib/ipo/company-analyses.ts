@@ -496,7 +496,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE Milky Mist official quote header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?Debtflag=&scripcode=544868&seriesid=", kind: "Primary" },
   ],
 }, {
-  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Listing scheduled 19 August 2026; issue price ₹285", analysisAsOf: "18 August 2026",
+  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Listing scheduled 19 August 2026; issue price ₹285", analysisAsOf: "19 August 2026",
   summary: "Behari Lal Engineering manufactures metal rolls, engineering castings, alloy-steel products and forged components. The final RHP shows FY26 revenue of ₹534.03 crore, EBITDA of ₹101.33 crore and PAT of ₹64.64 crore, but cash conversion weakened as inventory and receivables absorbed funds. The analysis therefore turns on whether higher-value product margins survive the steel cycle and whether a fully undeployed ₹63.04 crore expansion earns adequate returns.",
   business: [
     "The company manufactures metal rolls used in rolling mills, engineering castings, alloy-steel rounds and flats, forging ingots, shafts and blocks. Its customers operate across steel and other capital-intensive industries.",
@@ -504,7 +504,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Operations are centered in Punjab and are exposed to electricity, scrap and alloy input costs. Selling prices and raw-material pass-through can move with the steel cycle and customer contracts.",
     "Repeat customers generated 84.69% of FY26 revenue, while the top ten customers generated 38.00%. This supports relationship continuity but does not remove order risk because customers are not tied in by long-term contracts.",
   ],
-  issueNote: "The final RHP and official price advertisement confirm a ₹271–₹285 band, ₹93 crore rupee-sized fresh issue and 73.20 lakh-share OFS. At the ₹285 issue price the OFS is ₹208.62 crore and the total offer approximately ₹301.62 crore. BSE notice 20260818-37 records 17 August allotment and confirms B-group listing from 19 August through a special pre-open session. The notice identifies 4,23,02,482 post-issue shares, scrip 544870 / BLEL, ISIN INE1EEM01017, the ₹285 issue price and a one-share secondary-market lot. The first trading outcome was not yet available at this 18 August checkpoint.",
+  issueNote: "The final RHP and official price advertisement confirm a ₹271–₹285 band, ₹93 crore rupee-sized fresh issue and 73.20 lakh-share OFS. At the ₹285 issue price the OFS is ₹208.62 crore and the total offer approximately ₹301.62 crore. BSE notice 20260818-37 records 17 August allotment and confirms B-group listing from 19 August through a special pre-open session. The notice identifies 4,23,02,482 post-issue shares, scrip 544870 / BLEL, ISIN INE1EEM01017, the ₹285 issue price and a one-share secondary-market lot. The final post-issue count reconciles to 32,63,157 fresh shares over the 3,90,39,325-share pre-offer capital. The filed DRHP identifies five sellers—Rajesh Garg, Lovlish Garg, Yogita Garg, Dinesh Kumar Garg HUF and SG Tech Engineering—and 88.51% pre-offer promoter/promoter-group ownership. The lead manager's final prospectus link was rejecting document requests at this checkpoint, so the final seller-by-seller 73.20-lakh allocation is not inferred. Applying only the filed seller caps to the confirmed final OFS bounds promoter/promoter-group ownership at approximately 69.57%–70.84% after the offer, pending the accessible final split. The first trading outcome was not yet available at this early-19-August checkpoint.",
   issue: { open: "12 August 2026", close: "14 August 2026", listing: "19 August 2026 on BSE", priceBand: "₹271–₹285; issue price ₹285", lotSize: 52, totalCr: 301.62, freshCr: 93, ofsCr: 208.62, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Equipment, machinery and associated civil work at Manufacturing Facility 1", amount: "₹19.589 crore" },
@@ -533,6 +533,10 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Top-ten supplier share", value: "38.39%", context: "FY26 procurement from the top ten suppliers was ₹176.70 crore; the company has no long-term raw-material contracts." },
     { label: "May 2026 order book", value: "₹178.57 crore", context: "Approximately 33.4% of FY26 revenue and based on cancellable or delayable purchase orders rather than long-term contracts." },
     { label: "FY26 capacity utilisation", value: "87.71%", context: "SMS/foundry utilisation was 94.47%, while rolling-mill utilisation was 82.02%." },
+    { label: "Pre-offer promoter/group holding", value: "88.51%", context: "The filed capital table shows 3,45,53,485 shares held by promoters and promoter-group members out of 3,90,39,325 pre-offer shares." },
+    { label: "Fresh-share dilution", value: "7.71% of post capital", context: "The final BSE count of 4,23,02,482 shares less 3,90,39,325 pre-offer shares reconciles to 32,63,157 new shares." },
+    { label: "Post-offer promoter/group range", value: "69.57%–70.84%", context: "A bounded calculation from the confirmed 73.20-lakh OFS and filed seller caps; the final seller-by-seller allocation remains unavailable from the rejecting prospectus host." },
+    { label: "Filed seller WACA range", value: "₹1.12–₹89.65", context: "DRHP acquisition costs range from ₹1.12 for Rajesh Garg to ₹89.65 for SG Tech Engineering, versus the ₹285 issue price; final allocated sale counts are not assumed." },
     { label: "BSE listing", value: "19 August 2026", context: "BSE notice 20260818-37 confirms scrip 544870 / BLEL, ₹285 issue price and a one-share secondary-market lot." },
   ],
   strengths: [
@@ -555,6 +559,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The company remains modest in scale relative to several listed engineering and casting peers.",
     "Product defects, rejection, metallurgical inconsistency or delayed customer approvals can create warranty, rework and reputation costs.",
     "The OFS is about 69% of the cap-price offer, so only ₹93 crore of the approximately ₹301.62 crore issue is primary capital.",
+    "The filed capital table shows 88.51% pre-offer promoter and promoter-group ownership. The confirmed final OFS is smaller than the DRHP maximum, but the lead manager's final prospectus file was rejecting retrieval at this checkpoint; the exact seller-level reduction and resulting post-offer holding should therefore be verified rather than proportionally assumed.",
   ],
   monitor: [
     "Revenue, EBITDA per tonne and margin by product category, particularly metal rolls and specialty alloy steel.",
@@ -564,7 +569,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Ordering, commissioning and utilisation of the ₹63.04 crore programme, including the 15,000-tonne Facility 2 addition and product-mix change at Facility 1.",
     "Order-book conversion, repeat-customer contribution, cancellations and customer additions outside the existing base.",
     "Top-supplier dependence, inventory ageing, disputed GST and TDS matters, contingent liabilities and statutory-payment timeliness.",
-    "First-day price discovery, delivery and liquidity after the 19 August special pre-open session; post-issue promoter holding, related-party transactions and fresh-proceeds deployment.",
+    "First-day price discovery, delivery and liquidity after the 19 August special pre-open session; the final seller-by-seller OFS allocation, exact post-issue promoter holding, related-party transactions and fresh-proceeds deployment.",
   ],
   valuation: [
     "At the confirmed ₹285 issue price, BSE's 4,23,02,482 post-issue shares imply a market capitalisation of about ₹1,205.62 crore and a dilution-consistent FY26 P/E near 18.65×.",
@@ -575,6 +580,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   sources: [
     { label: "SEBI corrigendum to Behari Lal Engineering DRHP", href: "https://www.sebi.gov.in/filings/public-issues/jul-2026/behari-lal-engineering-limited-corrigendum-to-drhp_102871.html", kind: "Primary" },
     { label: "Emkay final-offer document page: Behari Lal Engineering", href: "https://www.emkayglobal.com/offer-documents/behari-lal-engineering-limited-offer-document.aspx", kind: "Primary" },
+    { label: "Emkay Behari Lal final prospectus", href: "https://reports.emkayglobal.com/downloads/Behari%20Lal%20Engineering%20Limited%20-%20Prospectus.pdf", kind: "Primary" },
     { label: "Behari Lal Engineering final RHP", href: "https://www.beharilalengineering.com/assets/img/annual/RHP.pdf", kind: "Primary" },
     { label: "Behari Lal Engineering official price-band advertisement", href: "https://www.beharilalengineering.com/assets/img/annual/BEHARI-LAL_Price-Band_upload.pdf", kind: "Primary" },
     { label: "Behari Lal Engineering issuer IPO disclosures", href: "https://www.beharilalengineering.com/ipo.php", kind: "Primary" },
@@ -585,7 +591,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "CRISIL Ratings rationale, December 2025", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/BehariLalEngineeringLimited_December%2031_%202025_RR_373525.html", kind: "Secondary" },
   ],
 }, {
-  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Listing scheduled 19 August 2026; issue price ₹97", analysisAsOf: "18 August 2026",
+  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Listing scheduled 19 August 2026; issue price ₹97", analysisAsOf: "19 August 2026",
   summary: "Shiprocket is a technology-led e-commerce enablement platform spanning domestic shipping, fulfilment, returns, cross-border logistics, checkout and merchant services. It processed 202.08 million transactions for 214,769 active merchants in FY26 and operating cash flow turned positive, but statutory EBITDA and PAT remained negative. Carrier concentration, emerging-business losses, acquisition goodwill, audit-trail controls and the bridge from adjusted to reported profitability are the central diligence questions.",
   business: [
     "The core business aggregates third-party logistics capacity and provides shipping, order management, returns and related software to online merchants. The platform is asset-light relative to an owned delivery network, but service quality and unit economics remain dependent on courier partners.",
@@ -595,7 +601,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The core platform served 69.58 million end consumers in FY26, including 40.20 million repeat consumers. The repeat rate increased to 57.78% from 46.79% in FY24, an issuer-defined engagement signal that still needs to translate into merchant retention and reported profitability.",
     "Merchant revenue is diversified: the largest merchant generated 2.83% of FY26 revenue and the top 20 generated 17.65%. Operational supply is more concentrated, with the top five of 42 active couriers handling 84.50% of shipments.",
   ],
-  issueNote: "The final prospectus dated 14 August fixes the offer price at ₹97 and confirms 16,67,61,566 shares: 9,12,99,203 fresh shares aggregating to ₹885.50 crore and 7,54,62,363 OFS shares aggregating to ₹731.98 crore. A 1,13,636-share employee reservation carried a ₹9 discount. BSE notice 20260818-36 records 17 August allotment and confirms B-group listing from 19 August through a special pre-open session. The notice identifies 72,75,77,587 post-issue shares, scrip 544871 / SHIPROCKET, ISIN INE0FOO01011, the ₹97 issue price and a one-share secondary-market lot. The first trading outcome was not yet available at this 18 August checkpoint.",
+  issueNote: "The final prospectus dated 14 August fixes the offer price at ₹97 and confirms 16,67,61,566 shares: 9,12,99,203 fresh shares aggregating to ₹885.50 crore and 7,54,62,363 OFS shares aggregating to ₹731.98 crore. A 1,13,636-share employee reservation carried a ₹9 discount. The OFS has ten sellers. LR India Fund I sells 2,80,10,066 shares; Tribe Capital III 1,23,71,134; MCP3 SPV 57,24,742; Moore Strategic Ventures 52,94,198; Agility International 21,79,870; 500 Startups III 16,80,322; AFOS 55,62,858; Saahil Goel and Gautam Kapoor 62,88,659 each; and Vishesh Khurana 20,61,855. LR India, Moore, Agility, 500 Startups and AFOS fully exit; MCP3, Tribe and the three individual sellers retain shares. BSE notice 20260818-36 records 17 August allotment and confirms B-group listing from 19 August through a special pre-open session. The notice identifies 72,75,77,587 post-issue shares, scrip 544871 / SHIPROCKET, ISIN INE0FOO01011, the ₹97 issue price and a one-share secondary-market lot. The first trading outcome was not yet available at this early-19-August checkpoint.",
   issue: { open: "12 August 2026", close: "14 August 2026", listing: "19 August 2026 on BSE", priceBand: "₹92–₹97; issue price ₹97", lotSize: 154, totalCr: 1617.48, freshCr: 885.5, ofsCr: 731.98, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in platform growth", amount: "₹365.60 crore" },
@@ -623,6 +629,11 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Top-20 merchant share", value: "17.65%", context: "Merchant revenue is much less concentrated than logistics supply; the largest merchant contributed 2.83%." },
     { label: "FY26 cash-conversion cycle", value: "−10.34 days", context: "Issuer-defined DSO less DPO; the measure improved cash timing but deteriorated from −29.22 days in FY25." },
     { label: "Merchant compensation paid", value: "₹53.11 crore", context: "For lost, damaged or stolen shipments and proof-of-delivery disputes; the issuer says it recovers these amounts from partners in full." },
+    { label: "Fresh-share dilution", value: "12.55% of post capital", context: "9,12,99,203 new shares within BSE's confirmed 72,75,77,587-share post-offer capital." },
+    { label: "OFS / post-offer capital", value: "10.37%", context: "The 7,54,62,363-share secondary sale is distinct from the 12.55% fresh-share dilution; the full offer is 22.92% of post-offer capital." },
+    { label: "Full investor exits", value: "5 of 10 sellers", context: "LR India, Moore Strategic Ventures, Agility International, 500 Startups and AFOS sell all 4,27,27,314 shares they held, equal to 56.62% of the OFS." },
+    { label: "Individual sellers retained", value: "7.33% combined", context: "After the OFS, Saahil Goel retains 2,45,31,697 shares, Gautam Kapoor 2,45,31,431 and Vishesh Khurana 42,39,395." },
+    { label: "Seller WACA range", value: "₹0.27–₹163.14", context: "At the ₹97 issue price, LR India (₹133.94), Moore (₹143.82) and AFOS (₹163.14) sell below disclosed WACA before transaction costs." },
     { label: "BSE listing", value: "19 August 2026", context: "BSE notice 20260818-36 confirms scrip 544871 / SHIPROCKET, ₹97 issue price and a one-share secondary-market lot." },
   ],
   strengths: [
@@ -645,6 +656,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "₹111.96 crore of the ₹184.74 crore cash balance was collected on behalf of customers and remained payable. That portion should not be treated as unrestricted operating liquidity when assessing the balance sheet.",
     "Goodwill impairment testing uses five-year management forecasts, a 5% terminal growth rate and pre-tax discount rates of 16.41%–18.25%. The assumptions are consequential because goodwill was ₹915.32 crore and earlier acquisition plans already required large write-downs.",
     "The OFS represents about 45% of the total issue, while approximately 35% of the fresh issue is allocated to general corporate purposes.",
+    "Shiprocket has no identifiable promoter. Five institutional sellers fully exit and the three individual sellers reduce their combined holding from 10.68% of pre-offer capital to 7.33% of post-offer capital; the dispersed ownership and continuing ESOP overhang increase the importance of board independence and capital-allocation discipline.",
   ],
   monitor: [
     "Reported EBITDA and operating cash flow, separately from company-defined adjusted EBITDA.",
@@ -660,6 +672,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Closure of FY26 audit-trail control gaps and any auditor observations on database-level logging after listing.",
     "Merchant compensation, logistics-partner recoveries, proof-of-delivery disputes and courier concentration by volume.",
     "First-day price discovery, delivery and liquidity after the 19 August special pre-open session.",
+    "Post-listing ownership of MCP3, Tribe, Saahil Goel, Gautam Kapoor and Vishesh Khurana; employee-option exercises, further institutional exits and board accountability in a no-identifiable-promoter structure.",
   ],
   valuation: [
     "A P/E multiple is not meaningful because FY26 PAT and EPS were negative. EV/EBITDA is also not meaningful on reported FY26 EBITDA.",
@@ -2036,7 +2049,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Kotak Neo Pramodini business and peer summary", href: "https://www.kotakneo.com/ipo/pramodini-medicare-ipo/", kind: "Secondary" },
   ],
 }, {
-  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue closed; NSE past-issues record added, final price and listing unavailable", analysisAsOf: "18 August 2026",
+  slug: "credent-connect-n-care-ipo", company: "Credent Connect N Care", market: "SME", sector: "Healthcare logistics, workforce and diagnostic support services", status: "Issue closed; NSE still shows final price and listing as unavailable", analysisAsOf: "19 August 2026",
   summary: "Credent is a B2B healthcare-operations provider combining temperature-sensitive diagnostic-sample logistics, workforce services, technology and an acquired diagnostics subsidiary. FY26 consolidated revenue reached ₹214.16 crore and PAT ₹18.45 crore, but operating cash flow was negative ₹6.62 crore while receivables and borrowings rose. The core analysis therefore turns on acquisition quality, customer retention, sample-chain execution and whether issue-funded working capital converts accounting growth into cash.",
   business: [
     "The group provides B2B healthcare logistics, including transportation of diagnostic samples, home collection and related field services, to laboratories, IVD and pharmaceutical companies, hospitals, clinics and other institutions.",
@@ -2048,7 +2061,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The standalone parent reported 3,515 employees at FY26 and 19.16% attrition, compared with 18.30% in FY25 and 29.49% in FY24. Workforce retention is operationally important because collection, transport and diagnostic-support services depend on trained field personnel.",
     "On a consolidated operating view the RHP reports 6,338 people: 4,052 on payroll and 2,286 contract staff. Healthcare services generated 43.04% of FY26 revenue, operations and supply-chain management 27.67%, logistics 25.26% and other services 4.03%.",
   ],
-  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP sets the minimum individual bid at two 600-share lots, or 1,200 shares and ₹2,26,800 at the cap. NSE's feed rechecked at 8:59 p.m. IST after the scheduled close still recorded 50,74,31,400 bids against the 35,64,000-share post-anchor public pool, or 142.38×. That remains a scheduled-close snapshot rather than final reconciled or category-wise subscription. NSE moved Credent into its past public issues table on 18 August, but the approximately 11:40 p.m. IST recheck still showed dashes for issue price and listing date, so the final price, allotment basis and listing remain unavailable. The RHP prints 1,87,86,900 post-issue shares, but its disclosed 1,32,54,900 pre-issue shares plus 49,68,000 fresh shares reconcile to 1,82,22,900, a 5,64,000-share difference. Valuation below uses the arithmetically reconciled count pending the final prospectus and allotment notice. The issuer download labelled 'Prospectus' is a one-page 8 August board resolution approving the RHP rather than a final prospectus.",
+  issueNote: "The issuer-hosted RHP dated 8 August 2026 confirms an entirely fresh issue of up to 49,68,000 shares, including 2,52,000 market-maker shares and a 47,16,000-share net issue, with bidding from 13–17 August. At the advertised ₹179–₹189 band, the full fresh issue is approximately ₹88.93–₹93.90 crore; the frequently reported ₹89.13 crore figure is only the net issue at the cap. The RHP sets the minimum individual bid at two 600-share lots, or 1,200 shares and ₹2,26,800 at the cap. NSE's feed rechecked at 8:59 p.m. IST after the scheduled close recorded 50,74,31,400 bids against the 35,64,000-share post-anchor public pool, or 142.38×. That remains a scheduled-close snapshot rather than final reconciled or category-wise subscription. NSE moved Credent into its past public issues table on 18 August; an early-19-August recheck still showed dashes for issue price and listing date. The RHP prints 1,87,86,900 post-issue shares, but its disclosed 1,32,54,900 pre-issue shares plus 49,68,000 fresh shares reconcile to 1,82,22,900, a 5,64,000-share difference. Valuation below uses the arithmetically reconciled count pending the final prospectus and allotment notice. The issuer investor page now lists a file as 'Prospectus', but the file remains a single-page 8 August board resolution approving the RHP and supplies no final issue price or capital reconciliation.",
   issue: { open: "13 August 2026", close: "17 August 2026", listing: "Scheduled 20 August 2026; confirm in final NSE notice", priceBand: "₹179–₹189", lotSize: 1200, totalCr: 93.90, freshCr: 93.90, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in Credent Healthcare for working capital", amount: "₹26.80 crore" },
@@ -2073,7 +2086,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "0.50×", context: "Borrowings rose to ₹21.95 crore from ₹7.41 crore at FY25." },
     { label: "FY26 operating cash flow", value: "-₹6.62 crore", context: "Negative despite ₹18.45 crore PAT as receivables and other working-capital balances absorbed cash." },
     { label: "NSE scheduled-close snapshot", value: "142.38×", context: "50,74,31,400 shares bid against a 35,64,000-share post-anchor public pool at the 8:59 p.m. IST 17 August recheck. This predates final reconciliation and is not category-wise demand." },
-    { label: "NSE exchange transition", value: "Past issues; price/listing unavailable", context: "NSE's official past public issues table still showed dashes for issue price and listing date at the approximately 11:40 p.m. IST 18 August recheck." },
+    { label: "NSE exchange transition", value: "Past issues; price/listing unavailable", context: "NSE's official past public issues table still showed dashes for issue price and listing date at the early-19-August recheck." },
     { label: "Implied anchor allocation", value: "11,52,000 shares", context: "Derived as the 47,16,000-share net issue less NSE's 35,64,000-share post-anchor public pool; approximately ₹21.77 crore at the cap, pending the final prospectus and allotment notices." },
     { label: "FY26 healthcare share", value: "43.04%", context: "Healthcare services contributed ₹92.18 crore after three subsidiaries entered the group perimeter during FY26." },
     { label: "Combined working-capital allocation", value: "₹63.80 crore", context: "₹26.80 crore is routed to Credent Healthcare and ₹37.00 crore to the parent across FY27 and FY28." },
@@ -2121,6 +2134,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "At 30 June 2026, ₹10.91 crore of unsecured loans was repayable on demand and represented 47.42% of total indebtedness. The FY26 loan schedule shows material interest-free promoter and director funding, so a recall, repayment or refinancing requirement could compete with the working-capital and debt-repayment objects of the issue.",
     "The FY26 current ratio improved to 2.06× from 1.57×, but the RHP explicitly attributes the change to higher receivables. The headline liquidity ratio therefore does not offset the negative operating cash flow, unbilled revenue and ageing concerns.",
     "The final RHP contains a material capital-table arithmetic conflict: 1,32,54,900 disclosed pre-issue shares plus the 49,68,000-share fresh issue equals 1,82,22,900, not the printed 1,87,86,900 post-issue total. The 5,64,000-share difference affects market capitalisation, diluted EPS and every post-issue return ratio until an exchange filing resolves it.",
+    "Although the issuer investor page labels a download as 'Prospectus', the linked single-page file is the 8 August board resolution that approved the RHP. It does not resolve price, allotment or the share-count conflict and should not be treated as the final prospectus.",
     "Working-capital facilities are secured by book debts or current assets and, for some lenders, promoter personal guarantees, two residential properties and a corporate guarantee from the listed issuer for its healthcare subsidiary. Fresh capital may reduce borrowing pressure, but release of these securities was not committed in the RHP.",
     "The promoter family has roles across group entities. Opportunity allocation, service contracts, acquisitions, remuneration, guarantees and related-party balances deserve continued oversight.",
     "NSE Emerge shares can have large minimum applications, limited liquidity, market-maker dependence and wide bid-ask spreads.",
@@ -2155,6 +2169,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Credent Connect N Care 8 August 2026 RHP", href: "https://c3logistics.co.in/Downloads/Offer%20Document/RHP_CredentConnectNCareLimited.pdf", kind: "Primary" },
     { label: "Credent Connect N Care March 2026 DRHP", href: "https://invtrade.choiceindia.com/IPO/IPOReport/INE1KPX01025-ipo-report.pdf", kind: "Primary" },
     { label: "Credent investor-relations and offer documents", href: "https://c3logistics.co.in/investor", kind: "Primary" },
+    { label: "Issuer file labelled Prospectus (single-page RHP approval resolution)", href: "https://c3logistics.co.in/Downloads/Offer%20Document/Prospectus.pdf", kind: "Primary" },
     { label: "NSE public-offer documents", href: "https://www.nseindia.com/static/products-services/public-offer-documents", kind: "Primary" },
     { label: "NSE current IPO issue feed", href: "https://www.nseindia.com/api/ipo-current-issue", kind: "Primary" },
     { label: "NSE past public issues table", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
