@@ -390,7 +390,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Infomerics rating rationale, March 2026", href: "https://infomericstorage.blob.core.windows.net/uploads/pr_Technocraft_Ventures_19mar26_1e225b0d2e.pdf", kind: "Secondary" },
   ],
 }, {
-  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "Listed 18 August 2026; ₹181.45 at 10:06 a.m. IST", analysisAsOf: "18 August 2026",
+  slug: "milky-mist-dairy-food-ipo", company: "Milky Mist Dairy Food", market: "Mainboard", sector: "Value-added dairy products", status: "Listed 18 August 2026; ₹181.45 end-of-session value", analysisAsOf: "18 August 2026",
   summary: "Milky Mist is a value-added dairy company built around paneer, curd, cheese, ice cream and other packaged products rather than commodity liquid milk. FY26 brought faster growth, a higher 4.0% PAT margin and positive operating cash flow, but borrowings still rose to ₹1,671.85 crore. The final prospectus also shows lower direct-farmer sourcing, uneven product-level utilisation, receivables growing faster than revenue, a ₹229.01 crore contingent-liability base and audit-control observations that make procurement, capex execution and governance central to the analysis.",
   business: [
     "Milky Mist procures raw milk and converts it into value-added products including paneer, curd, cheese, butter, ghee, ice cream, cream and traditional dairy foods. Avoiding liquid-milk distribution supports a differentiated mix but does not remove raw-milk price and seasonality risk.",
@@ -399,7 +399,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "At FY26 the network included 4,001 distributors, more than 3.75 lakh retail touchpoints and 57 C&F depots across 15 states. Southern India still generated 69.23% of revenue, though that share declined from 73.68% in FY24.",
     "Paneer, cheese and curd generated 59.05% of FY26 revenue. Ice cream and yoghurt have grown faster, but the three established categories still determine a majority of product economics and milk balancing.",
   ],
-  issueNote: "The final prospectus dated 13 August fixes the offer price at ₹140 and confirms 11,09,43,192 shares: 10,20,14,622 fresh shares aggregating to ₹1,428 crore and 89,28,570 promoter OFS shares aggregating to ₹125 crore. The offer followed a ₹357 crore pre-IPO placement that reduced the original fresh-issue size. BSE notice 20260817-39 confirms 18 August B-group trading through a special pre-open session and records 14 August allotment, 76,98,43,411 post-issue shares, scrip 544868 / MILKYMIST, ISIN INE00IT01020, a ₹140 issue price and a one-share secondary-market lot. BSE's official quote header records a ₹165 open. At the exchange's 10:06 a.m. IST snapshot, the high and last traded price were ₹181.45 and the low remained ₹165; the last price was ₹41.45 or 29.61% above the issue price. This is an intraday observation, not the session close or a recommendation.",
+  issueNote: "The final prospectus dated 13 August fixes the offer price at ₹140 and confirms 11,09,43,192 shares: 10,20,14,622 fresh shares aggregating to ₹1,428 crore and 89,28,570 promoter OFS shares aggregating to ₹125 crore. The offer followed a ₹357 crore pre-IPO placement that reduced the original fresh-issue size. BSE notice 20260817-39 confirms 18 August B-group trading through a special pre-open session and records 14 August allotment, 76,98,43,411 post-issue shares, scrip 544868 / MILKYMIST, ISIN INE00IT01020, a ₹140 issue price and a one-share secondary-market lot. BSE's official 4:00 p.m. quote header records a ₹165 open and low and a ₹181.45 high and end-of-session value. The ₹181.45 value was ₹41.45, or 29.61%, above the issue price. This dated first-day market outcome is context, not a recommendation.",
   issue: { open: "11 August 2026", close: "13 August 2026", listing: "Listed 18 August 2026 on BSE", priceBand: "₹133–₹140; issue price ₹140", lotSize: 107, totalCr: 1553, freshCr: 1428, ofsCr: 125, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹496.86 crore" },
@@ -429,8 +429,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Contingent liabilities", value: "₹229.01 crore", context: "Includes ₹194.87 crore of EPCG duty obligations and ₹25.47 crore of disputed statutory liabilities at FY26." },
     { label: "Capex orders placed", value: "17.33%", context: "₹89.75 crore of orders had been placed against the expansion estimate; ₹48.70 crore had been paid by 30 June 2026." },
     { label: "BSE trading commencement", value: "18 August 2026", context: "BSE notice 20260817-39 confirms B-group trading through a special pre-open session under scrip 544868 / MILKYMIST with a one-share market lot." },
-    { label: "BSE special pre-open price", value: "₹165 / +17.86%", context: "BSE's official quote header showed ₹165 as the open, high, low and last price at 9:38 a.m. IST on 18 August versus the ₹140 issue price. This is an opening price, not the session close." },
-    { label: "BSE intraday listing snapshot", value: "₹181.45 / +29.61%", context: "At 10:06 a.m. IST on 18 August, BSE showed a ₹165 open and low, ₹181.45 high and ₹181.45 last price versus the ₹140 issue price. The reading is intraday and can change before the close." },
+    { label: "BSE first-day open", value: "₹165 / +17.86%", context: "BSE's official 18 August quote header records a ₹165 opening price versus the ₹140 issue price." },
+    { label: "BSE first-day end value", value: "₹181.45 / +29.61%", context: "BSE's 4:00 p.m. header records a ₹165 low, ₹181.45 high and ₹181.45 end-of-session value versus the ₹140 issue price." },
   ],
   strengths: [
     "Revenue grew 31.3% annually from FY24 to FY26, supported by a broad value-added product portfolio.",
@@ -454,7 +454,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Contingent liabilities were ₹229.01 crore, including ₹194.87 crore of EPCG duty obligations and disputed GST and other liabilities. The export obligations must be completed within licence timelines or could convert into cash outflows.",
   ],
   monitor: [
-    "First-day open, intraday range, volume and end-of-session value after the 18 August special pre-open session.",
+    "Post-listing price discovery, delivery, liquidity and spreads after the ₹181.45 first-day end-of-session value.",
     "Actual debt repayment, interest savings and post-issue leverage.", "Perundurai expansion cost, commissioning schedule and utilisation by product category.",
     "Milk procurement price, direct-farmer versus third-party sourcing and selling-price realization.", "Non-south revenue, distributor productivity and cold-chain economics.",
     "Operating cash flow after capex, inventory days and receivable days.", "Quality incidents, product recalls, farmer retention and geographic diversification of milk sourcing.",
@@ -480,7 +480,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE Milky Mist official quote header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?Debtflag=&scripcode=544868&seriesid=", kind: "Primary" },
   ],
 }, {
-  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Issue closed; NSE still shows final price and listing as unavailable", analysisAsOf: "17 August 2026",
+  slug: "behari-lal-engineering-ipo", company: "Behari Lal Engineering", market: "Mainboard", sector: "Specialty steel, metal rolls and engineering castings", status: "Listing scheduled 19 August 2026; issue price ₹285", analysisAsOf: "18 August 2026",
   summary: "Behari Lal Engineering manufactures metal rolls, engineering castings, alloy-steel products and forged components. The final RHP shows FY26 revenue of ₹534.03 crore, EBITDA of ₹101.33 crore and PAT of ₹64.64 crore, but cash conversion weakened as inventory and receivables absorbed funds. The analysis therefore turns on whether higher-value product margins survive the steel cycle and whether a fully undeployed ₹63.04 crore expansion earns adequate returns.",
   business: [
     "The company manufactures metal rolls used in rolling mills, engineering castings, alloy-steel rounds and flats, forging ingots, shafts and blocks. Its customers operate across steel and other capital-intensive industries.",
@@ -488,8 +488,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Operations are centered in Punjab and are exposed to electricity, scrap and alloy input costs. Selling prices and raw-material pass-through can move with the steel cycle and customer contracts.",
     "Repeat customers generated 84.69% of FY26 revenue, while the top ten customers generated 38.00%. This supports relationship continuity but does not remove order risk because customers are not tied in by long-term contracts.",
   ],
-  issueNote: "The final RHP and official price advertisement confirm a ₹271–₹285 band, ₹93 crore rupee-sized fresh issue and 73.20 lakh-share OFS. At the cap the OFS is ₹208.62 crore and the total offer approximately ₹301.62 crore. Bidding closed on 14 August. NSE's past-issues table now lists Behari Lal, but its issue-price and listing-date fields remained blank at the 20:00 IST recheck on 17 August; the final prospectus, discovered price, allotment basis and listing approval therefore remain unavailable.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026; NSE listing field still unavailable", priceBand: "₹271–₹285", lotSize: 52, totalCr: 301.62, freshCr: 93, ofsCr: 208.62, faceValue: "₹10" },
+  issueNote: "The final RHP and official price advertisement confirm a ₹271–₹285 band, ₹93 crore rupee-sized fresh issue and 73.20 lakh-share OFS. At the ₹285 issue price the OFS is ₹208.62 crore and the total offer approximately ₹301.62 crore. BSE notice 20260818-37 records 17 August allotment and confirms B-group listing from 19 August through a special pre-open session. The notice identifies 4,23,02,482 post-issue shares, scrip 544870 / BLEL, ISIN INE1EEM01017, the ₹285 issue price and a one-share secondary-market lot. The first trading outcome was not yet available at this 18 August checkpoint.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "19 August 2026 on BSE", priceBand: "₹271–₹285; issue price ₹285", lotSize: 52, totalCr: 301.62, freshCr: 93, ofsCr: 208.62, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Equipment, machinery and associated civil work at Manufacturing Facility 1", amount: "₹19.589 crore" },
     { purpose: "Rooftop solar panels at Manufacturing Facility 1", amount: "₹3.40 crore" },
@@ -517,6 +517,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Top-ten supplier share", value: "38.39%", context: "FY26 procurement from the top ten suppliers was ₹176.70 crore; the company has no long-term raw-material contracts." },
     { label: "May 2026 order book", value: "₹178.57 crore", context: "Approximately 33.4% of FY26 revenue and based on cancellable or delayable purchase orders rather than long-term contracts." },
     { label: "FY26 capacity utilisation", value: "87.71%", context: "SMS/foundry utilisation was 94.47%, while rolling-mill utilisation was 82.02%." },
+    { label: "BSE listing", value: "19 August 2026", context: "BSE notice 20260818-37 confirms scrip 544870 / BLEL, ₹285 issue price and a one-share secondary-market lot." },
   ],
   strengths: [
     "EBITDA margin expanded from 13.67% in FY24 to 18.97% in FY26 as EBITDA per tonne and higher-value product contribution increased.",
@@ -547,10 +548,10 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Ordering, commissioning and utilisation of the ₹63.04 crore programme, including the 15,000-tonne Facility 2 addition and product-mix change at Facility 1.",
     "Order-book conversion, repeat-customer contribution, cancellations and customer additions outside the existing base.",
     "Top-supplier dependence, inventory ageing, disputed GST and TDS matters, contingent liabilities and statutory-payment timeliness.",
-    "Post-issue promoter holding, related-party transactions, final offer price and fresh-proceeds deployment.",
+    "First-day price discovery, delivery and liquidity after the 19 August special pre-open session; post-issue promoter holding, related-party transactions and fresh-proceeds deployment.",
   ],
   valuation: [
-    "At ₹285, the ₹93 crore fresh issue implies approximately 32.63 lakh new shares and 4.230 crore post-issue shares, producing an indicative market capitalisation of about ₹1,205.62 crore and a dilution-consistent FY26 P/E near 18.65×. These remain estimates until the final prospectus and allotment basis are posted.",
+    "At the confirmed ₹285 issue price, BSE's 4,23,02,482 post-issue shares imply a market capitalisation of about ₹1,205.62 crore and a dilution-consistent FY26 P/E near 18.65×.",
     "The RHP peer set spans Jayaswal Neco, AIA Engineering, Steelcast, RHI Magnesita India, Vardhman Special Steels, IFGL Refractories and Kennametal India. It reports an FY26 peer P/E range of 18.48–62.02× and 31.36× average, but scale, export exposure, product mix and capital intensity differ materially.",
     "The valuation question is whether FY26's 18.97% EBITDA margin and ₹11,495 EBITDA per tonne represent a durable product-mix shift or a favourable point in the steel and input-cost cycle, particularly as working-capital days moved higher.",
     "At the indicative cap-price market capitalisation, inventory and receivables equal roughly one-sixth of equity value. The multiple therefore depends not only on maintaining margin but on releasing cash from the 93-day conversion cycle as the new capacity ramps.",
@@ -563,10 +564,12 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Behari Lal Engineering issuer IPO disclosures", href: "https://www.beharilalengineering.com/ipo.php", kind: "Primary" },
     { label: "Behari Lal Engineering DRHP", href: "https://www.systematixgroup.in/download/Beharilal_Engg_DRHP.pdf", kind: "Primary" },
     { label: "NSE past public issues table", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
+    { label: "BSE Behari Lal listing-admission notice 20260818-9", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260818-9/20260818-9.pdf", kind: "Primary" },
+    { label: "BSE Behari Lal trading-commencement notice 20260818-37", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260818-37/20260818-37.pdf", kind: "Primary" },
     { label: "CRISIL Ratings rationale, December 2025", href: "https://www.crisilratings.com/mnt/winshare/Ratings/RatingList/RatingDocs/BehariLalEngineeringLimited_December%2031_%202025_RR_373525.html", kind: "Secondary" },
   ],
 }, {
-  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Final prospectus filed; NSE still shows listing as unavailable", analysisAsOf: "17 August 2026",
+  slug: "shiprocket-ipo", company: "Shiprocket", market: "Mainboard", sector: "E-commerce enablement and logistics technology", status: "Listing scheduled 19 August 2026; issue price ₹97", analysisAsOf: "18 August 2026",
   summary: "Shiprocket is a technology-led e-commerce enablement platform spanning domestic shipping, fulfilment, returns, cross-border logistics, checkout and merchant services. It processed 202.08 million transactions for 214,769 active merchants in FY26 and operating cash flow turned positive, but statutory EBITDA and PAT remained negative. Carrier concentration, emerging-business losses, acquisition goodwill, audit-trail controls and the bridge from adjusted to reported profitability are the central diligence questions.",
   business: [
     "The core business aggregates third-party logistics capacity and provides shipping, order management, returns and related software to online merchants. The platform is asset-light relative to an owned delivery network, but service quality and unit economics remain dependent on courier partners.",
@@ -576,8 +579,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The core platform served 69.58 million end consumers in FY26, including 40.20 million repeat consumers. The repeat rate increased to 57.78% from 46.79% in FY24, an issuer-defined engagement signal that still needs to translate into merchant retention and reported profitability.",
     "Merchant revenue is diversified: the largest merchant generated 2.83% of FY26 revenue and the top 20 generated 17.65%. Operational supply is more concentrated, with the top five of 42 active couriers handling 84.50% of shipments.",
   ],
-  issueNote: "The final prospectus dated 14 August fixes the offer price at ₹97 and confirms 16,67,61,566 shares: 9,12,99,203 fresh shares aggregating to ₹885.50 crore and 7,54,62,363 OFS shares aggregating to ₹731.98 crore. A 1,13,636-share employee reservation carried a ₹9 discount. NSE's past-issues table now lists Shiprocket but still displays a blank issue-price field and no listing date at the 20:00 IST recheck on 17 August. The prospectus remains the primary source for the ₹97 final price, while 19 August remains the expected rather than exchange-confirmed trading date.",
-  issue: { open: "12 August 2026", close: "14 August 2026", listing: "Expected 19 August 2026; NSE listing field still unavailable", priceBand: "₹92–₹97; offer price ₹97", lotSize: 154, totalCr: 1617.48, freshCr: 885.5, ofsCr: 731.98, faceValue: "₹10" },
+  issueNote: "The final prospectus dated 14 August fixes the offer price at ₹97 and confirms 16,67,61,566 shares: 9,12,99,203 fresh shares aggregating to ₹885.50 crore and 7,54,62,363 OFS shares aggregating to ₹731.98 crore. A 1,13,636-share employee reservation carried a ₹9 discount. BSE notice 20260818-36 records 17 August allotment and confirms B-group listing from 19 August through a special pre-open session. The notice identifies 72,75,77,587 post-issue shares, scrip 544871 / SHIPROCKET, ISIN INE0FOO01011, the ₹97 issue price and a one-share secondary-market lot. The first trading outcome was not yet available at this 18 August checkpoint.",
+  issue: { open: "12 August 2026", close: "14 August 2026", listing: "19 August 2026 on BSE", priceBand: "₹92–₹97; issue price ₹97", lotSize: 154, totalCr: 1617.48, freshCr: 885.5, ofsCr: 731.98, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in platform growth", amount: "₹365.60 crore" },
     { purpose: "Repayment or prepayment of borrowings, including interest", amount: "₹210 crore" },
@@ -604,6 +607,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Top-20 merchant share", value: "17.65%", context: "Merchant revenue is much less concentrated than logistics supply; the largest merchant contributed 2.83%." },
     { label: "FY26 cash-conversion cycle", value: "−10.34 days", context: "Issuer-defined DSO less DPO; the measure improved cash timing but deteriorated from −29.22 days in FY25." },
     { label: "Merchant compensation paid", value: "₹53.11 crore", context: "For lost, damaged or stolen shipments and proof-of-delivery disputes; the issuer says it recovers these amounts from partners in full." },
+    { label: "BSE listing", value: "19 August 2026", context: "BSE notice 20260818-36 confirms scrip 544871 / SHIPROCKET, ₹97 issue price and a one-share secondary-market lot." },
   ],
   strengths: [
     "Revenue from operations increased 24% in both FY25 and FY26, while contribution margin improved to 18.34% from 15.00% in FY24.",
@@ -639,6 +643,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Goodwill, intangible assets, impairment charges, share-based compensation and post-issue dilution.",
     "Closure of FY26 audit-trail control gaps and any auditor observations on database-level logging after listing.",
     "Merchant compensation, logistics-partner recoveries, proof-of-delivery disputes and courier concentration by volume.",
+    "First-day price discovery, delivery and liquidity after the 19 August special pre-open session.",
   ],
   valuation: [
     "A P/E multiple is not meaningful because FY26 PAT and EPS were negative. EV/EBITDA is also not meaningful on reported FY26 EBITDA.",
@@ -655,6 +660,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Shiprocket RHP", href: "https://www.axiscapital.co.in/public/contents/Shiprocket%20Limited%20-%20RHP%20-%20August%205%2C%202026-1785937235.pdf", kind: "Primary" },
     { label: "Shiprocket price-band advertisement", href: "https://www.axiscapital.co.in/public/contents/Shiprocket%20Limited%20-%20Pre-issue%20and%20Price%20Band%20Advertisement-1785990649.pdf", kind: "Primary" },
     { label: "NSE past public issues table", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
+    { label: "BSE Shiprocket listing-admission notice 20260818-12", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260818-12/20260818-12.pdf", kind: "Primary" },
+    { label: "BSE Shiprocket trading-commencement notice 20260818-36", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260818-36/20260818-36.pdf", kind: "Primary" },
     { label: "Zerodha Shiprocket offer summary", href: "https://zerodha.com/ipo/414198/shiprocket/", kind: "Secondary" },
     { label: "IPOPlatform restated financial report", href: "https://www.ipoplatform.com/ipo/financial-report/shiprocket-ipo/4146", kind: "Secondary" },
   ],
@@ -1569,7 +1576,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "IPOPlatform Optimystix financial report", href: "https://www.ipoplatform.com/ipo/financial-report/optimystix-entertainment-india-ipo/4410", kind: "Secondary" },
   ],
 }, {
-  slug: "sham-foam-ipo", company: "Sham Foam", market: "SME", sector: "Polyurethane foam, mattresses and home-comfort products", status: "BSE listing admission announced; trading date awaits separate notice", analysisAsOf: "17 August 2026",
+  slug: "sham-foam-ipo", company: "Sham Foam", market: "SME", sector: "Polyurethane foam, mattresses and home-comfort products", status: "Listed 18 August 2026; ₹98.80 end-of-session value", analysisAsOf: "18 August 2026",
   summary: "Sham Foam manufactures polyurethane foam, mattresses and allied comfort products from Haryana. The final prospectus replaces interim estimates with audited FY26 revenue of ₹92.32 crore, EBITDA of ₹11.00 crore, PAT of ₹8.65 crore and operating cash flow of ₹12.78 crore. The central questions are whether the FY26 margin step-up survives petrochemical-cost changes and whether ₹14.72 crore of new capex creates returns without stretching working capital or a single-site operating model.",
   business: [
     "The company manufactures, markets and distributes flexible polyurethane foam, mattresses, cushions, pillows and other home-comfort products, including products sold under its Featherfresh positioning.",
@@ -1577,8 +1584,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "PU foam generated 86.22% of FY26 revenue. Uttar Pradesh, Punjab, Haryana and Delhi together contributed about 72.9%, so product, geography and the single manufacturing site remain more concentrated than the customer base.",
     "Sham Foam was incorporated in 2020. Rajinder Kumar Jindal, Sanjeev Kumar Jindal, Monica Jindal, Deepika Jindal and Charming Fashions Private Limited collectively held the pre-issue capital; the prospectus also identifies Aggarwal Comfort Products Private Limited as a promoter-group entity pursuing a similar business.",
   ],
-  issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments; the secondary-market trading lot is 1,000 shares. BSE's official close book, timestamped 13 August at 5:00 p.m., records 72,47,000 bids: 7,000 QIB, 33,66,000 non-institutional and 38,74,000 retail. That is 2.33× the gross offer or 2.45× the net issue by calculation, but BSE left the offered or reserved category fields blank, so no category-level subscription multiple is stated. BSE notice 20260817-17 assigns scrip 544869, symbol SHAMFOAM and ISIN INE0Z9N01013 and says the shares shall be listed and admitted to dealings in due course. The circular explicitly defers the trading date and security details to a separate notice, so the prospectus's proposed 18 August date is not treated as confirmed.",
-  issue: { open: "11 August 2026", close: "13 August 2026", listing: "BSE admission announced; trading date and security details await a separate notice", priceBand: "₹130 fixed price", lotSize: 2000, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The 10 August final prospectus and BSE issue record 7881 confirm an entirely fresh fixed-price issue of 31,14,000 shares at ₹130, worth ₹40.482 crore. This includes 1,56,000 market-maker shares worth ₹2.028 crore and leaves a 29,58,000-share net public issue worth ₹38.454 crore. The minimum application is 2,000 shares, or ₹2.60 lakh, with further bids in 1,000-share increments. BSE's official close book records 72,47,000 bids, equal by calculation to 2.33× the gross offer or 2.45× the net issue; category-level multiples remain unavailable because the exchange left the offered-share fields blank. BSE notice 20260817-50 confirms 18 August MT-group listing, 14 August allotment, 1,14,90,750 post-issue shares, scrip 544869 / SHAMFOAM, ISIN INE0Z9N01013, a ₹130 issue price and 1,000-share secondary-market lot. The scrip is trade-for-trade for 10 trading days. BSE's 4:00 p.m. quote header records a ₹104 open, ₹109 high, ₹98.80 low and ₹98.80 end-of-session value, 24.00% below the issue price. This dated first-day market outcome is context, not a recommendation.",
+  issue: { open: "11 August 2026", close: "13 August 2026", listing: "Listed 18 August 2026 on BSE SME", priceBand: "₹130 fixed price", lotSize: 2000, totalCr: 40.48, freshCr: 40.48, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Civil construction, machinery and equipment at the existing manufacturing facility", amount: "Up to ₹14.72 crore; no machinery orders had been placed and no object expenditure beyond ₹0.06 crore of issue costs was deployed by 30 June" },
     { purpose: "Part-finance working-capital requirements", amount: "₹14.25 crore: ₹8.25 crore in FY27 and ₹6.00 crore in FY28" },
@@ -1611,6 +1618,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 contingent liabilities", value: "₹2.00 Cr", context: "The final prospectus records ₹2.001 crore relating to a civil case, principally the pending Feather Fresh trademark dispute." },
     { label: "FY26 reported ROCE", value: "45.73%", context: "Up from 22.56% in FY25. It is a pre-issue measure and should be re-tested after ₹35.01 crore of net fresh capital enters the business." },
     { label: "BSE close-book demand", value: "72,47,000 shares", context: "Official 13 August 5:00 p.m. snapshot: 7,000 QIB, 33,66,000 NII and 38,74,000 retail bids. Derived demand is 2.33× gross or 2.45× net offer; category offered-share fields were blank." },
+    { label: "BSE first-day open", value: "₹104 / −20.00%", context: "BSE's official 18 August quote header records a ₹104 opening price versus the ₹130 issue price." },
+    { label: "BSE first-day end value", value: "₹98.80 / −24.00%", context: "BSE's 4:00 p.m. header records a ₹109 high, ₹98.80 low and ₹98.80 end-of-session value; the scrip entered a 10-day trade-for-trade period." },
   ],
   strengths: [
     "FY26 audited revenue rose 13.8%, EBITDA more than doubled to ₹11.00 crore and PAT reached ₹8.65 crore.",
@@ -1638,7 +1647,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The prospectus reports 45.73% FY26 ROCE, but the denominator predates ₹35.01 crore of net issue proceeds. If commissioning or working-capital deployment is slow, post-issue return ratios can fall even without an operating setback.",
   ],
   monitor: [
-    "Separate BSE notice confirming the trading date, security particulars and final listing commencement for scrip 544869 / SHAMFOAM.",
+    "Post-listing price discovery, delivery, liquidity and spreads after the ₹98.80 first-day end-of-session value and during the initial trade-for-trade period.",
     "Production capacity, utilisation and commissioning progress for the issue-funded civil works and machinery.",
     "Revenue and gross-margin mix among PU foam, mattresses, branded products, institutional customers and distributors.",
     "Polyol and isocyanate prices, top-supplier concentration, import content, foreign-exchange exposure and customer price revisions.",
@@ -1666,6 +1675,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "BSE public-issue information", href: "https://www.bseindia.com/markets/PublicIssues/IPOIssues_new.aspx", kind: "Primary" },
     { label: "BSE notices and listing circulars", href: "https://www.bseindia.com/markets/MarketInfo/NoticesCirculars.aspx", kind: "Primary" },
     { label: "BSE Sham Foam listing-admission notice 20260817-17", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-17/20260817-17.pdf", kind: "Primary" },
+    { label: "BSE Sham Foam trading-commencement notice 20260817-50", href: "https://www.bseindia.com/downloads/UploadDocs/Notices/20260817-50/20260817-50.pdf", kind: "Primary" },
+    { label: "BSE Sham Foam official quote header", href: "https://api.bseindia.com/BseIndiaAPI/api/getScripHeaderData/w?Debtflag=&scripcode=544869&seriesid=", kind: "Primary" },
     { label: "IPOPlatform Sham Foam offer and financial report", href: "https://www.ipoplatform.com/ipo/financial-report/sham-foam-ipo/4592", kind: "Secondary" },
     { label: "Kotak Neo Sham Foam DRHP summary", href: "https://www.kotakneo.com/ipo/sham-foam-ipo/", kind: "Secondary" },
   ],
