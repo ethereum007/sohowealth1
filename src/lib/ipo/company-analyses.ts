@@ -11,7 +11,7 @@ export type CompanyIpoAnalysis = {
 };
 
 export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
-  slug: "ardee-industries-ipo", company: "Ardee Industries", market: "Mainboard", sector: "Secondary lead recycling and non-ferrous metals", status: "Listed 12 August 2026", analysisAsOf: "17 August 2026",
+  slug: "ardee-industries-ipo", company: "Ardee Industries", market: "Mainboard", sector: "Secondary lead recycling and non-ferrous metals", status: "Listed 12 August 2026", analysisAsOf: "18 August 2026",
   summary: "Ardee Industries processes secondary lead and lead alloys for battery and industrial customers. FY24–FY26 show fast scale-up and margin expansion, but FY26 operating cash flow was only ₹29.83 crore against ₹84.68 crore PAT as inventory days rose to 47 and other current assets absorbed cash. Customer concentration, export-led working-capital needs, commodity spreads, environmental compliance and related-party oversight remain the central analytical questions.",
   business: [
     "Ardee recycles end-of-life energy-storage products and non-ferrous scrap into refined lead and customized lead alloys. Its outputs are used primarily by battery manufacturers and other industrial customers.",
@@ -36,6 +36,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 debt/equity", value: "1.25×", context: "Improved as equity expanded, though absolute borrowings increased." }, { label: "Upper-band P/E", value: "15.96×", context: "Based on reported FY26 EPS of ₹3.32 and the ₹53 upper band." },
     { label: "FY26 operating cash/PAT", value: "35.2%", context: "₹29.83 crore operating cash flow versus ₹84.68 crore PAT; FY24 operating cash flow was negative ₹25.26 crore." },
     { label: "FY26 inventory days", value: "47 days", context: "Up from 28 days in FY25 as inventory increased to ₹116.12 crore." },
+    { label: "FY26 supplier advances", value: "₹84.58 Cr", context: "Up from ₹41.05 crore in FY25 and equal to 74.6% of other current assets; government-authority balances added another ₹22.17 crore." },
+    { label: "Receivables / loss allowance", value: "₹24.79 Cr / nil", context: "Approximately 96.9% of FY26 receivables were under six months old. The RHP reports 30–60 day general terms and distinguishes recourse from non-recourse factoring." },
+    { label: "Guarantee-linked exposure", value: "₹12.76 Cr", context: "FY26 contingent liabilities were mainly a ₹12.50 crore performance/security bank guarantee, up from ₹7.25 crore in FY25, plus a ₹0.26 crore disputed income-tax demand." },
     { label: "FY26 export revenue", value: "39.83%", context: "Up from 17.63% in FY24; the RHP links exports to longer receivable and inventory cycles." },
     { label: "Listing-day close vs issue", value: "+26.6%", context: "NSE recorded a ₹72.00 open and ₹67.12 close on 12 August versus the ₹53 issue price." },
   ],
@@ -45,14 +48,15 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   concerns: [
     "The top customer, top five and top ten customers contributed 40.64%, 81.98% and 91.61% of FY26 revenue respectively, according to RHP-derived disclosures.", "Battery and metal industries contributed 84.79% of FY26 revenue, creating end-market concentration.",
-    "FY26 borrowings were ₹182.75 crore. Debt/equity improved to 1.25× from 4.87× in FY24, but absolute debt continued to rise.", "FY26 operating cash flow was ₹29.83 crore, only 35.2% of PAT. A ₹71.17 crore inventory increase and ₹41.45 crore increase in other current assets absorbed much of the ₹136.53 crore operating profit generated before working-capital changes.",
+    "FY26 borrowings were ₹182.75 crore. Debt/equity improved to 1.25× from 4.87× in FY24, but absolute debt continued to rise.", "FY26 operating cash flow was ₹29.83 crore, only 35.2% of PAT. A ₹71.17 crore inventory increase and ₹41.45 crore increase in other current assets absorbed much of the ₹136.53 crore operating profit generated before working-capital changes. Supplier advances alone reached ₹84.58 crore, more than double FY25.",
     "The net working-capital requirement increased from ₹104.63 crore in FY24 to ₹226.19 crore in FY26. The RHP says export growth required more inventory, supplier advances and longer customer credit, which raises the execution bar for the ₹220 crore IPO allocation.",
     "The top ten raw-material suppliers supplied 38.48% of FY26 purchases, down from 53.71% in FY25. Related-party transactions nevertheless equalled 7.75% of FY26 revenue, including remuneration, loans, rent, asset purchases and goods transactions.",
     "Capacity utilisation improved to 67.15% in FY26 from 45.16% in FY25, but the comparison follows a significant capacity expansion and should be tested against normalized demand rather than a single ramp year.",
     "Lead scrap availability, commodity prices, foreign exchange, environmental compliance and customer pass-through arrangements can affect margins.", "The operating record under current promoters is limited because the acquisition and manufacturing ramp began in 2021.",
+    "Cash availability needs qualification: ₹13.94 crore of the ₹14.09 crore cash-equivalent balance sat in an EEFC account, while another ₹9.38 crore of bank balances was pledged as margin against guarantees.",
   ],
   monitor: [
-    "Whether the ₹220 crore working-capital infusion improves operating cash conversion rather than only supporting higher inventory and receivables.", "Operating cash flow relative to PAT, plus inventory and other-current-asset days after the IPO-funded expansion.", "Gross and EBITDA margins after listing, particularly if lead prices or scrap spreads normalize.",
+    "Whether the ₹220 crore working-capital infusion improves operating cash conversion rather than only supporting higher inventory, supplier advances and receivables.", "Operating cash flow relative to PAT, plus inventory, supplier advances and other-current-asset days after the IPO-funded expansion.", "Gross and EBITDA margins after listing, particularly if lead prices or scrap spreads normalize.",
     "Reduction in borrowings and finance cost after use of the fresh proceeds.", "Customer concentration: movement in the top-five and top-ten revenue shares.", "Export receivable terms, supplier-advance days and related-party transaction disclosures.", "Environmental approvals, plant utilization, accident record and compliance disclosures.",
   ],
   valuation: [
@@ -68,7 +72,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Zerodha Ardee offer summary and prospectus link", href: "https://zerodha.com/ipo/441984/ardee-industries/", kind: "Secondary" },
   ],
 }, {
-  slug: "leap-india-ipo", company: "LEAP India", market: "Mainboard", sector: "Asset pooling and supply-chain equipment", status: "Listed 14 August 2026", analysisAsOf: "17 August 2026",
+  slug: "leap-india-ipo", company: "LEAP India", market: "Mainboard", sector: "Asset pooling and supply-chain equipment", status: "Listed 14 August 2026", analysisAsOf: "18 August 2026",
   summary: "LEAP India operates a pooled network of pallets, containers and material-handling equipment for enterprise supply chains. The model benefits from recurring rental relationships and network density, but it requires heavy upfront capital, carries meaningful debt and depends on utilisation, asset life and loss-control assumptions.",
   business: [
     "LEAP owns and pools reusable supply-chain assets such as wooden and plastic pallets, foldable large containers, crates, bins and material-handling equipment. Customers rent these assets instead of purchasing and managing them directly.",
@@ -97,6 +101,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 pallet utilisation", value: "89.34%", context: "Container utilisation was 71.68% and MHE utilisation 79.79% on the RHP's rolling 12-month definitions." },
     { label: "FY26 receivables/revenue", value: "36.0%", context: "Trade receivables were ₹262.32 crore, down from 42.7% of revenue in FY25 but still material to cash conversion." },
     { label: "FY26 borrowings/equity", value: "1.01×", context: "Borrowings reached ₹1,017.73 crore before the planned ₹360 crore repayment." },
+    { label: "PPE / total assets", value: "61.7%", context: "Property, plant and equipment was ₹1,480.74 crore of ₹2,401.05 crore total assets at March 2026, making asset-life assumptions central to reported returns." },
+    { label: "FY26 lease liabilities", value: "₹133.57 Cr", context: "Lease liabilities sat alongside ₹1,017.73 crore of borrowings; right-of-use assets were ₹132.20 crore." },
+    { label: "Pooling-asset residual values", value: "15%–25%", context: "The RHP uses 25% for pallets and utility boxes and 15%–25% for foldable large containers and crates; useful lives and residual values are reviewed annually." },
     { label: "Listing-day close vs issue", value: "-8.8%", context: "NSE recorded a ₹165.90 open and ₹144.93 close on 14 August versus the ₹159 issue price." },
     { label: "Upper-band FY26 P/E", value: "106.0×", context: "RHP multiple using the ₹159 cap price and FY26 diluted EPS of ₹1.50, before fresh-issue dilution." },
   ],
@@ -111,6 +118,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Borrowings reached ₹1,017.73 crore at March 2026 and ₹1,023.20 crore by June. The planned ₹360 crore repayment reduces, but does not remove, leverage.",
     "FY26 finance cost of ₹93.65 crore and depreciation of ₹204.33 crore show why the reported EBITDA margin cannot be read as equity cash profitability.",
     "Asset theft, damage, loss, premature retirement and weaker-than-expected useful lives can reduce returns on the pooled fleet.",
+    "Depreciation depends on management-estimated useful lives and residual values. Because pooling assets dominate the balance sheet, changes in these assumptions can affect depreciation, reported profit and return metrics even before cash outcomes become visible.",
     "Customer concentration, contract renewals, receivable collection and utilisation rates can materially affect cash conversion.",
     "Top-ten customer concentration improved to 26.65% of FY26 revenue from 39.49% in FY24, but trade receivables still reached ₹262.32 crore. The RHP attributes collection delays partly to integrating CHEP India and SKAN Marine customers and their contractual terms.",
     "The ₹2,000 crore OFS represents 80.6% of the offer, so most proceeds go to selling shareholders rather than the company.",
@@ -121,7 +129,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   monitor: [
     "Net debt and finance cost after the disclosed repayment of borrowings.",
-    "Asset utilisation, additions, disposals, losses and repair expense across the pallet and container pools.",
+    "Asset utilisation, additions, disposals, losses, repair expense and any useful-life or residual-value changes across the pallet and container pools.",
     "Operating cash flow after maintenance and expansion capex; FY26 cash generation did not fully fund fleet additions.",
     "Customer concentration, contract duration and the revenue mix between pallet pooling, containers and material-handling equipment.",
     "Related-party asset procurement and post-offer ownership changes following the pre-offer transfers and OFS.",
@@ -130,7 +138,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   valuation: [
     "At ₹159, the RHP reports 106.0× FY26 diluted EPS of ₹1.50 on a pre-offer basis. Including the fresh shares, the implied post-offer market capitalisation is about ₹7,005 crore and the FY26 PAT multiple is approximately 112.4×.",
     "Peer comparison is imperfect: equipment-rental, logistics and supply-chain-service companies can have very different asset ownership, depreciation policies, leverage and contract structures.",
-    "The key valuation question is return on invested capital after maintenance capex and asset losses, not EBITDA growth in isolation. Cash generation through a full replacement cycle is the more useful test.",
+    "The key valuation question is return on invested capital after maintenance capex, lease obligations and asset losses, not EBITDA growth in isolation. Cash generation through a full replacement cycle is the more useful test, with depreciation-policy sensitivity made explicit.",
   ],
   sources: [
     { label: "SEBI filing page: LEAP India RHP", href: "https://www.sebi.gov.in/filings/public-issues/aug-2026/leap-india-limited-rhp_103182.html", kind: "Primary" },
@@ -318,7 +326,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Molbio issuer announcement: IPO filing", href: "https://www.molbiodiagnostics.com/newsroom/molbio-diagnostics-files-for-ipo-to-raise-rs-200-cr-ofs-of-1-25-cr-shares/", kind: "Primary" },
   ],
 }, {
-  slug: "technocraft-ventures-ipo", company: "Technocraft Ventures", market: "Mainboard", sector: "Water, wastewater and public-infrastructure EPC", status: "Listed 14 August 2026", analysisAsOf: "17 August 2026",
+  slug: "technocraft-ventures-ipo", company: "Technocraft Ventures", market: "Mainboard", sector: "Water, wastewater and public-infrastructure EPC", status: "Listed 14 August 2026", analysisAsOf: "18 August 2026",
   summary: "Technocraft Ventures executes government-led water, sewerage, roads and electrical EPC projects, often with operations-and-maintenance obligations. Revenue and margins expanded through FY26, but the model remains dependent on tender wins, project execution, government collections, joint ventures and a long working-capital cycle.",
   business: [
     "Technocraft provides engineering, procurement and construction services for sewage-treatment plants, sewer networks, water-supply systems, roads, electrical works and micro-tunnelling, with selected long-term operations and maintenance contracts.",
@@ -330,7 +338,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   issueNote: "The final offer comprised 95.05 lakh fresh shares and 23.76 lakh OFS shares at ₹200–₹212. At the upper band this equates to approximately ₹201.51 crore fresh issue, ₹50.37 crore OFS and ₹251.88 crore total. NSE's official 14 August file records a ₹284.00 open and ₹311.15 close, 34.0% and 46.8% above the ₹212 issue price respectively; the first-day range was ₹284.00–₹334.40.",
   issue: { open: "7 August 2026", close: "11 August 2026", listing: "14 August 2026", priceBand: "₹200–₹212", lotSize: 70, totalCr: 251.88, freshCr: 201.51, ofsCr: 50.37, faceValue: "₹10" },
   useOfProceeds: [
-    { purpose: "Funding working-capital requirements", amount: "₹138 crore" },
+    { purpose: "Funding working-capital requirements", amount: "₹150 crore" },
     { purpose: "General corporate purposes", amount: "Balance of net fresh proceeds" },
     { purpose: "Offer for sale by Kartikey Constructions", amount: "Approximately ₹50.37 crore at the upper band" },
   ],
@@ -347,6 +355,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 receivable days", value: "125 days", context: "Up from 76 days in FY25; trade receivables reached ₹117.98 crore and were entirely from government customers." },
     { label: "JV share of July order book", value: "69.5%", context: "₹917.62 crore of the ₹1,320.73 crore balance was being executed under seven joint ventures." },
     { label: "FY26 bank guarantees", value: "₹168.03 Cr", context: "Performance guarantees are typically 5%–10% of project value and may remain through defect-liability periods of one to five years." },
+    { label: "Retention-linked balances", value: "₹100.00 Cr", context: "FY26 current other financial assets were ₹41.06 crore and long-term customer retention was ₹58.94 crore, up from ₹32.96 crore in FY25." },
+    { label: "FY27 working-capital funding", value: "₹150 Cr IPO", context: "Against the ₹290.93 crore estimate: ₹150 crore IPO proceeds, ₹30 crore bank/financial-institution funding and ₹110.93 crore internal accruals." },
+    { label: "Disputed contingent claims", value: "₹9.98 Cr", context: "The FY26 table covers income-tax, GST and VAT matters and is separate from the much larger performance-guarantee exposure." },
     { label: "FY26 debt/equity", value: "0.55×", context: "Improved from 0.87× in FY24, though project finance, bank guarantees and receivable funding remain important." },
     { label: "Listing-day close vs issue", value: "+46.8%", context: "NSE recorded a ₹284.00 open and ₹311.15 close on 14 August versus the ₹212 issue price." },
     { label: "Upper-band FY26 P/E", value: "14.7×", context: "Based on ₹212 and RHP FY26 EPS of ₹14.39, before fresh-issue dilution." },
@@ -355,12 +366,13 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "FY26 revenue rose 23.4%, while EBITDA margin expanded to approximately 20.3% and PAT reached ₹43.32 crore.",
     "Capabilities across civil, mechanical and electrical works allow the company to bid for integrated water and sewerage projects.",
     "An O&M component can extend customer relationships after construction, although its share and margin should be tracked separately.",
-    "The ₹138 crore working-capital allocation directly addresses the funding constraint visible in the operating cycle.",
+    "The ₹150 crore working-capital allocation directly addresses the funding constraint visible in the operating cycle.",
   ],
   concerns: [
     "Government-funded projects dominate the order book, creating tender, budget, approval, land-access, certification and collection risks.",
     "FY26 trade receivables reached ₹117.98 crore, 34.2% of revenue, and receivable days rose to 125 from 76. Operating cash flow of ₹28.70 crore remained below PAT.",
-    "Projected FY27 working-capital requirement is ₹290.93 crore. The ₹138 crore fresh-proceeds allocation addresses only part of that funding need.",
+    "Projected FY27 working-capital requirement is ₹290.93 crore. The ₹150 crore fresh-proceeds allocation addresses 51.6% of that estimate; the filing assumes ₹30 crore from lenders and ₹110.93 crore from internal accruals for the balance.",
+    "Current other financial assets plus long-term customer retention totalled approximately ₹100.00 crore at March 2026. Retention can remain locked through certification and defect-liability periods, so reported receivables alone understate cash tied to projects.",
     "Joint-venture projects introduce reliance on partners, shared control, guarantees and potentially different economics from wholly executed work. Seven JVs represented 69.5% of the July order book.",
     "Order-book size is not revenue: cancellations, scope changes, delays, cost inflation and liquidated damages can reduce conversion and margins.",
     "Multiple projects had received or were seeking time extensions, including large AMRUT wastewater contracts. Schedule slippage can delay billing and O&M commencement even when the underlying order remains in the backlog.",
@@ -370,7 +382,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   ],
   monitor: [
     "Quarterly order inflow, executable order book and conversion rather than headline order-book value alone.",
-    "Receivable ageing, unbilled revenue, retention money, inventory and operating cash flow.",
+    "Receivable ageing, unbilled revenue, current and long-term retention money, inventory and operating cash flow.",
     "Gross margin by project and provisions for cost overruns, claims or liquidated damages.",
     "Debt, bank-guarantee utilization and finance costs after the working-capital infusion.",
     "JV project economics, related-party transactions and contingent liabilities.",
