@@ -11,7 +11,7 @@ export type CompanyIpoAnalysis = {
 };
 
 export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
-  slug: "ardee-industries-ipo", company: "Ardee Industries", market: "Mainboard", sector: "Secondary lead recycling and non-ferrous metals", status: "Listed 12 August 2026", analysisAsOf: "18 August 2026",
+  slug: "ardee-industries-ipo", company: "Ardee Industries", market: "Mainboard", sector: "Secondary lead recycling and non-ferrous metals", status: "Listed 12 August 2026", analysisAsOf: "19 August 2026",
   summary: "Ardee Industries processes secondary lead and lead alloys for battery and industrial customers. FY24–FY26 show fast scale-up and margin expansion, but FY26 operating cash flow was only ₹29.83 crore against ₹84.68 crore PAT as inventory days rose to 47 and other current assets absorbed cash. Customer concentration, export-led working-capital needs, commodity spreads, environmental compliance and related-party oversight remain the central analytical questions.",
   business: [
     "Ardee recycles end-of-life energy-storage products and non-ferrous scrap into refined lead and customized lead alloys. Its outputs are used primarily by battery manufacturers and other industrial customers.",
@@ -20,7 +20,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The Andhra Pradesh facility's authorized capacity was 1,04,025 MTPA in FY26. Total production reached 69,855 tonnes and utilisation improved to 67.15%, from 45.16% in FY25, after the authorized capacity had expanded during FY25.",
     "Exports supplied 39.83% of FY26 revenue, up from 17.63% in FY24, and reached eight countries. Longer international credit periods, export inventory and supplier advances make geographic growth inseparable from working-capital execution.",
   ],
-  issueNote: "The 27 July final RHP and the ₹53 issue price reflected in NSE's 12 August trading file support a gross offer of 8,03,52,358 shares: approximately 6,03,77,358 fresh shares raising ₹320 crore and 1,99,75,000 OFS shares worth ₹105.87 crore. The two promoter selling shareholders offered 99,87,500 shares each. The company receives only the fresh-issue proceeds; the OFS proceeds go to the sellers. NSE's official 12 August file records a ₹72.00 open and ₹67.12 close on the first trading day, 35.8% and 26.6% above the ₹53 issue price respectively; these are historical market outcomes, not a forward view.",
+  issueNote: "The 27 July final RHP and NSE's official past-issues record confirm the ₹53 issue price and 12 August listing. The gross offer comprised 8,03,52,358 shares: approximately 6,03,77,358 fresh shares raising ₹320 crore and 1,99,75,000 OFS shares worth ₹105.87 crore. The two promoter selling shareholders offered 99,87,500 shares each. The company receives only the fresh-issue proceeds; the OFS proceeds go to the sellers. On the final share counts, post-offer capital is approximately 31,52,01,358 shares and promoter ownership falls from 91.16% pre-offer to about 67.36%. NSE's official 12 August file records a ₹72.00 open and ₹67.12 close on the first trading day, 35.8% and 26.6% above the ₹53 issue price respectively; these are historical market outcomes, not a forward view.",
   issue: { open: "5 August 2026", close: "7 August 2026", listing: "12 August 2026", priceBand: "₹50–₹53", lotSize: 281, totalCr: 425.87, freshCr: 320, ofsCr: 105.87, faceValue: "₹2" },
   useOfProceeds: [
     { purpose: "Incremental working-capital requirements", amount: "₹220 crore" }, { purpose: "Repayment or prepayment of borrowings", amount: "₹22 crore" },
@@ -40,6 +40,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Receivables / loss allowance", value: "₹24.79 Cr / nil", context: "Approximately 96.9% of FY26 receivables were under six months old. The RHP reports 30–60 day general terms and distinguishes recourse from non-recourse factoring." },
     { label: "Guarantee-linked exposure", value: "₹12.76 Cr", context: "FY26 contingent liabilities were mainly a ₹12.50 crore performance/security bank guarantee, up from ₹7.25 crore in FY25, plus a ₹0.26 crore disputed income-tax demand." },
     { label: "FY26 export revenue", value: "39.83%", context: "Up from 17.63% in FY24; the RHP links exports to longer receivable and inventory cycles." },
+    { label: "Post-offer promoter holding", value: "~67.36%", context: "Derived from 23,23,01,700 promoter shares before the offer, the 1,99,75,000-share promoter OFS and approximately 31,52,01,358 post-offer shares." },
     { label: "Listing-day close vs issue", value: "+26.6%", context: "NSE recorded a ₹72.00 open and ₹67.12 close on 12 August versus the ₹53 issue price." },
   ],
   strengths: [
@@ -51,6 +52,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "FY26 borrowings were ₹182.75 crore. Debt/equity improved to 1.25× from 4.87× in FY24, but absolute debt continued to rise.", "FY26 operating cash flow was ₹29.83 crore, only 35.2% of PAT. A ₹71.17 crore inventory increase and ₹41.45 crore increase in other current assets absorbed much of the ₹136.53 crore operating profit generated before working-capital changes. Supplier advances alone reached ₹84.58 crore, more than double FY25.",
     "The net working-capital requirement increased from ₹104.63 crore in FY24 to ₹226.19 crore in FY26. The RHP says export growth required more inventory, supplier advances and longer customer credit, which raises the execution bar for the ₹220 crore IPO allocation.",
     "The top ten raw-material suppliers supplied 38.48% of FY26 purchases, down from 53.71% in FY25. Related-party transactions nevertheless equalled 7.75% of FY26 revenue, including remuneration, loans, rent, asset purchases and goods transactions.",
+    "Promoters retain approximately 67.36% after the fresh issue and promoter OFS. This preserves decisive voting control, so board independence, related-party approvals and any future pledges or secondary sales remain important governance checks.",
     "Capacity utilisation improved to 67.15% in FY26 from 45.16% in FY25, but the comparison follows a significant capacity expansion and should be tested against normalized demand rather than a single ramp year.",
     "Lead scrap availability, commodity prices, foreign exchange, environmental compliance and customer pass-through arrangements can affect margins.", "The operating record under current promoters is limited because the acquisition and manufacturing ramp began in 2021.",
     "Cash availability needs qualification: ₹13.94 crore of the ₹14.09 crore cash-equivalent balance sat in an EEFC account, while another ₹9.38 crore of bank balances was pledged as margin against guarantees.",
@@ -58,6 +60,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
   monitor: [
     "Whether the ₹220 crore working-capital infusion improves operating cash conversion rather than only supporting higher inventory, supplier advances and receivables.", "Operating cash flow relative to PAT, plus inventory, supplier advances and other-current-asset days after the IPO-funded expansion.", "Gross and EBITDA margins after listing, particularly if lead prices or scrap spreads normalize.",
     "Reduction in borrowings and finance cost after use of the fresh proceeds.", "Customer concentration: movement in the top-five and top-ten revenue shares.", "Export receivable terms, supplier-advance days and related-party transaction disclosures.", "Environmental approvals, plant utilization, accident record and compliance disclosures.",
+    "Post-offer promoter ownership, share encumbrances, related-party voting and the independence of listed-company oversight.",
   ],
   valuation: [
     "At the ₹53 final issue price, the indicated FY26 P/E was approximately 15.96× based on EPS of ₹3.32. The offer calculations indicated an equity valuation of about ₹1,671 crore.",
@@ -69,6 +72,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Ardee Industries final RHP", href: "https://www.sebi.gov.in/sebi_data/attachdocs/jul-2026/1785298785882.pdf", kind: "Primary" },
     { label: "Ardee Industries investor information", href: "https://ardeeindustries.com/investors/", kind: "Primary" },
     { label: "NSE security bhavdata: 12 August 2026", href: "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_12082026.csv", kind: "Primary" },
+    { label: "NSE public past issues: Ardee issue price and listing date", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
     { label: "Zerodha Ardee offer summary and prospectus link", href: "https://zerodha.com/ipo/441984/ardee-industries/", kind: "Secondary" },
   ],
 }, {
@@ -1276,7 +1280,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Zerodha Gaja updated-offer summary", href: "https://zerodha.com/ipo/441847/gaja-capital-is-a-promoter-led-indian-alternative-asset-management-firm/", kind: "Secondary" },
   ],
 }, {
-  slug: "anawil-wire-engineering-ipo", company: "Anawil Wire & Engineering", market: "SME", sector: "Wind-turbine towers and heavy steel fabrication", status: "Listed 10 August 2026", analysisAsOf: "17 August 2026",
+  slug: "anawil-wire-engineering-ipo", company: "Anawil Wire & Engineering", market: "SME", sector: "Wind-turbine towers and heavy steel fabrication", status: "Listed 10 August 2026", analysisAsOf: "19 August 2026",
   summary: "Anawil fabricates tubular steel towers and related structures for wind-energy projects. FY24–FY26 show rapid revenue, margin and profit growth, but FY26 expansion required heavy capex and debt while inventory days stretched to 252.85 and the top ten customers supplied 97.31% of revenue. The ₹177.81 crore NSE Emerge offer was a mix of ₹142.69 crore fresh capital and ₹35.12 crore OFS, not an all-fresh issue.",
   business: [
     "The company fabricates tubular wind-turbine towers and heavy steel structures from facilities in Koppal, Karnataka and Kutch, Gujarat. It entered wind-tower manufacturing in FY24 after beginning commercial operations in 2021.",
@@ -1284,7 +1288,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The final RHP records combined annual capacity of 612 towers and approximately 48.17% utilisation in FY26. The Gujarat plant began operations only in March 2026; its first-month utilisation was 8.04%, while the Karnataka facility reported 41.74% for FY26.",
     "The 31 March 2026 order book was ₹359.82 crore across 379 towers and only six customers. It provides execution visibility but is not guaranteed revenue because orders may be delayed, changed or cancelled.",
   ],
-  issueNote: "The 28 July final RHP confirms 65,85,600 shares: 52,84,800 fresh shares and 13,00,800 OFS shares sold by promoter Nimish Kumar Rameshchandra Vashi. A 3,31,200-share market-maker reservation leaves a 62,54,400-share net offer. The ₹270 issue price in NSE's 10 August trading file makes the fresh issue ₹142.69 crore, the OFS ₹35.12 crore and the total ₹177.81 crore. The quoted market lot was 400 shares, but the minimum individual bid was two lots, or 800 shares and ₹2.16 lakh at the issue price. NSE's official first-day file records a ₹329.65 open and ₹346.10 close, 22.1% and 28.2% above the issue price respectively; the ₹313.20–₹346.10 range is historical market context, not a forward view.",
+  issueNote: "The 28 July final RHP confirms 65,85,600 shares: 52,84,800 fresh shares and 13,00,800 OFS shares sold by promoter Nimish Kumar Rameshchandra Vashi. A 3,31,200-share market-maker reservation leaves a 62,54,400-share net offer. NSE's official past-issues record confirms the ₹270 issue price and 10 August listing, making the fresh issue ₹142.69 crore, the OFS ₹35.12 crore and the total ₹177.81 crore. Post-issue capital is 2,50,00,000 shares; after the OFS, promoter ownership is approximately 65.26%, down from 89.35% pre-offer. The quoted market lot was 400 shares, but the minimum individual bid was two lots, or 800 shares and ₹2.16 lakh at the issue price. NSE's official first-day file records a ₹329.65 open and ₹346.10 close, 22.1% and 28.2% above the issue price respectively; the ₹313.20–₹346.10 range is historical market context, not a forward view.",
   issue: { open: "3 August 2026", close: "5 August 2026", listing: "Listed 10 August 2026 on NSE Emerge", priceBand: "₹257–₹270; issue price ₹270", lotSize: 800, totalCr: 177.81, freshCr: 142.69, ofsCr: 35.12, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Repayment or prepayment of borrowings", amount: "₹115 crore" },
@@ -1304,6 +1308,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "FY26 operating cash/PAT", value: "50.4%", context: "₹18.44 crore operating cash flow versus ₹36.62 crore PAT; capex was ₹97.27 crore." },
     { label: "FY26 inventory cycle", value: "252.85 days", context: "Up from 175.06 days in FY25; inventory increased to ₹50.69 crore." },
     { label: "FY26 receivable cycle", value: "82 days", context: "Up from 67 days in FY25 as trade receivables reached ₹38.95 crore." },
+    { label: "Post-issue promoter holding", value: "~65.26%", context: "Derived from 1,76,14,943 pre-offer promoter shares, the 13,00,800-share promoter OFS and 2,50,00,000 post-issue shares." },
     { label: "Listing-day close vs issue", value: "+28.2%", context: "NSE recorded a ₹329.65 open and ₹346.10 close on 10 August versus the ₹270 issue price." },
   ],
   strengths: [
@@ -1323,6 +1328,9 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Combined utilisation was approximately 48.17% in FY26. Low utilisation provides headroom but can weaken fixed-cost absorption if the concentrated order book slows.",
     "The RHP disclosed company proceedings with ₹3.71 crore quantified exposure, mostly a ₹3.67 crore direct-tax matter, plus a criminal proceeding involving a group company whose amount was unascertainable.",
     "₹5.17 crore of FY26 unsecured loans was repayable on demand. It was only 4.03% of total indebtedness, but a lender recall before the stated IPO-funded deleveraging would tighten liquidity.",
+    "Promoter and promoter-group members and a group company provided personal guarantees for a significant portion of borrowings. The RHP says guarantees may continue after listing; actual release should be checked alongside the ₹115 crore debt repayment.",
+    "The RHP says its policies did not cover every operating risk and specifically identified missing cover including product liability, key-person insurance and the Kutch manufacturing unit. A material uninsured loss could impair both cash flow and project execution.",
+    "Promoter ownership remains approximately 65.26% after the fresh issue and OFS, preserving decisive voting control. Minority oversight therefore depends heavily on board independence and related-party governance.",
     "NSE Emerge shares can have limited liquidity, wider bid-ask spreads, market-maker dependence and larger minimum tradable lots than mainboard shares.",
     "No close listed Indian peer was identified in the RHP, limiting external checks on the unusually high reported margin profile.",
   ],
@@ -1332,7 +1340,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Actual debt repayment, release of collateral, finance cost and post-issue leverage.",
     "Operating cash flow relative to PAT, the 252.85-day inventory cycle, receivable days, customer advances and capital expenditure.",
     "Steel-cost pass-through, freight, rejection rates, liquidated damages and warranty claims.",
-    "Promoter transactions, contingent liabilities and NSE Emerge trading liquidity.",
+    "Promoter transactions, post-issue ownership, personal-guarantee release, insurance coverage, contingent liabilities and NSE Emerge trading liquidity.",
   ],
   valuation: [
     "At ₹270, published RHP-derived estimates indicate approximately 18.4× FY26 earnings on the relevant diluted share base. The multiple should be read against a short operating history and the sustainability of a 42.6% EBITDA margin.",
@@ -1343,11 +1351,12 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Anawil Wire final RHP", href: "https://anawilvapi.in/uploads/investors/RHP-Anawil%20Wire%20and%20Engineering%20Limited.pdf", kind: "Primary" },
     { label: "Anawil Wire corporate website", href: "https://anawilvapi.in/", kind: "Primary" },
     { label: "NSE security bhavdata: 10 August 2026", href: "https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_10082026.csv", kind: "Primary" },
+    { label: "NSE public past issues: Anawil issue price and listing date", href: "https://www.nseindia.com/api/public-past-issues", kind: "Primary" },
     { label: "Acuite rating rationale", href: "https://connect.acuite.in/fcompany-details/ANAWIL_WIRE_AND_ENGINEERING_PRIVATE_LIMITED/27th_Sep_24", kind: "Secondary" },
     { label: "Zerodha Anawil offer summary and prospectus link", href: "https://zerodha.com/ipo/454133/anawil-wire-and-engineering/", kind: "Secondary" },
   ],
 }, {
-  slug: "aegeus-technologies-ipo", company: "Aegeus Technologies", market: "SME", sector: "Solar-plant robotics and intelligent automation", status: "Listed 11 August 2026", analysisAsOf: "17 August 2026",
+  slug: "aegeus-technologies-ipo", company: "Aegeus Technologies", market: "SME", sector: "Solar-plant robotics and intelligent automation", status: "Listed 11 August 2026", analysisAsOf: "19 August 2026",
   summary: "Aegeus Technologies develops robotic cleaning and intelligent automation systems for solar-power assets. Revenue and profit expanded rapidly through FY26, but operating cash flow turned negative ₹1.51 crore while inventory reached 144 days and receivables were reported at 139–141 days. The top five customers supplied 83.40% of revenue, key product lines remained under-utilised and the young business still has to demonstrate durable cash conversion and product performance.",
   business: [
     "Aegeus designs robotic and intelligent automation solutions for the solar-energy sector, including systems intended to clean and monitor photovoltaic installations. Its product roadmap disclosed in the offer document includes newer robot variants and asset-protection solutions.",
@@ -1356,8 +1365,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "The RHP reports 55 permanent employees and 33 contractual employees at FY26. Permanent-employee attrition fell to 3.5% from 21.4% in FY25, while contractual attrition was 6.6% in both FY25 and FY26.",
     "FY26 utilisation differed sharply by product: Unicorn R2R operated at 68.88%, Unicorn Smart at 26.67% and Shreem at 21.79%. This provides physical headroom but leaves fixed-cost absorption and product-level demand as separate questions.",
   ],
-  issueNote: "The 27 July final RHP confirms an entirely fresh 22,58,400-share offer with no OFS. It reserves 3,25,200 shares for the market maker and leaves a 19,33,200-share net issue. At the ₹105 cap the gross offer is ₹23.71 crore. The market lot was 1,200 shares, while the minimum individual application was two lots, or 2,400 shares and ₹2.40–₹2.52 lakh across the price band. BSE notice 20260810-35 confirms the ₹105 final price, 7 August allotment and trading from 11 August under scrip 544858. BSE's first-day file records a ₹124.50 open, ₹130.70 high and close, and ₹122 low: the close was 24.5% above the issue price. This is dated market history, not a forward view.",
-  issue: { open: "4 August 2026", close: "6 August 2026", listing: "Listed 11 August 2026 on BSE SME", priceBand: "₹100–₹105", lotSize: 2400, totalCr: 23.71, freshCr: 23.71, ofsCr: 0, faceValue: "₹10" },
+  issueNote: "The 27 July final RHP confirms an entirely fresh 22,58,400-share offer with no OFS. It reserves 3,25,200 shares for the market maker and leaves a 19,33,200-share net issue. At the ₹105 final price the gross offer is ₹23.71 crore. Post-issue capital is 83,74,593 shares; the promoters' unchanged 39,60,118 shares therefore represent approximately 47.29%, down from 64.75% before the fresh issue. The market lot was 1,200 shares, while the minimum individual application was two lots, or 2,400 shares and ₹2.40–₹2.52 lakh across the price band. BSE notice 20260810-35 confirms the ₹105 final price, 7 August allotment and trading from 11 August under scrip 544858. BSE's first-day file records a ₹124.50 open, ₹130.70 high and close, and ₹122 low: the close was 24.5% above the issue price. This is dated market history, not a forward view.",
+  issue: { open: "4 August 2026", close: "6 August 2026", listing: "Listed 11 August 2026 on BSE SME", priceBand: "₹100–₹105; issue price ₹105", lotSize: 2400, totalCr: 23.71, freshCr: 23.71, ofsCr: 0, faceValue: "₹10" },
   useOfProceeds: [
     { purpose: "Investment in product development", amount: "₹2.86 crore" },
     { purpose: "Land and civil works for a manufacturing facility", amount: "₹5.74 crore" },
@@ -1380,6 +1389,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     { label: "Unicorn Smart utilisation", value: "26.67%", context: "1,144 units produced against annual capacity of 4,290 in FY26." },
     { label: "FY26 permanent attrition", value: "3.5%", context: "Two permanent employees exited; the rate improved from 21.4% in FY25." },
     { label: "RHP contingent liabilities", value: "Nil", context: "The final RHP states that the company had no contingent liabilities as of its date." },
+    { label: "Post-issue promoter holding", value: "~47.29%", context: "The entirely fresh issue increases shares from 61,16,193 to 83,74,593 while promoter shares remain 39,60,118." },
     { label: "Listing-day close vs issue", value: "+24.5%", context: "BSE recorded a ₹124.50 open and ₹130.70 close on 11 August versus the ₹105 issue price; 10,32,000 shares traded in the trade-for-trade segment." },
   ],
   strengths: [
@@ -1402,6 +1412,8 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Promoter and key-person dependence is meaningful in a young technology-led company. The RHP records ₹2.60 crore of interest-free, on-demand promoter loans outstanding at FY26, making related-party funding and governance controls worth monitoring.",
     "The FY25 auditor reported that the accounting software's audit-trail feature was not operational throughout the year and statutory record-retention requirements were therefore not met. The RHP says the FY26 audit contained no qualification, but listed-company reporting should demonstrate sustained remediation.",
     "The RHP notes delays in a few cases when depositing undisputed statutory dues. FY26 statutory and other current liabilities were ₹5.94 crore, including customer advances; payment timeliness should be distinguished from the balance-sheet amount.",
+    "The RHP's insurance risk disclosure says coverage had been obtained for employees but did not cover every business risk. The scope, insured values, exclusions and any product-performance cover should be tested against the planned manufacturing expansion and field-installed robot base.",
+    "The fresh issue dilutes promoter ownership from 64.75% to approximately 47.29%. Promoters remain the largest controlling block, but the lower stake makes voting participation, board independence and any future share encumbrance more relevant.",
     "BSE SME shares may have limited liquidity, wider bid-ask spreads, market-maker dependence and large minimum trading lots. A listing price is not evidence of business value or durable liquidity.",
   ],
   monitor: [
@@ -1411,7 +1423,7 @@ export const companyIpoAnalyses: CompanyIpoAnalysis[] = [{
     "Product-level volumes and utilisation for Unicorn R2R, Unicorn Smart and Shreem, rather than only consolidated revenue growth.",
     "Progress and cost of the proposed manufacturing facility, product-development milestones and any capital-cost overruns.",
     "Borrowings, finance cost and leverage after the issue, alongside warranty provisions and contingent liabilities.",
-    "Audit-trail operation and preservation, statutory-payment timeliness, related-party transactions, promoter holdings and board oversight.",
+    "Audit-trail operation and preservation, statutory-payment timeliness, insurance breadth, related-party transactions, promoter holdings and board oversight.",
     "BSE SME trading liquidity after the first-day 10,32,000-share volume, and the first post-listing evidence on the 55 permanent and 33 contractual employees disclosed in the RHP.",
   ],
   valuation: [

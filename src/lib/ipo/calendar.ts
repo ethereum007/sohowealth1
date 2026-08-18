@@ -17,7 +17,7 @@ export type IpoWeek = {
 };
 
 // Source snapshot: Chittorgarh Mainboard and SME IPO calendars, accessed
-// 16 August 2026; exchange status refreshed 18 August 2026. Entries are grouped
+// 16 August 2026; exchange status refreshed 19 August 2026. Entries are grouped
 // by opening date. A null means no final figure and must never render as zero.
 const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Anawil Wire & Engineering", slug: "anawil-wire-engineering-ipo", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 177.81, priceBand: "₹257–₹270", exchange: "NSE SME" },
