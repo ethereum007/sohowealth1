@@ -17,7 +17,7 @@ export type IpoWeek = {
 };
 
 // Source snapshot: Chittorgarh Mainboard and SME IPO calendars, accessed
-// 16 August 2026; exchange status refreshed 19 August 2026. Entries are grouped
+// 16 August 2026; exchange status refreshed 20 August 2026. Entries are grouped
 // by opening date. A null means no final figure and must never render as zero.
 const august2026Ipos: IpoCalendarEntry[] = [
   { company: "Anawil Wire & Engineering", slug: "anawil-wire-engineering-ipo", market: "SME", opens: "2026-08-03", closes: "2026-08-05", issueSizeCr: 177.81, priceBand: "₹257–₹270", exchange: "NSE SME" },
@@ -71,10 +71,11 @@ export const august2026Weeks: IpoWeek[] = weekMeta.map((week) => ({
 }));
 
 export const august2026Snapshot = {
-  asOf: "19 August 2026",
+  asOf: "20 August 2026",
   coverageCount: 25,
   verificationNotes: [
     "All 25 companies currently shown in the August calendar link to an individual analysis page.",
+    "An official NSE recheck at 7:08 a.m. IST on 20 August was deliberately treated as pre-session evidence. Shankesh Jewellers and Sunshine Pictures remained Active ahead of their final bidding day and NSE still displayed the prior 19 August post-window totals of 1,87,07,520 bids, or 0.6769×, and 7,50,00,070 bids, or 13.6710×. Gaja remained Active ahead of its second session with the prior 1,27,24,353 bids, or 0.5024×. These are not fresh 20 August demand figures and are not final. NSE's past-issues table separately finalized Credent Connect N Care at ₹189 with a 20 August NSE Emerge listing date. Trading had not begun at the checkpoint, so no opening, high, low, close or volume is published; the ₹93.90 crore gross offer and ₹89.13 crore net issue remain separately labelled.",
     "NSE continued to classify Shankesh Jewellers and Sunshine Pictures active at the approximately 8:25 p.m. IST 19 August recheck after their completed anchor books: BSE notices 20260817-31 and 20260817-32 confirm ₹110.15 crore and ₹84.64 crore of anchor allocations respectively at the upper offer prices. BSE's official 5:00 p.m. second-session books recorded 73,76,640 Shankesh bids, or 0.2669×, and 2,63,11,053 Sunshine bids, or 4.7960×. NSE separately displayed 1,87,07,520 Shankesh bids, or 0.6769×, and 7,50,00,070 Sunshine bids, or 13.6710×. The official exchange views are kept separate and not added because their aggregation basis is not confirmed; all are preliminary post-window readings and both issues remain open through 20 August.",
     "BSE's official listing notices and historical-price files now add first-day context for two BSE SME listings. Aegeus traded under scrip 544858 on 11 August, opening at ₹124.50 and closing at ₹130.70 versus its ₹105 issue price; LAPL traded under scrip 544863 on 13 August, opening at ₹135 and closing at ₹128.29 versus ₹94. Both were in the trade-for-trade segment and recorded 100% delivery in BSE's files. These dated outcomes are market context, not recommendations.",
     "NSE's official security files add first-day context for two NSE Emerge listings: Anawil opened at ₹329.65 and closed at ₹346.10 on 10 August versus its ₹270 issue price; Optimystix opened at ₹180 and closed at ₹189 on 14 August versus ₹175. The Optimystix page previously showed ₹175 as the opening price and has been corrected. Aegeus's final RHP now also supplies workforce attrition, nil contingent liabilities and the FY25 audit-trail exception.",
