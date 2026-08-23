@@ -4,6 +4,10 @@ import { z } from "zod";
 
 export const dynamic = "force-dynamic";
 
+// All production website lead notifications must reach this monitored inbox.
+// Keep this explicit so a stale Vercel environment variable cannot redirect leads.
+const LEAD_NOTIFICATION_EMAIL = "kiran@sohowealth.in";
+
 const leadSchema = z.object({
   name: z.string().trim().min(1).max(100),
   phone: z.string().trim().min(6).max(30),
@@ -70,7 +74,7 @@ async function sendLeadEmail(lead: z.infer<typeof leadSchema>) {
 
   const { error } = await resend.emails.send({
     from: process.env.LEAD_EMAIL_FROM || "SoHo Wealth <leads@sohowealth.in>",
-    to: process.env.LEAD_EMAIL_TO || "kiran@sohowealth.in",
+    to: LEAD_NOTIFICATION_EMAIL,
     replyTo: lead.email,
     subject,
     html,
