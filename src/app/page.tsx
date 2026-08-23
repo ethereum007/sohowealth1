@@ -2,14 +2,14 @@ import type { Metadata } from "next";
 import HomeClient from "./HomeClient";
 
 export const metadata: Metadata = {
-  title: "Wealth Planning India + Free AI Wealth Planner | SoHo Wealth",
+  title: "Wealth Management & Investment Distribution India | SoHo Wealth",
   description:
-    "Start with SoHo Wealth's free AI wealth planning tool. Estimate your goal corpus, required monthly SIP and asset mix, then book a professional portfolio review.",
+    "Wealth planning, portfolio review and registered investment distribution for HNIs, founders, families and NRIs across mutual funds, PMS and SIF.",
   keywords:
-    "wealth planning India, AI wealth planner India, financial goal planner, SIP goal calculator, wealth management India, portfolio review India",
+    "wealth management India, wealth planning India, investment distribution India, portfolio review India, HNI wealth management, NRI wealth management India",
   alternates: { canonical: "https://www.sohowealth.in/" },
   openGraph: {
-    title: "Wealth Planning Across India | SoHo Wealth",
+    title: "Wealth Management & Investment Distribution India | SoHo Wealth",
     description:
       "Portfolio review and investment distribution for HNIs, founders, families and NRIs across India.",
     url: "https://www.sohowealth.in/",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wealth Planning Across India | SoHo Wealth",
+    title: "Wealth Management & Investment Distribution India | SoHo Wealth",
     description: "Portfolio review and investment distribution for HNIs, founders, families and NRIs.",
   },
 };

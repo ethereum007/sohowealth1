@@ -128,6 +128,12 @@ const nriEssentials = [
   },
 ];
 
+const countryJourneys = [
+  { title: "Telugu NRIs in the USA", href: "/telugu-nri/usa", text: "Indian investments, FATCA/PFIC questions, RSUs, property and return planning for US families." },
+  { title: "Telugu NRIs in the UAE & Gulf", href: "/telugu-nri/uae", text: "Currency, remittances, India allocation, family protection and property coordination." },
+  { title: "Returning to India", href: "/telugu-nri/returning-to-india", text: "Residency days, RNOR, RFC accounts, foreign assets and the Hyderabad home decision." },
+];
+
 export default function NRITeluguClient() {
   const [service, setService] = useState("NRI private wealth review");
   const [days, setDays] = useState("");
@@ -212,6 +218,14 @@ export default function NRITeluguClient() {
         <div className="container mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-[#9A7A25]">Two countries. One plan.</p>
           <div><h2 className="font-display text-3xl font-semibold leading-tight text-[#0B1F3A] md:text-5xl">Managing wealth across two countries shouldn’t mean managing it with two sets of guesswork.</h2><div className="mt-7 space-y-4 font-body text-lg leading-relaxed text-slate-600"><p>India savings can sit idle in NRE deposits while newer opportunities such as SIFs and GIFT City remain unfamiliar. Return plans bring questions about RNOR timing, account conversion and foreign-asset reporting.</p><p>Property decisions back home add builder, title and operating risk, while overseas and Indian professionals rarely see the entire picture together.</p><p className="font-semibold text-[#0B1F3A]">SoHo Wealth is the boutique wealth practice built for NRIs and returning NRIs from Telugu-speaking families—especially those with roots in Telangana and Andhra Pradesh.</p></div></div>
+        </div>
+      </section>
+
+      <section className="bg-[#0B1F3A] py-20 lg:py-24">
+        <div className="container mx-auto max-w-6xl px-6 lg:px-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#C9A84C]">Country and transition journeys</p>
+          <h2 className="mt-4 max-w-4xl font-display text-3xl font-semibold text-white md:text-5xl">Advice starts with where you live—and where you may live next.</h2>
+          <div className="mt-10 grid gap-5 md:grid-cols-3">{countryJourneys.map((item) => <Link key={item.href} href={item.href} className="group rounded-2xl border border-white/15 p-7"><h3 className="font-display text-2xl font-semibold text-white">{item.title}</h3><p className="mt-4 text-sm leading-relaxed text-white/60">{item.text}</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#C9A84C]">Explore this journey <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" /></span></Link>)}</div>
         </div>
       </section>
 
