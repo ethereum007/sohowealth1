@@ -89,6 +89,45 @@ const faqs = [
   },
 ];
 
+const nriEssentials = [
+  {
+    title: "Choose the money route before the product",
+    text: "NRE, NRO and FCNR accounts serve different income, currency and repatriation needs. We first map where the money came from, where future proceeds should go and which provider will accept the account route.",
+    action: "Review account structure",
+    interest: "nre-nro-fcnr",
+  },
+  {
+    title: "Separate repatriable and non-repatriable capital",
+    text: "The funding account and investment route affect how proceeds can move overseas. NRO remittances may require tax evidence, bank forms and supporting documents, so the exit workflow belongs in the initial plan.",
+    action: "Plan repatriation",
+    interest: "fema-repatriation",
+  },
+  {
+    title: "Confirm provider and country eligibility",
+    text: "Mutual funds, PMS, SIFs and other products can have different onboarding rules by country, bank route, KYC and FATCA status. US and Canada-based families should verify provider acceptance before selecting a portfolio.",
+    action: "Check investment eligibility",
+    interest: "NRI investment eligibility",
+  },
+  {
+    title: "Plan the return before residency changes",
+    text: "Travel days, RNOR eligibility, NRE/NRO conversion, FCNR deposits, RFC accounts and overseas-asset reporting can interact. A coordinated timeline helps the investment, banking and tax specialists work from the same facts.",
+    action: "Build a return-to-India plan",
+    interest: "rnor-planning",
+  },
+  {
+    title: "Treat property as part of the portfolio",
+    text: "Hyderabad property decisions should include title and RERA checks, funding route, rental operations, tax withholding on sale and the eventual remittance plan—not only the purchase price and promised appreciation.",
+    action: "Explore NRI real estate",
+    href: "/nri-real-estate-in-hyderabad",
+  },
+  {
+    title: "Coordinate tax; do not improvise it",
+    text: "India residential status, TDS, DTAA relief and foreign reporting depend on personal facts and the relevant year. SoHo Wealth coordinates the investment picture while qualified tax and legal professionals confirm formal positions.",
+    action: "Read the Telugu tax guide",
+    href: "/insights/nri-tax-filing-guide-telugu",
+  },
+];
+
 export default function NRITeluguClient() {
   const [service, setService] = useState("NRI private wealth review");
   const [days, setDays] = useState("");
@@ -132,6 +171,39 @@ export default function NRITeluguClient() {
           </div>
           <div className="mt-14 grid gap-3 border-t border-white/15 pt-7 text-sm text-white/70 sm:grid-cols-2 lg:grid-cols-4">
             {["AMFI Registered", "APMI Registered PMS Distributor", "Telugu-Speaking Team", "Serving US, Gulf, Canada, UK & Australia"].map((item) => <div key={item} className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-[#C9A84C]" />{item}</div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20 lg:py-28" id="nri-essentials">
+        <div className="container mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <p className="font-body text-sm font-semibold uppercase tracking-[0.2em] text-[#9A7A25]">NRI essentials</p>
+            <h2 className="mt-4 font-display text-3xl font-semibold text-[#0B1F3A] md:text-5xl">Six decisions to settle before money moves</h2>
+            <p className="mt-5 font-body text-lg leading-relaxed text-slate-600">Built from recurring NRI questions across banking, investing, tax, repatriation and property—and checked against current RBI, SEBI and Income Tax guidance.</p>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {nriEssentials.map((item, index) => (
+              <article key={item.title} className="flex flex-col rounded-2xl border border-slate-200 bg-[#F7F8FA] p-7">
+                <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#9A7A25]">0{index + 1}</p>
+                <h3 className="mt-4 font-display text-2xl font-semibold text-[#0B1F3A]">{item.title}</h3>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-slate-600">{item.text}</p>
+                {item.href ? (
+                  <Link href={item.href} className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#8C6C17]">{item.action}<ArrowRight className="h-4 w-4" /></Link>
+                ) : (
+                  <button onClick={() => openForm(item.interest ?? "NRI private wealth review")} className="mt-6 inline-flex items-center gap-2 text-left text-sm font-semibold text-[#8C6C17]">{item.action}<ArrowRight className="h-4 w-4" /></button>
+                )}
+              </article>
+            ))}
+          </div>
+          <div className="mt-10 rounded-xl border border-[#C9A84C]/30 bg-[#FFFDF7] p-6">
+            <p className="text-xs font-bold uppercase tracking-[0.16em] text-[#8C6C17]">Research and regulatory references</p>
+            <p className="mt-3 text-sm leading-relaxed text-slate-600">Topic discovery included SBNRI&apos;s public educational library. SoHo Wealth&apos;s wording, service framework and conclusions are original; regulatory facts are checked against primary sources.</p>
+            <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-semibold text-[#0B1F3A]">
+              <a href="https://www.rbi.org.in/commonman/Upload/English/FAQs/PDFs/Accountresidents16012025.pdf" target="_blank" rel="noopener noreferrer" className="underline decoration-[#C9A84C] underline-offset-4">RBI: Accounts in India by non-residents</a>
+              <a href="https://www.incometax.gov.in/iec/foportal/help/all-topics/e-filing-services/non%20resident%20-faq" target="_blank" rel="noopener noreferrer" className="underline decoration-[#C9A84C] underline-offset-4">Income Tax: Non-resident FAQs</a>
+              <a href="https://www.sebi.gov.in/legal/circulars/jul-2025/monitoring-of-minimum-investment-threshold-under-specialized-investment-funds-sif-_95676.html" target="_blank" rel="noopener noreferrer" className="underline decoration-[#C9A84C] underline-offset-4">SEBI: SIF threshold framework</a>
+            </div>
           </div>
         </div>
       </section>
