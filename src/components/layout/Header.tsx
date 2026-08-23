@@ -165,6 +165,17 @@ const retirementLinks: MenuLink[] = [
   },
 ];
 
+const realEstateLinks: MenuLink[] = [
+  { name: "Real Estate Consulting", href: "/hyderabad-real-estate", description: "Hyderabad buyer, seller, NRI and project consulting hub." },
+  { name: "Buy Property", href: "/buy-property-hyderabad", description: "Research-led buyer representation and transaction support." },
+  { name: "Sell Property", href: "/sell-property-hyderabad", description: "Pricing, marketing, negotiation and closing coordination." },
+  { name: "NRI Property Desk", href: "/nri-property-services-hyderabad", description: "Buy, sell and coordinate Hyderabad property remotely." },
+  { name: "Due Diligence", href: "/property-due-diligence-hyderabad", description: "Project, document and commercial decision review." },
+  { name: "New Projects", href: "/new-projects-hyderabad", description: "Current, disclosed project discovery and comparisons." },
+  { name: "News & Guides", href: "/hyderabad-real-estate/news", description: "Property news, regulation and practical decision guides." },
+  { name: "Property Calculators", href: "/tools/property-calculators", description: "Estimate EMI, rental yield and acquisition cost." },
+];
+
 const navigationItems: NavigationItem[] = [
   {
     name: "Investment Products",
@@ -186,6 +197,13 @@ const navigationItems: NavigationItem[] = [
     menuId: "retirement-planning-menu",
     submenu: retirementLinks,
     overviewLabel: "Explore retirement planning",
+  },
+  {
+    name: "Real Estate",
+    href: "/hyderabad-real-estate",
+    menuId: "real-estate-menu",
+    submenu: realEstateLinks,
+    overviewLabel: "Explore Hyderabad real estate",
   },
   { name: "About Us", href: "/about" },
   { name: "Team", href: "/team" },

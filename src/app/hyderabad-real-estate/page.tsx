@@ -17,6 +17,8 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { RelatedServices } from "@/components/seo/RelatedServices";
 import { ScrollToSectionButton } from "@/components/ScrollToSectionButton";
+import { ReraBadge } from "@/components/real-estate/ReraBadge";
+import { propertyServices } from "@/lib/real-estate/vertical";
 
 const pageUrl = "https://www.sohowealth.in/hyderabad-real-estate";
 
@@ -435,6 +437,19 @@ export default function HyderabadRealEstatePage() {
               ))}
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="bg-[#F7F8FA] py-20 lg:py-24">
+        <div className="container mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[1fr_22rem] lg:items-end">
+            <div><p className="font-body text-xs font-bold uppercase tracking-[0.16em] text-[#9A7A2C]">Buyer, seller and NRI mandates</p><h2 className="mt-3 font-display text-3xl font-semibold text-[#0B1F3A] md:text-5xl">A complete Hyderabad property desk.</h2><p className="mt-5 max-w-3xl font-body text-base leading-relaxed text-slate-600">Choose the service that matches your decision. Every engagement separates verified facts, commercial judgment, specialist opinions and unresolved risks.</p></div>
+            <ReraBadge />
+          </div>
+          <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {propertyServices.map((service) => { const Icon = service.icon; return <Link key={service.slug} href={service.path} className="group rounded-2xl border border-slate-200 bg-white p-7 shadow-[0_4px_24px_-6px_rgba(11,31,58,.08)] transition hover:-translate-y-1 hover:border-[#C9A84C]"><Icon className="h-7 w-7 text-[#A9822E]"/><p className="mt-5 text-xs font-bold uppercase tracking-[.14em] text-slate-400">{service.kicker}</p><h3 className="mt-2 font-display text-2xl font-semibold text-[#0B1F3A]">{service.title}</h3><p className="mt-3 text-sm leading-relaxed text-slate-600">{service.description}</p><span className="mt-6 inline-flex items-center gap-2 text-sm font-bold text-[#0B1F3A]">Explore service <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1"/></span></Link> })}
+          </div>
+          <div className="mt-10 flex flex-wrap gap-3"><Link href="/hyderabad-real-estate/news" className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-[#0B1F3A]">Latest property news</Link><Link href="/hyderabad-real-estate/guides" className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-[#0B1F3A]">Buyer & seller guides</Link><Link href="/tools/property-calculators" className="rounded-full border border-slate-300 bg-white px-5 py-3 text-sm font-bold text-[#0B1F3A]">Property calculators</Link></div>
         </div>
       </section>
 

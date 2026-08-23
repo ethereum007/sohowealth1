@@ -26,6 +26,10 @@ interface LeadCaptureFormProps {
   leftContent?: React.ReactNode;
   sectionId?: string;
   service?: string;
+  selectLabel?: string;
+  selectOptions?: string[];
+  buttonLabel?: string;
+  thankYouMessage?: string;
 }
 
 export function LeadCaptureForm({
@@ -34,6 +38,10 @@ export function LeadCaptureForm({
   leftContent,
   sectionId = "portfolio-review",
   service,
+  selectLabel = "Portfolio Size",
+  selectOptions = portfolioSizes,
+  buttonLabel = "Get My Free Review →",
+  thankYouMessage = "Kiran will personally reach out within 24 hours.",
 }: LeadCaptureFormProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
@@ -159,7 +167,7 @@ export function LeadCaptureForm({
                 <div className="text-5xl mb-5">🎉</div>
                 <h3 className="font-display text-2xl font-semibold text-white mb-3">Thank you!</h3>
                 <p className="font-body text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.8)" }}>
-                  Kiran will personally reach out within 24 hours.
+                  {thankYouMessage}
                   <br />
                   Meanwhile, WhatsApp us at{" "}
                   <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="font-semibold underline" style={{ color: "#C9A84C" }}>
@@ -193,10 +201,10 @@ export function LeadCaptureForm({
                     {errors.email && <p className={errorClass} style={{ color: "#f87171" }}>{errors.email}</p>}
                   </div>
                   <div>
-                    <label className={labelClass}>Portfolio Size</label>
+                    <label className={labelClass}>{selectLabel}</label>
                     <select name="portfolio_size" value={form.portfolio_size} onChange={handleChange} className={selectClass}>
                       <option value="" disabled>Select range</option>
-                      {portfolioSizes.map((s) => (<option key={s} value={s} className="text-gray-900">{s}</option>))}
+                      {selectOptions.map((s) => (<option key={s} value={s} className="text-gray-900">{s}</option>))}
                     </select>
                     {errors.portfolio_size && <p className={errorClass} style={{ color: "#f87171" }}>{errors.portfolio_size}</p>}
                   </div>
@@ -224,7 +232,7 @@ export function LeadCaptureForm({
                     className="w-full py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90 disabled:opacity-50 font-body"
                     style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}
                   >
-                    {loading ? "Submitting..." : "Get My Free Review →"}
+                    {loading ? "Submitting..." : buttonLabel}
                   </button>
                   <p className="text-center text-xs leading-relaxed font-body" style={{ color: "rgba(255,255,255,0.5)" }}>
                     By submitting, you agree to our{" "}

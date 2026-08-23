@@ -1,0 +1,6 @@
+import type { Metadata } from "next";
+import { Calculator } from "lucide-react";
+import { PropertyCalculators } from "./PropertyCalculators";
+import { ReraBadge } from "@/components/real-estate/ReraBadge";
+export const metadata:Metadata={title:"Hyderabad Property Calculators | EMI, Yield & Buying Cost",description:"Free property calculators for home-loan EMI, rental yield, acquisition costs and affordability.",alternates:{canonical:"https://www.sohowealth.in/tools/property-calculators"}};
+export default function Page(){return <main className="pt-20"><section className="bg-[#0B1F3A] py-20"><div className="container mx-auto max-w-5xl px-6"><Calculator className="h-9 w-9 text-[#C9A84C]"/><p className="mt-6 text-xs font-bold uppercase tracking-[.18em] text-[#C9A84C]">Property decision tools</p><h1 className="mt-4 font-display text-4xl font-semibold text-white md:text-6xl">Look beyond the brochure price.</h1><p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/70">Estimate financing, yield and acquisition economics before comparing properties. These outputs are starting points, not approvals or valuations.</p></div></section><section className="bg-[#F7F8FA] py-16 lg:py-24"><div className="container mx-auto max-w-6xl px-6"><PropertyCalculators/><div className="mt-12"><ReraBadge/></div></div></section></main>}

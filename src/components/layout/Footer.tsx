@@ -42,6 +42,18 @@ const retirementLinks = [
   { name: "AI Wealth Planner", href: "/tools/ai-wealth-planner" },
 ];
 
+const realEstateLinks = [
+  { name: "Real Estate Consulting", href: "/hyderabad-real-estate" },
+  { name: "Buy Property", href: "/buy-property-hyderabad" },
+  { name: "Sell Property", href: "/sell-property-hyderabad" },
+  { name: "NRI Property Services", href: "/nri-property-services-hyderabad" },
+  { name: "Due Diligence", href: "/property-due-diligence-hyderabad" },
+  { name: "New Projects", href: "/new-projects-hyderabad" },
+  { name: "News", href: "/hyderabad-real-estate/news" },
+  { name: "Guides", href: "/hyderabad-real-estate/guides" },
+  { name: "Property Calculators", href: "/tools/property-calculators" },
+];
+
 const companyLinks = [
   { name: "About Us", href: "/about" },
   { name: "Team", href: "/team" },
@@ -58,7 +70,7 @@ export function Footer() {
   return (
     <footer style={{ backgroundColor: "#0B1F3A" }}>
       <div className="container mx-auto px-6 lg:px-8">
-        <div className="grid grid-cols-2 gap-10 py-14 md:grid-cols-3 lg:grid-cols-6 lg:gap-10">
+        <div className="grid grid-cols-2 gap-10 py-14 md:grid-cols-3 lg:grid-cols-7 lg:gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/" className="mb-4 inline-block" aria-label="SoHo Wealth — Home">
               <Image
@@ -89,6 +101,7 @@ export function Footer() {
           <FooterLinkColumn title="Investment Products" links={investmentLinks} />
           <FooterLinkColumn title="Who We Serve" links={audienceLinks} />
           <FooterLinkColumn title="Retirement Planning" links={retirementLinks} />
+          <FooterLinkColumn title="Real Estate" links={realEstateLinks} />
           <FooterLinkColumn title="Company" links={companyLinks} />
 
           <div>
@@ -156,7 +169,7 @@ export function Footer() {
         <div className="border-t border-white/10 py-4">
           <p className="text-center font-body text-xs text-white/50">
             AMFI Registered Mutual Fund Distributor | AMFI Registered SIF Distributor (ARN: 306593) | APMI
-            Registered PMS Distributor (APRN01233) | © {new Date().getFullYear()} SoHo Wealth. All Rights Reserved.
+            Registered PMS Distributor (APRN01233) | Telangana RERA Agent A02400004529 | © {new Date().getFullYear()} SoHo Wealth. All Rights Reserved.
           </p>
         </div>
       </div>

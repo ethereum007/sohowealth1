@@ -15,6 +15,7 @@ import { RelatedServices } from "@/components/seo/RelatedServices";
 import { ScrollToSectionButton } from "@/components/ScrollToSectionButton";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import type { RealEstateGuide } from "@/lib/real-estate/seo-pages";
+import { ReraBadge } from "@/components/real-estate/ReraBadge";
 
 type RealEstateSeoPageProps = {
   page: RealEstateGuide;
@@ -290,6 +291,7 @@ export function RealEstateSeoPage({ page }: RealEstateSeoPageProps) {
       <section className="bg-white py-14">
         <div className="container mx-auto max-w-4xl px-6 lg:px-8">
           <div className="rounded-lg border border-slate-200 p-6 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)]">
+            <div className="mb-5"><ReraBadge /></div>
             <div className="mb-4 flex items-center gap-3">
               <ShieldCheck className="h-6 w-6" style={{ color: "#C9A84C" }} />
               <h2 className="font-display text-2xl font-semibold" style={{ color: "#0B1F3A" }}>

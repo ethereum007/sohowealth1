@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { insightPosts } from "@/lib/insights/posts";
 import { allRealEstateGuides } from "@/lib/real-estate/seo-pages";
+import { propertyServices, realEstateArticles } from "@/lib/real-estate/vertical";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.sohowealth.in";
@@ -42,6 +43,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/services/nri",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/nri-telugu",       lastModified: "2026-08-13", changeFrequency: "weekly",  priority: 0.95 },
     { path: "/hyderabad-real-estate", lastModified: "2026-06-16", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/hyderabad-real-estate/news", lastModified: "2026-08-23", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/hyderabad-real-estate/guides", lastModified: "2026-08-23", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/tools/property-calculators", lastModified: "2026-08-23", changeFrequency: "monthly", priority: 0.85 },
     { path: "/portfolio-review",  lastModified: "2026-04-27", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/aif-advisory",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
     { path: "/mutual-funds",      lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
@@ -89,5 +93,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: page.sitemapPriority,
   }));
 
-  return [...staticRoutes, ...realEstateRoutes, ...insightRoutes];
+  const propertyServiceRoutes = propertyServices.map((service) => ({
+    url: `${baseUrl}${service.path}`,
+    lastModified: new Date("2026-08-23"),
+    changeFrequency: "weekly" as const,
+    priority: 0.9,
+  }));
+
+  const realEstateArticleRoutes = realEstateArticles.map((article) => ({
+    url: `${baseUrl}/hyderabad-real-estate/${article.type === "guide" ? "guides" : "news"}/${article.slug}`,
+    lastModified: new Date(article.updatedAt),
+    changeFrequency: article.type === "news" ? "weekly" as const : "monthly" as const,
+    priority: article.type === "news" ? 0.8 : 0.82,
+  }));
+
+  return [...staticRoutes, ...propertyServiceRoutes, ...realEstateRoutes, ...realEstateArticleRoutes, ...insightRoutes];
 }
