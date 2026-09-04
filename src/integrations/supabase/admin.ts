@@ -3,7 +3,7 @@ import { createClient } from "@supabase/supabase-js";
 
 export function createAdminSupabase() {
   const url = process.env.NEXT_PUBLIC_SUPABASE_REVIEW_URL;
-  const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  const serviceRoleKey = process.env.SUPABASE_REVIEW_SERVICE_ROLE_KEY || process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !serviceRoleKey) throw new Error("Server lead storage is not configured");
   return createClient(url, serviceRoleKey, { auth: { persistSession: false, autoRefreshToken: false } });
 }

@@ -11,7 +11,7 @@
 ## Release-gated work
 
 - Apply `20260904_lead_funnel.sql`, deploy the new endpoint and form, verify a production enquiry and notification, then apply `20260904b_remove_public_lead_insert.sql`.
-- Configure `SUPABASE_SERVICE_ROLE_KEY`, `SOHO_ADMIN_EMAILS`, Resend settings and a platform-level rate-limit rule.
+- Confirm `SUPABASE_REVIEW_SERVICE_ROLE_KEY` (or `SUPABASE_SERVICE_ROLE_KEY`), `SOHO_ADMIN_EMAILS`, Resend settings and a platform-level rate-limit rule.
 - Run the production crawl, Search Console runbook and post-release funnel checks.
 
 ## Rollback
