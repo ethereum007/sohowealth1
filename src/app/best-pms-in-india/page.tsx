@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { LandingPageClient } from "@/app/(seo)/LandingPageClient";
 import { bestPmsIndia } from "@/app/(seo)/landing-configs";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 
 export const metadata: Metadata = {
   title: "Best PMS in India: Compare 556 Strategies | SoHo Wealth",
@@ -63,7 +64,7 @@ export default function BestPmsIndiaPage() {
   return (
     <>
       <JsonLd data={schemas} />
-      <LandingPageClient config={bestPmsIndia} />
+      <LandingPageClient config={bestPmsIndia} pmsResearch={<PmsPerformanceLeadersSection />} />
     </>
   );
 }

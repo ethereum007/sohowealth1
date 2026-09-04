@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import PMSAdvisoryClient from "./PMSAdvisoryClient";
+import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 
 export const metadata: Metadata = {
   title: "PMS Distributor India | Compare PMS Strategies | SoHo Wealth",
@@ -23,5 +24,5 @@ export const metadata: Metadata = {
 };
 
 export default function PMSAdvisoryPage() {
-  return <PMSAdvisoryClient />;
+  return <PMSAdvisoryClient pmsResearch={<PmsPerformanceLeadersSection />} />;
 }

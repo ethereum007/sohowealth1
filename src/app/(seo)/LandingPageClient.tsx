@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
-import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { RelatedServices, type RelatedService } from "@/components/seo/RelatedServices";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -69,7 +68,7 @@ function AnimatedSection({ children, className = "" }: { children: React.ReactNo
   );
 }
 
-export function LandingPageClient({ config }: { config: LandingPageConfig }) {
+export function LandingPageClient({ config, pmsResearch }: { config: LandingPageConfig; pmsResearch?: React.ReactNode }) {
   const scrollToConsultation = () => {
     document.getElementById(`${config.slug}-consultation`)?.scrollIntoView({ behavior: "smooth" });
   };
@@ -139,7 +138,7 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
         </div>
       </section>
 
-      {config.slug === "best-pms-in-india" && <PmsPerformanceLeadersSection />}
+      {pmsResearch}
 
       {config.sections.map((section, index) => (
         <section key={section.heading} className="py-24 lg:py-32" style={{ backgroundColor: index % 2 === 0 ? "#FFFFFF" : "#F7F8FA" }}>

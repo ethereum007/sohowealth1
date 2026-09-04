@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { FAQSection } from "@/components/seo/FAQSection";
 import { RelatedServices } from "@/components/seo/RelatedServices";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
-import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
 import { CheckCircle2, Database, FileSearch, Scale, ShieldCheck } from "lucide-react";
 
 const pmsFaqs = [
@@ -82,7 +81,7 @@ const diligenceSteps = [
   { icon: ShieldCheck, title: "Whole-portfolio fit", copy: "Check overlap with mutual funds, SIFs and direct equity, then size the allocation so one manager or style cannot dominate the family portfolio." },
 ];
 
-const PMSAdvisoryClient = () => {
+const PMSAdvisoryClient = ({ pmsResearch }: { pmsResearch: React.ReactNode }) => {
   const scrollToForm = () => {
     document.getElementById("pms-comparison-form")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -125,7 +124,7 @@ const PMSAdvisoryClient = () => {
       </nav>
 
       <section id="pms-research" className="scroll-mt-36">
-        <PmsPerformanceLeadersSection />
+        {pmsResearch}
       </section>
 
       <section id="pms-fit" className="scroll-mt-36 bg-white py-24 lg:py-32">
