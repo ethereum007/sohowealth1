@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "RSU Wealth Planning for Indian Tech Professionals | SoHo",
   description:
     "Coordinate RSU concentration, vesting records, Indian tax questions and diversification with a practical wealth plan for Indian tech professionals.",
-  keywords:
-    "NRI RSU planning, RSU tax India, ESOP tax planning India, FEMA OPI RSUs, RSU dividend tax India, US estate tax Indian resident, UCITS ETF India, foreign asset reporting Schedule FA, RSU consultation",
   alternates: { canonical: "https://www.sohowealth.in/rsu-esops" },
   openGraph: {
     title: "RSU Wealth Planning for Indian Tech Professionals | SoHo Wealth",

@@ -29,6 +29,9 @@ for (const file of sourceFiles) {
   if (/^["']use client["'];?/m.test(source) && /pms_profiles_enriched[^"']*\.json/.test(source)) {
     errors.push(`${relative}: enriched PMS JSON must not be imported by a client component`);
   }
+  if (/\b(?:export const metadata|generateMetadata)\b/.test(source) && /\bkeywords\s*:/.test(source.split(/const\s+\w*Schema|<JsonLd/)[0])) {
+    errors.push(`${relative}: emitted Metadata must not include a keywords property`);
+  }
 }
 
 for (const file of pageFiles) {
@@ -46,7 +49,7 @@ if (!/metadataBase:\s*new URL\(["']https:\/\/www\.sohowealth\.in["']\)/.test(lay
 }
 
 const robots = fs.readFileSync(path.join(appDir, "robots.ts"), "utf8");
-for (const required of ["/app", "/auth/", "/sign-in", "https://www.sohowealth.in/sitemap.xml"]) {
+for (const required of ["/app", "/auth/", "/sign-in", "/api/", "https://www.sohowealth.in/sitemap.xml"]) {
   if (!robots.includes(required)) errors.push(`src/app/robots.ts: missing ${required}`);
 }
 

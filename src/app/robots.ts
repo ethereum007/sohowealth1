@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/app", "/app/", "/auth/", "/sign-in"],
+        disallow: ["/app", "/app/", "/auth/", "/sign-in", "/api/"],
       },
     ],
     sitemap: "https://www.sohowealth.in/sitemap.xml",

@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "SIF Distributor India | Specialized Investment Funds | SoHo Wealth",
   description:
     "AMFI-registered SIF distributor serving investors across India. Compare Specialized Investment Fund structures, Rs. 10L minimum, SIF vs PMS and product fit.",
-  keywords:
-    "SIF investment India, SIF distributor India, specialized investment fund, SEBI SIF, SIF comparison India, SIF vs PMS, SIFPrime",
   alternates: { canonical: "https://www.sohowealth.in/sif" },
   openGraph: {
     title: "SIF Distributor India | SoHo Wealth",

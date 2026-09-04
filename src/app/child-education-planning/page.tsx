@@ -6,7 +6,6 @@ const canonicalUrl = "https://www.sohowealth.in/child-education-planning";
 export const metadata: Metadata = {
   title: "Child Education Planning India: SIP & Corpus Guide | SoHo Wealth",
   description: "Estimate the future cost and monthly SIP for your child's higher education in India or abroad. Learn how inflation, timeline and asset allocation affect the plan.",
-  keywords: ["child education planning India", "child education SIP calculator", "education corpus calculator", "SIP for child education", "child future planning"],
   alternates: { canonical: canonicalUrl }, robots: { index: true, follow: true },
   openGraph: { title: "Child Education Planning India | SoHo Wealth", description: "Build an education corpus around inflation, timeline and realistic monthly investing.", url: canonicalUrl, type: "article" },
 };

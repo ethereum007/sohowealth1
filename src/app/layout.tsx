@@ -24,11 +24,10 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sohowealth.in"),
   title: {
-    default: "Wealth Planning & Investment Distribution Hyderabad | SoHo Wealth",
+    default: "Wealth Planning for HNIs, Founders & NRIs | SoHo Wealth",
     template: "%s",
   },
-  description: "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs across mutual funds, SIF and PMS.",
-  keywords: ["wealth planning Hyderabad", "wealth management Hyderabad", "investment distribution Hyderabad", "portfolio review Hyderabad", "PMS distributor Hyderabad", "best PMS in Hyderabad", "NRI wealth planning Hyderabad", "SIF investment India", "mutual fund distributor Hyderabad", "HNI wealth management"],
+  description: "National wealth planning and disclosed investment distribution for HNIs, founders, families and NRIs across mutual funds, SIF and PMS.",
   authors: [{ name: "SoHo Wealth" }],
   twitter: {
     card: "summary_large_image",

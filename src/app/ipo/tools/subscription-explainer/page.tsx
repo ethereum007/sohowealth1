@@ -8,7 +8,6 @@ import { SubscriptionExplainer } from "@/components/ipo/SubscriptionExplainer";
 export const metadata: Metadata = {
   title: "IPO Subscription Calculator & Allotment Explainer",
   description: "Calculate an IPO subscription multiple and understand QIB, NII and retail demand with a simple allotment illustration for Indian IPOs.",
-  keywords: ["IPO subscription calculator", "IPO subscription meaning", "IPO allotment probability", "retail IPO allotment", "QIB NII retail subscription"],
   alternates: { canonical: "https://www.sohowealth.in/ipo/tools/subscription-explainer" },
   openGraph: {
     title: "IPO Subscription Calculator and Retail Allotment Explainer",

@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   title: "Wealth Planning & Investment Distribution Hyderabad | SoHo Wealth",
   description:
     "Hyderabad wealth-planning process, portfolio review and investment distribution for HNIs, founders, families, tech professionals and NRIs.",
-  keywords:
-    "wealth advisor Hyderabad, wealth management Hyderabad, investment advisor Hyderabad, financial advisor Hyderabad, HNI wealth management Hyderabad, NRI investment advisor Hyderabad",
   alternates: { canonical: "https://www.sohowealth.in/wealth-management-hyderabad" },
   openGraph: {
     title: "Wealth Planning & Investment Distribution Hyderabad | SoHo Wealth",

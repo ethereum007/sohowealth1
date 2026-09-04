@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "Mutual Fund Distributor India — SIP, Equity, Debt | SoHo Wealth",
   description:
     "AMFI-registered mutual fund distributor serving investors across India. Compare equity, debt, hybrid and ELSS structures, SIPs and existing holdings.",
-  keywords:
-    "mutual fund distributor India, mutual fund portfolio review, SIP investment India, equity mutual funds, debt funds, ELSS tax saving funds",
   alternates: { canonical: "https://www.sohowealth.in/mutual-funds" },
   openGraph: {
     title: "Mutual Fund Distribution Across India — SoHo Wealth",

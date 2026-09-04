@@ -4,7 +4,7 @@ import { trackEvent } from "@/lib/gtag";
 
 const WhatsAppButton = () => {
   const handleClick = () => {
-    trackEvent("whatsapp_click", { location: "floating_button" });
+    trackEvent("whatsapp_click", { source_component: "floating-button" });
   };
 
   return (

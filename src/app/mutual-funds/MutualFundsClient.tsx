@@ -77,6 +77,9 @@ const testimonials = [
   { quote: "SoHo Wealth has been a trusted partner in my financial journey. Kiran and his team's personalized advice have helped me make confident, well-informed investment decisions.", name: "Mr. Nitin", title: "Founder & MD, IT firm" },
 ];
 
+// Publish only after written permission is recorded in the content source.
+const publishedTestimonials: typeof testimonials = [];
+
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
@@ -172,7 +175,8 @@ const MutualFundsClient = () => {
           </div>
         </section>
 
-        {/* TESTIMONIALS */}
+        {/* Testimonials remain hidden until written publication permission is recorded. */}
+        {publishedTestimonials.length > 0 ? (
         <section className="py-24 lg:py-32 bg-white">
           <div className="container mx-auto px-6 lg:px-8">
             <AnimatedSection className="text-center mb-14">
@@ -181,7 +185,7 @@ const MutualFundsClient = () => {
               </h2>
             </AnimatedSection>
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {testimonials.map((t, i) => (
+              {publishedTestimonials.map((t, i) => (
                 <AnimatedSection key={i}>
                   <div className="rounded-xl bg-white p-8 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)] border-l-4 h-full" style={{ borderLeftColor: "#C9A84C" }}>
                     <p className="font-body text-base leading-relaxed mb-6 italic" style={{ color: "#4A5568" }}>"{t.quote}"</p>
@@ -193,6 +197,8 @@ const MutualFundsClient = () => {
             </div>
           </div>
         </section>
+
+        ) : null}
 
         {/* FAQ */}
         <section className="py-24 lg:py-32" style={{ backgroundColor: "#F7F8FA" }}>

@@ -30,7 +30,7 @@ export function RSUConcentrationWorksheet() {
 
   const onValue = (setter: (value: string) => void, value: string) => {
     setter(value);
-    if (!hasStarted) { setHasStarted(true); trackEvent("rsu_calculator_start", { tool: "employer_dependency" }); }
+    if (!hasStarted) { setHasStarted(true); trackEvent("cta_click", { cta_variant: "rsu-calculator-start", source_component: "employer-dependency" }); }
   };
   const fields: Field[] = [
     { key: "stock", label: "Vested employer shares (₹)", help: "Current market value", value: employerStock, set: setEmployerStock },
@@ -68,7 +68,7 @@ export function RSUConcentrationWorksheet() {
               <div className="grid gap-5 sm:grid-cols-2"><div><p className="text-xs font-bold uppercase tracking-[.12em] text-[#C9A84C]">Current concentration</p><p className="mt-2 font-display text-4xl font-semibold">{liquidPortfolio ? `${concentration.toFixed(1)}%` : "—"}</p></div><div><p className="text-xs font-bold uppercase tracking-[.12em] text-[#C9A84C]">Broader equity dependency</p><p className="mt-2 font-display text-4xl font-semibold">{liquidPortfolio ? `${broaderDependency.toFixed(1)}%` : "—"}</p></div></div>
               <div className="mt-5 border-t border-white/15 pt-5"><p className="text-xs text-white/55">Planning signal</p><p className="mt-1 text-lg font-semibold">{liquidPortfolio ? reviewLevel : "Enter values to begin"}</p><p className="mt-2 text-xs leading-relaxed text-white/60">Income dependency: {money.format(values.income)} a year. This is not included in either percentage.</p></div>
             </div>
-            <div className="mt-6 flex flex-col gap-3 sm:flex-row"><Link href="/tools/rsu-decision-check" onClick={() => trackEvent("rsu_calculator_complete", { concentration_band: concentration >= 20 ? "20_plus" : concentration >= 10 ? "10_20" : "under_10" })} className="inline-flex min-h-12 flex-1 items-center justify-center rounded-xl bg-[#C9A84C] px-5 text-sm font-semibold text-[#0B1F3A]">Take the decision check<ArrowRight className="ml-2 h-4 w-4" /></Link><a href="/guides/soho-wealth-annual-rsu-planning-pack.pdf" download onClick={() => trackEvent("rsu_pack_download", { location: "calculator" })} className="inline-flex min-h-12 flex-1 items-center justify-center rounded-xl border border-slate-300 px-5 text-center text-sm font-semibold text-[#0B1F3A]">Download planning pack</a></div>
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row"><Link href="/tools/rsu-decision-check" onClick={() => trackEvent("calculator_complete", { result_band: concentration >= 20 ? "20_plus" : concentration >= 10 ? "10_20" : "under_10", service: "rsu-concentration" })} className="inline-flex min-h-12 flex-1 items-center justify-center rounded-xl bg-[#C9A84C] px-5 text-sm font-semibold text-[#0B1F3A]">Take the decision check<ArrowRight className="ml-2 h-4 w-4" /></Link><a href="/guides/soho-wealth-annual-rsu-planning-pack.pdf" download onClick={() => trackEvent("sample_deliverable_view", { cta_variant: "rsu-planning-pack", source_component: "calculator" })} className="inline-flex min-h-12 flex-1 items-center justify-center rounded-xl border border-slate-300 px-5 text-center text-sm font-semibold text-[#0B1F3A]">Download planning pack</a></div>
             <p className="mt-5 text-xs leading-relaxed text-slate-500">Educational planning signal only—not a safe limit, sell recommendation, tax computation or suitability assessment.</p>
           </div>
         </div>

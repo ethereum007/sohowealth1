@@ -1,70 +1,12 @@
-"use client";
+import Link from "next/link";
 
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
-
-const columns = [
-  {
-    emoji: "🏦",
-    title: "Boutique. Not Banking.",
-    text: "Our approach is centered on thoughtful portfolio construction, aligned with your long-term goals and growth. Just one objective: making your money work smarter and grow sustainably.",
-  },
-  {
-    emoji: "🎯",
-    title: "Institutional Thinking. Personal Attention.",
-    text: "Every review starts with the investor's existing allocation, goals, liquidity and risk context. We work with families, C-suite executives and entrepreneurs building serious wealth.",
-  },
-  {
-    emoji: "🚀",
-    title: "New Products, Carefully Explained.",
-    text: "From Specialized Investment Funds to eligible Pre-IPO and global routes, we explain structure, risk, liquidity and product documents before implementation.",
-  },
+const evidence = [
+  { title: "Registered distribution", text: "AMFI mutual fund and SIF distributor, ARN 306593; APMI PMS distributor, APRN01233. SoHo Wealth is not a SEBI Registered Investment Adviser." },
+  { title: "Whole-portfolio review", text: "The process starts with assets, liabilities, goals, liquidity, risk and overlap before discussing a product route." },
+  { title: "Document-led research", text: "Recommendations within the disclosed distribution role are supported by current product documents, comparable data and visible source dates." },
+  { title: "Clear professional boundaries", text: "Tax returns, legal opinions and regulated advice outside our role stay with appropriately qualified professionals." },
 ];
 
 export function WhySohoSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
-  return (
-    <section className="py-24 lg:py-32 bg-white" ref={ref}>
-      <div className="container mx-auto px-6 lg:px-8">
-        {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16"
-          style={{ color: "#0B1F3A" }}
-        >
-          Why Serious Investors Choose{" "}
-          <span style={{ color: "#C9A84C" }}>SoHo Wealth</span>
-        </motion.h2>
-
-        {/* 3-column grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          {columns.map((col, i) => (
-            <motion.div
-              key={col.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
-              className="rounded-xl bg-white p-8 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)] border-t-4"
-              style={{ borderTopColor: "#0B1F3A" }}
-            >
-              <div className="text-4xl mb-5">{col.emoji}</div>
-              <h3
-                className="font-display text-xl font-semibold mb-3"
-                style={{ color: "#0B1F3A" }}
-              >
-                {col.title}
-              </h3>
-              <p className="font-body text-base leading-relaxed" style={{ color: "#4A5568" }}>
-                {col.text}
-              </p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
+  return <section className="bg-white py-20"><div className="container mx-auto max-w-6xl px-6"><p className="text-center text-xs font-bold uppercase tracking-[.2em] text-[#A78328]">Trust through evidence</p><h2 className="mx-auto mt-4 max-w-3xl text-center font-display text-3xl font-semibold text-[#0B1F3A] md:text-5xl">Know the role, process and evidence before you act</h2><div className="mt-12 grid gap-6 md:grid-cols-2">{evidence.map(item=><article key={item.title} className="rounded-xl border border-slate-200 p-7"><h3 className="text-xl font-semibold text-[#0B1F3A]">{item.title}</h3><p className="mt-3 leading-7 text-slate-600">{item.text}</p></article>)}</div><div className="mt-8 flex flex-wrap justify-center gap-6 text-sm font-semibold"><Link className="underline" href="/disclosures">Read disclosures</Link><Link className="underline" href="/team">Meet the team</Link><Link className="underline" href="/resources/sample-portfolio-diagnostic">See a sample deliverable</Link></div></div></section>;
 }

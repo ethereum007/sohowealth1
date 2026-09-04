@@ -6,7 +6,6 @@ import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 export const metadata: Metadata = {
   title: "REIT Investing in India — Build Real Estate into Your Portfolio | SoHo Wealth",
   description: "Understand Indian REITs, distributions, liquidity, risks, taxation and portfolio allocation. Book a REIT portfolio consultation with SoHo Wealth, Hyderabad.",
-  keywords: "REIT investment India, how to invest in REITs India, REIT advisor Hyderabad, listed real estate investment trust, REIT portfolio allocation, commercial real estate investing India",
   alternates: { canonical: "https://www.sohowealth.in/reits" },
   openGraph: {
     title: "REITs as an Asset Class | SoHo Wealth",

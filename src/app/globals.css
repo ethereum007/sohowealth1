@@ -142,3 +142,6 @@
   background: hsl(155 75% 40% / 0.2);
   color: hsl(210 20% 15%);
 }
+@media print {
+  details:not([open]) > :not(summary) { display: block !important; }
+}

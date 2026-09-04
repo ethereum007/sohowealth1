@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "Why SoHo Wealth — Independent, Unbiased Wealth Management | Hyderabad",
   description:
     "Why investors choose SoHo Wealth for portfolio review, registered investment distribution, founder access and a Hyderabad-first service model.",
-  keywords:
-    "why SoHo Wealth, independent wealth advisor Hyderabad, unbiased financial advisor India, fee-transparent wealth management",
   alternates: { canonical: "https://www.sohowealth.in/why-us" },
   openGraph: {
     title: "Why SoHo Wealth — The SoHo Difference",

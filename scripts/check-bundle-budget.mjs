@@ -1,0 +1,4 @@
+import fs from "node:fs"; import path from "node:path"; import zlib from "node:zlib";
+const dir=path.join(process.cwd(),".next","static","chunks"); if(!fs.existsSync(dir)){console.error("Run next build before bundle budget checks.");process.exit(1)}
+const files=[];function walk(d){for(const e of fs.readdirSync(d,{withFileTypes:true})){const f=path.join(d,e.name);if(e.isDirectory()) walk(f); else if(e.name.endsWith(".js")) files.push(f)}}walk(dir);
+const sizes=files.map(file=>({file:path.relative(dir,file),gzip:zlib.gzipSync(fs.readFileSync(file)).length})).sort((a,b)=>b.gzip-a.gzip);const max=300*1024;const failures=sizes.filter(x=>x.gzip>max);if(failures.length){console.error(failures.map(x=>`${x.file}: ${Math.round(x.gzip/1024)} KB gzip (limit 300 KB)`).join("\n"));process.exit(1)}console.log(`Bundle budget passed for ${sizes.length} chunks; largest is ${Math.round((sizes[0]?.gzip||0)/1024)} KB gzip.`);

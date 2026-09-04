@@ -9,7 +9,6 @@ export const metadata: Metadata = {
   title: "Upcoming IPOs August 2026: Mainboard & SME Calendar",
   description:
     "Upcoming IPOs in August 2026: week-wise Mainboard and SME IPO dates, issue sizes, price bands, learning guides and source-led analysis.",
-  keywords: ["upcoming IPO August 2026", "IPO calendar August 2026", "upcoming IPOs India", "Mainboard IPO", "SME IPO", "IPO analysis India"],
   alternates: { canonical: "https://www.sohowealth.in/ipo" },
   openGraph: {
     title: "IPO Research | SoHo Wealth",

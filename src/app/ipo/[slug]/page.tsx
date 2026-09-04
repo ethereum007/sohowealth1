@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (!item) return {};
   const title = `${item.company} IPO 2026: Price, Listing & Analysis`;
   const description = `${item.company} IPO 2026 analysis: ${item.issue.priceBand}, dates, lot size, issue size, listing status, financials, risks and valuation. Updated ${item.analysisAsOf}.`;
-  return { title, description, keywords: [`${item.company} IPO`, `${item.company} IPO 2026`, `${item.company} IPO analysis`, `${item.company} IPO price band`, `${item.company} IPO listing`, `${item.company} IPO financials`, `${item.company} IPO valuation`], alternates: { canonical: `https://www.sohowealth.in/ipo/${item.slug}` }, openGraph: { title, description, url: `https://www.sohowealth.in/ipo/${item.slug}`, type: "article" } };
+  return { title, description, alternates: { canonical: `https://www.sohowealth.in/ipo/${item.slug}` }, openGraph: { title, description, url: `https://www.sohowealth.in/ipo/${item.slug}`, type: "article" } };
 }
 
 const money = (value: number | null) => value === null ? "Not announced" : `₹${value.toLocaleString("en-IN")} Cr`;

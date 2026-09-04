@@ -26,16 +26,6 @@ export const metadata: Metadata = {
   title: "Hyderabad Real Estate Advisory | Residential, Commercial & NRI Property | SoHo Wealth",
   description:
     "Hyderabad real estate advisory for HNIs, NRIs and families. Residential, commercial, pre-leased assets, RERA/HMDA checks, NRI property planning and portfolio fitment.",
-  keywords: [
-    "Hyderabad real estate advisory",
-    "Hyderabad real estate investment",
-    "NRI property investment Hyderabad",
-    "commercial real estate Hyderabad",
-    "residential property Hyderabad",
-    "RERA property Hyderabad",
-    "HMDA approved plots Hyderabad",
-    "TS RERA registered consultant",
-  ],
   authors: [{ name: "SoHo Wealth" }],
   alternates: { canonical: pageUrl },
   robots: { index: true, follow: true },

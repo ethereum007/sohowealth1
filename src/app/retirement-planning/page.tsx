@@ -10,7 +10,6 @@ const canonicalUrl = "https://www.sohowealth.in/retirement-planning";
 export const metadata: Metadata = {
   title: "Retirement Planning in Hyderabad, India | SoHo Wealth",
   description: "Retirement planning in Hyderabad for corpus, monthly income, inflation, healthcare, EPF, NPS, annuities, withdrawals and spouse protection.",
-  keywords: ["retirement planning Hyderabad", "retirement planner Hyderabad", "retirement planning India", "retirement income planning India", "retirement corpus calculator India", "post retirement income planning", "NPS annuity planning", "EPF retirement planning"],
   alternates: { canonical: canonicalUrl },
   robots: { index: true, follow: true },
   openGraph: { title: "Retirement Planning in Hyderabad, India | SoHo Wealth", description: "Plan retirement corpus, monthly income, inflation, healthcare, EPF, NPS, annuities and family continuity.", url: canonicalUrl, type: "website", images: ["https://www.sohowealth.in/retirement-planning/opengraph-image"] },

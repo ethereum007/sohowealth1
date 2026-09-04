@@ -9,6 +9,12 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/:path*",
+        has: [{ type: "host", value: "sohowealth.in" }],
+        destination: "https://www.sohowealth.in/:path*",
+        permanent: true,
+      },
+      {
         source: "/nri-real-estate-hyderabad",
         destination: "/nri-real-estate-in-hyderabad",
         permanent: true,
@@ -47,6 +53,10 @@ const nextConfig = {
           { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=()" },
         ],
       },
+      ...["/api/:path*", "/app/:path*", "/auth/:path*", "/sign-in"].map((source) => ({
+        source,
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      })),
       {
         source: "/(.*)\\.(jpg|jpeg|png|gif|ico|svg|webp)",
         headers: [

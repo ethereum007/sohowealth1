@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "AIF Evaluation & Investment Support India | SoHo Wealth",
   description:
     "Evaluate AIF structure, liquidity, manager documents, costs and portfolio fit across India. Category I, II and III funds; minimum ₹1 crore.",
-  keywords:
-    "AIF distribution India, alternative investment funds India, AIF minimum investment, private equity India, venture capital funds India",
   alternates: { canonical: "https://www.sohowealth.in/aif-advisory" },
   openGraph: {
     title: "AIF Evaluation & Investment Support | SoHo Wealth",

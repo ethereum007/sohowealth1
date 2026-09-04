@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "Free Portfolio Review India | SoHo Wealth",
   description:
     "Get a free 30-minute portfolio review with Kiran Dutta of SoHo Wealth. Honest analysis. No sales pitch. For portfolios \u20B925L+",
-  keywords:
-    "free portfolio review India, portfolio analysis India, investment portfolio review, SoHo Wealth review",
   alternates: { canonical: "https://www.sohowealth.in/portfolio-review" },
   openGraph: {
     title: "Free Portfolio Review India | SoHo Wealth",

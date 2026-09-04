@@ -11,7 +11,6 @@ const canonicalUrl = "https://www.sohowealth.in/tools/retirement-inflation-calcu
 export const metadata: Metadata = {
   title: "Retirement Inflation Calculator India | SoHo",
   description: "Calculate how today's monthly expenses may grow by retirement and see the future purchasing power of a fixed pension using editable inflation assumptions.",
-  keywords: ["retirement inflation calculator India", "future retirement expenses calculator", "pension purchasing power calculator", "inflation after retirement"],
   alternates: { canonical: canonicalUrl },
   robots: { index: true, follow: true },
   openGraph: { title: "Retirement Inflation Calculator India", description: "Estimate future retirement expenses and the purchasing power of a fixed pension.", url: canonicalUrl, type: "website", images: ["https://www.sohowealth.in/retirement-planning/opengraph-image"] },

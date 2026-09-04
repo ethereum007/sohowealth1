@@ -13,7 +13,6 @@ const canonicalUrl = "https://www.sohowealth.in/tools/ai-wealth-planner";
 export const metadata: Metadata = {
   title: "AI Wealth Planner India: Goal & SIP Calculator | SoHo Wealth",
   description: "Use our free AI wealth planner to estimate your goal corpus, required monthly SIP and asset allocation for retirement, education, a home or wealth creation.",
-  keywords: ["AI wealth planner India", "financial goal planner", "SIP goal calculator", "retirement planning calculator India", "wealth planning tool", "investment goal calculator"],
   alternates: { canonical: canonicalUrl },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
   openGraph: {

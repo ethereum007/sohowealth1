@@ -5,8 +5,6 @@ export const metadata: Metadata = {
   title: "Global Investing from India — US Stocks, International ETFs & MFs | SoHo Wealth Hyderabad",
   description:
     "Invest globally from India. US stocks, international ETFs, GIFT City funds & global MFs. Full RBI/FEMA compliance. Expert LRS, forex & tax guidance.",
-  keywords:
-    "global investing India, US stocks from India, international mutual funds, LRS investment, GIFT City funds, global ETFs, forex compliance India, offshore investing",
   alternates: { canonical: "https://www.sohowealth.in/global-investing" },
   openGraph: {
     title: "Invest Globally from India — US Stocks, ETFs & International MF | SoHo Wealth",

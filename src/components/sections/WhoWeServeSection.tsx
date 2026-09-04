@@ -1,116 +1,17 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
-import {
-  Laptop2,
-  Stethoscope,
-  Languages,
-  ArrowRight
-} from "lucide-react";
 import Link from "next/link";
+import { ArrowRight, BriefcaseBusiness, Building2, Globe2, Laptop2, Stethoscope, Users } from "lucide-react";
 
 const audiences = [
-  {
-    icon: Stethoscope,
-    title: "For Doctors",
-    description: "Connect personal wealth, variable professional income, clinic capital and the freedom to practise by choice.",
-    linkLabel: "Explore doctor wealth planning",
-    href: "/financial-planning-for-doctors",
-  },
-  {
-    icon: Laptop2,
-    title: "For IT Professionals",
-    description: "Turn salary, bonuses, RSUs and ESOPs into a system for diversification, career optionality and financial independence.",
-    linkLabel: "Explore tech wealth planning",
-    href: "/wealth-planning-for-it-professionals",
-  },
-  {
-    icon: Languages,
-    title: "For Telugu NRIs",
-    description: "Coordinate India investments, NRI accounts, tax-filing questions and return-to-India goals in English or Telugu.",
-    linkLabel: "Explore Telugu NRI wealth",
-    href: "/nri-telugu",
-  },
+  { icon: Users, title: "HNIs", description: "Coordinate multiple managers, products, property and liquidity around family goals.", href: "/wealth-management-for-hnis" },
+  { icon: BriefcaseBusiness, title: "Founders", description: "Connect concentrated business value, personal liquidity and long-term capital allocation.", href: "/wealth-planning-for-entrepreneurs" },
+  { icon: Globe2, title: "NRIs", description: "Map India accounts, investments, property and return-to-India decisions across borders.", href: "/nri-telugu" },
+  { icon: Laptop2, title: "IT professionals", description: "Plan around salary, bonuses, RSUs, ESOPs and employer-linked concentration.", href: "/wealth-planning-for-it-professionals" },
+  { icon: Stethoscope, title: "Doctors", description: "Balance practice capital, uneven income, protection and financial independence.", href: "/financial-planning-for-doctors" },
+  { icon: Building2, title: "Family offices", description: "Use structured manager research, governance questions and consolidated portfolio context.", href: "/family-office-investment-solutions" },
 ];
 
 export function WhoWeServeSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="who-we-serve" className="py-24 lg:py-32 relative bg-muted/30" ref={ref}>
-      <div className="container mx-auto px-6 lg:px-8">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
-        >
-          <div className="line-accent mx-auto mb-6" />
-          <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground mb-6">
-            Who We <span className="text-gradient-gold">Work With</span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Different careers create different financial pressure points. Choose
-            the journey that starts with the decisions you actually face.
-          </p>
-        </motion.div>
-
-        {/* Audience Grid */}
-        <div className="mx-auto grid max-w-6xl md:grid-cols-3 gap-6 lg:gap-8">
-          {audiences.map((audience, index) => (
-            <motion.div
-              key={audience.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 text-center"
-            >
-              {/* Icon */}
-              <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-colors">
-                <audience.icon className="w-8 h-8 text-primary" />
-              </div>
-
-              {/* Content */}
-              <h3 className="font-display text-lg font-semibold text-foreground mb-3">
-                {audience.title}
-              </h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                {audience.description}
-              </p>
-              <Link
-                href={audience.href}
-                className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
-              >
-                {audience.linkLabel}
-                <ArrowRight className="h-4 w-4" aria-hidden="true" />
-              </Link>
-
-              {/* Hover gradient */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            </motion.div>
-          ))}
-        </div>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="text-center mt-12"
-        >
-          <Link
-            href="/who-we-serve"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
-          >
-            Compare all three client journeys
-            <ArrowRight className="w-5 h-5" aria-hidden="true" />
-          </Link>
-        </motion.div>
-      </div>
-    </section>
+    <section id="who-we-serve" className="bg-muted/30 py-24 lg:py-32"><div className="container mx-auto px-6 lg:px-8"><div className="mx-auto mb-16 max-w-3xl text-center"><div className="line-accent mx-auto mb-6" /><h2 className="font-display text-3xl font-semibold text-foreground md:text-4xl lg:text-5xl">Six wealth journeys, <span className="text-gradient-gold">one complete view</span></h2><p className="mt-6 text-lg text-muted-foreground">Start with the financial decisions created by your career, ownership structure and geography.</p></div><div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-2 lg:grid-cols-3">{audiences.map((audience) => <article key={audience.title} className="rounded-2xl border border-border bg-card p-8 text-center"><div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10"><audience.icon className="h-8 w-8 text-primary" aria-hidden="true" /></div><h3 className="font-display text-xl font-semibold text-foreground">For {audience.title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{audience.description}</p><Link href={audience.href} className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary">Explore {audience.title.toLowerCase()} planning<ArrowRight className="h-4 w-4" /></Link></article>)}</div><div className="mt-12 text-center"><Link href="/who-we-serve" className="inline-flex items-center gap-2 font-medium text-primary">Explore all six client journeys<ArrowRight className="h-5 w-5" /></Link></div></div></section>
   );
 }

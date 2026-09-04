@@ -32,18 +32,6 @@ export const metadata: Metadata = {
   title: "Wealth Planning for IT Professionals in Hyderabad | SoHo",
   description:
     "Wealth planning for IT professionals in Hyderabad. Organise salary, bonuses, RSUs, ESOPs, employer-stock concentration and financial-independence goals.",
-  keywords: [
-    "wealth planning for IT professionals Hyderabad",
-    "financial planning for tech professionals India",
-    "RSU wealth planning Hyderabad",
-    "ESOP financial planning India",
-    "investment planning for software engineers Hyderabad",
-    "financial advisor for IT professionals Hyderabad",
-    "RSU diversification India",
-    "tech professional wealth management",
-    "financial independence for software engineers India",
-    "HITEC City wealth advisor",
-  ],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Wealth Planning for IT Professionals in Hyderabad",

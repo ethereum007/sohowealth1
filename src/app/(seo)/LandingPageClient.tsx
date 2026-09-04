@@ -1,12 +1,9 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Phone, MessageCircle, ArrowRight } from "lucide-react";
-import { useRef } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { RelatedServices, type RelatedService } from "@/components/seo/RelatedServices";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { ClusterResources, type ResourceCluster } from "@/components/seo/ClusterResources";
 
 type ComparisonColumn = {
   key: string;
@@ -53,26 +50,10 @@ export type LandingPageConfig = {
 };
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, y: 24 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.55 }}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
+  return <div className={className}>{children}</div>;
 }
 
 export function LandingPageClient({ config, pmsResearch }: { config: LandingPageConfig; pmsResearch?: React.ReactNode }) {
-  const scrollToConsultation = () => {
-    document.getElementById(`${config.slug}-consultation`)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   const url = `https://www.sohowealth.in/${config.slug}`;
   const breadcrumbSchema = {
     "@context": "https://schema.org",
@@ -107,6 +88,7 @@ export function LandingPageClient({ config, pmsResearch }: { config: LandingPage
           audience: { "@type": "Audience", audienceType: "HNIs, NRIs, families, founders and professionals" },
         }),
   };
+  const cluster: ResourceCluster = config.slug.includes("pms") ? "pms" : config.slug.includes("nri") ? "nri" : config.slug.includes("retirement") ? "retirement" : config.slug.includes("rsu") || config.slug.includes("it-professionals") ? "rsu" : "core";
 
   return (
     <main className="pt-20">
@@ -126,9 +108,9 @@ export function LandingPageClient({ config, pmsResearch }: { config: LandingPage
               {config.intro}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button type="button" onClick={scrollToConsultation} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <a href={`#${config.slug}-consultation`} data-analytics-event="cta_click" data-analytics-label={config.primaryCta} data-analytics-location={`${config.slug}-hero`} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 {config.primaryCta} <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
+              </a>
               <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-lg font-semibold text-base border border-white/20 text-white hover:bg-white/10 transition-colors">
                 <MessageCircle className="w-4 h-4" />
                 {config.secondaryCta || "WhatsApp SoHo Wealth"}
@@ -224,6 +206,8 @@ export function LandingPageClient({ config, pmsResearch }: { config: LandingPage
         </section>
       )}
 
+      <ClusterResources cluster={cluster} />
+
       <section className="py-20 lg:py-28" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="container mx-auto px-6 lg:px-8 text-center max-w-3xl">
           <AnimatedSection>
@@ -234,9 +218,9 @@ export function LandingPageClient({ config, pmsResearch }: { config: LandingPage
               Talk to Kiran Dutta and get a clear view of which route fits your portfolio, risk profile, and goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <button type="button" onClick={scrollToConsultation} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
+              <a href={`#${config.slug}-consultation`} data-analytics-event="cta_click" data-analytics-label="book-consultation" data-analytics-location={`${config.slug}-body`} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                 Book Free Consultation
-              </button>
+              </a>
               <a href="tel:+919032999466" className="inline-flex items-center gap-2 font-semibold text-white">
                 <Phone className="w-4 h-4" />
                 +91 90329 99466

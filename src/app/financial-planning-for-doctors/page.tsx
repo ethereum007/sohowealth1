@@ -32,18 +32,6 @@ export const metadata: Metadata = {
   title: "Wealth Planning for Doctors in AP & Telangana | SoHo",
   description:
     "Wealth planning for doctors across Andhra Pradesh and Telangana. Organise variable income, clinic capital, investments, tax coordination and retirement.",
-  keywords: [
-    "financial planning for doctors",
-    "wealth planning for doctors in AP and Telangana",
-    "financial planning for doctors in Telangana",
-    "financial planning for doctors in Andhra Pradesh",
-    "wealth management for doctors Hyderabad",
-    "financial advisor for doctors Hyderabad",
-    "investment planning for doctors",
-    "doctor wealth management Hyderabad",
-    "financial planning for medical professionals",
-    "clinic owner financial planning",
-  ],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "Wealth Planning for Doctors in AP & Telangana",

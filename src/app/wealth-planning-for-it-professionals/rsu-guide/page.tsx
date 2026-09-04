@@ -37,18 +37,6 @@ export const metadata: Metadata = {
   title: "RSU Tax & Diversification Guide for IT Professionals | SoHo",
   description:
     "RSU guide for Indian IT professionals: vesting, employer-stock concentration, Schedule FA, diversification routes and a practical decision checklist.",
-  keywords: [
-    "RSU tax India",
-    "RSU tax for Indian employees",
-    "RSU diversification India",
-    "Schedule FA RSU",
-    "foreign RSU tax India",
-    "employer stock concentration India",
-    "RSU financial planning Hyderabad",
-    "US shares estate tax Indian resident",
-    "RSU vesting tax India",
-    "RSU wealth planning for IT professionals",
-  ],
   alternates: { canonical: canonicalUrl },
   openGraph: {
     title: "RSU Tax & Diversification Guide for IT Professionals",

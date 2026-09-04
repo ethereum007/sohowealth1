@@ -6,8 +6,6 @@ export const metadata: Metadata = {
   title: "SIF vs PMS | Minimums, Risk, Tax & Suitability | SoHo Wealth",
   description:
     "Compare SIF vs PMS in India: minimum investment, structure, transparency, customization, tax treatment and suitability for HNIs.",
-  keywords:
-    "SIF vs PMS, SIF vs portfolio management services, SIF minimum investment, PMS minimum investment, SIF investment India, PMS comparison India",
   alternates: { canonical: "https://www.sohowealth.in/sif-vs-pms" },
   openGraph: {
     title: "SIF vs PMS | SoHo Wealth",

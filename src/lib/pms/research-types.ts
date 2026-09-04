@@ -1,6 +1,7 @@
 export type PmsPeriod = "1M" | "3M" | "6M" | "1Y" | "2Y" | "3Y" | "5Y" | "10Y" | "SI";
 
 export interface PmsRecord {
+  slug: string;
   amc_name: string;
   aum_crore: string;
   aum_crore_detail: string;
@@ -25,6 +26,9 @@ export interface PmsRecord {
   return_since_inception: string;
   strategy_display_name: string;
   strategy_url: string;
+  source: string;
+  data_as_of: string;
+  profile_as_on: string;
   top_holdings: { name: string; weight: string }[];
   top_sectors: { name: string; weight: string }[];
 }
@@ -35,4 +39,7 @@ export interface PmsResearchPage {
   total: number;
   page: number;
   pageCount: number;
+  period: PmsPeriod;
+  query: string;
+  category: string;
 }

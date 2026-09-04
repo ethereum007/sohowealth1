@@ -6,7 +6,6 @@ const canonicalUrl = "https://www.sohowealth.in/goal-based-sip-planning";
 export const metadata: Metadata = {
   title: "Goal-Based SIP Planning India: Calculate Required SIP | SoHo Wealth",
   description: "Learn how to calculate the monthly SIP required for a target corpus using your timeline, existing savings and realistic return assumptions.",
-  keywords: ["goal based SIP planning", "SIP for target amount", "monthly SIP required calculator", "financial goal planning India", "goal based investing"],
   alternates: { canonical: canonicalUrl }, robots: { index: true, follow: true },
   openGraph: { title: "Goal-Based SIP Planning India | SoHo Wealth", description: "Convert a target corpus and deadline into an actionable monthly SIP plan.", url: canonicalUrl, type: "article" },
 };

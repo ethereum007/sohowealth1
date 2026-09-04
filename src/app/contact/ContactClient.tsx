@@ -17,6 +17,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { trackEvent } from "@/lib/gtag";
 import { captureLeadAttribution } from "@/lib/lead-attribution";
 import { submitPortfolioLead } from "@/lib/lead-submit";
+import { getLeadIntent, inferLeadIntent } from "@/lib/leads/lead-intents";
 
 const contactBreadcrumbs = {
   "@context": "https://schema.org",
@@ -132,8 +133,10 @@ const ContactClient = () => {
     investorType: "",
     investmentRange: "",
     message: "",
+    privacyConsent: false,
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const formStartedAt = useRef(new Date().toISOString());
 
   const scrollToForm = () => {
     document.getElementById("contact-form")?.scrollIntoView({ behavior: "smooth" });
@@ -141,28 +144,39 @@ const ContactClient = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.phone) {
-      toast.error("Please fill in your name, email, and phone number.");
+    if (!formData.name || !formData.phone || !formData.privacyConsent) {
+      toast.error("Please add your name and phone, then confirm the privacy consent.");
       return;
     }
     setIsSubmitting(true);
     try {
       const attribution = captureLeadAttribution();
+      const intent = inferLeadIntent(formData.investorType, formData.message);
+      const config = getLeadIntent(intent);
       const { error } = await submitPortfolioLead({
+        request_id: crypto.randomUUID(),
         name: formData.name,
-        email: formData.email,
+        email: formData.email || null,
         phone: formData.phone,
         portfolio_size: formData.investmentRange || "Not provided",
-        is_nri: formData.investorType === "nri",
-        referral_source: formData.investorType || null,
+        resident_status: formData.investorType === "nri" ? "nri" : "resident",
+        intent,
+        keyword_cluster: config.keywordCluster,
+        lead_offer: config.leadOffer,
+        page_type: "service",
+        cta_variant: "contact-page",
         source: "contact-page",
-        notes: formData.message || null,
-        ...attribution,
+        service: formData.investorType || null,
+        message: formData.message || null,
+        privacy_consent: true,
+        consented_at: new Date().toISOString(),
+        form_started_at: formStartedAt.current,
+        attribution,
       });
       if (error) throw error;
-      trackEvent("form_submit", { form_source: "contact-page", investor_type: formData.investorType || "unknown" });
+      trackEvent("lead_form_submit", { source_component: "contact-page", service: formData.investorType || "unknown" });
       toast.success("Thank you! We'll get back to you shortly.");
-      setFormData({ name: "", email: "", phone: "", investorType: "", investmentRange: "", message: "" });
+      setFormData({ name: "", email: "", phone: "", investorType: "", investmentRange: "", message: "", privacyConsent: false });
     } catch (err) {
       console.error(err);
       toast.error("Something went wrong. Please try calling us directly.");
@@ -369,6 +383,7 @@ const ContactClient = () => {
                     </Select>
                   </div>
                   <Textarea placeholder="Tell us about your financial goals..." value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} className="min-h-[120px] resize-none border-gray-200 focus:border-[#C9A84C] focus:ring-[#C9A84C]" />
+                  <label className="flex items-start gap-3 text-sm leading-relaxed text-slate-600"><input type="checkbox" checked={formData.privacyConsent} onChange={(e) => setFormData({ ...formData, privacyConsent: e.target.checked })} className="mt-1 h-4 w-4 accent-[#C9A84C]" /><span>I agree that SoHo Wealth may use these details to respond to my request.</span></label>
                   <button type="submit" disabled={isSubmitting} className="w-full inline-flex items-center justify-center h-14 px-8 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90 disabled:opacity-60" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
                     {isSubmitting ? "Sending..." : "Schedule Free Consultation"}
                     {!isSubmitting && <Send className="ml-2 w-5 h-5" />}

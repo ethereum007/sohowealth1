@@ -35,7 +35,6 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: post.seoTitle ?? `${post.title} | SoHo Wealth`,
     description: post.description,
-    keywords: post.keywords,
     authors: [{ name: "Kiran Dutta", url: "https://www.sohowealth.in/about" }],
     alternates: { canonical: url },
     robots: { index: true, follow: true },
