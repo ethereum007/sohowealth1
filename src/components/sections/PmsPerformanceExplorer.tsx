@@ -2,43 +2,14 @@
 
 import { BarChart3, ChevronLeft, ChevronRight, Search, ShieldCheck } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-
-type Period = "1M" | "3M" | "6M" | "1Y" | "2Y" | "3Y" | "5Y" | "10Y" | "SI";
-export interface PmsRecord {
-  amc_name: string;
-  aum_crore: string;
-  aum_crore_detail: string;
-  benchmark: string;
-  category: string;
-  fee_plans: Record<string, string>[];
-  fund_managers: { name: string; role: string; bio: string }[];
-  inception_date: string;
-  inception_date_detail: string;
-  investment_approach: string;
-  investment_objective: string;
-  minimum_investment: string;
-  portfolio_characteristics: Record<string, string | undefined>;
-  return_10y: string;
-  return_1m: string;
-  return_1y: string;
-  return_2y: string;
-  return_3m: string;
-  return_3y: string;
-  return_5y: string;
-  return_6m: string;
-  return_since_inception: string;
-  strategy_display_name: string;
-  strategy_url: string;
-  top_holdings: { name: string; weight: string }[];
-  top_sectors: { name: string; weight: string }[];
-}
+import type { PmsPeriod as Period, PmsRecord, PmsResearchPage } from "@/lib/pms/research-types";
 
 const periods: Period[] = ["1M", "3M", "6M", "1Y", "2Y", "3Y", "5Y", "10Y", "SI"];
 const periodKeys: Record<Period, keyof PmsRecord> = {
@@ -63,32 +34,45 @@ function disclosed(items: { name: string; weight: string }[]) {
   return items.filter((item) => item.name.toLowerCase() !== "undisclosed" && item.weight.toLowerCase() !== "undisclosed");
 }
 
-export function PmsPerformanceExplorer({ records }: { records: PmsRecord[] }) {
+export function PmsPerformanceExplorer({ initialPage }: { initialPage: PmsResearchPage }) {
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
   const [period, setPeriod] = useState<Period>("1Y");
   const [page, setPage] = useState(1);
   const [selectedStrategy, setSelectedStrategy] = useState<PmsRecord | null>(null);
+  const [result, setResult] = useState(initialPage);
+  const [isLoading, setIsLoading] = useState(false);
+  const firstRender = useRef(true);
 
-  const categories = useMemo(
-    () => [...new Set(records.map((row) => row.category))].sort(),
-    [records],
-  );
+  useEffect(() => {
+    if (firstRender.current) {
+      firstRender.current = false;
+      return;
+    }
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      setIsLoading(true);
+      const params = new URLSearchParams({ q: query, category, period, page: String(page) });
+      try {
+        const response = await fetch(`/api/pms?${params}`, { signal: controller.signal });
+        if (!response.ok) throw new Error("PMS research request failed");
+        setResult(await response.json() as PmsResearchPage);
+      } catch (error) {
+        if (!controller.signal.aborted) console.error(error);
+      } finally {
+        if (!controller.signal.aborted) setIsLoading(false);
+      }
+    }, 250);
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [category, page, period, query]);
 
-  const rows = useMemo(() => {
-    const normalizedQuery = query.trim().toLowerCase();
-    const key = periodKeys[period];
-    return records
-      .map((row) => ({ row, value: numericReturn(String(row[key])) }))
-      .filter(({ row, value }) => value !== null
-        && (category === "all" || row.category === category)
-        && (!normalizedQuery || `${row.strategy_display_name} ${row.amc_name} ${row.benchmark}`.toLowerCase().includes(normalizedQuery)))
-      .sort((a, b) => (b.value ?? -Infinity) - (a.value ?? -Infinity));
-  }, [category, period, query, records]);
-
-  const pageCount = Math.max(1, Math.ceil(rows.length / pageSize));
-  const currentPage = Math.min(page, pageCount);
-  const visibleRows = rows.slice((currentPage - 1) * pageSize, currentPage * pageSize);
+  const rows = result.records.map((row) => ({ row, value: numericReturn(String(row[periodKeys[period]])) }));
+  const pageCount = result.pageCount;
+  const currentPage = result.page;
+  const visibleRows = rows;
   const resetPage = () => setPage(1);
 
   return (
@@ -139,7 +123,7 @@ export function PmsPerformanceExplorer({ records }: { records: PmsRecord[] }) {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="all">All categories</SelectItem>
-                  {categories.map((item) => <SelectItem key={item} value={item}>{item}</SelectItem>)}
+                  {result.categories.map((item) => <SelectItem key={item} value={item}>{item}</SelectItem>)}
                 </SelectContent>
               </Select>
             </div>
@@ -153,11 +137,11 @@ export function PmsPerformanceExplorer({ records }: { records: PmsRecord[] }) {
                 </TabsList>
               </Tabs>
               <p className="font-body text-sm text-muted-foreground">
-                {rows.length.toLocaleString("en-IN")} strategies with {period} data · ranked highest to lowest
+                {result.total.toLocaleString("en-IN")} strategies with {period} data · ranked highest to lowest{isLoading ? " · Updating…" : ""}
               </p>
             </div>
 
-            <div className="mt-5 overflow-x-auto rounded-xl border border-[#E2E8F0]">
+            <div className="mt-5 overflow-x-auto rounded-xl border border-[#E2E8F0]" aria-busy={isLoading}>
               <Table>
                 <TableHeader>
                   <TableRow className="bg-[#0B1F3A] hover:bg-[#0B1F3A]">
