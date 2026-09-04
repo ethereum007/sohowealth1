@@ -6,8 +6,12 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint . --ext .js,.mjs,.ts,.tsx --ignore-pattern next-env.d.ts --max-warnings 100",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run test:wealth",
     "test:wealth": "tsx --test src/lib/wealth-planner/engine.test.ts",
+    "check:seo": "node scripts/check-seo.mjs",
+    "check:links": "node scripts/check-links.mjs",
     "check:retirement-links": "node scripts/check-retirement-links.mjs"
   },
   "dependencies": {

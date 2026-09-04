@@ -10,5 +10,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://www.sohowealth.in/sitemap.xml",
+    host: "https://www.sohowealth.in",
   };
 }
