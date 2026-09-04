@@ -5,14 +5,7 @@ export async function middleware(req: NextRequest) {
   const url = req.nextUrl;
   const { pathname } = url;
 
-  // 1) Remove trailing slashes (except root) — applies to everything.
-  if (pathname !== "/" && pathname.endsWith("/")) {
-    const dest = url.clone();
-    dest.pathname = pathname.slice(0, -1);
-    return NextResponse.redirect(dest, 308);
-  }
-
-  // 2) Auth gating only for the wealth-review product routes.
+  // Auth gating only for the wealth-review product routes.
   const needsAuth =
     pathname.startsWith("/app") ||
     pathname === "/sign-in" ||
@@ -77,10 +70,9 @@ export async function middleware(req: NextRequest) {
   return res;
 }
 
-// Match everything except static files / API routes — same as the existing
-// trailing-slash middleware, so we don't break that behaviour.
+// Keep middleware off public marketing pages. Next.js already normalizes
+// trailing slashes, and invoking auth middleware for every public request
+// needlessly consumes edge/function allocation on Vercel's Hobby plan.
 export const config = {
-  matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|.*\\.).*)",
-  ],
+  matcher: ["/app/:path*", "/sign-in", "/auth/:path*"],
 };
