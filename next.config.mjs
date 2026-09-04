@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  experimental: {
+    // Keep static generation within predictable memory bounds for the large
+    // content and PMS research datasets used across 170+ generated pages.
+    cpus: 1,
+  },
   async redirects() {
     return [
       {
