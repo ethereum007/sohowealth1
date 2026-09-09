@@ -2,9 +2,9 @@ import type { LandingPageConfig } from "./LandingPageClient";
 
 export const wealthManagementHyderabad: LandingPageConfig = {
   slug: "wealth-management-hyderabad",
-  title: "Wealth Planning in Hyderabad",
+  title: "Wealth Management in Hyderabad",
   eyebrow: "Hyderabad wealth-planning process",
-  h1: "Wealth Planning and Investment Distribution for",
+  h1: "Wealth Management and Investment Distribution for",
   highlightedH1: "HNIs, Founders, Families & NRIs.",
   intro: "SoHo Wealth is a Hyderabad-based portfolio-review and investment-distribution firm. This page explains our process, registrations, product scope, office access and ongoing service for investors who want their holdings organised under one relationship.",
   primaryCta: "Book a Hyderabad Consultation",
@@ -86,8 +86,8 @@ export const wealthManagementHyderabad: LandingPageConfig = {
     { q: "Is SoHo Wealth a SEBI Registered Investment Adviser?", a: "No. SoHo Wealth is an AMFI-registered mutual fund and SIF distributor (ARN 306593) and an APMI-registered PMS distributor (APRN01233). Its role is portfolio review, wealth planning and investment distribution; tax, legal and security-specific advice should be confirmed with qualified specialists." },
   ],
   related: [
-    { title: "PMS Advisory", href: "/pms-advisory", description: "Compare concentrated listed-equity PMS strategies from Rs. 50 lakh." },
-    { title: "SIF Advisory", href: "/sif", description: "Explore SEBI-regulated SIFs from Rs. 10 lakh." },
+    { title: "PMS Distribution", href: "/pms-advisory", description: "Compare concentrated listed-equity PMS strategies from Rs. 50 lakh." },
+    { title: "SIF Distribution", href: "/sif", description: "Explore SEBI-regulated SIFs from Rs. 10 lakh." },
     { title: "Free Portfolio Review", href: "/portfolio-review", description: "Get a 30-minute review of your current investments." },
   ],
 };
@@ -177,18 +177,18 @@ export const sifVsPms: LandingPageConfig = {
   intro: "SIF and PMS both target investors looking beyond traditional mutual funds, but they differ in minimum investment, structure, transparency, customization and tax experience. This page helps you compare both before choosing.",
   primaryCta: "Compare SIF and PMS",
   secondaryCta: "WhatsApp for Guidance",
-  serviceName: "SIF vs PMS Advisory",
-  serviceDescription: "Comparison-led advisory for investors deciding between Specialized Investment Funds and Portfolio Management Services in India.",
-  serviceType: "Investment Comparison Advisory",
+  serviceName: "SIF vs PMS Comparison",
+  serviceDescription: "Educational comparison for investors evaluating Specialized Investment Funds and Portfolio Management Services in India.",
+  serviceType: "Investment Product Comparison",
   leadSource: "sif-vs-pms page",
-  formHeading: "Get a SIF vs PMS Recommendation",
+  formHeading: "Discuss SIF vs PMS Portfolio Fit",
   formTitle: "Choose the Right Route",
   formCopy: "Tell us your portfolio size, goals and risk comfort. We will help you decide whether SIF, PMS or a simpler mutual fund route makes sense.",
   formBullets: [
     "SIF vs PMS suitability map",
     "Minimum investment and liquidity review",
     "Risk, transparency and tax comparison",
-    "Portfolio fit recommendation",
+    "Portfolio fit discussion",
     "Onboarding support if suitable",
   ],
   sections: [
@@ -236,8 +236,8 @@ export const sifVsPms: LandingPageConfig = {
     { q: "Should I choose SIF or PMS if I have Rs. 25 lakh?", a: "At Rs. 25 lakh, SIF may be accessible while PMS is not, because PMS requires Rs. 50 lakh. But the right choice also depends on liquidity needs, risk appetite and existing mutual fund allocation." },
   ],
   related: [
-    { title: "SIF Advisory", href: "/sif", description: "Understand Specialized Investment Funds in detail." },
-    { title: "PMS Advisory", href: "/pms-advisory", description: "Compare PMS strategies from Rs. 50 lakh." },
+    { title: "SIF Distribution", href: "/sif", description: "Understand Specialized Investment Funds in detail." },
+    { title: "PMS Distribution", href: "/pms-advisory", description: "Compare PMS strategies from Rs. 50 lakh." },
     { title: "Mutual Funds", href: "/mutual-funds", description: "Build a simpler goal-based portfolio when PMS or SIF is not suitable." },
   ],
 };

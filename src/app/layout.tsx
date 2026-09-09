@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description: "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs across mutual funds, SIF and PMS.",
-  keywords: ["wealth advisor Hyderabad", "wealth management Hyderabad", "investment advisor Hyderabad", "financial advisor Hyderabad", "PMS advisor Hyderabad", "best PMS in Hyderabad", "NRI investment advisor Hyderabad", "SIF investment India", "mutual fund advisor Hyderabad", "HNI wealth management"],
+  keywords: ["wealth management Hyderabad", "portfolio management services Hyderabad", "mutual fund distributor Hyderabad", "PMS distributor Hyderabad", "NRI investment services Hyderabad", "SIF investment India", "HNI wealth management"],
   authors: [{ name: "SoHo Wealth" }],
   twitter: {
     card: "summary_large_image",
@@ -187,6 +187,9 @@ const structuredData = [
       { "@type": "Place", "name": "Kondapur" },
       { "@type": "Place", "name": "Madhapur" },
       { "@type": "AdministrativeArea", "name": "Telangana" },
+      { "@type": "AdministrativeArea", "name": "Andhra Pradesh" },
+      { "@type": "City", "name": "Vijayawada" },
+      { "@type": "City", "name": "Visakhapatnam" },
       { "@type": "Country", "name": "India" }
     ]
   },

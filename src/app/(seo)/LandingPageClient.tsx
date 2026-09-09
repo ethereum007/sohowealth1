@@ -51,6 +51,7 @@ export type LandingPageConfig = {
   };
   faqs: FAQ[];
   related: RelatedService[];
+  areaServed?: Array<{ type: "City" | "AdministrativeArea" | "Country"; name: string }>;
 };
 
 function AnimatedSection({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -100,11 +101,11 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
       : {
           serviceType: config.serviceType,
           provider: { "@id": "https://www.sohowealth.in/#organization" },
-          areaServed: [
-            { "@type": "City", name: "Hyderabad" },
-            { "@type": "AdministrativeArea", name: "Telangana" },
-            { "@type": "Country", name: "India" },
-          ],
+          areaServed: (config.areaServed || [
+            { type: "City", name: "Hyderabad" },
+            { type: "AdministrativeArea", name: "Telangana" },
+            { type: "Country", name: "India" },
+          ]).map((area) => ({ "@type": area.type, name: area.name })),
           audience: { "@type": "Audience", audienceType: "HNIs, NRIs, families, founders and professionals" },
         }),
   };
@@ -232,7 +233,7 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
               Speak With SoHo Wealth
             </h2>
             <p className="font-body text-lg leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.7)" }}>
-              Talk to Kiran Dutta and get a clear view of which route fits your portfolio, risk profile, and goals.
+              Talk to Kiran Dutta and build a clearer shortlist of routes to evaluate against your portfolio, risk profile and goals.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <button type="button" onClick={scrollToConsultation} className="inline-flex items-center justify-center px-8 py-4 rounded-lg font-semibold text-base tracking-wide transition-all duration-200 hover:opacity-90" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>

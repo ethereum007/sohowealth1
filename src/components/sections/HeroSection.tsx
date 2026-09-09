@@ -55,7 +55,7 @@ export function HeroSection() {
             transition={{ duration: 0.7 }}
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
           >
-            Wealth Planning Across India for{" "}
+            Investment Distribution and Wealth Planning for{" "}
             <span style={{ color: "#C9A84C" }}>HNIs, Founders &amp; NRIs.</span>
           </motion.h1>
 
@@ -75,7 +75,7 @@ export function HeroSection() {
             transition={{ duration: 0.7, delay: 0.15 }}
             className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-9 font-body leading-relaxed"
           >
-            Portfolio review, goal mapping and investment distribution across
+            Serving Telangana, Andhra Pradesh and clients across India with portfolio review, goal mapping and investment distribution across
             Mutual Funds, PMS and SIF, with access support for AIF, Pre-IPO and
             global investing for eligible investors.
           </motion.p>
@@ -92,9 +92,9 @@ export function HeroSection() {
               style={{ background: "#C9A84C", color: "#0B1F3A" }}
               asChild
             >
-              <Link href="/tools/ai-wealth-planner">
+              <Link href="/portfolio-review">
                 <Calculator className="mr-2 h-5 w-5" aria-hidden="true" />
-                Start My Wealth Plan
+                Book a Portfolio Review
                 <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
             </Button>
@@ -105,7 +105,7 @@ export function HeroSection() {
               className="h-14 rounded-md border-white/25 bg-transparent px-8 text-base font-semibold text-white hover:bg-white/10 hover:text-white"
               asChild
             >
-              <Link href="/portfolio-review">Book a Portfolio Review</Link>
+              <Link href="/investment-products">Explore Investment Products</Link>
             </Button>
           </motion.div>
 

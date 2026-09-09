@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "SoHo Wealth — Wealth Advisor in Hyderabad",
+    name: "SoHo Wealth — Wealth Management in Hyderabad",
     short_name: "SoHo Wealth",
     description:
-      "Hyderabad's boutique wealth advisor for HNIs, family offices and NRIs. PMS, SIF, AIF, Mutual Funds, Pre-IPO and Global Investing.",
+      "Hyderabad-based portfolio review and investment distribution for HNIs, family offices and NRIs across PMS, SIF, AIF, mutual funds and global investing.",
     start_url: "/",
     display: "standalone",
     background_color: "#0B1F3A",

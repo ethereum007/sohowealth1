@@ -176,6 +176,15 @@ const realEstateLinks: MenuLink[] = [
   { name: "Property Calculators", href: "/tools/property-calculators", description: "Estimate EMI, rental yield and acquisition cost." },
 ];
 
+const locationLinks: MenuLink[] = [
+  { name: "Hyderabad", href: "/wealth-management-hyderabad", description: "Local portfolio review and investment distribution from Khajaguda." },
+  { name: "Vijayawada", href: "/wealth-management-vijayawada", description: "Video-led wealth review and distribution for Andhra Pradesh investors." },
+  { name: "Visakhapatnam", href: "/wealth-management-visakhapatnam", description: "Remote portfolio review for HNIs, professionals, families and NRIs." },
+  { name: "PMS in Hyderabad", href: "/portfolio-management-services-hyderabad", description: "Compare PMS mandates, fees, risk and portfolio fit." },
+  { name: "Mutual Funds in Hyderabad", href: "/mutual-fund-distributor-hyderabad", description: "Goal-led regular-plan mutual fund distribution and service." },
+  { name: "NRI Services in Hyderabad", href: "/nri-investment-services-hyderabad", description: "A Hyderabad relationship point for India-linked NRI wealth." },
+];
+
 const navigationItems: NavigationItem[] = [
   {
     name: "Investment Products",
@@ -204,6 +213,13 @@ const navigationItems: NavigationItem[] = [
     menuId: "real-estate-menu",
     submenu: realEstateLinks,
     overviewLabel: "Explore Hyderabad real estate",
+  },
+  {
+    name: "Locations",
+    href: "/wealth-management-hyderabad",
+    menuId: "locations-menu",
+    submenu: locationLinks,
+    overviewLabel: "Explore regional services",
   },
   { name: "About Us", href: "/about" },
   { name: "Team", href: "/team" },
