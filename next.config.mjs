@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: false,
+  experimental: {
+    cpus: 2,
+  },
   async redirects() {
     return [
       {

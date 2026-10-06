@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority: number;
   }> = [
-    { path: "/",                  lastModified: "2026-08-26", changeFrequency: "weekly",  priority: 1.0 },
+    { path: "/",                  lastModified: "2026-10-06", changeFrequency: "weekly",  priority: 1.0 },
     { path: "/investment-products", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/retirement-planning", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.95 },
@@ -37,6 +37,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/pms-advisory",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/wealth-management-hyderabad", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/wealth-management-for-hnis", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.9 },
+    { path: "/wealth-planning-for-entrepreneurs", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/portfolio-management-services-hyderabad", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.95 },
     { path: "/mutual-fund-distributor-hyderabad", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.95 },
     { path: "/nri-investment-services-hyderabad", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.95 },

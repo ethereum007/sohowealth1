@@ -24,7 +24,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.sohowealth.in"),
   title: {
-    default: "Wealth Planning & Investment Distribution Hyderabad | SoHo Wealth",
+    default: "Wealth Management in Hyderabad | SoHo Wealth",
     template: "%s",
   },
   description: "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs across mutual funds, SIF and PMS.",
