@@ -1,3 +1,5 @@
+import { h1bReturnToIndiaPost } from "./h1b-return-to-india";
+
 export type InsightSource = {
   title: string;
   url: string;
@@ -141,6 +143,7 @@ const rbiLrsSource = {
 import { retirementInsightPosts } from "./retirement-posts";
 
 export const insightPosts: InsightPost[] = [
+  h1bReturnToIndiaPost,
   ...retirementInsightPosts,
   {
     slug: "nps-annuity-rates-retirement-decision",

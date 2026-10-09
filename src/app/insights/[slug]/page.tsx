@@ -88,7 +88,15 @@ export default async function InsightPostPage({ params }: PageProps) {
   const isItProfessionalPost = post.category === "IT Professionals";
   const isTeluguNriPost = post.category === "NRI Telugu";
   const isRetirementPost = post.category === "Retirement Planning";
-  const cta = isDoctorPost
+  const isH1bReturnPost = post.slug === "h1b-return-to-india-financial-planning";
+  const cta = isH1bReturnPost
+    ? {
+        title: "Plan Your India-Linked Wealth Before the Move",
+        copy: "Bring your assets, debts, expected return date and family goals into a structured portfolio review.",
+        href: "/services/nri",
+        label: "Explore NRI Portfolio Services",
+      }
+    : isDoctorPost
     ? {
         title: "Review the Doctor Family Balance Sheet",
         copy: "Bring the clinic, household, debt, property and investment view into one structured conversation before the next major capital decision.",
@@ -288,6 +296,14 @@ export default async function InsightPostPage({ params }: PageProps) {
               </section>
             ))}
           </div>
+
+          {isH1bReturnPost && (
+            <aside className="mt-14 rounded-lg border border-[#C9A84C]/30 bg-[#FDF8EC] p-6 md:p-8" aria-label="Return-to-India planning checklist">
+              <h2 className="font-display text-2xl font-semibold text-[#0B1F3A]">Keep your return checklist handy</h2>
+              <p className="mt-3 font-body leading-relaxed text-slate-600">Save the checklist and use it to prepare for conversations with your bank, tax professionals and portfolio team.</p>
+              <a href="/downloads/return-to-india-financial-checklist.txt" download className="mt-5 inline-flex font-body font-semibold text-[#0B1F3A] underline decoration-[#C9A84C] decoration-2 underline-offset-4">Download the checklist (TXT)</a>
+            </aside>
+          )}
 
           {isTeluguNriPost && (
             <aside className="mt-14 rounded-lg border border-slate-200 bg-slate-50 p-6 md:p-8" aria-label="Related NRI resources">

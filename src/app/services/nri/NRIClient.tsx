@@ -175,6 +175,7 @@ const NRIClient = () => {
             {[
               { href: "/insights/nre-vs-nro-repatriation", title: "NRE vs NRO and Repatriation", text: "Choose the account route from source of money, income type and future remittance needs." },
               { href: "/insights/us-canada-nris-mutual-funds-fatca", title: "US & Canada NRI Fund Checklist", text: "Understand AMC acceptance, FATCA documentation and why overseas tax review matters." },
+              { href: "/insights/h1b-return-to-india-financial-planning", title: "H-1B and Returning to India", text: "Plan retirement accounts, employer shares, tax residency and family finances before a US-to-India move." },
               { href: "/insights/returning-to-india-wealth-checklist", title: "Returning to India Checklist", text: "Sequence residency, accounts, foreign assets, RSUs and portfolio decisions before the move." },
             ].map((guide) => (
               <Link key={guide.href} href={guide.href} className="group rounded-xl border border-[#E8D8A8] bg-white p-7 transition hover:-translate-y-1 hover:shadow-lg">
