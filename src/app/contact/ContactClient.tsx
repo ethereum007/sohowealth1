@@ -17,6 +17,7 @@ import { JsonLd } from "@/components/seo/JsonLd";
 import { trackEvent } from "@/lib/gtag";
 import { captureLeadAttribution } from "@/lib/lead-attribution";
 import { submitPortfolioLead } from "@/lib/lead-submit";
+import { BUSINESS_HOURS_LABEL, GOOGLE_BUSINESS_URL } from "@/lib/business";
 
 const contactBreadcrumbs = {
   "@context": "https://schema.org",
@@ -51,11 +52,11 @@ const contactInfo = [
     icon: MapPin,
     title: "Visit Us",
     content: "110, Green Grace, Khajaguda, Hyderabad — 500032",
-    href: "https://www.google.com/maps/search/?api=1&query=110+Green+Grace+Khajaguda+Hyderabad+500032",
+    href: GOOGLE_BUSINESS_URL,
   },
   { icon: Phone, title: "Call Us", content: "+91 90329 99466", href: "tel:+919032999466" },
   { icon: Mail, title: "Email Us", content: "invest@sohowealth.in", href: "mailto:invest@sohowealth.in" },
-  { icon: Clock, title: "Working Hours", content: "Mon - Sat: 9:00 AM - 6:00 PM" },
+  { icon: Clock, title: "Working Hours", content: BUSINESS_HOURS_LABEL },
 ];
 
 const whyReachOut = [

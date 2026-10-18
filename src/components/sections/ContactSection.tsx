@@ -7,6 +7,7 @@ import { MapPin, Phone, Mail, Clock, Send, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { BUSINESS_HOURS_LABEL } from "@/lib/business";
 
 const contactInfo = [
   {
@@ -27,7 +28,7 @@ const contactInfo = [
   {
     icon: Clock,
     title: "Working Hours",
-    content: "Mon - Sat: 9:00 AM - 6:00 PM",
+    content: BUSINESS_HOURS_LABEL,
   },
 ];
 

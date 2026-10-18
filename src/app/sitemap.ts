@@ -14,7 +14,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority: number;
   }> = [
-    { path: "/",                  lastModified: "2026-10-06", changeFrequency: "weekly",  priority: 1.0 },
+    { path: "/",                  lastModified: "2026-10-18", changeFrequency: "weekly",  priority: 1.0 },
     { path: "/investment-products", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/retirement-planning", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.95 },
@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/rsu-esops", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/pms-advisory",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
-    { path: "/wealth-management-hyderabad", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/wealth-management-hyderabad", lastModified: "2026-10-18", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-management-for-hnis", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/wealth-planning-for-entrepreneurs", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/portfolio-management-services-hyderabad", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.95 },
@@ -75,7 +75,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about",             lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/why-us",            lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/team",              lastModified: "2026-06-08", changeFrequency: "monthly", priority: 0.75 },
-    { path: "/contact",           lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/contact",           lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.8 },
     { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },

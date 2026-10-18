@@ -4,6 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Calendar, Globe, MapPin, Phone } from "lucide-react";
 import Link from "next/link";
+import { BUSINESS_HOURS_LABEL } from "@/lib/business";
 
 const cards = [
   {
@@ -13,8 +14,8 @@ const cards = [
   },
   {
     icon: Calendar,
-    title: "Mon-Sat, 9 AM - 6 PM",
-    text: "In-person meetings at your office or home in Hyderabad, video consultations across India, and WhatsApp on +91 90329 99466.",
+    title: "Consultation Hours",
+    text: `${BUSINESS_HOURS_LABEL}. In-person meetings by appointment, video consultations across India, and WhatsApp on +91 90329 99466.`,
   },
   {
     icon: Globe,

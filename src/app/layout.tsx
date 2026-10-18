@@ -6,6 +6,7 @@ import { Providers } from "./providers";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { BUSINESS_NAME, BUSINESS_OPENING_HOURS, BUSINESS_SOCIAL_PROFILES, GOOGLE_BUSINESS_URL } from "@/lib/business";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -88,9 +89,7 @@ const structuredData = [
         "availableLanguage": ["English", "Hindi", "Telugu"]
       }
     ],
-    "sameAs": [
-      "https://www.linkedin.com/company/sohowealth"
-    ],
+    "sameAs": BUSINESS_SOCIAL_PROFILES,
     "knowsAbout": [
       "Wealth Management",
       "Portfolio Management Services",
@@ -136,7 +135,7 @@ const structuredData = [
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "FinancialService"],
     "@id": "https://www.sohowealth.in/#localbusiness",
-    "name": "SoHo Wealth — Wealth Planning in Hyderabad",
+    "name": BUSINESS_NAME,
     "url": "https://www.sohowealth.in/",
     "image": "https://www.sohowealth.in/soho-logo.png",
     "logo": "https://www.sohowealth.in/soho-logo.png",
@@ -151,20 +150,9 @@ const structuredData = [
       "postalCode": "500032",
       "addressCountry": "IN"
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "17.4126",
-      "longitude": "78.3690"
-    },
-    "hasMap": "https://www.google.com/maps/search/?api=1&query=110+Green+Grace+Khajaguda+Hyderabad+500032",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "18:00"
-      }
-    ],
+    "hasMap": GOOGLE_BUSINESS_URL,
+    "sameAs": BUSINESS_SOCIAL_PROFILES,
+    "openingHoursSpecification": BUSINESS_OPENING_HOURS,
     "priceRange": "$$$",
     "serviceType": [
       "Portfolio Management Services",

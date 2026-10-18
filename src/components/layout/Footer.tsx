@@ -2,6 +2,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { RegulatoryDisclosure } from "@/components/layout/RegulatoryDisclosure";
+import { GOOGLE_BUSINESS_URL } from "@/lib/business";
 
 const investmentLinks = [
   { name: "REIT Investing", href: "/reits" },
@@ -161,6 +162,16 @@ export function Footer() {
                   className="font-body text-sm text-white/70 transition-colors hover:text-white"
                 >
                   LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href={GOOGLE_BUSINESS_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-body text-sm text-white/70 transition-colors hover:text-white"
+                >
+                  SoHo Wealth on Google Maps
                 </a>
               </li>
             </ul>
