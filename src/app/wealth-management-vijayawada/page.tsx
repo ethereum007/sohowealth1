@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Wealth Management Vijayawada | SoHo Wealth",
   description: "Portfolio review and registered investment distribution for HNIs, business owners, doctors, families and NRIs in Vijayawada.",
   alternates: { canonical: "https://www.sohowealth.in/wealth-management-vijayawada" },
-  openGraph: { title: "Wealth Management in Vijayawada | SoHo Wealth", description: "Video-led portfolio review and investment distribution backed by SoHo Wealth's Hyderabad office.", url: "https://www.sohowealth.in/wealth-management-vijayawada", type: "website" },
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], title: "Wealth Management in Vijayawada | SoHo Wealth", description: "Video-led portfolio review and investment distribution backed by SoHo Wealth's Hyderabad office.", url: "https://www.sohowealth.in/wealth-management-vijayawada", type: "website" },
 };
 
 export default function WealthManagementVijayawadaPage() {

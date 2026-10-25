@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "Regulatory, distributor and investment-risk disclosures for SoHo Wealth website visitors and prospective clients.",
   alternates: { canonical: "https://www.sohowealth.in/disclosures" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Disclosures | SoHo Wealth",
     description:
       "Regulatory, distributor and investment-risk disclosures for SoHo Wealth.",

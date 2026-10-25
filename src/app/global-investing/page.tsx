@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   keywords:
     "global investing India, US stocks from India, international mutual funds, LRS investment, GIFT City funds, global ETFs, forex compliance India, offshore investing",
   alternates: { canonical: "https://www.sohowealth.in/global-investing" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Invest Globally from India — US Stocks, ETFs & International MF | SoHo Wealth",
     description:
       "Diversify beyond India. US stocks, global ETFs, GIFT City funds, international MF. Full RBI compliance.",
     url: "https://www.sohowealth.in/global-investing",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Global Investing from India | SoHo Wealth",
     description: "US stocks, global ETFs, GIFT City funds. Full RBI/FEMA compliance.",

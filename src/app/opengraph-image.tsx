@@ -58,7 +58,7 @@ export default async function Image() {
               justifyContent: "center",
             }}
           >
-            {["PMS", "SIF", "AIF", "Mutual Funds", "NRI Advisory", "Global Investing"].map(
+            {["PMS", "SIF", "AIF", "Mutual Funds", "NRI Investing", "Global Investing"].map(
               (service) => (
                 <div
                   key={service}

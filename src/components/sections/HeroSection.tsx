@@ -1,6 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
 import { ArrowRight, Calculator, ShieldCheck, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
@@ -33,10 +30,7 @@ export function HeroSection() {
 
       <div className="container mx-auto px-6 lg:px-8 pt-28 pb-20 relative z-10 text-center">
         <div className="max-w-4xl mx-auto">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+          <div
             className="mb-7 flex justify-center"
           >
             <Link
@@ -47,43 +41,31 @@ export function HeroSection() {
               Free Wealth Planning Tool
               <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" aria-hidden="true" />
             </Link>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7 }}
+          <h1
             className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-6"
           >
             Investment Distribution and Wealth Planning for{" "}
             <span style={{ color: "#C9A84C" }}>HNIs, Founders &amp; NRIs.</span>
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.1 }}
+          <p
             className="font-display italic text-lg md:text-xl mb-6"
             style={{ color: "#C9A84C" }}
           >
             Boutique Wealth. Institutional Thinking.
-          </motion.p>
+          </p>
 
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.15 }}
+          <p
             className="text-lg md:text-xl text-white/75 max-w-3xl mx-auto mb-9 font-body leading-relaxed"
           >
             Serving Telangana, Andhra Pradesh and clients across India with portfolio review, goal mapping and investment distribution across
             Mutual Funds, PMS and SIF, with access support for AIF, Pre-IPO and
             global investing for eligible investors.
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
+          <div
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-7"
           >
             <Button
@@ -107,23 +89,17 @@ export function HeroSection() {
             >
               <Link href="/investment-products">Explore Investment Products</Link>
             </Button>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+          <div
             className="mb-12 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-xs text-white/55"
           >
             <span className="inline-flex items-center gap-1.5"><ShieldCheck className="h-3.5 w-3.5 text-[#C9A84C]" /> No sign-up</span>
             <span>Private browser-based calculation</span>
             <span>Goal corpus · Required SIP · Asset mix</span>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.5 }}
+          <div
             className="border-t border-white/10 pt-8"
           >
             <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-3 text-sm text-white/70">
@@ -136,17 +112,14 @@ export function HeroSection() {
                 </span>
               ))}
             </div>
-          </motion.div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.6 }}
+          </div>
+          <p
             className="mt-5 text-xs leading-relaxed text-white/45"
           >
             SoHo Wealth is an AMFI mutual fund and SIF distributor (ARN 306593)
             and an APMI PMS distributor (APRN01233), not a SEBI Registered
             Investment Adviser.
-          </motion.p>
+          </p>
         </div>
       </div>
     </section>

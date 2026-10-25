@@ -14,7 +14,7 @@ const bullets = [
   "₹10L minimum (vs ₹50L for PMS)",
   "Access to long-short equity & derivatives",
   "Managed by SEBI-registered AMCs",
-  "SoHo Wealth: Hyderabad's earliest SIF distributor",
+  "AMFI-registered SIF distribution from Hyderabad",
 ];
 
 export function SIFBannerSection() {
@@ -93,34 +93,34 @@ export function SIFBannerSection() {
             <table className="w-full text-sm md:text-base">
               <thead>
                 <tr style={{ backgroundColor: "#0B1F3A" }}>
-                  <th className="py-4 px-4 text-left font-semibold text-white/70 font-body" />
-                  <th className="py-4 px-4 text-center font-semibold text-white/80 font-body">
+                  <th scope="col" className="py-4 px-4 text-left font-semibold text-white/70 font-body">Feature</th>
+                  <th scope="col" className="py-4 px-4 text-center font-semibold text-white/80 font-body">
                     Mutual Fund
                   </th>
-                  <th
+                  <th scope="col"
                     className="py-4 px-4 text-center font-bold font-display"
                     style={{ color: "#C9A84C" }}
                   >
                     SIF
                   </th>
-                  <th className="py-4 px-4 text-center font-semibold text-white/80 font-body">
+                  <th scope="col" className="py-4 px-4 text-center font-semibold text-white/80 font-body">
                     PMS
                   </th>
                 </tr>
               </thead>
               <tbody>
-                {comparisonRows.map((row, i) => (
+                {comparisonRows.map((row) => (
                   <tr
                     key={row.label}
                     className="border-b last:border-b-0"
                     style={{ borderColor: "#E2E8F0" }}
                   >
-                    <td
-                      className="py-4 px-4 font-semibold font-body"
+                    <th scope="row"
+                      className="py-4 px-4 text-left font-semibold font-body"
                       style={{ color: "#0B1F3A" }}
                     >
                       {row.label}
-                    </td>
+                    </th>
                     <td className="py-4 px-4 text-center font-body" style={{ color: "#4A5568" }}>
                       {row.mf}
                     </td>

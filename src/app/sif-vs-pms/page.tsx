@@ -9,13 +9,13 @@ export const metadata: Metadata = {
   keywords:
     "SIF vs PMS, SIF vs portfolio management services, SIF minimum investment, PMS minimum investment, SIF investment India, PMS comparison India",
   alternates: { canonical: "https://www.sohowealth.in/sif-vs-pms" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "SIF vs PMS | SoHo Wealth",
     description: "A clear comparison of Specialized Investment Funds and Portfolio Management Services.",
     url: "https://www.sohowealth.in/sif-vs-pms",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "SIF vs PMS | SoHo Wealth",
     description: "Compare minimums, structure, risk and suitability before choosing.",

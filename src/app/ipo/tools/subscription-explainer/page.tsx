@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: "Calculate an IPO subscription multiple and understand QIB, NII and retail demand with a simple allotment illustration for Indian IPOs.",
   keywords: ["IPO subscription calculator", "IPO subscription meaning", "IPO allotment probability", "retail IPO allotment", "QIB NII retail subscription"],
   alternates: { canonical: "https://www.sohowealth.in/ipo/tools/subscription-explainer" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "IPO Subscription Calculator and Retail Allotment Explainer",
     description: "Turn IPO demand figures into a category-level subscription multiple and a clearly caveated retail allotment illustration.",
     url: "https://www.sohowealth.in/ipo/tools/subscription-explainer",

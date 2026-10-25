@@ -75,15 +75,15 @@ export function PmsPerformanceLeadersSection() {
                 Independent PMS research universe
               </p>
               <h2 className="font-display text-3xl font-semibold leading-tight text-[#0B1F3A] md:text-4xl lg:text-5xl">
-                Compare 556 PMS strategies across India
+                Compare {pmsBazaarData.records.length} PMS strategies across India
               </h2>
               <p className="font-body mt-5 text-base leading-relaxed text-[#4A5568]">
-                Explore published performance, category, benchmark, AUM and inception data. Inclusion here does not mean a strategy is available through or recommended by SoHo Wealth.
+                Performance snapshot: {pmsBazaarData.metadata.performance_as_on}; profiles: {pmsBazaarData.metadata.detail_as_on}. Explore published performance, category, benchmark, AUM and inception data. Inclusion here does not mean a strategy is available through or recommended by SoHo Wealth.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
               {[
-                ["Strategies", "556"],
+                ["Strategies", String(pmsBazaarData.records.length)],
                 ["Profiles as on", "31 Jul 2026"],
                 ["Periods", "9"],
               ].map(([label, value]) => (

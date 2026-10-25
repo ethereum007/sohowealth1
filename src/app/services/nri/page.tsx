@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   keywords:
     "NRI wealth planning India, NRI investment in India, NRE NRO investment planning, NRI PMS India, FEMA compliant investing, NRI portfolio review",
   alternates: { canonical: "https://www.sohowealth.in/services/nri" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "NRI Wealth Planning for India-Linked Wealth | SoHo Wealth",
     description:
       "NRI portfolio review, investment distribution and specialist coordination for India-linked wealth.",
     url: "https://www.sohowealth.in/services/nri",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "NRI Wealth Planning India | SoHo Wealth",
     description: "NRI portfolio review and investment distribution for India-linked wealth.",

@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     "RSU wealth planning for IT professionals",
   ],
   alternates: { canonical: canonicalUrl },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "RSU Tax & Diversification Guide for IT Professionals",
     description:
       "A practical, specialist-ready guide to RSU records, concentration, reporting questions and diversification routes.",
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     publishedTime: "2026-07-28T00:00:00+05:30",
     modifiedTime: "2026-07-28T00:00:00+05:30",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "RSU Tax & Diversification Guide for IT Professionals",
     description:

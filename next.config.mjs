@@ -7,6 +7,11 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: "/hyderabad-real-estate/guide/:slug",
+        destination: "/hyderabad-real-estate/guides/:slug",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: "sohowealth.in" }],
         destination: "https://www.sohowealth.in/:path*",

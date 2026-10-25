@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   keywords:
     "wealth management India, wealth planning India, investment distribution India, portfolio review India, HNI wealth management, NRI wealth management India, SoHo Wealth Hyderabad",
   alternates: { canonical: "https://www.sohowealth.in/" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Wealth Management in Hyderabad | SoHo Wealth",
     description:
       "Hyderabad-based portfolio review and investment distribution for HNIs, founders, families and NRIs.",
     url: "https://www.sohowealth.in/",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Wealth Management in Hyderabad | SoHo Wealth",
     description: "Portfolio review and investment distribution from Hyderabad for HNIs, founders, families and NRIs.",

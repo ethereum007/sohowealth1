@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   description: "Hyderabad-based wealth planning, portfolio review and investment distribution for HNIs, founders, families and NRIs across mutual funds, SIF and PMS.",
   keywords: ["wealth management Hyderabad", "portfolio management services Hyderabad", "mutual fund distributor Hyderabad", "PMS distributor Hyderabad", "NRI investment services Hyderabad", "SIF investment India", "HNI wealth management"],
   authors: [{ name: "SoHo Wealth" }],
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "SoHo Wealth — Wealth Planning in Hyderabad",
     description: "Portfolio review and investment distribution for HNIs, NRIs and families across mutual funds, SIF, PMS and more.",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     ],
     shortcut: ["/icon-192.png"],
   },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "SoHo Wealth — Wealth Planning & Investment Distribution",
     description:
       "Hyderabad-based portfolio review and investment distribution across mutual funds, SIF, PMS, AIF and NRI investing.",
@@ -202,7 +202,7 @@ export default function RootLayout({
       <head>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CCQXH8SXBR"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
@@ -215,7 +215,7 @@ export default function RootLayout({
         <Script
           src="https://analytics.ahrefs.com/analytics.js"
           data-key="jouo5TQXCq/+w017uA2lnw"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <script
           type="application/ld+json"

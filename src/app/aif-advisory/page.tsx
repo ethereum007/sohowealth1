@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   keywords:
     "AIF distribution India, alternative investment funds India, AIF minimum investment, private equity India, venture capital funds India",
   alternates: { canonical: "https://www.sohowealth.in/aif-advisory" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "AIF Evaluation & Investment Support | SoHo Wealth",
     description: "AIF structure and portfolio-fit evaluation across private equity, venture capital and structured credit. Min ₹1 Cr.",
     url: "https://www.sohowealth.in/aif-advisory",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "AIF Evaluation | SoHo Wealth",
     description: "AIF structure and portfolio-fit evaluation across private equity, venture capital and structured credit.",

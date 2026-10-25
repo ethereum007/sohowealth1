@@ -1,20 +1,23 @@
+import pmsData from "../../../data/pmsbazaar/pms_profiles_enriched_2026-07-31_scraped_2026-08-13.json";
 import type { Metadata } from "next";
 import { LandingPageClient } from "@/app/(seo)/LandingPageClient";
 import { bestPmsIndia } from "@/app/(seo)/landing-configs";
 import { JsonLd } from "@/components/seo/JsonLd";
 
+const strategyCount = pmsData.records.length;
+
 export const metadata: Metadata = {
-  title: "Best PMS in India: Compare 556 Strategies | SoHo Wealth",
-  description: "Compare 556 PMS strategies in India by returns, category, benchmark and AUM across nine periods. Research rankings before choosing a PMS.",
+  title: `Best PMS in India: Compare ${strategyCount} Strategies | SoHo Wealth`,
+  description: `Compare ${strategyCount} PMS strategies using dated performance and profile snapshots. Review mandate, fees and risks before shortlisting a PMS.`,
   keywords: "best PMS in India, PMS comparison India, PMS returns India, portfolio management services India, PMS rankings India",
   alternates: { canonical: "https://www.sohowealth.in/best-pms-in-india" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Best PMS in India? Data-Led Comparison | SoHo Wealth",
     description: "Research published PMS returns and compare strategies before investing. Rankings are a discovery tool, not a recommendation.",
     url: "https://www.sohowealth.in/best-pms-in-india",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Best PMS in India? | SoHo Wealth",
     description: "Data-led PMS rankings and comparison for investors across India.",
@@ -29,7 +32,7 @@ export default function BestPmsIndiaPage() {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "@id": `${pageUrl}#webpage`,
-      name: "Best PMS in India: Compare 556 Strategies",
+      name: `Best PMS in India: Compare ${strategyCount} Strategies`,
       description: metadata.description,
       url: pageUrl,
       inLanguage: "en-IN",
@@ -42,7 +45,7 @@ export default function BestPmsIndiaPage() {
       "@type": "Dataset",
       "@id": `${pageUrl}#dataset`,
       name: "India PMS Strategy Comparison — June 2026",
-      description: "Comparison of 556 Indian PMS strategies across nine return periods, category, benchmark, AUM and inception date.",
+      description: `Comparison of ${strategyCount} Indian PMS strategies across nine return periods, category, benchmark, AUM and inception date.`,
       url: pageUrl,
       dateModified: "2026-08-12",
       temporalCoverage: "2026-06-30",

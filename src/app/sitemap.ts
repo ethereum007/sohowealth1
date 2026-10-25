@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { companyIpoAnalyses } from "@/lib/ipo/company-analyses";
 import { insightPosts } from "@/lib/insights/posts";
 import { allRealEstateGuides } from "@/lib/real-estate/seo-pages";
 import { propertyServices, realEstateArticles } from "@/lib/real-estate/vertical";
@@ -14,8 +15,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
     priority: number;
   }> = [
-    { path: "/",                  lastModified: "2026-10-18", changeFrequency: "weekly",  priority: 1.0 },
+    { path: "/",                  lastModified: "2026-10-25", changeFrequency: "weekly",  priority: 1.0 },
     { path: "/investment-products", lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/family-office-investment-solutions", lastModified: "2026-10-25", changeFrequency: "monthly", priority: 0.9 },
     { path: "/who-we-serve",      lastModified: "2026-07-27", changeFrequency: "weekly", priority: 0.95 },
     { path: "/retirement-planning", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.95 },
     { path: "/tools/retirement-calculator", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.95 },
@@ -36,7 +38,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/rsu-esops", lastModified: "2026-08-13", changeFrequency: "monthly", priority: 0.9 },
     { path: "/sif",               lastModified: "2026-06-02", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/pms-advisory",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
-    { path: "/wealth-management-hyderabad", lastModified: "2026-10-18", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/wealth-management-hyderabad", lastModified: "2026-10-25", changeFrequency: "weekly", priority: 0.95 },
     { path: "/wealth-management-for-hnis", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/wealth-planning-for-entrepreneurs", lastModified: "2026-08-16", changeFrequency: "weekly", priority: 0.9 },
     { path: "/portfolio-management-services-hyderabad", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.95 },
@@ -45,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/wealth-management-vijayawada", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.9 },
     { path: "/wealth-management-visakhapatnam", lastModified: "2026-08-26", changeFrequency: "weekly", priority: 0.9 },
     { path: "/financial-planning-for-doctors", lastModified: "2026-07-28", changeFrequency: "weekly", priority: 0.95 },
-    { path: "/best-pms-in-india", lastModified: "2026-08-12", changeFrequency: "weekly", priority: 0.95 },
+    { path: "/best-pms-in-india", lastModified: "2026-10-25", changeFrequency: "weekly", priority: 0.95 },
     { path: "/sif-vs-pms",        lastModified: "2026-06-02", changeFrequency: "weekly", priority: 0.9 },
     { path: "/services/nri",      lastModified: "2026-07-28", changeFrequency: "weekly",  priority: 0.9 },
     { path: "/nri-telugu",       lastModified: "2026-08-23", changeFrequency: "weekly",  priority: 0.95 },
@@ -75,7 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about",             lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/why-us",            lastModified: "2026-04-27", changeFrequency: "monthly", priority: 0.7 },
     { path: "/team",              lastModified: "2026-06-08", changeFrequency: "monthly", priority: 0.75 },
-    { path: "/contact",           lastModified: "2026-10-18", changeFrequency: "monthly", priority: 0.8 },
+    { path: "/contact",           lastModified: "2026-10-25", changeFrequency: "monthly", priority: 0.8 },
     { path: "/privacy-policy",    lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/disclosures",       lastModified: "2026-06-12", changeFrequency: "yearly",  priority: 0.3 },
     { path: "/budget-2026",       lastModified: "2026-02-01", changeFrequency: "yearly",  priority: 0.5 },
@@ -117,5 +119,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: article.type === "news" ? 0.8 : 0.82,
   }));
 
-  return [...staticRoutes, ...propertyServiceRoutes, ...realEstateRoutes, ...realEstateArticleRoutes, ...insightRoutes];
+  const ipoRoutes = companyIpoAnalyses.map((item) => ({
+    url: `${baseUrl}/ipo/${item.slug}`,
+    lastModified: new Date(`${item.analysisAsOf} 00:00:00 GMT`),
+    changeFrequency: "monthly" as const,
+    priority: 0.75,
+  }));
+
+  return [...ipoRoutes, ...staticRoutes, ...propertyServiceRoutes, ...realEstateRoutes, ...realEstateArticleRoutes, ...insightRoutes];
 }

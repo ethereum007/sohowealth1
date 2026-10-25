@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Understand Indian REITs, distributions, liquidity, risks, taxation and portfolio allocation. Book a REIT portfolio consultation with SoHo Wealth, Hyderabad.",
   keywords: "REIT investment India, how to invest in REITs India, REIT advisor Hyderabad, listed real estate investment trust, REIT portfolio allocation, commercial real estate investing India",
   alternates: { canonical: "https://www.sohowealth.in/reits" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "REITs as an Asset Class | SoHo Wealth",
     description: "Commercial real estate exposure without buying and managing an entire property. Learn where REITs may fit—and where they may not.",
     url: "https://www.sohowealth.in/reits",

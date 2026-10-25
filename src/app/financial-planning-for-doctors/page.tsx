@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "clinic owner financial planning",
   ],
   alternates: { canonical: canonicalUrl },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Wealth Planning for Doctors in AP & Telangana",
     description:
       "A practical wealth guide and free financial check-up for doctors, clinic owners and medical families across Andhra Pradesh and Telangana.",
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "SoHo Wealth",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Wealth Planning for Doctors in AP & Telangana",
     description:

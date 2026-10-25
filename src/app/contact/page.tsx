@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   keywords:
     "contact SoHo Wealth, wealth consultation Hyderabad, financial advisor appointment, book wealth advisor, free portfolio review Hyderabad",
   alternates: { canonical: "https://www.sohowealth.in/contact" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Contact SoHo Wealth — Book Your Free Consultation",
     description: "Free wealth consultation. Call +91 90329 99466 or fill our form.",
     url: "https://www.sohowealth.in/contact",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Contact SoHo Wealth — Book Your Free Consultation",
     description: "Free wealth consultation. Call +91 90329 99466 or fill our form.",

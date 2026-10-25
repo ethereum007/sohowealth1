@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "HITEC City wealth advisor",
   ],
   alternates: { canonical: canonicalUrl },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Wealth Planning for IT Professionals in Hyderabad",
     description:
       "A practical system for salary, bonuses, RSUs, ESOPs, career changes and financial independence.",
@@ -54,7 +54,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Wealth Planning for IT Professionals in Hyderabad",
     description:

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
     "Telugu financial advisor Hyderabad",
   ],
   alternates: { canonical: "https://www.sohowealth.in/nri-telugu" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Telugu NRI Wealth Management & Tax Guides | SoHo Wealth",
     description: "India-linked wealth management and practical tax guides for Telugu NRIs across the US, Gulf, Canada, UK and Australia.",
     url: "https://www.sohowealth.in/nri-telugu",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Telugu NRI Wealth Management & Tax Guides | SoHo Wealth",
     description: "India-linked wealth management and tax education for Telugu NRIs worldwide.",

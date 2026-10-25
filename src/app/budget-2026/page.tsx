@@ -6,14 +6,14 @@ export const metadata: Metadata = {
   description:
     "Comprehensive analysis of India's Union Budget 2026-27 presented by Finance Minister Nirmala Sitharaman. Key highlights, tax changes, and sectoral allocations.",
   alternates: { canonical: "https://www.sohowealth.in/budget-2026" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Union Budget 2026-27 Analysis | SOHO Wealth",
     description:
       "Comprehensive analysis of India's Union Budget 2026-27. Key highlights, tax changes, and sectoral allocations.",
     url: "https://www.sohowealth.in/budget-2026",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Union Budget 2026-27 Analysis | SOHO Wealth",
     description: "Key highlights, tax changes, and sectoral allocations from Union Budget 2026-27.",

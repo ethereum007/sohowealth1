@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   keywords: ["AI wealth planner India", "financial goal planner", "SIP goal calculator", "retirement planning calculator India", "wealth planning tool", "investment goal calculator"],
   alternates: { canonical: canonicalUrl },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "AI Wealth Planner | SoHo Wealth",
     description: "Turn a financial goal into a clear, private wealth-planning roadmap in under three minutes.",
     url: canonicalUrl,
     type: "website",
   },
-  twitter: { card: "summary_large_image", title: "Free AI Wealth Planner India | SoHo Wealth", description: "Estimate your goal corpus, required SIP and illustrative asset mix in under three minutes." },
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], card: "summary_large_image", title: "Free AI Wealth Planner India | SoHo Wealth", description: "Estimate your goal corpus, required SIP and illustrative asset mix in under three minutes." },
 };
 
 const faqs: FAQ[] = [

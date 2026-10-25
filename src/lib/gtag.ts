@@ -20,17 +20,18 @@ export function initCtaTracking() {
   if (ctaListenerAttached) return;
   ctaListenerAttached = true;
   document.addEventListener("click", (e) => {
-    const clicked = e.target as HTMLElement;
+    if (!(e.target instanceof Element)) return;
+    const clicked = e.target;
     const link = clicked.closest<HTMLAnchorElement>("a[href]");
     if (link) {
       const href = link.href;
       const label = link.textContent?.trim().slice(0, 80) || link.getAttribute("aria-label") || "unknown";
       if (href.includes("wa.me/")) {
-        trackEvent("whatsapp_click", { cta_label: label, cta_href: href });
+        trackEvent("whatsapp_click", { cta_label: label, cta_href: href, location: link.dataset.trackingLocation || "inline" });
       } else if (href.startsWith("tel:")) {
-        trackEvent("phone_click", { cta_label: label, cta_href: href });
+        trackEvent("phone_click", { cta_label: label, cta_href: href, location: link.dataset.trackingLocation || "inline" });
       } else if (href.startsWith("mailto:")) {
-        trackEvent("email_click", { cta_label: label, cta_href: href });
+        trackEvent("email_click", { cta_label: label, cta_href: href, location: link.dataset.trackingLocation || "inline" });
       }
     }
 

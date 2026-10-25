@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   description:
     "How SoHo Wealth collects, uses and protects information submitted through its website, portfolio review forms and consultation requests.",
   alternates: { canonical: "https://www.sohowealth.in/privacy-policy" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Privacy Policy | SoHo Wealth",
     description:
       "How SoHo Wealth collects, uses and protects website visitor and lead information.",

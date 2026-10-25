@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "NRI Investment Services Hyderabad | SoHo Wealth",
   description: "India-linked portfolio review and investment distribution for NRIs seeking a trusted Hyderabad relationship point. Telugu and English.",
   alternates: { canonical: "https://www.sohowealth.in/nri-investment-services-hyderabad" },
-  openGraph: { title: "NRI Investment Services in Hyderabad | SoHo Wealth", description: "Coordinate India-linked holdings, documentation and eligible investment products.", url: "https://www.sohowealth.in/nri-investment-services-hyderabad", type: "website" },
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], title: "NRI Investment Services in Hyderabad | SoHo Wealth", description: "Coordinate India-linked holdings, documentation and eligible investment products.", url: "https://www.sohowealth.in/nri-investment-services-hyderabad", type: "website" },
 };
 
 export default function NriInvestmentServicesHyderabadPage() {

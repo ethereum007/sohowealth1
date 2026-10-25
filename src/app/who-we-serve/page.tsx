@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Focused wealth-planning paths for HNIs, entrepreneurs, family offices, doctors, IT professionals and Telugu NRIs.",
   alternates: { canonical: canonicalUrl },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Who SoHo Wealth Serves",
     description:
       "Purpose-built wealth journeys for private clients, business owners, family offices and professionals.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "SoHo Wealth",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Who SoHo Wealth Serves",
     description: "HNIs, entrepreneurs, family offices and professionals need different starting points—not a generic template.",

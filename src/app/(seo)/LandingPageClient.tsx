@@ -4,7 +4,9 @@ import { motion, useInView } from "framer-motion";
 import { CheckCircle2, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import { useRef } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
-import { PmsPerformanceLeadersSection } from "@/components/sections/PmsPerformanceLeadersSection";
+import dynamic from "next/dynamic";
+
+const PmsPerformanceLeadersSection = dynamic(() => import("@/components/sections/PmsPerformanceLeadersSection").then((module) => module.PmsPerformanceLeadersSection));
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { RelatedServices, type RelatedService } from "@/components/seo/RelatedServices";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -117,7 +119,7 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
       <section className="py-24 lg:py-32 relative overflow-hidden" style={{ backgroundColor: "#0B1F3A" }}>
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "repeating-linear-gradient(135deg, transparent, transparent 40px, rgba(255,255,255,0.5) 40px, rgba(255,255,255,0.5) 41px)" }} />
         <div className="container mx-auto px-6 lg:px-8 relative z-10 max-w-5xl text-center">
-          <AnimatedSection>
+          <div>
             <span className="inline-block text-xs font-bold tracking-[0.15em] uppercase px-4 py-1.5 rounded-full mb-6" style={{ backgroundColor: "#C9A84C", color: "#0B1F3A" }}>
               {config.eyebrow}
             </span>
@@ -136,7 +138,7 @@ export function LandingPageClient({ config }: { config: LandingPageConfig }) {
                 {config.secondaryCta || "WhatsApp SoHo Wealth"}
               </a>
             </div>
-          </AnimatedSection>
+          </div>
         </div>
       </section>
 

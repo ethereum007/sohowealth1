@@ -1,7 +1,3 @@
-"use client";
-
-import { useState } from "react";
-import { motion } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { JsonLd } from "./JsonLd";
 
@@ -17,35 +13,14 @@ interface FAQSectionProps {
 }
 
 function FAQItem({ q, a }: FAQ) {
-  const [open, setOpen] = useState(false);
   return (
-    <div className="border-b" style={{ borderColor: "#E2E8F0" }}>
-      <button
-        onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-5 text-left"
-        aria-expanded={open}
-      >
-        <span className="font-display text-base md:text-lg font-semibold pr-4" style={{ color: "#0B1F3A" }}>
-          {q}
-        </span>
-        <ChevronDown
-          className="flex-shrink-0 transition-transform duration-200"
-          style={{ color: "#C9A84C", transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
-          size={20}
-        />
-      </button>
-      {open && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          className="pb-5"
-        >
-          <p className="font-body text-base leading-relaxed" style={{ color: "#4A5568" }}>
-            {a}
-          </p>
-        </motion.div>
-      )}
-    </div>
+    <details className="group border-b border-[#E2E8F0]">
+      <summary className="flex min-h-14 cursor-pointer list-none items-center justify-between py-5 text-left [&::-webkit-details-marker]:hidden">
+        <span className="pr-4 font-display text-base font-semibold text-[#0B1F3A] md:text-lg">{q}</span>
+        <ChevronDown className="shrink-0 text-[#C9A84C] transition-transform duration-200 group-open:rotate-180" size={20} aria-hidden="true" />
+      </summary>
+      <p className="pb-5 font-body text-base leading-relaxed text-[#4A5568]">{a}</p>
+    </details>
   );
 }
 

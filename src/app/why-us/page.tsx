@@ -8,14 +8,14 @@ export const metadata: Metadata = {
   keywords:
     "why SoHo Wealth, investment distributor Hyderabad, portfolio review Hyderabad, wealth management Hyderabad",
   alternates: { canonical: "https://www.sohowealth.in/why-us" },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Why SoHo Wealth — The SoHo Difference",
     description:
       "Portfolio-first investment distribution, founder access and clear role disclosure. Columbia pedigree, Hyderabad roots.",
     url: "https://www.sohowealth.in/why-us",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Why SoHo Wealth — The SoHo Difference",
     description: "Portfolio-first investment distribution, founder access and clear role disclosure. Columbia pedigree, Hyderabad roots.",

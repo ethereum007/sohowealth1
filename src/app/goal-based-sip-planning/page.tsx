@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: "Learn how to calculate the monthly SIP required for a target corpus using your timeline, existing savings and realistic return assumptions.",
   keywords: ["goal based SIP planning", "SIP for target amount", "monthly SIP required calculator", "financial goal planning India", "goal based investing"],
   alternates: { canonical: canonicalUrl }, robots: { index: true, follow: true },
-  openGraph: { title: "Goal-Based SIP Planning India | SoHo Wealth", description: "Convert a target corpus and deadline into an actionable monthly SIP plan.", url: canonicalUrl, type: "article" },
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], title: "Goal-Based SIP Planning India | SoHo Wealth", description: "Convert a target corpus and deadline into an actionable monthly SIP plan.", url: canonicalUrl, type: "article" },
 };
 
 const faqs = [

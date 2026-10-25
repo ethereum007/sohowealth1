@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: page.description,
     keywords: page.keywords,
     alternates: { canonical: url },
-    openGraph: { title: page.title, description: page.description, url, siteName: "SoHo Wealth", type: "article" },
-    twitter: { card: "summary_large_image", title: page.title, description: page.description },
+    openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], title: page.title, description: page.description, url, siteName: "SoHo Wealth", type: "article" },
+    twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], card: "summary_large_image", title: page.title, description: page.description },
   };
 }
 

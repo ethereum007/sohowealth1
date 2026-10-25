@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useId, useRef, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { trackEvent } from "@/lib/gtag";
@@ -43,6 +43,7 @@ export function LeadCaptureForm({
   buttonLabel = "Get My Free Review →",
   thankYouMessage = "Kiran will personally reach out within 24 hours.",
 }: LeadCaptureFormProps) {
+  const formId = useId();
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-80px" });
   const { toast } = useToast();
@@ -186,33 +187,33 @@ export function LeadCaptureForm({
                     </div>
                   )}
                   <div>
-                    <label className={labelClass}>Full Name</label>
-                    <input name="name" type="text" placeholder="Your full name" value={form.name} onChange={handleChange} className={inputClass} />
+                    <label htmlFor={`${formId}-name`} className={labelClass}>Full Name</label>
+                    <input id={`${formId}-name`} name="name" type="text" placeholder="Your full name" value={form.name} onChange={handleChange} className={inputClass} />
                     {errors.name && <p className={errorClass} style={{ color: "#f87171" }}>{errors.name}</p>}
                   </div>
                   <div>
-                    <label className={labelClass}>Phone Number</label>
-                    <input name="phone" type="tel" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={handleChange} className={inputClass} />
+                    <label htmlFor={`${formId}-phone`} className={labelClass}>Phone Number</label>
+                    <input id={`${formId}-phone`} name="phone" type="tel" placeholder="+91 XXXXX XXXXX" value={form.phone} onChange={handleChange} className={inputClass} />
                     {errors.phone && <p className={errorClass} style={{ color: "#f87171" }}>{errors.phone}</p>}
                   </div>
                   <div>
-                    <label className={labelClass}>Email Address</label>
-                    <input name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} className={inputClass} />
+                    <label htmlFor={`${formId}-email`} className={labelClass}>Email Address</label>
+                    <input id={`${formId}-email`} name="email" type="email" placeholder="you@example.com" value={form.email} onChange={handleChange} className={inputClass} />
                     {errors.email && <p className={errorClass} style={{ color: "#f87171" }}>{errors.email}</p>}
                   </div>
                   <div>
-                    <label className={labelClass}>{selectLabel}</label>
-                    <select name="portfolio_size" value={form.portfolio_size} onChange={handleChange} className={selectClass}>
+                    <label htmlFor={`${formId}-portfolio_size`} className={labelClass}>{selectLabel}</label>
+                    <select id={`${formId}-portfolio_size`} name="portfolio_size" value={form.portfolio_size} onChange={handleChange} className={selectClass}>
                       <option value="" disabled>Select range</option>
                       {selectOptions.map((s) => (<option key={s} value={s} className="text-gray-900">{s}</option>))}
                     </select>
                     {errors.portfolio_size && <p className={errorClass} style={{ color: "#f87171" }}>{errors.portfolio_size}</p>}
                   </div>
                   <div>
-                    <label className={labelClass}>Are you an NRI?</label>
-                    <div className="flex gap-4">
+                    <p id={`${formId}-nri-label`} className={labelClass}>Are you an NRI?</p>
+                    <div className="flex gap-4" role="group" aria-labelledby={`${formId}-nri-label`}>
                       {[false, true].map((val) => (
-                        <button key={String(val)} type="button" onClick={() => setForm((prev) => ({ ...prev, is_nri: val }))}
+                        <button key={String(val)} type="button" aria-pressed={form.is_nri === val} onClick={() => setForm((prev) => ({ ...prev, is_nri: val }))}
                           className="px-6 py-2.5 rounded-lg text-sm font-semibold transition-all duration-200 font-body"
                           style={form.is_nri === val ? { backgroundColor: "#C9A84C", color: "#0B1F3A" } : { backgroundColor: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.6)", border: "1px solid rgba(255,255,255,0.15)" }}
                         >
@@ -222,8 +223,8 @@ export function LeadCaptureForm({
                     </div>
                   </div>
                   <div>
-                    <label className={labelClass}>Best time to call</label>
-                    <select name="call_time" value={form.call_time} onChange={handleChange} className={selectClass}>
+                    <label htmlFor={`${formId}-call_time`} className={labelClass}>Best time to call</label>
+                    <select id={`${formId}-call_time`} name="call_time" value={form.call_time} onChange={handleChange} className={selectClass}>
                       <option value="" disabled>Select time</option>
                       {callTimes.map((t) => (<option key={t} value={t} className="text-gray-900">{t}</option>))}
                     </select>

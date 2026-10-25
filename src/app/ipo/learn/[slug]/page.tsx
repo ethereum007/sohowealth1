@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${guide.title} | SoHo Wealth`,
     description: guide.description,
     alternates: { canonical: `https://www.sohowealth.in/ipo/learn/${guide.slug}` },
-    openGraph: { title: guide.title, description: guide.description, url: `https://www.sohowealth.in/ipo/learn/${guide.slug}`, type: "article" },
+    openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }], title: guide.title, description: guide.description, url: `https://www.sohowealth.in/ipo/learn/${guide.slug}`, type: "article" },
   };
 }
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description:
     "Calculate what percentage of your liquid portfolio is held in employer stock. A private, browser-only RSU concentration worksheet for Indian professionals.",
   alternates: { canonical: canonicalUrl },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "RSU Concentration Calculator for Indian Professionals",
     description:
       "Measure employer-stock concentration privately in your browser and identify the questions to take into a portfolio review.",

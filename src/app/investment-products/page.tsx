@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   description:
     "Compare mutual funds, PMS, SIF, AIF, pre-IPO and global investing by portfolio role, minimum investment, liquidity and investor fit.",
   alternates: { canonical: canonicalUrl },
-  openGraph: {
+  openGraph: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     title: "Investment Products at SoHo Wealth",
     description:
       "Understand the role, access level and trade-offs of mutual funds, PMS, SIF, AIF, pre-IPO and global investing.",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: "SoHo Wealth",
     type: "website",
   },
-  twitter: {
+  twitter: { images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "SoHo Wealth - Wealth Planning and Investment Distribution" }],
     card: "summary_large_image",
     title: "Investment Products at SoHo Wealth",
     description: "Compare investment routes by role, liquidity, minimum and fit—not by headline returns.",
