@@ -91,7 +91,7 @@ export function ServicesGridSection() {
                   className="inline-block self-start text-xs font-bold tracking-wider uppercase px-3 py-1 rounded-full mb-4"
                   style={
                     card.badge.variant === "gold"
-                      ? { backgroundColor: "#C9A84C", color: "#FFFFFF" }
+                      ? { backgroundColor: "#C9A84C", color: "#0B1F3A" }
                       : { backgroundColor: "#0B1F3A", color: "#FFFFFF" }
                   }
                 >
@@ -119,7 +119,7 @@ export function ServicesGridSection() {
               <Link
                 href={card.ctaLink}
                 className="inline-flex items-center font-semibold text-sm tracking-wide transition-colors duration-200"
-                style={{ color: "#C9A84C" }}
+                style={{ color: "#8B6815" }}
               >
                 {card.ctaText}
               </Link>

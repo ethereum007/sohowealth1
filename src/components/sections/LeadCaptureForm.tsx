@@ -233,7 +233,7 @@ export function LeadCaptureForm({
                     </a>
                     . We never share your data.
                   </p>
-                  <p className="text-center text-[11px] leading-relaxed font-body" style={{ color: "rgba(255,255,255,0.42)" }}>
+                  <p className="text-center text-[11px] leading-relaxed font-body" style={{ color: "rgba(255,255,255,0.65)" }}>
                     SoHo Wealth is an AMFI mutual fund and SIF distributor (ARN
                     306593) and an APMI PMS distributor (APRN01233), not a SEBI
                     Registered Investment Adviser. A consultation is not a tax,

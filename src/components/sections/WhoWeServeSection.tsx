@@ -69,7 +69,7 @@ export function WhoWeServeSection() {
               </p>
               <Link
                 href={audience.href}
-                className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-all hover:gap-2.5"
+                className="relative z-10 mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#8B6815] transition-all hover:gap-2.5"
               >
                 {audience.linkLabel}
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -87,7 +87,7 @@ export function WhoWeServeSection() {
         >
           <Link
             href="/who-we-serve"
-            className="inline-flex items-center gap-2 text-primary font-medium hover:gap-3 transition-all"
+            className="inline-flex items-center gap-2 text-[#8B6815] font-medium hover:gap-3 transition-all"
           >
             Compare all three client journeys
             <ArrowRight className="w-5 h-5" aria-hidden="true" />

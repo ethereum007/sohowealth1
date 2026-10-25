@@ -27,7 +27,7 @@ export function WhySohoSection() {
           style={{ color: "#0B1F3A" }}
         >
           Why Serious Investors Choose{" "}
-          <span style={{ color: "#C9A84C" }}>SoHo Wealth</span>
+          <span style={{ color: "#8B6815" }}>SoHo Wealth</span>
         </h2>
 
         {/* 3-column grid */}
