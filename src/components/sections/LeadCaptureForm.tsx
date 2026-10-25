@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-import { useId, useRef, useState } from "react";
+import { useId, useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { z } from "zod";
 import { trackEvent } from "@/lib/gtag";
@@ -44,8 +43,6 @@ export function LeadCaptureForm({
   thankYouMessage = "Kiran will personally reach out within 24 hours.",
 }: LeadCaptureFormProps) {
   const formId = useId();
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
   const { toast } = useToast();
 
   const [submitted, setSubmitted] = useState(false);
@@ -143,23 +140,17 @@ export function LeadCaptureForm({
   );
 
   return (
-    <section id={sectionId} ref={ref} className="overflow-x-hidden py-20 lg:py-28" style={{ backgroundColor: "#0B1F3A" }}>
+    <section id={sectionId} className="overflow-x-hidden py-20 lg:py-28" style={{ backgroundColor: "#0B1F3A" }}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-14 lg:gap-20 items-start">
           {/* Left Column */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {leftContent || defaultLeftContent}
-          </motion.div>
+          </div>
 
           {/* Right Column — Form */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
+          <div
             className="rounded-2xl p-8 md:p-10"
             style={{ backgroundColor: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)" }}
           >
@@ -251,7 +242,7 @@ export function LeadCaptureForm({
                 </form>
               </>
             )}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

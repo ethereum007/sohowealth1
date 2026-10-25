@@ -6,10 +6,11 @@ import { useRef } from "react";
 import { LeadCaptureForm } from "@/components/sections/LeadCaptureForm";
 import dynamic from "next/dynamic";
 
-const PmsPerformanceLeadersSection = dynamic(() => import("@/components/sections/PmsPerformanceLeadersSection").then((module) => module.PmsPerformanceLeadersSection));
 import { FAQSection, type FAQ } from "@/components/seo/FAQSection";
 import { RelatedServices, type RelatedService } from "@/components/seo/RelatedServices";
 import { JsonLd } from "@/components/seo/JsonLd";
+
+const PmsPerformanceLeadersSection = dynamic(() => import("@/components/sections/PmsPerformanceLeadersSection").then((module) => module.PmsPerformanceLeadersSection));
 
 type ComparisonColumn = {
   key: string;

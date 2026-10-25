@@ -1,7 +1,3 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const comparisonRows = [
   { label: "Min Investment", mf: "₹500", sif: "₹10 Lakh", pms: "₹50 Lakh" },
@@ -18,18 +14,12 @@ const bullets = [
 ];
 
 export function SIFBannerSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section ref={ref} className="py-20 lg:py-28" style={{ backgroundColor: "#C9A84C" }}>
+    <section className="py-20 lg:py-28" style={{ backgroundColor: "#C9A84C" }}>
       <div className="container mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6 }}
+          <div
           >
             {/* Tag */}
             <span
@@ -80,13 +70,10 @@ export function SIFBannerSection() {
             >
               Talk to Us About SIFs →
             </a>
-          </motion.div>
+          </div>
 
           {/* Right — Comparison Table */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.6, delay: 0.15 }}
+          <div
             className="rounded-xl overflow-hidden shadow-lg"
             style={{ backgroundColor: "#FFFFFF" }}
           >
@@ -137,7 +124,7 @@ export function SIFBannerSection() {
                 ))}
               </tbody>
             </table>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -1,7 +1,3 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 import Link from "next/link";
 
 interface ServiceCard {
@@ -68,35 +64,25 @@ const services: ServiceCard[] = [
 ];
 
 export function ServicesGridSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
     <section
       className="py-24 lg:py-32"
       style={{ backgroundColor: "#F7F8FA" }}
-      ref={ref}
     >
       <div className="container mx-auto px-6 lg:px-8">
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+        <h2
           className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16"
           style={{ color: "#0B1F3A" }}
         >
           What We Manage For You
-        </motion.h2>
+        </h2>
 
         {/* 2x3 Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((card, i) => (
-            <motion.div
+          {services.map((card) => (
+            <div
               key={card.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.1 + i * 0.08 }}
               className="group relative rounded-xl bg-white p-8 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)] border border-transparent hover:border-[#C9A84C] hover:-translate-y-1 transition-all duration-300 flex flex-col"
             >
               {/* Badge */}
@@ -137,7 +123,7 @@ export function ServicesGridSection() {
               >
                 {card.ctaText}
               </Link>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

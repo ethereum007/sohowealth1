@@ -1,7 +1,3 @@
-"use client";
-
-import { motion, useInView } from "framer-motion";
-import { useRef } from "react";
 
 const columns = [
   {
@@ -22,32 +18,23 @@ const columns = [
 ];
 
 export function WhySohoSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-80px" });
-
   return (
-    <section className="py-24 lg:py-32 bg-white" ref={ref}>
+    <section className="py-24 lg:py-32 bg-white">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Heading */}
-        <motion.h2
-          initial={{ opacity: 0, y: 24 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+        <h2
           className="font-display text-3xl md:text-4xl lg:text-5xl font-semibold text-center mb-16"
           style={{ color: "#0B1F3A" }}
         >
           Why Serious Investors Choose{" "}
           <span style={{ color: "#C9A84C" }}>SoHo Wealth</span>
-        </motion.h2>
+        </h2>
 
         {/* 3-column grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {columns.map((col, i) => (
-            <motion.div
+          {columns.map((col) => (
+            <div
               key={col.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: 0.15 + i * 0.12 }}
               className="rounded-xl bg-white p-8 shadow-[0_4px_24px_-4px_rgba(11,31,58,0.08)] border-t-4"
               style={{ borderTopColor: "#0B1F3A" }}
             >
@@ -61,7 +48,7 @@ export function WhySohoSection() {
               <p className="font-body text-base leading-relaxed" style={{ color: "#4A5568" }}>
                 {col.text}
               </p>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

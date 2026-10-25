@@ -1,8 +1,3 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 import {
   Laptop2,
   Stethoscope,
@@ -36,17 +31,11 @@ const audiences = [
 ];
 
 export function WhoWeServeSection() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
-
   return (
-    <section id="who-we-serve" className="py-24 lg:py-32 relative bg-muted/30" ref={ref}>
+    <section id="who-we-serve" className="py-24 lg:py-32 relative bg-muted/30">
       <div className="container mx-auto px-6 lg:px-8">
         {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
+        <div
           className="text-center max-w-3xl mx-auto mb-16"
         >
           <div className="line-accent mx-auto mb-6" />
@@ -57,16 +46,13 @@ export function WhoWeServeSection() {
             Different careers create different financial pressure points. Choose
             the journey that starts with the decisions you actually face.
           </p>
-        </motion.div>
+        </div>
 
         {/* Audience Grid */}
         <div className="mx-auto grid max-w-6xl md:grid-cols-3 gap-6 lg:gap-8">
-          {audiences.map((audience, index) => (
-            <motion.div
+          {audiences.map((audience) => (
+            <div
               key={audience.title}
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group relative p-8 rounded-2xl bg-card border border-border hover:border-primary/30 transition-all duration-500 text-center"
             >
               {/* Icon */}
@@ -91,15 +77,12 @@ export function WhoWeServeSection() {
 
               {/* Hover gradient */}
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-            </motion.div>
+            </div>
           ))}
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
+        <div
           className="text-center mt-12"
         >
           <Link
@@ -109,7 +92,7 @@ export function WhoWeServeSection() {
             Compare all three client journeys
             <ArrowRight className="w-5 h-5" aria-hidden="true" />
           </Link>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
