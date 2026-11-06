@@ -1,4 +1,4 @@
-import { HeroSection } from "@/components/sections/HeroSection";
+import { HomeHeroCarousel } from "@/components/sections/HomeHeroCarousel";
 import { WhySohoSection } from "@/components/sections/WhySohoSection";
 import { ServicesGridSection } from "@/components/sections/ServicesGridSection";
 import { WhoWeServeSection } from "@/components/sections/WhoWeServeSection";
@@ -38,7 +38,7 @@ const HomeClient = () => {
   return (
     <div className="min-h-screen bg-background">
       <main>
-        <HeroSection />
+        <HomeHeroCarousel />
         <section className="bg-white px-6 py-10 text-center" aria-label="Hyderabad consultations">
           <p className="mx-auto max-w-3xl text-base leading-relaxed text-slate-600">Meet SoHo Wealth at 110, Green Grace, Khajaguda, Hyderabad, by appointment, or arrange a video portfolio review.</p>
           <Link href="/wealth-management-hyderabad" className="mt-4 inline-flex min-h-11 items-center font-semibold text-[#0B1F3A] underline underline-offset-4">Explore our Hyderabad wealth-planning process</Link>
