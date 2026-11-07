@@ -5,7 +5,7 @@ import { WhoWeServeSection } from "@/components/sections/WhoWeServeSection";
 import { SIFBannerSection } from "@/components/sections/SIFBannerSection";
 import { PortfolioReviewSection } from "@/components/sections/PortfolioReviewSection";
 import { FAQSection } from "@/components/seo/FAQSection";
-import Image from "next/image";
+import { DiwaliLights } from "@/components/sections/DiwaliLights";
 
 const homeFaqs = [
   {
@@ -40,18 +40,11 @@ const HomeClient = () => {
       <main>
         <div className="bg-[#0B1F3A] pt-20">
           <section aria-labelledby="diwali-greeting" className="relative isolate overflow-hidden border-y border-[#C9A84C]/30 bg-[#101c33]">
-            <Image
-              src="/diwali-diya.webp"
-              alt=""
-              fill
-              sizes="(min-width: 640px) 55vw, 100vw"
-              className="-z-20 object-cover object-center opacity-45 sm:!left-auto sm:!w-[55%] sm:opacity-100"
-            />
-            <div aria-hidden="true" className="absolute inset-0 -z-10 bg-[#101c33]/65 sm:bg-transparent sm:bg-gradient-to-r sm:from-[#101c33] sm:via-[#101c33] sm:to-transparent" />
-            <div className="mx-auto max-w-6xl px-6 py-9 text-center sm:px-10 sm:py-12 sm:text-left">
+            <div className="mx-auto max-w-6xl px-6 py-7 text-center sm:px-10">
               <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-[#E5CB83]">From all of us at SoHo Wealth</p>
               <h2 id="diwali-greeting" className="font-display text-4xl font-semibold text-[#F6DF9C] sm:text-5xl">Happy Diwali</h2>
-              <p className="mt-3 max-w-md text-sm leading-relaxed text-white/90 sm:text-base">Wishing you and your family a festival filled with light, joy and prosperity.</p>
+              <p className="mx-auto mt-3 max-w-md text-sm leading-relaxed text-white/90 sm:text-base">Wishing you and your family a festival filled with light, joy and prosperity.</p>
+              <DiwaliLights />
             </div>
           </section>
         </div>

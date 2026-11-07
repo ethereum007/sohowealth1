@@ -142,3 +142,13 @@
   background: hsl(155 75% 40% / 0.2);
   color: hsl(210 20% 15%);
 }
+
+@keyframes diwali-scroll {
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .diwali-lights {
+    animation: diwali-scroll 16s linear infinite;
+  }
+}
