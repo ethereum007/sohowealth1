@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Pause, Play } from "lucide-react";
 
 const colors = ["#F472B6", "#38BDF8", "#FBBF24", "#A78BFA", "#34D399", "#FB7185", "#FDBA74", "#2DD4BF"];
 
@@ -26,8 +27,8 @@ export function DiwaliLights() {
           ))}
         </div>
       </div>
-      <button type="button" onClick={() => setPaused(!paused)} className="mt-2 min-h-8 rounded px-2 text-xs text-[#E5CB83] underline underline-offset-4 motion-reduce:hidden">
-        {paused ? "Play diya animation" : "Pause diya animation"}
+      <button type="button" onClick={() => setPaused(!paused)} aria-label={paused ? "Play diya animation" : "Pause diya animation"} className="mt-2 inline-flex h-8 w-8 items-center justify-center rounded-full text-[#E5CB83] hover:bg-white/10 motion-reduce:hidden">
+        {paused ? <Play size={14} aria-hidden="true" /> : <Pause size={14} aria-hidden="true" />}
       </button>
     </div>
   );
