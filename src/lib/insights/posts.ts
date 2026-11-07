@@ -1,4 +1,5 @@
 import { h1bReturnToIndiaPost } from "./h1b-return-to-india";
+import { nriDigitalKycPost } from "./nri-digital-kyc";
 
 export type InsightSource = {
   title: string;
@@ -143,6 +144,7 @@ const rbiLrsSource = {
 import { retirementInsightPosts } from "./retirement-posts";
 
 export const insightPosts: InsightPost[] = [
+  nriDigitalKycPost,
   h1bReturnToIndiaPost,
   ...retirementInsightPosts,
   {

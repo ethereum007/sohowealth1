@@ -89,7 +89,15 @@ export default async function InsightPostPage({ params }: PageProps) {
   const isTeluguNriPost = post.category === "NRI Telugu";
   const isRetirementPost = post.category === "Retirement Planning";
   const isH1bReturnPost = post.slug === "h1b-return-to-india-financial-planning";
-  const cta = isH1bReturnPost
+  const isNriKycPost = post.slug === "nri-digital-kyc-sebi-rules";
+  const cta = isNriKycPost
+    ? {
+        title: "Get Help With NRI KYC",
+        copy: "Talk to SoHo Wealth about the KYC checklist and investment options available from your country of residence.",
+        href: "/contact#contact-form",
+        label: "Contact SoHo Wealth",
+      }
+    : isH1bReturnPost
     ? {
         title: "Plan Your India-Linked Wealth Before the Move",
         copy: "Bring your assets, debts, expected return date and family goals into a structured portfolio review.",
@@ -358,7 +366,7 @@ export default async function InsightPostPage({ params }: PageProps) {
                 <ArrowRight className="h-4 w-4" />
               </Link>
               <a href="https://wa.me/919032999466" target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded-lg border border-slate-300 px-6 py-3 font-body text-sm font-semibold transition hover:bg-white" style={{ color: "#0B1F3A" }}>
-                WhatsApp SoHo Wealth
+                {isNriKycPost ? "WhatsApp +91 90329 99466" : "WhatsApp SoHo Wealth"}
               </a>
             </div>
           </div>

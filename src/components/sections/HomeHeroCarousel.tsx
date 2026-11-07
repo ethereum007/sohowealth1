@@ -25,13 +25,16 @@ export function HomeHeroCarousel() {
                   KYC eased for <span className="text-[#C9A84C]">NRIs.</span>
                 </h1>
                 <p className="mx-auto mb-9 mt-7 max-w-2xl text-xl leading-relaxed text-white/80 md:text-2xl">
-                  Connect here to invest in India.
+                  From 3 December 2026, eligible NRIs can complete digital KYC from abroad.
                 </p>
                 <Link href="/contact#contact-form" className="inline-flex min-h-14 items-center justify-center gap-3 rounded-md bg-[#C9A84C] px-6 py-4 text-base font-semibold text-[#0B1F3A] transition-colors hover:bg-[#E5CB83] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#E5CB83] sm:px-8">
                   Set Up a Free Consultation <ArrowRight className="h-5 w-5 shrink-0" aria-hidden="true" />
                 </Link>
                 <p className="mt-6 text-sm text-white/55">Explore your KYC and investment requirements with SoHo Wealth.</p>
-                <Link href="/nri-investment-services-hyderabad" className="mt-7 inline-flex min-h-11 items-center text-sm text-[#E5CB83] underline underline-offset-4">
+                <Link href="/insights/nri-digital-kyc-sebi-rules" className="mt-4 inline-flex min-h-11 items-center text-sm font-semibold text-[#E5CB83] underline underline-offset-4">
+                  Read the new NRI KYC guide
+                </Link>
+                <Link href="/nri-investment-services-hyderabad" className="mx-auto flex min-h-11 w-fit items-center text-sm text-[#E5CB83] underline underline-offset-4">
                   Explore NRI investment services
                 </Link>
               </div>
